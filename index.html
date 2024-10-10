@@ -2,722 +2,142 @@
 <html lang="en">
 
 <head>
-  <title>Helios Xu :: PhD :: Engineer</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Dr. Helios Xu | Clean Energy</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <!-- <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/skeleton.css">
+  <link rel="stylesheet" href="stylesheets/layout.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/navi5.css">
+  <link rel="stylesheet" href="stylesheets/navi6.css">
+  <link rel="stylesheet" href="stylesheets/type.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+    <!-- Favicons
+  ================================================== -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Google Analytics Tracking Code
+  ================================================== -->
+    <!-- 
+   <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-8161570-5', '');
+    ga('send', 'pageview');
+  </script>
+  -->
 
 
-  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <!-- <script type="module">
+    async function fetchCountries() {
+      const response = await fetch('/js/countries.json');
+      const countries = await response.json();
+      return countries;
+    }
 
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+    function getCountryNameByCode(countries, code, language = 'english') {
+      const country = countries.find(country => country.abbr === code);
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      if (country) {
+        return country[language] || country.english;
+      } else {
+        return 'mondo';
+      }
+    }
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    async function displayCountryName() {
+      const countries = await fetchCountries();
+      const response = await fetch('https://ipinfo.io/json?token=228a7bb192c4fc');
+      const data = await response.json();
+      const countryCode = data.country;
+      const language = 'english'; // 更改为您想要显示的语言
+      const countryName = getCountryNameByCode(countries, countryCode, language);
+      document.getElementById("location").textContent = countryName;
+      document.getElementById("location2").textContent = countryName;
+    }
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/mobilenav.css">
-  <link rel="stylesheet" href="css/style.css">
-
-
+    document.addEventListener('DOMContentLoaded', displayCountryName);
+  </script> -->
 
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-<!-- block save as
-  ================================================== -->
-  <script type="text/javascript">
-    window.onload = function() {
-        document.onkeydown = function() {
-            var e = window.event || arguments[0];
-            //屏蔽F12
-            if(e.keyCode == 123) {
+<body>
 
-                return false;
-             //屏蔽Ctrl+Shift+I
-            } else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+    <script async type='text/javascript' id='clustrmaps'
+        src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=mRcRGOHfI5m_4z362zL1K5jsQpgs-UcWLE04KRcma18&co=60a9db&ct=ffffff&cmo=303aea&cmn=fc8823'></script>
 
-                return false;
-                //屏蔽Shift+F10
-            } else if((e.shiftKey) && (e.keyCode == 121)){
+    <!-- <div id="extracted-content"></div> -->
 
-                return false;
-            }
-        };
-        //屏蔽右键单击
-        document.oncontextmenu = function() {
-
-            return false;
-        }
+    <!-- <script>
+    // Function to load and extract content from another HTML file
+    function extractContent() {
+      // Replace 'source.html' with the path to the HTML file you want to extract content from
+      fetch('en.html')
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(data, 'text/html');
+          const bodyContent = doc.querySelector('body').innerHTML;
+          document.getElementById('extracted-content').innerHTML = bodyContent;
+        })
+        .catch(error => {
+          console.error('Error loading the source HTML:', error);
+        });
     }
-</script>
 
-  <div class="site-wrap">
+    // Call the extractContent function when the page loads
+    window.addEventListener('load', extractContent);
+  </script> -->
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var userLang = navigator.language || navigator.userLanguage;
+            var languageMap = {
+                'ar': 'ar.html',
+                'en': 'en.html',
+                'de': 'de.html',
+                'fr': 'fr.html',
+                'es': 'es.html',
+                'it': 'it.html',
+                'ru': 'ru.html',
+                'zh': 'cn.html',
+                'ja': 'jp.html',
+                'ko': 'kr.html'
+            };
 
+            var shortLang = userLang.substring(0, 2);
 
-    
-    <div class="header-top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6 d-flex">
-            <a href="index.html" class="site-logo">
-              <img src="images/logo-full.png" alt="Image" class="site-logo" style="width:180px;height:80px;">
-            </a>
-
-            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
-              <!---<span class="icon-menu h3"></span>--->
-              </a>
-
-          </div>
-          <div class="col-12 col-lg-6 ml-auto d-flex">
-            <div class="ml-md-auto top-social d-lg-inline-block">
-              <a href="https://www.linkedin.com/in/xuhong/" target="_blank" class="d-inline-block p-3"><span class="icon-linkedin"></span></a>
-                <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank" class="d-inline-block p-3"><span class="icon-google"></span></a>
-                <a href="https://www.instagram.com/helios.h.xu/" target="_blank" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
-                <a href="index.html" class="d-inline-block p-3">EN</a>
-                <a href="zh.html" class="d-inline-block p-3">中文</a>
-            </div>
-            <!--- <form action="#" class="search-form d-inline-block">
-
-              <div class="d-flex">
-                <input type="email" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
-              </div>
-            </form>
-           --->
-            
-          </div>
-          <div class="col-6 d-block d-lg-none text-right">
-            
-          </div>
-        </div>
-      </div>
-      
+            // Check if the language is supported, if not default to English
+            if (languageMap[shortLang]) {
+                window.location.href = languageMap[shortLang];
+            } else {
+                // Default to English if language is not supported
+                window.location.href = 'en.html';
+            }
+        });
+    </script>
 
 
-      
-      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block" role="banner">
-
-        <div class="container">
-
-          <div class="d-flex align-items-center">
-            
-            <div class="mr-auto">
-              <nav class="site-navigation position-relative text-right" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
-                  <li class="active">
-                    <a href="index.html" class="nav-link text-left">Home&nbsp;</a>
-                  </li>
-                  <li>
-                    <a href="research.html" class="nav-link text-left">Research</a>
-                  </li>
-<!---             <li>
-                    <a href="projects.html" class="nav-link text-left">Project</a>
-                  </li>   --->
-                  <li>
-                    <a href="news.html" class="nav-link text-left">News</a>
-                  </li>
-                  <li>
-                    <a href="about.html" class="nav-link text-left">About</a>
-                  </li>
-                  <li>
-                    <a href="https://xgraphy.eu.org" target="_blank" class="nav-link text-left">Photography</a>
-                  </li>
-                  <li>
-                    <a href="phd-horizon.html" class="nav-link text-left d-none d-sm-block">Horizon</a>
-                  </li>
-                  <li>
-                    <a href="once-upon-a-phd.html" class="nav-link text-left d-none d-sm-block">«Once-Upon-A-PhD»</a>
-                  </li>
-                </ul>                                                                                                                                                                                                                                                                                         
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      </div>
-      <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
-
-
-
-    <div class="site-section py-0">
-      <div class="owl-carousel hero-slide owl-style">
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none">
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="background-image: url('images/big_img_1.jpg')"></div>
-              <div class="contents">
-                <span class="caption">Biography</span>
-                <h2><a href="#">I'm a Development Engineer specializing in Renewable Energy and Sustainability</a></h2>
-                <p class="mb-3">Currently I'm a Development Engineer in Automotive Industry in Munich specialized in Commercial Fuel Cell Vehicles such as Bus and Ships.</p>
-                
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Munich, Germany</a></span>
-                  <span class="date-read">Jul 2021 <span class="mx-1">&bullet;</span> Started <span class="icon-star2"></span></span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none">
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="background-image: url('images/big_img_2.jpg')"></div>
-              <div class="contents">
-                <span class="caption">PhD Graduation Ceremony</span>
-                <h2><a href="#">I graduated from ETH Zürich with a Doctoral Degree of Sciences Awarded</a></h2>
-                <p class="mb-3">Thank you ALL for sharing the joy and sorrow along my PhD journey to discover “mountains” behind “mountains” in Science and Switzerland among this fabulous world!</p>
-                
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Zürich, Switzerland</a></span>
-                  <span class="date-read">Oct 2021 <span class="mx-1">&bullet;</span> Held <span class="icon-star2"></span></span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none">
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="background-image: url('images/big_img_4.jpg')"></div>
-              <div class="contents">
-                <span class="caption">EU Dual-Master Study</span>
-                <h2><a href="#">I got Dual-Master Degrees in Materials Science from LMU & TU Munich</a></h2>
-                <p class="mb-3">Lots of joys left in my memory during master study with 1 year in Rennes, France as Exchange Student and 1 year in Hamburg and Munich for Internship and Master Thesis. </p>
-                
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Munich, Germany</a></span>
-                  <span class="date-read">Oct 2016 <span class="mx-1">&bullet;</span> Awarded <span class="icon-star2"></span></span>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  
-      
-    <!---Mobile MENU Bar--->
-    <a class="d-inline-block d-sm-none " >
-      <button id="burger" class="open-main-nav">
-        <span class="burger"></span>
-        <span class="burger-text">Menu</span>
-      </button>
-    
-      <nav class="main-nav" id="main-nav">
-        <ul>
-          <li>
-            <a href="index.html">Helios Xu, <small>PhD</small></a></br>
-          </li>
-          <li>
-            <a href="research.html">Research →</a>
-          </li>
-<!---            <li>
-            <a href="projects.html">Project →</a>
-          </li>--->  
-          <li>
-            <a href="news.html">News →</a>
-          </li>
-          <li>
-            <a href="about.html">About Me →</a>
-          </li>
-          <li>
-            <a href="https://xgraphy.eu.org" target="_blank">Photography →</a>
-          </li>
-          <li>
-            <a href="phd-horizon.html">Horizon →</a>
-          </li>
-          <li>
-            <a href="once-upon-a-phd.html">Once-Upon-A-PhD →</a>
-          </li>
-        </ul>
-      </nav>
-    </a>
-      <!------>  
-    
-    
-
-    <div class="site-section">
-      <div class="container">
-        <hr>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="row">
-              <div class="col-12">
-                <div class="section-title">
-                  <h2>Research Fields</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="post-entry-1">
-                  <a href="#"><img src="images/img_h_1.jpg" alt="Image" class="img-fluid"></a>
-                  <h2><a href="#">Renewable Energy & Sustainability</a></h2>
-                  <p>Access to efficient energy sources has been crucial to the advancement of human society. With the global population
-                    swelling, environmental protection and demand for industrial sustainability in developing countries, human’s eager for highly efficient and clean energy has reached unprecedented levels. </p>
-                  <div class="post-meta">
-                    <span class="d-block"><a href="#"></a>Commitment in <a href="#">Renewable Energy</a></span>
-                    <span class="date-read">2012-2021 <span class="mx-1"></span><span class="icon-star2"></span></span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="post-entry-2 d-flex bg-light">
-                  <div class="thumbnail" style="background-image: url('images/img_h_11.jpg')"></div>
-                  <div class="contents">
-                    <h2><a href="#">Hydrogen & Fuel Cells</a></h2>
-                    <div class="post-meta">
-                      <span class="d-block">Bus, Ships, Trains, Trucks, Cars </span>
-                      <span class="date-read">2016-Present<span class="mx-1"></span><span class="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="post-entry-2 d-flex">
-                  <div class="thumbnail" style="background-image: url('images/img_h_9.jpg')"></div>
-                  <div class="contents">
-                    <h2><a href="#">Solar Cells</a></h2>
-                    <div class="post-meta">
-                      <span class="d-block">Solar Farms, Solar Buildings </span>
-                      <span class="date-read">2011-2013<span class="mx-1"></span><span class="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="post-entry-2 d-flex">
-                  <div class="thumbnail" style="background-image: url('images/img_h_10.jpg')"></div>
-                  <div class="contents">
-                    <h2><a href="#">Li-ion Batteries</a></h2>
-                    <div class="post-meta">
-                      <span class="d-block">Battery Cars, Portable Devices </span>
-                      <span class="date-read">2013<span class="mx-1"></span><span class="icon-star2"></span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p>
-              <a href="research.html" class="more">See Research Outcome<span class="icon-keyboard_arrow_right"></span></a>
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <div class="section-title">
-              <h2>Recent News </h2>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">01</div>
-              <div class="trend-contents">
-                <h2><a href="#">Doctoral Graduation Ceremony held at ETH Zürich</a></h2>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Zurich, Switzerland</a></span>
-                  <span class="date-read">Oct 2021 <span class="mx-1"></span><span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">02</div>
-              <div class="trend-contents">
-                <h2><a href="#">Joined Freudenberg Group as a Development Engineer</a></h2>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Munich, Germany</a></span>
-                  <span class="date-read">July 2021 <span class="mx-1"></span><span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">03</div>
-              <div class="trend-contents">
-                <h2><a href="#">Accomplished 4 Years PhD Project at Paul Scherrer Institute</a></h2>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> in <a href="#">Villigen, Switzerland</a></span>
-                  <span class="date-read">Feb 2021 <span class="mx-1"></span><span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">04</div>
-              <div class="trend-contents">
-                <h2><a href="#">Awarded MBA Degree at Quantic School of Business</a></h2>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a> virtualy in <a href="#">Washington DC, US</a></span>
-                  <span class="date-read">Feb 2021 <span class="mx-1">&bullet;</span><span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-            
-            <p>
-              <a href="news.html" class="more">See All News <span class="icon-keyboard_arrow_right"></span></a>
-            </p>
-
-          </div>
-        </div>
-        <hr>
-      </div>
-     
-    </div>
-    <!-- END section -->
-
-   
-
-    <div class="py-0">
-      <div class="container">
-        <div class="half-post-entry d-block d-lg-flex bg-light">
-          <div class="img-bg" style="background-image: url('images/big_img_3.jpg')"></div>
-          <div class="contents">
-            <span class="caption">About Me</span>
-            <h2><a href="#">Helios Xu, PhD</a></h2>
-            <p class="mb-3">
-
-            EDUCATION<br>
-            PhD, ETH Zurich, Switzerland | 2017-21 <br>
-            MBA, Quantic School of Business, US | 2021<br>
-            MSc, Technical University of Munich, Germany | 2014-16<br>
-            BSc, Beijing Transport University, China | 2009-13</p>
-<!---
-            <p class="mb-3"></p>
-            WORK EXPERIENCE<br>
-            Development Engineer, Freudenberg Group, DE | 2021-Now <br>
-            Doctoral Researcher, Paul Scherrer Institute, CH | 2016-21 <br>
-            
-            <p class="mb-3"></p>
-            PRACTICAL EXPERIENCE<br>
-            Equity Research Intern, CITIC Securities, CN | 2020<br>
-            Project Collaborator, Toyota Motor Europe, BE | 2017-19 <br>
-            Working Student, Infineon Technologies, DE | 2015-16<br>
-            Project Trainee, École des Ponts ParisTech, FR | 2015<br>
-            Summer Intern, European XFEL GmbH, DE | 2015</p>
---->
-            <div class="post-meta">
-              <span class="d-block"><a href="#"></a> Passionate for <a href="#">Energy</a>, <a href="#">e-Mobility</a> and <a href="#">Sustainability</a></span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!---
-    <div class="site-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="section-title">
-              <h2>Politics</h2>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_1.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_2.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_3.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="section-title">
-              <h2>Business</h2>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_1.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_2.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail" style="background-image: url('images/img_v_3.jpg')"></div>
-              <div class="contents">
-                <h2><a href="#">News Needs to Meet Its Audiences Where They Are</a></h2>
-                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
-                  <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
--->
-
-    <br>
-    <div class="site-section">
-     
-      <div class="container">
-        <hr>
-        <div class="row">
-          <div class="col-lg-9">
-           
-            <div class="section-title">
-              <h2>Selected Publications</h2>
-            </div>
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail order-md-2" style="background-image: url('images/img_h_4.jpg')"></div>
-              <div class="contents order-md-1 pl-0">
-                <h2><a href="https://doi.org/10.3929/ethz-b-000487441" target="_blank">Subsecond Operando X-ray Tomographic Microscopy of Liquid Water in Polymer Electrolyte Fuel Cells [D]</a></h2>
-                <p class="mb-3">PhD Dissertation, ETH Zürich, Switzerland, 2021.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">H. Xu</a>, Prof. T. J. Schmidt, Prof. M. Stampanoni, Dr. J. Eller</span>
-                  <span class="date-read">2021 <span class="mx-1">&bullet;</span> https://doi.org/10.3929/ethz-b-000487441 <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail order-md-2" style="background-image: url('images/img_h_5.jpg')"></div>
-              <div class="contents order-md-1 pl-0">
-                <h2><a href="https://doi.org/10.1016/j.jpowsour.2021.229492" target="_blank" >Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond operando X-ray tomographic microscopy [J]</a></h2>
-                <p class="mb-3">J. Power Sources. Co-paper with TOYOTA.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">H. Xu</a>, S. Nagashima, H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J. Eller <a href="#"></a></span>
-                  <span class="date-read">2021 <span class="mx-1">&bullet;</span> https://doi.org/10.1016/j.jpowsour.2021.229492 <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="post-entry-2 d-flex">
-              <div class="thumbnail order-md-2" style="background-image: url('images/img_h_6.jpg')"></div>
-              <div class="contents order-md-1 pl-0">
-                <h2><a href="https://doi.org/10.1149/1945-7111/ac1035" target="_blank" >Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando liquid water saturation and gas diffusion properties [J]</a></h2>
-                <p class="mb-3"> J. Electrochem. Soc. Co-paper with Swiss Light Source.</p>
-                <div class="post-meta">
-                  <span class="d-block"><a href="#">H. Xu</a> , M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller</span>
-                  <span class="date-read">2021 <span class="mx-1">&bullet;</span> https://doi.org/10.1149/1945-7111/ac1035 <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank" class="more">Google Scholar <span class="icon-keyboard_arrow_right"></span></a>
-            </p>
-
-          </div>
-
-
-
-          <div class="col-lg-3">
-            <div class="section-title">
-              <h2>Patents</h2>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">01</div>
-              <div class="trend-contents">
-                <h2><a href="https://patents.google.com/patent/CN102441489B/en" target="_blank" >Annular gas-liquid interface jigging magnetic separation device [P]</a></h2>
-                <div class="post-meta">
-                  <span class="d-block">Prof. M. Fu, Prof. H. Zhang, <a href="#">H. Xu</a>, Prof. L. Yan</span>
-                  <span class="date-read">2013 <span class="mx-1">&bullet;</span> CN102441489B <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">02</div>
-              <div class="trend-contents">
-                <h2><a href="https://patents.google.com/patent/CN102441490A/en" target="_blank" >Continuously operating annular gas-liquid interface jigging magnetic separation device [P]</a></h2>
-                <div class="post-meta">
-                  <span class="d-block">Prof. H. Zhang, <a href="#">H. Xu</a>, Prof. M. Fu, Prof. L. Yan</span>
-                  <span class="date-read">2013 <span class="mx-1">&bullet;</span> CN102441490A <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="trend-entry d-flex">
-              <div class="number align-self-start">03</div>
-              <div class="trend-contents">
-                <h2><a href="https://patents.google.com/patent/CN202311136U/en" target="_blank" >Ultrasonic-photocatalytic oxidation coupled fruit and vegetable cleaning device [P]</a></h2>
-                <div class="post-meta">
-                  <span class="d-block">X. Zhou, <a href="#">H. Xu</a>, Prof. H. Jiang, X. Qi</span>
-                  <span class="date-read">2012 <span class="mx-1">&bullet;</span> CN202311136U <span class="icon-star2"></span></span>
-                </div>
-              </div>
-            </div>
-
-            
-           
-          </div>
-
-        </div>
-
-     <!---   <div class="row">
-          <div class="col-lg-6">
-            <ul class="custom-pagination list-unstyled">
-              <li><a href="#">1</a></li>
-              <li class="active">2</li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>-->
-    </div>
-    <br>
-    <div class="site-section subscribe bg_FFFFFF">
-      <div class="container">
-        <form action="#" class="row align-items-center">
-          <div class="col-md-5 mr-auto">
-            <img src="images/logo.png" alt="Image" class="site-logo" style="width:55px;height:60px;"></br></br>
-            <h2>Contact Me</h2>
-            <p>E-mail | <a href="mailto:dr.hong.xu@outlook.com" target="_blank" >helios.xu [at] outlook.com</a><br>
-              Wechat | EthEnergy (please add a note)<br>
-              LinkedIn | <a href="www.linkedin.com/in/xuhong" target="_blank" >www.linkedin.com/in/xuhong</a><br><br>
-              <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24" id="tz24-1612273183-c1268-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjEiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9" title="Zurich time" target="_blank" rel="nofollow">Europe Time</a>
-                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script></strong>
-            </p>
-          </div>
-          <div class="col-md-6 ml-auto">
-            <!-- weather widget start --><a id="weather" target="_blank" href="https://www.booked.net/weather/munich-18260"><img src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=89619"  alt="booked.net" /></a><!-- weather widget end -->
-              <img src="images/logo-nulll.png" alt="Image" class="site-logo" style="width:55px;height:60px;"></br></br>
-              <h2>Keep Simple, Stay Naïve</h2>
-              <p>Photography Blog | <a href="https://xgraphy.eu.org" target="_blank" >xgraphy.eu.org</a> <br>
-                Writing Blog |  <a href="https://notavailable.gitbook.io" target="_blank" >site.in.construction.gitbook.io</a><br>
-                Academic Page |  <a href="https://drhongxu.github.io" target="_blank" >drhongxu.github.io</a><br><br>
-                <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24" id="tz24-1617090826-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMSIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0=" title="Beijing time zone" target="_blank" rel="nofollow">Beijing Time </a>
-                  <script type="text/javascript" src="//w.24timezones.com/l.js" async></script></strong>
-
-              </p>
-          </div>
-        </form>
-      </div>
-  
-    </div>
-
-
-    <hr style="height:1px;border-width:0;color:gray;background-color:gray">
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="copyright">
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Dr. Helios Xu | Copyright &copy; 2017-<script>document.write(new Date().getFullYear());</script><br>
-                    I'm glad you visited me! | All rights reserved | Created via <a href="https://colorlib.com" target="_blank" >Colorlib</a>, <a href="https://freefrontend.com/" target="_blank" >FreeFrontend</a>, <a href="https://stephaniewalter.design/" target="_blank" >SW.Design</a><br>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                    <a href="https://info.flagcounter.com/D897"><img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/" border="0"></a>  
-                </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- .site-wrap -->
-
-
-  <!-- loader -->
-  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-  <script src="js/main.js"></script>
-
-<!-- ConveyThis button: 
-<div id="conveythis-wrapper-main"><a href="https://www.conveythis.com" class="conveythis-no-translate notranslate" title="ConveyThis" >ConveyThis</a></div>
-<script src="//s2.conveythis.com/javascriptClassic/1/conveythis.js"></script>
-<script src="//s2.conveythis.com/javascriptClassic/1/translate.js"></script>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function(e) {
-conveythis.init({source_language_id: 703, languages: [{"id":"703","active":true},{"id":"730","active":false},{"id":"727","active":false},{"id":"741","active":false},{"id":"777","active":false},{"id":"742","active":false},{"id":"747","active":false},{"id":"771","active":false},{"id":"707","active":false},{"id":"813","active":false},{"id":"724","active":false},{"id":"731","active":false},{"id":"736","active":false},{"id":"745","active":false},{"id":"786","active":false},{"id":"787","active":false},{"id":"734","active":false},{"id":"750","active":false},{"id":"704","active":false},{"id":"705","active":false},{"id":"706","active":false},{"id":"708","active":false},{"id":"709","active":false},{"id":"710","active":false},{"id":"712","active":false},{"id":"713","active":false},{"id":"714","active":false},{"id":"715","active":false},{"id":"716","active":false},{"id":"717","active":false},{"id":"806","active":false},{"id":"798","active":false},{"id":"720","active":false},{"id":"721","active":false},{"id":"722","active":false},{"id":"723","active":false},{"id":"802","active":false},{"id":"703","active":false},{"id":"725","active":false},{"id":"726","active":false},{"id":"799","active":false},{"id":"728","active":false},{"id":"729","active":false},{"id":"732","active":false},{"id":"800","active":false},{"id":"801","active":false},{"id":"737","active":false},{"id":"738","active":false},{"id":"803","active":false},{"id":"739","active":false},{"id":"740","active":false},{"id":"743","active":false},{"id":"744","active":false},{"id":"746","active":false},{"id":"804","active":false},{"id":"805","active":false},{"id":"748","active":false},{"id":"749","active":false},{"id":"751","active":false},{"id":"752","active":false},{"id":"753","active":false},{"id":"754","active":false},{"id":"755","active":false},{"id":"756","active":false},{"id":"757","active":false},{"id":"758","active":false},{"id":"759","active":false},{"id":"760","active":false},{"id":"762","active":false},{"id":"763","active":false},{"id":"764","active":false},{"id":"807","active":false},{"id":"766","active":false},{"id":"767","active":false},{"id":"768","active":false},{"id":"769","active":false},{"id":"770","active":false},{"id":"808","active":false},{"id":"773","active":false},{"id":"809","active":false},{"id":"810","active":false},{"id":"811","active":false},{"id":"774","active":false},{"id":"775","active":false},{"id":"776","active":false},{"id":"797","active":false},{"id":"778","active":false},{"id":"779","active":false},{"id":"780","active":false},{"id":"781","active":false},{"id":"782","active":false},{"id":"783","active":false},{"id":"784","active":false},{"id":"785","active":false},{"id":"812","active":false},{"id":"789","active":false},{"id":"790","active":false},{"id":"791","active":false},{"id":"792","active":false},{"id":"794","active":false},{"id":"795","active":false},{"id":"814","active":false},{"id":"815","active":false}]})
-});
-</script>
- End ConveyThis button code. -->
-
-<script src="js/mobilenav.js"></script>
-
+    <!-- End Document
+================================================== -->
 </body>
 
 </html>
