@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Helios Xu :: PhD :: Engineer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
+
+    <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/aos.css"> -->
+    <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Tahoma', 'Noto Sans', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- block save as ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="index.html" class="site-logo">
+                            <img src="images/logo-full.png" alt="Image" class="site-logo"
+                                style="width:180px;height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 ml-auto d-flex">
+                        <div class="ml-md-auto top-social d-lg-inline-block">
+                            <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-linkedin"></span></a>
+                            <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-google"></span></a>
+                            <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+                            <a href="research.html" class="d-inline-block p-3">EN</a>
+                            <a href="yanjiu.html" class="d-inline-block p-3">中文</a>
+                        </div>
+                        <!--- <form action="#" class="search-form d-inline-block">
+
+              <div class="d-flex">
+                <input type="email" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+              </div>
+            </form>
+           --->
+
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right " role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                                    <li>
+                                        <a href="en.html" class="nav-link text-left">Home&nbsp;</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="en-research.html" class="nav-link text-left">Research</a>
+                                    </li>
+                                    <li>
+                                        <a href="en-news.html" class="nav-link text-left">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="en-projects.html" class="nav-link text-left">Projects</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="en-activities.html" class="nav-link text-left">Activities</a>
+                                    </li> -->
+                                    <li>
+                                        <a href="en-about.html" class="nav-link text-left">About Me</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">Menu</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="en.html">Helios Xu, <small>PhD</small></a></br>
+                    </li>
+                    <li>
+                        <a href="en-research.html">Research →</a>
+                    </li>
+
+                    <li>
+                        <a href="en-news.html">News →</a>
+                    </li>
+                    <li>
+                        <a href="en-projects.html">Project →</a>
+                    </li>
+                    <li>
+                        <a href="en-about.html">About Me →</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+        <!------>
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 single-content">
+                        <p class="mb-5">
+                            <img src="images/banner_img_1.jpg" alt="Image" class="img-fluid">
+                        </p>
+                        <h1 class="mb-4">
+                            List of Publications
+                        </h1>
+                        <hr>
+                        <h4 class="mb-4">
+                            Research Papers
+                        </h4>
+
+                        <ol>
+                            <!--
+              <li>
+                  <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br/>
+                  Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ liquid water desaturation via evaporation [J] <br/>
+                  2022 | <em>Co-paper with Swiss Light Source (SLS).</em> [<a href=" " target="_blank">In progress</a>]
+              </li>            
+              &nbsp;
+              -->
+                            <li>
+                                <strong>S. van Rooij, M. Magnini, A. Mularczyk, H. Xu*</strong> [PSI], F. N. Büchi, S.
+                                Haussener<br />
+                                Conductive heat transfer in partially saturated gas diffusion layers with evaporative
+                                cooling [J] <br />
+                                2022 | <em>J. Electrochem. Soc.</em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c"
+                                    target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(250, 49, 14)">[EPFL]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], S. Nagashima, H. Nguyen, K. Kishita, F. Marone, F. N.
+                                Büchi, J. Eller<br />
+                                Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by
+                                subsecond operando X-ray tomographic microscopy. [J] <br />
+                                2021 | <em>J. Power Sources. </em> [<a
+                                    href="https://www.sciencedirect.com/science/article/pii/S0378775321000422"
+                                    target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(250, 49, 14)">[Toyota]</text> <text style="color:red">[New!]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi,
+                                J. Eller<br />
+                                Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando
+                                liquid water saturation and gas diffusion properties [J] <br />
+                                2021 | <em>J. Electrochem. Soc.</em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035"
+                                    target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, M.
+                                Stampanoni, F. Marone<br />
+                                Deep learning based classification of dynamic processes in time-resolved X-ray
+                                tomographic microscopy [J] <br />
+                                2021 | <em>Sci. Reports. </em> [<a
+                                    href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>]
+                                <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(191, 9, 228)">[CWI.Amsterdam]</text> <text
+                                    style="color:red">[New!]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, J. Sijbers, Prof. M. Stampanoni, F.
+                                Marone<br />
+                                Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data
+                                [J] <br />
+                                2021 | <em>Sci. Reports. </em> [<a
+                                    href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>]
+                                <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(104, 9, 228)">[U.Antwerp]</text>
+                            </li>
+                            &nbsp;
+
+                            <li>
+                                C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, T. J. Schmidt, F. N. Büchi<br />
+                                Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell
+                                Performance [J] <br />
+                                2021 | <em>ACS Appl. Energy Mater. </em> [<a
+                                    href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454"
+                                    target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi,
+                                J. Eller<br />
+                                Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers.
+                                [J] <br />
+                                2020 | <em>J. Electrochem. Soc. </em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241"
+                                    target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima, H. Nguyen, K. Kishita, F. N.
+                                Büchi, J. Eller<br />
+                                <strong>(Invited)</strong> Exploring sub-second and sub-micron XTM imaging of liquid
+                                water in PEFC GDLs.[J] <br />
+                                2019 | <em>ECS Transactions. <strong>.</strong> </em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/09208.0011ecst"
+                                    target="_blank">PDF</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(250, 49, 14)">[Toyota]</text> <text
+                                    style="color:rgb(14, 97, 250)">[ECS Travel Grant]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                Y. Nagai, J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, A. Kato, F. Marone, <strong>H.
+                                    Xu*</strong> [PSI], F. N. Büchi. <br />
+                                Improving water management in fuel cells through microporous layer modifications: Fast
+                                operando tomographic imaging of liquid water. [J] <br />
+                                2019 | <em>J. Power Sources. </em> [<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943"
+                                    target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(250, 49, 14)">[Toyota]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi,
+                                J. Eller<br />
+                                Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of
+                                PEFC. [J] <br />
+                                2017 | <em>ECS Transactions. </em><strong></strong></em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830"
+                                    target="_blank">Link</a>] <text style="color:rgb(8, 114, 31)">[SLS]</text> <text
+                                    style="color:rgb(14, 97, 250)">[ModVal Poster Award]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang, T. Zhang
+                                <br />
+                                A simple spray reaction synthesis and characterization of hierarchically porous SnO2
+                                microspheres for an enhanced dye sensitized solar cell. [J] <br />
+                                2017 | <em>RSC Advances.</em> [<a
+                                    href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract"
+                                    target="_blank">Link</Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                Prof. H. Zhang, <strong>H. Xu*</strong> [BJTU], J. Wan, Prof. L. Yan, C. Dai <br />
+                                Preparations of new porous oxides spherical powders by spray reaction technique.[J]
+                                <br />
+                                2012 | <em>Vacuum & Cryogenics.</em> [<a
+                                    href="https://tow.cnki.net/kcms/detail/detail.aspx?filename=ZKDW201203005&dbcode=CRJT_CJFD&dbname=CJFD2012&v="
+                                    target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+                            &nbsp;
+                            <li>
+                                X. Qi, <strong>H. Xu*</strong> [BJTU], X. Zhou <br />
+                                Degradation of highly active cypermethrin via ultrasonic irradiation combined with TiO2
+                                photocatalysis.[J] <br />
+                                2012 | <em>Chem. Res.</em></em> [<a
+                                    href="http://hxya.chinajournal.net.cn/WKB/WebPublication/paperDigest.aspx?paperID=10f49d02-6d79-49d1-93cf-d1d7a98f9887"
+                                    target="_blank">Link (CN)</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+                        </ol>
+
+                        &nbsp;
+                        <hr>
+                        <h4>National Patents</h4>
+                        <ol>
+                            <li>
+                                <strong>Annular gas-liquid interface jigging magnetic separation device
+                                    [P]</strong><br />
+                                Inventors: Prof. M. Fu, Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. L.
+                                Yan<br />
+                                2013 | Chinese Patent No.: CN102441489B, Granted on Oct 11, 2013. [<a
+                                    href="https://patents.google.com/patent/CN102441489B/en" target="_blank">Grant</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>Continuously operating annular gas-liquid interface jigging magnetic separation
+                                    device [P]</strong><br />
+                                Inventors: Prof. H. Zhang, <strong>H. Xu</strong> (BJTU), Prof. M. Fu, Prof. L.
+                                Yan<br />
+                                2013 | Chinese Patent No.: CN102441490A, Granted on Nov 1, 2013. [<a
+                                    href="https://patents.google.com/patent/CN102441490A/en" target="_blank">Grant</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>Ultrasonic-photocatalytic oxidation coupled fruit and vegetable cleaning device
+                                    [P]</strong><br />
+                                Inventors: X. Zhou, <strong>H. Xu</strong> (BJTU), Prof. H. Jiang, X. Qi<br />
+                                2012 | Chinese Patent No.: CN202311136U, Granted on May 9, 2012. [<a
+                                    href="https://patents.google.com/patent/CN202311136U/en" target="_blank">Grant</a>]
+                            </li>
+                        </ol>
+
+                        &nbsp;
+
+                        <hr>
+
+                        <h1 class="mb-4">
+                            Teaching Assistant
+                        </h1>
+                        <ol>
+                            <li>
+                                <strong>Renewable Energy Technologies II, Energy Storage and Conversion </strong><br />
+                                ETH Zürich, Master Course (529-0191-01L )<br />
+                                2017-2019 | Spring Semester [<a
+                                    href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+                                    target="_blank">Link</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h1 class="mb-4">
+                            Collaborations
+                        </h1>
+                        <ol>
+                            <li>
+                                Switzerland | Paul Scherrer Institute (2016-2021)
+                            </li>
+                            <li>
+                                Switzerland | Swiss Light Source (2017-2019)
+                            </li>
+                            <li>
+                                Switzerland | EPF Laussane (2020)
+                            </li>
+                            <li>
+                                Japan | Toyota Central R&D Institute (2017-2019)
+                            </li>
+                            <li>
+                                Belgium | University of Antwerp (2020)
+                            </li>
+                            <li>
+                                Belgium | Toyota Motor Europe (2017-2019)
+                            </li>
+                            <li>
+                                Germany | University of Munich (2016)
+                            </li>
+                            <li>
+                                Germany | Deutsches Elektronen-Synchrotron (DESY) (2016)
+                            </li>
+                            <li>
+                                Germany | Bavarian Academy of Sciences and Humanities (2016)
+                            </li>
+                            <li>
+                                Italy | Elettra Sincrotrone Trieste (2016)
+                            </li>
+                            <li>
+                                China | Institute of Process Engineering, Chinese Academy of Sciences (2013)
+                            </li>
+
+
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h1 class="mb-4">
+                            Meetings
+                        </h1>
+
+                        <h4>Oral Talks</h4>
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br />
+                                Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br />
+                                <em>2019 | 236th Electrochemical Society Meeting (ECS)</em>, Atlanta, USA. [<a
+                                    href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">Link</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br />
+                                Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC. <br />
+                                <em>2018 | 8th Int. Conference on Fundamentals & Devel. of Fuel Cells (FDFC)</em>,
+                                Nantes, France. [<a href="" target="_blank">Link</a>]
+                            </li>
+                            &nbsp;
+
+
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br />
+                                Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of
+                                PEFC. <br />
+                                <em>2017 | 21st European Fuel Cell & Electrolyser Forum (EFCF)</em>, Luzern,
+                                Switzerland. [<a href="" target="_blank">Link</Link></a>]
+                            </li>
+                            &nbsp;
+
+
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br />
+                                Nanoparticles Embeded Thermoresponsive Diblock Copolymers for Magnetic Sensor
+                                Application. <br />
+                                <em>2016 | Erasmus MaMaSELF Program Status Meeting</em>, Rigi Kulm, Switzerland. [<a
+                                    href="" target="_blank">Link</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h4>Poster Presentations</h4>
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br />
+                                <strong>[Poster Prize]</strong> Water Distribution in the Gas Diffusion Layer of PEFCs:
+                                X-ray Tomographic Microscopy Studies <br />
+                                <em>2018 | 15th Symposium on Modeling & Exp. Validation (ModVal)</em>, Aarau,
+                                Switzerland. [<a href="" target="_blank">Link</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br />
+                                Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray
+                                Tomographic Microscopy <br />
+                                <em>2018 | 69th Annual Meeting of the Int. Society of Electrochemistry (ISE)</em>,
+                                Bologna, Italy. [<a href="" target="_blank">Link</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br />
+                                Contrast-to-Noise Ratio Evaluation for X-ray CT Imaging of Water in Polymer Electrolyte
+                                Fuel Cells <br />
+                                <em>2017 | 14th Symposium on Modeling & Exp. Validation (ModVal)</em>, Karlsruhe,
+                                Germany. [<a href="" target="_blank">Link</Link></a>]
+                            </li>
+                            &nbsp;
+
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br />
+                                Magnetic properties and structure of thermoresponsive PS-b-PNIPAM/iron oxide
+                                nanocomposite thin films. <br />
+                                <em>2016 | 80th Annual Meeting of German Physical Society (DPG)</em>, Regensburg,
+                                Germany. [<a href="" target="_blank">Link</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu <br />
+                                Mesoporous SnO2 Microspheres: Synthesis, Characterization, and Application in Solar
+                                Cells and Lithium Batteries. <br />
+                                <em>2013 | Energy Particles Frontier Seminar at Tsinghua University</em>, Beijing,
+                                China. [<a href="" target="_blank">Link</a>]
+                            </li>
+                        </ol>
+
+                        <!---
+            <div class="pt-5">
+                    <p>Categories:  <a href="#">Design</a>, <a href="#">Events</a>  Tags: <a href="#">#html</a>, <a href="#">#trends</a></p>
+                  </div>
+      
+      
+                    <div class="pt-5">
+                    <div class="section-title">
+                      <h2 class="mb-5">6 Comments</h2>
+                    </div>
+                    <ul class="comment-list">
+                      <li class="comment">
+                        <div class="vcard bio">
+                          <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                          <h3>Jean Doe</h3>
+                          <div class="meta">January 9, 2018 at 2:21pm</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                          <p><a href="#" class="reply">Reply</a></p>
+                        </div>
+                      </li>
+      
+                      <li class="comment">
+                        <div class="vcard bio">
+                          <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                          <h3>Jean Doe</h3>
+                          <div class="meta">January 9, 2018 at 2:21pm</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                          <p><a href="#" class="reply">Reply</a></p>
+                        </div>
+      
+                        <ul class="children">
+                          <li class="comment">
+                            <div class="vcard bio">
+                              <img src="images/person_1.jpg" alt="Image placeholder">
+                            </div>
+                            <div class="comment-body">
+                              <h3>Jean Doe</h3>
+                              <div class="meta">January 9, 2018 at 2:21pm</div>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                              <p><a href="#" class="reply">Reply</a></p>
+                            </div>
+      
+      
+                            <ul class="children">
+                              <li class="comment">
+                                <div class="vcard bio">
+                                  <img src="images/person_1.jpg" alt="Image placeholder">
+                                </div>
+                                <div class="comment-body">
+                                  <h3>Jean Doe</h3>
+                                  <div class="meta">January 9, 2018 at 2:21pm</div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                  <p><a href="#" class="reply">Reply</a></p>
+                                </div>
+      
+                                  <ul class="children">
+                                    <li class="comment">
+                                      <div class="vcard bio">
+                                        <img src="images/person_1.jpg" alt="Image placeholder">
+                                      </div>
+                                      <div class="comment-body">
+                                        <h3>Jean Doe</h3>
+                                        <div class="meta">January 9, 2018 at 2:21pm</div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                                        <p><a href="#" class="reply">Reply</a></p>
+                                      </div>
+                                    </li>
+                                  </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+      
+                      <li class="comment">
+                        <div class="vcard bio">
+                          <img src="images/person_1.jpg" alt="Image placeholder">
+                        </div>
+                        <div class="comment-body">
+                          <h3>Jean Doe</h3>
+                          <div class="meta">January 9, 2018 at 2:21pm</div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
+                          <p><a href="#" class="reply">Reply</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                    
+                                 
+                    <div class="comment-form-wrap pt-5">
+                      <div class="section-title">
+                        <h2 class="mb-5">Leave a comment</h2>
+                      </div>
+                      <form action="#" class="p-5 bg-light">
+                        <div class="form-group">
+                          <label for="name">Name *</label>
+                          <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email *</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="website">Website</label>
+                          <input type="url" class="form-control" id="website">
+                        </div>
+      
+                        <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" value="Post Comment" class="btn btn-primary py-3">
+                        </div>
+      
+                      </form>
+                    </div>
+                  </div>
+
+                -->
+                    </div>
+
+
+                    <div class="col-lg-3 ml-auto">
+
+                        <div class="section-title">
+
+                            <h2>Research Interests</h2>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">01</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">Renewable Energy</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Hydrogen, Fuel Cells, Solar Cells, Lithium-ion Batteries
+                                    </span>
+                                    <span class="date-read">2013-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">02</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">Functional Materials</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Semiconductors, Applied Energy Materials, Crystals,
+                                        Polymers</span>
+                                    <span class="date-read">2013-2016</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">03</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">X-ray Imaging</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">X-ray Tomography, Small Angle X-ray Scattering, X-ray
+                                        Absorption</span>
+                                    <span class="date-read">2016-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">04</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">Computer Vision</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Image Segmentation, 3D Visualizaiton, Image Denoising </span>
+                                    <span class="date-read">2017-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!---
+    <div class="site-section subscribe bg-light">
+      <div class="container">
+        <form action="#" class="row align-items-center">
+          <div class="col-md-5 mr-auto">
+            <h2>Newsletter Subcribe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    --->
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg_FFFFFF">
+
+            <div class="container">
+
+                <form action="#" class="row align-items-center">
+
+                    <div class="col-md-5 mr-auto">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width:55px;height:60px;"></br></br>
+                        <h2>Contact Me</h2>
+                        <p>E-mail | <a href="mailto:dr.hong.xu@outlook.com" target="_blank">helios.xu [at]
+                                outlook.com</a><br>
+                            Wechat | EthEnergy (please add a note)<br>
+                            LinkedIn | <a href="www.linkedin.com/in/xuhong"
+                                target="_blank">www.linkedin.com/in/xuhong</a><br><br>
+                            <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1612273183-c1268-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMCIsInNob3dzZWNvbmRzIjoiMSIsInNob3d0aW1lem9uZSI6IjEiLCJ0eXBlIjoiZCIsImxhbmciOiJlbiJ9"
+                                    title="Zurich time" target="_blank" rel="nofollow">Europe Time</a>
+                                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="col-md-6 ml-auto">
+                        <!-- weather widget start --><a id="weather" target="_blank"
+                            href="https://www.booked.net/weather/munich-18260"><img
+                                src="https://w.bookcdn.com/weather/picture/5_18260_1_1_137AE9_250_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=89619"
+                                alt="booked.net" /></a><!-- weather widget end -->
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width:55px;height:60px;"></br></br>
+                        <h2>Keep Simple, Stay Naïve</h2>
+                        <p>Photography Blog | <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a> <br>
+                            Writing Blog | <a href="https://notavailable.gitbook.io"
+                                target="_blank">site.in.construction.gitbook.io</a><br>
+                            Academic Page | <a href="https://notavailable.eu.org"
+                                target="_blank">site.in.construction.eu.org</a><br><br>
+                            <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1617090826-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMSIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="Beijing time zone" target="_blank" rel="nofollow">Beijing Time </a>
+                                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                            </strong>
+
+                        </p>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+        <div class="footer">
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Dr. Helios Xu | Copyright &copy; 2017-
+                                <script>document.write(new Date().getFullYear());</script><br>
+                                I'm glad you visited me! | All rights reserved | Created via <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>, <a
+                                    href="https://freefrontend.com/" target="_blank">FreeFrontend</a>, <a
+                                    href="https://stephaniewalter.design/" target="_blank">SW.Design</a><br>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                                <a href="https://info.flagcounter.com/D897"><img
+                                        src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0"></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- .site-wrap -->
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#ff5e15" />
+        </svg></div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+
+
+
+
+    <script src="js/main.js"></script>
+
+    <!-- ConveyThis button: 
+<div id="conveythis-wrapper-main"><a href="https://www.conveythis.com" class="conveythis-no-translate notranslate" title="ConveyThis" >ConveyThis</a></div>
+<script src="//s2.conveythis.com/javascriptClassic/1/conveythis.js"></script>
+<script src="//s2.conveythis.com/javascriptClassic/1/translate.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(e) {
+conveythis.init({source_language_id: 703, languages: [{"id":"703","active":true},{"id":"730","active":false},{"id":"727","active":false},{"id":"741","active":false},{"id":"777","active":false},{"id":"742","active":false},{"id":"747","active":false},{"id":"771","active":false},{"id":"707","active":false},{"id":"813","active":false},{"id":"724","active":false},{"id":"731","active":false},{"id":"736","active":false},{"id":"745","active":false},{"id":"786","active":false},{"id":"787","active":false},{"id":"734","active":false},{"id":"750","active":false},{"id":"704","active":false},{"id":"705","active":false},{"id":"706","active":false},{"id":"708","active":false},{"id":"709","active":false},{"id":"710","active":false},{"id":"712","active":false},{"id":"713","active":false},{"id":"714","active":false},{"id":"715","active":false},{"id":"716","active":false},{"id":"717","active":false},{"id":"806","active":false},{"id":"798","active":false},{"id":"720","active":false},{"id":"721","active":false},{"id":"722","active":false},{"id":"723","active":false},{"id":"802","active":false},{"id":"703","active":false},{"id":"725","active":false},{"id":"726","active":false},{"id":"799","active":false},{"id":"728","active":false},{"id":"729","active":false},{"id":"732","active":false},{"id":"800","active":false},{"id":"801","active":false},{"id":"737","active":false},{"id":"738","active":false},{"id":"803","active":false},{"id":"739","active":false},{"id":"740","active":false},{"id":"743","active":false},{"id":"744","active":false},{"id":"746","active":false},{"id":"804","active":false},{"id":"805","active":false},{"id":"748","active":false},{"id":"749","active":false},{"id":"751","active":false},{"id":"752","active":false},{"id":"753","active":false},{"id":"754","active":false},{"id":"755","active":false},{"id":"756","active":false},{"id":"757","active":false},{"id":"758","active":false},{"id":"759","active":false},{"id":"760","active":false},{"id":"762","active":false},{"id":"763","active":false},{"id":"764","active":false},{"id":"807","active":false},{"id":"766","active":false},{"id":"767","active":false},{"id":"768","active":false},{"id":"769","active":false},{"id":"770","active":false},{"id":"808","active":false},{"id":"773","active":false},{"id":"809","active":false},{"id":"810","active":false},{"id":"811","active":false},{"id":"774","active":false},{"id":"775","active":false},{"id":"776","active":false},{"id":"797","active":false},{"id":"778","active":false},{"id":"779","active":false},{"id":"780","active":false},{"id":"781","active":false},{"id":"782","active":false},{"id":"783","active":false},{"id":"784","active":false},{"id":"785","active":false},{"id":"812","active":false},{"id":"789","active":false},{"id":"790","active":false},{"id":"791","active":false},{"id":"792","active":false},{"id":"794","active":false},{"id":"795","active":false},{"id":"814","active":false},{"id":"815","active":false}]})
+});
+</script>
+ End ConveyThis button code. -->
+
+    <script src="js/mobilenav.js"></script>
+
+</body>
+
+</html>

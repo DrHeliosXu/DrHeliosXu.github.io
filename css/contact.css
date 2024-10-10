@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Krub:400,700");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -29,6 +31,7 @@ body {
   background: #151515;
   overflow: hidden;
 }
+
 .card .ds-top {
   position: absolute;
   margin: auto;
@@ -40,6 +43,7 @@ body {
   background: #f7760d;
   animation: dsTop 1.5s;
 }
+
 .card .avatar-holder {
   position: absolute;
   margin: auto;
@@ -54,11 +58,13 @@ body {
   overflow: hidden;
   animation: mvTop 1.5s;
 }
+
 .card .avatar-holder img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .card .name {
   position: absolute;
   margin: auto;
@@ -71,16 +77,19 @@ body {
   text-align: center;
   animation: fadeIn 2s ease-in;
 }
+
 .card .name a {
   color: white;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
 }
+
 .card .name a:hover {
   text-decoration: underline;
   color: crimson;
 }
+
 .card .name h6 {
   position: absolute;
   margin: auto;
@@ -90,6 +99,7 @@ body {
   color: white;
   width: 40px;
 }
+
 .card .button {
   position: absolute;
   margin: auto;
@@ -104,6 +114,7 @@ body {
   animation: fadeIn 2s ease-in;
   outline: none;
 }
+
 .card .button a {
   padding: 5px 20px;
   border-radius: 10px;
@@ -113,10 +124,12 @@ body {
   font-size: 10px;
   transition: all 1s;
 }
+
 .card .button a:hover {
   color: white;
   background: crimson;
 }
+
 .card .ds-info {
   position: absolute;
   margin: auto;
@@ -128,7 +141,10 @@ body {
   height: 40px;
   display: flex;
 }
-.card .ds-info .pens, .card .ds-info .projects, .card .ds-info .posts {
+
+.card .ds-info .pens,
+.card .ds-info .projects,
+.card .ds-info .posts {
   position: relative;
   left: -300px;
   width: calc(250px / 3);
@@ -137,19 +153,28 @@ body {
   animation: fadeInMove 2s;
   animation-fill-mode: forwards;
 }
-.card .ds-info .pens h6, .card .ds-info .projects h6, .card .ds-info .posts h6 {
+
+.card .ds-info .pens h6,
+.card .ds-info .projects h6,
+.card .ds-info .posts h6 {
   text-transform: uppercase;
   color: crimson;
 }
-.card .ds-info .pens p, .card .ds-info .projects p, .card .ds-info .posts p {
+
+.card .ds-info .pens p,
+.card .ds-info .projects p,
+.card .ds-info .posts p {
   font-size: 12px;
 }
+
 .card .ds-info .ds:nth-of-type(2) {
   animation-delay: 0.5s;
 }
+
 .card .ds-info .ds:nth-of-type(1) {
   animation-delay: 1s;
 }
+
 .card .ds-skill {
   position: absolute;
   margin: auto;
@@ -160,12 +185,14 @@ body {
   height: 100px;
   animation: mvBottom 1.5s;
 }
+
 .card .ds-skill h6 {
   margin-bottom: 5px;
   font-weight: 700;
   text-transform: uppercase;
   color: crimson;
 }
+
 .card .ds-skill .skill h6 {
   font-weight: 400;
   font-size: 8px;
@@ -173,34 +200,41 @@ body {
   margin: 4px 0;
   color: white;
 }
+
 .card .ds-skill .skill .fab {
   color: crimson;
   font-size: 14px;
 }
+
 .card .ds-skill .skill .bar {
   height: 5px;
   background: crimson;
   text-align: right;
 }
+
 .card .ds-skill .skill .bar p {
   color: white;
   font-size: 8px;
   padding-top: 5px;
   animation: fadeIn 5s;
 }
+
 .card .ds-skill .skill .bar:hover {
   background: white;
 }
+
 .card .ds-skill .skill .bar-html {
   width: 95%;
   animation: htmlSkill 1s;
   animation-delay: 0.4s;
 }
+
 .card .ds-skill .skill .bar-css {
   width: 90%;
   animation: cssSkill 2s;
   animation-delay: 0.4s;
 }
+
 .card .ds-skill .skill .bar-js {
   width: 75%;
   animation: jsSkill 3s;
@@ -212,67 +246,83 @@ body {
     opacity: 0;
     left: -300px;
   }
+
   100% {
     opacity: 1;
     left: 0;
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 @keyframes htmlSkill {
   0% {
     width: 0;
   }
+
   100% {
     width: 95%;
   }
 }
+
 @keyframes cssSkill {
   0% {
     width: 0;
   }
+
   100% {
     width: 90%;
   }
 }
+
 @keyframes jsSkill {
   0% {
     width: 0;
   }
+
   100% {
     width: 75%;
   }
 }
+
 @keyframes mvBottom {
   0% {
     bottom: -150px;
   }
+
   100% {
     bottom: 10px;
   }
 }
+
 @keyframes mvTop {
   0% {
     top: -150px;
   }
+
   100% {
     top: 40px;
   }
 }
+
 @keyframes dsTop {
   0% {
     top: -150px;
   }
+
   100% {
     top: 0;
   }
 }
+
 .following {
   color: white;
   background: crimson;
