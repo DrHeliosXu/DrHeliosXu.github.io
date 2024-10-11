@@ -2090,3 +2090,13 @@ select {
     margin-right: 10px;
   }
 }
+
+.social-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  flex: 0 0 auto;
+}
