@@ -27,37 +27,9 @@
     <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/mobilenav.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Tahoma', 'Noto Sans', sans-serif;
-            /* 全局字体 */
-            font-size: 16px;
-            color: #373737;
-            line-height: 1.6;
-        }
 
-
-        select {
-            width: 150px;
-            /* 设置宽度 */
-            height: 15px;
-            /* 设置高度 */
-            border-radius: 0 !important;
-            /* 去除圆角 */
-            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-            /* 设置阴影 */
-            border: 1px solid #ccc;
-            /* 边框颜色 */
-            padding: 2px 2px;
-            /* 内边距，提升可点击区域 */
-            background-color: #fff;
-            /* 背景色 */
-            font-size: 14px;
-            /* 字体大小 */
-            font-family: Arial, sans-serif;
-            /* 字体字形，使用无衬线字体 */
-        }
     </style>
 
 </head>
@@ -81,14 +53,41 @@
                     </div>
                     <div class="col-12 col-lg-6 ml-auto d-flex">
                         <div class="ml-md-auto top-social d-lg-inline-block">
-                            <a href="https://www.linkedin.com/in/xuhong/" class="d-inline-block p-3"
-                                target="_blank"><span class="icon-linkedin"></span></a>
-                            <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank"
-                                class="d-inline-block p-3"><span class="icon-google"></span></a>
-                            <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
-                                class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+                            <a href="https://www.linkedin.com/in/xuhong/" class="d-inline-block p-3" target="_blank">
+                                <span class="icon-linkedin"></span>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                class="d-inline-block p-3" target="_blank">
+                                <span class="icon-google"></span>
+                            </a>
+                            <a href="https://www.instagram.com/helios.h.xu/" target="_blank" class="d-inline-block p-3">
+                                <span class="icon-instagram"></span>
+                            </a>
+                            <!-- 添加 Twitter 图标 -->
+                            <!-- <a href="https://twitter.com/yourusername" target="_blank" class="d-inline-block p-3">
+                                <span class="icon-twitter"></span>
+                            </a> -->
+                            <!-- 添加 GitHub 图标 -->
+                            <!-- <a href="https://github.com/yourusername" target="_blank" class="d-inline-block p-3">
+                                <span class="icon-github"></span>
+                            </a> -->
+                            <!-- 添加 Facebook 图标 -->
+                            <!-- <a href="https://facebook.com/yourusername" target="_blank" class="d-inline-block p-3">
+                                <span class="icon-facebook"></span>
+                            </a> -->
+                            <!-- 添加 WeChat 图标 -->
+                            <a href="your-wechat-link" target="_blank" class="d-inline-block p-3">
+                                <span class="icon-wechat"></span>
+                            </a>
+                            <a href="https://www.zhihu.com/people/dr.of.nothing" target="_blank"
+                                class="d-inline-block p-3">
+                                <i class="fab fa-zhihu" style="font-size: 1.5em;"></i>
+                            </a>
+                            <!-- <a href="https://www.xiaohongshu.com/user/yourusername" target="_blank"
+                                class="d-inline-block p-3">
+                                <i class="fab fa-xiaohongshu"></i>
+                            </a> -->
                         </div>
-
                     </div>
                     <div class="col-6 d-block d-lg-none text-right">
 
@@ -101,15 +100,13 @@
 
             <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
                 role="banner">
-
                 <div class="container">
                     <div class="d-flex align-items-center">
-
                         <div class="mr-auto">
                             <nav class="site-navigation position-relative text-right" role="navigation">
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
                                     <li class="active">
-                                        <a href="cn.html" class="nav-link text-left">主 页&nbsp;</a>
+                                        <a href="cn.html" class="nav-link text-left">主 页&nbsp;&nbsp;</a>
                                     </li>
                                     <li>
                                         <a href="cn-research.html" class="nav-link text-left">研 究</a>
@@ -126,10 +123,9 @@
                                 </ul>
                             </nav>
                         </div>
-
                         <!-- 语言选择框 -->
                         <div class="ml-auto">
-                            <span style="display: flex; align-items: center; font-family: verdana; font-size: 14px;">
+                            <span style="display: flex; align-items: center;">
                                 <!-- 简体字和国旗 -->
                                 <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
                                     class="d-inline-block" style="margin-right: 5px;">
@@ -146,7 +142,7 @@
                                 </a>
                                 <!-- 选择语言的下拉框 -->
                                 <select id="languages" name="languages"
-                                    style="width: 70px; height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
+                                    style="width: 70px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
                                     onchange="window.location.href=this.options[this.selectedIndex].value">
                                     <option value="cn.html">中文</option>
                                     <option value="jp.html">日本語</option>
@@ -159,7 +155,6 @@
                                     <option value="ru.html">Русский</option>
                                     <option value="ar.html">اللغة العربية</option>
                                 </select>
-                            </span>
                             </span>
                         </div>
                     </div>

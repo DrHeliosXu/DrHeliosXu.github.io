@@ -1947,3 +1947,70 @@ iframe {
 img {
   max-width: 100%;
 }
+
+
+
+body {
+  font-family: 'Tahoma', 'Noto Sans', sans-serif;
+  /* 全局字体 */
+  font-size: 16px;
+  color: #373737;
+  line-height: 1.6;
+}
+
+
+select {
+  width: 150px;
+  /* 设置宽度 */
+  height: 15px;
+  /* 设置高度 */
+  border-radius: 0 !important;
+  /* 去除圆角 */
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+  /* 设置阴影 */
+  border: 1px solid #ccc;
+  /* 边框颜色 */
+  padding: 2px 2px;
+  /* 内边距，提升可点击区域 */
+  background-color: #fff;
+  /* 背景色 */
+  font-size: 14px;
+  /* 字体大小 */
+  font-family: Arial, sans-serif;
+  /* 字体字形，使用无衬线字体 */
+}
+
+.site-navbar {
+  font-family: Tahoma, sans-serif !important;
+  /* 强制字体为 Tahoma */
+  font-size: 14px !important;
+  /* 强制字体大小为 14px */
+}
+
+.site-navbar a {
+  font-family: Tahoma, sans-serif !important;
+  /* 确保链接字体为 Tahoma */
+  font-size: 14px !important;
+  /* 确保链接字体大小为 14px */
+}
+
+.site-navbar .site-menu li a {
+  font-family: Tahoma, sans-serif !important;
+  /* 确保链接字体为 Tahoma */
+  font-size: 14px !important;
+  /* 确保链接字体大小为 14px */
+}
+
+.top-social a {
+  font-family: Tahoma, sans-serif !important;
+  /* 确保社交媒体链接字体为 Tahoma */
+  font-size: 14px !important;
+  /* 确保社交媒体链接字体大小为 14px */
+}
+
+#languages {
+  font-family: Tahoma, sans-serif !important;
+  /* 确保选择框字体为 Tahoma */
+  font-size: 14px !important;
+  /* 确保选择框字体大小为 14px */
+}
