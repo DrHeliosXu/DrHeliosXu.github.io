@@ -36,51 +36,35 @@
             color: #373737;
             line-height: 1.6;
         }
+
+
+        select {
+            width: 150px;
+            /* 设置宽度 */
+            height: 15px;
+            /* 设置高度 */
+            border-radius: 0 !important;
+            /* 去除圆角 */
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+            /* 设置阴影 */
+            border: 1px solid #ccc;
+            /* 边框颜色 */
+            padding: 2px 2px;
+            /* 内边距，提升可点击区域 */
+            background-color: #fff;
+            /* 背景色 */
+            font-size: 14px;
+            /* 字体大小 */
+            font-family: Arial, sans-serif;
+            /* 字体字形，使用无衬线字体 */
+        }
     </style>
 
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <!-- block save as
-  ================================================== -->
-    <script type="text/javascript">
-        window.onload = function () {
-            document.onkeydown = function () {
-                var e = window.event || arguments[0];
-                //屏蔽F12
-                if (e.keyCode == 123) {
-
-                    return false;
-                    //屏蔽Ctrl+Shift+I
-                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-
-                    return false;
-                    //屏蔽Shift+F10
-                } else if ((e.shiftKey) && (e.keyCode == 121)) {
-
-                    return false;
-                }
-            };
-            //屏蔽右键单击
-            document.oncontextmenu = function () {
-
-                return false;
-            }
-        }
-    </script>
 
     <div class="site-wrap">
-
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div>
-
-
 
         <div class="header-top">
             <div class="container">
@@ -92,7 +76,6 @@
                         </a>
 
                         <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
-                            <!---<span class="icon-menu h3"></span>--->
                         </a>
 
                     </div>
@@ -104,20 +87,7 @@
                                 class="d-inline-block p-3"><span class="icon-google"></span></a>
                             <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
                                 class="d-inline-block p-3"><span class="icon-instagram"></span></a>
-                            <a href="en.html" class="d-inline-block p-3">EN</a>
-                            <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
-                                class="d-inline-block p-3">简</a>
-                            <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
-                                class="d-inline-block p-3">繁</a>
                         </div>
-                        <!--- <form action="#" class="search-form d-inline-block">
-
-              <div class="d-flex">
-                <input type="email" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
-              </div>
-            </form>
-           --->
 
                     </div>
                     <div class="col-6 d-block d-lg-none text-right">
@@ -133,7 +103,6 @@
                 role="banner">
 
                 <div class="container">
-
                     <div class="d-flex align-items-center">
 
                         <div class="mr-auto">
@@ -154,15 +123,51 @@
                                     <li>
                                         <a href="cn-about.html" class="nav-link text-left">关 于</a>
                                     </li>
-
                                 </ul>
                             </nav>
+                        </div>
+
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center; font-family: verdana; font-size: 14px;">
+                                <!-- 简体字和国旗 -->
+                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
+                                    class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_cn.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">简
+                                </a> /
+                                <!-- 繁体字和国旗 -->
+                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
+                                    class="d-inline-block" style="margin-left: 5px; margin-right: 5px;">
+                                    <img src="images/flag_hk.png" alt="flag"
+                                        style="height:15px; margin-right:5px;position:relative; top:-1px;"><img
+                                        src="images/flag_mc.png" alt="flag"
+                                        style="height:15px; margin-right:2px;position:relative; top:-1px;">繁
+                                </a>
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages" name="languages"
+                                    style="width: 70px; height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn.html">中文</option>
+                                    <option value="jp.html">日本語</option>
+                                    <option value="kr.html">한국어</option>
+                                    <option value="de.html">Deutsch</option>
+                                    <option value="en.html">English</option>
+                                    <option value="es.html">Español</option>
+                                    <option value="fr.html">Français</option>
+                                    <option value="it.html">Italiano</option>
+                                    <option value="ru.html">Русский</option>
+                                    <option value="ar.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
+
         <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
@@ -979,8 +984,6 @@
             <script src="js/jquery.sticky.js"></script>
             <script src="js/jquery.mb.YTPlayer.min.js"></script>
             <script src="js/mobilenav.js"></script>
-
-
 
             <script src="js/main.js"></script>
 
