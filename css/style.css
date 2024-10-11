@@ -2072,3 +2072,21 @@ select {
   font-size: 14px !important;
   /* 确保选择框字体大小为 14px */
 }
+
+.language-selector {
+  margin-left: auto;
+}
+
+#languages {
+  width: 70px;
+  height: 25px;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  .language-selector {
+    order: -1;
+    margin-right: 10px;
+  }
+}
