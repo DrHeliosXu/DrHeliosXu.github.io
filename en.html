@@ -29,6 +29,7 @@
             color: #373737;
             line-height: 1.6;
         }
+        
     </style>
 
 </head>
@@ -70,8 +71,6 @@
                                 class="d-inline-block p-3"><span class="icon-google"></span></a>
                             <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
                                 class="d-inline-block p-3"><span class="icon-instagram"></span></a>
-                            <a href="en.html" class="d-inline-block p-3">EN</a>
-                            <a href="cn.html" class="d-inline-block p-3">中文</a>
                         </div>
                         <!--- <form action="#" class="search-form d-inline-block">
 
@@ -100,13 +99,13 @@
                     <div class="d-flex align-items-center">
 
                         <div class="mr-auto">
-                            <nav class="site-navigation position-relative text-right" role="navigation">
-                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
-                                    <li class="active">
-                                        <a href="en.html" class="nav-link text-left">Home&nbsp;</a>
-                                    </li>
+                            <nav class="site-navigation position-relative text-right " role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
                                     <li>
-                                        <a href="en-research.html" class="nav-link text-left">Research</a>
+                                        <a href="en.html" class="nav-link text-left">Home&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="en-research.html" class="nav-link text-left">Research&nbsp;&nbsp;</a>
                                     </li>
                                     <li>
                                         <a href="en-news.html" class="nav-link text-left">News</a>
@@ -120,21 +119,40 @@
                                     <li>
                                         <a href="en-about.html" class="nav-link text-left">About Me</a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="https://xgraphy.eu.org" target="_blank"
-                                            class="nav-link text-left">Photography</a>
-                                    </li>
-                                    <li>
-                                        <a href="phd-horizon.html"
-                                            class="nav-link text-left d-none d-sm-block">Horizon</a>
-                                    </li>
-                                    <li>
-                                        <a href="once-upon-a-phd.html"
-                                            class="nav-link text-left d-none d-sm-block">«Once-Upon-A-PhD»</a>
-                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
+
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center;">
+                                <!-- 简体字和国旗 -->
+                                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_us.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                                </a>
+                                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_uk.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                                </a>
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages" name="languages"
+                                    style="width: 85px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn.html" >中文</option>
+                                    <option value="jp.html">日本語</option>
+                                    <option value="kr.html">한국어</option>
+                                    <option value="de.html">Deutsch</option>
+                                    <option value="en.html" selected >English</option>
+                                    <option value="es.html">Español</option>
+                                    <option value="fr.html">Français</option>
+                                    <option value="it.html">Italiano</option>
+                                    <option value="ru.html">Русский</option>
+                                    <option value="ar.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -175,7 +193,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         Action</p>
                                 </div>
-
+                                <img src="images/flags/un.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -222,7 +241,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         Energy</p>
                                 </div>
-
+                                <img src="images/flags/cn.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -270,7 +290,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold;text-transform: uppercase;">
                                         Growth</p>
                                 </div>
-
+                                <img src="images/flags/ch.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -321,7 +342,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold;text-transform: uppercase;">
                                         Innovation</p>
                                 </div>
-
+                                <img src="images/flags/ch.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -372,7 +394,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         Cities</p>
                                 </div>
-
+                                <img src="images/flags/de.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -420,7 +443,8 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         Water</p>
                                 </div>
-
+                                <img src="images/flags/un.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">UN Sustainable Development Goals</span>
@@ -563,7 +587,7 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">01</div>
                             <div class="trend-contents">
-                                <h2><a href="#">Doctoral Graduation Ceremony held at ETH Zürich</a></h2>
+                            <h2><a href="#"><small style="font-size: 0.8em;"><strong>Graduation Ceremony held at ETH Zürich</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> in <a href="#">Zurich, Switzerland</a></span>
                                     <span class="date-read">Oct 2021 <span class="mx-1"></span><span
@@ -575,7 +599,7 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">02</div>
                             <div class="trend-contents">
-                                <h2><a href="#">Joined Freudenberg Group as a Development Engineer</a></h2>
+                            <h2><a href="#"><small style="font-size: 0.8em;"><strong>Joined Freudenberg Group as a Development Engineer</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> in <a href="#">Munich, Germany</a></span>
                                     <span class="date-read">July 2021 <span class="mx-1"></span><span
@@ -587,7 +611,7 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">03</div>
                             <div class="trend-contents">
-                                <h2><a href="#">Accomplished 4 Years PhD Project at Paul Scherrer Institute</a></h2>
+                            <h2><a href="#"><small style="font-size: 0.8em;"><strong>Accomplished 4 Years PhD Project at Paul Scherrer Institute</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> in <a href="#">Villigen,
                                             Switzerland</a></span>
@@ -600,7 +624,7 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">04</div>
                             <div class="trend-contents">
-                                <h2><a href="#">Awarded MBA Degree at Quantic School of Business</a></h2>
+                            <h2><a href="#"><small style="font-size: 0.8em;"><strong>Awarded MBA Degree at Quantic School of Business</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> virtualy in <a href="#">Washington DC,
                                             US</a></span>

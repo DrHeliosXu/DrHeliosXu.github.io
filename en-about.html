@@ -37,6 +37,10 @@
             color: #373737;
             line-height: 1.6;
         }
+
+        strong {
+    font-weight: bold;
+}
     </style>
 
 
@@ -79,8 +83,6 @@
                                 class="d-inline-block p-3"><span class="icon-google"></span></a>
                             <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
                                 class="d-inline-block p-3"><span class="icon-instagram"></span></a>
-                            <a href="about.html" class="d-inline-block p-3">EN</a>
-                            <a href="guanyu.html" class="d-inline-block p-3">中文</a>
                         </div>
                         <!--- <form action="#" class="search-form d-inline-block">
 
@@ -109,11 +111,11 @@
                         <div class="mr-auto">
                             <nav class="site-navigation position-relative text-right " role="navigation">
                                 <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
-                                    <li class="active">
-                                        <a href="en.html" class="nav-link text-left">Home&nbsp;</a>
-                                    </li>
                                     <li>
-                                        <a href="en-research.html" class="nav-link text-left">Research</a>
+                                        <a href="en.html" class="nav-link text-left">Home&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="en-research.html" class="nav-link text-left">Research&nbsp;&nbsp;</a>
                                     </li>
                                     <li>
                                         <a href="en-news.html" class="nav-link text-left">News</a>
@@ -129,6 +131,35 @@
                                     </li>
                                 </ul>
                             </nav>
+                        </div>
+                                                <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center;">
+                                <!-- 简体字和国旗 -->
+                                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_us.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                                </a>
+                                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_uk.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                                </a>
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages" name="languages"
+                                    style="width: 85px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn.html" >中文</option>
+                                    <option value="jp.html">日本語</option>
+                                    <option value="kr.html">한국어</option>
+                                    <option value="de.html">Deutsch</option>
+                                    <option value="en.html" selected >English</option>
+                                    <option value="es.html">Español</option>
+                                    <option value="fr.html">Français</option>
+                                    <option value="it.html">Italiano</option>
+                                    <option value="ru.html">Русский</option>
+                                    <option value="ar.html">اللغة العربية</option>
+                                </select>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -182,26 +213,6 @@
                             About Me
                         </h1>
                         <hr>
-                        <!--
-            <p  align="justify">
-              Currently, Helios Xu is a <strong>Development Engineer</strong> for Commerical Fuel Cell Vehicles at <strong><a href="https://fst.com" target="_blank">Freudenberg Group</a></strong> in Munich, Germany. His academic and industrial interdisplinary interests are focused on <strong>renewable energy</strong>, <strong>sustainability</strong>, <strong>functional materials</strong>, X-ray imaging, computer vision, equity research, and business analytics.
-            </p> 
-      
-            <p  align="justify">
-              He received his doctoral degree in sciences with focuses on renewable technologies from <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></strong> in 2021 and engaged in 2 years industrial and 4 years academic collaboration  projects on hydrogen fuel cell developments. In parallel, he developed professional education as a part-time <strong>MBA fellow</strong> at <strong><a href="https://quantic.edu/mba" target="_blank">Quantic School of Business</a></strong>. In 2016, he obtained master degree in materials science from <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong> with industrial practices at <strong>Infineon Technologies</strong> and <strong>European XFEL GmbH</strong>. He went to University at a young age of 16 y/o, and he finished bachelor studies at <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Transport University</a></strong> with 3 patents granted in 2013.  
-            </p>       
-             <p> PEK -> CDG -> HAM -> MUC -> ZRH -> ?</p>  
-      -->
-                        <!--<p  align="justify">
-              He has published over 10 articles and conference papers with 3 Chinese patents granted. He has been awarded ECS Travel Grant (2019) by US Army Research Office, Erasmus Mobility Grant (2015) by European Commission, and Innovation Scholarship (2012) by Beijing Jiaotong University.
-            </p> 
-          
-          -->
-
-
-                        <!--<p  align="justify">Hoi Zäme! My name is Helios Xu, currently I'm a <strong>PhD Graduate</strong> at <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></strong> with interdisciplinary background in <strong>Renewable Energy</strong>, <strong>Materials Science</strong>, and <strong>Data Science</strong>. On the Three Kings' Day 2021 in Switzerland, I successfully defended my PhD thesis at <strong><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></strong> on the recommendation of Prof. <strong><a href="https://electrochemistry.ethz.ch/people/person-detail.html?persid=177926" target="_blank">Thomas J. Schmidt</a></strong>, with accumulated exciting research at <strong><a href="https://www.psi.ch/en" target="_blank">Paul Scherrer Institute</a></strong> (PSI) and collaborative efforts from  <strong><a href="https://www.toyota-europe.com/" target="_blank">Toyota Motor Europe</a></strong> (TME).</p> -->
-
-                        <!--<p  align="justify">I was admitted to the University as a 16 years old teenager, and I obtained my bachelor degree from <strong><a href="http://en.bjtu.edu.cn/" target="_blank">Beijing Jiaotong University</a></strong> in 2013. Under the merit-based Erasmus Mundus <strong><a href="https://www.mamaself.eu/" target="_blank">MaMaSELF</a></strong> framework, I received dual-master degrees from <strong><a href="https://www.univ-rennes1.fr/" target="_blank">University of Rennes 1</a></strong> and <strong><a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></strong> in 2016 with thesis supervised by Prof. <strong><a href="https://www.professoren.tum.de/en/mueller-buschbaum-peter" target="_blank">Peter Müller-Buschbaum</a></strong>.</p> -->
 
                         <div class="container">
                             <!--<h1 class="center">Helios Xu - Résume</h1>-->

@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -123,6 +122,8 @@
                                 </ul>
                             </nav>
                         </div>
+
+
                         <!-- 语言选择框 -->
                         <div class="ml-auto">
                             <span style="display: flex; align-items: center;">
@@ -144,7 +145,7 @@
                                 <select id="languages" name="languages"
                                     style="width: 70px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);"
                                     onchange="window.location.href=this.options[this.selectedIndex].value">
-                                    <option value="cn.html">中文</option>
+                                    <option value="cn.html" selected>中文</option>
                                     <option value="jp.html">日本語</option>
                                     <option value="kr.html">한국어</option>
                                     <option value="de.html">Deutsch</option>
@@ -163,8 +164,37 @@
 
         </div>
 
+
         <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
 
+        <!---Mobile MENU Bar --->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">目 录</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="cn.html">徐 泓 <small>博士</small> </a><br>
+                    </li>
+                    <li>
+                        <a href="cn-research.html">研究 →</a>
+                    </li>
+                    <li>
+                        <a href="cn-news.html">新闻 →</a>
+                    </li>
+                    <li>
+                        <a href="cn-projects.html">项目 →</a>
+                    </li>
+                    <li>
+                        <a href="cn-about.html">关于 →</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+        <!------>
 
 
         <div class="site-section py-0">
@@ -198,7 +228,9 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         行动</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/un.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
@@ -244,16 +276,18 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         能源</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/cn.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
                                 <h2><a href="#">SDG 7: 可负担的清洁能源</a><br></h2>
                                 <h3>确保所有的人都可取得负担的起、可靠的、永续的，以及现代的能源</h3>
                                 <p class="mb-3">-
-                                    大幅提高全球再生能源的共享，将全球能源效率的改善度提高一倍，改善国际合作，以提高干净能源与科技的取得管道，包括再生能源、能源效率、更先进及更干净的石化燃料科技</p>
+                                    大幅提高全球再生能源的共享，将全球能源效率的改善度提高一倍，改善国际合作，以提高干净能源与科技的取得管道，包括再生能源、能源效率、更先进及更干净的石化燃料科技。</p>
 
-                                <div class="post-meta">
+                                <div class=" post-meta">
                                     <span class="d-block"><a href="#"></a><a href="#">台北, 中国</a></span>
                                     <span class="date-read">Jul<span class="mx-1">&bullet;</span>2021<span
                                             class="icon-star2"></span></span>
@@ -292,7 +326,9 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold;text-transform: uppercase;">
                                         增长</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/ch.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
@@ -310,8 +346,6 @@
                         </div>
                     </div>
                 </div>
-
-
 
                 <div class="site-section">
                     <p class="d-sm-block d-none">&nbsp;</p>
@@ -341,7 +375,9 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold;text-transform: uppercase;">
                                         创新</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/ch.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
@@ -390,7 +426,9 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         城市社区</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/de.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
@@ -436,7 +474,9 @@
                                         style="margin: 0; font-size: 14px; color: #ffffff; font-weight: bold; text-transform: uppercase;">
                                         生物</p>
                                 </div>
-
+                                <!-- Flag Image -->
+                                <img src="images/flags/un.png" alt="Person"
+                                    style="position: absolute; bottom: 15px; right: 15px; height: auto; max-height: 5%; width: auto; opacity: 1;">
                             </div>
                             <div class="contents">
                                 <span class="caption">可持续发展目标 2030</span>
@@ -458,34 +498,6 @@
         </div>
 
 
-        <!---Mobile MENU Bar--->
-        <a class="d-inline-block d-sm-none ">
-            <button id="burger" class="open-main-nav">
-                <span class="burger"></span>
-                <span class="burger-text">目 录</span>
-            </button>
-
-            <nav class="main-nav" id="main-nav">
-                <ul>
-                    <li>
-                        <a href="cn.html">徐 泓 <small>博士</small> </a></br>
-                    </li>
-                    <li>
-                        <a href="cn-research.html">研究 →</a>
-                    </li>
-                    <li>
-                        <a href="cn-news.html">新闻 →</a>
-                    </li>
-                    <li>
-                        <a href="xiangmu.html">项目 →</a>
-                    </li>
-                    <li>
-                        <a href="cn-about.html">关于 →</a>
-                    </li>
-                </ul>
-            </nav>
-        </a>
-        <!------>
 
 
         <div class="site-section">
@@ -572,9 +584,8 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">01</div>
                             <div class="trend-contents">
-                                <h2><a href="https://www.salzburgglobal.org/multi-year-series/kfas/pageId/11076#people"
-                                        target=“_blank”>参加萨尔茨堡-KFAS全球研讨会</a>
-                                </h2>
+                            <h2><a href="https://www.salzburgglobal.org/multi-year-series/kfas/pageId/11076#people"
+                                        target=“_blank”><small style="font-size: 0.9em;"><strong>参加萨尔茨堡-KFAS全球研讨会</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> 在 <a href="#">萨尔茨堡, 奥地利 🇦🇹</a></span>
                                     <span class="date-read">2024年10月 <span class="mx-1"></span><span
@@ -586,9 +597,10 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">02</div>
                             <div class="trend-contents">
-                                <h2><a href="https://www.irena.org/" target=“_blank”>论文被国际再生能源署专题会录取</a></h2>
+                             <h2><a href="https://www.irena.org/"
+                                        target=“_blank”><small style="font-size: 0.9em;"><strong>论文被国际再生能源署专题会录取</strong></small></a></h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a> 在 <a href="#">波恩, 德国</a></span>
+                                    <span class="d-block"><a href="#"></a> 在 <a href="#">波恩, 德国 🇩🇪</a></span>
                                     <span class="date-read">2024年5月 <span class="mx-1"></span><span
                                             class="icon-star2"></span></span>
                                 </div>
@@ -598,7 +610,8 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">03</div>
                             <div class="trend-contents">
-                                <h2><a href="https://symposium.org/" target=“_blank”>担任瑞士圣加仑经济论坛学术评审</a></h2>
+                            <h2><a href="https://symposium.org/"
+                                        target=“_blank”><small style="font-size: 0.9em;"><strong>担任瑞士圣加仑经济论坛学术评审</strong></small></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#"></a> 在 <a href="#">圣加仑, 瑞士🇨🇭</a></span>
                                     <span class="date-read">2024年3月 <span class="mx-1"></span><span
@@ -638,26 +651,14 @@
                     <div class="img-bg" style="background-image: url('images/bio_img_3.jpg')"></div>
                     <div class="contents">
                         <span class="caption"></span>
-                        <h2><a href="#">徐 泓 <small>博士 / MBA</small></a></h2>
+                        <h2><a href="#">徐 泓 <small><small>博士 / MBA</small></small></a></h2>
                         <p class="mb-3">
                             <br>
                             🇨🇭 苏黎世联邦理工大学 / 博士<br>
-                            🇺🇳 联合国欧洲经济委员会 / 专家组成员<br>
-                            🇬🇧 牛津能源研究所 / 访问学者<br>
                             🇺🇸 量化商学院 / MBA<br>
                             🇩🇪 慕尼黑工业大学 / 硕士<br>
                             🇨🇳 北京交通大学 / 本科
-
                         </p>
-                        <!--
-            <p class="mb-3"></p>
-            工作经验<br>
-            2021-目前 | 开发工程师，Freudenberg集团，德国 <br>
-            2016-2021 | 博士研究员，保罗谢尔研究院，瑞士 <br>
-            2020-2021 | TMT证券分析实习生，中信证券，中国<br>
-            2017-2019 | 氢燃料电池研究员，丰田 (欧洲), 比利时<br>
-            2015-2016 | 芯片实习生，英飞凌科技，德国<br>
-            2015-2015 | 暑期实习生，欧盟XFEL有限公司，德国</p>   -->
                         <div class="post-meta">
                             <span class="d-block"><a href="#" target=“_blank”></a> 致力于 <a href="#">可再生能源</a>, <a
                                     href="#">低碳交通</a> 以及 <a href="#">可持续发展</a> 等领域</span>
@@ -867,9 +868,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
 
                 </div>
