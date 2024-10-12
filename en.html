@@ -68,35 +68,68 @@
                 <!---<span class="icon-menu h3"></span>--->
               </a>
             </div>
-            <div class="col-12 col-lg-6 ml-auto d-flex">
-              <div class="ml-md-auto top-social d-lg-inline-block">
-                <a
-                  href="https://www.linkedin.com/in/xuhong/"
-                  target="_blank"
-                  class="d-inline-block p-3"
-                  ><span class="icon-linkedin"></span
-                ></a>
-                <a
-                  href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
-                  target="_blank"
-                  class="d-inline-block p-3"
-                  ><span class="icon-google"></span
-                ></a>
-                <a
-                  href="https://www.instagram.com/helios.h.xu/"
-                  target="_blank"
-                  class="d-inline-block p-3"
-                  ><span class="icon-instagram"></span
-                ></a>
-              </div>
-              <!--- <form action="#" class="search-form d-inline-block">
+            <div class="col-12 col-lg-6 d-flex justify-content-end">
+              <div class="top-social d-flex align-items-center">
+                <div class="social-icons-container">
+                  <div class="ml-md-auto top-social d-lg-inline-block">
+                    <a
+                      href="https://www.linkedin.com/in/xuhong/"
+                      class="social-icon d-inline-block p-3"
+                      target="_blank"
+                    >
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a
+                      href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3"
+                      target="_blank"
+                    >
+                      <span class="icon-google"></span>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/helios.h.xu/"
+                      target="_blank"
+                      class="social-icon d-inline-block p-3"
+                    >
+                      <span class="icon-instagram"></span>
+                    </a>
 
-              <div class="d-flex">
-                <input type="email" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+                    <a
+                      href="your-wechat-link"
+                      target="_blank"
+                      class="social-icon d-inline-block p-3"
+                    >
+                      <span class="icon-wechat"></span
+                    ></a>
+
+                    <div class="ml-auto d-inline-block d-lg-none">
+                      <select
+                        id="languages"
+                        name="languages"
+                        style="
+                          width: 85px;
+                          height: 25px;
+                          margin-left: 5px;
+                          border-radius: 0;
+                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        "
+                        onchange="window.location.href=this.options[this.selectedIndex].value"
+                      >
+                        <option value="cn.html">中文</option>
+                        <option value="jp.html">日本語</option>
+                        <option value="kr.html">한국어</option>
+                        <option value="de.html">Deutsch</option>
+                        <option value="en.html" selected>English</option>
+                        <option value="es.html">Español</option>
+                        <option value="fr.html">Français</option>
+                        <option value="it.html">Italiano</option>
+                        <option value="ru.html">Русский</option>
+                        <option value="ar.html">اللغة العربية</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
-           --->
             </div>
             <div class="col-6 d-block d-lg-none text-right"></div>
           </div>
@@ -1647,6 +1680,19 @@
                 </p>
               </div>
 
+              <div
+                class="d-inline-block d-sm-none"
+                style="width: 100%; margin: 0 3%"
+              >
+                <hr
+                  style="
+                    border: none;
+                    border-top: 1px solid #c7c7c7;
+                    margin: 0px 0;
+                  "
+                />
+              </div>
+
               <!-- 第二栏 -->
               <div class="col-md-4">
                 <!-- weather widget start --><a
@@ -1695,6 +1741,19 @@
                     ></script>
                   </strong>
                 </p>
+              </div>
+
+              <div
+                class="d-inline-block d-sm-none"
+                style="width: 100%; margin: 0 3%"
+              >
+                <hr
+                  style="
+                    border: none;
+                    border-top: 1px solid #c7c7c7;
+                    margin: 0px 0;
+                  "
+                />
               </div>
 
               <!-- 第三栏 -->
