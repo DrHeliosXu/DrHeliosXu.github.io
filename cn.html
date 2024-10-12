@@ -1563,10 +1563,27 @@
           </div>
         </div>
         <p class="">&nbsp;</p>
-        <div class="site-section subscribe bg_FFFFFF">
+
+        <div class="site-section subscribe bg-light" style="position: relative">
+          <!-- 上方 hr -->
+          <!-- <hr
+            style="
+              height: 1px;
+              background-color: gray;
+              border: none;
+              margin: 0;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              width: 100vw;
+              transform: translateX(-50%);
+            "
+          /> -->
+          <h2>&nbsp;&nbsp;</h2>
           <div class="container">
-            <form action="#" class="row align-items-center">
-              <div class="col-md-5 mr-auto">
+            <form action="#" class="row align-items-start">
+              <!-- 第一栏 -->
+              <div class="col-md-4">
                 <img
                   src="images/logo.png"
                   alt="Image"
@@ -1585,9 +1602,7 @@
                     href="https://www.zhihu.com/people/dr.of.nothing"
                     target="_blank"
                     >zhihu.com/people/dr.of.nothing</a
-                  ><br />
-                  <br />
-
+                  ><br /><br />
                   <strong
                     ><a
                       href="//24timezones.com/Zurich/time"
@@ -1607,7 +1622,9 @@
                   </strong>
                 </p>
               </div>
-              <div class="col-md-6 ml-auto">
+
+              <!-- 第二栏 -->
+              <div class="col-md-4">
                 <!-- weather widget start --><a
                   id="weather"
                   target="_blank"
@@ -1627,8 +1644,7 @@
                   摄影 |
                   <a href="https://xgraphy.eu.org" target="_blank"
                     >xgraphy.eu.org</a
-                  >
-                  <br />
+                  ><br />
                   写作 |
                   <a href="https://notavailable.gitbook.io" target="_blank"
                     >site.in.construction.gitbook.io</a
@@ -1642,8 +1658,8 @@
                       href="//24timezones.com/Beijing/time"
                       style="text-decoration: none"
                       class="clock24"
-                      id="tz24-1617090826-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMSIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
-                      title="Beijing time zone"
+                      id="tz24-1617090826-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29kcyI6IjEiLCJzaG93dGltZXpvbmUiOiIxIiwidHlwZSI6ImQiLCJsYW5nIjoiZW4ifQ=="
+                      title="Beijing time"
                       target="_blank"
                       rel="nofollow"
                       >北京时间</a
@@ -1656,41 +1672,92 @@
                   </strong>
                 </p>
               </div>
+
+              <!-- 第三栏 -->
+
+              <div class="col-md-4">
+                <br />
+                <div style="width: 100%; text-align: left">
+                  <script
+                    type="text/javascript"
+                    id="clustrmaps"
+                    src="//cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"
+                  ></script>
+                </div>
+              </div>
             </form>
           </div>
+
+          <div class="container">
+            <form action="#" class="row align-items-center">
+              <div class="col-md-5 mr-auto"></div>
+              <div class="col-md-6 ml-auto"></div>
+            </form>
+          </div>
+          <h2>&nbsp;&nbsp;</h2>
+          <!-- 下方 hr -->
+          <hr
+            style="
+              height: 1px;
+              background-color: gray;
+              border: none;
+              margin: 0;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 100vw;
+              transform: translateX(-50%);
+            "
+          />
         </div>
 
         <!-- .site-wrap -->
-        <hr
+        <!-- <hr
           style="
             height: 1px;
             border-width: 0;
             color: gray;
             background-color: gray;
           "
-        />
+        /> -->
         <div class="footer">
           <div class="container">
             <div class="row">
               <div class="col-12">
                 <div class="copyright">
                   <p>
+                    <img
+                      class="country-flag"
+                      src=""
+                      alt="国旗"
+                      style="
+                        height: 0.9em;
+                        vertical-align: -6%;
+                        display: inline-block;
+                        margin-right: 0em;
+                      "
+                    />
+                    欢迎来自<span class="location">地球</span>的朋友! 当前距离我
+                    <span class="distance-info"> ∞ km</span>
+                    <img
+                      src="./images/wflags/de.png"
+                      style="
+                        height: 0.9em;
+                        vertical-align: -6%;
+                        display: inline-block;
+                        margin-right: 0em;
+                      "
+                    />
+                    <br />
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    徐泓 <small>博士</small> | 版权 &copy; 2017-
+                    版权 &copy; 2017 -
                     <script>
                       document.write(new Date().getFullYear());
                     </script>
-                    <br />
-                    谢谢你这么好看还关注我! | 保留所有权利 | 网页设计
-                    <a href="https://colorlib.com" target="_blank">Colorlib</a>,
-                    <a href="https://freefrontend.com/" target="_blank"
-                      >FreeFrontend</a
-                    >,
-                    <a href="https://stephaniewalter.design/" target="_blank"
-                      >SW.Design</a
+                    | Helios Xu | 更新: 2024年10月 |
+                    <a href="https://colorlib.com" target="_blank">Colorlib</a
                     ><br />
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
                     <a href="https://info.flagcounter.com/D897"
                       ><img
                         src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
@@ -1747,6 +1814,7 @@
         <script src="js/mobilenav.js"></script>
 
         <script src="js/main.js"></script>
+        <script src="js/user_ip.js" type="module"></script>
       </div>
     </div>
   </body>
