@@ -118,24 +118,51 @@
                         </a>
 
                     </div>
-                    <div class="col-12 col-lg-6 ml-auto d-flex">
-                        <div class="ml-md-auto top-social d-lg-inline-block">
-                            <a href="https://www.linkedin.com/in/xuhong/" class="d-inline-block p-3"><span
-                                    class="icon-linkedin"></span></a>
-                            <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
-                                class="d-inline-block p-3"><span class="icon-google"></span></a>
-                            <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
-                                class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+                                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                                        target="_blank">
+                                        <span class="icon-linkedin"></span>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                        class="social-icon d-inline-block p-3" target="_blank">
+                                        <span class="icon-google"></span>
+                                    </a>
+                                    <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
+                                        class="social-icon d-inline-block p-3">
+                                        <span class="icon-instagram"></span>
+                                    </a>
+
+                                    <a href="your-wechat-link" target="_blank" class="social-icon d-inline-block p-3">
+                                        <span class="icon-wechat"></span></a>
+
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" style="
+                                            width: 90px;
+                                            height: 25px;
+                                            margin-left: 5px;
+                                            border-radius: 0;
+                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                            " onchange="handleChange(this)">
+                                            <option value="cn.html">中文简体</option>
+                                            <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
+                                            </option>
+                                            <option value="jp.html">日本語</option>
+                                            <option value="kr.html">한국어</option>
+                                            <option value="de.html">Deutsch</option>
+                                            <option value="en.html">English</option>
+                                            <option value="es.html">Español</option>
+                                            <option value="fr.html">Français</option>
+                                            <option value="it.html">Italiano</option>
+                                            <option value="ru.html">Русский</option>
+                                            <option value="ar.html">اللغة العربية</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!--- <form action="#" class="search-form d-inline-block">
-
-              <div class="d-flex">
-                <input type="email" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
-              </div>
-            </form>
-           --->
-
                     </div>
                     <div class="col-6 d-block d-lg-none text-right">
 
@@ -1166,6 +1193,8 @@
 
         <script src="js/main.js"></script>
         <script src="js/user_ip_cn.js" type="module"></script>
+                    <script src="js/cn_fanti_translate.js"></script>
+
       </div>
     </div>
   </body>
