@@ -10,6 +10,8 @@ body {
   /* 使用从Google Fonts引入的Roboto字体 */
   font-weight: 300;
   font-size: 0.9rem;
+  overflow-x: hidden; /* 禁止水平滚动 */
+
 }
 
 ::-moz-selection {
