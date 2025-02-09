@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Helios Xu :: PhD :: Ingénieur</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/timeline-simple.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tahoma', 'Noto Sans', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- block save as ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="index.html" class="site-logo">
+                            <img src="images/logo-full-fr.png" alt="Image" class="site-logo" style="auto;height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 ml-auto d-flex">
+                        <div class="ml-md-auto top-social d-lg-inline-block">
+                            <a href="https://www.linkedin.com/in/xuhong/" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-linkedin"></span></a>
+                            <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-google"></span></a>
+                            <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
+                                class="d-inline-block p-3"><span class="icon-instagram"></span></a>
+                        </div>
+                        <!--- <form action="#" class="search-form d-inline-block">
+
+              <div class="d-flex">
+                <input type="email" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-secondary" ><span class="icon-search"></span></button>
+              </div>
+            </form>
+           --->
+
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right " role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                                    <li>
+                                        <a href="fr.html" class="nav-link text-left">Accueil&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="fr-research.html" class="nav-link text-left">Recherche&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li>
+                                        <a href="fr-news.html" class="nav-link text-left">Actualités</a>
+                                    </li>
+                                    <li>
+                                        <a href="fr-projects.html" class="nav-link text-left">Projets</a>
+                                    </li>
+                                    <!-- <li>
+                                                                          <a href="fr-activities.html" class="nav-link text-left">Activités</a>
+                                                                      </li> -->
+                                    <li>
+                                        <a href="fr-about.html" class="nav-link text-left">À propos de moi</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center">
+                                <!-- 简体字和国旗 -->
+                                <a href="" class="d-inline-block" style="margin-right: 5px">
+                                    <img src="images/flag_fr.png" alt="flag" style="
+                                                                height: 15px;
+                                                                margin-right: 2px;
+                                                                position: relative;
+                                                                top: -1px;
+                                                              " />
+                                </a>
+                                <a href="" class="d-inline-block" style="margin-right: 5px">
+                                    <img src="images/flag_ch.png" alt="flag" style="
+                                                                height: 15px;
+                                                                margin-right: 2px;
+                                                                position: relative;
+                                                                top: -1px;
+                                                              " />
+                                </a>
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages" name="languages" style="
+                                                              width: 85px;
+                                                              height: 25px;
+                                                              margin-left: 5px;
+                                                              border-radius: 0;
+                                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                            "
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn-news.html">中文</option>
+                                    <option value="jp-news.html">日本語</option>
+                                    <option value="kr-news.html">한국어</option>
+                                    <option value="de-news.html">Deutsch</option>
+                                    <option value="en-news.html">English</option>
+                                    <option value="es-news.html">Español</option>
+                                    <option value="fr-news.html" selected>Français</option>
+                                    <option value="it-news.html">Italiano</option>
+                                    <option value="ru-news.html">Русский</option>
+                                    <option value="ar-news.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">Menu</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="fr.html">Helios Xu, <small>PhD</small></a>
+                        <br />
+                    </li>
+                    <li>
+                        <a href="fr-research.html">Recherche →</a>
+                    </li>
+                    <li>
+                        <a href="fr-news.html">Actualités →</a>
+                    </li>
+                    <li>
+                        <a href="fr-projects.html">Projets →</a>
+                    </li>
+                    <li>
+                        <a href="fr-about.html">À propos de moi →</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+        <!------>
+
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&ensp;</p>
+            <p class="d-sm-block d-none">&ensp;</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 single-content">
+                        <p class="mb-5">
+                            &nbsp;
+                            <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+                        </p>
+                        <h1 class="mb-4">
+                            Revue de l'actualité
+                        </h1>
+                        <hr>
+
+                        <div class="container-fluid">
+                            <div class="row example-basic">
+                                <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1">
+                                    <ul class="timeline">
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <div class="timeline-content">
+                                                <h3 class="timeline-title">2025 / Année du serpent <img
+                                                        src="./images/12-snake.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -3px;" /></h3>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">15 février 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au concert symphonique de la
+                                                    "Conférence de sécurité de Munich"</h5>
+                                                <p>Thème : Loin de la paix et de l'harmonie<br>Lieu : Residenz München /
+                                                    Organisateur : Conférence de sécurité
+                                                    de Munich (MSC)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">16 janvier 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au séminaire de Cameron Abadi,
+                                                    rédacteur en chef adjoint du journal
+                                                    "Foreign Policy"</h5>
+                                                <p>Thème : Activistes climatiques : Pourquoi notre politique
+                                                    environnementale échoue<br>
+                                                    Lieu : Amerikahaus München</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cz.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">1 janvier 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Célébration du réveillon du Nouvel An lors du
+                                                    vol "Pékin-Prague" !</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2024 / Année du dragon <img
+                                                        src="./images/12-dragon.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -8px;" /></h3>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">4 décembre 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Lancement de l'initiative conjointe
+                                                    Salzburg-KFAS</h5>
+                                                <p>Thème : Initiative de leadership mondial KFAS-SALZBURG - Connecter
+                                                    les technologies<br>Lieu : Schloss
+                                                    Leopoldskron
+                                                    / Organisateur : Salzburg Global Seminar</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">20 octobre 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au 20e Sommet de l'Europe de
+                                                    Salzbourg</h5>
+                                                <p>Thème : 20e Sommet de l'Europe de Salzbourg UE : Pas d'avenir sans
+                                                    réformes<br>Lieu : Conseil municipal de
+                                                    Salzbourg /
+                                                    Organisateur : Institut des Régions Européennes (IRE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">23 septembre 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Promotion Internationale
+                                                    du Parc Scientifique de Zhongguancun 2024
+                                                </h5>
+                                                <p>Lieu : Munich Urban Colab / Organisateur : Parc scientifique de
+                                                    Zhongguancun</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">7 septembre 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Conférence 2024 sur le
+                                                    Développement de l'Économie à Basse
+                                                    Altitude à Wuhu</h5>
+                                                <p>Lieu : Centre d'Exposition International de Wuhu / Organisateur :
+                                                    Gouvernement municipal de Wuhu</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">14 août 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au concert d'Adele à Munich !
+                                                </h5>
+                                                <p>Lieu : Messe Stadt München | Organisateur : Adele à Munich</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 juin 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Conférence sur le
+                                                    Changement Climatique de Bonn 2024 de l'ONU</h5>
+                                                <p>Thème : Conférence sur le Changement Climatique de Bonn 2024<br>Lieu
+                                                    : Campus de l'ONU Bonn | Organisateur :
+                                                    Convention-cadre des Nations Unies sur les changements climatiques
+                                                    (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">8 juin 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Début de la tournée Royaume-Uni-Irlande :
+                                                    Angleterre-Pays de Galles-Ecosse-Irlande du
+                                                    Nord-Irlande</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">29 mai 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Task Force E-Mobility
+                                                    organisée par la UNECE</h5>
+                                                <p>Lieu : Palais des Nations, Genève / Organisateur : Commission
+                                                    économique pour l'Europe des Nations Unies
+                                                    (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2 mai 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au 53e Symposium de St. Gallen
+                                                    en tant que Leader en Herbe</h5>
+                                                <p>Thème : 53e Symposium de St. Gallen - Confrontation avec la
+                                                    rareté<br>Lieu : Université de St. Gallen /
+                                                    Organisateur : Symposium de St. Gallen</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">22 avril 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Foire Industrielle
+                                                    Hannover Messe 2024</h5>
+                                                <p>Thème : Energiser une industrie durable<br>Lieu : Centre d'exposition
+                                                    de Hanovre / Organisateur : Hannover
+                                                    Messe</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">17 avril 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Invitation au 40e Symposium Suisse
+                                                    d'Electrochimie PSI</h5>
+                                                <p>Thème : Matériaux bruts critiques pour la transition
+                                                    énergétique<br>Lieu : Kultur & Kongresshaus Aarau /
+                                                    Organisateur : 40e Symposium suisse d'électrochimie / PSI</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">7 mars 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Intervention au Groupe d'Experts de la UNECE
+                                                    sur le Changement Climatique et le
+                                                    Transport Intérieur</h5>
+                                                <p>Thème : Groupe d'experts sur l'évaluation des impacts du changement
+                                                    climatique et de l'adaptation pour le
+                                                    transport intérieur<br>Lieu : Palais des Nations, Genève /
+                                                    Organisateur : Commission économique pour
+                                                    l'Europe des Nations Unies (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2023 / Année du lapin <img
+                                                        src="./images/12-rabbit.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -5px;" /></h3>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">5 décembre 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au séminaire sur l'hydrogène à
+                                                    l'Oxford Institute for Energy Studies
+                                                </h5>
+                                                <p>Thème : Créer l'environnement pour une économie de l'hydrogène :
+                                                    politiques et régulations<br>Lieu : St.
+                                                    Hugh's College, Université d'Oxford / Organisateur : Oxford
+                                                    Institute for Energy Studies</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">6 octobre 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au Forum international sur
+                                                    l'énergie et le climat de Vienne</h5>
+                                                <p>Thème : Forum international de l'énergie et du climat de
+                                                    Vienne<br>Lieu : Hofburg Vienne / Organisateur :
+                                                    Organisation des Nations Unies pour le développement industriel
+                                                    (ONUDI)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">21 août 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Ascension du sommet du Mt. Herzogstand en
+                                                    Allemagne (1731m d'altitude)</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/lu.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">29 juillet 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Conférence mondiale sur
+                                                    les technologies du Luxembourg</h5>
+                                                <p>Thème : Conférence mondiale sur les technologies : L'innovation
+                                                    commerciale qui fait la différence<br>Lieu :
+                                                    LuxExpo / Organisateur : ICT Spring</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 juin 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation à la Conférence sur le
+                                                    Changement Climatique de Bonn 2023 de l'ONU</h5>
+                                                <p>Thème : Conférence sur le Changement Climatique de Bonn 2023<br>Lieu
+                                                    : Campus de l'ONU Bonn | Organisateur :
+                                                    Convention-cadre des Nations Unies sur les changements climatiques
+                                                    (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">21 mai 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au discours de Sam Altman, PDG
+                                                    de OpenAI, à l'Université technique de
+                                                    Munich</h5>
+                                                <p>Lieu : TUM AudiMax / Organisateur : TUM Speaker Series</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">4 mai 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation en tant qu'évaluateur
+                                                    académique au 52e Symposium de St. Gallen</h5>
+                                                <p>Thème : 52e Symposium de St. Gallen - Un nouveau contrat
+                                                    générationnel<br>Lieu : Université de St. Gallen /
+                                                    Organisateur : St. Gallen Symposium</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 janvier 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Participation au séminaire de Christoph
+                                                    Heusgen, président de la Munich Security
+                                                    Conference</h5>
+                                                <p>Lieu : TUM Think Tank / Organisateur : École de politique publique de
+                                                    Munich</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 ml-auto">
+                        <br>
+                        <div class="section-title">
+                            <h2>Historique des voyages</h2> <small><a href="periodic.html"
+                                    target="_blank">[Périodique]</a></small>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2021-Présent</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Allemagne, Suisse, Espagne, Italie, Slovénie, Croatie,
+                                        Bosnie-Herzégovine, Serbie,
+                                        Canada, Royaume-Uni, Irlande, Gibraltar, Grèce, Chine</span>
+                                    <span class="date-read">Ingénieur R&D</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">CH</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2016-2021</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Suisse, Allemagne, France, Italie, Islande, Norvège, Suède,
+                                        Finlande, Danemark,
+                                        Pays-Bas, Pologne, Estonie, Liechtenstein, Russie, États-Unis, Canada, Turquie,
+                                        Thaïlande, Chine</span>
+                                    <span class="date-read">Étudiant en doctorat</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2015-2016</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Allemagne, Autriche, Italie, France, Suisse, République
+                                        tchèque, Hongrie, Chine</span>
+                                    <span class="date-read">Étudiant en Master</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">FR</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2014-2015</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">France, Espagne, Belgique, Pays-Bas, Luxembourg</span>
+                                    <span class="date-read">Étudiant en Master</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">CN</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">2009-2014</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Pékin, Shanghai, Henan, Anhui, Yunnan, Liaoning, Jilin,
+                                        Heilongjiang, Shaanxi, Hunan,
+                                        Zhejiang, Jiangsu, Shandong, Taïwan</span>
+                                    <span class="date-read">Étudiant en Bachelor</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!---
+    <div class="site-section subscribe bg-light">
+      <div class="container">
+        <form action="#" class="row align-items-center">
+          <div class="col-md-5 mr-auto">
+            <h2>Newsletter Subcribe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    --->
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                        style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          top: 0;
+                          left: 50%;
+                          width: 100vw;
+                          transform: translateX(-50%);
+                        "
+                      /> -->
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2>Contactez-moi</h2>
+                        <p>
+                            Email | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                            LinkedIn |
+                            <a href="www.linkedin.com/in/xuhong" target="_blank">www.linkedin.com/in/xuhong</a><br />
+                            Zhihu |
+                            <a href="https://www.zhihu.com/people/dr.of.nothing"
+                                target="_blank">zhihu.com/people/dr.of.nothing</a><br /><br />
+                            <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="timezone - Zurich" target="_blank" rel="nofollow">Heure de Paris
+                                    [CET]</a></strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+                    <!-- 第二栏 -->
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start --><a id="weather" target="_blank"
+                            href="https://www.booked.net/weather/beijing-18391"><img
+                                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" /></a><!-- weather widget end -->
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2>Restez simple, restez naïf</h2>
+                        <p>
+                            Photographie |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                            Écriture |
+                            <a href="https://once-upon-a-phd.gitbook.io/"
+                                target="_blank">once-upon-a-phd.gitbook.io</a><br />
+                            Savant |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+                            <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="Time - Beijing" target="_blank" rel="nofollow">Heure de Pékin
+                                    [CST]</a></strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+                    <!-- 第三栏 -->
+
+                    <div class="col-md-5">
+                        <br />
+                        <div style="
+                                width: 100%;
+                                text-align: right;
+                                transform: translateX(5px);
+                              ">
+                            <script type="text/javascript" id="clustrmaps"
+                                src="https://cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"></script>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <br />
+
+            <!-- <div class="container">
+                        <form action="#" class="row align-items-center">
+                          <div class="col-md-5 mr-auto"></div>
+                          <div class="col-md-6 ml-auto"></div>
+                        </form>
+                      </div>
+                      <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          width: 150vw;
+                          transform: translateX(-50%);
+                        " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+                      style="
+                        height: 1px;
+                        border-width: 0;
+                        color: gray;
+                        background-color: gray;
+                      "
+                    /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag" src="" alt="国旗" style="
+                                    height: 0.9em;
+                                    vertical-align: -6%;
+                                    display: inline-block;
+                                    margin-right: 0em;
+                                  " />
+                                <strong>Bienvenue amis de
+                                    <span class="location">la terre</span>! La distance jusqu'à moi est de
+                                    <span class="distance-info"> ∞ km</span></strong>
+                                <img src="./images/wflags/de.png" style="
+                                    height: 0.9em;
+                                    vertical-align: -6%;
+                                    display: inline-block;
+                                    margin-right: 0em;
+                                  " />
+                                <br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Droits d'auteur &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | Helios Xu | Actualisé: 01. 2025 |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <!-- <a href="https://info.flagcounter.com/D897"
+                                  ><img
+                                    src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                    border="0"
+                                /></a> -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                                    display: inline-block;
+                                    width: 94%;
+                                    height: 95%;
+                                    overflow: hidden;
+                                    position: relative;
+                                  ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                                      width: auto;
+                                      height: auto;
+                                      object-fit: fill;
+                                      object-position: top right;
+                                      transform: translateX(3.5%) translateY(30%);
+                                    " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .site-wrap -->
+
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_fr.js" type="module"></script>
+    </div>
+    </div>
+</body>
+
+</html>
