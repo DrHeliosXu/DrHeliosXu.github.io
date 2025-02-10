@@ -57,15 +57,15 @@
 
                                     <a href="your-wechat-link" target="_blank" class="social-icon d-inline-block p-3">
                                         <span class="icon-wechat"></span></a>
-
                                     <div class="ml-auto d-inline-block d-lg-none">
                                         <select id="languages" name="languages" style="
-                                            width: 105px;
-                                            height: 25px;
-                                            margin-left: 5px;
-                                            border-radius: 0;
-                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                            " onchange="handleChange(this)">
+                                                                                                      width: 85px;
+                                                                                                      height: 25px;
+                                                                                                      margin-left: 5px;
+                                                                                                      border-radius: 0;
+                                                                                                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                    "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
                                             <option value="cn.html">中文</option>
                                             <option value="jp.html" selected>日本語</option>
                                             <option value="kr.html">한국어</option>
@@ -1357,7 +1357,6 @@
 
         <script src="js/main.js"></script>
         <script src="js/user_ip_jp.js" type="module"></script>
-        <script src="js/cn_fanti_translate.js"></script>
     </div>
 
 </body>
