@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <title>徐泓 | 신에너지 박사 | MBA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Tahoma', 'Noto Sans', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+
+
+        select {
+            width: 150px;
+            /* 设置宽度 */
+            height: 15px;
+            /* 设置高度 */
+            border-radius: 0 !important;
+            /* 去除圆角 */
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+            /* 设置阴影 */
+            border: 1px solid #ccc;
+            /* 边框颜色 */
+            padding: 2px 2px;
+            /* 内边距，提升可点击区域 */
+            background-color: #fff;
+            /* 背景色 */
+            font-size: 14px;
+            /* 字体大小 */
+            font-family: Arial, sans-serif;
+            /* 字体字形，使用无衬线字体 */
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <!-- block save as
+  ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="kr.html" class="site-logo">
+                            <img src="images/logo-full-kr.png" alt="Image" class="site-logo" style="height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+                                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                                        target="_blank">
+                                        <span class="icon-linkedin"></span>
+                                    </a>
+                                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                        class="social-icon d-inline-block p-3" target="_blank">
+                                        <span class="icon-google"></span>
+                                    </a>
+                                    <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
+                                        class="social-icon d-inline-block p-3">
+                                        <span class="icon-instagram"></span>
+                                    </a>
+
+                                    <a href="your-wechat-link" target="_blank" class="social-icon d-inline-block p-3">
+                                        <span class="icon-wechat"></span></a>
+
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" style="
+                                                                                    width: 105px;
+                                                                                    height: 25px;
+                                                                                    margin-left: 5px;
+                                                                                    border-radius: 0;
+                                                                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                    " onchange="handleChange(this)">
+                                            <option value="cn-research.html">中文</option>
+                                            <option value="jp-research.html">日本語</option>
+                                            <option value="kr-research.html" selected>한국어</option>
+                                            <option value="de-research.html">Deutsch</option>
+                                            <option value="en-research.html">English</option>
+                                            <option value="es-research.html">Español</option>
+                                            <option value="fr-research.html">Français</option>
+                                            <option value="it-research.html">Italiano</option>
+                                            <option value="ru-research.html">Русский</option>
+                                            <option value="ar-research.html">اللغة العربية</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right" role="navigation">
+                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
+                                    <li class="active">
+                                        <a href="kr.html" class="nav-link text-left">홈&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-research.html" class="nav-link text-left">연&nbsp;구</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-news.html" class="nav-link text-left">뉴&nbsp;스</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-projects.html" class="nav-link text-left">프&nbsp;로&nbsp;젝&nbsp;트</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-about.html" class="nav-link text-left">소&nbsp;개</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center">
+                                <img src="images/flag_kr.png" alt="flag" style="
+                                                    height: 15px;
+                                                    margin-right: 2px;
+                                                    position: relative;
+                                                    top: -1px;
+                                                  " />
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages" name="languages" style="
+                                                  width: 80px;
+                                                  height: 25px;
+                                                  margin-left: 5px;
+                                                  border-radius: 0;
+                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                "
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn-research.html">中文</option>
+                                    <option value="jp-research.html">日本語</option>
+                                    <option value="kr-research.html" selected>한국어</option>
+                                    <option value="de-research.html">Deutsch</option>
+                                    <option value="en-research.html">English</option>
+                                    <option value="es-research.html">Español</option>
+                                    <option value="fr-research.html">Français</option>
+                                    <option value="it-research.html">Italiano</option>
+                                    <option value="ru-research.html">Русский</option>
+                                    <option value="ar-research.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">목 차</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="kr.html">徐 泓 <small>박사</small> </a><br />
+                    </li>
+                    <li>
+                        <a href="kr-research.html">연구 →</a>
+                    </li>
+                    <li>
+                        <a href="kr-news.html">뉴스 →</a>
+                    </li>
+                    <li>
+                        <a href="kr-projects.html">프로젝트 →</a>
+                    </li>
+                    <li>
+                        <a href="kr-about.html">소개 →</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+
+        <!------>
+
+
+
+
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-8 single-content">
+
+                        <p class="mb-5">
+                            &nbsp;
+                            <img src="images/banner_img_1.jpg" alt="Image" class="img-fluid">
+                        </p>
+
+
+                        <h1 class="mb-4">
+                            연구 요약
+                        </h1>
+                        <h5 style="text-align: center;">전력망을 위한 수소-전기 협조형 저탄소 에너지 시스템</h5>
+                        <hr>
+                        <img src="/images/research_overview_en.jpg" alt="Research Overview"
+                            style="display: block; width: 98%; height: auto;">
+                        <hr>
+
+                        <br><br>
+
+
+                        <h1 class="mb-4">
+                            출판물
+                        </h1>
+                        <hr>
+                        <h4 class="mb-4">
+                            연구 논문
+                        </h4>
+
+                        <ul class="square">
+                            <li><strong>에너지 경제 / 정책 / 전략: </strong><br>
+                        </ul>
+                        <ol>
+                            <li>
+                                <strong>H. Xu*</strong> [ETH]<br>
+                                Hydrogen Development in China and the EU: A Recommended Tian Ji’s Horse Racing Strategy
+                                [W] <br>
+                                번역: 중유럽에서의 수소 에너지 발전 전망 - Tian Ji 의 경마 전략의 시사점<br>
+                                제출 채택: <text style="color:rgb(36, 82, 197)">[국제 재생 가능 에너지 기구] [IRENA 국제 에너지 워크숍]</text>
+                                <br>
+                                2024 | <em><strong>정책 연구 작업 논문</strong></em> [<a href="https://arxiv.org/abs/2408.08874"
+                                    target="_blank">PDF</a>]
+                                <text style="color:rgb(6, 35, 91)"></text><text style="color:rgb(19, 142, 10)"></text>
+                            </li>
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>신에너지 기술 / 전기화학 기술: </strong><br>
+                        </ul>
+                        <ol>
+                            <li>
+                                S. N. Artigas, <strong>H. Xu*</strong> [FDB], F. Mack<br>
+                                Use of distribution of relaxation times analysis as an in-situ diagnostic tool for water
+                                management in PEM fuel
+                                cells applications [J] <br>
+                                번역: 원위 질소교환막 연료전지 진단 도구: 이완 시간 분포를 물 관리에 응용<br>
+                                공동 연구: <text style="color:rgb(37, 84, 238)">[독일 코데바 그룹]</text> | 인용: <text
+                                    style="color:rgb(133, 36, 197)">[칭화대학교]</text> <br>
+                                2024 | <em><strong>J. Power Sources</strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378775324001307"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi,
+                                J. Eller<br>
+                                Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ
+                                liquid water desaturation
+                                via evaporation [J] <br>
+                                번역: 가스 확산층 기판이 PEFC 물 관리에 미치는 영향 II: 원위 액체수 증발로 인한 탈수 연구<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> | 인용: <text
+                                    style="color:rgb(250, 49, 14)">[토요타
+                                    자동차]</text> <text style="color:rgb(141, 20, 20)">[독일 보쉬]</text><br>
+                                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi
+                                [PSI], Prof. S. Haussener
+                                [EPFL]<br>
+                                Conductive heat transfer in partially saturated gas diffusion layers with evaporative
+                                cooling [J] <br>
+                                번역: 자가 증발 냉각 설계를 사용한 부분 포화 가스 확산층에서의 전도 열전달 연구<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> <text
+                                    style="color:rgb(250, 49, 14)">[로잔 연방
+                                    대학교]</text><br>
+                                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone,
+                                F. N. Büchi, J. Eller
+                                [PSI]<br>
+                                Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by
+                                subsecond operando
+                                X-ray tomographic microscopy. [J] <br>
+                                번역: 서브초 원위 X선 단층 촬영 기술로 PEFC 가스 확산층에서의 온도 의존성 수송 메커니즘 규명<br>
+                                공동 연구: <text style="color:rgb(250, 49, 14)">[토요타 자동차]</text> | 인용: <text
+                                    style="color:rgb(141, 20, 20)">[독일
+                                    보쉬]</text> <text style="color:rgb(133, 36, 197)">[칭화대학교]</text> <text
+                                    style="color:rgb(36, 95, 197)">[토론토
+                                    대학교]</text><br>
+                                2021 | <em><strong>J. Power Sources </strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/pii/S0378775321000422"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi, J. Eller [PSI]<br>
+                                Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando
+                                liquid water saturation and
+                                gas diffusion properties [J] <br>
+                                번역: 가스 확산층 기판이 PEFC 물 관리에 미치는 영향 I: 원위 액체수 포화도와 가스 확산 특성 연구<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text>| 인용: <text
+                                    style="color:rgb(74, 7, 241)">[독일
+                                    우주센터]</text> <text style="color:rgb(250, 49, 14)">[토요타 자동차]</text> <text
+                                    style="color:rgb(133, 36, 197)">[칭화대학교]</text><br>
+                                2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi [PSI]<br>
+                                Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell
+                                Performance [J] <br>
+                                번역: 수송 및 연료전지 성능 개선을 위한 레이저 구조화된 가스 확산층<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> | 인용: <text
+                                    style="color:rgb(74, 7, 241)">[도쿄
+                                    공과대학교]</text> <text style="color:rgb(248, 114, 5)">[홍콩 과학기술대학교]</text> <text
+                                    style="color:rgb(133, 36, 197)">[칭화대학교]</text><br>
+                                2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a
+                                    href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, F. Marone, <strong>H.
+                                    Xu*</strong> [PSI], F. N.
+                                Büchi. <br>
+                                Improving water management in fuel cells through microporous layer modifications: Fast
+                                operando tomographic
+                                imaging of liquid water. [J] <br>
+                                번역: 미세 다공층 개조를 통한 연료전지 물 관리 개선: 액체수의 빠른 원위 X선 단층 촬영<br>
+                                공동 연구: <text style="color:rgb(250, 49, 14)">[토요타 자동차]</text> | 인용: <text
+                                    style="color:rgb(241, 26, 7)">[매사추세츠
+                                    공과대학교]</text> <text style="color:rgb(74, 7, 241)">[독일 우주센터]</text> <text
+                                    style="color:rgb(7, 38, 241)">[국가전력투자]</text><br>
+                                2019 | <em><strong>J. Power Sources </strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943"
+                                    target="_blank">PDF</a>]
+                            </li>
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>AI / 컴퓨터 비전 / 4D 이미지화:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof.
+                                M. Stampanoni [ETH], F.
+                                Marone [SLS]<br>
+                                Deep learning based classification of dynamic processes in time-resolved XTM [J] <br>
+                                번역: 시간 분해 X선 단층 촬영 기술을 이용한 동적 프로세스의 심층 학습 기반 분류<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> <text
+                                    style="color:rgb(191, 9, 228)">[CWI
+                                    암스테르담]</text> | 인용자: <text style="color:rgb(236, 52, 36)">[스탠포드 대학교]</text> <text
+                                    style="color:rgb(12, 26, 230)">[아헨 공과대학교]</text>
+                                <br>
+                                2021 | <em><strong>Scientific Reports </strong></em> [<a
+                                    href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, Prof. J. Sijbers, Prof. M.
+                                Stampanoni [ETH], F. Marone
+                                [SLS]<br>
+                                Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data
+                                [J] <br>
+                                번역: 시간 분해 X선 단층 촬영 데이터를 사용하여 연료 전지의 물 동역학을 밝혀내다<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> <text
+                                    style="color:rgb(104, 9, 228)">[안트워프
+                                    대학교]</text> | 인용자: <text style="color:rgb(248, 101, 15)">[도쿄 대학교]</text> <text
+                                    style="color:rgb(12, 117, 230)">[토론토 대학교]</text>
+                                <br>
+                                2021 | <em><strong>Scientific Reports</strong></em> [<a
+                                    href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi, J. Eller [ETH]<br>
+                                Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers.
+                                [J] <br>
+                                번역: PEFC 가스 확산층에서 액체 물의 원위 X선 단층 촬영 이미지를 최적의 노이즈 제거로 개선<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> | 인용자: <text
+                                    style="color:rgb(74, 7, 241)">[중국
+                                    과학원 대련 화학 물리 연구소]</text> <text style="color:rgb(250, 49, 14)">[토론토 대학교]</text> <text
+                                    style="color:rgb(133, 36, 197)">[런던 대학교 유니버시티 컬리지]</text>
+                                <br>
+                                2020 | <em><strong>J. Electrochem. Soc. </strong></em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima, H. Nguyen, K. Kishita, F. N.
+                                Büchi, J. Eller<br>
+                                <strong>(초청)</strong> Exploring sub-second and sub-micron XTM imaging of liquid water in
+                                PEFC GDLs. [J] <br>
+                                번역: (초청 논문) PEFC 가스 확산층에서 액체 물의 서브초 및 서브마이크론 X선 단층 촬영 이미징 기술 탐구<br />
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> <text
+                                    style="color:rgb(250, 49, 14)">[토요타
+                                    자동차]</text> | 인용자: <text style="color:rgb(14, 97, 250)">[유럽 동기 방사선]</text> <text
+                                    style="color:rgb(250, 49, 14)">[미국 국가 연료 전지 센터]</text> | <text
+                                    style="color:rgb(14, 97, 250)">[ECS 회의
+                                    여행상]</text>
+                                <br />
+                                2019 | <em><strong>ECS Transactions </strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/09208.0011ecst"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi, J. Eller [PSI]<br>
+                                Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of
+                                PEFC. [J] <br>
+                                번역: 노이즈와의 싸움: PEFC의 서브초 X선 단층 촬영 기술의 한계로 나아가기<br>
+                                공동 연구: <text style="color:rgb(8, 114, 31)">[스위스 광원/PSI]</text> | 인용자: <text
+                                    style="color:rgb(74, 7, 241)">[미국
+                                    아르곤 국가 연구소]</text> <text style="color:rgb(250, 49, 14)">[토요타 자동차]</text> | <text
+                                    style="color:rgb(8, 114, 31)">[스위스 광원]</text> | <text
+                                    style="color:rgb(14, 97, 250)">[ModVal 최우수 보고서
+                                    상]</text>
+                                <br>
+                                2017 | <em><strong>ECS Transactions </strong></em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830"
+                                    target="_blank">PDF</a>]
+                            </li>
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>재료 과학 / 화학 공학:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT],
+                                T. Zhang<br>
+                                A simple spray reaction synthesis and characterization of hierarchically porous SnO2
+                                microspheres for an
+                                enhanced dye sensitized solar cell. [J] <br>
+                                번역: 염료 감응형 태양전지를 강화하기 위한 계층적 다공성 SnO2 미세구슬의 간단한 스프레이 반응 합성 및 특성 분석<br>
+                                2017 | <em><strong>RSC Advances</strong></em> [<a
+                                    href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract"
+                                    target="_blank">PDF</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+
+                            <li>
+                                장휘 교수 [BJTU], <strong>徐泓*</strong> [BJTU], 만금수, 엄루팅 교수, 다이춘아이<br>
+                                Preparations of new porous oxides spherical powders by spray reaction technique. [J]<br>
+                                번역: 스프레이 반응법을 이용한 새로운 다공성 산화물 구형 분말의 제조 [J] <br>
+                                2012 | <em>《진공 및 저온》</em> [<a
+                                    href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2012&filename=ZKDW201203005&uniplatform=NZKPT&v=n8kUCXQ29XK8uOcXQdI-5jgJqVfzr5uxF9oPXi_7Jb8CNlMTVCM7mmeU-Xw7WoTH"
+                                    target="_blank">링크</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+
+                            <li>
+                                기효월, <strong>徐泓*</strong> [BJTU], 주흥진<br>
+                                Degradation of highly active cypermethrin via ultrasonic irradiation combined with
+                                photocatalysis by TiO2<br>
+                                번역: 초음파-이산화티타늄 광촉매 복합법에 의한 고효율 시페르메스린 분해 [J] <br>
+                                2012 | <em>《화학 연구》</em> [<a
+                                    href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HXYA201203011&dbname=cjfdtotal&dbcode=CJFD&v=MTUxNDFnOC96aFlVN3pzT1QzaVFyUmN6RnJDVVI3aWVadVJ0RmkzaFVidk1MVFhTYjdHNEg5UE1ySTlFWllSNkQ="
+                                    target="_blank">링크</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h4>특허</h4>
+                        <ol>
+                            <li>
+                                <strong>환형 기액 계면 점프 자석 선별 장치 [P]</strong><br />
+                                발명자: 富鳴 교수, 張輝 교수, <strong>徐泓</strong>[BJTU], 顔魯婷 교수<br />
+                                2013 | 중국 발명 특허 번호: CN102441489B, 효력 발생일: 2013.10.11. [<a
+                                    href="https://patents.google.com/patent/CN102441489B/en" target="_blank">특허 파일</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>연속 운전 가능한 기액 계면 점프 자석 선별 제어 환형 장치 [P]</strong><br />
+                                발명자: 張輝 교수, <strong>徐泓</strong>[BJTU], 富鳴 교수, 顔魯婷 교수<br />
+                                2013 | 중국 발명 특허 번호: CN102441490A, 효력 발생일: 2013.11.01. [<a
+                                    href="https://patents.google.com/patent/CN102441490A/en" target="_blank">특허 파일</a>]
+                            </li>
+                            &nbsp;
+                            <li>
+                                <strong>초음파 - 광촉매 산화 결합 과일 및 채소 세척 장치 [P]</strong><br />
+                                발명자: 周興振, <strong>徐泓</strong>[BJTU], 江紅 교수, 祁晓月<br />
+                                2012 | 중국 실용 신형 특허 번호: CN202311136U, 효력 발생일: 2012.05.09. [<a
+                                    href="https://patents.google.com/patent/CN202311136U/en" target="_blank">특허 파일</a>]
+                            </li>
+                        </ol>
+
+                        &nbsp;
+                        <hr>
+
+                        <h1 class="mb-4">
+                            기술 보고서
+                        </h1>
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong> [TUM], Dr. B. Vinçon-Leite, Y. Luo<br>
+                                Modelling of Cyanobacteria Dynamics for YuQiao Reservoir in Tianjin, China [R]<br>
+                                번역: 중국 톈진시의 유교댐에서의 남조류 동역학 모델 연구 [R]<br>
+                                2016 | 훈련 보고서. <text style="color:rgb(37, 142, 140)">[에콜 드 폰 파리텍]</text> & <text
+                                    style="color:rgb(30, 45, 73)">[에콜 폴리테크니크]</text>. 파리, 프랑스.
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong> [UR1], Dr. W. Lu, Dr. A. Madsen, Prof. S. Di Matteo<br>
+                                Design and Construction of a Test-Stand for the Split and Delay Line at the European
+                                XFEL [R]<br>
+                                번역: 유럽 X선 자유전자 레이저의 분할 및 지연 라인 테스트 스탠드 설계 및 구축 [R]<br>
+                                2015 | 인턴십 보고서. <text style="color:rgb(67, 25, 237)">[유럽 XFEL]</text>, 함부르크, 독일. [<a
+                                    href="https://arxiv.org/abs/2408.01472" target="_blank">PDF</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+
+                        <h1 class="mb-4">
+                            증권 연구
+                        </h1>
+                        <ul class="square">
+                            <li><strong>산업 매크로 연구 (대중화 지역):</strong><br>
+                                2022 | <strong>신에너지 산업</strong>: 두 가지 탄소 정책 하의 중국 신에너지 산업의 창업 동력<br>
+                                2020 | <strong>신소재 산업</strong>: 반도체 소재 시리즈 제4편: 5G를 촉진하는 광통신 산업 체인, 인듐 화합물 소재 준비 완료<br>
+                                <hr>
+                            </li>
+                            <li><strong>1차 시장 연구 (A에서 D 라운드 자금 조달 기업):</strong><br>
+                                2021 | <strong>유시과기</strong>: 기술 선도자 시리즈 보고서: 다중 장면 자율주행 솔루션 제공업체<br>
+                                2021 | <strong>신치과기</strong>: 기술 선도자 시리즈 보고서: 스마트카 자율 IP 칩 제공업체<br>
+                                2021 | <strong>시안이시웨이</strong>: 시안이시웨이 연구 분석 보고서<br>
+                                <hr>
+                            </li>
+                            <li><strong>2차 시장 연구 (중국 A주 & 미국 주식 상장 기업):</strong><br>
+                                2021 | <strong>후귀산업</strong> (688126.SH): 대형 실리콘 웨이퍼의 리더가 칩 국산화 대체를 선도한다 (첫 번째 커버
+                                보고서)<br>
+                                2021 | <strong>CREE</strong> (NASDAQ:CREE): 기술 선도자 시리즈 보고서: 글로벌 전력/RF 디바이스 및 LED 제공업체
+                                (미국 주식)<br>
+                                2021 | <strong>경위항윤</strong> (688326.SH): 기술 선도자 시리즈 보고서: 자동차 전자 기술 시스템 서비스 제공업체<br>
+                                2020 | <strong>천과합다</strong> (870013.OC): 국내 최고 SiC 칩 제조업체<br>
+                                2020 | <strong>리앙위</strong> (605358.SH): 국산 대체 시장의 확대, 대형 실리콘 웨이퍼 산업화가 눈앞에<br>
+                                2020 | <strong>국자재료</strong> (300285.SZ): 치과용 세라믹 소재 산업, 지르코니아 소재의 호조 동향<br>
+                            </li>
+                        </ul>
+                        &nbsp;
+
+                        <hr>
+
+                        <h1 class="mb-4">
+                            공개 데이터셋
+                        </h1>
+                        <ol>
+                            <li>
+                                <strong>TomoBank: 연료 전지 X선 이미징 데이터셋</strong><br>
+                                큐레이터: M. Bührer, <strong>H. Xu*</strong> [PSI], F. Marone<br>
+                                2019 | 아르곤 국립 연구소 - 미국 에너지 부 © 저작권. Rev. f4253f55. [<a
+                                    href="https://tomobank.readthedocs.io/en/latest/source/data/docs.data.dynamic.html#fuel-cell-data"
+                                    target="_blank">링크</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+
+                        <h1 class="mb-4">
+                            조교 강좌
+                        </h1>
+                        <ol>
+                            <li>
+                                <strong>「재생 가능 에너지 기술 II - 에너지 저장 및 에너지 변환」</strong><br />
+                                취리히 공과대학교, 석사 과정 (529-0191-01L )<br />
+                                2017-2019 | 봄 학기 [<a
+                                    href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+                                    target="_blank">강좌 링크</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h1 class="mb-4">
+                            학술 회의
+                        </h1>
+                        <ul class="square">
+                            <li><strong>에너지 및 기후 / 저탄소 교통 / 정책 및 경제:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong>, Connecting Technologies: Uncertain Futures, Connections
+                                Reimagined<br>
+                                <em>2024 | 한국 고등교육재단 - 잘츠부르크 글로벌 세미나</em>, 잘츠부르크, 오스트리아. <strong>[회원]</strong> [<a
+                                    href="https://www.salzburgglobal.org/" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Sixtieth session of the Subsidiary Body for Scientific and
+                                Technological Advice<br>
+                                <em>2024 | UN 본 기후변화 회의</em>, 본, 독일. <strong>[연설자]</strong> [<a
+                                    href="https://unfccc.int/sb58" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, China Telecom - Construction and Development of New Low-altitude
+                                Economic
+                                Infrastructure<br>
+                                <em>2024 | 저고도 경제 개발 회의</em>, 우후, 중국. <strong>[참여]</strong> [<a
+                                    href="https://gxj.wuhu.gov.cn/xwzx/gzdt/8641460.html" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, First session of the UNECE Informal Task Force on E-mobility<br>
+                                <em>2024 | UN 유럽 경제위원회 - 내륙교통 & 지속 가능한 에너지 부문</em>, 제네바, 스위스. <strong>[회원]</strong> [<a
+                                    href="" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, IRENA-IEW Workshop: Innovative insights on long-term energy
+                                transitions<br>
+                                <em>2024 | 국제재생에너지기구</em>, 본, 독일. <strong>[논문 채택]</strong> [<a href=""
+                                    target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Creating the environment for a hydrogen economy: policies and
+                                regulations<br>
+                                <em>2024 | 옥스포드 대학교 세인트 캐서린 칼리지</em>, 옥스포드, 영국. <strong>[연설자]</strong> [<a href=""
+                                    target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, Confronting Scarcity: Towards a Time of Protracted Scarcity<br>
+                                <em>2024 | 제53회 성갈렌 심포지엄</em>, 성갈렌, 스위스. <strong>[학술 심사]</strong> [<a
+                                    href="https://symposium.org/" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Interdependencies between energy and transport in the context of
+                                climate adaptation<br>
+                                <em>2024 | UN 유럽 경제위원회 - 내륙교통 기후변화 영향 평가 및 적응 전문가 그룹 회의</em>, 제네바, 스위스.
+                                <strong>[연설자]</strong> [<a href="" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Chinese Energy Transition and Technology Innovation (분과 회의)<br>
+                                <em>2023 | UN 본 기후변화 회의</em>, 본, 독일. <strong>[사회자/연설자]</strong> [<a
+                                    href="https://unfccc.int/sb58" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Global Tech Conference: Where Business Innovation Makes a
+                                Difference<br>
+                                <em>2023 | ICT 봄 회의</em>, 룩셈부르크. <strong>[참여]</strong> [<a
+                                    href="https://www.ictspring.com/" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, A New Generational Contract: Redefining What We Owe Each
+                                Other<br>
+                                <em>2023 | 제52회 성갈렌 심포지엄</em>, 성갈렌, 스위스. <strong>[학술 심사]</strong> [<a
+                                    href="https://symposium.org/" target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Innovation & Entrepreneurship: The Effect of Public Science on
+                                Corporate R&D<br>
+                                <em>2023 | 막스플랑크 혁신 및 경쟁 연구소</em>, 뮌헨, 독일. <strong>[참여]</strong> [<a href="#"
+                                    target="_blank">링크</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, Transforming Transportation 2022: Climate-centered Mobility for
+                                a Sustainable
+                                Recovery<br>
+                                <em>2022 | 교통 전환 포럼</em>, 온라인, 미국. <strong>[참여]</strong> [<a
+                                    href="https://www.transformingtransportation.org/" target="_blank">링크</a>]
+                            </li>
+
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>전기화학 / 물리학 / 재료과학:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br>
+                                2019 | <em>제236회 전기화학 학회 (ECS)</em>, 애틀랜타, 미국. <strong>[강연]</strong> [<a
+                                    href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br>
+                                Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC. <br>
+                                2018 | <em>제8회 연료전지 기초 연구 및 첨단 개발 국제 회의 (FDFC)</em>, 낭트, 프랑스. <strong>[강연]</strong> [<a
+                                    href="" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br>
+                                Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray
+                                Tomographic Microscopy <br>
+                                2018 | <em>제69회 국제 전기화학 학회 연차 회의 (ISE)</em>, 볼로냐, 이탈리아. <strong>[전시]</strong> [<a
+                                    href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Water Distribution in the Gas Diffusion Layer of PEFCs: X-ray Tomographic Microscopy
+                                Studies
+                                <br>
+                                2018 | <em>제15회 연료전지 모델링 및 실험 검증 워크숍 (ModVal)</em>, 아라우, 스위스. <strong>[최우수 전시상]</strong>
+                                [<a href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of
+                                PEFC.
+                                <br>
+                                2017 | <em>제6회 유럽 유기막 연료전지 및 전해셀 포럼 (EFCF)</em>, 루체른, 스위스. <strong>[강연]</strong> [<a
+                                    href="" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Contrast-to-Noise Ratio Evaluation for X-ray Computed Tomographic Imaging of Water in
+                                Polymer Electrolyte Fuel
+                                Cells <br>
+                                2017 | <em>제14회 연료전지 모델링 및 실험 검증 워크숍 (ModVal)</em>, 카를스루에, 독일. <strong>[전시]</strong>
+                                [<a href="https://unknown/files/ModVal2017_Hong_Xu_Final.pdf" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br>
+                                Nanoparticles Embedded Thermoresponsive Diblock Copolymers for Magnetic Sensor
+                                Application.
+                                <br>
+                                2016 | <em>2016 EU Erasmus MaMaSELF 프로젝트 연차 회의</em>, 리기산, 스위스. <strong>[강연]</strong> [<a
+                                    href="" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br>
+                                Magnetic properties and structure of thermoresponsive
+                                polystyrene-block-poly(N-isopropylacrylamide)/iron oxide
+                                nanocomposite thin films. <br>
+                                2016 | <em>제80회 독일 물리학회 연차 대회 및 DPG 봄 회의 (DPG)</em>, 레겐스부르크, 독일. <strong>[전시]</strong>
+                                [<a href="https://unknown/files/Poster_DPG2016_Hong Xu.pdf" target="_blank">링크</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu <br>
+                                Mesoporous SnO2 Microspheres: Synthesis, Characterization, and Application in Enhanced
+                                Dye-sensitized Solar
+                                Cells and Lithium Batteries. <br>
+                                2013 | <em>2013 청화대학교 에너지 입자 첨단 심포지엄</em>, 베이징, 중국. <strong>[전시]</strong> [<a
+                                    href="https://unknown/files/2013_Bachelor_Thesis_Poster.pdf" target="_blank">링크</a>]
+                            </li>
+                        </ol>
+
+                    </div>
+
+
+                    <div class="col-lg-3 ml-auto">
+                        &nbsp;
+                        <div class="section-title">
+                            <h2>연구 관심사</h2>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-sun"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">재생 가능 에너지</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">수소 에너지 / 연료 전지 / 전해조 / 태양 전지 / 리튬 이온 배터리</span>
+                                    <span class="date-read">2013-현재</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-file-alt"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">에너지 경제 정책</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">중국 / EU / 수소 전략 / 에너지 전환</span>
+                                    <span class="date-read">2023-현재</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-bus"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">저탄소 스마트 교통</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">제로카본 교통 / 효율 향상 / 자율 주행</span>
+                                    <span class="date-read">2021-현재</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-tools"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">기능성 재료</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">반도체 재료 / 탄소 재료 / 결정 재료 / 기능성 고분자 재료</span>
+                                    <span class="date-read">2013-2016</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-radiation"></i> </div>
+                            <div class="trend-contents">
+                                <h2><a href="#">X선 영상화</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">X선 단층 촬영(CT) / 소각 X선 산란(SAXS) / X선 흡수 스펙트럼</span>
+                                    <span class="date-read">2016-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start"><i class="fas fa-eye"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">컴퓨터 비전</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">이미지 분할 / 3D 시각화 / 이미지 노이즈 제거 / 합성곱 신경망</span>
+                                    <span class="date-read">2017-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                        style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          top: 0;
+                          left: 50%;
+                          width: 100vw;
+                          transform: translateX(-50%);
+                        "
+                      /> -->
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2>연락하기</h2>
+                        <p>
+                            이메일 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                            링크드인 |
+                            <a href="www.linkedin.com/in/xuhong" target="_blank">www.linkedin.com/in/xuhong</a><br />
+                            즈후 |
+                            <a href="https://www.zhihu.com/people/dr.of.nothing"
+                                target="_blank">zhihu.com/people/dr.of.nothing</a><br /><br />
+                            <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="timezone - Zurich" target="_blank" rel="nofollow">유럽 ​​시간
+                                    [CET]</a></strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+                    <!-- 第二栏 -->
+
+
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start -->
+                        <a id="weather" target="_blank" href="https://www.booked.net/weather/beijing-18391">
+                            <img src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" />
+                        </a>
+                        <!-- weather widget end -->
+
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2>세상은 넓은데, 나는 가고 싶다!</h2>
+                        <p>
+                            사진 |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                            글쓰기 |
+                            <a href="https://once-upon-a-phd.gitbook.io/"
+                                target="_blank">once-upon-a-phd.gitbook.io</a><br />
+                            학술 |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+
+                            <strong>
+                                <a href="//24timezones.com/%E6%9D%B1%E4%BA%AC%E9%83%BD/%E6%99%82%E9%96%93"
+                                    style="text-decoration: none" class="clock24"
+                                    id="tz24-1737245838-c1248-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImphIn0="
+                                    title="東京都 時間" target="_blank" rel="nofollow">서울 시간 [KST]</a>
+                            </strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+                    <!-- 第三栏 -->
+
+                    <div class="col-md-5">
+                        <br />
+                        <div style="
+                                width: 100%;
+                                text-align: center;
+                                transform: translateX(5px);
+                              ">
+                            <script type="text/javascript" id="clustrmaps"
+                                src="https://cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"></script>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <!-- <div class="container">
+                        <form action="#" class="row align-items-center">
+                          <div class="col-md-5 mr-auto"></div>
+                          <div class="col-md-6 ml-auto"></div>
+                        </form>
+                      </div>
+                      <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          width: 150vw;
+                          transform: translateX(-50%);
+                        " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+                      style="
+                        height: 1px;
+                        border-width: 0;
+                        color: gray;
+                        background-color: gray;
+                      "
+                    /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag" src="" alt="국기" style="
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
+                                <strong><span class="location">친구</span>에서 오신 친구를 환영합니다! 현재 저와의 거리는 <span
+                                        class="distance-info">
+                                        ∞ km</span> 입니다
+                                </strong>
+                                <img src="./images/wflags/de.png" style="
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
+                                <br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                저작권 &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | 徐泓 (서홍) | 업데이트: 2025.01 |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                                        display: inline-block;
+                                        width: 94%;
+                                        height: 95%;
+                                        overflow: hidden;
+                                        position: relative;
+                                      ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                                          width: auto;
+                                          height: auto;
+                                          object-fit: fill;
+                                          object-position: top right;
+                                          transform: translateX(3.5%) translateY(30%);
+                                        " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- .site-wrap -->
+
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_kr.js" type="module"></script>
+
+    </div>
+    </div>
+</body>
+
+</html>
