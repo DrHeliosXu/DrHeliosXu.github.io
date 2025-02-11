@@ -3,38 +3,38 @@
 
 <head>
 
-    <!-- Basic Page Needs
+  <!-- Basic Page Needs
   ================================================== -->
-    <meta charset="utf-8">
-    <title>Dr. Helios Xu | Clean Energy</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <title>Dr. Hong Xu | Clean Energy</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Mobile Specific Metas
+  <!-- Mobile Specific Metas
   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- CSS
+  <!-- CSS
   ================================================== -->
-    <!-- <link rel="stylesheet" href="stylesheets/base.css">
+  <!-- <link rel="stylesheet" href="stylesheets/base.css">
   <link rel="stylesheet" href="stylesheets/skeleton.css">
   <link rel="stylesheet" href="stylesheets/layout.css">
   <link rel="stylesheet" href="stylesheets/style.css">
   <link rel="stylesheet" href="stylesheets/navi5.css">
   <link rel="stylesheet" href="stylesheets/navi6.css">
   <link rel="stylesheet" href="stylesheets/type.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-    <!-- Favicons
+  <!-- Favicons
   ================================================== -->
-    <link rel="shortcut icon" href="">
+  <link rel="shortcut icon" href="">
 
-    <!-- Google Analytics Tracking Code
+  <!-- Google Analytics Tracking Code
   ================================================== -->
-    <!-- 
+  <!-- 
    <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -46,7 +46,7 @@
   -->
 
 
-    <!-- <script type="module">
+  <!-- <script type="module">
     async function fetchCountries() {
       const response = await fetch('/js/countries.json');
       const countries = await response.json();
@@ -81,12 +81,12 @@
 
 <body>
 
-    <script async type='text/javascript' id='clustrmaps'
-        src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=mRcRGOHfI5m_4z362zL1K5jsQpgs-UcWLE04KRcma18&co=60a9db&ct=ffffff&cmo=303aea&cmn=fc8823'></script>
+  <script async type='text/javascript' id='clustrmaps'
+    src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=600&t=tt&d=mRcRGOHfI5m_4z362zL1K5jsQpgs-UcWLE04KRcma18&co=60a9db&ct=ffffff&cmo=303aea&cmn=fc8823'></script>
 
-    <!-- <div id="extracted-content"></div> -->
+  <!-- <div id="extracted-content"></div> -->
 
-    <!-- <script>
+  <!-- <script>
     // Function to load and extract content from another HTML file
     function extractContent() {
       // Replace 'source.html' with the path to the HTML file you want to extract content from
@@ -107,36 +107,36 @@
     window.addEventListener('load', extractContent);
   </script> -->
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var userLang = navigator.language || navigator.userLanguage;
-            var languageMap = {
-                // 'ar': 'ar.html',
-                'en': 'en.html',
-                'de': 'de.html',
-                'fr': 'fr.html',
-                'es': 'es.html',
-                'it': 'it.html',
-                'ru': 'ru.html',
-                'zh': 'cn.html',
-                'ja': 'jp.html',
-                'ko': 'kr.html'
-            };
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var userLang = navigator.language || navigator.userLanguage;
+      var languageMap = {
+        'ar': 'ar.html',
+        'en': 'en.html',
+        'de': 'de.html',
+        'fr': 'fr.html',
+        'es': 'es.html',
+        'it': 'it.html',
+        'ru': 'ru.html',
+        'zh': 'cn.html',
+        'ja': 'jp.html',
+        'ko': 'kr.html'
+      };
 
-            var shortLang = userLang.substring(0, 2);
+      var shortLang = userLang.substring(0, 2);
 
-            // Check if the language is supported, if not default to English
-            if (languageMap[shortLang]) {
-                window.location.href = languageMap[shortLang];
-            } else {
-                // Default to English if language is not supported
-                window.location.href = 'en.html';
-            }
-        });
-    </script>
+      // Check if the language is supported, if not default to English
+      if (languageMap[shortLang]) {
+        window.location.href = languageMap[shortLang];
+      } else {
+        // Default to English if language is not supported
+        window.location.href = 'en.html';
+      }
+    });
+  </script>
 
 
-    <!-- End Document
+  <!-- End Document
 ================================================== -->
 </body>
 
