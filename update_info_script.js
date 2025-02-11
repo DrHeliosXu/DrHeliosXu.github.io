@@ -8,7 +8,7 @@ const data = {
     "age": 31,
     "year_of_experience": 8,
     "no_of_papers": 15,
-    "google_scholar_citation": 330,
+    "google_scholar_citation": 360,
     "h_index": 9,
     "no_of_reviews": 55,
     "no_of_patents": 3,
@@ -18,7 +18,7 @@ const data = {
     "zhihu_followers": 13800,
     "linkedin_followers": 1900,
     "xiaohongshu_followers": 3200,
-    "visited_countries": 41
+    "visited_countries": 40
 };
 
 // 更新指定类名的 <span> 内容的函数
