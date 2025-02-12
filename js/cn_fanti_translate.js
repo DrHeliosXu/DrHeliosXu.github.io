@@ -1,47 +1,73 @@
-// 定义当前语言的状态
+// 当前语言状态
 let currentLanguage = '简体';
 
-// 页面加载时检查当前语言状态
-window.onload = function () {
-updateSelectBox();
-};
-
-// 切换语言的处理函数
-function handleChange(select) {
-var selectedOption = select.options[select.selectedIndex];
-var value = selectedOption.value;
-
-if (value.startsWith("javascript:")) {
-    eval(value.substring(11));
-    currentLanguage = '繁体';
+// 页面加载时初始化选框状态
+window.addEventListener('DOMContentLoaded', function () {
+    initializeLanguage();
     updateSelectBox();
-} else {
-    currentLanguage = '简体';
-    window.location.href = value;
-}
+});
+
+// 初始化语言状态
+function initializeLanguage() {
+    const selectBox = document.getElementById('languages');
+    const selectedOption = selectBox.querySelector('option[selected]');
+    if (selectedOption) {
+        currentLanguage = selectedOption.textContent.trim();
+    } else {
+        console.error('未找到默认选项，确保HTML正确配置');
+    }
 }
 
-// 切换为繁体中文的函数
+// 处理语言切换
+function handleChange(select) {
+    const selectedValue = select.value;
+
+    if (selectedValue === 'javascript:runFanTiJavaScript();') {
+        // 切换到繁体中文
+        runFanTiJavaScript();
+        currentLanguage = '繁体';
+        updateSelectBox(); // 确保选框同步状态
+    } else {
+        // 切换到其他语言或简体中文
+        if (selectedValue !== '') {
+            currentLanguage = select.options[select.selectedIndex].textContent.trim();
+            window.location.href = selectedValue; // 跳转页面
+        }
+    }
+}
+
+// 繁体中文切换函数
 function runFanTiJavaScript() {
-var s = document.getElementById("tongwenlet_tw");
-if (s != null) {
-    document.body.removeChild(s);
-}
-var s = document.createElement("script");
-s.language = "javascript";
-s.type = "text/javascript";
-s.src = "https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js";
-s.id = "tongwenlet_tw";
-document.body.appendChild(s);
+    console.log('切换到繁体中文...');
+    const scriptId = 'tongwenlet_tw';
+    let script = document.getElementById(scriptId);
+
+    if (script) {
+        document.body.removeChild(script);
+    }
+
+    script = document.createElement('script');
+    script.language = 'javascript';
+    script.type = 'text/javascript';
+    script.src = 'https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js';
+    script.id = scriptId;
+    document.body.appendChild(script);
 }
 
-// 更新 select 选框显示状态
+// 更新选框显示状态
 function updateSelectBox() {
-const selectBox = document.getElementById('languages');
+    const selectBox = document.getElementById('languages');
+    const currentValue = selectBox.querySelector('option[selected]')?.value;
 
-if (currentLanguage === '繁体') {
-    selectBox.value = 'javascript:runFanTiJavaScript();'; // 设置为繁体中文
-} else {
-    selectBox.value = 'cn.html'; // 设置为简体中文
-}
+    // 确保 currentLanguage 与 selectBox.value 映射一致
+    if (currentLanguage === '繁体') {
+        selectBox.value = 'javascript:runFanTiJavaScript();';
+    } else if (currentLanguage === '简体' && currentValue) {
+        selectBox.value = currentValue; // 使用默认选项值
+    }
+
+    // 检查是否成功设置了选项
+    if (!selectBox.value) {
+        console.error('选框值未正确设置，检查 updateSelectBox 中的逻辑');
+    }
 }
