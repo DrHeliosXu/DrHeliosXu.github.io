@@ -76,6 +76,12 @@ async function displayCountryInfoAndDistance() {
             distanceElements.forEach(distanceElement => {
                 distanceElement.innerText = displayDistance;
             });
+
+            // 输出经纬度到CSS变量
+            document.documentElement.style.setProperty('--user-latitude', userLat);
+            document.documentElement.style.setProperty('--user-longitude', userLon);
+
+
         } else {
             const distanceElements = document.querySelectorAll('.distance-info');
             distanceElements.forEach(distanceElement => {
