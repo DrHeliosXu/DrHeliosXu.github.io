@@ -49,7 +49,8 @@ function runFanTiJavaScript() {
     script = document.createElement('script');
     script.language = 'javascript';
     script.type = 'text/javascript';
-    script.src = 'https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js';
+    // script.src = 'https://rawgit.com/skofkyo/userChromeJS/master/UserScriptLoader/bookmarklet_tw.js';
+    script.src = 'js/bookmarklet_tw.js';
     script.id = scriptId;
     document.body.appendChild(script);
 }
