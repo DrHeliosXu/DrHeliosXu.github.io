@@ -1710,23 +1710,27 @@ iframe {
 }
 
 .post-entry-1,
-.post-entry-2 {
+.post-entry-2,
+.post-entry-3 {
   font-size: 0.9rem;
   margin-bottom: 30px;
 }
 
 .post-entry-1 img,
-.post-entry-2 img {
+.post-entry-2 img,
+.post-entry-3 img {
   margin-bottom: 30px;
 }
 
 .post-entry-1 h2,
-.post-entry-2 h2 {
+.post-entry-2 h2,
+.post-entry-3 h2 {
   font-size: 20px;
 }
 
 .post-entry-1 h2 a,
-.post-entry-2 h2 a {
+.post-entry-2 h2 a,
+.post-entry-3 h2 a {
   color: #000;
 }
 
@@ -1737,7 +1741,6 @@ iframe {
 .post-entry-2 .thumbnail {
   background-size: cover;
   background-position: center center;
-  background-size: cover;
   width: 30%;
 }
 
@@ -1764,6 +1767,51 @@ iframe {
   }
 }
 
+.post-entry-3 {
+  font-size: 0.9rem;
+}
+
+/* 默认布局（PC 端） */
+.post-entry-3 {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.post-entry-3 .thumbnail {
+  background-size: cover;
+  background-position: center center;
+  width: 27%; /* 确保PC端图片有宽度 */
+  height: auto; /* 高度默认自适应 */
+  min-height: 160px; /* 防止图片被高度压缩 */
+}
+
+.post-entry-3 .contents {
+  width: 70%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 手机端布局调整 */
+@media (max-width: 768px) {
+  .post-entry-3 {
+    flex-direction: column; /* 手机端改为垂直布局 */
+    align-items: center; /* 内容居中 */
+  }
+
+  .post-entry-3 .thumbnail {
+    width: 100%; /* 图片占满宽度 */
+    height: 200px; /* 固定高度，防止拉伸 */
+    margin-bottom: 10px; /* 图片与文字的间距 */
+    object-fit: cover; /* 图片裁切效果 */
+  }
+
+  .post-entry-3 .contents {
+    width: 100%; /* 文字占满宽度 */
+    padding: 0 10px; /* 两边留间距 */
+  }
+}
+
 .trend-entry {
   margin-bottom: 30px;
 }
@@ -1784,6 +1832,21 @@ iframe {
 .trend-entry .trend-contents h2 a {
   color: #000;
 }
+
+
+.trend-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 确保垂直居中 */
+    /* direction: rtl; 设置为从右到左布局 */
+}
+
+.trend-entry .trend-contents {
+    flex: 1; /* 让内容区域占据剩余空间 */
+    margin-left: 5px; /* 留出与数字的间距 */
+    /* text-align: right; 内容对齐右侧 */
+}
+
 
 .caption {
   font-size: 0.9rem;
