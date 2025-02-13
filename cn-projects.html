@@ -584,7 +584,14 @@
     <script src="js/user_ip_cn.js" type="module"></script>
     <script src="js/cn_fanti_translate.js"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
-
+    <script>
+      // 當頁面加載完畢後執行
+      window.onload = function () {
+        // 使用 pushState 修改地址欄中的 URL
+        window.history.pushState({}, '', '/中文/项目.php');
+        console.log('The URL has been automatically changed!');
+      };
+    </script>
   </div>
   </div>
 </body>
