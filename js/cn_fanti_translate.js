@@ -93,21 +93,24 @@ function updateSelectBox() {
     }
 }
 
-// 更新 logo 的函数
+// 更新 logo 和国旗的函数
 function updateLogo() {
     const logoImage = document.querySelector('.site-logo img');
     const logoLink = document.querySelector('.site-logo');
-    if (!logoImage || !logoLink) {
-        console.error('未找到 logo 元素，检查 HTML 配置');
+    const flagImage = document.querySelector('.flag img'); // 找到国旗元素
+    if (!logoImage || !logoLink || !flagImage) {
+        console.error('未找到 logo 或 flag 元素，检查 HTML 配置');
         return;
     }
 
     if (currentLanguage === '繁体') {
         logoImage.src = 'images/logo-full-tw.png'; // 繁体中文 logo
         logoLink.href = 'cn.html'; // 繁体中文链接
+        flagImage.src = 'images/flag_hk.png'; // 更新国旗为香港旗帜
     } else if (currentLanguage === '简体') {
         logoImage.src = 'images/logo-full-cn.png'; // 简体中文 logo
         logoLink.href = 'cn.html'; // 简体中文链接
+        flagImage.src = 'images/flag_cn.png'; // 更新国旗为中国旗帜
     }
 }
 
