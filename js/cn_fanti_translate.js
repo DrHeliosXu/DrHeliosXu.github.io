@@ -83,8 +83,8 @@ function updateSelectBox() {
     // 确保 currentLanguage 与 selectBox.value 映射一致
     if (currentLanguage === '繁体') {
         selectBox.value = 'javascript:runFanTiJavaScript();';
-    } else if (currentLanguage === '简体' && currentValue) {
-        selectBox.value = currentValue; // 使用默认选项值
+    } else if (currentLanguage === '简体') {
+        selectBox.value = 'javascript:runJianTiJavaScript();'; // 修改为运行简体转换的脚本
     }
 
     // 检查是否成功设置了选项
