@@ -1801,7 +1801,7 @@ iframe {
 
   .post-entry-3 .thumbnail {
     width: 100%; /* 图片占满宽度 */
-    height: 200px; /* 固定高度，防止拉伸 */
+    height: 170px; /* 固定高度，防止拉伸 */
     margin-bottom: 10px; /* 图片与文字的间距 */
     object-fit: cover; /* 图片裁切效果 */
   }
