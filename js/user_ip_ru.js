@@ -64,11 +64,11 @@ async function displayCountryInfoAndDistance() {
             let displayDistance;
 
             if (distanceKm >= 1) {
-                displayDistance = `${Math.round(distanceKm)} km`;
+                displayDistance = `${Math.round(distanceKm)} км`;
             } else if (distanceKm < 1 && distanceKm > 0) {
-                displayDistance = `${Math.round(distanceKm * 1000)} m`;
+                displayDistance = `${Math.round(distanceKm * 1000)} м`;
             } else {
-                displayDistance = "♾️ km"; // In case of an invalid distance
+                displayDistance = "♾️ км"; // In case of an invalid distance
             }
 
             // 更新距离信息
@@ -79,13 +79,13 @@ async function displayCountryInfoAndDistance() {
         } else {
             const distanceElements = document.querySelectorAll('.distance-info');
             distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = "♾️ km";
+                distanceElement.innerText = "♾️ км";
             });
         }
     } else {
         const distanceElements = document.querySelectorAll('.distance-info');
         distanceElements.forEach(distanceElement => {
-            distanceElement.innerText = "♾️ km";
+            distanceElement.innerText = "♾️ км";
         });
     }
 }
