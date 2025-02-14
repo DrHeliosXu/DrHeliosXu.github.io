@@ -7,11 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -23,13 +27,11 @@
   <link rel="stylesheet" href="css/aos.css">
   <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/mobilenav.css">
-
-  <link rel="stylesheet" href="css/about_style.css">
-
-  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
-
+  <!--<link rel="stylesheet" href="css/news.css">-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/timeline-simple.css">
+  <script src="https://use.typekit.net/bkt6ydm.js"></script>
+  <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
 
   <style>
     body {
@@ -62,10 +64,36 @@
       /* 字体字形，使用无衬线字体 */
     }
   </style>
-
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <!-- block save as
+  ================================================== -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
+        }
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
+
+        return false;
+      }
+    }
+  </script>
 
   <div class="site-wrap">
 
@@ -89,6 +117,7 @@
             </a>
 
             <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+              <!---<span class="icon-menu h3"></span>--->
             </a>
 
           </div>
@@ -110,17 +139,15 @@
 
                   <img src="images/flag_kr.png" class="flag d-inline-block d-lg-none" alt="flag"
                     style="height:15px; margin-right:2px; position:relative; top:-1px;">
-
                   <div class="ml-auto d-inline-block d-lg-none">
-                    <select id="languages" name="languages"
-                      style="
-                                                                                                                                        width: 105px;
-                                                                                                                                        height: 25px;
-                                                                                                                                        margin-left: 5px;
-                                                                                                                                        border-radius: 0;
-                                                                                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                                                                                                                        "
-                      onchange="handleChange(this)">
+                    <select id="languages" name="languages" style="
+                                                                              width: 85px;
+                                                                              height: 25px;
+                                                                              margin-left: 5px;
+                                                                              border-radius: 0;
+                                                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                            "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
                       <option value="cn-about.html">中文</option>
                       <option value="jp-about.html">日本語</option>
                       <option value="kr-about.html" selected>한국어</option>
@@ -146,14 +173,15 @@
 
 
 
-      <div class="site-navbar py-2 js-sticky-header site-navbar-target pl-0 pb-2 d-none d-sm-block" role="banner">
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+        role="banner">
 
         <div class="container">
           <div class="d-flex align-items-center">
 
             <div class="mr-auto">
               <nav class="site-navigation position-relative text-right" role="navigation">
-                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
                   <li class="active">
                     <a href="kr.html" class="nav-link text-left">홈&nbsp;&nbsp;</a>
                   </li>
@@ -174,26 +202,35 @@
             </div>
 
             <!-- 语言选择框 -->
-            <div class="ml-auto d-inline-block d-lg-none">
-              <select id="languages" name="languages" style="
-                                                                              width: 85px;
-                                                                              height: 25px;
-                                                                              margin-left: 5px;
-                                                                              border-radius: 0;
-                                                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                                                            "
-                onchange="window.location.href=this.options[this.selectedIndex].value">
-                <option value="cn-about.html">中文</option>
-                <option value="jp-about.html">日本語</option>
-                <option value="kr-about.html" selected>한국어</option>
-                <option value="de-about.html">Deutsch</option>
-                <option value="en-about.html">English</option>
-                <option value="es-about.html">Español</option>
-                <option value="fr-about.html">Français</option>
-                <option value="it-about.html">Italiano</option>
-                <option value="ru-about.html">Русский</option>
-                <option value="ar-about.html">اللغة العربية</option>
-              </select>
+            <div class="ml-auto">
+              <span style="display: flex; align-items: center">
+                <img src="images/flag_kr.png" alt="flag" style="
+                                                    height: 15px;
+                                                    margin-right: 2px;
+                                                    position: relative;
+                                                    top: -1px;
+                                                  " />
+                <!-- 选择语言的下拉框 -->
+                <select id="languages" name="languages" style="
+                                                  width: 80px;
+                                                  height: 25px;
+                                                  margin-left: 5px;
+                                                  border-radius: 0;
+                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                "
+                  onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <option value="cn-about.html">中文</option>
+                  <option value="jp-about.html">日本語</option>
+                  <option value="kr-about.html" selected>한국어</option>
+                  <option value="de-about.html">Deutsch</option>
+                  <option value="en-about.html">English</option>
+                  <option value="es-about.html">Español</option>
+                  <option value="fr-about.html">Français</option>
+                  <option value="it-about.html">Italiano</option>
+                  <option value="ru-about.html">Русский</option>
+                  <option value="ar-about.html">اللغة العربية</option>
+                </select>
+              </span>
             </div>
           </div>
         </div>
@@ -230,7 +267,6 @@
       </nav>
     </a>
     <!------>
-
 
     <div class="site-section">
       <p class="d-sm-block d-none">&nbsp;</p>
@@ -300,8 +336,8 @@
 
 
               <p style="text-align:left;">
-                PEK (NǐHǎo)-> CDG (Bonjour)-> HAM (MoinMoin)-> MUC (Servus)-> ZRH (Grüezi)-> LHR (Hello)-> <img
-                  id="country-flag" class="flag-icon" src="" alt=""> ?
+                PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
+
               </p>
             </div>
             <div class="container">
@@ -449,32 +485,37 @@
     <div class="site-section subscribe bg-light" style="position: relative">
       <!-- 上方 hr -->
       <!-- <hr
-                                    style="
-                                      height: 1px;
-                                      background-color: gray;
-                                      border: none;
-                                      margin: 0;
-                                      position: absolute;
-                                      top: 0;
-                                      left: 50%;
-                                      width: 100vw;
-                                      transform: translateX(-50%);
-                                    "
-                                  /> -->
+                        style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          top: 0;
+                          left: 50%;
+                          width: 100vw;
+                          transform: translateX(-50%);
+                        "
+                      /> -->
       <h2>&nbsp;&nbsp;</h2>
       <div class="container">
         <form action="#" class="row align-items-start">
           <!-- 第一栏 -->
           <div class="col-md-4">
             <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
-            <h2>연락하기</h2>
+            <h2><img src="./images/wflags/eu.png" style="
+                                                                                                                    height: 0.9em;
+                                                                                                                    vertical-align: -6%;
+                                                                                                                    display: inline-block;
+                                                                                                                    margin-right: 0em;
+                                                                                                                  " />
+              연락하기</h2>
             <p>
               이메일 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
               링크드인 |
-              <a href="www.linkedin.com/in/xuhong" target="_blank">www.linkedin.com/in/xuhong</a><br />
-              즈후 |
-              <a href="https://www.zhihu.com/people/dr.of.nothing"
-                target="_blank">zhihu.com/people/dr.of.nothing</a><br /><br />
+              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+              인스타그램 |
+              <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
               <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
                   id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                   title="timezone - Zurich" target="_blank" rel="nofollow">유럽 ​​시간
@@ -488,10 +529,10 @@
 
           <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
             <hr style="
-                                            border: none;
-                                            border-top: 1px solid #c7c7c7;
-                                            margin: 0px 0;
-                                          " />
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
           </div>
 
           <!-- 第二栏 -->
@@ -510,7 +551,15 @@
 
             <img src="images/logo-nulll.png" alt="Image" class="site-logo"
               style="width: 55px; height: 60px" /><br /><br />
-            <h2>세상은 넓은데, 나는 가고 싶다!</h2>
+            <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                style="
+                                                                                                                                        height: 0.9em;
+                                                                                                                                        vertical-align: -6%;
+                                                                                                                                        display: inline-block;
+                                                                                                                                        margin-right: 0em;
+                                                                                                                                      " /> 운명이 우리를 만났어요
+
+            </h2>
             <p>
               사진 |
               <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
@@ -533,22 +582,22 @@
 
           <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
             <hr style="
-                                            border: none;
-                                            border-top: 1px solid #c7c7c7;
-                                            margin: 0px 0;
-                                          " />
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
           </div>
           <!-- 第三栏 -->
 
           <div class="col-md-5">
             <br />
             <div style="
-                                            width: 100%;
-                                            text-align: center;
-                                            transform: translateX(5px);
-                                          ">
+                                width: 100%;
+                                text-align: center;
+                                transform: translateX(5px);
+                              ">
               <script type="text/javascript" id="clustrmaps"
-                src="https://cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"></script>
+                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'></script>
             </div>
 
           </div>
@@ -556,35 +605,35 @@
       </div>
 
       <!-- <div class="container">
-                                    <form action="#" class="row align-items-center">
-                                      <div class="col-md-5 mr-auto"></div>
-                                      <div class="col-md-6 ml-auto"></div>
-                                    </form>
-                                  </div>
-                                  <h2>&nbsp;&nbsp;</h2> -->
+                        <form action="#" class="row align-items-center">
+                          <div class="col-md-5 mr-auto"></div>
+                          <div class="col-md-6 ml-auto"></div>
+                        </form>
+                      </div>
+                      <h2>&nbsp;&nbsp;</h2> -->
       <!-- 下方 hr -->
       <hr style="
-                                      height: 1px;
-                                      background-color: gray;
-                                      border: none;
-                                      margin: 0;
-                                      position: absolute;
-                                      bottom: 0;
-                                      left: 50%;
-                                      width: 150vw;
-                                      transform: translateX(-50%);
-                                    " />
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          width: 150vw;
+                          transform: translateX(-50%);
+                        " />
     </div>
 
     <!-- .site-wrap -->
     <!-- <hr
-                                  style="
-                                    height: 1px;
-                                    border-width: 0;
-                                    color: gray;
-                                    background-color: gray;
-                                  "
-                                /> -->
+                      style="
+                        height: 1px;
+                        border-width: 0;
+                        color: gray;
+                        background-color: gray;
+                      "
+                    /> -->
     <div class="footer">
       <div class="container">
         <div class="row">
@@ -592,20 +641,21 @@
             <div class="copyright">
               <p>
                 <img class="country-flag" src="" alt="국기" style="
-                                                    height: 0.9em;
-                                                    vertical-align: -6%;
-                                                    display: inline-block;
-                                                    margin-right: 0em;
-                                                  " />
-                <strong><span class="location">친구</span>에서 오신 친구를 환영합니다! 현재 저와의 거리는 <span class="distance-info">
-                    ∞ km</span> 입니다
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
+                <strong><span class="location">친구</span>에서 오신 친구를 환영합니다! 현재 저와의 거리는 <span class="distance-info"> ∞
+                    km</span>
+                  입니다
                 </strong>
                 <img src="./images/wflags/de.png" style="
-                                                    height: 0.9em;
-                                                    vertical-align: -6%;
-                                                    display: inline-block;
-                                                    margin-right: 0em;
-                                                  " />
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
                 <br />
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 저작권 &copy; 2017 -
@@ -616,21 +666,21 @@
                 <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 <a href="https://info.flagcounter.com/D897" style="
-                                                    display: inline-block;
-                                                    width: 94%;
-                                                    height: 95%;
-                                                    overflow: hidden;
-                                                    position: relative;
-                                                  ">
+                                        display: inline-block;
+                                        width: 94%;
+                                        height: 95%;
+                                        overflow: hidden;
+                                        position: relative;
+                                      ">
                   <img
                     src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
                     border="0" style="
-                                                      width: auto;
-                                                      height: auto;
-                                                      object-fit: fill;
-                                                      object-position: top right;
-                                                      transform: translateX(3.5%) translateY(30%);
-                                                    " />
+                                          width: auto;
+                                          height: auto;
+                                          object-fit: fill;
+                                          object-position: top right;
+                                          transform: translateX(3.5%) translateY(30%);
+                                        " />
                 </a>
               </p>
             </div>
