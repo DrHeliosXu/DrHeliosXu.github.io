@@ -5,7 +5,26 @@ async function fetchCountries() {
 
 function getCountryNameByCode(countries, code, language = "french") {
     const country = countries.find((country) => country.abbr === code);
-    return country ? country[language] || country.english : "la terre";
+    const frenchName = country ? country[language] || country.english : "la terre";
+
+    if (frenchName === "la terre") {
+        return frenchName; // Default case
+    }
+
+    if (frenchName.startsWith("le ")) {
+        return frenchName.replace("le ", "du ");
+    }
+
+    if (frenchName.startsWith("les ")) {
+        return frenchName.replace("les ", "des ");
+    }
+
+    const firstLetter = frenchName.charAt(0).toUpperCase();
+    if (["A", "E", "I", "O", "U"].includes(firstLetter)) {
+        return `de l'${frenchName}`;
+    }
+
+    return `de ${frenchName}`;
 }
 
 function updateLocationAndFlag(countryName, countryCode) {
