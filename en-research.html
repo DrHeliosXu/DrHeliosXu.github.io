@@ -26,6 +26,9 @@
   <link rel="stylesheet" href="css/mobilenav.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+  <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
+
   <style>
     body {
       font-family: 'Tahoma', 'Noto Sans', sans-serif;
@@ -171,6 +174,10 @@
                   <li>
                     <a href="en-about.html" class="nav-link text-left">About Me</a>
                   </li>
+                  <li id="festival-item">
+                    <a id="dynamic-greeting" href="#" target="_blank" class="nav-link text-left">
+                    </a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -267,7 +274,7 @@
             </h1>
 
             <ul class="square">
-              <li><strong>Renewable Energy / Electrochemistry:</strong><br></li>
+              <li><span style="font-weight: bold;">Renewable Energy / Electrochemistry:</span><br></li>
             </ul>
             <ol>
               <li>
@@ -363,7 +370,7 @@
               </li>
             </ol>
             <ul class="square">
-              <li><strong>Computational Imaging / Deep Learning</strong></li>
+              <li><span style="font-weight: bold;">Computational Imaging / Deep Learning</span></li>
             </ul>
 
             <ol>
@@ -434,7 +441,7 @@
             </ol>
 
             <ul class="square">
-              <li><strong>Materials Science / Chemical Engineering</strong></li>
+              <li><span style="font-weight: bold;">Materials Science / Chemical Engineering</span></li>
             </ul>
 
             <ol>
@@ -523,13 +530,14 @@
               Equity Research
             </h1>
             <ul class="square">
-              <li><strong>Industry Macro Research (Greater China Region):</strong><br>
-                2022 | <strong>New Energy Industry</strong>: Driving Forces for Entrepreneurship in China's New Energy
+              <li><span style="font-weight: bold;">Industry Macro Research </span>(Greater China Region):
+                <br> 2022 |
+                <strong>New Energy Industry</strong>: Driving Forces for Entrepreneurship in China's New Energy
                 Industry under the Dual-Carbon Policy <br>
                 2020 | <strong>New Materials Industry</strong>: Semiconductor Materials Series Part 4: 5G Driving the
                 Optical Communication Industry Chain, Indium Phosphide Materials Poised for Growth<br>
                 <hr>
-              <li><strong>Primary Market Research (Series A to D Funded Companies):</strong><br>
+              <li><span style="font-weight: bold;">Primary Market Research </span>(Series A to D Funded Companies):<br>
                 2021 | <strong>UISEE Technology</strong>: Technology Pioneer Series Report on UISEE Technology:
                 Multi-Scenario Autonomous Driving Solution Provider<br>
                 2021 | <strong>SemiDrive Technology</strong>: Technology Pioneer Series Report on SemiDrive Technology:
@@ -537,7 +545,7 @@
                 2021 | <strong>Xi'an ESWIN Semiconductors</strong>: Research Analysis Report on Xian ESWIN
                 Semiconductors<br>
                 <hr>
-              <li><strong>Secondary Market Research (A-Share & US-Listed Companies):</strong><br>
+              <li><span style="font-weight: bold;">Secondary Market Research </span>(A-Share & US-Listed Companies):<br>
                 2021 | <strong>National Silicon Industry</strong> (688126.SH): Leading Large Silicon Wafer Pioneer
                 Driving
                 Chip
@@ -563,7 +571,7 @@
             </h1>
             <ol>
               <li>
-                <strong>TomoBank: X-ray Imaging Dataset of Fuel Cells</strong><br>
+                <span style="font-weight: bold;">TomoBank: X-ray Imaging Dataset of Fuel Cells</span><br>
                 Curators: M. Bührer, <strong>H. Xu*</strong> [PSI], F. Marone<br>
                 2019 | U.S. Department of Energy - Argonne National Laboratory © Copyright. Rev. f4253f55. [<a
                   href="https://tomobank.readthedocs.io/en/latest/source/data/docs.data.dynamic.html#fuel-cell-data"
@@ -577,7 +585,8 @@
             </h1>
             <ol>
               <li>
-                <strong>Renewable Energy Technologies II, Energy Storage and Conversion </strong><br />
+                <span style="font-weight: bold;">Renewable Energy Technologies II, Energy Storage and Conversion
+                </span><br />
                 ETH Zürich, Master Course (529-0191-01L )<br />
                 2017-2019 | Spring Semester [<a
                   href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
@@ -592,7 +601,7 @@
 
             <ul class="square">
               <!-- <hr> -->
-              <li><strong>Electrochemistry / Physics / Materials Science:</strong><br>
+              <li><span style="font-weight: bold;">Electrochemistry / Physics / Materials Science:</span><br>
             </ul>
 
             <ol>
@@ -987,6 +996,7 @@
     <script src="js/main.js"></script>
     <script src="js/user_ip_en.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
+    <script src="js/festival.js"></script>
 
   </div>
 </body>
