@@ -382,6 +382,7 @@ jQuery(document).ready(function($) {
     // 日期格式化
     let dateStr = now.toLocaleDateString(locales[lang], config.date);
     
+	
     // 特殊语言调整
     switch(lang) {
       case 'chinese':
@@ -391,12 +392,18 @@ jQuery(document).ready(function($) {
         dateStr = dateStr.replace(/(\d+)\/(\d+)\/(\d+)/, '$1年$2月$3日');
         break;
       case 'korean':
-        dateStr = dateStr.replace(/(\d+)\. (\d+)\. (\d+)/, '$1년 $2월 $3일');
+        dateStr = dateStr.replace(/(\d+)\. (\d+)\. (\d+)\./, '$1년 $2월 $3일');
         break;
       case 'arabic': // 阿拉伯语数字修正
         dateStr = dateStr.replace(/،/g, ' - '); // 替换阿拉伯语逗号
         break;
     }
+
+    // 自定义日期格式
+    let dateParts = now.toLocaleDateString(locales[lang], config.date).split(' ');
+    if(lang === 'english') dateParts = [dateParts[0], dateParts[1], dateParts[2]]; // 调整英语顺序
+    //if(lang === 'german') dateParts[0] = dateParts[0].replace('.', ''); // 去除德语日期点号
+	if(lang === 'german') dateParts[1] = dateParts[1].replace('.', ''); // 去除德语日期点号
 
     // 星期格式化
     const weekdayStr = now.toLocaleString(locales[lang], { weekday: 'long' });

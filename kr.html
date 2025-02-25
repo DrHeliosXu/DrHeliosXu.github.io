@@ -1248,6 +1248,7 @@
                                 인스타그램 |
                                 <a href="https://www.instagram.com/helios.h.xu/"
                                     target="_blank">instagram.com/helios.h.xu</a><br /><br />
+                                <span class="currentDateInLang" language="korean"></span><br />
                                 <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
                                         class="clock24"
                                         id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
@@ -1300,7 +1301,8 @@
                                     target="_blank">site.inconstruction.io</a><br />
                                 학술 |
                                 <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
-
+                                <a class="currentZodiacInLang" language="korean"></a> - <a class="jieqi-24"
+                                    language="korean"></a>절기<br>
                                 <strong>
                                     <a href="//24timezones.com/%E6%9D%B1%E4%BA%AC%E9%83%BD/%E6%99%82%E9%96%93"
                                         style="text-decoration: none" class="clock24"
@@ -1324,14 +1326,25 @@
 
                         <div class="col-md-5">
                             <br />
-                            <div style="
-                    width: 100%;
-                    text-align: center;
-                    transform: translateX(5px);
-                  ">
+                            <div id="clustrmap-container"
+                                style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
                                 <script type="text/javascript" id="clustrmaps"
-                                    src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'></script>
+                                    src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                                    </script>
                             </div>
+
+                            <style>
+                                /* 默认是电脑端，transform: translateX(15px); */
+                                #clustrmap-container {
+                                    transform: translateX(15px) !important;
+                                }
+
+                                @media (max-width: 768px) {
+                                    #clustrmap-container {
+                                        transform: translateX(-40px) !important;
+                                    }
+                                }
+                            </style>
 
                         </div>
                     </form>
@@ -1452,7 +1465,7 @@
             <script src="js/main.js"></script>
             <script src="js/user_ip_kr.js" type="module"></script>
             <script type="text/javascript" src="update_info_script.js"></script>
-
+            <script src="js/24jieqi.js"></script>
         </div>
     </div>
 </body>
