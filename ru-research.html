@@ -866,6 +866,7 @@
               <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
               Инстаграм |
               <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
+              <span class="currentDateInLang" language="russian"></span><br />
               <a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
                 id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                 title="timezone - Zurich" target="_blank" rel="nofollow">Время в Мюнхене
@@ -909,6 +910,9 @@
               <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
               Ученый |
               <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+
+              <span class="currentZodiacInLang" language="russian"></span> - <a class="jieqi-24"
+                language="russian"></a><br>
               <a href="//24timezones.com/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
                 style="text-decoration: none" class="clock24"
                 id="tz24-1737245506-c1166-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InJ1In0="
@@ -931,14 +935,26 @@
 
           <div class="col-md-5">
             <br />
-            <div style="
-                        width: 100%;
-                        text-align: right;
-                        transform: translateX(5px);
-                      ">
+            <div id="clustrmap-container"
+              style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
               <script type="text/javascript" id="clustrmaps"
-                src="https://cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"></script>
+                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                </script>
             </div>
+
+            <style>
+              /* 默认是电脑端，transform: translateX(15px); */
+              #clustrmap-container {
+                transform: translateX(15px) !important;
+              }
+
+              @media (max-width: 768px) {
+                #clustrmap-container {
+                  transform: translateX(-40px) !important;
+                }
+              }
+            </style>
+
 
           </div>
         </form>
@@ -982,11 +998,11 @@
             <div class="copyright">
               <p>
                 <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
-                                                    height: 0.9em;
-                                                    vertical-align: -6%;
-                                                    display: inline-block;
-                                                    margin-right: 0em;
-                                                  " />
+                            height: 0.9em;
+                            vertical-align: -6%;
+                            display: inline-block;
+                            margin-right: 0em;
+                          " />
                 <text>Приветствую вас, друзья с
                   <span class="location">Земли</span>! За пределами
                   <span class="distance-info"> ∞ км</span> расстояния мы всегда связаны</text>
@@ -1038,6 +1054,7 @@
     <!-- .site-wrap -->
 
 
+
     <!-- loader -->
     <div id="loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
@@ -1066,7 +1083,7 @@
     <script src="js/main.js"></script>
     <script src="js/user_ip_ru.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
-
+    <script src="js/24jieqi.js"></script>
   </div>
   </div>
 </body>

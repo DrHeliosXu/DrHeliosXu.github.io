@@ -400,6 +400,7 @@
             <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
             انستجرام |
             <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
+            <span class="currentDateInLang" language="arabic"></span><br />
             <text><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
                 id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                 title="الوقت - زيورخ" target="_blank" rel="nofollow">الوقت الأوروبي [CET]</a></text>
@@ -446,6 +447,7 @@
             <a href="https://once-upon-a-phd.gitbook.io/" target="_blank">once-upon-a-phd.gitbook.io</a><br />
             باحث |
             <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+            <span class="currentZodiacInLang" language="arabic"></span> - <a class="jieqi-24" language="arabic"></a><br>
             <text>
               <a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24"
                 id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
@@ -468,15 +470,25 @@
 
         <div class="col-md-5">
           <br />
-          <div style="
-                        width: 100%;
-                        text-align: right;
-                        transform: translateX(5px);
-                      ">
+          <div id="clustrmap-container"
+            style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
             <script type="text/javascript" id="clustrmaps"
-              src="https://cdn.clustrmaps.com/map_v2.js?cl=d1d1d1&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&cmo=ed7d31&cmn=183d7c"></script>
+              src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+              </script>
           </div>
 
+          <style>
+            /* 默认是电脑端，transform: translateX(15px); */
+            #clustrmap-container {
+              transform: translateX(15px) !important;
+            }
+
+            @media (max-width: 768px) {
+              #clustrmap-container {
+                transform: translateX(-40px) !important;
+              }
+            }
+          </style>
         </div>
       </form>
     </div>
@@ -600,6 +612,7 @@
   <script src="js/main.js"></script>
   <script src="js/user_ip_ar.js" type="module"></script>
   <script type="text/javascript" src="update_info_script.js"></script>
+  <script src="js/24jieqi.js"></script>
 
   </div>
   </div>
