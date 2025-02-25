@@ -849,6 +849,7 @@
               <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
               Instagram |
               <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
+              <span class="currentDateInLang" language="german"></span><br />
               <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
                   id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                   title="timezone - Zurich" target="_blank" rel="nofollow">Münchner Zeit [CET]</a></strong>
@@ -890,6 +891,8 @@
               <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
               Gelehrter |
               <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+              <span class="currentZodiacInLang" language="german"></span> - <a class="jieqi-24"
+                language="german"></a><br>
               <strong><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24"
                   id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                   title="Time - Beijing" target="_blank" rel="nofollow">Pekinger Zeit [CST]</a></strong>
@@ -911,14 +914,25 @@
 
           <div class="col-md-5">
             <br />
-            <div style="
-                        width: 100%;
-                        text-align: right;
-                        transform: translateX(5px);
-                      ">
-              <script type='text/javascript' id='clustrmaps'
-                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'></script>
+            <div id="clustrmap-container"
+              style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
+              <script type="text/javascript" id="clustrmaps"
+                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                </script>
             </div>
+
+            <style>
+              /* 默认是电脑端，transform: translateX(15px); */
+              #clustrmap-container {
+                transform: translateX(15px) !important;
+              }
+
+              @media (max-width: 768px) {
+                #clustrmap-container {
+                  transform: translateX(-40px) !important;
+                }
+              }
+            </style>
 
           </div>
         </form>
@@ -961,7 +975,7 @@
           <div class="col-12">
             <div class="copyright">
               <p>
-                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
+                <img class="country-flag" src="./images/wflags/un.png" alt="" style="
                             height: 0.9em;
                             vertical-align: -6%;
                             display: inline-block;
@@ -1045,7 +1059,7 @@
     <script src="js/main.js"></script>
     <script src="js/user_ip_de.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
-
+    <script src="js/24jieqi.js"></script>
   </div>
   </div>
 </body>

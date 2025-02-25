@@ -1035,31 +1035,25 @@
                     <!-- 第三栏 -->
                     <div class="col-md-5">
                         <br>
-                        <div style="width: 100%; text-align: center; transform: translateX(15px); position: relative;">
-                            <script type="text/javascript" id="clustrmaps"></script>
+                        <div id="clustrmap-container"
+                            style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
+                            <script type="text/javascript" id="clustrmaps"
+                                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                                </script>
                         </div>
-                        <script>
-                            // 获取当前窗口宽度
-                            function updateClustrMapWidth() {
-                                const clustrMapScript = document.getElementById('clustrmaps');
 
-                                // 获取当前宽度
-                                const screenWidth = window.innerWidth;
-
-                                // 设置宽度，如果屏幕宽度小于 768px，设置为95%页面宽度，否则保持为 470px
-                                const mapWidth = screenWidth < 768 ? `${screenWidth * 0.86}` : '470';
-
-                                // 构建新的 Clustrmaps URL
-                                const newSrc = `//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=${mapWidth}&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12`;
-
-                                // 更新 script 标签的 src 属性
-                                clustrMapScript.src = newSrc;
+                        <style>
+                            /* 默认是电脑端，transform: translateX(15px); */
+                            #clustrmap-container {
+                                transform: translateX(15px) !important;
                             }
 
-                            // 页面加载时和窗口大小改变时更新 Clustrmap
-                            window.addEventListener('load', updateClustrMapWidth);
-                            window.addEventListener('resize', updateClustrMapWidth);
-                        </script>
+                            @media (max-width: 768px) {
+                                #clustrmap-container {
+                                    transform: translateX(-40px) !important;
+                                }
+                            }
+                        </style>
                     </div>
 
                 </form>

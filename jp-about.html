@@ -29,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <script src="js/chinese_lunar_calendar.min.js"></script>
 
 
   <style>
@@ -488,6 +489,7 @@
               <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
               インスタ |
               <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
+              <span class="currentDateInLang" language="japanese"></span><br />
               <text><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
                   id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
                   title="timezone - Zurich" target="_blank" rel="nofollow">欧州時間 [CET]</a></text>
@@ -532,7 +534,8 @@
               学術 |
               <a href="https://notavailable.eu.org" target="_blank">site.in.construction.eu.org</a><br /><br />
 
-
+              <a class="currentZodiacInLang" language="japanese"></a>星座 - <a class="jieqi-24"
+                language="chinese"></a>節気<br>
               <a href="//24timezones.com/%E6%9D%B1%E4%BA%AC%E9%83%BD/%E6%99%82%E9%96%93" style="text-decoration: none"
                 class="clock24"
                 id="tz24-1737245838-c1248-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImphIn0="
@@ -554,15 +557,25 @@
 
           <div class="col-md-5">
             <br />
-            <div style="
-                            width: 100%;
-                            text-align: center;
-                            transform: translateX(5px);
-                          ">
+            <div id="clustrmap-container"
+              style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
               <script type="text/javascript" id="clustrmaps"
-                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=420&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'></script>
+                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                </script>
             </div>
 
+            <style>
+              /* 默认是电脑端，transform: translateX(15px); */
+              #clustrmap-container {
+                transform: translateX(15px) !important;
+              }
+
+              @media (max-width: 768px) {
+                #clustrmap-container {
+                  transform: translateX(-40px) !important;
+                }
+              }
+            </style>
           </div>
         </form>
       </div>
@@ -604,11 +617,11 @@
             <div class="copyright">
               <p>
                 <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
-                                                        height: 0.9em;
-                                                        vertical-align: -6%;
-                                                        display: inline-block;
-                                                        margin-right: 0em;
-                                                      " />
+                                height: 0.9em;
+                                vertical-align: -6%;
+                                display: inline-block;
+                                margin-right: 0em;
+                              " />
                 <text>ようこそ、<span class="location">地球</span>からの友達!
                   <span class="distance-info"> ∞ km</span> の彼方でも、私たちは常に繋がっています</text>
                 <img src="./images/wflags/de.png" style="
@@ -682,7 +695,8 @@
     <script src="js/user_ip_jp.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
-
+    <script src="js/24jieqi.js"></script>
+    <script src="js/nongli.js"></script>
   </div>
 </body>
 
