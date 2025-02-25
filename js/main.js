@@ -422,7 +422,7 @@ jQuery(document).ready(function($) {
   const zodiacConfig = {
     formats: {
       en: { names: ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius'] },
-      zh: { names: ['摩羯座', '水瓶座', '双鱼座', '白羊座', '金牛座', '双子座', '巨蟹座', '狮子座', '处女座', '天秤座', '天蝎座', '射手座'] },
+      zh: { names: ['摩羯', '水瓶', '双鱼', '白羊', '金牛', '双子', '巨蟹', '狮子', '处女', '天秤', '天蝎', '射手'] },
       ja: { names: ['磨羯', '宝瓶', '双魚', '白羊', '金牛', '双児', '巨蟹', '獅子', '処女', '天秤', '天蝎', '人馬'] },
       ko: { names: ['염소자리', '물병자리', '물고기자리', '양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리'] },
       fr: { names: ['Capricorne', 'Verseau', 'Poissons', 'Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire'] },
