@@ -430,7 +430,7 @@ jQuery(document).ready(function($) {
     formats: {
       en: { names: ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius'] },
       zh: { names: ['摩羯', '水瓶', '双鱼', '白羊', '金牛', '双子', '巨蟹', '狮子', '处女', '天秤', '天蝎', '射手'] },
-      ja: { names: ['磨羯', '宝瓶', '双魚', '白羊', '金牛', '双児', '巨蟹', '獅子', '処女', '天秤', '天蝎', '人馬'] },
+      ja: { names: ['山羊', '水瓶', '魚座', '牡羊', '牡牛', '双子', '蟹座', '獅子', '乙女', '天秤', '蠍座', '射手'] },
       ko: { names: ['염소자리', '물병자리', '물고기자리', '양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리'] },
       fr: { names: ['Capricorne', 'Verseau', 'Poissons', 'Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire'] },
 	  it: { names: ['Capricorno', 'Acquario', 'Pesci', 'Ariete', 'Toro', 'Gemelli', 'Cancro', 'Leone', 'Vergine', 'Bilancia', 'Scorpione', 'Sagittario'] },  
