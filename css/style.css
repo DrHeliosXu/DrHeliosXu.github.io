@@ -2292,3 +2292,21 @@ select {
         /* Adjust image height */
       }
     }
+
+    /* 简化版导航栏样式 */
+.simplified-navbar {
+  position: fixed;
+  top: -90px; /* 初始位置在屏幕上方 */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  transition: top 0.4s ease; /* 平滑过渡效果 */
+  z-index: 1000;
+}
+
+/* 简化版导航栏显示时 */
+.simplified-navbar.active {
+  top: 0; /* 平滑滑下到顶部 */
+}

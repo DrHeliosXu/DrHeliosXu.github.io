@@ -509,3 +509,16 @@ jQuery(document).ready(function($) {
     }
   });
 })();
+
+
+
+document.addEventListener('scroll', function () {
+    const simplifiedNavbar = document.getElementById('simplifiedNavbar');
+    const scrollThreshold = 100; // 滚动的触发距离
+
+    if (window.scrollY > scrollThreshold) {
+        simplifiedNavbar.classList.add('active'); // 添加显示的类
+    } else {
+        simplifiedNavbar.classList.remove('active'); // 移除显示的类
+    }
+});
