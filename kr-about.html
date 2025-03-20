@@ -141,11 +141,12 @@
                     style="height:15px; margin-right:2px; position:relative; top:-1px;">
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
-                                                                              width: 85px;
                                                                               height: 25px;
                                                                               margin-left: 5px;
                                                                               border-radius: 0;
                                                                               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                              text-align: center; /* 新增 */
+                                                                              text-align-last: center; /* 确保选中的选项居中 */
                                                                             "
                       onchange="window.location.href=this.options[this.selectedIndex].value">
                       <option value="cn-about.html">中文</option>
@@ -212,11 +213,12 @@
                                                   " />
                 <!-- 选择语言的下拉框 -->
                 <select id="languages" name="languages" style="
-                                                  width: 80px;
                                                   height: 25px;
                                                   margin-left: 5px;
                                                   border-radius: 0;
                                                   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                  text-align: center; /* 新增 */
+                                                  text-align-last: center; /* 确保选中的选项居中 */
                                                 "
                   onchange="window.location.href=this.options[this.selectedIndex].value">
                   <option value="cn-about.html">中文</option>
@@ -267,6 +269,57 @@
       </nav>
     </a>
     <!------>
+      <!-- 简化版导航栏内容 -->
+      <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+            
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+
+            <img src="images/logo-full-kr-long.png" alt="Image" class="site-logo"
+            style="width: auto; height: 33px;" />
+
+            <div style="display: flex; align-items: center;">
+                <a class="flag d-inline-block d-lg-none">
+                    <img src="images/flag_kr.png" alt="flag"
+                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                </a>
+                <select id="languages" name="languages" style="
+                    height: 25px;
+                    margin-left: 5px;
+                    border-radius: 0;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    text-align: center; /* 新增 */
+                    text-align-last: center; /* 确保选中的选项居中 */
+                    " onchange="window.location.href=this.options[this.selectedIndex].value">
+                                <option value="cn.html">中文</option>
+                                <option value="jp.html">日本語</option>
+                                <option value="kr.html" selected>한국어</option>
+                                <option value="de.html">Deutsch</option>
+                                <option value="en.html">English</option>
+                                <option value="es.html">Español</option>
+                                <option value="fr.html">Français</option>
+                                <option value="it.html">Italiano</option>
+                                <option value="ru.html">Русский</option>
+                                <option value="ar.html">اللغة العربية</option>
+                </select>
+                <select id="content-list" name="content-list" style="
+                height: 25px;
+                margin-left: 5px;
+                border-radius: 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-align: center; /* 新增 */
+                text-align-last: center; /* 确保选中的选项居中 */
+                " onchange="window.location.href=this.options[this.selectedIndex].value">
+                <option value="kr.html" >홈</option>
+                <option value="kr-research.html">연구</option>
+                <option value="kr-news.html">뉴스</option>
+                <option value="kr-projects.html">프로젝트</option>
+                <option value="kr-about.html" selected >소개</option>
+                </select>
+            </div>
+        </div>
+    </div>
+     <!------>
+
 
     <div class="site-section">
       <p class="d-sm-block d-none">&nbsp;</p>

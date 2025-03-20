@@ -68,11 +68,12 @@
                                     </a>
                                     <div class="ml-auto d-inline-block d-lg-none">
                                         <select id="languages" name="languages" style="
-                                            width: 90px;
                                             height: 25px;
                                             margin-left: 5px;
                                             border-radius: 0;
                                             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                            text-align: center; /* 新增 */
+                                            text-align-last: center; /* 确保选中的选项居中 */
                                             " onchange="handleChange(this)">
                                             <option value="cn.html" selected>中文简体</option>
                                             <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
@@ -144,11 +145,12 @@
                                 </a>
                                 <!-- 选择语言的下拉框 -->
                                 <select id="languages" name="languages" style="
-                      width: 70px;
                       height: 25px;
                       margin-left: 5px;
                       border-radius: 0;
                       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      text-align: center; /* 新增 */
+                      text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
                                     <option value="cn.html" selected>中文</option>
                                     <option value="jp.html">日本語</option>
@@ -217,7 +219,6 @@
                             style="height:15px; margin-right:2px; position:relative; top:-1px;">
                     </a>
                     <select id="languages" name="languages" style="
-                        width: 90px;
                         height: 25px;
                         margin-left: 5px;
                         border-radius: 0;
@@ -239,7 +240,6 @@
                         <option value="ar.html">اللغة العربية</option>
                     </select>
                     <select id="content-list" name="content-list" style="
-                    width: 70px;
                     height: 25px;
                     margin-left: 5px;
                     border-radius: 0;
