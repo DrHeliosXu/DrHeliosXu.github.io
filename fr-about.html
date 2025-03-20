@@ -342,6 +342,39 @@
 
                                                 </p>
             </div>
+
+            <br>
+            <h1 class="mb-4">
+              Vidéos
+            </h1>
+            <hr>
+            <br>
+
+            <!-- Preview Images for the Videos with Titles -->
+            <div class="preview-container">
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_UN_Bonn_2024_CN_Subtitle_13MB.png"
+                  data-video="video/UN_Bonn_2023_CN_Subtitle_10MB.mp4" alt="Preview 1">
+                <div class="image-title"></div>
+              </div>
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_Graduation_Ceremony_25MB.png"
+                  data-video="video/Graduation_Ceremony_25MB.mp4" alt="Preview 2">
+                <div class="image-title"></div>
+              </div>
+            </div>
+
+            <!-- Modal for Playing Video -->
+            <div class="modal" id="videoModal">
+              <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <video id="modalVideo" controls>
+                  <source id="videoSource" src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
             <div class="container">
 
 
@@ -663,7 +696,7 @@
     <script src="js/user_ip_fr.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
-
+    <script src="js/video-player.js"></script>
   </div>
 
 </body>

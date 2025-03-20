@@ -31,7 +31,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-
   <style>
     body {
       font-family: 'Tahoma', 'Noto Sans', sans-serif;
@@ -63,7 +62,9 @@
       /* 字体字形，使用无衬线字体 */
     }
   </style>
+  <style>
 
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -314,9 +315,43 @@
               <p style="text-align:left;">
                 PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
               </p>
+
+            </div>
+
+            <br>
+            <h1 class="mb-4">
+              影 像
+            </h1>
+            <hr>
+            <br>
+
+            <!-- Preview Images for the Videos with Titles -->
+            <div class="preview-container">
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_UN_Bonn_2024_CN_Subtitle_13MB.png"
+                  data-video="video/UN_Bonn_2023_CN_Subtitle_10MB.mp4" alt="Preview 1">
+                <div class="image-title"></div>
+              </div>
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_Graduation_Ceremony_25MB.png"
+                  data-video="video/Graduation_Ceremony_25MB.mp4" alt="Preview 2">
+                <div class="image-title"></div>
+              </div>
+            </div>
+
+            <!-- Modal for Playing Video -->
+            <div class="modal" id="videoModal">
+              <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <video id="modalVideo" controls>
+                  <source id="videoSource" src="" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
 
 
+            <br>
 
             <div class="container">
               <!--<h1 class="center">Hong Xu  - Résume</h1>-->
@@ -747,6 +782,8 @@
     <script type="module" src="js/festival.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/nongli.js"></script>
+    <script src="js/video-player.js"></script>
+
   </div>
 </body>
 
