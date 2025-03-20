@@ -235,6 +235,63 @@
       </nav>
     </a>
     <!------>
+    <!------>
+        <!-- 简化版导航栏内容 -->
+        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+            
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+
+            <img src="images/logo-full-en-long2.png" alt="Image" class="site-logo"
+            style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+               
+              <div></div>
+
+              <div style="display: flex; align-items: center;">
+                  <a class="flag d-inline-block d-lg-none">
+                      <img src="images/flag_it.png" alt="flag"
+                          style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                  </a>
+                  <select id="languages" name="languages" style="
+                                              min-width: 80px;
+                                              height: 25px;
+                      margin-left: 5px;
+                      border-radius: 0;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      text-align: center; /* 新增 */
+                      text-align-last: center; /* 确保选中的选项居中 */
+                      " onchange="window.location.href=this.options[this.selectedIndex].value">
+                                  <option value="cn.html">中文</option>
+                                  <option value="jp.html" >日本語</option>
+                                  <option value="kr.html">한국어</option>
+                                  <option value="de.html">Deutsch</option>
+                                  <option value="en.html" >English</option>
+                                  <option value="es.html">Español</option>
+                                  <option value="fr.html">Français</option>
+                                  <option value="it.html" selected>Italiano</option>
+                                  <option value="ru.html">Русский</option>
+                                  <option value="ar.html">اللغة العربية</option>
+                  </select>
+                  <select id="content-list" name="content-list" style="
+                  height: 25px;
+                  margin-left: 5px;
+                  border-radius: 0;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                  " onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <option value="it.html" >Home</option>
+                  <option value="it-research.html">Ricerca</option>
+                  <option value="it-news.html" >Notizia</option>
+                  <option value="it-projects.html">Progetti</option>
+                  <option value="it-about.html" selected>Su di me</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+       <!------>
+
+
+
 
     <div class="site-section">
       <p class="d-sm-block d-none">&nbsp;</p>
