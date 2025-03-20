@@ -522,3 +522,36 @@ document.addEventListener('scroll', function () {
         simplifiedNavbar.classList.remove('active'); // 移除显示的类
     }
 });
+
+
+// JavaScript to adjust the width based on the selected option
+function adjustWidth(selectElement) {
+    const tempSelect = document.createElement('select');
+    tempSelect.style.visibility = 'hidden';
+    document.body.appendChild(tempSelect);
+
+    const selectedOption = selectElement.options[selectElement.selectedIndex];
+    tempSelect.innerHTML = `<option>${selectedOption.text}</option>`;
+    tempSelect.style.width = 'auto';
+    const maxWidth = tempSelect.clientWidth;
+
+    selectElement.style.width = `${maxWidth + 15}px`; // Add some padding
+    document.body.removeChild(tempSelect);
+}
+
+const contentListElement = document.getElementById('content-list');
+const languagesElement = document.getElementById('languages');
+
+adjustWidth(contentListElement);
+adjustWidth(languagesElement);
+
+contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
+languagesElement.addEventListener('change', () => adjustWidth(languagesElement));
+
+window.addEventListener('resize', () => {
+    adjustWidth(contentListElement);
+    adjustWidth(languagesElement);
+});
+
+
+
