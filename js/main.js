@@ -512,6 +512,11 @@ jQuery(document).ready(function($) {
 
 
 
+
+
+
+
+
 document.addEventListener('scroll', function () {
     const simplifiedNavbar = document.getElementById('simplifiedNavbar');
     const scrollThreshold = 100; // 滚动的触发距离
@@ -540,18 +545,43 @@ function adjustWidth(selectElement) {
 }
 
 const contentListElement = document.getElementById('content-list');
+const contentList2Element = document.getElementById('content-list-2');
 const languagesElement = document.getElementById('languages');
 
 adjustWidth(contentListElement);
+adjustWidth(contentList2Element);
 adjustWidth(languagesElement);
 
 contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
+contentList2Element.addEventListener('change', () => adjustWidth(contentList2Element));
 languagesElement.addEventListener('change', () => adjustWidth(languagesElement));
 
 window.addEventListener('resize', () => {
     adjustWidth(contentListElement);
+	 adjustWidth(contentList2Element);
     adjustWidth(languagesElement);
 });
 
 
 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	var logo = document.getElementById('scroll-logo'); // 确保 logo 元素存在
+	if (!logo) {
+	  console.error('Logo element not found!'); // 如果找不到元素，输出错误信息
+	  return;
+	}
+
+	window.addEventListener('scroll', function() {
+	  console.log('Scroll position:', window.scrollY); // 调试输出
+	  if (window.scrollY > 250) { // 设置滚动距离为100px
+		logo.style.visibility = 'visible'; // 使用 visibility 属性
+		logo.style.opacity = '1'; // 确保 logo 可见
+	  } else {
+		logo.style.visibility = 'hidden'; // 隐藏 logo
+		logo.style.opacity = '0'; // 确保 logo 不可见
+	  }
+	});
+  });

@@ -164,6 +164,21 @@
                                             <option value="ru-research.html">Русский</option>
                                             <option value="ar-research.html">اللغة العربية</option>
                                         </select>
+                                        <select id="content-list-2" name="content-list" style="
+                                        width: auto;
+                                        height: 25px;
+                                        margin-left: 5px;
+                                        border-radius: 0;
+                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                        text-align: center; /* 新增 */
+                                        text-align-last: center; /* 确保选中的选项居中 */
+                                        " onchange="handleChange(this)">
+                                <option value="cn.html" >主页</option>
+                                <option value="cn-research.html" selected>研究</option>
+                                <option value="cn-news.html">新闻</option>
+                                <option value="cn-projects.html">项目</option>
+                                <option value="cn-about.html">关于</option>
+                            </select>
                                     </div>
                                 </div>
                             </div>
@@ -186,6 +201,8 @@
 
                         <div class="mr-auto">
                             <nav class="site-navigation position-relative text-right" role="navigation">
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                                style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
                                     <li class="active">
                                         <a href="cn.html" class="nav-link text-left">主 页&nbsp;&nbsp;</a>
