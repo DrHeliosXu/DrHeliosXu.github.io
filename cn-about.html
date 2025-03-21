@@ -273,25 +273,6 @@
                   <option value="ru-about.html">Русский</option>
                   <option value="ar-about.html">اللغة العربية</option>
                 </select>
-                <select id="languages-4" name="languages" style="width: 110px;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
-                                                    text-align-last: center; /* 确保选中的选项居中 */"
-                  onchange="changeLanguage()">
-                  <option value="chinese" selected>中文 • 汉语</option>
-                  <option value="canton">中文 • 粤语</option>
-                  <option value="old-chinese">中文 • 文言文</option>
-                  <option value="old-chinese-xiaozhuan">中文 • 小篆</option>
-                  <option value="old-chinese-jiaguwen">中文 • 甲骨文</option>
-                  <option value="huoxing">中文 • 火星文</option>
-                  <option value="blind">中文 • 盲文</option>
-                  <option value="tibetan">藏文 • བོད་མི</option>
-                  <option value="mongol-traditional">蒙文 • ᠮᠣᠩᠭᠣᠯ</option>
-                  <option value="mongol-cyrillic">蒙文 • Монгол</option>
-                  <option value="uyghur">维文 • ئۇيغۇر</option>
-                  <option value="kazakh">哈语 • қазақ</option>
-                  <option value="vahcuengh">壮文 • Vahcuengh</option>
-                  <option value="yi">彝文 • ꆈꌠꁱꂷ</option>
-                  <option value="hmong">苗文 • Hmong</option>
-                </select>
               </span>
 
             </div>
@@ -404,8 +385,28 @@
             </p>
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               简 介
+              <div>
+                <select id="languages-4" name="languages"
+                  style="width: auto; height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                                                                                  text-align-last: center; /* 确保选中的选项居中 */" onchange="changeLanguage()">
+                  <option value="chinese" selected>民族语言</option>
+                  <option value="chinese">中/汉语</option>
+                  <option value="canton">中/粤语</option>
+                  <option value="old-chinese">中/文言文</option>
+                  <option value="huoxing">中/火星文</option>
+                  <option value="blind">中/盲文</option>
+                  <option value="tibetan">藏/བོད་མི</option>
+                  <option value="mongol-traditional">蒙/ᠮᠣᠩᠭᠣᠯ</option>
+                  <option value="mongol-cyrillic">蒙/Монгол</option>
+                  <option value="uyghur">维/ئۇيغۇر</option>
+                  <option value="kazakh">哈/қазақ</option>
+                  <option value="tajik">塔/тоҷикӣ</option>
+                  <option value="hmong">苗/Hmong</option>
+                  <option value="yi">彝/ꆈꌠꁱꂷ</option>
+                  <option value="vahcuengh">壮/Vahcuengh</option>
 
-              <select id="font-selector" name="font-selector" style="
+                </select>
+                <select id="font-selector" name="font-selector" style="
                                           width: auto;height: 25px;
                                           margin-left: 5px;
                                           border-radius: 0;
@@ -413,15 +414,15 @@
                                           text-align: center; /* 新增 */
                                           text-align-last: center; /* 确保选中的选项居中 */
                                           ">
-                <option value="default" data-size="auto" selected>默认字体</option>
-                <option value="YiShanBeiZhuanTi" data-size="26px">小篆</option>
-                <option value="HanYiXiaoLiShuFan" data-size="24px">隶书</option>
-                <option value="HanYiShouJinShuFan" data-size="26px">瘦金体</option>
-                <option value="YanZhenQingFaShu" data-size="22px">颜真卿法书</option>
-                <option value="KangXiZiDianTi" data-size="20px">康熙字典</option>
-                <option value="ShangShouHongZhiShouXieTi" data-size="24px">手写体</option>
-
-              </select>
+                  <option value="default" data-size="auto" selected>默认字体</option>
+                  <option value="YiShanBeiZhuanTi" data-size="26px">小篆</option>
+                  <option value="HanYiXiaoLiShuFan" data-size="24px">隶书</option>
+                  <option value="HanYiShouJinShuFan" data-size="26px">瘦金体</option>
+                  <option value="YanZhenQingFaShu" data-size="22px">颜真卿法书</option>
+                  <option value="KangXiZiDianTi" data-size="20px">康熙字典</option>
+                  <option value="ShangShouHongZhiShouXieTi" data-size="24px">手写体</option>
+                </select>
+              </div>
             </h1>
             <hr>
 
@@ -636,6 +637,67 @@
                 彝文翻译中...
               </p>
 
+
+              <p id="tajik-content" align="justify" style="display: none;">
+                Дар айни замон доктор Хонг Сю дар саноати Олмон ҳамчун муҳандиси муҳими системаи энергетикаи нав
+                фаъолият мекунад ва
+                барои баланд бардоштани самаранокии соҳаи энергия ва нақлиёт ва инчунин дастёбӣ ба бетарафии карбон
+                талош меварзад. Дар
+                замони таҳсили худ, ӯ дар ҳамкорӣ бо ширкатҳои трансмиллӣ ва муассисаҳои илмии Аврупо ва Чин зиёда аз
+                <strong><span class="no_of_papers"></span> мақолаҳои илмӣ</strong> нашр кардааст ва <strong><span
+                    class="no_of_patents"></span>
+                  патент</strong> ба даст овардааст. Ӯ дар <strong><a href="https://unfccc.int/"
+                    target="_blank">Конфронси тағйирёбии
+                    иқлими Созмони Милали Муттаҳид дар Бонн</a></strong> мавзӯи "Табдили энергетикии Чин ва
+                инноватсияҳои техникӣ"
+                роҳбарӣ кардааст ва борҳо дар вохӯриҳои гурӯҳҳои кории <strong><a href="https://unece.org/"
+                    target="_blank">Комиссияи
+                    иқтисодии Аврупо</a></strong> дар бораи нақлиёт ва иқлим, инчунин гурӯҳи кории гидроген ширкат
+                кардааст. Ӯ фаъолона
+                мақсадҳои рушди устувори Созмони Милалро, аз ҷумла SDG 7 (Энергияи тоза), SDG 9 (Инноватсияҳои саноатӣ),
+                ва SDG 13
+                (Амали иқлимӣ) пеш мебарад. Ҳамчунин ӯ ҳамчун <strong>муҳаррири илмӣ</strong> барои зиёда аз даҳ
+                маҷаллаҳои
+                баландрейтинг дар соҳаи энергетика ва нақлиёт ва ҳамчун <strong>таҳлилгари илмӣ</strong> дар
+                <strong>Форуми
+                  байналмилалии Санкт-Галлен</strong> фаъолият мекунад. Ӯ соҳиби мукофоти сафарии <strong><a
+                    href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076" target="_blank">Семинари
+                    байналмилалии
+                    Залтсбург</a></strong>, даъватнома барои пешниҳод аз <strong>Ҷамъияти электрохимияи ИМА</strong>,
+                стипендияи
+                Erasmus-и Иттиҳоди Аврупо, медали биринҷии миллии мусобиқаи тадбиркории "Ҷоми Чолишҳо" ва дигар
+                мукофотҳои олӣ мебошад.
+                <br><br>
+                Ӯ дар аввали соли 2021 дараҷаи докториро аз <strong><a href="https://ethz.ch/en.html"
+                    target="_blank">Донишгоҳи
+                    федералии технологии Цюрих</a></strong> ба даст овардааст. Дар давоми таҳсили бакалаврӣ, магистрӣ ва
+                докторӣ,
+                тадқиқоти ӯ ба соҳаи <strong>бетарафии карбон ва энергетикаи нав</strong> равона шудааст. Ӯ дар
+                муассисаҳои
+                байналмилалӣ, аз ҷумла <strong><a href="https://psi.ch" target="_blank">Пажӯҳишгоҳи Пол Шеррер
+                    Швейтсария</a></strong>,
+                <strong><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Пажӯҳишгоҳи энергетикии
+                    Оксфорди
+                    Британия</a></strong>, <strong><a href="https://tum.de" target="_blank">Донишгоҳи техникии Мюнхени
+                    Олмон</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Мактаби олии роҳи
+                    оҳани
+                    Париж</a></strong>, <strong><a href="https://xfel.eu" target="_blank">Фазелитрони озоди электронии
+                    Иттиҳоди
+                    Аврупо</a></strong> фаъолият ва таҷрибаомӯзӣ кардааст. Ӯ бо ширкатҳои трансмиллии <strong>Тойотаи
+                  Ҷопон</strong> ва
+                <strong>Инфинеони Олмон</strong> ҳамкориҳои амиқи таҳқиқотӣ анҷом додааст. Илова бар ин, ӯ ба таври
+                пурра стипендияро аз
+                <strong><a href="https://quantic.edu/mba" target="_blank">Мактаби бизнеси Quantic</a></strong> гирифта,
+                дараҷаи магистри
+                идораи бизнесро ба тариқи фосилавӣ хатм кардааст. Ӯ инчунин стипендияи Banco Santander-ро барои омӯзиши
+                курси "Гузариши
+                сабз" дар <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Мактаби бизнеси
+                    Кембриҷ</a></strong> гирифтааст
+                ва дар таҳияи гузоришҳои амиқи ширкатҳои саҳомӣ (A-SAHAM & NASDAQ) ва фаъолияти сармоягузории венчурӣ
+                дар бахши
+                энергетикаи нав ширкат кардааст.
+              </p>
+
               <p id="kazakh-content" align="justify" style="display: none;">
                 Қазіргі таңда доктор Сюй Хоң Германия өнеркәсібінде <strong>жаңа энергия қуат жүйелері</strong>
                 саласының
@@ -790,7 +852,6 @@
               </p>
 
               <p id="hmong-content" align="justify" style="display: none;">
-
                 Tam sim no, Dr. Xu Hong ua haujlwm ua tus kws tshaj lij engineer hauv kev siv hluav taws xob tshiab hauv
                 kev lag luam
                 German, cog lus kom ua tiav kev txhim kho kev ua haujlwm zoo thiab cov pa roj carbon nruab nrab hauv lub
@@ -1332,7 +1393,7 @@
           convertToSimplified(); // 转换为简体字
         }
         else if (selectedFont === "HanYiXiaoLiShuFan") {
-          convertToTraditional(); // 转换为繁体字
+          convertToSimplified(); // 转换为简体字
         }
         else if (selectedFont === "HanYiShouJinShuFan") {
           convertToSimplified(); // 转换为简体字

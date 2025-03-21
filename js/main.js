@@ -551,25 +551,29 @@ const contentList2Element = document.getElementById('content-list-2');
 const languagesElement = document.getElementById('languages');
 const languages2Element = document.getElementById('languages-2');
 const languages3Element = document.getElementById('languages-3');
+const languages4Element = document.getElementById('languages-4');
 
 adjustWidth(contentListElement);
 adjustWidth(contentList2Element);
 adjustWidth(languagesElement);
 adjustWidth(languages2Element);
 adjustWidth(languages3Element);
+adjustWidth(languages4Element);
 
 contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
 contentList2Element.addEventListener('change', () => adjustWidth(contentList2Element));
 languagesElement.addEventListener('change', () => adjustWidth(languagesElement));
 languages2Element.addEventListener('change', () => adjustWidth(languages2Element));
 languages3Element.addEventListener('change', () => adjustWidth(languages3Element));
+languages4Element.addEventListener('change', () => adjustWidth(languages4Element));
 
 window.addEventListener('resize', () => {
     adjustWidth(contentListElement);
-	 adjustWidth(contentList2Element);
+	adjustWidth(contentList2Element);
     adjustWidth(languagesElement);
 	adjustWidth(languages2Element);
 	adjustWidth(languages3Element);
+	adjustWidth(languages4Element);
 });
 
 
