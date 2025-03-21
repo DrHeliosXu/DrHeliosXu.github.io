@@ -117,11 +117,12 @@
 
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
-                                    width: 85px;
+                                     width: auto;
                                     height: 25px;
                                     margin-left: 5px;
                                     border-radius: 0;
-                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                text-align: center; /* 新增 */
+                                                text-align-last: center; /* 确保选中的选项居中 */
                                   " onchange="window.location.href=this.options[this.selectedIndex].value">
                       <!-- <option value="cn-research.html">中文</option>
                       <option value="jp-research.html">日本語</option>
@@ -133,6 +134,22 @@
                       <option value="it-research.html">Italiano</option>
                       <!-- <option value="ru-research.html">Русский</option>
                       <option value="ar-research.html">اللغة العربية</option> -->
+                    </select>
+                    <select id="content-list-2" name="content-list" style="
+                                                                                        width: auto;
+                                                                                        height: 25px;
+                                                                                        margin-left: 5px;
+                                                                                        border-radius: 0;
+                                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                        text-align: center; /* 新增 */
+                                                                                        text-align-last: center; /* 确保选中的选项居中 */
+                                                                                        "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="fr.html" selected>Accueil</option>
+                      <option value="fr-research.html">Recherche</option>
+                      <option value="fr-news.html">Actualités</option>
+                      <option value="fr-projects.html">Projets</option>
+                      <option value="fr-about.html">De moi</option>
                     </select>
                   </div>
                 </div>
@@ -201,12 +218,13 @@
                                     " />
                 </a>
                 <!-- 选择语言的下拉框 -->
-                <select id="languages" name="languages" style="
-                                    width: 85px;
+                <select id="languages-2" name="languages" style="
+                                    width: auto;
                                     height: 25px;
                                     margin-left: 5px;
                                     border-radius: 0;
-                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                text-align: center; /* 新增 */
+                                                text-align-last: center; /* 确保选中的选项居中 */
                                   " onchange="window.location.href=this.options[this.selectedIndex].value">
                   <!-- <option value="cn-research.html">中文</option>
                   <option value="jp-research.html">日本語</option>
@@ -272,8 +290,8 @@
             <img src="images/flag_fr.png" alt="flag"
               style="height:15px; margin-right:2px; position:relative; top:-1px;">
           </a>
-          <select id="languages" name="languages" style="
-                                              min-width: 80px;
+          <select id="languages-3" name="languages" style="
+                                             width: auto;
                                               height: 25px;
                       margin-left: 5px;
                       border-radius: 0;
@@ -293,7 +311,7 @@
             <option value="ar.html">اللغة العربية</option>
           </select>
           <select id="content-list" name="content-list" style="
-                  height: 25px;
+                    width: auto;height: 25px;
                   margin-left: 5px;
                   border-radius: 0;
                   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

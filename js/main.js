@@ -529,6 +529,8 @@ document.addEventListener('scroll', function () {
 });
 
 
+
+
 // JavaScript to adjust the width based on the selected option
 function adjustWidth(selectElement) {
     const tempSelect = document.createElement('select');
@@ -540,7 +542,7 @@ function adjustWidth(selectElement) {
     tempSelect.style.width = 'auto';
     const maxWidth = tempSelect.clientWidth;
 
-    selectElement.style.width = `${maxWidth + 15}px`; // Add some padding
+    selectElement.style.width = `${maxWidth + 12}px`; // Add some padding
     document.body.removeChild(tempSelect);
 }
 
