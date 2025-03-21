@@ -60,18 +60,20 @@
                         <div class="top-social d-flex align-items-center">
                             <div class="social-icons-container">
                                 <div class="ml-md-auto top-social d-lg-inline-block">
-                                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
-                                        target="_blank">
-                                        <span class="icon-linkedin"></span>
-                                    </a>
-                                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
-                                        class="social-icon d-inline-block p-3" target="_blank">
-                                        <span class="icon-google"></span>
-                                    </a>
-                                    <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
-                                        class="social-icon d-inline-block p-3">
-                                        <span class="icon-instagram"></span>
-                                    </a>
+                                    <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                                        <a href="https://www.linkedin.com/in/xuhong/"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-linkedin"></span>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-google"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                                            class="social-icon d-inline-block p-3">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </div>
 
                                     <img class="flag d-inline-block d-lg-none" src="images/flag_sa.png" alt="flag"
                                         style="height:15px; margin-right:2px; position:relative; top:-1px;">
@@ -79,11 +81,12 @@
 
                                     <div class="ml-auto d-inline-block d-lg-none">
                                         <select id="languages" name="languages" style="
-                          width: 85px;
+                         width: auto;
                           height: 25px;
                           margin-left: 5px;
                           border-radius: 0;
-                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                    text-align-last: center; /* 确保选中的选项居中 */
                         " onchange="window.location.href=this.options[this.selectedIndex].value">
                                             <option value="cn.html">中文</option>
                                             <option value="jp.html">日本語</option>
@@ -95,6 +98,22 @@
                                             <option value="it.html">Italiano</option>
                                             <option value="ru.html">Русский</option>
                                             <option value="ar.html" selected>اللغة العربية</option>
+                                        </select>
+                                        <select id="content-list" name="content-list" style="
+                                                                               width: auto;
+                                                                                height: 25px;
+                                                                                margin-left: 5px;
+                                                                                border-radius: 0;
+                                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                text-align: center; /* 新增 */
+                                                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                                                "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="ar.html" selected>الرئيسية</option>
+                                            <option value="ar-research.html">البحث</option>
+                                            <option value="ar-news.html">الأخبار</option>
+                                            <option value="ar-projects.html">المشاريع</option>
+                                            <option value="ar-about.html">عنّي</option>
                                         </select>
                                     </div>
                                 </div>
@@ -112,7 +131,7 @@
                         <div class="mr-auto">
                             <nav class="site-navigation position-relative text-right" role="navigation">
                                 <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
-                                style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                                    style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
                                 <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
                                     <li>
                                         <a href="ar.html" class="nav-link text-left">الرئيسية&nbsp;&nbsp;&nbsp;</a>
@@ -158,12 +177,13 @@
                       " />
                                 </a>
                                 <!-- 选择语言的下拉框 -->
-                                <select id="languages" name="languages" style="
-                      width: 85px;
+                                <select id="languages-2" name="languages" style="
+                     width: auto;
                       height: 25px;
                       margin-left: 5px;
                       border-radius: 0;
-                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                    text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
                                     <option value="cn.html">中文</option>
                                     <option value="jp.html">日本語</option>
@@ -911,24 +931,24 @@
         </a>
         <!------>
 
-    <!------>
+        <!------>
         <!-- 简化版导航栏内容 -->
         <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
-            
+
             <div style="display: flex; justify-content: space-between; align-items: center;">
-  
-              <img src="images/logo-full-ar-long.png" alt="Image" class="site-logo"
-              style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
-                 
+
+                <img src="images/logo-full-ar-long.png" alt="Image" class="site-logo"
+                    style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
                 <div></div>
-  
+
                 <div style="display: flex; align-items: center;">
                     <a class="flag d-inline-block d-lg-none">
                         <img src="images/flag_sa.png" alt="flag"
                             style="height:15px; margin-right:2px; position:relative; top:-1px;">
                     </a>
-                    <select id="languages" name="languages" style="
-                                                min-width: 100px;
+                    <select id="languages-3" name="languages" style="
+                                               width: auto;
                                                 height: 25px;
                         margin-left: 5px;
                         border-radius: 0;
@@ -936,35 +956,36 @@
                         text-align: center; /* 新增 */
                         text-align-last: center; /* 确保选中的选项居中 */
                         " onchange="window.location.href=this.options[this.selectedIndex].value">
-                                    <option value="cn.html">中文</option>
-                                    <option value="jp.html" >日本語</option>
-                                    <option value="kr.html">한국어</option>
-                                    <option value="de.html">Deutsch</option>
-                                    <option value="en.html" >English</option>
-                                    <option value="es.html">Español</option>
-                                    <option value="fr.html">Français</option>
-                                    <option value="it.html">Italiano</option>
-                                    <option value="ru.html">Русский</option>
-                                    <option value="ar.html" selected>اللغة العربية</option>
+                        <option value="cn.html">中文</option>
+                        <option value="jp.html">日本語</option>
+                        <option value="kr.html">한국어</option>
+                        <option value="de.html">Deutsch</option>
+                        <option value="en.html">English</option>
+                        <option value="es.html">Español</option>
+                        <option value="fr.html">Français</option>
+                        <option value="it.html">Italiano</option>
+                        <option value="ru.html">Русский</option>
+                        <option value="ar.html" selected>اللغة العربية</option>
                     </select>
-                    <select id="content-list" name="content-list" style="
-                    height: 25px;
+                    <select id="content-list-2" name="content-list" style="
+                  width: auto;
+                  height: 25px;
                     margin-left: 5px;
                     border-radius: 0;
                     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                     text-align: center; /* 新增 */
                     text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
-                    <option value="ar.html" selected>الرئيسية</option>
-                    <option value="ar-research.html">البحث</option>
-                    <option value="ar-news.html" >الأخبار</option>
-                    <option value="ar-projects.html">المشاريع</option>
-                    <option value="ar-about.html" >عنّي</option>
+                        <option value="ar.html" selected>الرئيسية</option>
+                        <option value="ar-research.html">البحث</option>
+                        <option value="ar-news.html">الأخبار</option>
+                        <option value="ar-projects.html">المشاريع</option>
+                        <option value="ar-about.html">عنّي</option>
                     </select>
                 </div>
             </div>
         </div>
-         <!------>
+        <!------>
 
 
 

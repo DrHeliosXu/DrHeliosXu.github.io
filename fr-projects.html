@@ -87,17 +87,20 @@
             <div class="top-social d-flex align-items-center">
               <div class="social-icons-container">
                 <div class="ml-md-auto top-social d-lg-inline-block">
-                  <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3" target="_blank">
-                    <span class="icon-linkedin"></span>
-                  </a>
-                  <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
-                    class="social-icon d-inline-block p-3" target="_blank">
-                    <span class="icon-google"></span>
-                  </a>
-                  <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
-                    class="social-icon d-inline-block p-3">
-                    <span class="icon-instagram"></span>
-                  </a>
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
 
                   <img src="images/flag_fr.png" class="flag d-inline-block d-lg-none" alt="flag"
                     style="height:15px; margin-right:2px; position:relative; top:-1px;">
@@ -143,7 +146,7 @@
             <div class="mr-auto">
               <nav class="site-navigation position-relative text-right " role="navigation">
                 <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
-                style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
                 <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
                   <li>
                     <a href="fr.html" class="nav-link text-left">Accueil&nbsp;&nbsp;</a>
@@ -244,22 +247,22 @@
       </nav>
     </a>
     <!------>
-        <!-- 简化版导航栏内容 -->
-        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
-            
-          <div style="display: flex; justify-content: space-between; align-items: center;">
+    <!-- 简化版导航栏内容 -->
+    <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
 
-            <img src="images/logo-full-fr-long.png" alt="Image" class="site-logo"
-            style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
-               
-              <div></div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
 
-              <div style="display: flex; align-items: center;">
-                  <a class="flag d-inline-block d-lg-none">
-                      <img src="images/flag_fr.png" alt="flag"
-                          style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                  </a>
-                  <select id="languages" name="languages" style="
+        <img src="images/logo-full-fr-long.png" alt="Image" class="site-logo"
+          style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+        <div></div>
+
+        <div style="display: flex; align-items: center;">
+          <a class="flag d-inline-block d-lg-none">
+            <img src="images/flag_fr.png" alt="flag"
+              style="height:15px; margin-right:2px; position:relative; top:-1px;">
+          </a>
+          <select id="languages" name="languages" style="
                                               min-width: 80px;
                                               height: 25px;
                       margin-left: 5px;
@@ -268,18 +271,18 @@
                       text-align: center; /* 新增 */
                       text-align-last: center; /* 确保选中的选项居中 */
                       " onchange="window.location.href=this.options[this.selectedIndex].value">
-                                  <option value="cn.html">中文</option>
-                                  <option value="jp.html" >日本語</option>
-                                  <option value="kr.html">한국어</option>
-                                  <option value="de.html">Deutsch</option>
-                                  <option value="en.html" >English</option>
-                                  <option value="es.html" >Español</option>
-                                  <option value="fr.html" selected>Français</option>
-                                  <option value="it.html">Italiano</option>
-                                  <option value="ru.html">Русский</option>
-                                  <option value="ar.html">اللغة العربية</option>
-                  </select>
-                  <select id="content-list" name="content-list" style="
+            <option value="cn.html">中文</option>
+            <option value="jp.html">日本語</option>
+            <option value="kr.html">한국어</option>
+            <option value="de.html">Deutsch</option>
+            <option value="en.html">English</option>
+            <option value="es.html">Español</option>
+            <option value="fr.html" selected>Français</option>
+            <option value="it.html">Italiano</option>
+            <option value="ru.html">Русский</option>
+            <option value="ar.html">اللغة العربية</option>
+          </select>
+          <select id="content-list" name="content-list" style="
                   height: 25px;
                   margin-left: 5px;
                   border-radius: 0;
@@ -287,16 +290,16 @@
                   text-align: center; /* 新增 */
                   text-align-last: center; /* 确保选中的选项居中 */
                   " onchange="window.location.href=this.options[this.selectedIndex].value">
-                  <option value="fr.html" >Accueil</option>
-                  <option value="fr-research.html">Recherche</option>
-                  <option value="fr-news.html" >Actualités</option>
-                  <option value="fr-projects.html" selected>Projets</option>
-                  <option value="fr-about.html" >De moi</option>
-                  </select>
-              </div>
-          </div>
+            <option value="fr.html">Accueil</option>
+            <option value="fr-research.html">Recherche</option>
+            <option value="fr-news.html">Actualités</option>
+            <option value="fr-projects.html" selected>Projets</option>
+            <option value="fr-about.html">De moi</option>
+          </select>
+        </div>
       </div>
-       <!------>
+    </div>
+    <!------>
 
     <div class="site-section">
       <p class="d-sm-block d-none">&nbsp;</p>

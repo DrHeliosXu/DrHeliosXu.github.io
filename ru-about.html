@@ -71,17 +71,20 @@
             <div class="top-social d-flex align-items-center">
               <div class="social-icons-container">
                 <div class="ml-md-auto top-social d-lg-inline-block">
-                  <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3" target="_blank">
-                    <span class="icon-linkedin"></span>
-                  </a>
-                  <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
-                    class="social-icon d-inline-block p-3" target="_blank">
-                    <span class="icon-google"></span>
-                  </a>
-                  <a href="https://www.instagram.com/helios.h.xu/" target="_blank"
-                    class="social-icon d-inline-block p-3">
-                    <span class="icon-instagram"></span>
-                  </a>
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
 
                   <img src="images/flag_ru.png" class="flag d-inline-block d-lg-none" alt="flag"
                     style="height:15px; margin-right:2px; position:relative; top:-1px;">
@@ -89,11 +92,13 @@
 
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
-                                              width: 85px;
+                                              width: auto;
                                               height: 25px;
                                               margin-left: 5px;
                                               border-radius: 0;
                                               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                        text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
                                             " onchange="window.location.href=this.options[this.selectedIndex].value">
                       <option value="cn-about.html">中文</option>
                       <option value="jp-about.html">日本語</option>
@@ -105,6 +110,21 @@
                       <option value="it-about.html">Italiano</option>
                       <option value="ru-about.html" selected>Русский</option>
                       <option value="ar-about.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list" name="content-list" style="
+                                                          width: auto;height: 25px;
+                                                          margin-left: 5px;
+                                                          border-radius: 0;
+                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                          text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                          "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="ru.html">Главная</option>
+                      <option value="ru-research.html">Исследования</option>
+                      <option value="ru-news.html">Новости</option>
+                      <option value="ru-projects.html">Проекты</option>
+                      <option value="ru-about.html" selected>Обо мне</option>
                     </select>
                   </div>
                 </div>
@@ -167,12 +187,14 @@
                 </a>
 
                 <!-- 选择语言的下拉框 -->
-                <select id="languages" name="languages" style="
-                                                                          width: 85px;
+                <select id="languages-2" name="languages" style="
+                                                                          width: auto;
                                                                           height: 25px;
                                                                           margin-left: 5px;
                                                                           border-radius: 0;
                                                                           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                                    text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
                                                                         "
                   onchange="window.location.href=this.options[this.selectedIndex].value">
                   <option value="cn-about.html">中文</option>
@@ -253,8 +275,8 @@
             <img src="images/flag_ru.png" alt="flag"
               style="height:15px; margin-right:2px; position:relative; top:-1px;">
           </a>
-          <select id="languages" name="languages" style="
-                                                      min-width: 80px;
+          <select id="languages-3" name="languages" style="
+                                                      width: auto;
                                                       height: 25px;
                               margin-left: 5px;
                               border-radius: 0;
@@ -273,8 +295,8 @@
             <option value="ru.html" selected>Русский</option>
             <option value="ar.html">اللغة العربية</option>
           </select>
-          <select id="content-list" name="content-list" style="
-                          height: 25px;
+          <select id="content-list-2" name="content-list" style="
+                          width: auto;height: 25px;
                           margin-left: 5px;
                           border-radius: 0;
                           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
