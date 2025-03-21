@@ -331,77 +331,160 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Биография</h1>
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Биография
+              <select id="languages-4" name="languages" style="
+                                                                width:auto;
+                                                                height: 25px;
+                                                                margin-left: 5px;
+                                                                border-radius: 0;
+                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                text-align: center; /* 新增 */
+                                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                              " onchange="changeLanguage()">
+                <option value="russian" selected>Русский / Ещё</option>
+                <option value="belarusian">Беларускі</option>
+              </select>
+            </h1>
+
+
             <hr />
             <div class="story">
-              <p id="german-content" align="justify" style="display: block;">
-                В настоящее время доктор Хонг Сюй — это увлеченный <text>исследователь</strong> и
-                  <text>инженер</strong>,
-                    специализирующийся на <text>возобновляемых источниках энергии</strong> и <text>e-power
-                        системах</strong>,
-                        стремящийся достичь высокой эффективности и углеродной нейтральности в области энергетики и
-                        транспорта.
-                        За последние 10 лет он сотрудничал с многими международными компаниями и ведущими учреждениями
-                        на
-                        евразийском континенте,
-                        продвигая технические достижения в таких областях, как <text>e-мобильность</strong>,
-                          <text>чистая
-                            энергия</strong> и
-                            <text>новые материалы</strong>, а также опубликовал <text><span class="no_of_papers"></span>
-                                статей</strong> и
-                                получил <text><span class="no_of_patents"></span> патентов</strong>. Кроме своих
-                                  инженерных работ, он
-                                  сотрудничал с
-                                  известными организациями, в том числе с Симпозиумом Святого Галлена, Всемирным
-                                  семинаром в Зальцбурге,
-                                  CITIC
-                                  Securities и Оксфордским институтом энергетических исследований, сосредоточив внимание
-                                  на анализе чистых
-                                  <text>энергетических экономик и политик</strong> в Азии и Европе. Как активный
-                                    участник международного
-                                    развития,
-                                    доктор Сюй был членом Группы экспертов (GE) в <text><a href="https://unece.org/"
-                                        target="_blank">Экономической комиссии
-                                        ООН для Европы</a></strong> (UNECE) в Женеве, а также вел параллельные сессии на
-                                      <text><a href="https://unfccc.int/" target="_blank">Климатической конференции
-                                          ООН</a></strong> (UNFCCC) в
-                                        Бонне,
-                                        поддерживая цели <text><a href="https://sdgs.un.org/goals" target="_blank">Целей
-                                            устойчивого развития
-                                            ООН</a></strong> (SDGs) <text>7</strong> (Доступная энергия),
-                                            <text>9</strong>
-                                              (Инновации в промышленности) и <text>13</strong> (Меры по защите климата).
-                                                <br><br>
-                                                Будучи ученым в душе, он защитил докторскую диссертацию по
-                                                <text>возобновляемым источникам
-                                                  энергии</strong> в
-                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
-                                                      Zurich</a></strong> в сотрудничестве с
-                                                    <text><a href="https://psi.ch" target="_blank">Институтом Пауля
-                                                        Шеррера</a></strong> в Швейцарии. До
-                                                      этого
-                                                      он
-                                                      получил степень магистра в области материаловедения в <text><a
-                                                          href="https://tum.de" target="_blank">Техническом
-                                                          университете Мюнхена</a></strong>, где проходил стажировки в
-                                                        <text><a href="https://xfel.eu" target="_blank">European
-                                                            XFEL</a></strong>
-                                                          и в <text><a href="https://infineon.com"
-                                                              target="_blank">Infineon</a></strong> в Германии. Его
-                                                            страсть
-                                                            к
-                                                            научным исследованиям привела к длительному сотрудничеству с
-                                                            ведущими компаниями в области водорода и
-                                                            топливных
-                                                            элементов, такими как <text>Toyota Motor</strong> в Японии и
-                                                              <text>Freudenberg Group</strong> в
-                                                                Германии. В поисках междисциплинарных горизонтов он
-                                                                получил исполнительное образование в <text><a
-                                                                    href="https://www.jbs.cam.ac.uk/"
-                                                                    target="_blank">Школе бизнеса Джаджа в
-                                                                    Кембридже</a></text>, приобретая
-                                                                практический опыт в компании венчурного капитала с двумя
-                                                                валютами и в ведущей ценной бумажной компании в Китае.
+              <p id="russian-content" align="justify" style="display: block;">
+                В настоящее время доктор Хонг Сюй — это увлеченный <text>исследователь</text> и
+                <text>инженер</text>,
+                специализирующийся на <text>возобновляемых источниках энергии</text> и <text>e-power
+                  системах</text>,
+                стремящийся достичь высокой эффективности и углеродной нейтральности в области энергетики и
+                транспорта.
+                За последние 10 лет он сотрудничал с многими международными компаниями и ведущими учреждениями
+                на
+                евразийском континенте,
+                продвигая технические достижения в таких областях, как <text>e-мобильность</text>,
+                <text>чистая
+                  энергия</text> и
+                <text>новые материалы</text>, а также опубликовал <text><span class="no_of_papers"></span>
+                  статей</text> и
+                получил <text><span class="no_of_patents"></span> патентов</text>. Кроме своих
+                инженерных работ, он
+                сотрудничал с
+                известными организациями, в том числе с Симпозиумом Святого Галлена, Всемирным
+                семинаром в Зальцбурге,
+                CITIC
+                Securities и Оксфордским институтом энергетических исследований, сосредоточив внимание
+                на анализе чистых
+                <text>энергетических экономик и политик</text> в Азии и Европе. Как активный
+                участник международного
+                развития,
+                доктор Сюй был членом Группы экспертов (GE) в <text><a href="https://unece.org/"
+                    target="_blank">Экономической комиссии
+                    ООН для Европы</a></text> (UNECE) в Женеве, а также вел параллельные сессии на
+                <text><a href="https://unfccc.int/" target="_blank">Климатической конференции
+                    ООН</a></text> (UNFCCC) в
+                Бонне,
+                поддерживая цели <text><a href="https://sdgs.un.org/goals" target="_blank">Целей
+                    устойчивого развития
+                    ООН</a></text> (SDGs) <text>7</text> (Доступная энергия),
+                <text>9</text>
+                (Инновации в промышленности) и <text>13</text> (Меры по защите климата).
+                <br><br>
+                Будучи ученым в душе, он защитил докторскую диссертацию по
+                <text>возобновляемым источникам
+                  энергии</text> в
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                    Zurich</a></text> в сотрудничестве с
+                <text><a href="https://psi.ch" target="_blank">Институтом Пауля
+                    Шеррера</a></text> в Швейцарии. До
+                этого
+                он
+                получил степень магистра в области материаловедения в <text><a href="https://tum.de"
+                    target="_blank">Техническом
+                    университете Мюнхена</a></text>, где проходил стажировки в
+                <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text>
+                и в <text><a href="https://infineon.com" target="_blank">Infineon</a></text> в Германии. Его
+                страсть
+                к
+                научным исследованиям привела к длительному сотрудничеству с
+                ведущими компаниями в области водорода и
+                топливных
+                элементов, такими как <text>Toyota Motor</text> в Японии и
+                <text>Freudenberg Group</text> в
+                Германии. В поисках междисциплинарных горизонтов он
+                получил исполнительное образование в <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Школе
+                    бизнеса Джаджа в
+                    Кембридже</a></text>, приобретая
+                практический опыт в компании венчурного капитала с двумя
+                валютами и в ведущей ценной бумажной компании в Китае.
+              </p>
+
+
+              <p id="belarusian-content" align="justify" style="display: none;">
+                У цяперашні час доктар Хонг Сюй — гэта захоплены <text>даследчык</text> і
+                <text>інжынер</text>,
+                які спецыялізуецца на <text>аднаўляльных крыніцах энергіі</text> і <text>e-power
+                  сістэмах</text>,
+                імкнучыся дасягнуць высокай эфектыўнасці і вугляроднай нейтральнасці ў галіне энергетыкі і
+                транспарту.
+                За апошнія 10 гадоў ён супрацоўнічаў з многімі міжнароднымі кампаніямі і вядучымі ўстановамі
+                на
+                еўразійскім кантыненце,
+                прасоўваючы тэхнічныя дасягненні ў такіх галінах, як <text>e-мабільнасць</text>,
+                <text>чыстая
+                  энергія</text> і
+                <text>новыя матэрыялы</text>, а таксама апублікаваў <text><span class="no_of_papers"></span>
+                  артыкулаў</text> і
+                атрымаў <text><span class="no_of_patents"></span> патэнтаў</text>. Акрамя сваіх
+                інжынерных работ, ён
+                супрацоўнічаў з
+                вядомымі арганізацыямі, у тым ліку з Сімпозіумам Святога Галеа, Сусветнім
+                семінарам у Зальцбургу,
+                CITIC
+                Securities і Оксфардскім інстытутам энергетычных даследаванняў, засяроджваючы ўвагу
+                на аналізе чыстых
+                <text>энергетычных эканомік і палітык</text> у Азіі і Еўропе. Як актыўны
+                ўдзельнік міжнароднага
+                развіцця,
+                доктар Сюй быў членам Групы экспертаў (GE) у <text><a href="https://unece.org/"
+                    target="_blank">Эканамічнай камісіі
+                    ААН для Еўропы</a></text> (UNECE) у Жэневе, а таксама праводзіў паралельныя сесіі на
+                <text><a href="https://unfccc.int/" target="_blank">Кліматычнай канферэнцыі
+                    ААН</a></text> (UNFCCC) у
+                Бонне,
+                падтрымліваючы мэты <text><a href="https://sdgs.un.org/goals" target="_blank">Мэтаў
+                    устойлівага развіцця
+                    ААН</a></text> (SDGs) <text>7</text> (Даступная энергія),
+                <text>9</text>
+                (Інавацыі ў прамысловасці) і <text>13</text> (Меры па абароне клімату).
+                <br><br>
+                Будучы вучоным па натуры, ён абараніў доктарскую дысертацыю па
+                <text>аднаўляльных крыніцах
+                  энергіі</text> у
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                    Zurich</a></text> у супрацоўніцтве з
+                <text><a href="https://psi.ch" target="_blank">Інстытутам Паўля
+                    Шэрэра</a></text> у Швейцарыі. Да
+                гэтага
+                ён
+                атрымаў ступень магістра ў галіне матэрыялазнаўства ў <text><a href="https://tum.de"
+                    target="_blank">Тэхнічным
+                    універсітэце Мюнхена</a></text>, дзе праходзіў стажыроўкі ў
+                <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text>
+                і ў <text><a href="https://infineon.com" target="_blank">Infineon</a></text> у Германіі. Яго
+                захапленне
+                да
+                навуковых даследаванняў прывяло да працяглага супрацоўніцтва з
+                вядучымі кампаніямі ў галіне водароду і
+                паліўных
+                элементаў, такімі як <text>Toyota Motor</text> у Японіі і
+                <text>Freudenberg Group</text> у
+                Германіі. У пошуках міждысцыплінарных гарызонтаў ён
+                атрымаў выканаўчае адукацыю ў <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Школе
+                    бізнесу Джаджа ў
+                    Кембрыджы</a></text>, набываючы
+                практычны досвед у кампаніі венчурнага капіталу з двума
+                валютамі і ў вядучай каштоўнай паперы ў Кітаі.
               </p>
 
               <p style="text-align:left;">
@@ -757,6 +840,22 @@
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["russian-content", "belarusian-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
   </div>
 
 </body>
