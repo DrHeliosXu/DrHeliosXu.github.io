@@ -330,78 +330,509 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Biografía</h1>
+
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Biografía
+              <select id="languages-4" name="languages" style="
+                            width:auto;
+                            height: 25px;
+                            margin-left: 5px;
+                            border-radius: 0;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                            text-align: center; /* 新增 */
+                            text-align-last: center; /* 确保选中的选项居中 */
+                          " onchange="changeLanguage()">
+                <option value="spanish">Español estándar</option>
+                <option value="gallego">Gallego</option>
+                <option value="catalan">Catalán</option>
+                <option value="euskera">Euskera</option>
+                <!-- <option value="rioplatense">Rioplatense</option>
+                <option value="mexicano">Mexicano</option>
+                <option value="caribeno">Caribeño</option> -->
+              </select>
+            </h1>
+
+
             <hr />
             <div class="story">
-              <p align="justify">
-                Actualmente, el Dr. Hong Xu es un <text>Investigador</strong> y <text>Ingeniero</strong>
-                    comprometido,
-                    especializado en
-                    <text>energías renovables</strong> y <text>sistemas e-Power</strong>, esforzándose por alcanzar
-                        la excelencia en eficiencia y
-                        la neutralidad de carbono en los sectores de la energía y el transporte.
-                        En los últimos 10 años, ha
-                        trabajado con
-                        multinacionales y principales instituciones a lo largo del continente euroasiático, impulsando
-                        avances
-                        técnicos en
-                        las industrias de <text>e-Movilidad</strong>, <text>energía limpia</strong> y <text>nuevos
-                              materiales</strong>
-                              con <text><span class="no_of_papers"></span> artículos</strong> publicados y <text><span
-                                    class="no_of_patents"></span>
-                                  patentes</strong> concedidas. Junto a sus
-                                  actividades de ingeniería, él ha
-                                  colaborado con organizaciones reconocidas, incluyendo el Simposio de San Galo, el
-                                  Seminario Global de
-                                  Salzburgo,
-                                  CITIC Valores Mobiliarios y el Instituto de Oxford para Estudios Energéticos,
-                                  centrando su atención en
-                                  el
-                                  análisis de la <text>economía de la
-                                    energía limpia
-                                    y la política</strong>
-                                    en Asia y
-                                    Europa. Como contribuyente proactivo al desarrollo internacional, el Dr. Xu ha sido
-                                    miembro del Grupo de
-                                    Expertos (GE) en
-                                    la <text><a href="https://unece.org/" target="_blank">Comisión Económica de las
-                                        Naciones Unidas
-                                        para Europa</a></strong> (UNECE) en Ginebra, y ha presidido sesiones paralelas
-                                      en la <text><a href="https://unfccc.int/" target="_blank">Conferencia de las
-                                          Naciones Unidas sobre el Cambio
-                                          Climático</a></strong> (UNFCCC) en Bonn,
-                                        abogando por los <text><a href="https://sdgs.un.org/goals"
-                                            target="_blank">Objetivos de Desarrollo
-                                            Sostenible
-                                            de la ONU</a></strong> (ODS) <text>7</strong> (Energía Asequible),
-                                            <text>9</strong> (Innovación
-                                              Industrial),
-                                              y
-                                              <text>13</strong> (Acción Climática).
+              <p id="spanish-content" align="justify" style="display: block;">
+                Actualmente, el Dr. Hong Xu es un <text>Investigador</text> y <text>Ingeniero</text>
+                comprometido,
+                especializado en
+                <text>energías renovables</text> y <text>sistemas e-Power</text>, esforzándose por alcanzar
+                la excelencia en eficiencia y
+                la neutralidad de carbono en los sectores de la energía y el transporte.
+                En los últimos 10 años, ha
+                trabajado con
+                multinacionales y principales instituciones a lo largo del continente euroasiático, impulsando
+                avances
+                técnicos en
+                las industrias de <text>e-Movilidad</text>, <text>energía limpia</text> y <text>nuevos
+                  materiales</text>
+                con <text><span class="no_of_papers"></span> artículos</text> publicados y <text><span
+                    class="no_of_patents"></span>
+                  patentes</text> concedidas. Junto a sus
+                actividades de ingeniería, él ha
+                colaborado con organizaciones reconocidas, incluyendo el Simposio de San Galo, el
+                Seminario Global de
+                Salzburgo,
+                CITIC Valores Mobiliarios y el Instituto de Oxford para Estudios Energéticos,
+                centrando su atención en
+                el
+                análisis de la <text>economía de la
+                  energía limpia
+                  y la política</text>
+                en Asia y
+                Europa. Como contribuyente proactivo al desarrollo internacional, el Dr. Xu ha sido
+                miembro del Grupo de
+                Expertos (GE) en
+                la <text><a href="https://unece.org/" target="_blank">Comisión Económica de las
+                    Naciones Unidas
+                    para Europa</a></text> (UNECE) en Ginebra, y ha presidido sesiones paralelas
+                en la <text><a href="https://unfccc.int/" target="_blank">Conferencia de las
+                    Naciones Unidas sobre el Cambio
+                    Climático</a></text> (UNFCCC) en Bonn,
+                abogando por los <text><a href="https://sdgs.un.org/goals" target="_blank">Objetivos de Desarrollo
+                    Sostenible
+                    de la ONU</a></text> (ODS) <text>7</text> (Energía Asequible),
+                <text>9</text> (Innovación
+                Industrial),
+                y
+                <text>13</text> (Acción Climática).
+                <br><br>
+                Un académico de corazón, obtuvo su doctorado en <text>energías
+                  renovables</text> en el <text><a href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de
+                    Zúrich</a></text>, en
+                colaboración con el <text><a href="https://psi.ch" target="_blank">Instituto Paul
+                    Scherrer</a></text> en
+                Suiza. Antes de eso, obtuvo un MSc en Ciencias de Materiales en la
+                <text><a href="https://tum.de" target="_blank">Universidad Técnica
+                    de Múnich</a></text> con prácticas en el <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeo</a></text> y en <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemania. Su pasión por la investigación impactante lo ha
+                llevado a un compromiso a largo
+                plazo con
+                líderes de
+                la industria en
+                hidrógeno y pilas de hidrógeno, incluyendo <text>Corporación
+                  Toyota</text> en Japón y el
+                <text>Grupo
+                  Freudenberg</text>
+                en Alemania. En busca de horizontes interdisciplinares,
+                recibió educación ejecutiva en
+                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge
+                    de Cambridge</a></text>, obteniendo experiencia
+                práctica en una firma de
+                capital de riesgo de divisas duales y en una empresa
+                líder de valores en China.
               </p>
 
-              <p align="justify">
-                Un académico de corazón, obtuvo su doctorado en <text>energías renovables</strong> en el <text><a
-                      href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de Zúrich</a></strong>, en
-                    colaboración con el <text><a href="https://psi.ch" target="_blank">Instituto Paul
-                        Scherrer</a></strong> en
-                      Suiza. Antes de eso, obtuvo un MSc en Ciencias de Materiales en la <text><a href="https://tum.de"
-                          target="_blank">Universidad Técnica de Múnich</a></strong> con prácticas en el <text><a
-                            href="https://xfel.eu" target="_blank">XFEL europeo</a></strong> y en <text><a
-                              href="https://infineon.com" target="_blank">Infineon</a></strong> en
-                            Alemania. Su pasión por la investigación impactante lo ha llevado a un compromiso a largo
-                            plazo con
-                            líderes de
-                            la industria en
-                            hidrógeno y pilas de hidrógeno, incluyendo <text>Corporación Toyota</strong> en Japón y el
-                              <text>Grupo
-                                Freudenberg</strong>
-                                en Alemania. En busca de horizontes interdisciplinares, recibió educación ejecutiva en
-                                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge
-                                    de Cambridge</a></text>, obteniendo experiencia práctica en una firma de
-                                capital de riesgo de divisas duales y en una empresa líder de valores en China.
+
+
+              <p id="catalan-content" align="justify" style="display: none;">
+                Actualment, el Dr. Hong Xu és un <text>Investigador</text> i <text>Enginyer</text>
+                compromès,
+                especialitzat en
+                <text>energies renovables</text> i <text>sistemes e-Power</text>, esforçant-se per assolir
+                l'excel·lència en eficiència i
+                la neutralitat de carboni als sectors de l'energia i el transport.
+                En els darrers 10 anys, ha
+                treballat amb
+                multinacionals i principals institucions al llarg del continent euroasiàtic, impulsant
+                avenços
+                tècnics a
+                les indústries de <text>e-Mobilitat</text>, <text>energia neta</text> i <text>nous
+                  materials</text>
+                amb <text><span class="no_of_papers"></span> articles</text> publicats i <text><span
+                    class="no_of_patents"></span>
+                  patents</text> concedides. Al costat dels seus
+                activitats d'enginyeria, ell ha
+                col·laborat amb organitzacions reconegudes, incloent el Simposi de Sant Gal, el
+                Seminari Global de
+                Salzburg,
+                CITIC Valors Mobiliaris i l'Institut d'Oxford per a Estudis Energètics,
+                centrant la seva atenció en
+                el
+                anàlisi de la <text>economia de la
+                  energia neta
+                  i la política</text>
+                a Àsia i
+                Europa. Com a contribuent proactiu al desenvolupament internacional, el Dr. Xu ha estat
+                membre del Grup de
+                Experts (GE) a
+                la <text><a href="https://unece.org/" target="_blank">Comissió Econòmica de les
+                    Nacions Unides
+                    per a Europa</a></text> (UNECE) a Ginebra, i ha presidit sessions paral·leles
+                a la <text><a href="https://unfccc.int/" target="_blank">Conferència de les
+                    Nacions Unides sobre el Canvi
+                    Climàtic</a></text> (UNFCCC) a Bonn,
+                advocant pels <text><a href="https://sdgs.un.org/goals" target="_blank">Objectius de Desenvolupament
+                    Sostenible
+                    de l'ONU</a></text> (ODS) <text>7</text> (Energia Assequible),
+                <text>9</text> (Innovació
+                industrial),
+                i
+                <text>13</text> (Acció Climàtica).
+                <br><br>
+                Un acadèmic de cor, va obtenir el seu doctorat a <text>energies
+                  renovables</text> al <text><a href="https://ethz.ch/en.html" target="_blank">Politècnic Federal de
+                    Zuric</a></text>, a
+                col·laboració amb el <text><a href="https://psi.ch" target="_blank">Institut Paul
+                    Scherrer</a></text> a
+                Suïssa. Abans d'això, va obtenir un MSc en Ciències de Materials a la
+                <text><a href="https://tum.de" target="_blank">Universitat Tècnica
+                    de Munic</a></text> amb pràctiques al <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeu</a></text> ia <text><a href="https://infineon.com" target="_blank">Infineon</a></text> a
+                Alemanya. La seva passió per la investigació impactant ho ha
+                portat a un compromís a llarg
+                termini amb
+                líders de
+                la indústria a
+                hidrogen i piles d'hidrogen, incloent <text>Corporació
+                  Toyota</text> al Japó i el
+                <text>Grup
+                  Freudenberg</text>
+                a Alemanya. A la recerca de horitzons interdisciplinars,
+                va rebre educació executiva a
+                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escola de Negocis Judge
+                    de Cambridge</a></text>, obtenint experiència
+                pràctica en una signatura de
+                capital de risc de divises duals i en una empresa
+                líder de valors a la Xina.
               </p>
 
+
+              <p id="euskera-content" align="justify" style="display: none;">
+                Gaur egun, Dr. Hong Xu <text>Ikerlaria</text> eta <text>Ingeniaria</text> konprometitua da,
+                <text>energia
+                  berriztagarrietan</text> eta <text>e-Power sistemetan</text> espezializatua, energia eta garraio
+                sektoreetan
+                efizientzia eta karbono neutralitatea lortzeko ahaleginetan. Azken 10 urteetan, multinazionalekin eta
+                kontinente
+                euroasiatiko osoko erakunde nagusiekin lan egin du, <text>e-Mobilitatea</text>, <text>energia
+                  garbia</text> eta
+                <text>material berriak</text> industrietan aurrerapen teknikoak sustatuz, <text><span
+                    class="no_of_papers"></span>
+                  artikulu</text> argitaratu eta <text><span class="no_of_patents"></span> patente</text> emanak.
+                Ingeniaritza
+                jardueren artean, lankidetza egin du erakunde ezagunekin, hala nola San Galo Simposioa, Salzburgo Global
+                Seminarra,
+                CITIC Valores Mobiliarios eta Oxford Energia Ikasketen Institutua, arreta jarriz <text>energia garbiaren
+                  ekonomiaren
+                  eta politikaren</text> analisiari Asiako eta Europako testuinguruan. Garapen internazionalerako
+                ekarpen proaktiboa
+                eginez, Dr. Xu <text><a href="https://unece.org/" target="_blank">Nazio Batuen Ekonomia Komisarian
+                    Europan</a></text> (UNECE) izan da aditu taldeko kide, eta Bonn-en, <text><a
+                    href="https://unfccc.int/" target="_blank">Nazio Batuen Klimaren Aldaketaren
+                    Konferentzian</a></text> paraleloetako saioak zuzenduz, <text><a href="https://sdgs.un.org/goals"
+                    target="_blank">NBEren Garapen Iraunkorrerako Helburuak</a></text> (SDG)
+                <text>7</text> (Energia Eskuragarri), <text>9</text> (Industria Berrikuntza) eta <text>13</text>
+                (Ekintza Klimatikoa)
+                defendatuz.
+                <br><br>
+                Bihotzez akademikoa, <text>energia berriztagarrietan</text> doktoratua lortu zuen <text><a
+                    href="https://ethz.ch/en.html" target="_blank">Zuricheko Politeknika Federalean</a></text>, <text><a
+                    href="https://psi.ch" target="_blank">Paul Scherrer Institutuarekin</a></text> elkarlanean, Suitzan.
+                Aurretik,
+                Material Zientzietan MSc bat lortu zuen <text><a href="https://tum.de" target="_blank">Municheko
+                    Unibertsitate
+                    Teknikoan</a></text>, <text><a href="https://xfel.eu" target="_blank">XFEL Europararekin</a></text>
+                eta <text><a href="https://infineon.com" target="_blank">Infineon</a></text> Alemanian egindako
+                praktikekin. Ikerketa
+                eraginkorraren pasioak, hidrogeno eta hidrogeno pilen industriako liderrekin konpromiso luzeko ibilbidea
+                ekarri dio,
+                <text>Toyota Korporazioa</text> Japonian eta <text>Freudenberg Taldea</text> Alemanian barne. Diziplina
+                anitzeko
+                horizonteak bilatuz, <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridgeko Judge School
+                    of
+                    Business-en</a></text> hezkuntza exekutiboa jaso zuen, praktika esperientzia lortuz, bi
+                moneta-merkataritzako
+                arrisku kapitaleko enpresa batean eta Txinan balioen lidergoan.
+              </p>
+
+              <p id="gallego-content" align="justify" style="display: none;">
+                Actualmente, o Dr. Hong Xu é un <text>Investigador</text> e <text>Enxeñeiro</text>
+                comprometido,
+                especializado en
+                <text>enerxías renovables</text> e <text>sistemas e-Power</text>, esforzándose por alcanzar
+                a excelencia en eficiencia e
+                a neutralidade de carbono nos sectores da enerxía e o transporte.
+                Nos últimos 10 anos, traballou con
+                multinacionais e principais institucións ao longo do continente euroasiático, impulsando
+                avances
+                técnicos nas industrias de <text>e-Movilidade</text>, <text>enerxía limpa</text> e <text>novos
+                  materiais</text>
+                con <text><span class="no_of_papers"></span> artigos</text> publicados e <text><span
+                    class="no_of_patents"></span>
+                  patentes</text> concedidas. Xunto ás súas
+                actividades de enxeñería, el fixo
+                colaboración con organizacións recoñecidas, incluíndo o Simposio de San Galo, o
+                Seminario Global de
+                Salzburgo,
+                CITIC Valores Mobiliarios e o Instituto de Oxford para Estudos Enerxéticos,
+                centrando a súa atención no
+                análise da <text>economía da
+                  enerxía limpa
+                  e a política</text>
+                en Asia e
+                Europa. Como contribuínte proactivo ao desenvolvemento internacional, o Dr. Xu foi
+                membro do Grupo de
+                Expertos (GE) na <text><a href="https://unece.org/" target="_blank">Comisión Económica das
+                    Nacións Unidas
+                    para Europa</a></text> (UNECE) en Xinebra, e presidiu sesións paralelas
+                na <text><a href="https://unfccc.int/" target="_blank">Conferencia das
+                    Nacións Unidas sobre o Cambio
+                    Climático</a></text> (UNFCCC) en Bonn,
+                defendendo os <text><a href="https://sdgs.un.org/goals" target="_blank">Obxectivos de Desenvolvemento
+                    Sostible
+                    da ONU</a></text> (ODS) <text>7</text> (Enerxía Asequible),
+                <text>9</text> (Innovación
+                Industrial),
+                e
+                <text>13</text> (Acción Climática).
+                <br><br>
+                Un académico de corazón, obteve o seu doutoramento en <text>enerxías
+                  renovables</text> no <text><a href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de
+                    Zúrich</a></text>, en
+                colaboración co <text><a href="https://psi.ch" target="_blank">Instituto Paul
+                    Scherrer</a></text> en
+                Suíza. Antes diso, obteve un MSc en Ciencias de Materiais na
+                <text><a href="https://tum.de" target="_blank">Universidade Técnica
+                    de Múnic</a></text> con prácticas no <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeo</a></text> e en <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemaña. A súa paixón pola investigación impactante levouno
+                a un compromiso a longo
+                prazo con
+                líderes da
+                industria en
+                hidróxeno e pilas de hidróxeno, incluíndo a <text>Corporación
+                  Toyota</text> en Xapón e o
+                <text>Grupo
+                  Freudenberg</text>
+                en Alemaña. Na procura de horizontes interdisciplinares,
+                recibiu educación executiva na
+                <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escola de Negocios Judge
+                    de Cambridge</a></text>, obtendo experiencia
+                práctica nunha firma de
+                capital de risco de divisas duais e nunha empresa
+                líder de valores en China.
+              </p>
+
+              <p id="rioplatense-content" align="justify" style="display: none;">
+                Actualmente, el Dr. Hong Xu es un <text>Investigador</text> y <text>Ingeniero</text>
+                comprometido,
+                especializado en
+                <text>energías renovables</text> y <text>sistemas e-Power</text>, esforzándose por alcanzar
+                la excelencia en eficiencia y
+                la neutralidad de carbono en los sectores de la energía y el transporte.
+                En los últimos 10 años, ha
+                trabajado con
+                multinacionales y principales instituciones a lo largo del continente euroasiático, impulsando
+                avances
+                técnicos en
+                las industrias de <text>e-Movilidad</text>, <text>energía limpia</text> y <text>nuevos
+                  materiales</text>
+                con <text><span class="no_of_papers"></span> artículos</text> publicados y <text><span
+                    class="no_of_patents"></span>
+                  patentes</text> concedidas. Junto a sus
+                actividades de ingeniería, él ha
+                colaborado con organizaciones reconocidas, incluyendo el Simposio de San Galo, el
+                Seminario Global de
+                Salzburgo,
+                CITIC Valores Mobiliarios y el Instituto de Oxford para Estudios Energéticos,
+                centrando su atención en
+                el
+                análisis de la <text>economía de la
+                  energía limpia
+                  y la política</text>
+                en Asia y
+                Europa. Como contribuyente proactivo al desarrollo internacional, el Dr. Xu ha sido
+                miembro del Grupo de
+                Expertos (GE) en
+                la <text><a href="https://unece.org/" target="_blank">Comisión Económica de las
+                    Naciones Unidas
+                    para Europa</a></text> (UNECE) en Ginebra, y ha presidido sesiones paralelas
+                en la <text><a href="https://unfccc.int/" target="_blank">Conferencia de las
+                    Naciones Unidas sobre el Cambio
+                    Climático</a></text> (UNFCCC) en Bonn,
+                abogando por los <text><a href="https://sdgs.un.org/goals" target="_blank">Objetivos de Desarrollo
+                    Sostenible
+                    de la ONU</a></text> (ODS) <text>7</text> (Energía Asequible),
+                <text>9</text> (Innovación
+                Industrial),
+                y
+                <text>13</text> (Acción Climática).
+                <br><br>
+                Un académico de corazón, obtuvo su doctorado en <text>energías
+                  renovables</text> en el <text><a href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de
+                    Zúrich</a></text>, en
+                colaboración con el <text><a href="https://psi.ch" target="_blank">Instituto Paul
+                    Scherrer</a></text> en
+                Suiza. Antes de eso, obtuvo un MSc en Ciencias de Materiales en la
+                <text><a href="https://tum.de" target="_blank">Universidad Técnica
+                    de Múnich</a></text> con prácticas en el <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeo</a></text> y en <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemania. Su pasión por la investigación impactante lo ha
+                llevado a un compromiso a largo
+                plazo con
+                líderes de
+                la industria en
+                hidrógeno y pilas de hidrógeno, incluyendo <text>Corporación
+                  Toyota</text> en Japón y el
+                <text>Grupo
+                  Freudenberg</text>
+                en Alemania. En busca de horizontes interdisciplinares,
+                recibió educación ejecutiva en
+                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge
+                    de Cambridge</a></text>, obteniendo experiencia
+                práctica en una firma de
+                capital de riesgo de divisas duales y en una empresa
+                líder de valores en China.
+              </p>
+
+              <p id="mexicano-content" align="justify" style="display: none;">
+                Actualmente, el Dr. Hong Xu es un <text>Investigador</text> y <text>Ingeniero</text>
+                comprometido,
+                especializado en
+                <text>energías renovables</text> y <text>sistemas e-Power</text>, esforzándose por alcanzar
+                la excelencia en eficiencia y
+                la neutralidad de carbono en los sectores de la energía y el transporte.
+                En los últimos 10 años, ha
+                trabajado con
+                empresas multinacionales y principales instituciones a lo largo del continente euroasiático, impulsando
+                avances
+                técnicos en
+                las industrias de <text>e-Movilidad</text>, <text>energía limpia</text> y <text>nuevos
+                  materiales</text>
+                con <text><span class="no_of_papers"></span> artículos</text> publicados y <text><span
+                    class="no_of_patents"></span>
+                  patentes</text> otorgadas. Junto a sus
+                actividades de ingeniería, ha
+                colaborado con organizaciones de prestigio, incluyendo el Simposio de San Galo, el
+                Seminario Global de
+                Salzburgo,
+                CITIC Valores Mobiliarios y el Instituto de Oxford para Estudios Energéticos,
+                enfocándose en
+                el
+                análisis de la <text>economía de la
+                  energía limpia
+                  y la política</text>
+                en Asia y
+                Europa. Como un contribuyente activo al desarrollo internacional, el Dr. Xu ha sido
+                miembro del Grupo de
+                Expertos (GE) en
+                la <text><a href="https://unece.org/" target="_blank">Comisión Económica de las
+                    Naciones Unidas
+                    para Europa</a></text> (UNECE) en Ginebra, y ha presidido sesiones paralelas
+                en la <text><a href="https://unfccc.int/" target="_blank">Conferencia de las
+                    Naciones Unidas sobre el Cambio
+                    Climático</a></text> (UNFCCC) en Bonn,
+                defendiendo los <text><a href="https://sdgs.un.org/goals" target="_blank">Objetivos de Desarrollo
+                    Sostenible
+                    de la ONU</a></text> (ODS) <text>7</text> (Energía Asequible),
+                <text>9</text> (Innovación
+                Industrial),
+                y
+                <text>13</text> (Acción Climática).
+                <br><br>
+                Un académico de corazón, obtuvo su doctorado en <text>energías
+                  renovables</text> en el <text><a href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de
+                    Zúrich</a></text>, en
+                colaboración con el <text><a href="https://psi.ch" target="_blank">Instituto Paul
+                    Scherrer</a></text> en
+                Suiza. Antes de eso, obtuvo un MSc en Ciencias de Materiales en la
+                <text><a href="https://tum.de" target="_blank">Universidad Técnica
+                    de Múnich</a></text> con prácticas en el <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeo</a></text> y en <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemania. Su pasión por la investigación de alto impacto lo ha
+                llevado a un compromiso a largo
+                plazo con
+                líderes de
+                la industria en
+                hidrógeno y pilas de hidrógeno, incluyendo <text>Corporación
+                  Toyota</text> en Japón y el
+                <text>Grupo
+                  Freudenberg</text>
+                en Alemania. En búsqueda de horizontes interdisciplinarios,
+                recibió formación ejecutiva en
+                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge
+                    de Cambridge</a></text>, obteniendo experiencia
+                práctica en una firma de
+                capital de riesgo de divisas duales y en una empresa
+                líder de valores en China.
+              </p>
+
+              <p id="caribeno-content" align="justify" style="display: none;">
+                Actualmente, el Dr. Hong Xu es un <text>Investigador</text> y <text>Ingeniero</text>
+                comprometido,
+                especializado en
+                <text>energías renovables</text> y <text>sistemas e-Power</text>, luchando por alcanzar
+                la excelencia en eficiencia y
+                la neutralidad de carbono en los sectores de la energía y el transporte.
+                En los últimos 10 años, ha
+                trabajado con
+                multinacionales y principales instituciones a lo largo del continente euroasiático, impulsando
+                avances
+                técnicos en
+                las industrias de <text>e-Movilidad</text>, <text>energía limpia</text> y <text>nuevos
+                  materiales</text>
+                con <text><span class="no_of_papers"></span> artículos</text> publicados y <text><span
+                    class="no_of_patents"></span>
+                  patentes</text> concedidas. Junto a sus
+                actividades de ingeniería, él ha
+                colaborado con organizaciones reconocidas, incluyendo el Simposio de San Galo, el
+                Seminario Global de
+                Salzburgo,
+                CITIC Valores Mobiliarios y el Instituto de Oxford para Estudios Energéticos,
+                centrando su atención en
+                el
+                análisis de la <text>economía de la
+                  energía limpia
+                  y la política</text>
+                en Asia y
+                Europa. Como contribuyente proactivo al desarrollo internacional, el Dr. Xu ha sido
+                miembro del Grupo de
+                Expertos (GE) en
+                la <text><a href="https://unece.org/" target="_blank">Comisión Económica de las
+                    Naciones Unidas
+                    para Europa</a></text> (UNECE) en Ginebra, y ha presidido sesiones paralelas
+                en la <text><a href="https://unfccc.int/" target="_blank">Conferencia de las
+                    Naciones Unidas sobre el Cambio
+                    Climático</a></text> (UNFCCC) en Bonn,
+                abogando por los <text><a href="https://sdgs.un.org/goals" target="_blank">Objetivos de Desarrollo
+                    Sostenible
+                    de la ONU</a></text> (ODS) <text>7</text> (Energía Asequible),
+                <text>9</text> (Innovación
+                Industrial),
+                y
+                <text>13</text> (Acción Climática).
+                <br><br>
+                Un académico de corazón, obtuvo su doctorado en <text>energías
+                  renovables</text> en el <text><a href="https://ethz.ch/en.html" target="_blank">Politécnico Federal de
+                    Zúrich</a></text>, en
+                colaboración con el <text><a href="https://psi.ch" target="_blank">Instituto Paul
+                    Scherrer</a></text> en
+                Suiza. Antes de eso, obtuvo un MSc en Ciencias de Materiales en la
+                <text><a href="https://tum.de" target="_blank">Universidad Técnica
+                    de Múnich</a></text> con prácticas en el <text><a href="https://xfel.eu" target="_blank">XFEL
+                    europeo</a></text> y en <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemania. Su pasión por la investigación impactante lo ha
+                llevado a un compromiso a largo
+                plazo con
+                líderes de
+                la industria en
+                hidrógeno y pilas de hidrógeno, incluyendo <text>Corporación
+                  Toyota</text> en Japón y el
+                <text>Grupo
+                  Freudenberg</text>
+                en Alemania. En busca de horizontes interdisciplinares,
+                recibió educación ejecutiva en
+                la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Escuela de Negocios Judge
+                    de Cambridge</a></text>, obteniendo experiencia
+                práctica en una firma de
+                capital de riesgo de divisas duales y en una empresa
+                líder de valores en China.
+              </p>
 
               <p style="text-align:left;">
 
@@ -864,6 +1295,23 @@
       <script type="text/javascript" src="update_info_script.js"></script>
       <script src="js/24jieqi.js"></script>
       <script src="js/video-player.js"></script>
+
+      <script>
+        function changeLanguage() {
+          // 隐藏所有语言的内容
+          var languages = ["spanish-content", "gallego-content", "catalan-content", "euskera-content", "rioplatense-content", "mexicano-content", "caribeno-content"];
+          languages.forEach(function (language) {
+            document.getElementById(language).style.display = "none";
+          });
+
+          // 获取选择的语言值
+          var selectedLanguage = document.getElementById("languages-4").value;
+
+          // 显示所选语言的内容
+          document.getElementById(selectedLanguage + "-content").style.display = "block";
+        }
+      </script>
+
     </div>
 
 </body>

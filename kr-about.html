@@ -362,12 +362,28 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">
+
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               소 개
+              <select id="languages-4" name="languages" style="
+                                        width:auto;
+                                        height: 25px;
+                                        margin-left: 5px;
+                                        border-radius: 0;
+                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                        text-align: center; /* 新增 */
+                                        text-align-last: center; /* 确保选中的选项居中 */
+                                      " onchange="changeLanguage()">
+                <option value="korean">표준 한국어</option>
+                <option value="chinese-korean">한자 한글</option>
+              </select>
             </h1>
+
+
+
             <hr>
             <div class="story">
-              <p align="justify">
+              <p id="korean-content" align="justify" style="display: block;">
                 현재, 쉬홍 (
                 <script
                   id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>
@@ -391,7 +407,7 @@
                 </strong>(저렴한 에너지), <strong>9 </strong>(산업 혁신),
                 및 <strong>13 </strong>(기후 행동)을 옹호했습니다.
 
-              <p align="justify">
+                <br><br>
                 마음으로는 학자이고, <strong>재생 에너지</strong> 분야에서 <strong><a href="https://ethz.ch/en.html" target="_blank">취리히
                     연방
                     공과대학교</a></strong>에서 박사 학위를 취득하였으며, 스위스의 <strong><a href="https://psi.ch" target="_blank">폴 셔러
@@ -408,6 +424,30 @@
                 <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">케임브리지 대학교 경영대학원</a></strong>에서 추가적인 경영 교육을
                 받으며,
                 중국의 이중 통화 벤처 캐피탈 회사와 주요 증권 회사에서 실무 경험을 쌓았습니다.
+              </p>
+
+
+              <p id="chinese-korean-content" align="justify" style="display: none;">
+
+                현재, 徐泓 博士는 研究員 및 엔지니어로서 再生 에너지와 e-電力 시스템을 전문으로 하며, 能源 및 交通 分野에서 效率性과 炭素 中立性을 추구하고 있습니다. 지난 10년 동안 그는
+                유라시아 大陸 전역에서
+                多國籍 기업 및 주요 機構들과 協力하여 e-모빌리티, 淸淨 에너지, 및 新素材 産業의 技術 發展을 이끌어왔습니다. 15개의 論文이 發表되었고 3개의 特許가 賦與되었습니다. 그의 엔지니어링
+                活動과 함께, 許泓 博士는
+                스위스 聖加倫 심포지엄, 오스트리아 薩爾茨堡-韓國高等敎育財團 글로벌 세미나, 中國 中信證券, 및 牛津 能源 研究所와 같은 著名한 組織들과 協力하여 아시아와 유럽의 淸淨 에너지 經濟 및
+                政策 分析에 집중해왔습니다.
+                國際 開發에 積極적으로 貢獻하며, 徐泓 博士는 聯合國 歐洲 經濟 委員會 (UNECE) 에서 專家 그룹 (GE) 委員으로 活動했으며, 聯合國 氣候 變化 會議 (UNFCCC) 에서 竝行
+                세션을
+                主宰하며 聯合國 持続可能한
+                開發 目標 (SDGs) 7 (低廉한 에너지), 9 (産業 革新), 및 13 (氣候 行動)을 擁護했습니다.
+                <br><br>
+                마음으로는 學者이고, 再生 에너지 分野에서 蘇黎世 聯邦 工科大學校에서 博士 學位를 取得하였으며, 스위스의 保羅謝勒 研究所와 協力하였습니다. 그 이전에는, 그는 慕尼黑 工科大學校에서 材料
+                科學 碩士 學位를
+                取得하였으며, 歐洲 엑스레이 自由 電子 레이저 會社 및 英飛凌에서 實習을 遂行했습니다. 影響力 있는 硏究에 대한 그의 熱情은 그를 日本의 豐田 自動車와 獨逸의 弗洛伊登貝格 그룹과 같은
+                水素 및 燃料 電池 産業의 産業
+                리더들과의 長期的인 關係로 이끌었습니다. 學際間 地平을 追求하며, 그는 經營學 碩士를 퀀틱 經營 學校에서 取得하였으며, 劍橋 大學校 經營大學院에서 追加的인 經營 敎育을 받으며, 中國의
+                二重 通貨 벤처 캐피탈 會社와
+                주요 證券 會社에서 實務 經驗을 쌓았습니다.
+
               </p>
 
 
@@ -844,8 +884,26 @@
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+
+
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["korean-content", "chinese-korean-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
+
   </div>
-  </div>
+
 </body>
 
 </html>
