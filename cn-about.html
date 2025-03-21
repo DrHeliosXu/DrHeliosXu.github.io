@@ -69,6 +69,26 @@
       font-size: 1.5em;
     }
 
+
+    /* 网页端竖排 */
+    @media (min-width: 768px) {
+      .mongol-text {
+        writing-mode: vertical-rl;
+        text-align: top;
+        line-height: 1.9;
+        white-space: pre-wrap;
+        font-family: 'Mongolian Baiti', sans-serif;
+      }
+    }
+
+    /* 手机端横排 */
+    @media (max-width: 767px) {
+      .mongol-text {
+        writing-mode: horizontal-tb;
+        text-align: justify;
+      }
+    }
+
     @font-face {
       font-family: 'YiShanBeiZhuanTi';
       src: url('fonts/YiShanBeiZhuanTi.ttf') format('truetype');
@@ -334,7 +354,7 @@
                       text-align: center; /* 新增 */
                       text-align-last: center; /* 确保选中的选项居中 */
                       " onchange="handleChange(this)">
-            <option value="cn.html" selected>中文简体</option>
+            <option value="cn-about.html" selected>中文简体</option>
             <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
             </option>
             <option value="jp.html">日本語</option>
@@ -394,16 +414,17 @@
                   <option value="canton">中/粤语</option>
                   <option value="old-chinese">中/文言文</option>
                   <option value="huoxing">中/火星文</option>
-                  <option value="blind">中/盲文</option>
+                  <!-- <option value="blind">中/盲文</option> -->
+                  <option value="korean">朝/조선어</option>
                   <option value="tibetan">藏/བོད་མི</option>
                   <option value="mongol-traditional">蒙/ᠮᠣᠩᠭᠣᠯ</option>
-                  <option value="mongol-cyrillic">蒙/Монгол</option>
+                  <!-- <option value="mongol-cyrillic">蒙/Монгол</option> -->
                   <option value="uyghur">维/ئۇيغۇر</option>
                   <option value="kazakh">哈/қазақ</option>
                   <option value="tajik">塔/тоҷикӣ</option>
-                  <option value="hmong">苗/Hmong</option>
+                  <!-- <option value="hmong">苗/Hmong</option>
                   <option value="yi">彝/ꆈꌠꁱꂷ</option>
-                  <option value="vahcuengh">壮/Vahcuengh</option>
+                  <option value="vahcuengh">壮/Vahcuengh</option> -->
 
                 </select>
                 <select id="font-selector" name="font-selector" style="
@@ -458,82 +479,35 @@
 
 
               <p id="canton-content" align="justify" style="display: none;">
-                目前，徐泓博士喺德國工業界擔任新能源動力系統專家工程師，致力於實現能源同交通領域效率提升同碳中和。攻讀學位期間同跨國企業及中歐學術機構合作發表論文15餘篇，並獲得3項專利授權。曾經喺聯合國波恩氣候變化大會主持「中國能源轉型同技術創新」主題分會，多次參與聯合國歐洲經濟委員會關於交通同氣候專家組會議以及氫能工作小組會議討論，積極倡導聯合國可持續發展目標（
-                SDGs
-                ）第7項（清潔能源），第9項（產業創新），以及第13項（氣候行動）。同時佢仲擔任10餘本能源同交通領域高引期刊嘅審稿人，瑞士聖加侖國際論壇嘅學術評審。曾獲得奧地利薩爾茨堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、
-                “ 挑戰杯 ” 創業全國銅獎等。
+                而家，徐泓博士喺德國嘅工業界擔任<strong>新能源動力系統</strong>嘅專家工程師，專注於提升<strong>能源同交通</strong>範疇嘅效率，並推動<strong>碳中和</strong>目標。佢喺攻讀學位期間，同跨國企業同中歐學術機構合作發表咗<strong>學術論文<span
+                    class="no_of_papers"></span>篇</strong>，並獲得咗<strong><span
+                    class="no_of_patents"></span>項專利授權</strong>。佢曾經喺<strong><a href="https://unfccc.int/"
+                    target="_blank">聯合國波恩氣候變化大會</a></strong>主持「中國<strong>能源轉型</strong>同技術創新」嘅主題分會，亦多次參與<strong><a
+                    href="https://unece.org/"
+                    target="_blank">聯合國歐洲經濟委員會</a></strong>嘅<strong>交通同氣候專家組</strong>會議以及<strong>氫能工作小組</strong>會議討論，積極提倡聯合國可持續發展目標
+                (SDGs) 入面嘅第7項 (清潔能源)、第9項 (產業創新) 同第13項
+                (氣候行動)。同時，佢仲係十幾本關於能源同交通領域嘅高引用期刊嘅<strong>審稿人</strong>，同瑞士<strong>聖加侖國際論壇</strong>嘅<strong>學術評審</strong>。佢曾獲奧地利<strong><a
+                    href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                    target="_blank">薩爾茨堡國際研討會</a></strong>旅行獎、美國電化學學會邀請同旅行獎、歐盟伊拉斯謨獎學金、仲有「挑戰杯」創業全國銅獎等等。
                 <br><br>
-                佢喺2021年初獲得蘇黎世聯邦理工大學博士學位，本碩博期間學術研究專注於碳中和/新能源領域，曾經喺瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子激光器等國際機構工作/實習，同時同日本豐田汽車、德國英飛凌半導體等跨國公司開展深度研發合作。此外，佢被美國昆藤商學院全獎錄取遠程學習並頒發工商管理碩士學位，曾經獲得桑坦德銀行獎學金去劍橋大學商學院學習「綠色轉型」企管課程，並曾經喺頭部證券研究所（
-                A 股 & 美股）撰寫個股深度報告以及喺雙幣基金（種子輪 ➔ A 輪）從事新能源賽道風投實踐。
+
+                佢喺2021年年頭攞到<strong><a href="https://ethz.ch/en.html"
+                    target="_blank">蘇黎世聯邦理工大學</a></strong>嘅博士學位，本科、碩士同博士期間嘅學術研究專注喺<strong>碳中和/新能源</strong>領域。佢曾經喺<strong><a
+                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></strong>、<strong><a
+                    href="https://www.oxfordenergy.org/authors/hong-xu/"
+                    target="_blank">英國牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
+                    target="_blank">德國慕尼黑工業大學</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
+                    target="_blank">法國巴黎高科路橋大學</a></strong>、<strong><a href="https://xfel.eu"
+                    target="_blank">歐盟自由電子激光器</a></strong>等國際機構工作/實習，亦曾同<strong>日本豐田汽車</strong>、<strong>德國英飛凌半導體</strong>呢啲跨國公司進行深入嘅研發合作。另外，佢被<strong><a
+                    href="https://quantic.edu/mba"
+                    target="_blank">美國昆藤商學院</a></strong>全獎錄取遠程學習，並攞到<strong>工商管理碩士</strong>學位。佢仲獲得桑坦德銀行獎學金去<strong><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></strong>學習「綠色轉型」企管課程，之前亦喺頂尖嘅證券研究所
+                (A股同美股)
+                撰寫個股深度報告，並喺雙幣基金 (種子輪➔A輪) 負責新能源賽道嘅風投實踐。
               </p>
 
 
-              <p id="blind-content" align="justify"
-                style="display: none; font-family: 'Noto Sans Braille', sans-serif; font-size: 1.5em;">
 
-                ⠍⠥⠆⠅⠩⠂⠐ ⠓⠬⠂⠓⠲⠂ ⠃⠢⠂⠱⠆ ⠵⠪⠆
-                ⠙⠢⠂⠛⠕⠂ ⠛⠲⠁⠑⠆⠛⠑⠆ ⠙⠧⠁⠚⠴⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂
-                ⠙⠲⠆⠇⠊⠆ ⠓⠊⠆⠞⠲⠄ ⠌⠻⠁⠛⠫⠁ ⠛⠲⠁⠟⠼⠂⠱⠁⠐
-                ⠌⠆⠇⠊⠆⠬⠂ ⠱⠂⠓⠩⠆ ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁
-                ⠇⠡⠄⠬⠆ ⠓⠜⠆⠇⠬⠆ ⠞⠊⠂⠱⠼⠁ ⠬⠄ ⠞⠧⠆
-                ⠌⠲⠁⠓⠢⠂⠐⠆⠛⠲⠁⠙⠥⠂ ⠓⠾⠂⠺⠆ ⠅⠊⠁⠛⠩⠁ ⠬⠄
-                ⠅⠿⠆⠛⠕⠂ ⠅⠊⠄⠑⠆ ⠛⠊⠂ ⠌⠲⠁⠷⠁ ⠓⠾⠂⠱⠥⠆
-                ⠛⠊⠁⠛⠷⠆ ⠓⠢⠂⠵⠕⠆ ⠋⠔⠁⠃⠜⠄ ⠇⠒⠆⠒⠂ ⠼⠁⠑
-                ⠬⠂ ⠏⠩⠁⠐ ⠃⠡⠆ ⠓⠕⠆⠙⠢⠂ ⠼⠉ ⠓⠭⠆ ⠌⠻⠁⠇⠊⠆
-                ⠱⠷⠆⠅⠯⠂⠐⠆⠉⠼⠂ ⠵⠪⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠃⠢⠁⠴⠁
-                ⠅⠊⠆⠓⠷⠆ ⠃⠩⠆⠓⠿⠆ ⠙⠔⠆⠓⠺⠆ ⠌⠥⠄⠟⠂ ⠘
-                ⠌⠲⠁⠛⠕⠂ ⠝⠼⠂⠯⠂ ⠌⠻⠄⠓⠡⠂ ⠬⠄ ⠛⠊⠆⠱⠥⠆
-                ⠟⠶⠆⠓⠣⠁ ⠘ ⠌⠥⠄⠞⠊⠂ ⠋⠴⠁⠓⠺⠆⠐ ⠙⠕⠁⠉⠆
-                ⠉⠧⠁⠬⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠷⠁⠌⠷⠁ ⠛⠡⠁⠛⠊⠆
-                ⠺⠄⠯⠂⠓⠺⠆ ⠛⠻⠁⠬⠂ ⠛⠜⠁⠞⠲⠁ ⠬⠄ ⠅⠊⠆⠓⠷⠆
-                ⠌⠻⠁⠛⠫⠁ ⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠊⠄⠛⠊⠂ ⠅⠡⠁⠝⠼⠂
-                ⠛⠲⠁⠵⠕⠆ ⠓⠜⠄⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠞⠖⠄⠇⠒⠆⠐
-                ⠛⠊⠁⠛⠊⠂ ⠟⠦⠆⠙⠖⠄ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠅⠢⠄⠟⠂⠓⠬⠆
-                ⠋⠔⠁⠌⠧⠄ ⠍⠥⠆⠃⠜⠁ ⠶⠠⠠⠎⠙⠛⠎⠶ ⠙⠊⠆ ⠼⠛
-                ⠓⠭⠆ ⠶⠅⠡⠁⠛⠑⠂ ⠝⠼⠂⠯⠂⠶ ⠂ ⠙⠊⠆ ⠼⠊
-                ⠓⠭⠆ ⠶⠟⠧⠄⠑⠆ ⠟⠶⠆⠓⠣⠁⠶ ⠂ ⠊⠄⠛⠊⠂ ⠙⠊⠆
-                ⠼⠁⠉ ⠓⠭⠆ ⠶⠅⠊⠆⠓⠷⠆ ⠓⠡⠂⠙⠲⠆⠶ ⠐⠆
-                ⠞⠲⠂⠱⠂ ⠞⠔⠁ ⠓⠪⠂ ⠙⠧⠁⠚⠴⠆ ⠼⠁⠚ ⠬⠂ ⠃⠴⠄
-                ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁ ⠇⠡⠄⠬⠆ ⠛⠖⠁ ⠣⠄
-                ⠅⠊⠁⠅⠧⠁ ⠙⠢ ⠱⠴⠄⠛⠖⠄⠚⠴⠂⠂ ⠚⠺⠆⠱⠆
-                ⠱⠼⠆⠛⠫⠁⠇⠒⠂ ⠛⠕⠂⠛⠊⠆ ⠇⠒⠆⠞⠧⠂ ⠙⠢
-                ⠓⠾⠂⠱⠥⠆ ⠏⠡⠂⠱⠴⠄⠐⠆⠉⠼⠂ ⠓⠕⠆⠙⠢⠂
-                ⠖⠆⠙⠊⠆⠇⠊⠆ ⠎⠔⠆⠗⠄⠉⠂⠃⠖⠄ ⠛⠕⠂⠛⠊⠆
-                ⠩⠂⠞⠖⠄⠓⠺⠆ ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠍⠮⠄⠛⠕⠂
-                ⠙⠩⠆⠓⠿⠆⠓⠾⠂ ⠓⠾⠂⠓⠺⠆ ⠇⠒⠆⠒⠂ ⠜⠁⠅⠡⠄ ⠛⠊⠂
-                ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠷⠁⠍⠼⠂ ⠊⠁⠇⠔⠁⠎⠁⠍⠢⠂
-                ⠛⠭⠄⠓⠾⠂⠛⠣⠁⠈ ⠘ ⠞⠜⠄⠌⠧⠆⠃⠮⠁ ⠘ ⠟⠶⠆⠑⠆
-                <br><br>
-
-                ⠅⠯⠂ ⠛⠕⠂ ⠞⠲⠂⠛⠭⠄ ⠙⠼⠄⠐⠆
-                ⠞⠔⠁ ⠬⠂ ⠼⠃⠚⠃⠁⠝⠩⠂ ⠟⠥⠁ ⠓⠕⠆⠙⠢⠂
-                ⠎⠥⠁⠇⠊⠂⠱⠆ ⠇⠩⠂⠃⠦⠁ ⠇⠊⠄⠛⠲⠁ ⠙⠔⠆⠓⠾⠂
-                ⠃⠢⠂⠱⠆ ⠓⠾⠂⠺⠆⠂ ⠃⠴⠄⠱⠕⠆ ⠃⠢⠂ ⠅⠊⠁⠛⠩⠁
-                ⠓⠾⠂⠱⠥⠆ ⠩⠂⠛⠳⠁ ⠌⠻⠁⠌⠥⠆ ⠬⠂ ⠞⠧⠆⠌⠲⠁⠓⠢⠂
-                ⠼⠌ ⠓⠣⠁⠝⠼⠂⠯⠂ ⠇⠡⠄⠬⠆⠐ ⠉⠼⠂ ⠵⠪⠆ ⠚⠺⠆⠱⠆
-                ⠃⠖⠄⠇⠕⠂ ⠓⠑⠆⠗⠄ ⠩⠂⠛⠳⠁⠯⠆⠈ ⠡⠁⠛⠕⠂
-                ⠝⠳⠂⠛⠣⠁ ⠝⠼⠂⠯⠂ ⠩⠂⠛⠳⠁⠎⠕⠄⠈ ⠙⠢⠂⠛⠕⠂
-                ⠍⠥⠆⠝⠊⠂⠓⠮⠁ ⠛⠲⠁⠑⠆ ⠙⠔⠆⠓⠾⠂⠈ ⠋⠔⠄⠛⠕⠂
-                ⠃⠔⠁⠇⠊⠂ ⠛⠖⠁⠅⠢⠁ ⠇⠥⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂⠈
-                ⠷⠁⠍⠼⠂ ⠵⠆⠳⠂ ⠙⠩⠆⠵⠄ ⠛⠊⠁⠛⠶⠁⠅⠊⠆ ⠙⠼⠄
-                ⠛⠕⠂⠛⠊⠆ ⠛⠊⠁⠛⠷⠆ ⠛⠲⠁⠵⠕⠆ ⠼⠌ ⠱⠂⠓⠊⠂⠐
-                ⠞⠲⠂⠱⠂ ⠬⠄ ⠚⠆⠃⠴⠄ ⠋⠼⠁⠞⠩⠂ ⠅⠊⠆⠟⠢⠁⠈
-                ⠙⠢⠂⠛⠕⠂ ⠡⠁⠋⠮⠁⠇⠡⠂ ⠃⠧⠆⠙⠖⠄⠞⠊⠄ ⠙⠼⠄
-                ⠅⠿⠆⠛⠕⠂ ⠛⠲⠁⠎⠁ ⠅⠪⠁⠌⠧⠄ ⠱⠴⠁⠙⠥⠆ ⠩⠂⠋⠔⠁
-                ⠓⠢⠂⠵⠕⠆⠐⠆⠉⠄⠽⠆ ⠐ ⠞⠔⠁ ⠃⠮⠆ ⠍⠮⠄⠛⠕⠂
-                ⠅⠒⠁⠞⠼⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠅⠯⠂ ⠛⠭⠄ ⠇⠥⠆⠅⠬⠄
-                ⠯⠄⠟⠼⠂ ⠓⠾⠂⠓⠊⠂ ⠃⠡⠆ ⠃⠧⠁⠋⠔⠁ ⠛⠲⠁⠱⠦⠁
-                ⠛⠻⠄⠇⠊⠄ ⠱⠕⠆⠱⠆ ⠓⠾⠂⠺⠆⠐ ⠉⠼⠂ ⠓⠕⠆
-                ⠎⠦⠁⠞⠧⠄⠙⠢⠂ ⠣⠂⠓⠦⠂ ⠛⠭⠄⠓⠾⠂⠛⠣⠁ ⠋⠥⠆
-                ⠛⠩⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠓⠾⠂⠓⠊⠂ ⠘
-                ⠇⠬⠆⠎⠢⠆ ⠌⠻⠄⠓⠡⠂ ⠘ ⠅⠊⠄⠛⠻⠄ ⠅⠢⠆⠟⠼⠂⠐
-                ⠃⠡⠆ ⠉⠼⠂ ⠵⠪⠆ ⠞⠷⠂⠃⠥⠆ ⠌⠼⠆⠅⠯⠆
-                ⠩⠂⠛⠳⠁⠎⠕⠄ ⠶⠠⠁ ⠛⠥⠄ ⠯ ⠍⠮⠄⠛⠥⠄⠶
-                ⠌⠻⠆⠓⠑⠄ ⠛⠢⠆⠛⠥⠄ ⠱⠴⠁⠙⠥⠆ ⠃⠖⠆⠛⠖⠆
-                ⠊⠄⠛⠊⠂ ⠵⠪⠆ ⠱⠶⠁ ⠃⠊⠆ ⠛⠊⠁⠛⠣⠁ ⠶⠌⠲⠄⠵
-                ⠇⠒⠂ ⠶ ⠉⠲⠂⠱⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂ ⠎⠪⠆⠙⠖⠆
-                ⠋⠼⠁ ⠞⠷⠂ ⠱⠂⠛⠩⠆⠐⠆
-              </p>
 
               <p id="huoxing-content" align="justify" style="display: none;">
                 朩湔，俆泓博仕茬徳國笁鄴鎅泹姙噺能羱憅劦係統抟傢笁珵溮，臸劦纡實哯能羱玙茭嗵領域效卛諟圱玙湠狆啝。糼渎敩莅剘簡玙跨國佱鄴彶狆瓯敩朮僟媾匼莋潑錶囵妏15悇萹，並镬嘚3頙抟悡涭權。嶒茬聅匼國菠慁氣糇變囮汏浍炷歭“狆國能羱啭侀玙技朮創噺”炷趧汾浍，哆佽傪玙聅匼國瓯詶經哜逶園浍関纡茭嗵玙氣糇抟傢蒩浍议姒彶氢能笁莋尒蒩浍议討囵，積极倡导聅匼國妸歭續潑蹍朩摽
@@ -548,25 +522,52 @@
 
 
               <p id="old-chinese-content" align="justify" style="display: none;">
-                今者，徐泓博士仕於德意志工業界，任新能源動力系統專家工程師之職，矢志於能源與交通領域效率增進及碳中和之實現。彼於攻讀學位之時，與跨國巨擘及中歐學術機構攜手，共著論文十五餘篇，斬獲專利授權三項。曾於聯合國波昂氣候變遷大會，執「中國能源轉型與技術創新」之主題分會牛耳；屢赴聯合國歐洲經濟委員會交通與氣候專家組會議及氫能工作小組之議，積極倡導聯合國永續發展目標之第七項（清潔能源）、第九項（產業創新）及第十三項（氣候行動）。此外，彼亦擔綱能源與交通領域高被引期刊十餘本之審稿人，瑞士聖加侖國際論壇之學術評審。榮譽加身，如奧地利薩爾斯堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、「挑戰盃」創業大賽全國銅獎等，皆為見證。
+                今者，徐泓博士仕於德意志工業界，居<strong>新能源動力系統</strong>專家工程師之職，篤志於<strong>能源與交通</strong>之效率提升，暨<strong>碳中和</strong>之宏願。彼於攻讀學位之際，曾與跨國巨擘及中歐學術機構協力，共著<strong>論文十五餘篇</strong>，獲<strong>三項專利授權</strong>。嘗於<strong><a
+                    href="https://unfccc.int/"
+                    target="_blank">聯合國波昂氣候變遷大會</a></strong>主「中國<strong>能源轉型</strong>與技術創新」分會議題，執牛耳而引領風潮；亦屢參<strong><a
+                    href="https://unece.org/"
+                    target="_blank">聯合國歐洲經濟委員會</a></strong>交通與氣候<strong>專家組</strong>會議及<strong>氫能工作小組</strong>之議，倡聯合國永續發展目標：其第七項（清潔能源）、第九項（產業創新）、第十三項（氣候行動），勤力不懈。兼之，彼亦為十餘本<strong>能源與交通</strong>高被引期刊<strong>審稿人</strong>，並任瑞士<strong>聖加侖國際論壇</strong>之<strong>學術評審</strong>。累積殊榮，諸如奧地利<strong><a
+                    href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                    target="_blank">薩爾斯堡國際研討會</a></strong>旅行獎、美國<strong>電化學學會</strong>論文邀請及旅行獎、歐盟<strong>伊拉斯謨獎學金</strong>、「挑戰盃」創業大賽全國銅獎，皆名副其實。
                 <br><br>
-                徐君於二零二一年初，榮膺蘇黎世聯邦理工大學博士學位。自本科至博士，其學術研究皆聚焦於碳中和/新能源之域。彼曾在瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子雷射等國際機構研習/實習，並與日本豐田汽車、德國英飛凌半導體等跨國公司進行深度研發之合作。更甚者，彼獲美國昆藤商學院全獎，遠距修習並榮獲工商管理碩士學位；曾蒙桑坦德銀行獎學金之資助，赴劍橋大學商學院研習「綠色轉型」之工商管理課程。彼亦曾在頭部證券研究所（涵蓋A股與美股），撰寫個股深度報告；於雙幣基金（自種子輪至A輪）中，投身新能源賽道之風投實踐。
+                新冠元年春，歲在辛丑，徐君榮膺<strong><a href="https://ethz.ch/en.html"
+                    target="_blank">蘇黎世聯邦理工大學</a></strong>博士學位。本科至博士，皆專注於<strong>碳中和/新能源</strong>之研。曾於<strong><a
+                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></strong>、<strong><a
+                    href="https://www.oxfordenergy.org/authors/hong-xu/"
+                    target="_blank">英國牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
+                    target="_blank">德國慕尼黑工業大學</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
+                    target="_blank">法國巴黎高科路橋大學</a></strong>、<strong><a href="https://xfel.eu"
+                    target="_blank">歐盟自由電子雷射</a></strong>等國際機構深造或實習，與<strong>日本豐田汽車</strong>、<strong>德國英飛凌半導體</strong>等跨國企業，共探研發奧義。更甚者，君獲<strong><a
+                    href="https://quantic.edu/mba"
+                    target="_blank">美國昆藤商學院</a></strong>全額獎學金，修<strong>工商管理碩士</strong>，遠距學習而成，復蒙<strong>桑坦德銀行獎學金</strong>資助，赴<strong><a
+                    href="https://www.jbs.cam.ac.uk/"
+                    target="_blank">劍橋大學商學院</a></strong>修讀「綠色轉型」工商課程。又嘗於頭部<strong>證券研究所</strong>撰寫A股及美股個股深度報告，並於雙幣基金（自種子輪至A輪）投身新能源賽道之風投實務，盡展專長。
               </p>
 
-              <p id="old-chinese-xiaozhuan-content" align="justify" style="display: none;">
-                今者，徐泓博士仕于德意志工业界，任新能源动力系统专家工程师之职，矢志于能源与交通领域效率增进及碳中和之实现。彼于攻读学位之时，与跨国巨擘及中欧学术机构携手，共著论文十五余篇，斩获专利授权三项。曾于联合国波昂气候变迁大会，执「中国能源转型与技术创新」之主题分会牛耳；屡赴联合国欧洲经济委员会交通与气候专家组会议及氢能工作小组之议，积极倡导联合国永续发展目标之第七项（清洁能源）、第九项（产业创新）及第十三项（气候行动）。此外，彼亦担纲能源与交通领域高被引期刊十余本之审稿人，瑞士圣加仑国际论坛之学术评审。荣誉加身，如奥地利萨尔斯堡国际研讨会旅行奖、美国电化学学会论文邀请及旅行奖、欧盟伊拉斯谟奖学金、「挑战杯」创业大赛全国铜奖等，皆为见证。
+              <p id="korean-content" align="justify" style="display: none;">
+
+                현재, 徐泓 博士는 研究員 및 엔지니어로서 再生 에너지와 e-電力 시스템을 전문으로 하며, 能源 및 交通 分野에서 效率性과 炭素 中立性을 추구하고 있습니다. 지난 10년 동안 그는
+                유라시아 大陸 전역에서
+                多國籍 기업 및 주요 機構들과 協力하여 e-모빌리티, 淸淨 에너지, 및 新素材 産業의 技術 發展을 이끌어왔습니다. 15개의 論文이 發表되었고 3개의 特許가 賦與되었습니다. 그의 엔지니어링
+                活動과 함께, 許泓 博士는
+                스위스 聖加倫 심포지엄, 오스트리아 薩爾茨堡-韓國高等敎育財團 글로벌 세미나, 中國 中信證券, 및 牛津 能源 研究所와 같은 著名한 組織들과 協力하여 아시아와 유럽의 淸淨 에너지 經濟 및
+                政策 分析에 집중해왔습니다.
+                國際 開發에 積極적으로 貢獻하며, 徐泓 博士는 聯合國 歐洲 經濟 委員會 (UNECE)에서 專家 그룹 (GE) 委員으로 活動했으며, 聯合國 氣候 變化 會議 (UNFCCC)에서 竝行 세션을
+                主宰하며 聯合國 持続可能한
+                開發 目標 (SDGs) 7 (低廉한 에너지), 9 (産業 革新), 및 13 (氣候 行動)을 擁護했습니다.
                 <br><br>
-                徐君于二零二一年初，荣膺苏黎世联邦理工大学博士学位。自本科至博士，其学术研究皆聚焦于碳中和/新能源之域。彼曾在瑞士保罗谢尔研究院、英国牛津能源研究所、德国慕尼黑工业大学、法国巴黎高科路桥大学、欧盟自由电子雷射等国际机构研习/实习，并与日本丰田汽车、德国英飞凌半导体等跨国公司进行深度研发之合作。更甚者，彼获美国昆藤商学院全奖，远距修习并荣获工商管理硕士学位；曾蒙桑坦德银行奖学金之资助，赴剑桥大学商学院研习「绿色转型」之工商管理课程。彼亦曾在头部证券研究所（涵盖A股与美股），撰写个股深度报告；于双币基金（自种子轮至A轮）中，投身新能源赛道之风投实践。
+                마음으로는 學者이고, 再生 에너지 分野에서 蘇黎世 聯邦 工科大學校에서 博士 學位를 取得하였으며, 스위스의 保羅謝勒 研究所와 協力하였습니다. 그 이전에는, 그는 慕尼黑 工科大學校에서 材料
+                科學 碩士 學位를
+                取得하였으며, 歐洲 엑스레이 自由 電子 레이저 會社 및 英飛凌에서 實習을 遂行했습니다. 影響力 있는 硏究에 대한 그의 熱情은 그를 日本의 豐田 自動車와 獨逸의 弗洛伊登貝格 그룹과 같은
+                水素 및 燃料 電池 産業의 産業
+                리더들과의 長期的인 關係로 이끌었습니다. 學際間 地平을 追求하며, 그는 經營學 碩士를 퀀틱 經營 學校에서 取得하였으며, 劍橋 大學校 經營大學院에서 追加的인 經營 敎育을 받으며, 中國의
+                二重 通貨 벤처 캐피탈 會社와
+                주요 證券 會社에서 實務 經驗을 쌓았습니다.
+
               </p>
 
-              <p id="old-chinese-jiaguwen-content" align="justify" style="display: none;">
-                今者，徐泓博士仕於德意志工業界，任新能源動力系統專家工程師之職，矢志於能源與交通領域效率增進及碳中和之實現。彼於攻讀學位之時，與跨國巨擘及中歐學術機構攜手，共著論文十五餘篇，斬獲專利授權三項。曾於聯合國波昂氣候變遷大會，執「中國能源轉型與技術創新」之主題分會牛耳；屢赴聯合國歐洲經濟委員會交通與氣候專家組會議及氫能工作小組之議，積極倡導聯合國永續發展目標之第七項（清潔能源）、第九項（產業創新）及第十三項（氣候行動）。此外，彼亦擔綱能源與交通領域高被引期刊十餘本之審稿人，瑞士聖加侖國際論壇之學術評審。榮譽加身，如奧地利薩爾斯堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、「挑戰盃」創業大賽全國銅獎等，皆為見證。
-                <br><br>
-                徐君於二零二一年初，榮膺蘇黎世聯邦理工大學博士學位。自本科至博士，其學術研究皆聚焦於碳中和/新能源之域。彼曾在瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子雷射等國際機構研習/實習，並與日本豐田汽車、德國英飛凌半導體等跨國公司進行深度研發之合作。更甚者，彼獲美國昆藤商學院全獎，遠距修習並榮獲工商管理碩士學位；曾蒙桑坦德銀行獎學金之資助，赴劍橋大學商學院研習「綠色轉型」之工商管理課程。彼亦曾在頭部證券研究所（涵蓋A股與美股），撰寫個股深度報告；於雙幣基金（自種子輪至A輪）中，投身新能源賽道之風投實踐。
-              </p>
-
-
-              <p id="tibetan-content" align="justify" style="display: none;">
+              <p id="tibetan-content"
+                style="font-family: 'Tibetan Machine Uni', sans-serif; font-size: 20px; line-height: 1.8; display: none; text-align: justify;">
                 ད་ལྟའི་ཆར་སྨན་པ་ཞོ་ཧོང་གིས་འཇར་མན་གྱི་བཟོ་ལས་ཁང་ནང་ནུས་ཁུངས་གློག་ཤུགས་མ་ལག་གསར་པའི་ཆེད་ལས་བཟོ་སྐྲུན་པ་ཞིག་ཏུ་ལས་ཀ་བྱེད་བཞིན་ཡོད་ཅིང་།
                 མཐོ་རིམ་སློབ་མའི་སློབ་སྦྱོང་བྱེད་རིང་རྒྱལ་ཁབ་མང་པོའི་ཁེ་ལས་དང་ཀྲུང་གོ་དང་ཡོ་རོབ་ཀྱི་སློབ་གསོའི་ལས་ཁུངས་དང་མཉམ་འབྲེལ་ཐོག་རྩོམ་ཡིག་15ལྷག་ཙམ་པར་སྐྲུན་བྱས་པ་དང་བདག་དབང་གི་ཆོག་མཆན་3ཐོབ་ཡོད།
                 ཁོང་གིས་མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་བོན་གནམ་གཤིས་འགྱུར་ལྡོག་ཚོགས་ཆེན་ཐོག་"ཀྲུང་གོའི་ནུས་ཁུངས་སྒྱུར་བཅོས་དང་ཚན་རྩལ་གསར་གཏོད་"ཞེས་པའི་བརྗོད་གཞིའི་ཚོགས་འདུ་གཙོ་སྐྱོང་གནང་བ་དང་།
@@ -628,14 +629,6 @@
 
               </p>
 
-
-              <p id="vahcuengh-content" align="justify" style="display: none;">
-                壮文翻译中...
-              </p>
-
-              <p id="yi-content" align="justify" style="display: none;">
-                彝文翻译中...
-              </p>
 
 
               <p id="tajik-content" align="justify" style="display: none;">
@@ -798,8 +791,8 @@
                 <br><br>
                 Тэрээр 2021 оны эхээр <strong><a href="https://ethz.ch/en.html" target="_blank">Цюрихийн Холбооны
                     Технологийн Их
-                    Сургууль</a></strong}-д докторын зэрэг хамгаалсан бөгөөд, докторын болон магистрийн зэрэг хамгаалж
-                    байх хугацаандаа судалгаагаа <strong>нямкаар/шинэ эрчим хүч</strong> салбарын чиглэлээр явуулсан.
+                    Сургууль</a></strong>-д докторын зэрэг хамгаалсан бөгөөд, докторын болон магистрийн зэрэг хамгаалж
+                байх хугацаандаа судалгаагаа <strong>нямкаар/шинэ эрчим хүч</strong> салбарын чиглэлээр явуулсан.
                 Тэрээр <strong><a href="https://psi.ch" target="_blank">Швейцарийн Паул Шерр Институт</a></strong>,
                 <strong><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Их Британийн Оксфордын
                     Эрчим хүчний
@@ -815,16 +808,28 @@
                 хөгжүүлэлтийн хамтын ажиллагаа явуулсан. Түүнчлэн тэрээр <strong><a href="https://quantic.edu/mba"
                     target="_blank">АНУ-ын Квантын Бизнесийн Сургуулиас</a></strong> бүрэн тэтгэлэгээр олон улсын онлайн
                 боловсролын
-                сургалтыг хийж, <strong>Бизнесийн Удирдлагын Магистр</strong}-ийн зэрэг хамгаалсан. Мөн түүний
-                    байгуулсан "Грийн Революци" цогц сургалт болон хөрөнгө оруулалтын чиглэлээр <strong><a
+                сургалтыг хийж, <strong>Бизнесийн Удирдлагын Магистр</strong>-ийн зэрэг хамгаалсан. Мөн түүний
+                байгуулсан "Грийн Революци" цогц сургалт болон хөрөнгө оруулалтын чиглэлээр <strong><a
                     href="https://www.jbs.cam.ac.uk/" target="_blank">Камбриджийн Бизнесийн Сургууль</a></strong> дээр
                 "Ногоон
                 шилжилт" сэдвээр боловсрол эзэмшсэн.
               </p>
 
+              <p id="vahcuengh-content" align="justify" style="display: none;">
+                壮文翻译内容建设中...
+              </p>
 
-              <p id="mongol-traditional-content"
-                style="font-family: 'Mongolian Baiti', sans-serif; writing-mode: vertical-rl; text-align: top; line-height: 1.9; white-space: pre-wrap; display: none;">
+              <p id="yi-content" align="justify" style="display: none;">
+                彝文翻译内容建设中...
+              </p>
+
+              <p id="hmong-content" align="justify" style="display: none;">
+
+                苗文翻译内容建设中...
+              </p>
+
+
+              <p id="mongol-traditional-content" class="mongol-text" style="display: none;">
                 Оᠳᠣᠣᠭᠢᠶᠨ ᠪᠠᠶᠳᠯᠠᠠᠷ᠂ ᠳᠣᠺᠲᠣᠷ сюᠶ хᠣᠨᠭ гᠧᠷᠮᠠᠨ ᠳᠠᠬь ᠠᠵ ᠦᠶᠯᠳᠸᠡᠷᠢᠶᠨ ᠰᠠᠯᠪᠠᠷᠲ ᠱᠢᠨᠡ ᠡᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ ᠬᠥᠳᠥᠯᠭᠦᠦᠷᠢᠶᠨ
                 ᠰᠢᠰᠲᠧᠮᠢᠶᠨ ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠡᠨ ᠢᠨᠵᠧᠨᠧᠷᠡᠡᠷ ᠠᠵᠢᠯᠯᠠᠵ᠂ ᠡᠷᠴᠢᠮ ᠬᠦᠴ ᠪᠠ ᠲᠡᠡᠸᠡᠷ ᠰᠠᠯᠪᠠᠷыᠨ ᠦᠷ ᠠᠱᠢᠭᠲᠠᠶ ᠪᠠᠶᠳᠯыᠭ ᠳᠡᠡᠱᠯᠦᠦᠯᠡᠬ
                 ᠪᠣᠯᠣᠨ ᠨяᠮᠺᠠᠠᠷ ᠦᠶᠯ ᠠᠵᠢᠯᠯᠠᠭᠠᠠ яᠸᠤᠤᠯᠵ ᠪᠠᠶᠨᠠ. Сᠤᠳᠠᠯᠭᠠᠠᠨы ᠦᠧᠳᠡᠡ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠺᠣᠮᠫᠠᠨᠢᠤᠳ ᠪᠣᠯᠣᠨ ᠲᠥᠸ еᠸᠷᠣᠫыᠨ
@@ -847,51 +852,75 @@
                 Тᠦᠦᠨᠴᠯᠡᠨ ᠲᠡᠷᠡᠡᠷ ану᠊ыᠨ кᠸᠠᠨᠲыᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯᠢᠠᠰ ᠪᠦᠷᠡᠨ ᠲᠡᠲᠭᠡᠯᠡᠭᠡᠡᠷ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠣᠨᠯᠠᠶᠨ ᠪᠣᠯᠣᠸᠰᠷᠣᠯыᠨ
                 ᠰᠤᠷᠭᠠᠯᠲыᠭ ᠬᠢᠶᠵ᠂ бᠢᠽᠨᠧᠰᠢᠶᠨ уᠳᠢᠷᠳᠯᠠᠭыᠨ мᠠᠭᠢᠰᠲᠷкᠠᠮᠪᠷᠢᠳᠵᠢᠶᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯь ᠳᠡᠡᠷ "нᠣᠭᠣᠣᠨ ᠱᠢᠯᠵᠢᠯᠲ" ᠰᠡᠳᠸᠡᠡᠷ
                 ᠪᠣᠯᠣᠸᠰᠷᠣᠯ ᠡᠽᠡᠮᠱᠰᠡᠨ.
-
                 <hr>
               </p>
 
-              <p id="hmong-content" align="justify" style="display: none;">
-                Tam sim no, Dr. Xu Hong ua haujlwm ua tus kws tshaj lij engineer hauv kev siv hluav taws xob tshiab hauv
-                kev lag luam
-                German, cog lus kom ua tiav kev txhim kho kev ua haujlwm zoo thiab cov pa roj carbon nruab nrab hauv lub
-                zog thiab kev
-                thauj mus los. Thaum nws kawm tiav qib siab, nws tau luam tawm ntau dua 15 cov ntawv hauv kev koom tes
-                nrog ntau lub
-                tuam txhab thiab CEIBS cov tsev kawm ntawv, thiab tau txais peb daim ntawv tso cai patent. Nws tau tuav
-                lub zog hloov
-                pauv "Tuam Tshoj lub ntsiab lus" Nws kuj tseem ua tus saib xyuas ntau dua 10 cov ntawv xov xwm tshaj
-                tawm hauv lub zog
-                thiab kev thauj mus los, thiab tus kws tshuaj xyuas kev kawm rau St. Gallen International Forum hauv
-                Switzerland. Nws
-                tau yeej Salzburg International Symposium Travel Award hauv Austria, American Electrochemical Society
-                Paper Invitation
-                thiab Travel Award, EU Erasmus Scholarship, "Challenge Cup" National Entrepreneurship Bronze Award,
-                thiab lwm yam.
-                <br><br>
-                Nws tau txais nws Ph.D. los ntawm ETH Zurich thaum ntxov 2021. Thaum nws kawm tiav undergraduate,
-                master's thiab
-                doctoral kev tshawb fawb, nws txoj kev tshawb fawb tau tsom mus rau cov haujlwm ntawm carbon neutrality
-                / tshiab zog Nws
-                tau ua haujlwm / haujlwm hauv cov tsev kawm ntawv thoob ntiaj teb xws li Paul Scherrer Institute hauv
-                Switzerland,
-                Oxford Institute for Energy Studies nyob rau hauv lub tebchaws United Kingdom ntawm Paris, Lub Tsev Kawm
-                Ntawv Qib Siab
-                University of Paris, Lub Tsev Kawm Ntawv Qib Siab thiab Kev Kawm Txuj Ci. tau ua qhov tob R & D kev koom
-                tes nrog ntau
-                lub tuam txhab xws li Toyota Motor ntawm Nyiv thiab Infineon Semiconductor ntawm lub teb chaws Yelemees.
-                Tsis tas li
-                ntawd, nws tau txais mus rau Kundeng Lub Tsev Kawm Lag Luam hauv Tebchaws Meskas nrog rau tag nrho cov
-                nyiaj pabcuam rau
-                kev kawm nyob deb thiab tau txais Master of Business Administration degree Nws tau txais nyiaj pabcuam
-                los ntawm
-                Santander Bank los kawm "Green Transformation" kev tswj hwm kev lag luam hauv Cambridge University
-                Business School Nws
-                tau sau cov lus qhia tob rau ntawm tus kheej cov khoom lag luam ntawm kev lag luam kev lag luam hauv kev
-                tshawb fawb
-                thiab kev ua lag luam tshiab hauv Asmeskas. nyiaj txiag dual (cov noob puag ncig ➔ Ib puag ncig).
-              </p>
+              <p id="blind-content" align="justify"
+                style="display: none; font-family: 'Noto Sans Braille', sans-serif; font-size: 1.5em;">
 
+                ⠍⠥⠆⠅⠩⠂⠐ ⠓⠬⠂⠓⠲⠂ ⠃⠢⠂⠱⠆ ⠵⠪⠆
+                ⠙⠢⠂⠛⠕⠂ ⠛⠲⠁⠑⠆⠛⠑⠆ ⠙⠧⠁⠚⠴⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂
+                ⠙⠲⠆⠇⠊⠆ ⠓⠊⠆⠞⠲⠄ ⠌⠻⠁⠛⠫⠁ ⠛⠲⠁⠟⠼⠂⠱⠁⠐
+                ⠌⠆⠇⠊⠆⠬⠂ ⠱⠂⠓⠩⠆ ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁
+                ⠇⠡⠄⠬⠆ ⠓⠜⠆⠇⠬⠆ ⠞⠊⠂⠱⠼⠁ ⠬⠄ ⠞⠧⠆
+                ⠌⠲⠁⠓⠢⠂⠐⠆⠛⠲⠁⠙⠥⠂ ⠓⠾⠂⠺⠆ ⠅⠊⠁⠛⠩⠁ ⠬⠄
+                ⠅⠿⠆⠛⠕⠂ ⠅⠊⠄⠑⠆ ⠛⠊⠂ ⠌⠲⠁⠷⠁ ⠓⠾⠂⠱⠥⠆
+                ⠛⠊⠁⠛⠷⠆ ⠓⠢⠂⠵⠕⠆ ⠋⠔⠁⠃⠜⠄ ⠇⠒⠆⠒⠂ ⠼⠁⠑
+                ⠬⠂ ⠏⠩⠁⠐ ⠃⠡⠆ ⠓⠕⠆⠙⠢⠂ ⠼⠉ ⠓⠭⠆ ⠌⠻⠁⠇⠊⠆
+                ⠱⠷⠆⠅⠯⠂⠐⠆⠉⠼⠂ ⠵⠪⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠃⠢⠁⠴⠁
+                ⠅⠊⠆⠓⠷⠆ ⠃⠩⠆⠓⠿⠆ ⠙⠔⠆⠓⠺⠆ ⠌⠥⠄⠟⠂ ⠘
+                ⠌⠲⠁⠛⠕⠂ ⠝⠼⠂⠯⠂ ⠌⠻⠄⠓⠡⠂ ⠬⠄ ⠛⠊⠆⠱⠥⠆
+                ⠟⠶⠆⠓⠣⠁ ⠘ ⠌⠥⠄⠞⠊⠂ ⠋⠴⠁⠓⠺⠆⠐ ⠙⠕⠁⠉⠆
+                ⠉⠧⠁⠬⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠷⠁⠌⠷⠁ ⠛⠡⠁⠛⠊⠆
+                ⠺⠄⠯⠂⠓⠺⠆ ⠛⠻⠁⠬⠂ ⠛⠜⠁⠞⠲⠁ ⠬⠄ ⠅⠊⠆⠓⠷⠆
+                ⠌⠻⠁⠛⠫⠁ ⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠊⠄⠛⠊⠂ ⠅⠡⠁⠝⠼⠂
+                ⠛⠲⠁⠵⠕⠆ ⠓⠜⠄⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠞⠖⠄⠇⠒⠆⠐
+                ⠛⠊⠁⠛⠊⠂ ⠟⠦⠆⠙⠖⠄ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠅⠢⠄⠟⠂⠓⠬⠆
+                ⠋⠔⠁⠌⠧⠄ ⠍⠥⠆⠃⠜⠁ ⠶⠠⠠⠎⠙⠛⠎⠶ ⠙⠊⠆ ⠼⠛
+                ⠓⠭⠆ ⠶⠅⠡⠁⠛⠑⠂ ⠝⠼⠂⠯⠂⠶ ⠂ ⠙⠊⠆ ⠼⠊
+                ⠓⠭⠆ ⠶⠟⠧⠄⠑⠆ ⠟⠶⠆⠓⠣⠁⠶ ⠂ ⠊⠄⠛⠊⠂ ⠙⠊⠆
+                ⠼⠁⠉ ⠓⠭⠆ ⠶⠅⠊⠆⠓⠷⠆ ⠓⠡⠂⠙⠲⠆⠶ ⠐⠆
+                ⠞⠲⠂⠱⠂ ⠞⠔⠁ ⠓⠪⠂ ⠙⠧⠁⠚⠴⠆ ⠼⠁⠚ ⠬⠂ ⠃⠴⠄
+                ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁ ⠇⠡⠄⠬⠆ ⠛⠖⠁ ⠣⠄
+                ⠅⠊⠁⠅⠧⠁ ⠙⠢ ⠱⠴⠄⠛⠖⠄⠚⠴⠂⠂ ⠚⠺⠆⠱⠆
+                ⠱⠼⠆⠛⠫⠁⠇⠒⠂ ⠛⠕⠂⠛⠊⠆ ⠇⠒⠆⠞⠧⠂ ⠙⠢
+                ⠓⠾⠂⠱⠥⠆ ⠏⠡⠂⠱⠴⠄⠐⠆⠉⠼⠂ ⠓⠕⠆⠙⠢⠂
+                ⠖⠆⠙⠊⠆⠇⠊⠆ ⠎⠔⠆⠗⠄⠉⠂⠃⠖⠄ ⠛⠕⠂⠛⠊⠆
+                ⠩⠂⠞⠖⠄⠓⠺⠆ ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠍⠮⠄⠛⠕⠂
+                ⠙⠩⠆⠓⠿⠆⠓⠾⠂ ⠓⠾⠂⠓⠺⠆ ⠇⠒⠆⠒⠂ ⠜⠁⠅⠡⠄ ⠛⠊⠂
+                ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠷⠁⠍⠼⠂ ⠊⠁⠇⠔⠁⠎⠁⠍⠢⠂
+                ⠛⠭⠄⠓⠾⠂⠛⠣⠁⠈ ⠘ ⠞⠜⠄⠌⠧⠆⠃⠮⠁ ⠘ ⠟⠶⠆⠑⠆
+                <br><br>
+
+                ⠅⠯⠂ ⠛⠕⠂ ⠞⠲⠂⠛⠭⠄ ⠙⠼⠄⠐⠆
+                ⠞⠔⠁ ⠬⠂ ⠼⠃⠚⠃⠁⠝⠩⠂ ⠟⠥⠁ ⠓⠕⠆⠙⠢⠂
+                ⠎⠥⠁⠇⠊⠂⠱⠆ ⠇⠩⠂⠃⠦⠁ ⠇⠊⠄⠛⠲⠁ ⠙⠔⠆⠓⠾⠂
+                ⠃⠢⠂⠱⠆ ⠓⠾⠂⠺⠆⠂ ⠃⠴⠄⠱⠕⠆ ⠃⠢⠂ ⠅⠊⠁⠛⠩⠁
+                ⠓⠾⠂⠱⠥⠆ ⠩⠂⠛⠳⠁ ⠌⠻⠁⠌⠥⠆ ⠬⠂ ⠞⠧⠆⠌⠲⠁⠓⠢⠂
+                ⠼⠌ ⠓⠣⠁⠝⠼⠂⠯⠂ ⠇⠡⠄⠬⠆⠐ ⠉⠼⠂ ⠵⠪⠆ ⠚⠺⠆⠱⠆
+                ⠃⠖⠄⠇⠕⠂ ⠓⠑⠆⠗⠄ ⠩⠂⠛⠳⠁⠯⠆⠈ ⠡⠁⠛⠕⠂
+                ⠝⠳⠂⠛⠣⠁ ⠝⠼⠂⠯⠂ ⠩⠂⠛⠳⠁⠎⠕⠄⠈ ⠙⠢⠂⠛⠕⠂
+                ⠍⠥⠆⠝⠊⠂⠓⠮⠁ ⠛⠲⠁⠑⠆ ⠙⠔⠆⠓⠾⠂⠈ ⠋⠔⠄⠛⠕⠂
+                ⠃⠔⠁⠇⠊⠂ ⠛⠖⠁⠅⠢⠁ ⠇⠥⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂⠈
+                ⠷⠁⠍⠼⠂ ⠵⠆⠳⠂ ⠙⠩⠆⠵⠄ ⠛⠊⠁⠛⠶⠁⠅⠊⠆ ⠙⠼⠄
+                ⠛⠕⠂⠛⠊⠆ ⠛⠊⠁⠛⠷⠆ ⠛⠲⠁⠵⠕⠆ ⠼⠌ ⠱⠂⠓⠊⠂⠐
+                ⠞⠲⠂⠱⠂ ⠬⠄ ⠚⠆⠃⠴⠄ ⠋⠼⠁⠞⠩⠂ ⠅⠊⠆⠟⠢⠁⠈
+                ⠙⠢⠂⠛⠕⠂ ⠡⠁⠋⠮⠁⠇⠡⠂ ⠃⠧⠆⠙⠖⠄⠞⠊⠄ ⠙⠼⠄
+                ⠅⠿⠆⠛⠕⠂ ⠛⠲⠁⠎⠁ ⠅⠪⠁⠌⠧⠄ ⠱⠴⠁⠙⠥⠆ ⠩⠂⠋⠔⠁
+                ⠓⠢⠂⠵⠕⠆⠐⠆⠉⠄⠽⠆ ⠐ ⠞⠔⠁ ⠃⠮⠆ ⠍⠮⠄⠛⠕⠂
+                ⠅⠒⠁⠞⠼⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠅⠯⠂ ⠛⠭⠄ ⠇⠥⠆⠅⠬⠄
+                ⠯⠄⠟⠼⠂ ⠓⠾⠂⠓⠊⠂ ⠃⠡⠆ ⠃⠧⠁⠋⠔⠁ ⠛⠲⠁⠱⠦⠁
+                ⠛⠻⠄⠇⠊⠄ ⠱⠕⠆⠱⠆ ⠓⠾⠂⠺⠆⠐ ⠉⠼⠂ ⠓⠕⠆
+                ⠎⠦⠁⠞⠧⠄⠙⠢⠂ ⠣⠂⠓⠦⠂ ⠛⠭⠄⠓⠾⠂⠛⠣⠁ ⠋⠥⠆
+                ⠛⠩⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠓⠾⠂⠓⠊⠂ ⠘
+                ⠇⠬⠆⠎⠢⠆ ⠌⠻⠄⠓⠡⠂ ⠘ ⠅⠊⠄⠛⠻⠄ ⠅⠢⠆⠟⠼⠂⠐
+                ⠃⠡⠆ ⠉⠼⠂ ⠵⠪⠆ ⠞⠷⠂⠃⠥⠆ ⠌⠼⠆⠅⠯⠆
+                ⠩⠂⠛⠳⠁⠎⠕⠄ ⠶⠠⠁ ⠛⠥⠄ ⠯ ⠍⠮⠄⠛⠥⠄⠶
+                ⠌⠻⠆⠓⠑⠄ ⠛⠢⠆⠛⠥⠄ ⠱⠴⠁⠙⠥⠆ ⠃⠖⠆⠛⠖⠆
+                ⠊⠄⠛⠊⠂ ⠵⠪⠆ ⠱⠶⠁ ⠃⠊⠆ ⠛⠊⠁⠛⠣⠁ ⠶⠌⠲⠄⠵
+                ⠇⠒⠂ ⠶ ⠉⠲⠂⠱⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂ ⠎⠪⠆⠙⠖⠆
+                ⠋⠼⠁ ⠞⠷⠂ ⠱⠂⠛⠩⠆⠐⠆
+              </p>
 
               <p style="text-align:left;">
                 PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
@@ -1364,6 +1393,7 @@
     <script src="js/24jieqi.js"></script>
     <script src="js/nongli.js"></script>
     <script src="js/video-player.js"></script>
+
     <script>
       function changeLanguage() {
         var selectedLanguage = document.getElementById('languages-4').value;
@@ -1386,37 +1416,34 @@
       document.getElementById('font-selector').addEventListener('change', function () {
         const selectedFont = this.value;
         const selectedSize = this.options[this.selectedIndex].getAttribute('data-size'); // 获取对应的字体大小
-        const content = document.getElementById('chinese-content');
+        const contentIds = ["chinese-content", "canton-content", "old-chinese-content"]; // 需要应用的内容ID数组
 
-        // 根据字体选择进行预处理
-        if (selectedFont === "YiShanBeiZhuanTi") {
-          convertToSimplified(); // 转换为简体字
-        }
-        else if (selectedFont === "HanYiXiaoLiShuFan") {
-          convertToSimplified(); // 转换为简体字
-        }
-        else if (selectedFont === "HanYiShouJinShuFan") {
-          convertToSimplified(); // 转换为简体字
-        }
-        else if (selectedFont === "ShangShouHongZhiShouXieTi") {
-          convertToSimplified(); // 转换为简体字
-        }
-        else if (selectedFont === "KangXiZiDianTi") {
-          convertToTraditional(); // 转换为繁体字
-        }
-        else if (selectedFont === "YanZhenQingFaShu") {
-          convertToSimplified(); // 转换为简体字
-        }
+        // 遍历所有内容元素
+        contentIds.forEach(id => {
+          const content = document.getElementById(id);
+          if (!content) return; // 如果该ID的元素不存在，跳过
 
-        // 如果选择了默认字体
-        if (selectedFont === "default") {
-          content.style.fontFamily = "";  // 恢复到网页的默认字体
-          content.style.fontSize = "";    // 恢复到网页的默认字体大小
-        } else {
-          // 设置所选字体和字体大小
-          content.style.fontFamily = selectedFont;
-          content.style.fontSize = selectedSize;
-        }
+          // 根据字体选择进行预处理
+          if (selectedFont === "YiShanBeiZhuanTi" ||
+            selectedFont === "HanYiXiaoLiShuFan" ||
+            selectedFont === "HanYiShouJinShuFan" ||
+            selectedFont === "ShangShouHongZhiShouXieTi" ||
+            selectedFont === "YanZhenQingFaShu") {
+            convertToSimplified(); // 转换为简体字
+          } else if (selectedFont === "KangXiZiDianTi") {
+            convertToTraditional(); // 转换为繁体字
+          }
+
+          // 如果选择了默认字体
+          if (selectedFont === "default") {
+            content.style.fontFamily = "";  // 恢复到网页的默认字体
+            content.style.fontSize = "";    // 恢复到网页的默认字体大小
+          } else {
+            // 设置所选字体和字体大小
+            content.style.fontFamily = selectedFont;
+            content.style.fontSize = selectedSize;
+          }
+        });
       });
 
       // 简体字转换
@@ -1434,6 +1461,33 @@
       }
     </script>
 
+
+    <!-- JavaScript -->
+    <script>
+      function updateFontSelector() {
+        const languageSelector = document.getElementById("languages-4");
+        const fontSelector = document.getElementById("font-selector");
+
+        // 获取当前选中的语言值
+        const selectedLanguage = languageSelector.value;
+
+        // 激活字体选择器的语言列表
+        const validLanguages = ["chinese", "canton", "old-chinese", "huoxing"];
+
+        // 检查选中的语言是否在有效列表中
+        if (validLanguages.includes(selectedLanguage)) {
+          // 激活字体选择器
+          fontSelector.disabled = false;
+        } else {
+          // 禁用字体选择器并重置为默认值
+          fontSelector.disabled = true;
+          fontSelector.value = "default";
+        }
+      }
+
+      // 页面加载时初始化字体选择器状态
+      window.onload = updateFontSelector;
+    </script>
   </div>
 </body>
 

@@ -553,12 +553,15 @@ const languages2Element = document.getElementById('languages-2');
 const languages3Element = document.getElementById('languages-3');
 const languages4Element = document.getElementById('languages-4');
 
+const fontSelector = document.getElementById('fontSelector');
+
 adjustWidth(contentListElement);
 adjustWidth(contentList2Element);
 adjustWidth(languagesElement);
 adjustWidth(languages2Element);
 adjustWidth(languages3Element);
 adjustWidth(languages4Element);
+adjustWidth(fontSelector);
 
 contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
 contentList2Element.addEventListener('change', () => adjustWidth(contentList2Element));
@@ -566,6 +569,7 @@ languagesElement.addEventListener('change', () => adjustWidth(languagesElement))
 languages2Element.addEventListener('change', () => adjustWidth(languages2Element));
 languages3Element.addEventListener('change', () => adjustWidth(languages3Element));
 languages4Element.addEventListener('change', () => adjustWidth(languages4Element));
+fontSelector.addEventListener('change', () => adjustWidth(fontSelector));
 
 window.addEventListener('resize', () => {
     adjustWidth(contentListElement);
@@ -574,6 +578,7 @@ window.addEventListener('resize', () => {
 	adjustWidth(languages2Element);
 	adjustWidth(languages3Element);
 	adjustWidth(languages4Element);
+	adjustWidth(fontSelector);
 });
 
 
