@@ -215,23 +215,7 @@
                   <!-- <option value="ru-about.html">Русский</option>
                   <option value="ar-about.html">اللغة العربية</option> -->
                 </select>
-                <select id="languages-4" name="languages" style="
-                                                                                                          width:auto;height: 25px;
-                                                                                                          margin-left: 5px;
-                                                                                                          border-radius: 0;
-                                                                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                                                                                          text-align: center; /* 新增 */
-                                                                                                          text-align-last: center; /* 确保选中的选项居中 */
-                                                                                                        "
-                  onchange="changeLanguage()">
-                  <option value="hochdeutsch" selected>Hochdeutsch</option>
-                  <option value="bairisch">Bairisch</option>
-                  <option value="zueritueetsch">Züritüütsch</option>
-                  <option value="wienerisch">Wienerisch</option>
-                  <option value="niederdeutsch">Niederdeutsch</option>
-                  <option value="dutch">Dutch</option>
-                  <option value="luxembourgish">Lëtzebuergesch</option>
-                </select>
+
               </span>
             </div>
           </div>
@@ -344,8 +328,28 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Biographie</h1>
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Biographie
+              <select id="languages-4" name="languages"
+                style="
+                                                                                                                          width:auto;height: 25px;
+                                                                                                                          margin-left: 5px;
+                                                                                                                          border-radius: 0;
+                                                                                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                          text-align: center; /* 新增 */
+                                                                                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                                                                                        " onchange="changeLanguage()">
+                <option value="hochdeutsch" selected>Hochdeutsch</option>
+                <option value="bairisch">Bairisch</option>
+                <option value="zueritueetsch">Züritüütsch</option>
+                <option value="wienerisch">Wienerisch</option>
+                <option value="niederdeutsch">Niederdeutsch</option>
+                <option value="dutch">Dutch</option>
+                <option value="luxembourgish">Lëtzebuergesch</option>
+              </select>
 
+
+            </h1>
             <hr />
             <div class="story">
               <p id="hochdeutsch-content" align="justify" style="display: block;">
