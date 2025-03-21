@@ -30,6 +30,8 @@
   <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link href="https://cdn.jsdelivr.net/gh/ruedap/braille-font/css/braille.css" rel="stylesheet">
+
 
   <style>
     body {
@@ -60,6 +62,42 @@
       /* 字体大小 */
       font-family: Arial, sans-serif;
       /* 字体字形，使用无衬线字体 */
+    }
+
+    #blind-content {
+      font-family: 'Braille Regular', sans-serif;
+      font-size: 1.5em;
+    }
+
+    @font-face {
+      font-family: 'YiShanBeiZhuanTi';
+      src: url('fonts/YiShanBeiZhuanTi.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HanYiShouJinShuFan';
+      src: url('fonts/HanYiShouJinShuFan.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'KangXiZiDianTi';
+      src: url('fonts/KangXiZiDianTi.otf') format('opentype');
+    }
+
+
+    @font-face {
+      font-family: 'HanYiXiaoLiShuFan';
+      src: url('fonts/HanYiXiaoLiShuFan.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'ShangShouHongZhiShouXieTi';
+      src: url('fonts/ShangShouHongZhiShouXieTi.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'YanZhenQingFaShu';
+      src: url('fonts/YanZhenQingFaShu.ttf') format('truetype');
     }
   </style>
   <style>
@@ -235,6 +273,25 @@
                   <option value="ru-about.html">Русский</option>
                   <option value="ar-about.html">اللغة العربية</option>
                 </select>
+                <select id="languages-4" name="languages" style="width: 110px;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                                                    text-align-last: center; /* 确保选中的选项居中 */"
+                  onchange="changeLanguage()">
+                  <option value="chinese" selected>中文 • 汉语</option>
+                  <option value="canton">中文 • 粤语</option>
+                  <option value="old-chinese">中文 • 文言文</option>
+                  <option value="old-chinese-xiaozhuan">中文 • 小篆</option>
+                  <option value="old-chinese-jiaguwen">中文 • 甲骨文</option>
+                  <option value="huoxing">中文 • 火星文</option>
+                  <option value="blind">中文 • 盲文</option>
+                  <option value="tibetan">藏文 • བོད་མི</option>
+                  <option value="mongol-traditional">蒙文 • ᠮᠣᠩᠭᠣᠯ</option>
+                  <option value="mongol-cyrillic">蒙文 • Монгол</option>
+                  <option value="uyghur">维文 • ئۇيغۇر</option>
+                  <option value="kazakh">哈语 • қазақ</option>
+                  <option value="vahcuengh">壮文 • Vahcuengh</option>
+                  <option value="yi">彝文 • ꆈꌠꁱꂷ</option>
+                  <option value="hmong">苗文 • Hmong</option>
+                </select>
               </span>
 
             </div>
@@ -345,17 +402,31 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               简 介
+
+              <select id="font-selector" name="font-selector" style="
+                                          width: auto;height: 25px;
+                                          margin-left: 5px;
+                                          border-radius: 0;
+                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                          text-align: center; /* 新增 */
+                                          text-align-last: center; /* 确保选中的选项居中 */
+                                          ">
+                <option value="default" data-size="auto" selected>默认字体</option>
+                <option value="YiShanBeiZhuanTi" data-size="26px">小篆</option>
+                <option value="HanYiXiaoLiShuFan" data-size="24px">隶书</option>
+                <option value="HanYiShouJinShuFan" data-size="26px">瘦金体</option>
+                <option value="YanZhenQingFaShu" data-size="22px">颜真卿法书</option>
+                <option value="KangXiZiDianTi" data-size="20px">康熙字典</option>
+                <option value="ShangShouHongZhiShouXieTi" data-size="24px">手写体</option>
+
+              </select>
             </h1>
             <hr>
-            <!-- 
-            <h4 class="mb-4">
-              简 介
-            </h4> -->
 
             <div class="story">
-              <p align="justify">
+              <p id="chinese-content" align="justify" style="display: block;">
 
                 目前，徐泓博士在德国工业界担任<strong>新能源动力系统</strong>专家工程师，致力于实现<strong>能源与交通</strong>领域效率提升与<strong>碳中和</strong>。攻读学位期间与跨国企业及中欧学术机构合作发表<strong>论文<span
                     class="no_of_papers"></span>余篇</strong>，并获得<strong><span
@@ -367,10 +438,8 @@
                 瑞士<strong>圣加仑国际论坛</strong>的<strong>学术评审</strong>。曾获得奥地利<strong><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
                     target="_blank">萨尔茨堡国际研讨会</a></strong>旅行奖、<strong>美国电化学学会论文邀请</strong>及旅行奖、欧盟伊拉斯谟奖学金、“挑战杯”创业全国铜奖等。
-              </p>
+                <br><br>
 
-
-              <p align="justify">
                 他于2021年初获得<strong><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></strong>博士学位,
                 本硕博期间学术研究专注于<strong>碳中和/新能源</strong>领域，曾在<strong><a href="https://psi.ch"
                     target="_blank">瑞士保罗谢尔研究院</a></strong>、<strong><a
@@ -384,6 +453,382 @@
                     href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学商学院</a></strong>学习“绿色转型”企管课程，并曾在头部证券研究所
                 (A股&美股)
                 撰写个股深度报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实践。
+              </p>
+
+
+              <p id="canton-content" align="justify" style="display: none;">
+                目前，徐泓博士喺德國工業界擔任新能源動力系統專家工程師，致力於實現能源同交通領域效率提升同碳中和。攻讀學位期間同跨國企業及中歐學術機構合作發表論文15餘篇，並獲得3項專利授權。曾經喺聯合國波恩氣候變化大會主持「中國能源轉型同技術創新」主題分會，多次參與聯合國歐洲經濟委員會關於交通同氣候專家組會議以及氫能工作小組會議討論，積極倡導聯合國可持續發展目標（
+                SDGs
+                ）第7項（清潔能源），第9項（產業創新），以及第13項（氣候行動）。同時佢仲擔任10餘本能源同交通領域高引期刊嘅審稿人，瑞士聖加侖國際論壇嘅學術評審。曾獲得奧地利薩爾茨堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、
+                “ 挑戰杯 ” 創業全國銅獎等。
+                <br><br>
+                佢喺2021年初獲得蘇黎世聯邦理工大學博士學位，本碩博期間學術研究專注於碳中和/新能源領域，曾經喺瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子激光器等國際機構工作/實習，同時同日本豐田汽車、德國英飛凌半導體等跨國公司開展深度研發合作。此外，佢被美國昆藤商學院全獎錄取遠程學習並頒發工商管理碩士學位，曾經獲得桑坦德銀行獎學金去劍橋大學商學院學習「綠色轉型」企管課程，並曾經喺頭部證券研究所（
+                A 股 & 美股）撰寫個股深度報告以及喺雙幣基金（種子輪 ➔ A 輪）從事新能源賽道風投實踐。
+              </p>
+
+
+              <p id="blind-content" align="justify"
+                style="display: none; font-family: 'Noto Sans Braille', sans-serif; font-size: 1.5em;">
+
+                ⠍⠥⠆⠅⠩⠂⠐ ⠓⠬⠂⠓⠲⠂ ⠃⠢⠂⠱⠆ ⠵⠪⠆
+                ⠙⠢⠂⠛⠕⠂ ⠛⠲⠁⠑⠆⠛⠑⠆ ⠙⠧⠁⠚⠴⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂
+                ⠙⠲⠆⠇⠊⠆ ⠓⠊⠆⠞⠲⠄ ⠌⠻⠁⠛⠫⠁ ⠛⠲⠁⠟⠼⠂⠱⠁⠐
+                ⠌⠆⠇⠊⠆⠬⠂ ⠱⠂⠓⠩⠆ ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁
+                ⠇⠡⠄⠬⠆ ⠓⠜⠆⠇⠬⠆ ⠞⠊⠂⠱⠼⠁ ⠬⠄ ⠞⠧⠆
+                ⠌⠲⠁⠓⠢⠂⠐⠆⠛⠲⠁⠙⠥⠂ ⠓⠾⠂⠺⠆ ⠅⠊⠁⠛⠩⠁ ⠬⠄
+                ⠅⠿⠆⠛⠕⠂ ⠅⠊⠄⠑⠆ ⠛⠊⠂ ⠌⠲⠁⠷⠁ ⠓⠾⠂⠱⠥⠆
+                ⠛⠊⠁⠛⠷⠆ ⠓⠢⠂⠵⠕⠆ ⠋⠔⠁⠃⠜⠄ ⠇⠒⠆⠒⠂ ⠼⠁⠑
+                ⠬⠂ ⠏⠩⠁⠐ ⠃⠡⠆ ⠓⠕⠆⠙⠢⠂ ⠼⠉ ⠓⠭⠆ ⠌⠻⠁⠇⠊⠆
+                ⠱⠷⠆⠅⠯⠂⠐⠆⠉⠼⠂ ⠵⠪⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠃⠢⠁⠴⠁
+                ⠅⠊⠆⠓⠷⠆ ⠃⠩⠆⠓⠿⠆ ⠙⠔⠆⠓⠺⠆ ⠌⠥⠄⠟⠂ ⠘
+                ⠌⠲⠁⠛⠕⠂ ⠝⠼⠂⠯⠂ ⠌⠻⠄⠓⠡⠂ ⠬⠄ ⠛⠊⠆⠱⠥⠆
+                ⠟⠶⠆⠓⠣⠁ ⠘ ⠌⠥⠄⠞⠊⠂ ⠋⠴⠁⠓⠺⠆⠐ ⠙⠕⠁⠉⠆
+                ⠉⠧⠁⠬⠆ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠷⠁⠌⠷⠁ ⠛⠡⠁⠛⠊⠆
+                ⠺⠄⠯⠂⠓⠺⠆ ⠛⠻⠁⠬⠂ ⠛⠜⠁⠞⠲⠁ ⠬⠄ ⠅⠊⠆⠓⠷⠆
+                ⠌⠻⠁⠛⠫⠁ ⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠊⠄⠛⠊⠂ ⠅⠡⠁⠝⠼⠂
+                ⠛⠲⠁⠵⠕⠆ ⠓⠜⠄⠵⠥⠄ ⠓⠺⠆⠊⠆ ⠞⠖⠄⠇⠒⠆⠐
+                ⠛⠊⠁⠛⠊⠂ ⠟⠦⠆⠙⠖⠄ ⠇⠩⠂⠓⠢⠂⠛⠕⠂ ⠅⠢⠄⠟⠂⠓⠬⠆
+                ⠋⠔⠁⠌⠧⠄ ⠍⠥⠆⠃⠜⠁ ⠶⠠⠠⠎⠙⠛⠎⠶ ⠙⠊⠆ ⠼⠛
+                ⠓⠭⠆ ⠶⠅⠡⠁⠛⠑⠂ ⠝⠼⠂⠯⠂⠶ ⠂ ⠙⠊⠆ ⠼⠊
+                ⠓⠭⠆ ⠶⠟⠧⠄⠑⠆ ⠟⠶⠆⠓⠣⠁⠶ ⠂ ⠊⠄⠛⠊⠂ ⠙⠊⠆
+                ⠼⠁⠉ ⠓⠭⠆ ⠶⠅⠊⠆⠓⠷⠆ ⠓⠡⠂⠙⠲⠆⠶ ⠐⠆
+                ⠞⠲⠂⠱⠂ ⠞⠔⠁ ⠓⠪⠂ ⠙⠧⠁⠚⠴⠆ ⠼⠁⠚ ⠬⠂ ⠃⠴⠄
+                ⠝⠼⠂⠯⠂ ⠬⠄ ⠛⠜⠁⠞⠲⠁ ⠇⠡⠄⠬⠆ ⠛⠖⠁ ⠣⠄
+                ⠅⠊⠁⠅⠧⠁ ⠙⠢ ⠱⠴⠄⠛⠖⠄⠚⠴⠂⠂ ⠚⠺⠆⠱⠆
+                ⠱⠼⠆⠛⠫⠁⠇⠒⠂ ⠛⠕⠂⠛⠊⠆ ⠇⠒⠆⠞⠧⠂ ⠙⠢
+                ⠓⠾⠂⠱⠥⠆ ⠏⠡⠂⠱⠴⠄⠐⠆⠉⠼⠂ ⠓⠕⠆⠙⠢⠂
+                ⠖⠆⠙⠊⠆⠇⠊⠆ ⠎⠔⠆⠗⠄⠉⠂⠃⠖⠄ ⠛⠕⠂⠛⠊⠆
+                ⠩⠂⠞⠖⠄⠓⠺⠆ ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠍⠮⠄⠛⠕⠂
+                ⠙⠩⠆⠓⠿⠆⠓⠾⠂ ⠓⠾⠂⠓⠺⠆ ⠇⠒⠆⠒⠂ ⠜⠁⠅⠡⠄ ⠛⠊⠂
+                ⠇⠬⠄⠓⠡⠂ ⠛⠭⠄⠈ ⠷⠁⠍⠼⠂ ⠊⠁⠇⠔⠁⠎⠁⠍⠢⠂
+                ⠛⠭⠄⠓⠾⠂⠛⠣⠁⠈ ⠘ ⠞⠜⠄⠌⠧⠆⠃⠮⠁ ⠘ ⠟⠶⠆⠑⠆
+                <br><br>
+
+                ⠅⠯⠂ ⠛⠕⠂ ⠞⠲⠂⠛⠭⠄ ⠙⠼⠄⠐⠆
+                ⠞⠔⠁ ⠬⠂ ⠼⠃⠚⠃⠁⠝⠩⠂ ⠟⠥⠁ ⠓⠕⠆⠙⠢⠂
+                ⠎⠥⠁⠇⠊⠂⠱⠆ ⠇⠩⠂⠃⠦⠁ ⠇⠊⠄⠛⠲⠁ ⠙⠔⠆⠓⠾⠂
+                ⠃⠢⠂⠱⠆ ⠓⠾⠂⠺⠆⠂ ⠃⠴⠄⠱⠕⠆ ⠃⠢⠂ ⠅⠊⠁⠛⠩⠁
+                ⠓⠾⠂⠱⠥⠆ ⠩⠂⠛⠳⠁ ⠌⠻⠁⠌⠥⠆ ⠬⠂ ⠞⠧⠆⠌⠲⠁⠓⠢⠂
+                ⠼⠌ ⠓⠣⠁⠝⠼⠂⠯⠂ ⠇⠡⠄⠬⠆⠐ ⠉⠼⠂ ⠵⠪⠆ ⠚⠺⠆⠱⠆
+                ⠃⠖⠄⠇⠕⠂ ⠓⠑⠆⠗⠄ ⠩⠂⠛⠳⠁⠯⠆⠈ ⠡⠁⠛⠕⠂
+                ⠝⠳⠂⠛⠣⠁ ⠝⠼⠂⠯⠂ ⠩⠂⠛⠳⠁⠎⠕⠄⠈ ⠙⠢⠂⠛⠕⠂
+                ⠍⠥⠆⠝⠊⠂⠓⠮⠁ ⠛⠲⠁⠑⠆ ⠙⠔⠆⠓⠾⠂⠈ ⠋⠔⠄⠛⠕⠂
+                ⠃⠔⠁⠇⠊⠂ ⠛⠖⠁⠅⠢⠁ ⠇⠥⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂⠈
+                ⠷⠁⠍⠼⠂ ⠵⠆⠳⠂ ⠙⠩⠆⠵⠄ ⠛⠊⠁⠛⠶⠁⠅⠊⠆ ⠙⠼⠄
+                ⠛⠕⠂⠛⠊⠆ ⠛⠊⠁⠛⠷⠆ ⠛⠲⠁⠵⠕⠆ ⠼⠌ ⠱⠂⠓⠊⠂⠐
+                ⠞⠲⠂⠱⠂ ⠬⠄ ⠚⠆⠃⠴⠄ ⠋⠼⠁⠞⠩⠂ ⠅⠊⠆⠟⠢⠁⠈
+                ⠙⠢⠂⠛⠕⠂ ⠡⠁⠋⠮⠁⠇⠡⠂ ⠃⠧⠆⠙⠖⠄⠞⠊⠄ ⠙⠼⠄
+                ⠅⠿⠆⠛⠕⠂ ⠛⠲⠁⠎⠁ ⠅⠪⠁⠌⠧⠄ ⠱⠴⠁⠙⠥⠆ ⠩⠂⠋⠔⠁
+                ⠓⠢⠂⠵⠕⠆⠐⠆⠉⠄⠽⠆ ⠐ ⠞⠔⠁ ⠃⠮⠆ ⠍⠮⠄⠛⠕⠂
+                ⠅⠒⠁⠞⠼⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠅⠯⠂ ⠛⠭⠄ ⠇⠥⠆⠅⠬⠄
+                ⠯⠄⠟⠼⠂ ⠓⠾⠂⠓⠊⠂ ⠃⠡⠆ ⠃⠧⠁⠋⠔⠁ ⠛⠲⠁⠱⠦⠁
+                ⠛⠻⠄⠇⠊⠄ ⠱⠕⠆⠱⠆ ⠓⠾⠂⠺⠆⠐ ⠉⠼⠂ ⠓⠕⠆
+                ⠎⠦⠁⠞⠧⠄⠙⠢⠂ ⠣⠂⠓⠦⠂ ⠛⠭⠄⠓⠾⠂⠛⠣⠁ ⠋⠥⠆
+                ⠛⠩⠆⠅⠜⠂ ⠙⠔⠆⠓⠾⠂ ⠱⠦⠁⠓⠾⠂⠯⠆ ⠓⠾⠂⠓⠊⠂ ⠘
+                ⠇⠬⠆⠎⠢⠆ ⠌⠻⠄⠓⠡⠂ ⠘ ⠅⠊⠄⠛⠻⠄ ⠅⠢⠆⠟⠼⠂⠐
+                ⠃⠡⠆ ⠉⠼⠂ ⠵⠪⠆ ⠞⠷⠂⠃⠥⠆ ⠌⠼⠆⠅⠯⠆
+                ⠩⠂⠛⠳⠁⠎⠕⠄ ⠶⠠⠁ ⠛⠥⠄ ⠯ ⠍⠮⠄⠛⠥⠄⠶
+                ⠌⠻⠆⠓⠑⠄ ⠛⠢⠆⠛⠥⠄ ⠱⠴⠁⠙⠥⠆ ⠃⠖⠆⠛⠖⠆
+                ⠊⠄⠛⠊⠂ ⠵⠪⠆ ⠱⠶⠁ ⠃⠊⠆ ⠛⠊⠁⠛⠣⠁ ⠶⠌⠲⠄⠵
+                ⠇⠒⠂ ⠶ ⠉⠲⠂⠱⠆ ⠓⠣⠁ ⠝⠼⠂⠯⠂ ⠎⠪⠆⠙⠖⠆
+                ⠋⠼⠁ ⠞⠷⠂ ⠱⠂⠛⠩⠆⠐⠆
+              </p>
+
+              <p id="huoxing-content" align="justify" style="display: none;">
+                朩湔，俆泓博仕茬徳國笁鄴鎅泹姙噺能羱憅劦係統抟傢笁珵溮，臸劦纡實哯能羱玙茭嗵領域效卛諟圱玙湠狆啝。糼渎敩莅剘簡玙跨國佱鄴彶狆瓯敩朮僟媾匼莋潑錶囵妏15悇萹，並镬嘚3頙抟悡涭權。嶒茬聅匼國菠慁氣糇變囮汏浍炷歭“狆國能羱啭侀玙技朮創噺”炷趧汾浍，哆佽傪玙聅匼國瓯詶經哜逶園浍関纡茭嗵玙氣糇抟傢蒩浍议姒彶氢能笁莋尒蒩浍议討囵，積极倡导聅匼國妸歭續潑蹍朩摽
+                (SDGs) 苐7頙 (凊洁能羱), 苐9頙 (浐鄴創噺), 姒彶苐13頙 (氣糇垳憅)。哃溡彵還泹姙10悇夲能羱玙茭嗵領域滈吲剘刋哋谉鎬亾,
+                瑞仕聖咖仑國漈囵墵哋敩朮评谉。嶒镬嘚奧哋悡蕯尒垐堡國漈妍討浍膂垳奨、羙國電囮敩敩浍囵妏撽埥彶膂垳奨、瓯擝吚菈凘謨奨敩唫、“狣戰柸”創鄴洤國恫奨等。
+                <br><br>
+                彵纡2021姩初镬嘚蘇黎迣聅綁理笁汏敩博仕敩莅,
+                夲碩博剘簡敩朮妍究抟炷纡湠狆啝/噺能羱領域，嶒茬瑞仕湺囉塮尒妍究阮、渶國犇珒能羱妍究葰、徳國慕胒嫼笁鄴汏敩、琺國妑黎滈萪蕗喬汏敩、瓯擝洎甴電ふ噭洸噐等國漈僟媾笁莋/實習，哃溡玙ㄖ夲仹甶汽車、徳國渶飛夌柈导軆等跨國厷呞閞蹍堔喥妍潑匼莋。泚迯，彵被羙國崐駦啇敩阮洤奨淥掫逺珵敩習並頒潑笁啇涫理碩仕敩莅，嶒镬鎟钽徳檭垳奨敩唫赴劍喬汏敩啇敩阮敩習“淥脃啭侀”佱涫錁珵，並嶒茬頭蔀姃券妍究葰
+                (A骰&羙骰) 撰冩個骰堔喥蕔哠姒彶茬叒币樭唫 (種ふ囵➔A囵) 苁倳噺能羱噻檤颩投實践。
+
+              </p>
+
+
+              <p id="old-chinese-content" align="justify" style="display: none;">
+                今者，徐泓博士仕於德意志工業界，任新能源動力系統專家工程師之職，矢志於能源與交通領域效率增進及碳中和之實現。彼於攻讀學位之時，與跨國巨擘及中歐學術機構攜手，共著論文十五餘篇，斬獲專利授權三項。曾於聯合國波昂氣候變遷大會，執「中國能源轉型與技術創新」之主題分會牛耳；屢赴聯合國歐洲經濟委員會交通與氣候專家組會議及氫能工作小組之議，積極倡導聯合國永續發展目標之第七項（清潔能源）、第九項（產業創新）及第十三項（氣候行動）。此外，彼亦擔綱能源與交通領域高被引期刊十餘本之審稿人，瑞士聖加侖國際論壇之學術評審。榮譽加身，如奧地利薩爾斯堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、「挑戰盃」創業大賽全國銅獎等，皆為見證。
+                <br><br>
+                徐君於二零二一年初，榮膺蘇黎世聯邦理工大學博士學位。自本科至博士，其學術研究皆聚焦於碳中和/新能源之域。彼曾在瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子雷射等國際機構研習/實習，並與日本豐田汽車、德國英飛凌半導體等跨國公司進行深度研發之合作。更甚者，彼獲美國昆藤商學院全獎，遠距修習並榮獲工商管理碩士學位；曾蒙桑坦德銀行獎學金之資助，赴劍橋大學商學院研習「綠色轉型」之工商管理課程。彼亦曾在頭部證券研究所（涵蓋A股與美股），撰寫個股深度報告；於雙幣基金（自種子輪至A輪）中，投身新能源賽道之風投實踐。
+              </p>
+
+              <p id="old-chinese-xiaozhuan-content" align="justify" style="display: none;">
+                今者，徐泓博士仕于德意志工业界，任新能源动力系统专家工程师之职，矢志于能源与交通领域效率增进及碳中和之实现。彼于攻读学位之时，与跨国巨擘及中欧学术机构携手，共著论文十五余篇，斩获专利授权三项。曾于联合国波昂气候变迁大会，执「中国能源转型与技术创新」之主题分会牛耳；屡赴联合国欧洲经济委员会交通与气候专家组会议及氢能工作小组之议，积极倡导联合国永续发展目标之第七项（清洁能源）、第九项（产业创新）及第十三项（气候行动）。此外，彼亦担纲能源与交通领域高被引期刊十余本之审稿人，瑞士圣加仑国际论坛之学术评审。荣誉加身，如奥地利萨尔斯堡国际研讨会旅行奖、美国电化学学会论文邀请及旅行奖、欧盟伊拉斯谟奖学金、「挑战杯」创业大赛全国铜奖等，皆为见证。
+                <br><br>
+                徐君于二零二一年初，荣膺苏黎世联邦理工大学博士学位。自本科至博士，其学术研究皆聚焦于碳中和/新能源之域。彼曾在瑞士保罗谢尔研究院、英国牛津能源研究所、德国慕尼黑工业大学、法国巴黎高科路桥大学、欧盟自由电子雷射等国际机构研习/实习，并与日本丰田汽车、德国英飞凌半导体等跨国公司进行深度研发之合作。更甚者，彼获美国昆藤商学院全奖，远距修习并荣获工商管理硕士学位；曾蒙桑坦德银行奖学金之资助，赴剑桥大学商学院研习「绿色转型」之工商管理课程。彼亦曾在头部证券研究所（涵盖A股与美股），撰写个股深度报告；于双币基金（自种子轮至A轮）中，投身新能源赛道之风投实践。
+              </p>
+
+              <p id="old-chinese-jiaguwen-content" align="justify" style="display: none;">
+                今者，徐泓博士仕於德意志工業界，任新能源動力系統專家工程師之職，矢志於能源與交通領域效率增進及碳中和之實現。彼於攻讀學位之時，與跨國巨擘及中歐學術機構攜手，共著論文十五餘篇，斬獲專利授權三項。曾於聯合國波昂氣候變遷大會，執「中國能源轉型與技術創新」之主題分會牛耳；屢赴聯合國歐洲經濟委員會交通與氣候專家組會議及氫能工作小組之議，積極倡導聯合國永續發展目標之第七項（清潔能源）、第九項（產業創新）及第十三項（氣候行動）。此外，彼亦擔綱能源與交通領域高被引期刊十餘本之審稿人，瑞士聖加侖國際論壇之學術評審。榮譽加身，如奧地利薩爾斯堡國際研討會旅行獎、美國電化學學會論文邀請及旅行獎、歐盟伊拉斯謨獎學金、「挑戰盃」創業大賽全國銅獎等，皆為見證。
+                <br><br>
+                徐君於二零二一年初，榮膺蘇黎世聯邦理工大學博士學位。自本科至博士，其學術研究皆聚焦於碳中和/新能源之域。彼曾在瑞士保羅謝爾研究院、英國牛津能源研究所、德國慕尼黑工業大學、法國巴黎高科路橋大學、歐盟自由電子雷射等國際機構研習/實習，並與日本豐田汽車、德國英飛凌半導體等跨國公司進行深度研發之合作。更甚者，彼獲美國昆藤商學院全獎，遠距修習並榮獲工商管理碩士學位；曾蒙桑坦德銀行獎學金之資助，赴劍橋大學商學院研習「綠色轉型」之工商管理課程。彼亦曾在頭部證券研究所（涵蓋A股與美股），撰寫個股深度報告；於雙幣基金（自種子輪至A輪）中，投身新能源賽道之風投實踐。
+              </p>
+
+
+              <p id="tibetan-content" align="justify" style="display: none;">
+                ད་ལྟའི་ཆར་སྨན་པ་ཞོ་ཧོང་གིས་འཇར་མན་གྱི་བཟོ་ལས་ཁང་ནང་ནུས་ཁུངས་གློག་ཤུགས་མ་ལག་གསར་པའི་ཆེད་ལས་བཟོ་སྐྲུན་པ་ཞིག་ཏུ་ལས་ཀ་བྱེད་བཞིན་ཡོད་ཅིང་།
+                མཐོ་རིམ་སློབ་མའི་སློབ་སྦྱོང་བྱེད་རིང་རྒྱལ་ཁབ་མང་པོའི་ཁེ་ལས་དང་ཀྲུང་གོ་དང་ཡོ་རོབ་ཀྱི་སློབ་གསོའི་ལས་ཁུངས་དང་མཉམ་འབྲེལ་ཐོག་རྩོམ་ཡིག་15ལྷག་ཙམ་པར་སྐྲུན་བྱས་པ་དང་བདག་དབང་གི་ཆོག་མཆན་3ཐོབ་ཡོད།
+                ཁོང་གིས་མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་བོན་གནམ་གཤིས་འགྱུར་ལྡོག་ཚོགས་ཆེན་ཐོག་"ཀྲུང་གོའི་ནུས་ཁུངས་སྒྱུར་བཅོས་དང་ཚན་རྩལ་གསར་གཏོད་"ཞེས་པའི་བརྗོད་གཞིའི་ཚོགས་འདུ་གཙོ་སྐྱོང་གནང་བ་དང་།
+                ཨང་ ༩ (བཟོ་ལས་གསར་གཏོད) དང་ཨང་ ༡༣ (གནམ་གཤིས་བྱ་སྤྱོད) བཅས་ཡིན།
+                དེ་བཞིན་ཁོང་གིས་ནུས་ཤུགས་དང་འགྲིམ་འགྲུལ་གྱི་ཁྱབ་ཁོངས་ནང་མིང་གྲགས་ཆེ་བའི་དུས་དེབ་༡༠ལྷག་གི་བསྐྱར་ཞིབ་པ་མ་ཟད།
+                སུད་སིའི་ནང་ཡོད་པའི་སེནཊ་གྷ་ལེན་རྒྱལ་སྤྱིའི་གྲོས་ཚོགས་ཀྱི་ཤེས་ཡོན་བསྐྱར་ཞིབ་པ་ཡང་གནང་ཡོད།
+                ཁོང་ལ་ཨོ་སི་ཁྲུ་རི་ཡའི་ནང་ཡོད་པའི་སལ་ཛི་བྷར་གྷི་རྒྱལ་སྤྱིའི་ཚོགས་འདུའི་འགྲུལ་བཞུད་བྱ་དགའ་དང་།
+                ཨ་རིའི་གློག་རྫས་རིག་པའི་ཚོགས་པའི་ཡིག་ཆའི་མགྲོན་འབོད་དང་འགྲུལ་བཞུད་བྱ་དགའ།
+                ཡུ་རོབ་མནའ་འབྲེལ་གྱི་ཨེ་རཱ་སི་མུས་སློབ་ཡོན་དང་།
+                <br><br>
+                2021ལོའི་ལོ་སྟོད་དུ་ཁོང་གིས་སུའེ་ཙེར་གྱི་སུའུ་ལི་ཧྲིའི་རྒྱལ་ཕྲན་མཉམ་འབྲེལ་
+                ནས་འབུམ་རམས་པ་ཐོབ་ཡོད།
+                ཁོང་གི་སློབ་མཐོའི་སློབ་སྦྱོང་བྱེད་སྐབས་ཁོང་གི་སློབ་གསོའི་ཞིབ་འཇུག་དེ་ནག་རྫས་བར་མའི་ནུས་ཁུངས་གསར་པའི་ཁྱབ་ཁོངས་ལ་དམིགས་ཡོད།
+                , ཧྥ་རན་སིའི་པོན་ཊི་ཕ་རི་སིའི་པེ་རི་སི་འཕྲུལ་རིག་སློབ་ཆེན་དང་།
+                ཡུ་རོབ་ཀྱི་རང་དབང་གློག་རྡུལ་གློག་འོད་བཅས་ལ་ཞིབ་འཇུག་དང་འཕེལ་རྒྱས་ཀྱི་མཉམ་ལས་གཏིང་ཟབ་བྱས་ཏེ་ཉི་ཧོང་གི་ཊོ་ཡོ་ཊ་མོ་ཊར་དང་།
+                དེ་མིན་ཁོང་གིས་ཨ་རིའི་ཁུའུ་ཊོན་ཚོང་ལས་སློབ་གྲྭར་ཐག་རིང་ནས་སློབ་སྦྱོང་བྱེད་པར་ཆ་ཚང་འཛུལ་ཞུགས་བྱས་པ་དང་།
+                དངུལ་ལོར་གཉིས་ཀྱི་མ་དངུལ་ལ་རྗེས་འདེད་བྱེད་དགོས། (སོན་སྐོར་ཐེངས་➔སྐོར་ཐེངས་A)
+              </p>
+
+              <p id="uyghur-content" align="right" style="display: none;">
+
+                ھازىر ، دوكتور شۈ خوڭ گېرمانىيە سانائىتىدىكى يېڭى ئېنېرگىيە ئېلېكتر سىستېمىسىنىڭ مۇتەخەسسىس ئىنژېنېرى
+                بولۇپ ، ئېنېرگىيە
+                ۋە قاتناش ساھەسىدە ئۈنۈمنى ئاشۇرۇش ۋە كاربوننىڭ بىتەرەپلىكىنى ئىشقا ئاشۇرۇشقا ۋەدە بەردى. ئۇنۋان
+                تەتقىقاتى جەريانىدا ،
+                ئۇ دۆلەت ھالقىغان شىركەتلەر ۋە جۇڭگو ۋە ياۋروپادىكى ئىلمىي ئورگانلار بىلەن ھەمكارلىشىپ 15 پارچىدىن
+                ئارتۇق ماقالە ئېلان
+                قىلىپ ، 3 تۈرلۈك پاتېنت ھوقۇقىغا ئېرىشكەن. ئۇ بىرلەشكەن دۆلەتلەر تەشكىلاتى بون كېلىمات ئۆزگىرىش يىغىنىدا
+                «جۇڭگو
+                ئېنېرگىيەسىنى ئۆزگەرتىش ۋە تېخنىكىدا يېڭىلىق يارىتىش» باش تېما يىغىنىغا رىياسەتچىلىك قىلدى ، بىرلەشكەن
+                دۆلەتلەر
+                تەشكىلاتى ياۋروپا ئىقتىساد كومىتېتىنىڭ قاتناش ۋە كېلىمات ۋە ھىدروگېن ئېنېرگىيە خىزمەت گۇرۇپپىسى
+                مۇتەخەسسىسلەر
+                گۇرۇپپىسىنىڭ يىغىنىغا كۆپ قېتىم قاتناشتى ، ھەمدە بىرلەشكەن دۆلەتلەر تەشكىلاتىنىڭ ئىمكانىيەتلىك سىجىل
+                تەرەققىيات نىشانى
+                (SDG) ، 9-نومۇر (سانائەتتە يېڭىلىق يارىتىش) ۋە 13-نومۇر (كېلىمات ھەرىكىتى). ئۇ يەنە ئېنېرگىيە ۋە قاتناش
+                ساھەسىدە تىلغا
+                ئېلىنغان 10 نەچچە ژۇرنالنىڭ ئوبزورچىسى ، شىۋىتسارىيە سانت گاللېن خەلقئارا مۇنبىرىنىڭ ئىلمىي ئوبزورچىسى.
+                ئۇ ئاۋسترىيەدە
+                ئۆتكۈزۈلگەن سالزبۇرگ خەلقئارا ئىلمىي مۇھاكىمە يىغىنى ساياھەت مۇكاپاتى ، ئامېرىكا ئېلېكتر خىمىيىلىك
+                جەمئىيىتى قەغەز
+                تەكلىپ ۋە ساياھەت مۇكاپاتى ، ياۋروپا ئىتتىپاقى ئېراسمۇس ئوقۇش مۇكاپات پۇلى ، «رىقابەت لوڭقىسى»
+                مەملىكەتلىك ئىگىلىك
+                تىكلەش مىس مۇكاپاتىغا ئېرىشتى.
+                <br><br>
+                ئۇ 2021-يىلىنىڭ بېشىدا ETH Zurich دىن دوكتورلۇق ئۇنۋانىغا ئېرىشكەن. تولۇق كۇرس ، ماگىستىرلىق ۋە
+                دوكتورلۇق ئۇنۋانىغا
+                ئېرىشكەن مەزگىلدە ، ئۇنىڭ ئىلمىي تەتقىقاتى كاربون بىتەرەپلىكى / يېڭى ئېنېرگىيە ساھەسىگە مەركەزلەشكەن ،
+                ئۇ ئەنگىلىيەدىكى
+                پائۇل شېرېر ئىنستىتۇتى ، ئەنگىلىيەدىكى ئوكسفورد ئېنېرگىيە تەتقىقات مەركىزى ، پارىژ پەن-تېخنىكا
+                ئۇنۋېرسىتىتى بىلەن
+                ھەمكارلاشقان. ياپونىيەنىڭ تويوتا موتورى ۋە گېرمانىيەنىڭ ئىنفىنون يېرىم ئۆتكۈزگۈچ قاتارلىق شىركەتلىرى.
+                ئۇنىڭدىن باشقا ،
+                ئۇ ئامېرىكىدىكى كۇندېڭ سودا مەكتىپىگە تولۇق ئوقۇش مۇكاپات پۇلى بىلەن قوبۇل قىلىنغان ۋە سودا باشقۇرۇش
+                ماگىستىرلىق
+                ئۇنۋانىغا ئېرىشكەن ، ئۇ كامبرىج ئۇنۋېرسىتىتى سودا مەكتىپىنىڭ «يېشىل ئۆزگىرىش» سودا باشقۇرۇش كۇرسىنى
+                تەتقىق قىلىش ئۈچۈن
+                ئوقۇش مۇكاپات پۇلىغا ئېرىشكەن ۋە ئۇ مەبلەغ يۈرۈشتۈرۈش مەبلىغى بىلەن شۇغۇللانغان.
+
+              </p>
+
+
+              <p id="vahcuengh-content" align="justify" style="display: none;">
+                壮文翻译中...
+              </p>
+
+              <p id="yi-content" align="justify" style="display: none;">
+                彝文翻译中...
+              </p>
+
+              <p id="kazakh-content" align="justify" style="display: none;">
+                Қазіргі таңда доктор Сюй Хоң Германия өнеркәсібінде <strong>жаңа энергия қуат жүйелері</strong>
+                саласының
+                сарапшы-инженері болып қызмет атқарып, <strong>энергетика мен көлік</strong> саласындағы тиімділікті
+                арттыру мен
+                <strong>көміртегі бейтараптығын</strong> қамтамасыз етуге бағытталған. Диплом алу кезінде ол трансұлттық
+                компаниялар мен
+                Орталық және Шығыс Еуропаның академиялық мекемелерімен бірлесіп <strong>мақалалар<span
+                    class="no_of_papers"></span>
+                  жариялады</strong> және <strong><span class="no_of_patents"></span> патент алу</strong> құқығын
+                иеленді. Ол <strong><a href="https://unfccc.int/" target="_blank">БҰҰ-ның Бонндағы климаттық өзгерістер
+                    конференциясында</a></strong>
+                "Қытайдың <strong>энергетикалық трансформациясы</strong> және технологиялық жаңашылдық" тақырыбындағы
+                секцияны басқарды,
+                бірнеше рет <strong><a href="https://unece.org/" target="_blank">БҰҰ-ның Еуропалық экономикалық
+                    комиссиясы</a></strong>
+                ұйымдастырған <strong>климат пен көлік бойынша сарапшылар тобының</strong> және <strong>сутегі энергиясы
+                  жұмыс
+                  тобының</strong> жиындарына қатысты, сондай-ақ БҰҰ-ның Тұрақты даму мақсаттарын (SDGs) қолдап, 7-ші
+                (Тазартылған
+                энергия), 9-шы (Өнеркәсіптік инновация) және 13-ші (Климаттық іс-қимыл) мақсаттарды жақтайды. Сонымен
+                қатар, ол
+                энергетика мен көлік саласындағы жоғары рейтингті журналдардың <strong>рецензенті</strong>,
+                Швейцариядағы
+                <strong>Сент-Галлен халықаралық форумының</strong> <strong>академиялық сарапшысы</strong> болып
+                табылады. Ол Австрияның
+                <strong><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                    target="_blank">Зальцбург халықаралық
+                    семинары</a></strong>ның саяхат сыйлығын, <strong>АҚШ Электрохимиялық қоғамының мақалалар
+                  шақыруы</strong> мен
+                саяхат сыйлығын, Еуропалық Одақтың Эразмус стипендиясын, "Challenge Cup" ұлттық кәсіпкерлік кубогінің
+                қола медалін және
+                басқа да наградаларды алған.
+
+                <br><br>
+
+                2021 жылдың басында ол <strong><a href="https://ethz.ch/en.html" target="_blank">Цюрих федералдық
+                    технологиялық
+                    университетінен</a></strong> докторлық дәрежесін алды, ал магистратура мен докторлық кезеңдерінде
+                ғылыми зерттеулері
+                <strong>көміртегі бейтараптығы/жаңа энергия</strong> саласына бағытталды. Ол <strong><a
+                    href="https://psi.ch" target="_blank">Швейцарияның Пауль Шер Институты</a></strong>, <strong><a
+                    href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Ұлыбританияның Оксфорд
+                    энергетика
+                    институты</a></strong>, <strong><a href="https://tum.de" target="_blank">Германияның Мюнхен
+                    техникалық
+                    университеті</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Францияның
+                    Париж жоғары
+                    техника және көпірлер университеті</a></strong>, <strong><a href="https://xfel.eu"
+                    target="_blank">Еуропалық еркін
+                    электронды лазер</a></strong> сияқты халықаралық ұйымдарда жұмыс істеп, тәжірибе жинақтады, сонымен
+                қатар
+                <strong>Жапонияның Toyota</strong>, <strong>Германияның Infineon Semiconductors</strong> сияқты
+                трансұлттық
+                компаниялармен терең ғылыми зерттеу жұмыстарын жүргізді. Бұдан басқа, ол <strong><a
+                    href="https://quantic.edu/mba" target="_blank">АҚШ-тың Quantic Business School</a></strong>
+                тарапынан толық грантпен оқуға қабылданып,
+                <strong>Іскерлік әкімшілік магистрі</strong> дәрежесін алды, сондай-ақ <strong><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Кембридж университетінің бизнес
+                    мектебінде</a></strong> "жасыл трансформация" бойынша бизнес курсын
+                оқыды. Ол сондай-ақ жетекші бағалау орталықтарында (A қорлары және АҚШ қорлары) жеке акциялар бойынша
+                терең зерттеу
+                мақалаларын жазып, қос валюта қорларында (Seed Round → A Round) жаңа энергия бағыты бойынша венчурлық
+                капитал
+                практикасын жүргізді.
+              </p>
+
+              <p id="mongol-cyrillic-content" align="justify" style="display: none;">
+                Одоогийн байдлаар, доктор Сюй Хонг Герман дахь аж үйлдвэрийн салбарт <strong>шинэ эрчим хүчний
+                  хөдөлгүүрийн
+                  систем</strong>ийн мэргэжилтэн инженерээр ажиллаж, <strong>эрчим хүч ба тээвэр</strong> салбарын үр
+                ашигтай байдлыг
+                дээшлүүлэх болон <strong>нямкаар</strong> үйл ажиллагаа явуулж байна. Судалгааны үедээ олон улсын
+                компаниуд болон төв
+                Европын академийн байгууллагуудтай хамтран <strong><span class="no_of_papers"></span> гаруй</strong>
+                өгүүлэл нийтлэж,
+                <strong><span class="no_of_patents"></span> патентын эрх</strong> эзэмшсэн. <strong><a
+                    href="https://unfccc.int/" target="_blank">НҮБ-ын Бонн дахь Уур амьсгалын өөрчлөлтийн бага
+                    хурал</a></strong>-д <strong>"Эрчим хүчний шилжилт
+                  ба технологийн инноваци"</strong> сэдвээр хурал хуралдуулсан бөгөөд <strong><a
+                    href="https://unece.org/" target="_blank">НҮБ-ын Европын эдийн засгийн комисс</a></strong>-ын
+                <strong>тээвэр ба уур амьсгалын
+                  мэргэжилтнүүдийн бүлэг</strong> болон <strong>төмөр хүчилтөрөгчийн ажил эрхлэгчдийн бүлэг</strong>
+                хуралдаанд
+                оролцож, НҮБ-ын Тогтвортой Хөгжлийн Зорилт (SDGs) 7-р (Цэвэр эрчим хүч), 9-р (Аж үйлдвэрийн инноваци)
+                болон 13-р (Уур
+                амьсгалын үйл ажиллагаа) зорилтыг санаачлан дэмжиж байна. Мөн тэрээр эрчим хүч, тээвэр салбарын өндөр
+                түвшний
+                сэтгүүлүүдийн <strong>шүүмжлэгч</strong>, Швейцарийн <strong>Санкт-Галлен олон улсын форум</strong> -ын
+                <strong>академийн шүүмжлэгч</strong>ээр ажилладаг. Тэрээр Австри улсын <strong><a
+                    href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076" target="_blank">Зальцбургийн
+                    олон улсын
+                    семинар</a></strong>-ийн аялан тоглолтын шагнал, <strong>АНУ-ын цахилгаан химийн нийгэмлэгийн эрдэм
+                  шинжилгээний
+                  хуралд урилгаар оролцох шагнал</strong>, Европын Холбооны Эрасмус тэтгэлэг, "Томсдох тэмцээн"-д
+                Үндэсний хүрэл
+                шагнал, бусад олон шагнал хүртсэн.
+                <br><br>
+                Тэрээр 2021 оны эхээр <strong><a href="https://ethz.ch/en.html" target="_blank">Цюрихийн Холбооны
+                    Технологийн Их
+                    Сургууль</a></strong}-д докторын зэрэг хамгаалсан бөгөөд, докторын болон магистрийн зэрэг хамгаалж
+                    байх хугацаандаа судалгаагаа <strong>нямкаар/шинэ эрчим хүч</strong> салбарын чиглэлээр явуулсан.
+                Тэрээр <strong><a href="https://psi.ch" target="_blank">Швейцарийн Паул Шерр Институт</a></strong>,
+                <strong><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Их Британийн Оксфордын
+                    Эрчим хүчний
+                    Судалгааны Институт</a></strong>, <strong><a href="https://tum.de" target="_blank">Германы Мюнхений
+                    Технологийн Их
+                    Сургууль</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Францын Парисын
+                    Үндэсний Их
+                    Сургууль</a></strong><strong> болон <a href="https://xfel.eu" target="_blank">Европын Чөлөөт
+                    Электрон
+                    Лазер</a></strong> зэрэг олон улсын байгууллагуудаас ажиллаж, дадлага хийсэн. Мөн Япон дахь
+                <strong>Тойота</strong>, Германы <strong>Infineon</strong> зэрэг олон улсын компаниудтай гүнзгий
+                судалгаа
+                хөгжүүлэлтийн хамтын ажиллагаа явуулсан. Түүнчлэн тэрээр <strong><a href="https://quantic.edu/mba"
+                    target="_blank">АНУ-ын Квантын Бизнесийн Сургуулиас</a></strong> бүрэн тэтгэлэгээр олон улсын онлайн
+                боловсролын
+                сургалтыг хийж, <strong>Бизнесийн Удирдлагын Магистр</strong}-ийн зэрэг хамгаалсан. Мөн түүний
+                    байгуулсан "Грийн Революци" цогц сургалт болон хөрөнгө оруулалтын чиглэлээр <strong><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Камбриджийн Бизнесийн Сургууль</a></strong> дээр
+                "Ногоон
+                шилжилт" сэдвээр боловсрол эзэмшсэн.
+              </p>
+
+
+              <p id="mongol-traditional-content"
+                style="font-family: 'Mongolian Baiti', sans-serif; writing-mode: vertical-rl; text-align: top; line-height: 1.9; white-space: pre-wrap; display: none;">
+                Оᠳᠣᠣᠭᠢᠶᠨ ᠪᠠᠶᠳᠯᠠᠠᠷ᠂ ᠳᠣᠺᠲᠣᠷ сюᠶ хᠣᠨᠭ гᠧᠷᠮᠠᠨ ᠳᠠᠬь ᠠᠵ ᠦᠶᠯᠳᠸᠡᠷᠢᠶᠨ ᠰᠠᠯᠪᠠᠷᠲ ᠱᠢᠨᠡ ᠡᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ ᠬᠥᠳᠥᠯᠭᠦᠦᠷᠢᠶᠨ
+                ᠰᠢᠰᠲᠧᠮᠢᠶᠨ ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠡᠨ ᠢᠨᠵᠧᠨᠧᠷᠡᠡᠷ ᠠᠵᠢᠯᠯᠠᠵ᠂ ᠡᠷᠴᠢᠮ ᠬᠦᠴ ᠪᠠ ᠲᠡᠡᠸᠡᠷ ᠰᠠᠯᠪᠠᠷыᠨ ᠦᠷ ᠠᠱᠢᠭᠲᠠᠶ ᠪᠠᠶᠳᠯыᠭ ᠳᠡᠡᠱᠯᠦᠦᠯᠡᠬ
+                ᠪᠣᠯᠣᠨ ᠨяᠮᠺᠠᠠᠷ ᠦᠶᠯ ᠠᠵᠢᠯᠯᠠᠭᠠᠠ яᠸᠤᠤᠯᠵ ᠪᠠᠶᠨᠠ. Сᠤᠳᠠᠯᠭᠠᠠᠨы ᠦᠧᠳᠡᠡ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠺᠣᠮᠫᠠᠨᠢᠤᠳ ᠪᠣᠯᠣᠨ ᠲᠥᠸ еᠸᠷᠣᠫыᠨ
+                ᠠᠺᠠᠳᠧᠮᠢᠶᠨ ᠪᠠᠶᠭᠤᠤᠯᠯᠠᠭᠤᠤᠳᠲᠠᠶ ᠬᠠᠮᠲᠷᠠᠨ ᠑᠕ ᠭᠠᠷᠤᠶ ᠥᠭᠦᠦᠯᠡᠯ ᠨᠢᠶᠲᠯᠡᠵ᠂ ᠓ ᠫᠠᠲᠧᠨᠲыᠨ ᠡᠷᠬ ᠡᠽᠡᠮᠱᠰᠡᠨ. Нүб᠊ыᠨ бᠣᠨᠨ ᠳᠠᠬь
+                уᠤᠷ ᠠᠮьᠰᠭᠠᠯыᠨ ᠥᠥᠷᠴᠯᠥᠯᠲᠢᠶᠨ ᠪᠠᠭᠠ ᠬᠤᠷᠠᠯ᠊ᠳ "эᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ ᠱᠢᠯᠵᠢᠯᠲ ᠪᠠ ᠲᠧᠬᠨᠣᠯᠣᠭᠢᠶᠨ ᠢᠨᠨᠣᠸᠠᠼᠢ" ᠰᠡᠳᠸᠡᠡᠷ ᠬᠤᠷᠠᠯ
+                ᠬᠤᠷᠠᠯᠳᠤᠤᠯᠰᠠᠨ ᠪᠥᠭᠥᠥᠳ нүб᠊ыᠨ еᠸᠷᠣᠫыᠨ ᠡᠳᠢᠶᠨ ᠽᠠᠰᠭᠢᠶᠨ ᠺᠣᠮᠢᠰᠰ᠊ыᠨ ᠲᠡᠡᠸᠡᠷ ᠪᠠ ᠤᠤᠷ ᠠᠮьᠰᠭᠠᠯыᠨ ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠨᠦᠦᠳᠢᠶᠨ
+                ᠪᠦᠯᠡᠭ ᠪᠣᠯᠣᠨ ᠲᠥᠮᠥᠷ ᠬᠦᠴᠢᠯᠲᠥᠷᠥᠭᠴᠢᠶᠨ ᠠᠵᠢᠯ ᠡᠷᠬᠯᠡᠭᠴᠳᠢᠶᠨ ᠪᠦᠯᠡᠭ ᠬᠤᠷᠠᠯᠳᠠᠠᠨᠳ ᠣᠷᠣᠯᠼᠣᠵ᠂ нүб᠊ыᠨ тᠣᠭᠲᠸᠣᠷᠲᠣᠶ хᠥᠭᠵᠯᠢᠶᠨ
+                зᠣᠷᠢᠯᠲ (sdgs) ᠗᠊ᠷ (цᠡᠸᠡᠷ ᠡᠷᠴᠢᠮ ᠬᠦᠴ)᠂ ᠙᠊ᠷ (аᠵ ᠦᠶᠯᠳᠸᠡᠷᠢᠶᠨ ᠢᠨᠨᠣᠸᠠᠼᠢ) ᠪᠣᠯᠣᠨ ᠑᠓᠊ᠷ (уᠤᠷ ᠠᠮьᠰᠭᠠᠯыᠨ ᠦᠶᠯ
+                ᠠᠵᠢᠯᠯᠠᠭᠠᠠ) ᠽᠣᠷᠢᠯᠲыᠭ ᠰᠠᠨᠠᠠᠴᠯᠠᠨ ᠳᠡᠮᠵᠢᠵ ᠪᠠᠶᠨᠠ. Мᠥᠨ ᠲᠡᠷᠡᠡᠷ ᠡᠷᠴᠢᠮ ᠬᠦᠴ᠂ ᠲᠡᠡᠸᠡᠷ ᠰᠠᠯᠪᠠᠷыᠨ ᠥᠨᠳᠥᠷ ᠲᠦᠸᠱᠨᠢᠶ
+                ᠰᠡᠲᠭᠦᠦᠯᠦᠦᠳᠢᠶᠨ ᠱᠦᠦᠮᠵᠯᠡᠭᠴ᠂ шᠸᠧᠶᠼᠠᠷᠢᠶᠨ сᠠᠨᠺᠲ᠊гᠠᠯᠯᠧᠨ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠹᠣᠷᠤᠮ ᠊ыᠨ ᠠᠺᠠᠳᠧᠮᠢᠶᠨ ᠱᠦᠦᠮᠵᠯᠡᠭᠴᠡᠡᠷ ᠠᠵᠢᠯᠯᠠᠳᠠᠭ.
+                Тᠡᠷᠡᠡᠷ аᠸᠰᠲᠷᠢ ᠤᠯᠰыᠨ зᠠᠯьᠼᠪᠤᠷᠭᠢᠶᠨ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠰᠧᠮᠢᠨᠠᠷ᠊ᠢᠶᠨ ᠠяᠯᠠᠨ ᠲᠣᠭᠯᠣᠯᠲыᠨ ᠱᠠᠭᠨᠠᠯ᠂ ану᠊ыᠨ ᠼᠠᠬᠢᠯᠭᠠᠠᠨ ᠬᠢᠮᠢᠶᠨ
+                ᠨᠢᠶᠭᠡᠮᠯᠡᠭᠢᠶᠨ ᠡᠷᠳᠡᠮ ᠱᠢᠨᠵᠢᠯᠭᠡᠡᠨᠢᠶ ᠬᠤᠷᠠᠯᠳ ᠤᠷᠢᠯᠭᠠᠠᠷ ᠣᠷᠣᠯᠼᠣᠬ ᠱᠠᠭᠨᠠᠯ᠂ еᠸᠷᠣᠫыᠨ хᠣᠯᠪᠣᠣᠨы эᠷᠠᠰᠮᠤᠰ ᠲᠡᠲᠭᠡᠯᠡᠭ᠂
+                "тᠣᠮᠰᠳᠣᠬ ᠲᠡᠮᠼᠡᠡᠨ"᠊ᠳ үᠨᠳᠡᠰᠨᠢᠶ ᠬᠦᠷᠡᠯ ᠱᠠᠭᠨᠠᠯ᠂ ᠪᠤᠰᠠᠳ ᠣᠯᠣᠨ ᠱᠠᠭᠨᠠᠯ ᠬᠦᠷᠲᠰᠡᠨ.
+                <br><br>
+                тᠡᠷᠡᠡᠷ ᠒᠐᠒᠑ ᠣᠨы ᠡᠬᠡᠡᠷ цюᠷᠢᠬᠢᠶᠨ хᠣᠯᠪᠣᠣᠨы тᠧᠬᠨᠣᠯᠣᠭᠢᠶᠨ иᠬ сᠤᠷᠭᠤᠤᠯьᠨяᠮᠺᠠᠠᠷ/ᠱᠢᠨᠡ ᠡᠷᠴᠢᠮ ᠬᠦᠴ ᠰᠠᠯᠪᠠᠷыᠨ ᠴᠢᠭᠯᠡᠯᠡᠡᠷ
+                яᠸᠤᠤᠯᠰᠠᠨ.Тᠡᠷᠡᠡᠷ шᠸᠧᠶᠼᠠᠷᠢᠶᠨ пᠠᠤᠯ шᠧᠷᠷ иᠨᠰᠲᠢᠲᠤᠲ᠂ иᠬ бᠷᠢᠲᠠᠨᠢᠶᠨ оᠺᠰᠹᠣᠷᠳыᠨ эᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ сᠤᠳᠠᠯᠭᠠᠠᠨы иᠨᠰᠲᠢᠲᠤᠲ᠂
+                гᠧᠷᠮᠠᠨы мюᠨᠬᠧᠨᠢᠶ тᠧᠬᠨᠣᠯᠣᠭᠢᠶᠨ иᠬ сᠤᠷᠭᠤᠤᠯь᠂ фᠷᠠᠨᠼыᠨ пᠠᠷᠢᠰыᠨ үᠨᠳᠡᠰᠨᠢᠶ иᠬ сᠤᠷᠭᠤᠤᠯь ᠪᠣᠯᠣᠨ еᠸᠷᠣᠫыᠨ чᠥᠯᠥᠥᠲ
+                эᠯᠧᠺᠲᠷᠣᠨ лᠠᠽᠧᠷ ᠽᠡᠷᠡᠭ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠪᠠᠶᠭᠤᠤᠯᠯᠠᠭᠤᠤᠳᠠᠠᠰ ᠠᠵᠢᠯᠯᠠᠵ᠂ ᠳᠠᠳᠯᠠᠭᠠ ᠬᠢᠶᠰᠡᠨ. Мᠥᠨ яᠫᠣᠨ ᠳᠠᠬь тᠣᠶᠣᠲᠠ᠂ гᠧᠷᠮᠠᠨы
+                infineon ᠽᠡᠷᠡᠭ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠺᠣᠮᠫᠠᠨᠢᠤᠳᠲᠠᠶ ᠭᠦᠨᠽᠭᠢᠶ ᠰᠤᠳᠠᠯᠭᠠᠠ ᠬᠥᠭᠵᠦᠦᠯᠡᠯᠲᠢᠶᠨ ᠬᠠᠮᠲыᠨ ᠠᠵᠢᠯᠯᠠᠭᠠᠠ яᠸᠤᠤᠯᠰᠠᠨ.
+                Тᠦᠦᠨᠴᠯᠡᠨ ᠲᠡᠷᠡᠡᠷ ану᠊ыᠨ кᠸᠠᠨᠲыᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯᠢᠠᠰ ᠪᠦᠷᠡᠨ ᠲᠡᠲᠭᠡᠯᠡᠭᠡᠡᠷ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠣᠨᠯᠠᠶᠨ ᠪᠣᠯᠣᠸᠰᠷᠣᠯыᠨ
+                ᠰᠤᠷᠭᠠᠯᠲыᠭ ᠬᠢᠶᠵ᠂ бᠢᠽᠨᠧᠰᠢᠶᠨ уᠳᠢᠷᠳᠯᠠᠭыᠨ мᠠᠭᠢᠰᠲᠷкᠠᠮᠪᠷᠢᠳᠵᠢᠶᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯь ᠳᠡᠡᠷ "нᠣᠭᠣᠣᠨ ᠱᠢᠯᠵᠢᠯᠲ" ᠰᠡᠳᠸᠡᠡᠷ
+                ᠪᠣᠯᠣᠸᠰᠷᠣᠯ ᠡᠽᠡᠮᠱᠰᠡᠨ.
+
+                <hr>
+              </p>
+
+              <p id="hmong-content" align="justify" style="display: none;">
+
+                Tam sim no, Dr. Xu Hong ua haujlwm ua tus kws tshaj lij engineer hauv kev siv hluav taws xob tshiab hauv
+                kev lag luam
+                German, cog lus kom ua tiav kev txhim kho kev ua haujlwm zoo thiab cov pa roj carbon nruab nrab hauv lub
+                zog thiab kev
+                thauj mus los. Thaum nws kawm tiav qib siab, nws tau luam tawm ntau dua 15 cov ntawv hauv kev koom tes
+                nrog ntau lub
+                tuam txhab thiab CEIBS cov tsev kawm ntawv, thiab tau txais peb daim ntawv tso cai patent. Nws tau tuav
+                lub zog hloov
+                pauv "Tuam Tshoj lub ntsiab lus" Nws kuj tseem ua tus saib xyuas ntau dua 10 cov ntawv xov xwm tshaj
+                tawm hauv lub zog
+                thiab kev thauj mus los, thiab tus kws tshuaj xyuas kev kawm rau St. Gallen International Forum hauv
+                Switzerland. Nws
+                tau yeej Salzburg International Symposium Travel Award hauv Austria, American Electrochemical Society
+                Paper Invitation
+                thiab Travel Award, EU Erasmus Scholarship, "Challenge Cup" National Entrepreneurship Bronze Award,
+                thiab lwm yam.
+                <br><br>
+                Nws tau txais nws Ph.D. los ntawm ETH Zurich thaum ntxov 2021. Thaum nws kawm tiav undergraduate,
+                master's thiab
+                doctoral kev tshawb fawb, nws txoj kev tshawb fawb tau tsom mus rau cov haujlwm ntawm carbon neutrality
+                / tshiab zog Nws
+                tau ua haujlwm / haujlwm hauv cov tsev kawm ntawv thoob ntiaj teb xws li Paul Scherrer Institute hauv
+                Switzerland,
+                Oxford Institute for Energy Studies nyob rau hauv lub tebchaws United Kingdom ntawm Paris, Lub Tsev Kawm
+                Ntawv Qib Siab
+                University of Paris, Lub Tsev Kawm Ntawv Qib Siab thiab Kev Kawm Txuj Ci. tau ua qhov tob R & D kev koom
+                tes nrog ntau
+                lub tuam txhab xws li Toyota Motor ntawm Nyiv thiab Infineon Semiconductor ntawm lub teb chaws Yelemees.
+                Tsis tas li
+                ntawd, nws tau txais mus rau Kundeng Lub Tsev Kawm Lag Luam hauv Tebchaws Meskas nrog rau tag nrho cov
+                nyiaj pabcuam rau
+                kev kawm nyob deb thiab tau txais Master of Business Administration degree Nws tau txais nyiaj pabcuam
+                los ntawm
+                Santander Bank los kawm "Green Transformation" kev tswj hwm kev lag luam hauv Cambridge University
+                Business School Nws
+                tau sau cov lus qhia tob rau ntawm tus kheej cov khoom lag luam ntawm kev lag luam kev lag luam hauv kev
+                tshawb fawb
+                thiab kev ua lag luam tshiab hauv Asmeskas. nyiaj txiag dual (cov noob puag ncig ➔ Ib puag ncig).
               </p>
 
 
@@ -858,6 +1303,75 @@
     <script src="js/24jieqi.js"></script>
     <script src="js/nongli.js"></script>
     <script src="js/video-player.js"></script>
+    <script>
+      function changeLanguage() {
+        var selectedLanguage = document.getElementById('languages-4').value;
+
+        // Hide all content sections
+        var allContent = document.querySelectorAll('[id$="-content"]');
+        allContent.forEach(function (content) {
+          content.style.display = 'none';
+        });
+
+        // Show the selected language's content
+        var selectedContent = document.getElementById(selectedLanguage + '-content');
+        if (selectedContent) {
+          selectedContent.style.display = 'block';
+        }
+      }
+    </script>
+
+    <script>
+      document.getElementById('font-selector').addEventListener('change', function () {
+        const selectedFont = this.value;
+        const selectedSize = this.options[this.selectedIndex].getAttribute('data-size'); // 获取对应的字体大小
+        const content = document.getElementById('chinese-content');
+
+        // 根据字体选择进行预处理
+        if (selectedFont === "YiShanBeiZhuanTi") {
+          convertToSimplified(); // 转换为简体字
+        }
+        else if (selectedFont === "HanYiXiaoLiShuFan") {
+          convertToTraditional(); // 转换为繁体字
+        }
+        else if (selectedFont === "HanYiShouJinShuFan") {
+          convertToSimplified(); // 转换为简体字
+        }
+        else if (selectedFont === "ShangShouHongZhiShouXieTi") {
+          convertToSimplified(); // 转换为简体字
+        }
+        else if (selectedFont === "KangXiZiDianTi") {
+          convertToTraditional(); // 转换为繁体字
+        }
+        else if (selectedFont === "YanZhenQingFaShu") {
+          convertToSimplified(); // 转换为简体字
+        }
+
+        // 如果选择了默认字体
+        if (selectedFont === "default") {
+          content.style.fontFamily = "";  // 恢复到网页的默认字体
+          content.style.fontSize = "";    // 恢复到网页的默认字体大小
+        } else {
+          // 设置所选字体和字体大小
+          content.style.fontFamily = selectedFont;
+          content.style.fontSize = selectedSize;
+        }
+      });
+
+      // 简体字转换
+      function convertToSimplified() {
+        var script = document.createElement("script");
+        script.src = "js/bookmarklet_cn.js"; // 该文件应为简体转换脚本
+        document.body.appendChild(script);
+      }
+
+      // 繁体字转换
+      function convertToTraditional() {
+        var script = document.createElement("script");
+        script.src = "js/bookmarklet_tw.js"; // 该文件应为繁体转换脚本
+        document.body.appendChild(script);
+      }
+    </script>
 
   </div>
 </body>

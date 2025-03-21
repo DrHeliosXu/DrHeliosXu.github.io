@@ -42,6 +42,7 @@
       font-weight: bold;
     }
   </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -170,7 +171,7 @@
               <span style="display: flex; align-items: center">
                 <!-- 简体字和国旗 -->
                 <a href="" class="d-inline-block" style="margin-right: 5px">
-                  <img src="images/flag_de.png" alt="flag" style="
+                  <img src="images/flag_de.png" onclick="switchContent('bavarian')" alt="flag" style="
                                                                             height: 15px;
                                                                             margin-right: 2px;
                                                                             position: relative;
@@ -178,7 +179,7 @@
                                                                           " />
                 </a>
                 <a href="" class="d-inline-block" style="margin-right: 5px">
-                  <img src="images/flag_ch.png" alt="flag" style="
+                  <img src="images/flag_ch.png" onclick="switchContent('swiss')" alt="flag" style="
                                                                             height: 15px;
                                                                             margin-right: 2px;
                                                                             position: relative;
@@ -186,7 +187,7 @@
                                                                           " />
                 </a>
                 <a href="" class="d-inline-block" style="margin-right: 5px">
-                  <img src="images/flag_au.png" alt="flag" style="
+                  <img src="images/flag_au.png" onclick="switchContent('austrian')" alt="flag" style="
                                                                             height: 15px;
                                                                             margin-right: 2px;
                                                                             position: relative;
@@ -213,6 +214,23 @@
                   <option value="it-about.html">Italiano</option>
                   <!-- <option value="ru-about.html">Русский</option>
                   <option value="ar-about.html">اللغة العربية</option> -->
+                </select>
+                <select id="languages-4" name="languages" style="
+                                                                                                          width:auto;height: 25px;
+                                                                                                          margin-left: 5px;
+                                                                                                          border-radius: 0;
+                                                                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                          text-align: center; /* 新增 */
+                                                                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                                                                        "
+                  onchange="changeLanguage()">
+                  <option value="hochdeutsch" selected>Hochdeutsch</option>
+                  <option value="bairisch">Bairisch</option>
+                  <option value="zueritueetsch">Züritüütsch</option>
+                  <option value="wienerisch">Wienerisch</option>
+                  <option value="niederdeutsch">Niederdeutsch</option>
+                  <option value="dutch">Dutch</option>
+                  <option value="luxembourgish">Lëtzebuergesch</option>
                 </select>
               </span>
             </div>
@@ -327,9 +345,10 @@
             </div>
             </p>
             <h1 class="mb-4">Biographie</h1>
+
             <hr />
             <div class="story">
-              <p id="german-content" align="justify" style="display: block;">
+              <p id="hochdeutsch-content" align="justify" style="display: block;">
                 Derzeit ist Dr. Hong Xu ein engagierter
                 <text>Forscher</strong> und <text>Ingenieur</strong>, der sich auf
                     <text>erneuerbare Energien</strong> und <text>e-Power-Systeme</strong> spezialisiert hat und
@@ -409,6 +428,462 @@
                                                                 Währungs-Venture-Capital-Unternehmen sowie in einem
                                                                 führenden
                                                                 Wertpapierunternehmen in China.
+              </p>
+
+
+              <p id="zueritueetsch-content" align="justify" style="display: none;">
+                Dr Hong Xu isch dezyt e gärngsähener
+                <text>Forschig</strong> und <text>Ingenieur</strong>, wo sich uf
+                    <text>erneierbari Energii</strong> und <text>e-Power-System</strong> spezialisiärt hät und
+                        noh
+                        Effiziänz-Exzellenz und
+                        CO2-Neutralität im Energii- und Verchehrsbereich schträäbt.
+                        I de letschte 10 Johr hät er mit
+                        multinationale Unternähme und füehrendi Institutiöne uf em eurasische Kontinent
+                        zämeschafft und
+                        technologischi Fortschritt i de Bereich <text>e-Mobilität</strong>, <text>sauberi
+                            Energii</strong> und
+                            <text>neui
+                              Material</strong>
+                              vorangetriebe, mit <text><span class="no_of_papers"></span> veröffentlichti
+                                Artikle</strong>
+                                und
+                                <text><span class="no_of_patents"></span> erteilti Patänt</strong>.
+                                  Nebe sim
+                                  ingenieurtechnische Engagement hät er
+                                  mit renommierte Organisatione, vor allem em Sankt Gallen Symposium, em
+                                  Salzburger Global Seminar, CITIC
+                                  Wertpapier
+                                  und em Oxford Institut für Energii-Schudie zämegharbeitet und sich uf d’Analyse vo
+                                  sauberi
+                                  <text>Energii-Wirtschaft und -Politik</strong> in Asie und
+                                    Europa konzentriert. Als proaktive Bidrääger zur internatsionale Entwicklig hät
+                                    Dr Xu als
+                                    Mitglied vo de
+                                    Expertengruppe (GE)
+                                    bi dr <text><a href="https://unece.org/" target="_blank">UN-Wirtschaftskommission
+                                        für
+                                        Europa</a></strong>
+                                      (UNECE) z Genf
+                                      dient und paralleli Sitzige bi dr <text><a href="https://unfccc.int/"
+                                          target="_blank">UN-Klimakonferenz</a></strong>
+                                        (UNFCCC) z Bonn gläitet und sich für d’<text><a href="https://sdgs.un.org/goals"
+                                            target="_blank">UN-Nachhaltigkeitsziil</a></strong>
+                                          (SDGs) <text>7 </strong>(Günstigi Energii), <text>9
+                                              </strong>(Industrieinnovation)
+                                              und <text>13 </strong>(Klimaschutzmassnahmä) iisetzt.
+                                                <br><br>
+                                                E Scholar im Härz, hät er i <text>erneierbari
+                                                  Energii</strong> a dr
+                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                                      Züri</a></strong> i
+                                                    Zämegharbeit mit em
+                                                    <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                                        Institut</a></strong> i dr
+                                                      Schwiiz promoviärt.
+                                                      Vorhär hät er e MSc i Materialwüsseschafte a dr <text><a
+                                                          href="https://tum.de" target="_blank">TU
+                                                          München</a></strong> gmacht, wo er Praktika bi dr <text><a
+                                                            href="https://xfel.eu" target="_blank">European
+                                                            XFEL</a></strong> und bi <text><a
+                                                              href="https://infineon.com"
+                                                              target="_blank">Infineon</a></strong> z
+                                                            Dütschland absoviert hät. Si Leidenschaft für
+                                                            bedeutendschäftigi Forschig hät zu langfristige
+                                                            Zämegharbeit mit
+                                                            Brancheläiter im
+                                                            Wasserstoff- und Brennstoffzellbereich gführt, unger andrem
+                                                            mit
+                                                            <text>Toyota Motor</strong> z Japan
+                                                              und
+                                                              <text>Freudenberg Gruppe</strong>
+                                                                z Dütschland. Uf de Suech nach interdisziplinäre
+                                                                Horizont hät er e
+                                                                Witerbildig a dr <text><a
+                                                                    href="https://www.jbs.cam.ac.uk/"
+                                                                    target="_blank">Wirtschafsschuel vo dr Universität
+                                                                    Cambridge</a></text> gmacht und
+                                                                praktischi Erfahrig in ere duale
+                                                                Währigs-Venture-Capital-Firma sowie in ere
+                                                                füehrende Wertpapierfirma z China gsammlät.
+              </p>
+
+              <p id="bairisch-content" align="justify" style="display: none;">
+                Derzait is da Dr. Hong Xu a engagierter
+                <text>Foarscha</text> und <text>Ingenieur</text>, der si auf
+                <text>erneierbare Energien</text> und <text>e-Power-Systeme</text> spezialisiert hod und
+                noch
+                Effizienzexzellenz und
+                Kohlenstoffneutralität in den Bereichen Energie und Verkehr strebt.
+                In de letzten 10 Joahr hod a mit
+                multinationalen Firmen und füahrenden Institutionen am eurasischen Kontinent
+                zamg'arbeitet und
+                technische
+                Fortschritte in de Bereiche <text>e-Mobilität</text>, <text>saubere Energie</text> und
+                <text>neie
+                  Materialien</text>
+                vorangetriebn, mit <text><span class="no_of_papers"></span> veröffentlichten
+                  Artikeln</text>
+                und
+                <text><span class="no_of_patents"></span> erteilten Patenten</text>.
+                Neben seina ingenieurtechnischen Aktivitätn hod a
+                mit renommierten Organisationen, insbesonders dem Sankt Gallen Symposium, dem
+                Salzburger Globales
+                Seminar, CITIC
+                Wertpapier
+                und dem Oxford Institut fia Energiestudien, zamg'arbeitet und si auf d'Analyse von
+                saubare
+                <text>Energieökonomien
+                  und -politiken</strong> in Asien und
+                  Europa konzentriert. Als proaktiver Beitragender zur internationalen Entwicklung hod
+                  da Dr. Xu als
+                  Mitglied da
+                  Expertengruppe (GE)
+                  bei da <text><a href="https://unece.org/" target="_blank">UN-Wirtschaftskommission
+                      fia
+                      Europa</a></strong>
+                    (UNECE) in Genf
+                    gedient und parallele Sitzungen bei da <text><a href="https://unfccc.int/"
+                        target="_blank">UN-Klimakonferenz</a></strong>
+                      (UNFCCC) in Bonn g'leitet und si fia d' <text><a href="https://sdgs.un.org/goals"
+                          target="_blank">UN-Nachhaltigkeitsziele</a></strong>
+                        (SDGs) <text>7 </strong>(Erschwingliche Energie), <text>9
+                            </strong>(Industrieinnovation)
+                            und <text>13 </strong>(Maßnahmen zum Klimaschutz) eingesetzt.
+                              <br><br>
+                              A Gelehrter im Herzen, promoviert hod a in <text>erneierbare
+                                Energien</strong> an
+                                da
+                                <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                    Zürich</a></strong> in
+                                  Zusammenarbeit mit am
+                                  <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                      Institut</a></strong> in da
+                                    Schweiz.
+                                    Davor hod a
+                                    an MSc in Materialwissenschaften an da <text><a href="https://tum.de"
+                                        target="_blank">TU
+                                        München</a></strong>, wo a Praktika am <text><a href="https://xfel.eu"
+                                          target="_blank">European
+                                          XFEL</a></strong> und bei <text><a href="https://infineon.com"
+                                            target="_blank">Infineon</a></strong> in
+                                          Deutschland gmacht hod. Sei Leidenschaft fia
+                                          wirkungsvolle Foarschung hod zu a langfristigen
+                                          Zusammenarbeit mit
+                                          Branchenführern im
+                                          Bereich Wasserstoff und Brennstoffzellen g'füahrt, darunter
+                                          <text>Toyota Motor</strong> in Japan
+                                            und
+                                            <text>Freudenberg Gruppe</strong>
+                                              in Deutschland. In da Verfolgung interdisziplinärer
+                                              Horizonte hod a a Weiterbildung an da <text><a
+                                                  href="https://www.jbs.cam.ac.uk/" target="_blank">Wirtschaftsschui
+                                                  da Universität
+                                                  Cambridge</a></text> gmacht und
+                                              praktische Erfahrungen in am dualen
+                                              Währungs-Venture-Capital-Unternehmen sowie in am
+                                              füahrenden
+                                              Wertpapierunternehmen in China g'sammelt.
+              </p>
+
+              <p id="wienerisch-content" align="justify" style="display: none;">
+                Derzeit is da Dr. Hong Xu a engagierter
+                <text>Forscha</strong> und <text>Ingeniä</strong>, de si auf
+                    <text>erneuabare Energien</strong> und <text>e-Power-Systeme</strong> spezialisier hat und
+                        nocha Effizienzexzellenz und Kohlenstoffneutralität in da Energiewirtschaft und im Verkehr
+                        schaugt.
+                        In de letzten 10 Johr hot a mit multinationale Firmen und führende Instituazionen am eurasische
+                        Kontinent
+                        z'sammgarbeitet
+                        und technische Fortschritt in de Bereiche <text>e-Mobilität</strong>, <text>saubere
+                            Energie</strong> und
+                            <text>neie Materialien</strong> vorrangetrieben, mit <text><span
+                                  class="no_of_papers"></span>
+                                veröffentlichte Artikeln</strong>
+                                und <text><span class="no_of_patents"></span> erteilte Patente</strong>.
+                                  Neben seina ingenieurtechnische Tätigkeite hot a mit renommierte Organisazionen wia’m
+                                  Sankt Gallen
+                                  Symposium,
+                                  da Salzburger Global Seminar, CITIC Wertpapier und dem Oxford Institut für
+                                  Energiestudien
+                                  z'sammgarbeitet und si auf d’Analyse vo
+                                  sauberen <text>Energieökonomien und -politiken</strong> in Asien und Europa
+                                    konzentriert.
+                                    Als proaktiva Beitragender zur internationala Entwicklung hot da Dr. Xu ois Mitglied
+                                    vo da
+                                    Expertengruppe (GE)
+                                    bei da <text><a href="https://unece.org/" target="_blank">UN-Wirtschaftskommission
+                                        für
+                                        Europa</a></strong> (UNECE) in Genf
+                                      g'dient und parallele Sitzungen bei da <text><a href="https://unfccc.int/"
+                                          target="_blank">UN-Klimakonferenz</a></strong> (UNFCCC) in Bonn
+                                        g'leitet und si für d’ <text><a href="https://sdgs.un.org/goals"
+                                            target="_blank">UN-Nachhaltigkeitsziele</a></strong> (SDGs)
+                                          <text>7 </strong>(Bezahlbare Energie), <text>9 </strong>(Industrieinnovation)
+                                              und <text>13
+                                                </strong>(Klimaschutz) eig'setzt.
+                                                <br><br>
+                                                A g’lehrta im Herzen, hot a in <text>erneuabare Energien</strong> an da
+                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                                      Zürich</a></strong> in
+                                                    Z’sammarbeit mit’m
+                                                    <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                                        Institut</a></strong>
+                                                      in da Schwiz promoviert.
+                                                      Voher hot a an MSc in Materialwissenschaften an da <text><a
+                                                          href="https://tum.de" target="_blank">TU München</a></strong>
+                                                        kriagt, wo a Praktika beim <text><a href="https://xfel.eu"
+                                                            target="_blank">European XFEL</a></strong> und bei <text><a
+                                                              href="https://infineon.com"
+                                                              target="_blank">Infineon</a></strong> in
+                                                            Deitschland g'macht hot.
+                                                            Sei Leidenschaft für wirksame Forschung hot zu langfristige
+                                                            Z’sammarbeit mit
+                                                            Branchenführern im Bereich Wasserstoff und Brennstoffzellen
+                                                            g’führt,
+                                                            darunter <text>Toyota Motor</strong> in Japan und d’
+                                                              <text>Freudenberg
+                                                                Gruppe</strong> in Deitschland.
+                                                                In da Verfolgung interdisziplinärer Horizonte hot a a
+                                                                Weiterbildung an
+                                                                da
+                                                                <text><a href="https://www.jbs.cam.ac.uk/"
+                                                                    target="_blank">Wirtschaftsschule vo da Universität
+                                                                    Cambridge</a></text> gmacht und
+                                                                praktische Erfahrunga in am dualen
+                                                                Währungs-Venture-Capital-Unternehmen
+                                                                sowie in am führenden Wertpapierunternehmen in China
+                                                                g’sammelt.
+              </p>
+
+              <p id="niederdeutsch-content" align="justify" style="display: none;">
+                Dr. Hong Xu is een engagierten
+                <text>Forscher</strong> un <text>Ingenieur</strong>, de sük op
+                    <text>erneerbaare Energien</strong> un <text>e-Power-Systeme</strong> spetzialisert hett un no
+                        Effizienzexzellenz un Kohlenstoffneutralität in de Energie- un Verkeerstechnologie sträbt.
+                        In de letzten 10 Johren hett he mit multinationaalen Förrn un föhrenden Instituts up den
+                        eurasischen Kontinent
+                        tosamengearbeidt un technische Vörsprünge in de Bereichen <text>e-Mobilität</strong>,
+                          <text>schone
+                            Energie</strong> un
+                            <text>ne’e Materialien</strong> fördert, mit <text><span class="no_of_papers"></span>
+                                veröffentlihten
+                                Artikeln</strong>
+                                un <text><span class="no_of_patents"></span> annommene Patenten</strong>.
+                                  Niewend sien ingenieurtechnischen Tätigkeiten hett he mit bedüden Orgnisationen,
+                                  dorunner dat Sankt
+                                  Gallen Symposium,
+                                  dat Salzburger Global Seminar, CITIC Wertpapier un dat Oxford Institut för
+                                  Energiestudien
+                                  tosamengearbeidt un sük op de Analyse
+                                  vun schoonen <text>Energieökonomien un -politiken</strong> in Asien un Europa
+                                    koncentrert.
+                                    As en aktiv Bidrager to de internaatsionaale Entwicklung hett Dr. Xu as een Mitglied
+                                    vun de
+                                    Expertengruppe (GE)
+                                    bi de <text><a href="https://unece.org/" target="_blank">UN-Wirtschaftskommissioon
+                                        för
+                                        Europa</a></strong> (UNECE) in Genf
+                                      twischt un parallele Sitten bi de <text><a href="https://unfccc.int/"
+                                          target="_blank">UN-Klimakonferenz</a></strong> (UNFCCC) in Bonn
+                                        ledt un sük för de <text><a href="https://sdgs.un.org/goals"
+                                            target="_blank">UN-Nahhaltigkeitsdoelen</a></strong> (SDGs)
+                                          <text>7 </strong>(Tokamenbare Energie), <text>9 </strong>(Innovatschoon in de
+                                              Industrie) un
+                                              <text>13 </strong>(Klimaskutz) inset.
+                                                <br><br>
+                                                As een Gelehrten vun Harten hett he in <text>erneerbaare
+                                                  Energien</strong> bi de
+                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                                      Zürich</a></strong> in
+                                                    Tosamenarbeit mit dat
+                                                    <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                                        Institut</a></strong>
+                                                      in Swiez promoviert.
+                                                      Föhr hett he een MSc in Materialwissenschaften bi de <text><a
+                                                          href="https://tum.de" target="_blank">TU München</a></strong>
+                                                        maakt,
+                                                        wo he Praktika bi den <text><a href="https://xfel.eu"
+                                                            target="_blank">European
+                                                            XFEL</a></strong> un bi <text><a href="https://infineon.com"
+                                                              target="_blank">Infineon</a></strong> in Düütschland
+                                                            absolviert hett.
+                                                            Sien Lüsten un Engagement för warktüchtige Forschung hett to
+                                                            langdröge
+                                                            Tosamenarbeit mit föhrenden Branens in den Bereichen
+                                                            Waterstoff
+                                                            un Brennstoffzellen fört, dorunner <text>Toyota
+                                                              Motor</strong> in Japan un
+                                                              de <text>Freudenberg Grupp</strong> in Düütschland.
+                                                                In sien Süken no interdisciplinäre Chancen hett he en
+                                                                Weiterbildung bi
+                                                                de
+                                                                <text><a href="https://www.jbs.cam.ac.uk/"
+                                                                    target="_blank">Wirtschaftsschule vun de
+                                                                    Universiteit
+                                                                    Cambridge</a></text> maakt un
+                                                                praktische Erfahrungen in een dualen
+                                                                Währungs-Venture-Capital-Unternehmen so as in een
+                                                                föhrenden
+                                                                Wertpapierunternehmen in China instrakt.
+              </p>
+
+              <p id="dutch-content" align="justify" style="display: none;">
+                Momenteel is Dr. Hong Xu een toegewijde
+                <text>onderzoeker</strong> en <text>ingenieur</strong>, die zich heeft gespecialiseerd in
+                    <text>hernieuwbare energie</strong> en <text>e-Power-systemen</strong> en streeft naar
+                        efficiëntie-excellentie en
+                        koolstofneutraliteit in de sectoren energie en transport.
+                        In de afgelopen 10 jaar heeft hij samengewerkt met
+                        multinationale bedrijven en toonaangevende instellingen op het Euraziatische continent
+                        en heeft technische
+                        vooruitgangen geboekt in de gebieden van <text>e-mobiliteit</strong>, <text>schoon
+                            energie</strong> en
+                            <text>nieuwe materialen</strong>,
+                              met <text><span class="no_of_papers"></span> gepubliceerde artikelen</strong>
+                                en
+                                <text><span class="no_of_patents"></span> verleende patenten</strong>.
+                                  Naast zijn
+                                  ingenieurstechnische activiteiten heeft hij samengewerkt met gerenommeerde
+                                  organisaties,
+                                  met name het Sankt Gallen Symposium, het
+                                  Salzburger Global Seminar, CITIC
+                                  Waarde Papier
+                                  en het Oxford Instituut voor Energiestudies, en zich gericht op de
+                                  analyse van
+                                  schone
+                                  <text>energie-economieën
+                                    en -politiek</strong> in Azië en
+                                    Europa. Als een proactieve bijdrage aan de internationale ontwikkeling heeft
+                                    Dr. Xu als
+                                    lid van de
+                                    Expertgroep (GE)
+                                    bij de <text><a href="https://unece.org/" target="_blank">VN-Economiecommissie
+                                        voor Europa</a></strong>
+                                      (UNECE) in Genève
+                                      gediend en parallelle vergaderingen geleid bij de <text><a
+                                          href="https://unfccc.int/" target="_blank">VN-klimaatconferentie</a></strong>
+                                        (UNFCCC) in Bonn en zich ingezet voor de <text><a
+                                            href="https://sdgs.un.org/goals"
+                                            target="_blank">VN-duurzaamheidsdoelen</a></strong>
+                                          (SDG's) <text>7 </strong>(Betaalbare Energie), <text>9
+                                              </strong>(Industrie-innovatie)
+                                              en <text>13 </strong>(Klimaatactie).
+                                                <br><br>
+                                                Een geleerde in hart en nieren, promoveerde hij in <text>hernieuwbare
+                                                  energie</strong>
+                                                  aan de
+                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                                      Zürich</a></strong> in
+                                                    samenwerking met het
+                                                    <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                                        Instituut</a></strong>
+                                                      in Zwitserland.
+                                                      Daarvoor behaalde hij een MSc in materiaalkunde aan de <text><a
+                                                          href="https://tum.de" target="_blank">TU München</a></strong>,
+                                                        waar hij stages
+                                                        liep bij het <text><a href="https://xfel.eu"
+                                                            target="_blank">European
+                                                            XFEL</a></strong> en bij <text><a
+                                                              href="https://infineon.com"
+                                                              target="_blank">Infineon</a></strong> in Duitsland. Zijn
+                                                            passie voor
+                                                            impactvolle onderzoek heeft geleid tot langdurige
+                                                            samenwerking met
+                                                            toonaangevende bedrijven in het
+                                                            veld van waterstof en brandstofcellen, waaronder
+                                                            <text>Toyota Motor</strong> in Japan
+                                                              en de <text>Freudenberg Groep</strong>
+                                                                in Duitsland. In de zoektocht naar interdisciplinaire
+                                                                horizonten voltooide hij een vervolgopleiding aan de
+                                                                <text><a href="https://www.jbs.cam.ac.uk/"
+                                                                    target="_blank">Business School
+                                                                    van de Universiteit Cambridge</a></text> en
+                                                                verzamelde praktische ervaring in een duale
+                                                                valutaventure-capitalbedrijf en in een
+                                                                leidend
+                                                                effectenbedrijf in China.
+              </p>
+
+              <p id="luxembourgish-content" align="justify" style="display: none;">
+                Derzäit ass Dr. Hong Xu e engagéierten
+                <text>Fuerscher</strong> an <text>Ingenieur</strong>, deen sech op
+                    <text>erneierbar Energie</strong> an <text>e-Power-Systemer</strong> spezialiséiert huet an
+                        no
+                        Effizienzexzellenz an
+                        Kohlenstoffneutralitéit an den Beräicher Energie an Transport streift.
+                        An de leschte 10 Joer huet hien mat
+                        multinationalen Entreprisen an féierende Institutiounen um eurasiatesche Kontinent
+                        zesummegeschafft an
+                        technesch
+                        Fortschrëtter an den Beräicher <text>e-Mobilitéit</strong>, <text>sauber Energie</strong> an
+                            <text>nei Materialien</strong>
+                              virubrécht, mat <text><span class="no_of_papers"></span> verëffentlechte
+                                Artikelen</strong>
+                                an
+                                <text><span class="no_of_patents"></span> erteilte Patente</strong>.
+                                  Neescht sengen
+                                  Ingenieuraktivitéiten huet hien mat renomméierte Organisatiounen, besonnesch dem Sankt
+                                  Gallen
+                                  Symposium, dem
+                                  Salzburger Globalen
+                                  Seminar, CITIC
+                                  Währungsdokument
+                                  an dem Oxford Institut fir Energiestudien, zesummegeschafft an sech op d'Analyse vun
+                                  enger
+                                  <text>Energieekonomien
+                                    an -politik</strong> an Asien an
+                                    Europa konzentréiert. Als proaktiven Bäitrag zur internationaler Entwécklung huet
+                                    Dr. Xu als
+                                    Member vun der
+                                    Expertengrupp (GE)
+                                    bei der <text><a href="https://unece.org/" target="_blank">UN-Wirtschaftskommissioun
+                                        fir Europa</a></strong>
+                                      (UNECE) zu Genf
+                                      gedéngt an parallel Sëtzungen bei der <text><a href="https://unfccc.int/"
+                                          target="_blank">UN-Klimakonferenz</a></strong>
+                                        (UNFCCC) zu Bonn geleet an sech fir d'<text><a href="https://sdgs.un.org/goals"
+                                            target="_blank">UN-Nachhaltigkeitsziler</a></strong>
+                                          (SDGs) <text>7 </strong>(Erschwinglech Energie), <text>9
+                                              </strong>(Industrieinnovatioun)
+                                              an <text>13 </strong>(Aktioune fir de Klimaschutz) agestallt.
+                                                <br><br>
+                                                E Gelehrten am Häerzen, huet hien an <text>erneierbare Energie</strong>
+                                                  promovéiert an
+                                                  der
+                                                  <text><a href="https://ethz.ch/en.html" target="_blank">ETH
+                                                      Zürich</a></strong> an
+                                                    Zesummenaarbecht mam
+                                                    <text><a href="https://psi.ch" target="_blank">Paul Scherrer
+                                                        Institut</a></strong>
+                                                      an der
+                                                      Schwiereg.
+                                                      Virdrun huet hien e MSc an Materialwëssenschaften un der <text><a
+                                                          href="https://tum.de" target="_blank">TU München</a></strong>
+                                                        gemaach, wou
+                                                        hien Praktika beim <text><a href="https://xfel.eu"
+                                                            target="_blank">European
+                                                            XFEL</a></strong> an bei <text><a
+                                                              href="https://infineon.com"
+                                                              target="_blank">Infineon</a></strong> an Däitschland
+                                                            gemaach huet. Seng
+                                                            Passioun fir
+                                                            wëssenschaftlech Fuerschung huet zu enger laangfristeg
+                                                            Zesummenaarbecht mat
+                                                            Industrifirmen am
+                                                            Beräich Wasserstoff an Brennstoffzellen gefouert, dorënner
+                                                            <text>Toyota Motor</strong> zu Japan
+                                                              an der <text>Freudenberg Gruppe</strong>
+                                                                an Däitschland. An der Verfollegung vun
+                                                                interdisziplinären
+                                                                Horizonten huet hie seng Ausbildung un der <text><a
+                                                                    href="https://www.jbs.cam.ac.uk/"
+                                                                    target="_blank">Wirtschaftsschoul
+                                                                    vun der Universitéit Cambridge</a></text> gemaach an
+                                                                praktesch Erfahrung gesammelt an engem duale
+                                                                Währungs-Venture-Capital-Firma an och an engem
+                                                                féierendem
+                                                                Währungsdokumentfirma zu China.
               </p>
 
               <p style="text-align:left;">
@@ -741,6 +1216,21 @@
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["hochdeutsch-content", "luxembourgish-content", "dutch-content", "niederdeutsch-content", "wienerisch-content", "bairisch-content", "zueritueetsch-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
   </div>
 
 </body>
