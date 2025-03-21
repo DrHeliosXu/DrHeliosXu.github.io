@@ -542,7 +542,7 @@ function adjustWidth(selectElement) {
     tempSelect.style.width = 'auto';
     const maxWidth = tempSelect.clientWidth;
 
-    selectElement.style.width = `${maxWidth + 12}px`; // Add some padding
+    selectElement.style.width = `${maxWidth + 8}px`; // Add some padding
     document.body.removeChild(tempSelect);
 }
 
