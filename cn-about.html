@@ -1511,17 +1511,18 @@
 
           // 根据字体选择进行预处理
           if (selectedFont === "YiShanBeiZhuanTi" ||
-            selectedFont === "HanYiShouJinShuFan" ||
             selectedFont === "ShangShouHongZhiShouXieTi" ||
             selectedFont === "HanYiMinJinLiShu" ||
-            selectedFont === "HanYiChenTiJiaGuWen") {
+            selectedFont === "HanYiChenTiJiaGuWen" ||
+            selectedFont === "HanYiShouJinShuFan") {
             convertToSimplified(); // 转换为简体字
           } else if (selectedFont === "KangXiZiDianTi" ||
             selectedFont === "DanZhaiCaoShuZiTi" ||
             selectedFont === "RiBenJieKaiShuTi" ||
             selectedFont === "WangHanZongCuMingTiFan" ||
             selectedFont === "KeShiLuYanTi" ||
-            selectedFont === "LiBianLiShuTi") {
+            selectedFont === "LiBianLiShuTi"
+          ) {
             convertToTraditional(); // 转换为繁体字
           }
 
