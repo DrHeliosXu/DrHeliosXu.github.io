@@ -319,10 +319,28 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Biographie</h1>
+
+
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Biographie
+              <select id="languages-4" name="languages" style="
+                                                    width:auto;
+                                                    height: 25px;
+                                                    margin-left: 5px;
+                                                    border-radius: 0;
+                                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                    text-align: center; /* 新增 */
+                                                    text-align-last: center; /* 确保选中的选项居中 */
+                                                  " onchange="changeLanguage()">
+                <option value="french">Français moderne</option>
+                <option value="old-french">Ancien français</option>
+                <option value="latin-french">Latin français</option>
+              </select>
+            </h1>
+
             <hr />
             <div class="story">
-              <p align="justify">
+              <p id="french-content" align="justify" style="display: block;">
                 Actuellement, le Dr. Hong Xu est un <text>Chercheur</text> et <text>Ingénieur</text>
                 engagé, spécialisé
                 dans
@@ -402,6 +420,163 @@
                 devise et
                 dans une entreprise leader en valeurs mobilières en
                 Chine.
+              </p>
+
+              <p id="old-french-content" align="justify" style="display: none;">
+                A ceste heure, li Sires Hong Xu est un <text>Cercheor</text> et <text>Engigneor</text>
+                aduré, especialisé
+                en
+                <text>l'Energie Renouvelable</text> et <text>les Sistremes e-Poeste</text>, s'esforçant
+                d'ateindre
+                l'Excellence en Efficacité et
+                la Neutralité Carbone es secteurs de l'Energie et du Transporter.
+                Ou cours des X derrenières années, il at
+                ovré ovecques
+                multinacionals et institucions de premier renom par le continent eurasiac,
+                avançant les progrès
+                tecniques es
+                industries de <text>l'e-Mobilité</text>, de <text>l'Energie Nete</text> et de
+                <text>Nouviaus
+                  Matérials</text>
+                ovecques <text><span class="no_of_papers"></span> escriptz</text> publiés et <text><span
+                    class="no_of_patents"></span>
+                  brevets</text> octroiés. Parallèlement ses
+                oevres d'engignerie, il at
+                collaboré ovecques maintes renommées maisons, nommément le Simposire de Saint-Galle, le
+                Seminaire
+                mondial de
+                Salzebourg,
+                CITIC
+                Valeurs mobilières,
+                et l'Institut d'Oxenford pour les estudes energiques, se concentrant sur l'analyse de
+                l'économie de
+                <text>l'Energie Nete
+                  et de la Policie</text>
+                en Asie et
+                en Europe. Comme contributeur actif au devlopement international, li Sires
+                Xu fut
+                membre du Groupe
+                d'Experts (GE) à
+                la <text><a href="https://unece.org/" target="_blank">Comission Economique des
+                    Nations Unies
+                    pour Europe</a></text> (UNECE) à Genève, et presida les sessions
+                parallèles à la
+                <text><a href="https://unfccc.int/" target="_blank">Conférence des Nations Unies
+                    sur les
+                    Muez
+                    Climatiques</a></text> (UNFCCC) à Bonn,
+                plaidant pour les <text><a href="https://sdgs.un.org/goals" target="_blank">Objectifs de
+                    Developpement
+                    Durable</a></text> (ODD) <text>VII </text>(Energie Abordable), <text>IX
+                </text>(Innovacion
+                Industrielle),
+                et
+                <text>XIII </text>(Action Climatique).
+
+                <br><br>
+                Clers en l'ame, il poursuist son doctorat en <text>Energie
+                  Renouvelable</text> à
+                l'<text><a href="https://ethz.ch/en.html" target="_blank">Escole
+                    polytechnicque fédérale de
+                    Zurich</a></text>, en
+                collaboration ovecques l'<text><a href="https://psi.ch" target="_blank">Institut Paul
+                    Scherrer</a></text> en
+                Suisse. Auparavant, il
+                aquist un MSc en Science des Matérials à l'<text><a href="https://tum.de" target="_blank">Université
+                    Tecnique de
+                    Munic</a></text> ovecques stages au <text><a href="https://xfel.eu" target="_blank">XFEL
+                    européen</a></text> et à <text><a href="https://infineon.com" target="_blank">Infineon</a></text> en
+                Alemaigne. Sa passion pour la cerche impactante l'at
+                mené à long terme engagement ovecques
+                leaders de
+                l'industrie en
+                ydrogène et piles combustibles, nommément
+                <text>Toyota Motor</text> ou Jappon et le
+                <text>Groupe
+                  Freudenberg</text>
+                en Alemaigne. En sa queste d'horizons
+                entredisciplinaires, il suivit formation
+                executive à la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Judge Business Escole
+                    de Cambridge</a></text>, aquerant expérience
+                practique en une société de capital-risque à double
+                monnoie et
+                en une maison leader en valeurs mobilières en
+                Chine.
+              </p>
+
+
+              <p id="latin-french-content" align="justify" style="display: none;">
+                In praesenti tempore, Dominus Hong Xu est <text>Investigatorem</text> et <text>Ingeniatorum</text>
+                devotum, specializatum
+                in
+                <text>Energiae Renovabilis</text> et <text>Systemata Electricitatis</text>, contendens
+                ad perfectionem efficientiae
+                et neutralitatem carbonis in regnis energiae et transportationis.
+                Per decennium elapsum, cooperatus est
+                cum
+                corporationibus multinationalibus et institutis praestantibus trans continentem eurasiaticum,
+                promovens progressum
+                technicum in
+                campis <text>e-Mobilitatis</text>, <text>Energiae Mundae</text> et
+                <text>Materiarum Novarum</text>
+                cum <text><span class="no_of_papers"></span> scriptis</text> publicatis et <text><span
+                    class="no_of_patents"></span>
+                  privilegiis</text> concessis. Parallele suae
+                operationes ingenii, collaboravit
+                cum organizationibus insignibus, nominatim Symposio Sancti Galli, Seminario
+                Globali Salisburgensi,
+                CITIC
+                Valorum Mobilium,
+                et Instituto Oxoniensi pro Studis Energeticis, focum dans analysi
+                oeconomiae
+                <text>Energiae Mundae
+                  et Politicarum</text>
+                in Asia et
+                Europa. Tamquam contribuens activus ad progressionem internationalem, Dominus
+                Xu fuit
+                membrum Groupis
+                Peritorum (GE) apud
+                <text><a href="https://unece.org/" target="_blank">Commissionem Oeconomicam
+                    Nationum Unitarum
+                    pro Europa</a></text> (UNECE) Genevae, et praesedit sessionibus
+                parallelis ad
+                <text><a href="https://unfccc.int/" target="_blank">Conventionem Nationum Unitarum
+                    de Mutatione
+                    Climatica</a></text> (UNFCCC) Bonnae,
+                advocans pro <text><a href="https://sdgs.un.org/goals" target="_blank">Propositis
+                    Developmenti
+                    Durabilis</a></text> (SDGs) <text>VII </text>(Energia Affordable), <text>IX
+                </text>(Innovatio
+                Industrialis),
+                et
+                <text>XIII </text>(Actio Climatica).
+
+                <br><br>
+                Scholasticus corde, persecutus est doctoralem gradum in <text>Energia
+                  Renovabili</text> apud
+                <text><a href="https://ethz.ch/en.html" target="_blank">Scholam Polytechnicum Federalem
+                    Turicensem</a></text>, in
+                cooperatione cum <text><a href="https://psi.ch" target="_blank">Instituto Pauli
+                    Scherrer</a></text> in
+                Helvetia. Antea,
+                acquisivit MSc in Scientia Materiarum apud <text><a href="https://tum.de" target="_blank">Universitatem
+                    Technicam
+                    Monacensem</a></text> cum internship apud <text><a href="https://xfel.eu" target="_blank">XFEL
+                    Europaeum</a></text> et <text><a href="https://infineon.com" target="_blank">Infineon</a></text> in
+                Germania. Eius passio pro investigatione efficaci duxit
+                ad collaborationem diuturnam cum
+                ducibus industriae in
+                hydrogenio et cellulis combustibilibus, inter quos
+                <text>Toyota Motor</text> in Iaponia et
+                <text>Gruppus Freudenberg</text>
+                in Germania. In exploratione
+                horizontum interdisciplinariorum, absolvit educationem
+                executivam apud <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Scholam Negotiorum Iudicis
+                    Cantabrigiensem</a></text>, acquirens experientiam
+                practicam in societate capitalis periculosi binae
+                monetae et
+                in praecipua societate valorum mobilium in
+                Sina.
               </p>
 
 
@@ -766,6 +941,21 @@
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["french-content", "old-french-content", "latin-french-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
   </div>
 
 </body>

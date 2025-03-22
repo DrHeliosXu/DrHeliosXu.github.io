@@ -350,6 +350,7 @@
                                                     text-align-last: center; /* 确保选中的选项居中 */
                                                   " onchange="changeLanguage()">
                 <option value="japanese" selected>標準日本語</option>
+                <option value="old-japanese">上代日本語</option>
                 <option value="hiragana">ふりがな</option>
               </select>
             </h1>
@@ -395,6 +396,41 @@
                     スクール</a></strong>で取得し、
                 <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">ケンブリッジ大学ビジネススクール</a></strong>で追加の経営教育を受け、
                 中国の二重通貨ベンチャーキャピタル会社と主要証券会社で実務経験を積みました。
+              </p>
+
+              <p id="old-japanese-content" align="justify" style="display: none;">
+                今、徐泓の大夫は <strong>研究者</strong> 及び <strong>工匠</strong> として <strong>再生なる力</strong> と
+                <strong>e-電力すゑ</strong> を
+                専らにし、力および御車の分野にて能の秀びたると炭を減らす事を追ひ求む。
+                過ぎし十年、彼は洲羅之大なる地の上、多国の商工および大事の所と力を合はせ、
+                <strong>e-行き</strong>、<strong>清き力</strong>、および<strong>新しき材</strong>
+                工の革新を成さしむ。
+                <strong><span class="no_of_papers"></span>本の文</strong> を出だし、<strong><span class="no_of_patents"></span>
+                  件の書</strong> を得たり。彼が工匠としての事業とともに、徐博士は
+                瑞西のセントガレンの會、墺太利のザルツブルグ 世界會議、唐国の中信證券、ならびに牛津の力研究所といふ名の高き
+                所とともに、亜細亜および
+                洲羅之大なる地の <strong>清き力の經済および策</strong> の調へを専らにしつ。
+                世の事を益くし、徐博士は
+                <strong><a href="https://unece.org/" target="_blank">国連欧州の經済會議</a></strong>（UNECE）の識者の衆（GE）
+                の一人として働き、
+                <strong><a href="https://unfccc.int/" target="_blank">国連氣候の変動會議</a></strong>（UNFCCC）
+                にて并せて座を主とし
+                <strong><a href="https://sdgs.un.org/goals" target="_blank">国連の成し遂げを目する事</a></strong>（SDGs）
+                <strong>七
+                </strong>（手近なる力）、 <strong>九 </strong>（業の革新）、および <strong>十三 </strong>（氣候の事を施す）を稱ふ。
+                <br><br>
+                心より學人にして、<strong>再生なる力</strong> の領にて<strong><a href="https://ethz.ch/en.html"
+                    target="_blank">チューリッヒの工藝大學</a></strong>
+                にて博士の位を得、瑞西の <strong><a href="https://psi.ch" target="_blank">ポール・シェラーの研究所</a></strong> と共に働きつ。 その前に、
+                彼は<strong><a href="https://tum.de" target="_blank">慕尼黒の工藝大學</a></strong> にて材の學問を修め、<strong><a
+                    href="https://xfel.eu" target="_blank">欧州の光之新社</a></strong> 及び <strong><a
+                    href="https://infineon.com" target="_blank">インフィニオン</a></strong> にて弟子として仕へつ。
+                研究への志深く、日本の <strong>豊田の自動車</strong> ならびに独逸の <strong>フロイデンベルクの群</strong> といふ
+                水素および燃えざる炭の事を業とする所との長き結びを成さしむ。
+                学と事を兼ぬべく、彼は<strong>經營の學</strong> を <strong><a href="https://quantic.edu/mba" target="_blank">クアンティック
+                    の商學院</a></strong> にて修め、
+                <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋の大學商學院</a></strong> にて經營の教へを更に受け、
+                唐国の二つの金の商ひを主とする所および證券所にて仕へつ。
               </p>
 
 
@@ -1313,7 +1349,7 @@
     <script>
       function changeLanguage() {
         // 隐藏所有语言的内容
-        var languages = ["japanese-content", "hiragana-content"];
+        var languages = ["japanese-content", "old-japanese-content", "hiragana-content"];
         languages.forEach(function (language) {
           document.getElementById(language).style.display = "none";
         });
