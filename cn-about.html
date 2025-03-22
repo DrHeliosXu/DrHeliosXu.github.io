@@ -1481,7 +1481,7 @@
       document.getElementById('font-selector').addEventListener('change', function () {
         const selectedFont = this.value;
         const selectedSize = this.options[this.selectedIndex].getAttribute('data-size'); // 获取对应的字体大小
-        const contentIds = ["chinese-content", "canton-content", "old-chinese-content", "jianjie"]; // 需要应用的内容ID数组
+        const contentIds = ["chinese-content", "canton-content", "old-chinese-content"]; // 需要应用的内容ID数组
 
         // 遍历所有内容元素
         contentIds.forEach(id => {
@@ -1504,29 +1504,19 @@
             convertToTraditional(); // 转换为繁体字
           }
 
+
           // 如果选择了默认字体
           if (selectedFont === "default") {
             content.style.fontFamily = "";  // 恢复到网页的默认字体
             content.style.fontSize = "";    // 恢复到网页的默认字体大小
             content.style.fontWeight = ""; // 恢复默认字体粗细
-
-            // 恢复 #jianjie 的字体大小为 1em
-            if (id === 'jianjie') {
-              content.style.fontSize = '1em';
-            }
-
           } else {
             // 设置所选字体和字体大小
             content.style.fontFamily = selectedFont;
             content.style.fontSize = selectedSize;
 
-            // 如果选项不是默认字体，将 #jianjie 的字体大小设置为 1.5em
-            if (id === 'jianjie') {
-              content.style.fontSize = '1.3em';
-            }
-
             // 特定字体设置为粗体
-            if (selectedFont === "HanYiShouJinShuFan") {
+            if (selectedFont === "X") {
               content.style.fontWeight = "bold";
             } else {
               content.style.fontWeight = ""; // 恢复非粗体样式
