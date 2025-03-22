@@ -1474,6 +1474,27 @@
         if (selectedContent) {
           selectedContent.style.display = 'block';
         }
+
+        // 获取字体选择器元素
+        var fontSelector = document.getElementById('font-selector');
+
+        // 如果选中的语言不是 "chinese", "canton" 或 "old-chinese"
+        if (selectedLanguage !== "chinese" && selectedLanguage !== "canton" && selectedLanguage !== "old-chinese") {
+          // 强制将字体选择器设置为默认选项
+          fontSelector.value = "default";
+
+          // 获取所有需要应用字体设置的内容元素
+          var contentIds = ["chinese-content", "canton-content", "old-chinese-content", "jianjie"];
+          contentIds.forEach(id => {
+            var content = document.getElementById(id);
+            if (content) {
+              // 恢复字体和字体大小为默认
+              content.style.fontFamily = "";  // 恢复默认字体
+              content.style.fontSize = "";    // 恢复默认字体大小
+              content.style.fontWeight = "";  // 恢复字体粗细
+            }
+          });
+        }
       }
     </script>
 
