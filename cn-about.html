@@ -465,7 +465,7 @@
                                           text-align-last: center; /* 确保选中的选项居中 */
                                           ">
                   <option value="default" data-size="auto" selected>默认字体</option>
-                  <option value=" HanYiChenTiJiaGuWen" data-size="26px">商/甲骨文</option>
+                  <option value="HanYiChenTiJiaGuWen" data-size="26px">商/甲骨文</option>
                   <option value="YiShanBeiZhuanTi" data-size="26px">秦/小篆</option>
                   <option value="HanYiMinJinLiShu" data-size="26px">漢/隸書</option>
                   <option value="HengShanMaoBiCaoShu" data-size="26px">魏晋/行草</option>
@@ -1492,10 +1492,10 @@
           if (selectedFont === "YiShanBeiZhuanTi" ||
             selectedFont === "HanYiShouJinShuFan" ||
             selectedFont === "ShangShouHongZhiShouXieTi" ||
-            selectedFont === "HanYiMinJinLiShu") {
+            selectedFont === "HanYiMinJinLiShu" ||
+            selectedFont === "HanYiChenTiJiaGuWen") {
             convertToSimplified(); // 转换为简体字
           } else if (selectedFont === "KangXiZiDianTi" ||
-            selectedFont === "HanYiChenTiJiaGuWen" ||
             selectedFont === "HengShanMaoBiCaoShu" ||
             selectedFont === "RiBenJieKaiShuTi" ||
             selectedFont === "WangHanZongCuMingTiFan" ||
