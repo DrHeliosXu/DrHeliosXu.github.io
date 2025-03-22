@@ -325,11 +325,30 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Biography</h1>
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Biography
+              <select id="languages-4" name="languages" style="
+                                                                width:auto;
+                                                                height: 25px;
+                                                                margin-left: 5px;
+                                                                border-radius: 0;
+                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                text-align: center; /* 新增 */
+                                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                              " onchange="changeLanguage()">
+                <option value="english">Modern English</option>
+                <option value="british-english">Middle English</option>
+                <option value="old-english">Old English (Ænglisc)</option>
+
+                <!-- <option value="american-english">American</option> -->
+                <option value="singaporian-english">Singlish</option>
+              </select>
+            </h1>
+
             <hr>
             <div class="">
-              <p align="justify">
-                Currently, Dr. Hong Xu is a dedicated <text>Researcher</text> and <text>Engineer</text>
+              <p id="english-content" align="justify" style="display: block;">
+                Currently, Dr. Hong Xu is a dedicated <text>Researcher</text> and <text>Engineer</text> lah,
                 specializing in
                 <text>Renewable Energy</text> and <text>e-Power Systems</text>, striving for Efficiency
                 Excellence and
@@ -366,9 +385,7 @@
                 Innovation),
                 and
                 <text>13 </text>(Climate Action).
-              </p>
-
-              <p align="justify">
+                <br><br>
                 A scholar by heart, he pursued his PhD in <text>Renewable Energy</text> from <text><a
                     href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, in collaboration with
                 the <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> in
@@ -393,6 +410,235 @@
                 China.
               </p>
 
+
+              <p id="old-english-content" align="justify" style="display: none;">
+                Wæs hit æt þissum tidum, Dr. Hong Xu is a dedicated <text>Researcher</text> and <text>Engineer</text>,
+                spêciling in <text>Renewable Energy</text> and <text>e-Power Systems</text>, striving for æfneþæt
+                excellence
+                and carbon neutrality in þǣm energy and transportation. Ofer þā þæt tīma of ten winter, he hæfde
+                geweorc mid multinational corporations and leading institutions ofer þone eallum æþele Eurasian,
+                þearfwendlīc þæt he hine gefremede in þǣm technical advancements in <text>e-Mobility</text>, <text>Clean
+                  Energy</text>,
+                and <text>New Materials</text>. His worc is beþoden in his <text><span class="no_of_papers"></span>
+                  published
+                  papers</text>
+                and <text><span class="no_of_patents"></span> granted patents</text>.
+
+                And þærþon his engineering, Dr. Xu hæfþ beengend with þeos renowod organizations, swylce þæt St. Gallen
+                Symposium,
+                Salzburg Global Seminar, CITIC Securities, and þæt Oxford Institute for Energy Studies, hæfde his micel
+                weorc on <text>Energy Economics and Policy</text> be ætweon Asia and Europe. A proactive contributor to
+                international development, Dr. Xu hæfde served as a Group of Experts (GE) member æt þǣm <text><a
+                    href="https://unece.org/" target="_blank">United Nations Economic Commission for Europe</a></text>
+                (UNECE) in
+                Geneva,
+                and hæfþ chaired parallel sessions æt þǣm <text><a href="https://unfccc.int/" target="_blank">UN Climate
+                    Change
+                    Conference</a></text>
+                in Bonn, advocating for þǣm <text><a href="https://sdgs.un.org/goals" target="_blank">UN Sustainable
+                    Development
+                    Goals</a></text> (SDGs),
+                swā <text>Goal 7</text> (Affordable Energy), <text>Goal 9</text> (Industry Innovation), and <text>Goal
+                  13</text>
+                (Climate Action).
+
+                <br><br>
+                A scholar of heort, Dr. Xu earned his PhD in <text>Renewable Energy</text> from <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, in cymlic with þæt <text><a
+                    href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> in þǣm Swīcerlande. Before
+                þæt, he attained an MSc in Materials Science from þǣm <text><a href="https://tum.de"
+                    target="_blank">Technical
+                    University of
+                    Munich</a></text>, with internships æt þǣm <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text> and
+                <text><a href="https://infineon.com" target="_blank">Infineon</a></text> in þǣm Germany. His passion for
+                impactful
+                research
+                hæfþ læded him to lang-held collaborations mid industry leaders in hydrogen and fuel cell technologies,
+                swylce <text>Toyota Motor</text> in Japan and þæt <text>Freudenberg Group</text> in Germany.
+
+                In pursuit of interdisciplinary expertise, Dr. Xu completed Executive Education æt þǣm <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></text>,
+                gaining practical experience æt a dual-currency venture capital firm and a leading securities company in
+                China.
+              </p>
+
+              <p id="british-english-content" align="justify" style="display: none;">
+                Lo, at present, Dr. Hong Xu doth dedicate himself as a humble <text>Researcher</text> and
+                <text>Engineer</text>,
+                specialising in <text>Renewable Energy</text> and <text>e-Power Systems</text>, striving ever for
+                excellence in
+                efficiency and carbon neutrality within the realms of energy and transportation. These ten years past,
+                he hath
+                laboured alongside multinational corporations and esteemed institutions across the vast continent of
+                Eurasia,
+                driving forward technical advancements in <text>e-Mobility</text>, <text>Clean Energy</text>, and
+                <text>New
+                  Materials</text>.
+                His noble works are reflected in the <text><span class="no_of_papers"></span> papers published</text>
+                and <text><span class="no_of_patents"></span> patents granted</text>.
+
+                Yet beyond his engineering feats, Dr. Xu hath joined hands with renowned organisations, such as the St.
+                Gallen
+                Symposium,
+                the Salzburg Global Seminar, CITIC Securities, and the Oxford Institute for Energy Studies. His focus
+                hath been on the
+                intricate study of <text>Energy Economics and Policy</text> across the lands of Asia and Europe. A true
+                advocate for
+                international development, Dr. Xu hath served as a Group of Experts (GE) member at the <text><a
+                    href="https://unece.org/" target="_blank">United Nations Economic Commission for Europe</a></text>
+                (UNECE) in
+                Geneva, and
+                hath chaired sessions most wise at the <text><a href="https://unfccc.int/" target="_blank">UN Climate
+                    Change
+                    Conference</a></text>
+                (UNFCCC) in Bonn. With heart and soul, he doth champion the <text><a href="https://sdgs.un.org/goals"
+                    target="_blank">UN
+                    Sustainable
+                    Development Goals</a></text> (SDGs), particularly <text>Goal 7</text> (Affordable Energy),
+                <text>Goal 9</text>
+                (Industry
+                Innovation), and <text>Goal 13</text> (Climate Action).
+
+                <br><br>
+                A scholar true of heart, Dr. Xu didst earn his PhD in <text>Renewable Energy</text> from <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, in partnership with the
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> in fair Switzerland.
+                Ere that, he attained
+                an MSc in
+                Materials Science from the <text><a href="https://tum.de" target="_blank">Technical University of
+                    Munich</a></text>,
+                with internships at the <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> and
+                <text><a href="https://infineon.com" target="_blank">Infineon</a></text> in the lands of Germany. His
+                passion for impactful
+                research
+                hath led him to long-standing alliances with industry leaders in hydrogen and fuel cell technologies,
+                most notably
+                <text>Toyota Motor</text> of Japan and the <text>Freudenberg Group</text> of Germany.
+
+                In his quest to broaden his knowledge, Dr. Xu didst complete Executive Education at the <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></text>,
+                gaining practical experience at a dual-currency venture capital firm and a foremost securities company
+                in China.
+              </p>
+
+
+
+              <p id="american-english-content" align="justify" style="display: none;">
+                Right now, Dr. Hong Xu is a dedicated <text>Researcher</text> and <text>Engineer</text>, specializing in
+                <text>Renewable Energy</text> and <text>e-Power Systems</text>. He's focused on achieving top-notch
+                efficiency and
+                carbon neutrality in the energy and transportation sectors. Over the last 10 years, he's worked with
+                major
+                corporations and top institutions across Eurasia, leading innovations in <text>e-Mobility</text>,
+                <text>Clean
+                  Energy</text>, and <text>New Materials</text>. He's published <text><span class="no_of_papers"></span>
+                  papers</text>
+                and holds <text><span class="no_of_patents"></span> patents</text>.
+
+                Along with his engineering work, Dr. Xu has teamed up with some well-known organizations, like the St.
+                Gallen
+                Symposium, Salzburg Global Seminar, CITIC Securities, and the Oxford Institute for Energy Studies. His
+                focus has been
+                on analyzing <text>Energy Economics and Policy</text> in Asia and Europe. Dr. Xu is also actively
+                involved in
+                international development. He’s been a Group of Experts (GE) member at the <text><a
+                    href="https://unece.org/" target="_blank">UN Economic Commission for Europe</a></text> (UNECE) in
+                Geneva, and he’s chaired sessions at the
+                <text><a href="https://unfccc.int/" target="_blank">UN Climate Change Conference</a></text> (UNFCCC) in
+                Bonn. He
+                advocates for <text><a href="https://sdgs.un.org/goals" target="_blank">UN Sustainable Development
+                    Goals</a></text>
+                (SDGs), especially <text>Goal 7</text> (Affordable Energy), <text>Goal 9</text> (Industry Innovation),
+                and <text>Goal
+                  13</text> (Climate Action).
+
+                <br><br>
+                A true scholar, Dr. Xu earned his PhD in <text>Renewable Energy</text> at <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, working with the <text><a
+                    href="https://psi.ch" target="_blank">Paul
+                    Scherrer Institute</a></text> in Switzerland. Before that, he got an MSc in Materials Science from
+                the <text><a href="https://tum.de" target="_blank">Technical University of Munich</a></text>, where he
+                also interned at the
+                <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> and <text><a
+                    href="https://infineon.com" target="_blank">Infineon</a></text> in Germany. His passion for making
+                an impact has led to long-term
+                collaborations with major players in hydrogen and fuel cell technologies, including <text>Toyota
+                  Motor</text> in Japan
+                and the <text>Freudenberg Group</text> in Germany.
+
+                To expand his expertise, Dr. Xu completed executive education at the <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></text>. He
+                gained hands-on experience working at a
+                dual-currency venture capital firm and a leading securities company in China.
+              </p>
+
+
+              <p id="chinese-english-content" align="justify" style="display: none;">
+              </p>
+
+              <p id="singaporian-english-content" align="justify" style="display: none;">
+
+
+                Now ah, Dr. Hong Xu is a very dedicated <text>Researcher</text> and <text>Engineer</text> lah,
+                specializing in
+                <text>Renewable Energy</text> and <text>e-Power Systems</text>, always striving for Efficiency
+                Excellence and Carbon
+                Neutrality in the Energy and Transport sectors one. Over the past 10 years, he has worked with
+                multinational companies
+                and top institutions across Eurasia, pushing technical advancements in <text>e-Mobility</text>,
+                <text>Clean
+                  Energy</text>, and <text>New Materials</text> industries, published <text><span
+                    class="no_of_papers"></span>
+                  papers</text> and got <text><span class="no_of_patents"></span> patents</text> also. On top of his
+                engineering work,
+                he also got engaged with famous organizations like St. Gallen Symposium, Salzburg Global Seminar, CITIC
+                Securities,
+                and Oxford Institute for Energy Studies, talking about Clean <text>Energy Economics and Policy</text> in
+                Asia and
+                Europe, very smart one.
+
+                Dr. Xu also very active in international development lah, served as Group of Experts (GE) Member at the
+                <text><a href="https://unece.org/" target="_blank">UN Economic Commission for Europe</a></text> (UNECE)
+                in Geneva, and even
+                chaired sessions at the <text><a href="https://unfccc.int/" target="_blank">UN Climate Change
+                    Conference</a></text>
+                (UNFCCC) in Bonn, advocating for <text><a href="https://sdgs.un.org/goals" target="_blank">UN
+                    Sustainable Development
+                    Goals</a></text> (SDGs) <text>7</text> (Affordable Energy), <text>9</text> (Industry Innovation),
+                and
+                <text>13</text> (Climate Action).
+                <br><br>
+                By heart, he is a scholar lah, went to pursue his PhD in <text>Renewable Energy</text> from <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, collaborated with <text><a
+                    href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> in Switzerland. Before
+                that, he got his
+                MSc in Materials Science from the <text><a href="https://tum.de" target="_blank">Technical University of
+                    Munich</a></text>, with internships at <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text>
+                and <text><a href="https://infineon.com" target="_blank">Infineon</a></text> in Germany. His passion for
+                impactful
+                research led him to work long-term with industry leaders in hydrogen and fuel cells, including
+                <text>Toyota
+                  Motor</text> in Japan and <text>Freudenberg Group</text> in Germany. Then, to expand his knowledge
+                lah, he got
+                Executive Education at <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge
+                    Business
+                    School</a></text>, plus got practical experience in dual-currency venture capital firm and top
+                securities company
+                in China.
+
+
+              </p>
+
+              <p id="japanese-english-content" align="justify" style="display: none;">
+              </p>
+
+              <p id="indian-english-content" align="justify" style="display: none;">
+              </p>
+
+              <p id="australian-english-content" align="justify" style="display: none;">
+              </p>
 
               <p style="text-align:left;">
 
@@ -753,6 +999,21 @@
     <script src="js/festival.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["english-content", "british-english-content", "american-english-content", "chinese-english-content", "singaporian-english-content", "japanese-english-content", "indian-english-content", "australian-english-content", "old-english-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
   </div>
 </body>
 

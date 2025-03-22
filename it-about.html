@@ -332,10 +332,26 @@
               </div>
             </div>
             </p>
-            <h1 class="mb-4">Biografia</h1>
+
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              Biografia
+              <select id="languages-4" name="languages" style="
+                                        width:auto;
+                                        height: 25px;
+                                        margin-left: 5px;
+                                        border-radius: 0;
+                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                        text-align: center; /* 新增 */
+                                        text-align-last: center; /* 确保选中的选项居中 */
+                                      " onchange="changeLanguage()">
+                <option value="italian">Italiano e altro</option>
+                <option value="latin">Lingua latina</option>
+              </select>
+            </h1>
+
             <hr />
             <div class="story">
-              <p align="justify">
+              <p id="italian-content" align="justify" style="display: block;">
                 Attualmente, il Dr. Hong Xu è un <text>Ricercatore</text> e <text>Ingegnere</text>
                 impegnato, specializzato in
                 <text>Energia Rinnovabile</text> e <text>Sistemi e-Power</text>, che si sforza di
@@ -383,8 +399,7 @@
                 Industriale),
                 e
                 <text>13</text> (Azione Climatica).
-              </p>
-              <p align="justify">
+                <br><br>
                 Un erudito nell'animo, ha conseguito il dottorato in <text>Energia Rinnovabile</text> presso
                 il <text><a href="https://ethz.ch/en.html" target="_blank">Politecnico Federale di
                     Zurigo</a></text>, in
@@ -408,6 +423,74 @@
                     School di Cambridge</a></text>, acquisendo esperienza pratica in una società di
                 venture capital a doppia valuta e in
                 una compagnia leader nel settore dei titoli in Cina.
+              </p>
+
+
+              <p id="latin-content" align="justify" style="display: none;">
+                Nunc, Dr. Hong Xu est <text>Investigator</text> et <text>Ingeniarius</text>
+                studiosus, specializatus in
+                <text>Energia Renovabili</text> et <text>Sistematis e-Power</text>, qui nititur ad
+                Excellentiam in Efficientia et
+                Carbonii Neutralitatem in regionibus Energiae et Transportis attingendam.
+                Per decem annos superiores, laboravit cum
+                societatibus multinationalibus et institutis primariis per totum continentem Eurasiaticum,
+                promovens progressus
+                technologicos in
+                industriis <text>e-Mobilitatis</text>, <text>Energiae Mundissimae</text> et <text>Materiarum
+                  Novarum</text>
+                cum <text><span class="no_of_papers"></span> articulis</text> editis et <text><span
+                    class="no_of_patents"></span>
+                  patentibus</text> concessis. Simul cum suis
+                operibus ingenio pertinentibus, collaboravit cum organizationibus praeclaris, inter quas
+                Symposium Sancti Galli, Seminarium
+                Globalis Salisburgense,
+                CITIC
+                Titulis,
+                et Institutum Oxoniense pro studiis energeticis, se conferens in analysi
+                oeconomiae
+                <text>Energiae Mundissimae
+                  et Politicarum</text>
+                in Asia et
+                Europa. Ut contribuitor proactivus ad progressionem internationalem, Dr. Xu fuit
+                membrum
+                Coetus Peritorum (GE) apud
+                <text><a href="https://unece.org/" target="_blank">Commissionem Oeconomicam Nationum
+                    Unitarum
+                    pro Europa</a></text> (UNECE) Genevae, et praesedit sessionibus parallelis apud
+                <text><a href="https://unfccc.int/" target="_blank">Conferentiam Nationum Unitarum de
+                    Mutationibus
+                    Climaticis</a></text> (UNFCCC) Bonnae,
+                sustinens <text><a href="https://sdgs.un.org/goals" target="_blank">Propositos
+                    Sustainable
+                    Development Goals</a></text> (SDGs) <text>7</text> (Energia Accessibilis),
+                <text>9</text>
+                (Innovatio
+                Industrialis),
+                et
+                <text>13</text> (Actio Climatis).
+                <br><br>
+                Studiosus animis, consecutus est doctoratum in <text>Energia Renovabili</text> apud
+                <text><a href="https://ethz.ch/en.html" target="_blank">Scholam Polytechnicam Foederalem
+                    Turicensem</a></text>, in
+                cooperatione cum <text><a href="https://psi.ch" target="_blank">Instituto Pauli
+                    Scherrer</a></text> in
+                Helvetia. Ante hoc, adeptus est MSc in Scientia Materialium apud <text><a href="https://tum.de"
+                    target="_blank">Universitatem Technicam Monacensem</a></text> cum
+                tirociniis
+                apud
+                <text><a href="https://xfel.eu" target="_blank">XFEL Europaeum</a></text> et apud <text><a
+                    href="https://infineon.com" target="_blank">Infineon</a></text> in
+                Germania. Eius studium in investigatione impactuosa duxit ad diuturnam dedicationem cum
+                ducibus industriae in
+                regione hydrogenii et cellarum combustibilium, inter <text>Toyota Motor</text> in
+                Iaponia et
+                <text>Gruppum
+                  Freudenberg</text>
+                in Germania. In suo itinere ad horizontes interdisciplinarios, accepit
+                educationem exsecutivam apud <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Scholam
+                    Negotiationis Judicis Cantabrigiae</a></text>, acquirens experientiam practicam in societate
+                capitalis ad duplicem monetam et in
+                societate principem in campo titulis in Sinis.
               </p>
 
 
@@ -773,6 +856,21 @@
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js"></script>
+    <script>
+      function changeLanguage() {
+        // 隐藏所有语言的内容
+        var languages = ["italian-content", "latin-content"];
+        languages.forEach(function (language) {
+          document.getElementById(language).style.display = "none";
+        });
+
+        // 获取选择的语言值
+        var selectedLanguage = document.getElementById("languages-4").value;
+
+        // 显示所选语言的内容
+        document.getElementById(selectedLanguage + "-content").style.display = "block";
+      }
+    </script>
   </div>
 
 </body>
