@@ -106,8 +106,8 @@
 
 
     @font-face {
-      font-family: 'HanYiXiaoLiShuFan';
-      src: url('fonts/HanYiXiaoLiShuFan.ttf') format('truetype');
+      font-family: 'LiBianLiShuTi';
+      src: url('fonts/LiBianLiShuTi.otf') format('opentype');
     }
 
     @font-face {
@@ -116,13 +116,42 @@
     }
 
     @font-face {
-      font-family: 'YanZhenQingFaShu';
-      src: url('fonts/YanZhenQingFaShu.ttf') format('truetype');
+      font-family: 'KeShiLuYanTi';
+      src: url('fonts/KeShiLuYanTi.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HanYiChenTiJiaGuWen';
+      src: url('fonts/HanYiChenTiJiaGuWen.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HengShanMaoBiCaoShu';
+      src: url('fonts/HengShanMaoBiCaoShu.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'RiBenJieKaiShuTi';
+      src: url('fonts/RiBenJieKaiShuTi.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'WangHanZongCuMingTiFan';
+      src: url('fonts/WangHanZongCuMingTiFan.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HanYiMinJinLiShu';
+      src: url('fonts/HanYiMinJinLiShu.ttf') format('truetype');
     }
   </style>
-  <style>
 
+
+
+  <style>
   </style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -410,10 +439,10 @@
                   style="width: auto; height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
                                                                                   text-align-last: center; /* 确保选中的选项居中 */" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
-                  <option value="chinese">中/汉语</option>
-                  <option value="canton">中/粤语</option>
-                  <option value="old-chinese">中/文言文</option>
-                  <option value="huoxing">中/火星文</option>
+                  <option value="chinese">汉/普通话</option>
+                  <option value="canton">汉/粤语</option>
+                  <option value="old-chinese">汉/文言文</option>
+                  <!-- <option value="huoxing">中/火星文</option> -->
                   <!-- <option value="blind">中/盲文</option> -->
                   <option value="korean">朝/조선어</option>
                   <option value="tibetan">藏/བོད་མི</option>
@@ -436,12 +465,16 @@
                                           text-align-last: center; /* 确保选中的选项居中 */
                                           ">
                   <option value="default" data-size="auto" selected>默认字体</option>
-                  <option value="YiShanBeiZhuanTi" data-size="26px">小篆</option>
-                  <option value="HanYiXiaoLiShuFan" data-size="24px">隶书</option>
-                  <option value="HanYiShouJinShuFan" data-size="26px">瘦金体</option>
-                  <option value="YanZhenQingFaShu" data-size="22px">颜真卿法书</option>
-                  <option value="KangXiZiDianTi" data-size="20px">康熙字典</option>
-                  <option value="ShangShouHongZhiShouXieTi" data-size="24px">手写体</option>
+                  <option value=" HanYiChenTiJiaGuWen" data-size="26px">商/甲骨文</option>
+                  <option value="YiShanBeiZhuanTi" data-size="26px">秦/小篆</option>
+                  <option value="HanYiMinJinLiShu" data-size="26px">漢/隸書</option>
+                  <option value="HengShanMaoBiCaoShu" data-size="26px">魏晋/行草</option>
+                  <option value="RiBenJieKaiShuTi" data-size="24px">隋/楷书</option>
+                  <option value="KeShiLuYanTi" data-size="23px">唐/颜体</option>
+                  <option value="HanYiShouJinShuFan" data-size="26px">宋/瘦金</option>
+                  <option value="WangHanZongCuMingTiFan" data-size="22px">明/明体</option>
+                  <option value="KangXiZiDianTi" data-size="22px">清/康熙体</option>
+                  <option value="ShangShouHongZhiShouXieTi" data-size="26px">现代/手写</option>
                 </select>
               </div>
             </h1>
@@ -587,7 +620,7 @@
                 དངུལ་ལོར་གཉིས་ཀྱི་མ་དངུལ་ལ་རྗེས་འདེད་བྱེད་དགོས། (སོན་སྐོར་ཐེངས་➔སྐོར་ཐེངས་A)
               </p>
 
-              <p id="uyghur-content" align="right" style="display: none;">
+              <p id="uyghur-content" align="right" style="font-size: 18px; display: none;">
 
                 ھازىر ، دوكتور شۈ خوڭ گېرمانىيە سانائىتىدىكى يېڭى ئېنېرگىيە ئېلېكتر سىستېمىسىنىڭ مۇتەخەسسىس ئىنژېنېرى
                 بولۇپ ، ئېنېرگىيە
@@ -816,7 +849,39 @@
               </p>
 
               <p id="vahcuengh-content" align="justify" style="display: none;">
-                壮文翻译内容建设中...
+                Ngeenz, Dauqs Hongz Xuemq sij giz dwg boux Yenzgiugozyenz caeuq Gunginghswh, caemhcawz youz gienzseng
+                Nengzyenz caeuq
+                e-Gungceih Heiqtungj, buenghaeux hag seizlwngz gyaeuj caeuq Fonzhonzdingz doengj youz Nengzyenz caeuq
+                Lunghunz gihguh.
+                Gvq heiq 10 nienz, gyoengq miz gungcaez caeuq gwnzlij gungswh caeuq lingjdoj gihgouh caeuq Eouyaj couh,
+                gyawjdoenh
+                Gizsuh gingbouh doengj e-Lunghunz, Gingjie Nengzyenz, caeuq Cuenghoz Vunzliuh hanghyenz, miz 15 cungj
+                vunzciengj
+                bouxsien caeuq 3 cungj dihlienz fapbaeu. Cungjbiengj de gunginghswh bouhmien, de miz caemhcawz caeuq
+                mingzgangj cizciz,
+                lingjdauq Dauqs Sangz Gengz Yienhgwngj, Salzburg Gozlaij Yenzgiug, CITIC Cingzgon, caeuq Dauqs Ngouzhoz
+                Yenzgiug soj,
+                caemhcawz doengj Gingjie Nengzyenz Ginggih caeuq Cingzcwz bujsih doengj Aiqcouh caeuq Eoucouh. Dauqs
+                Xuemq dwg boux
+                bingzcwngj caemhcawz doengj gyaeujgoz gingbouh, de dawz giz dwg Yenzgiug Gyaeuj (GE) Yienzyenz doengj
+                Lienzhozgoz
+                Ginggih Veijyenzvei doengj Eoucouh (UNECE) doengj Giznizva, caeuq dauqlwj bingzhengz doengj Lienzhozgoz
+                Gihhauh Bienqva
+                Yienhgwngj (UNFCCC) doengj Bunh, gyawjdoenh Lienzhozgoz Gyaeujcienz Gingbouh Mokbiuh (SDGs) 7
+                (Bungzcienz Nengzyenz), 9
+                (Hanghyenz Cuenghoz), caeuq 13 (Gihhauh Gungzdoengj).
+                <br><br>
+                Boux boux lai, gyoengj gyoengj PhD Năng lượng tái tạo tē ETH Zurich, gyoengj gyoengj Paul Scherrer
+                Institute tē
+                Switzerland. Mwnz neix, gyoengj gyoengj MSc Khoa học vật liệu tē Technical University of Munich, gyoengj
+                gyoengj
+                European XFEL hwnj Infineon tē Germany. Gij ndeu mwnz yienghaeuz nghiên cứu ảnh hưởng gyonh dwk
+                yienghaeuz gaen mbangz
+                doanh nghiệp dẫn đầu tē hydro hwnj pin nhiên liệu, bao gồm Toyota Motor tē Japan hwnj Freudenberg Group
+                tē Germany.
+                Yienghaeuz daengz tầm nhìn liên ngành, gyoengj gyoengj Executive Education tē Cambridge Judge Business
+                School, gyonh
+                kinh nghiệm thực tế tē công ty vốn đầu tư mạo hiểm tệ kép hwnj công ty chứng khoán hàng đầu tē China.
               </p>
 
               <p id="yi-content" align="justify" style="display: none;">
@@ -1425,23 +1490,40 @@
 
           // 根据字体选择进行预处理
           if (selectedFont === "YiShanBeiZhuanTi" ||
-            selectedFont === "HanYiXiaoLiShuFan" ||
             selectedFont === "HanYiShouJinShuFan" ||
             selectedFont === "ShangShouHongZhiShouXieTi" ||
-            selectedFont === "YanZhenQingFaShu") {
+            selectedFont === "HanYiMinJinLiShu") {
             convertToSimplified(); // 转换为简体字
-          } else if (selectedFont === "KangXiZiDianTi") {
+          } else if (selectedFont === "KangXiZiDianTi" ||
+            selectedFont === "HanYiChenTiJiaGuWen" ||
+            selectedFont === "HengShanMaoBiCaoShu" ||
+            selectedFont === "RiBenJieKaiShuTi" ||
+            selectedFont === "WangHanZongCuMingTiFan" ||
+            selectedFont === "KeShiLuYanTi" ||
+            selectedFont === "LiBianLiShuTi") {
             convertToTraditional(); // 转换为繁体字
           }
+
+
+
+
 
           // 如果选择了默认字体
           if (selectedFont === "default") {
             content.style.fontFamily = "";  // 恢复到网页的默认字体
             content.style.fontSize = "";    // 恢复到网页的默认字体大小
+            content.style.fontWeight = ""; // 恢复默认字体粗细
           } else {
             // 设置所选字体和字体大小
             content.style.fontFamily = selectedFont;
             content.style.fontSize = selectedSize;
+
+            // 特定字体设置为粗体
+            if (selectedFont === "HanYiShouJinShuFan") {
+              content.style.fontWeight = "bold";
+            } else {
+              content.style.fontWeight = ""; // 恢复非粗体样式
+            }
           }
         });
       });
