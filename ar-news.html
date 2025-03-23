@@ -339,9 +339,25 @@
                             &nbsp;
                             <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
                         </p>
-                        <h1 class="mb-4">
-                            الأخبار الأخيرة </h1>
-                        <hr>
+
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+                            الأخبار الأخيرة
+                            <select id="event-selector" name="event-selector"
+                                style="
+                                                                                                                                                  width: 120px;
+                                                                                                                                                  height: 25px;
+                                                                                                                                                  margin-left: 5px;
+                                                                                                                                                  border-radius: 0;
+                                                                                                                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                                                  text-align: center;
+                                                                                                                                                  text-align-last: center;">
+                                <option value="default" selected>اختر البلد</option>
+                            </select>
+                        </h1>
+
+
+
+
 
                         <div class="container-fluid">
                             <div class="row example-basic">
@@ -349,6 +365,7 @@
                                     <ul class="timeline">
                                         <li class="timeline-item period" style="text-align: right;">
                                             <div class="timeline-info"></div>
+                                            <hr>
                                             <div class="timeline-content">
                                                 <h3 class="timeline-title">2025 / عام الثعبان<img
                                                         src="./images/12-snake.png" alt="flag"

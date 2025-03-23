@@ -342,10 +342,21 @@
                             &nbsp;
                             <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
                         </p>
-                        <h1 class="mb-4">
+
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
                             Revue de l'actualité
+                            <select id="event-selector" name="event-selector" style="
+                                                                          width: 120px;
+                                                                          height: 25px;
+                                                                          margin-left: 5px;
+                                                                          border-radius: 0;
+                                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                          text-align: center;
+                                                                          text-align-last: center;">
+                                <option value="default" selected>Choisir un pays</option>
+                            </select>
                         </h1>
-                        <hr>
+
 
                         <div class="container-fluid">
                             <div class="row example-basic">
@@ -353,6 +364,8 @@
                                     <ul class="timeline">
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
+                                            <hr>
+
                                             <div class="timeline-content">
                                                 <h3 class="timeline-title">2025 / Année du serpent <img
                                                         src="./images/12-snake.png" alt="flag"

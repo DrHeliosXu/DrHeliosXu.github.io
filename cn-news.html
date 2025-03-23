@@ -368,24 +368,38 @@
                             &nbsp;
                             <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
                         </p>
-                        <h1 class="mb-4">
+
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
                             近期新闻
+                            <select id="event-selector" name="event-selector" style="
+  width: auto;
+  height: 25px;
+  margin-left: 5px;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-align-last: center;">
+                                <option value="default" selected>选择国家</option>
+                            </select>
                         </h1>
-                        <hr>
+
+
 
                         <div class="container-fluid">
                             <div class="row example-basic">
                                 <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1">
                                     <ul class="timeline">
                                         <li class="timeline-item period">
-
+                                            <hr>
                                             <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
 
                                             <div class="timeline-content">
                                                 <h3 class="timeline-title">2025 | 乙巳蛇年 <img src="./images/12-snake.png"
                                                         alt="flag"
                                                         style="height: 47px; position: relative; top: -3px;" /></h3>
                                             </div>
+
                                         </li>
 
                                         <li class="timeline-item">
@@ -540,7 +554,7 @@
 
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
-                                            <div class="timeline-marker"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
                                             <div class="timeline-content">
                                                 <hr>
                                                 <h3 class="timeline-title">2024 | 甲辰龙年 <img src="./images/12-dragon.png"
@@ -758,7 +772,7 @@
 
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
-                                            <div class="timeline-marker"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
                                             <div class="timeline-content">
                                                 <hr>
                                                 <h3 class="timeline-title">2023 | 癸卯兔年 <img src="./images/12-rabbit.png"
@@ -771,7 +785,7 @@
                                                 <img src="images/wflags/gb.png" alt="flag"
                                                     style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
 
-                                                <span style="margin-left: 15px; ">2023年12月5日</span>
+                                                <span style="margin-left: 15px; ">2023年12月05日</span>
 
                                             </div>
                                             <div class="timeline-marker"></div>
@@ -2601,6 +2615,204 @@
                 const lightbox = document.getElementById('lightbox');
                 lightbox.style.display = 'none';  // 隐藏Lightbox
             }
+        </script>
+
+
+        <script>
+            // 增强版国家代码映射表（可扩展）
+            const COUNTRY_MAP = {
+                // 欧洲国家
+                'al': { name: '阿尔巴尼亚', color: '#E41E1E' },
+                'ad': { name: '安道尔', color: '#FF0000' },
+                'at': { name: '奥地利', color: '#ED2939' },
+                'by': { name: '白俄罗斯', color: '#D22730' },
+                'be': { name: '比利时', color: '#000000' },
+                'ba': { name: '波黑', color: '#002395' },
+                'bg': { name: '保加利亚', color: '#00966E' },
+                'hr': { name: '克罗地亚', color: '#FF0000' },
+                'cy': { name: '塞浦路斯', color: '#0033A0' },
+                'cz': { name: '捷克', color: '#D7141A' },
+                'dk': { name: '丹麦', color: '#C60C30' },
+                'ee': { name: '爱沙尼亚', color: '#4891D9' },
+                'fi': { name: '芬兰', color: '#003580' },
+                'fr': { name: '法国', color: '#0055A4' },
+                'de': { name: '德国', color: '#000000' },
+                'gr': { name: '希腊', color: '#0D5EAF' },
+                'hu': { name: '匈牙利', color: '#436F4D' },
+                'is': { name: '冰岛', color: '#003897' },
+                'ie': { name: '爱尔兰', color: '#009A44' },
+                'it': { name: '意大利', color: '#009246' },
+                'lv': { name: '拉脱维亚', color: '#9E3039' },
+                'li': { name: '列支敦士登', color: '#002B7F' },
+                'lt': { name: '立陶宛', color: '#006A44' },
+                'lu': { name: '卢森堡', color: '#00A1DE' },
+                'mt': { name: '马耳他', color: '#CF142B' },
+                'md': { name: '摩尔多瓦', color: '#0033A0' },
+                'mc': { name: '摩纳哥', color: '#CE1126' },
+                'me': { name: '黑山', color: '#C40308' },
+                'nl': { name: '荷兰', color: '#AE1C28' },
+                'mk': { name: '北马其顿', color: '#D20000' },
+                'no': { name: '挪威', color: '#EF2B2D' },
+                'pl': { name: '波兰', color: '#DC143C' },
+                'pt': { name: '葡萄牙', color: '#006600' },
+                'ro': { name: '罗马尼亚', color: '#002B7F' },
+                'ru': { name: '俄罗斯', color: '#D52B1E' },
+                'sm': { name: '圣马力诺', color: '#008C45' },
+                'rs': { name: '塞尔维亚', color: '#0C4076' },
+                'sk': { name: '斯洛伐克', color: '#EE1C25' },
+                'si': { name: '斯洛文尼亚', color: '#005AA6' },
+                'es': { name: '西班牙', color: '#AA151B' },
+                'se': { name: '瑞典', color: '#005AA6' },
+                'ch': { name: '瑞士', color: '#D52B1E' },
+                'ua': { name: '乌克兰', color: '#0057B7' },
+                'gb': { name: '英国', color: '#012169' },
+
+                // 亚洲主要国家
+                'cn': { name: '中国', color: '#EE1C25' },
+                'in': { name: '印度', color: '#FF9933' },
+                'jp': { name: '日本', color: '#BC002D' },
+                'kr': { name: '韩国', color: '#CD2E3A' },
+                'sg': { name: '新加坡', color: '#EF3340' },
+                'th': { name: '泰国', color: '#A51931' },
+                'id': { name: '印尼', color: '#CE1126' },
+                'sa': { name: '沙特', color: '#006C35' },
+                'tr': { name: '土耳其', color: '#E30A17' },
+
+                // 美洲主要国家
+                'us': { name: '美国', color: '#3C3B6E' },
+                'ca': { name: '加拿大', color: '#FF0000' },
+                'br': { name: '巴西', color: '#009C3B' },
+                'ar': { name: '阿根廷', color: '#75AADB' },
+                'mx': { name: '墨西哥', color: '#006341' },
+
+                // 非洲主要国家
+                'za': { name: '南非', color: '#009639' },
+                'eg': { name: '埃及', color: '#CE1126' },
+                'ng': { name: '尼日利亚', color: '#008751' },
+                'ke': { name: '肯尼亚', color: '#000000' },
+
+                // 大洋洲
+                'au': { name: '澳大利亚', color: '#00008B' },
+                'nz': { name: '新西兰', color: '#00247D' },
+
+                // 国际组织
+                'eu': { name: '欧盟', color: '#003399' },
+                'un': { name: '联合国', color: '#4B92C3' },
+                'asean': { name: '东盟', color: '#004B87' }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const selector = document.getElementById('event-selector');
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // 标准化当前日期
+
+                // 1. 初始化处理时间线结构
+                const timeline = document.querySelector('.timeline');
+                const allItems = Array.from(timeline.children);
+
+                // 构建年份分组结构
+                const yearGroups = [];
+                let currentYearGroup = null;
+
+                // 2. 处理所有元素并过滤未来事件
+                allItems.forEach(element => {
+                    if (element.classList.contains('period')) {
+                        // 处理年份标题
+                        currentYearGroup = {
+                            node: element,
+                            events: [],
+                            hasValidEvents: false,
+                            year: element.querySelector('.timeline-title').textContent.match(/\d{4}/)?.[0]
+                        };
+                        yearGroups.push(currentYearGroup);
+                    } else if (currentYearGroup && element.classList.contains('timeline-item')) {
+                        // 处理事件项
+                        const dateSpan = element.querySelector('.timeline-info span');
+                        let isValid = false;
+
+                        // 日期验证逻辑
+                        if (dateSpan) {
+                            const dateMatch = dateSpan.textContent.trim().match(/(\d{4})年(\d{2})月(\d{2})日/);
+                            if (dateMatch) {
+                                const eventDate = new Date(
+                                    parseInt(dateMatch[1]),
+                                    parseInt(dateMatch[2]) - 1,
+                                    parseInt(dateMatch[3])
+                                );
+                                eventDate.setHours(0, 0, 0, 0);
+                                isValid = eventDate <= now;
+                            }
+                        }
+
+                        // 初始显示设置
+                        element.style.display = isValid ? '' : 'none';
+
+                        // 记录有效事件
+                        if (isValid) {
+                            currentYearGroup.hasValidEvents = true;
+                            currentYearGroup.events.push(element);
+                        }
+                    }
+                });
+
+                // 3. 初始化隐藏无有效事件的年份
+                yearGroups.forEach(group => {
+                    group.node.style.display = group.hasValidEvents ? '' : 'none';
+                });
+
+                // 4. 构建国家统计数据
+                const flagCounter = yearGroups.reduce((acc, group) => {
+                    group.events.forEach(item => {
+                        const flagImg = item.querySelector('.timeline-info img');
+                        if (flagImg) {
+                            const codeMatch = flagImg.src.match(/wflags\/(\w+)\.png/);
+                            if (codeMatch) {
+                                const code = codeMatch[1];
+                                acc[code] = (acc[code] || 0) + 1;
+                            }
+                        }
+                    });
+                    return acc;
+                }, {});
+
+                // 5. 动态生成选择器选项
+                selector.innerHTML = [
+                    '<option value="default" selected>选择国家</option>',
+                    ...Object.entries(flagCounter)
+                        .sort((a, b) => b[1] - a[1] || COUNTRY_MAP[a[0]]?.name?.localeCompare(COUNTRY_MAP[b[0]]?.name))
+                        .map(([code, count]) => `
+        <option value="${code}" 
+                style="color: ${COUNTRY_MAP[code]?.color || '#333'}; 
+                       font-weight: 500">
+          [${count}] ${COUNTRY_MAP[code]?.name || code.toUpperCase()}
+        </option>
+      `)
+                ].join('');
+
+                // 6. 筛选功能实现
+                selector.onchange = function () {
+                    const selectedCode = this.value;
+
+                    // 处理事件显示
+                    yearGroups.forEach(group => {
+                        let hasVisible = false;
+
+                        group.events.forEach(item => {
+                            // 判断国家匹配
+                            const flagImg = item.querySelector('.timeline-info img');
+                            const itemCode = flagImg?.src.match(/wflags\/(\w+)\.png/)?.[1];
+                            const matchCountry = selectedCode === 'default' || itemCode === selectedCode;
+
+                            item.style.display = matchCountry ? '' : 'none';
+                            if (matchCountry) hasVisible = true;
+                        });
+
+                        // 处理年份标题显示
+                        const shouldShowYear = hasVisible && group.hasValidEvents;
+                        group.node.style.display = shouldShowYear ? '' : 'none';
+                    });
+                };
+            });
         </script>
 
     </div>
