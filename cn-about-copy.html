@@ -42,6 +42,7 @@
       line-height: 1.6;
     }
 
+
     select {
       width: 150px;
       /* 设置宽度 */
@@ -70,25 +71,30 @@
 
 
     #korean-content {
-      line-height: 2.3;
+      line-height: 2.1;
       /* 增加正文的行间距 */
     }
 
     #korean-content rt {
       color: rgba(254, 114, 0, 0.988);
-      font-size: 0.86em;
-      line-height: 2;
+      font-size: 0.76em;
+      line-height: 2.1;
       /* 增加每行之间的间距 */
     }
 
-
+    /* 在手机设备上隐藏 #character-direction-selector */
+    @media only screen and (max-width: 767px) {
+      #character-direction-selector {
+        display: none;
+      }
+    }
 
     /* 蒙文网页端竖排 */
     @media (min-width: 768px) {
       .mongol-text {
         writing-mode: vertical-rl;
         text-align: top;
-        line-height: 2;
+        line-height: 1.9;
         white-space: pre-wrap;
         font-family: 'Mongolian Baiti', sans-serif;
         font-size: 16x;
@@ -204,6 +210,57 @@
     }
   </style>
 
+
+  <style>
+    #story-container {
+      display: block;
+      width: 100%;
+      /* 父容器宽度 */
+    }
+
+    .column {
+      text-align: justify;
+      line-height: 1.5em;
+      /* 默认行间距 */
+      margin: 0;
+    }
+
+    #character-direction-selector {
+      width: 60px;
+      height: 25px;
+      margin-left: 5px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-align-last: center;
+    }
+
+    /* 竖排样式 */
+    .vertical-layout {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      column-count: 1;
+      column-gap: 1.2em;
+      font-size: 17px;
+      /* 列间距 */
+      width: 100%;
+      /* 占满容器宽度 */
+      max-height: 520px;
+      /* 限制列的高度 */
+      overflow: auto;
+      /* 超出部分滚动 */
+      line-height: 1.65em;
+      /* 增大行间距 */
+
+    }
+
+
+    /* 横排样式 */
+    .horizontal-layout {
+      writing-mode: horizontal-tb;
+      column-count: auto;
+    }
+  </style>
 
 </head>
 
@@ -553,60 +610,56 @@
             <div class="story" id="story-container">
               <p id="chinese-content" class="column" align="justify" style="display: block;">
 
-                目前，徐博士在欧洲工业界担任<strong>新能源动力系统</strong>专家工程师，致力于实现<strong>能源与交通</strong>领域效率提升与<strong>净零排放</strong>。攻读学位期间与跨国企业及中欧学术机构合作发表<strong>论文<span
-                    class="no_of_papers"></span>余篇</strong>，并获得<strong><span
-                    class="no_of_patents"></span>项专利授权</strong>。曾在<strong><a href="https://unfccc.int/"
-                    target="_blank">联合国波恩气候变化大会</a></strong>主持“中国<strong>能源转型</strong>与技术创新”主题分会，多次参与<strong><a
+                目前，徐博士在欧洲工业界担任<span>新能源动力系统</span>专家工程师，
+                致力于实现<span>能源与交通</span>领域效率提升与<span>净零排放</span>。攻读学位期间与跨国企业及中欧学术机构合作发表<span>论文<span
+                    class="no_of_papers"></span>余篇</span>，并获得<span><span
+                    class="no_of_patents"></span>项专利授权</span>。曾在<span><a href="https://unfccc.int/"
+                    target="_blank">联合国波恩气候变化大会</a></span>主持「中国<span>能源转型</span>与技术创新」主题分会，多次参与<span><a
                     href="https://unece.org/"
-                    target="_blank">联合国欧洲经济委员会</a></strong>关于<strong>交通与气候专家组</strong>会议以及<strong>清洁能源工作小组</strong>会议讨论，积极倡导联合国可持续发展目标
-                (SDGs) 第7项 (清洁能源), 第9项 (工业创新), 以及第13项 (气候行动)。同时他还担任10余本能源与交通领域高引期刊的<strong>审稿人</strong>,
-                瑞士<strong>圣加仑国际论坛</strong>的<strong>学术评审</strong>。曾获得奥地利<strong><a
+                    target="_blank">联合国欧洲经济委员会</a></span>关于<span>交通与气候专家组</span>会议以及<span>清洁能源工作小组</span>会议讨论，积极倡导联合国可持续发展目标第7项「清洁能源」，第9项「工业创新」，以及第13项「气候行动」。同时他还担任10余本能源与交通领域高引期刊的<span>审稿人</span>，
+                瑞士<span>圣加仑国际论坛</span>的<span>学术评审</span>。曾获得奥地利<span><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
-                    target="_blank">萨尔茨堡国际研讨会</a></strong>旅行奖、<strong>美国电化学学会论文邀请</strong>及旅行奖、欧盟伊拉斯谟奖学金、“挑战杯”创业全国铜奖等。
+                    target="_blank">萨尔茨堡国际研讨会</a></span>旅行奖、<span>美国电化学学会论文邀请</span>及旅行奖、欧盟伊拉斯谟奖学金、『挑战杯』创业全国铜奖等。
                 <br><br>
 
-                他于2021年初获得<strong><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></strong>博士学位,
-                本硕博期间学术研究专注于<strong>新能源/碳中和</strong>领域，曾在<strong><a href="https://psi.ch"
-                    target="_blank">瑞士保罗谢尔研究院</a></strong>、<strong><a
-                    href="https://www.oxfordenergy.org/authors/hong-xu/"
-                    target="_blank">英国牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
-                    target="_blank">德国慕尼黑工业大学</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
-                    target="_blank">法国巴黎高科路桥大学</a></strong><strong>、<a href="https://xfel.eu"
-                    target="_blank">欧盟自由电子激光器</a></strong>等国际机构工作/实习，同时与<strong>日本丰田汽车</strong>、<strong>德国英飞凌半导体</strong>等跨国公司开展深度研发合作。此外，他被<strong><a
+                他于2021年初获得<span><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></span>博士学位,
+                本硕博期间学术研究专注于<span>新能源与碳中和</span>领域，曾在<span><a href="https://psi.ch"
+                    target="_blank">瑞士保罗谢尔研究院</a></span>、<span><a href="https://www.oxfordenergy.org/authors/hong-xu/"
+                    target="_blank">英国牛津能源研究所</a></span>、<span><a href="https://tum.de"
+                    target="_blank">德国慕尼黑工业大学</a></span>、<span><a href="https://ecoledesponts.fr/en"
+                    target="_blank">法国巴黎高科路桥大学</a></span><span>、<a href="https://xfel.eu"
+                    target="_blank">欧盟自由电子激光器</a></span>等国际机构工作和实习，同时与<span>日本丰田汽车</span>、<span>德国英飞凌半导体</span>等跨国公司开展深度研发合作。此外，他被<span><a
                     href="https://quantic.edu/mba"
-                    target="_blank">美国昆藤商学院</a></strong>全奖录取远程学习并颁发<strong>工商管理硕士</strong>学位，曾获桑坦德银行奖学金赴<strong><a
-                    href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学商学院</a></strong>学习“绿色转型”企管课程，并曾在头部证券研究所
-                (A股&美股)
-                撰写个股深度报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实践。
+                    target="_blank">美国昆藤商学院</a></span>全奖录取远程学习并颁发<span>工商管理硕士</span>学位，曾获桑坦德银行奖学金赴<span><a
+                    href="https://www.jbs.cam.ac.uk/"
+                    target="_blank">剑桥大学商学院</a></span>学习『绿色转型』企管课程，并曾在头部证券研究所「A股和美股」撰写个股深度报告以及在双币基金「种子轮至A轮」从事新能源赛道风投实践。
+
               </p>
 
 
               <p id="canton-content" lass="column" align="justify" style="display: none;">
-                而家，徐博士喺歐洲嘅工業界擔任<strong>新能源動力系統</strong>嘅專家工程師，專注於提升<strong>能源同交通</strong>範疇嘅效率，並推動<strong>碳中和</strong>目標。佢喺攻讀學位期間，同跨國企業同中歐學術機構合作發表咗<strong>學術論文<span
-                    class="no_of_papers"></span>篇</strong>，並獲得咗<strong><span
-                    class="no_of_patents"></span>項專利授權</strong>。佢曾經喺<strong><a href="https://unfccc.int/"
-                    target="_blank">聯合國波恩氣候變化大會</a></strong>主持「中國<strong>能源轉型</strong>同技術創新」嘅主題分會，亦多次參與<strong><a
+                而家，徐博士喺歐洲嘅工業界擔任<span>新能源動力系統</span>嘅專家工程師，專注於提升<span>能源同交通</span>範疇嘅效率，並推動<span>碳中和</span>目標。佢喺攻讀學位期間，同跨國企業同中歐學術機構合作發表咗<span>學術論文<span
+                    class="no_of_papers"></span>篇</span>，並獲得咗<span><span
+                    class="no_of_patents"></span>項專利授權</span>。佢曾經喺<span><a href="https://unfccc.int/"
+                    target="_blank">聯合國波恩氣候變化大會</a></span>主持「中國<span>能源轉型</span>同技術創新」嘅主題分會，亦多次參與<span><a
                     href="https://unece.org/"
-                    target="_blank">聯合國歐洲經濟委員會</a></strong>嘅<strong>交通同氣候專家組</strong>會議以及<strong>氫能工作小組</strong>會議討論，積極提倡聯合國可持續發展目標
-                (SDGs) 入面嘅第7項 (清潔能源)、第9項 (工業創新) 同第13項
-                (氣候行動)。同時，佢仲係十幾本關於能源同交通領域嘅高引用期刊嘅<strong>審稿人</strong>，同瑞士<strong>聖加侖國際論壇</strong>嘅<strong>學術評審</strong>。佢曾獲奧地利<strong><a
+                    target="_blank">聯合國歐洲經濟委員會</a></span>嘅<span>交通同氣候專家組</span>會議以及<span>氫能工作小組</span>會議討論，積極提倡聯合國可持續發展目標入面嘅第7項「清潔能源」、第9項「工業創新」同第13項「氣候行動」。同時，佢仲係十幾本關於能源同交通領域嘅高引用期刊嘅<span>審稿人</span>，同瑞士<span>聖加侖國際論壇</span>嘅<span>學術評審</span>。佢曾獲奧地利<span><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
-                    target="_blank">薩爾茨堡國際研討會</a></strong>旅行獎、美國電化學學會邀請同旅行獎、歐盟伊拉斯謨獎學金、仲有「挑戰杯」創業全國銅獎等等。
+                    target="_blank">薩爾茨堡國際研討會</a></span>旅行獎、美國電化學學會邀請同旅行獎、歐盟伊拉斯謨獎學金、仲有「挑戰杯」創業全國銅獎等等。
                 <br><br>
 
-                佢喺2021年年頭攞到<strong><a href="https://ethz.ch/en.html"
-                    target="_blank">蘇黎世聯邦理工大學</a></strong>嘅博士學位，本科、碩士同博士期間嘅學術研究專注喺<strong>碳中和/新能源</strong>領域。佢曾經喺<strong><a
-                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></strong>、<strong><a
-                    href="https://www.oxfordenergy.org/authors/hong-xu/"
-                    target="_blank">英國牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
-                    target="_blank">德國慕尼黑工業大學</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
-                    target="_blank">法國巴黎高科路橋大學</a></strong>、<strong><a href="https://xfel.eu"
-                    target="_blank">歐盟自由電子激光器</a></strong>等國際機構工作/實習，亦曾同<strong>日本豐田汽車</strong>、<strong>德國英飛凌半導體</strong>呢啲跨國公司進行深入嘅研發合作。另外，佢被<strong><a
+                佢喺2021年年頭攞到<span><a href="https://ethz.ch/en.html"
+                    target="_blank">蘇黎世聯邦理工大學</a></span>嘅博士學位，本科、碩士同博士期間嘅學術研究專注喺<span>碳中和與新能源</span>領域。佢曾經喺<span><a
+                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></span>、<span><a
+                    href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">英國牛津能源研究所</a></span>、<span><a
+                    href="https://tum.de" target="_blank">德國慕尼黑工業大學</a></span>、<span><a
+                    href="https://ecoledesponts.fr/en" target="_blank">法國巴黎高科路橋大學</a></span>、<span><a
+                    href="https://xfel.eu"
+                    target="_blank">歐盟自由電子激光器</a></span>等國際機構工作嘅實習，亦曾同<span>日本豐田汽車</span>、<span>德國英飛凌半導體</span>呢啲跨國公司進行深入嘅研發合作。另外，佢被<span><a
                     href="https://quantic.edu/mba"
-                    target="_blank">美國昆藤商學院</a></strong>全獎錄取遠程學習，並攞到<strong>工商管理碩士</strong>學位。佢仲獲得桑坦德銀行獎學金去<strong><a
-                    href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></strong>學習「綠色轉型」企管課程，之前亦喺頂尖嘅證券研究所
-                (A股同美股)
-                撰寫個股深度報告，並喺雙幣基金 (種子輪➔A輪) 負責新能源賽道嘅風投實踐。
+                    target="_blank">美國昆藤商學院</a></span>全獎錄取遠程學習，並攞到<span>工商管理碩士</span>學位。佢仲獲得桑坦德銀行獎學金去<span><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></span>學習「綠色轉型」企管課程，之前亦喺頂尖嘅證券研究所
+                「A股同美股」撰寫個股深度報告，並喺雙幣基金「種子輪至A輪」負責新能源賽道嘅風投實踐。
               </p>
 
               <p id="huoxing-content" lass="column" align="justify" style="display: none;">
@@ -621,26 +674,26 @@
 
 
               <p id="old-chinese-content" lass="column" align="justify" style="display: none;">
-                今者，徐博士仕於歐羅巴工業界，居<strong>新能源動力系統</strong>專家工程師之職，篤志於<strong>能源與交通</strong>之效率提升，暨<strong>碳中和</strong>之宏願。彼於攻讀學位之際，曾與跨國巨擘及中歐學術機構協力，共著<strong>論文十五餘篇</strong>，獲<strong>三項專利授權</strong>。嘗於<strong><a
+                今者，徐博士仕於歐羅巴工業界，居<span>新能源動力系統</span>專家工程師之職，篤志於<span>能源與交通</span>之效率提升，暨<span>碳中和</span>之宏願。彼於攻讀學位之際，曾與跨國巨擘及中歐學術機構協力，共著<span>論文十五餘篇</span>，獲<span>三項專利授權</span>。嘗於<span><a
                     href="https://unfccc.int/"
-                    target="_blank">聯合國波昂氣候變遷大會</a></strong>主「中國<strong>能源轉型</strong>與技術創新」分會議題，執牛耳而引領風潮；亦屢參<strong><a
+                    target="_blank">聯合國波昂氣候變遷大會</a></span>主「中國<span>能源轉型</span>與技術創新」分會議題，執牛耳而引領風潮；亦屢參<span><a
                     href="https://unece.org/"
-                    target="_blank">聯合國歐洲經濟委員會</a></strong>交通與氣候<strong>專家組</strong>會議及<strong>氫能工作小組</strong>之議，倡聯合國永續發展目標：其第七項（清潔能源）、第九項（產業創新）、第十三項（氣候行動），勤力不懈。兼之，彼亦為十餘本<strong>能源與交通</strong>高被引期刊<strong>審稿人</strong>，並任瑞士<strong>聖加侖國際論壇</strong>之<strong>學術評審</strong>。累積殊榮，諸如奧地利<strong><a
+                    target="_blank">聯合國歐洲經濟委員會</a></span>交通與氣候<span>專家組</span>會議及<span>氫能工作小組</span>之議，倡聯合國永續發展目標：其第七項「清潔能源」、第九項「產業創新」、第十三項「氣候行動」，勤力不懈。兼之，彼亦為十餘本<span>能源與交通</span>高被引期刊<span>審稿人</span>，並任瑞士<span>聖加侖國際論壇</span>之<span>學術評審</span>。累積殊榮，諸如奧地利<span><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
-                    target="_blank">薩爾斯堡國際研討會</a></strong>旅行獎、美國<strong>電化學學會</strong>論文邀請及旅行獎、歐盟<strong>伊拉斯謨獎學金</strong>、「挑戰盃」創業大賽全國銅獎，皆名副其實。
+                    target="_blank">薩爾斯堡國際研討會</a></span>旅行獎、美國<span>電化學學會</span>論文邀請及旅行獎、歐盟<span>伊拉斯謨獎學金</span>、「挑戰盃」創業大賽全國銅獎，皆名副其實。
                 <br><br>
-                新冠元年春，歲在辛丑，徐君榮膺<strong><a href="https://ethz.ch/en.html"
-                    target="_blank">蘇黎世聯邦理工大學</a></strong>博士學位。本科至博士，皆專注於<strong>碳中和/新能源</strong>之研。曾於<strong><a
-                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></strong>、<strong><a
-                    href="https://www.oxfordenergy.org/authors/hong-xu/"
-                    target="_blank">英國牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
-                    target="_blank">德國慕尼黑工業大學</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
-                    target="_blank">法國巴黎高科路橋大學</a></strong>、<strong><a href="https://xfel.eu"
-                    target="_blank">歐盟自由電子雷射</a></strong>等國際機構深造或實習，與<strong>日本豐田汽車</strong>、<strong>德國英飛凌半導體</strong>等跨國企業，共探研發奧義。更甚者，君獲<strong><a
+                新冠元年春，歲在辛丑，徐君榮膺<span><a href="https://ethz.ch/en.html"
+                    target="_blank">蘇黎世聯邦理工大學</a></span>博士學位。本科至博士，皆專注於<span>碳中和與新能源</span>之研。曾於<span><a
+                    href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></span>、<span><a
+                    href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">英國牛津能源研究所</a></span>、<span><a
+                    href="https://tum.de" target="_blank">德國慕尼黑工業大學</a></span>、<span><a
+                    href="https://ecoledesponts.fr/en" target="_blank">法國巴黎高科路橋大學</a></span>、<span><a
+                    href="https://xfel.eu"
+                    target="_blank">歐盟自由電子雷射</a></span>等國際機構深造或實習，與<span>日本豐田汽車</span>、<span>德國英飛凌半導體</span>等跨國企業，共探研發奧義。更甚者，君獲<span><a
                     href="https://quantic.edu/mba"
-                    target="_blank">美國昆藤商學院</a></strong>全額獎學金，修<strong>工商管理碩士</strong>，遠距學習而成，復蒙<strong>桑坦德銀行獎學金</strong>資助，赴<strong><a
+                    target="_blank">美國昆藤商學院</a></span>全額獎學金，修<span>工商管理碩士</span>，遠距學習而成，復蒙<span>桑坦德銀行獎學金</span>資助，赴<span><a
                     href="https://www.jbs.cam.ac.uk/"
-                    target="_blank">劍橋大學商學院</a></strong>修讀「綠色轉型」工商課程。又嘗於頭部<strong>證券研究所</strong>撰寫A股及美股個股深度報告，並於雙幣基金（自種子輪至A輪）投身新能源賽道之風投實務，盡展專長。
+                    target="_blank">劍橋大學商學院</a></span>修讀「綠色轉型」工商課程。又嘗於頭部<span>證券研究所</span>撰寫A股及美股個股深度報告，並於雙幣基金「自種子輪至A輪」投身新能源賽道之風投實務，盡展專長。
               </p>
 
               <p id="korean-content" lass="column" align="justify" style="display: none;">
@@ -794,123 +847,154 @@
                 барои баланд бардоштани самаранокии соҳаи энергия ва нақлиёт ва инчунин дастёбӣ ба бетарафии карбон
                 талош меварзад. Дар
                 замони таҳсили худ, ӯ дар ҳамкорӣ бо ширкатҳои трансмиллӣ ва муассисаҳои илмии Аврупо ва Чин зиёда аз
-                <strong><span class="no_of_papers"></span> мақолаҳои илмӣ</strong> нашр кардааст ва <strong><span
+                <span><span class="no_of_papers"></span> мақолаҳои илмӣ</span> нашр кардааст ва <span><span
                     class="no_of_patents"></span>
-                  патент</strong> ба даст овардааст. Ӯ дар <strong><a href="https://unfccc.int/"
-                    target="_blank">Конфронси тағйирёбии
-                    иқлими Созмони Милали Муттаҳид дар Бонн</a></strong> мавзӯи "Табдили энергетикии Чин ва
+                  патент</span> ба даст овардааст. Ӯ дар <span><a href="https://unfccc.int/" target="_blank">Конфронси
+                    тағйирёбии
+                    иқлими Созмони Милали Муттаҳид дар Бонн</a></span> мавзӯи "Табдили энергетикии Чин ва
                 инноватсияҳои техникӣ"
-                роҳбарӣ кардааст ва борҳо дар вохӯриҳои гурӯҳҳои кории <strong><a href="https://unece.org/"
+                роҳбарӣ кардааст ва борҳо дар вохӯриҳои гурӯҳҳои кории <span><a href="https://unece.org/"
                     target="_blank">Комиссияи
-                    иқтисодии Аврупо</a></strong> дар бораи нақлиёт ва иқлим, инчунин гурӯҳи кории гидроген ширкат
+                    иқтисодии Аврупо</a></span> дар бораи нақлиёт ва иқлим, инчунин гурӯҳи кории гидроген ширкат
                 кардааст. Ӯ фаъолона
-                мақсадҳои рушди устувори Созмони Милалро, аз ҷумла SDG 7 (Энергияи тоза), SDG 9 (Инноватсияҳои саноатӣ),
+                мақсадҳои рушди устувори Созмони Милалро, аз ҷумла SDG 7 (Энергияи тоза), SDG 9 (Инноватсияҳои
+                саноатӣ),
                 ва SDG 13
-                (Амали иқлимӣ) пеш мебарад. Ҳамчунин ӯ ҳамчун <strong>муҳаррири илмӣ</strong> барои зиёда аз даҳ
+                (Амали иқлимӣ) пеш мебарад. Ҳамчунин ӯ ҳамчун <span>муҳаррири илмӣ</span> барои зиёда аз даҳ
                 маҷаллаҳои
-                баландрейтинг дар соҳаи энергетика ва нақлиёт ва ҳамчун <strong>таҳлилгари илмӣ</strong> дар
-                <strong>Форуми
-                  байналмилалии Санкт-Галлен</strong> фаъолият мекунад. Ӯ соҳиби мукофоти сафарии <strong><a
+                баландрейтинг дар соҳаи энергетика ва нақлиёт ва ҳамчун <span>таҳлилгари илмӣ</span> дар
+                <span>Форуми
+                  байналмилалии Санкт-Галлен</span> фаъолият мекунад. Ӯ соҳиби мукофоти сафарии <span><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076" target="_blank">Семинари
                     байналмилалии
-                    Залтсбург</a></strong>, даъватнома барои пешниҳод аз <strong>Ҷамъияти электрохимияи ИМА</strong>,
+                    Залтсбург</a></span>, даъватнома барои пешниҳод аз <span>Ҷамъияти электрохимияи
+                  ИМА</span>,
                 стипендияи
-                Erasmus-и Иттиҳоди Аврупо, медали биринҷии миллии мусобиқаи тадбиркории "Ҷоми Чолишҳо" ва дигар
+                Erasmus-и Иттиҳоди Аврупо, медали биринҷии миллии мусобиқаи тадбиркории "Ҷоми Чолишҳо"
+                ва дигар
                 мукофотҳои олӣ мебошад.
                 <br><br>
-                Ӯ дар аввали соли 2021 дараҷаи докториро аз <strong><a href="https://ethz.ch/en.html"
+                Ӯ дар аввали соли 2021 дараҷаи докториро аз <span><a href="https://ethz.ch/en.html"
                     target="_blank">Донишгоҳи
-                    федералии технологии Цюрих</a></strong> ба даст овардааст. Дар давоми таҳсили бакалаврӣ, магистрӣ ва
+                    федералии технологии Цюрих</a></span> ба даст овардааст. Дар давоми таҳсили
+                бакалаврӣ, магистрӣ ва
                 докторӣ,
-                тадқиқоти ӯ ба соҳаи <strong>бетарафии карбон ва энергетикаи нав</strong> равона шудааст. Ӯ дар
+                тадқиқоти ӯ ба соҳаи <span>бетарафии карбон ва энергетикаи нав</span> равона
+                шудааст. Ӯ дар
                 муассисаҳои
-                байналмилалӣ, аз ҷумла <strong><a href="https://psi.ch" target="_blank">Пажӯҳишгоҳи Пол Шеррер
-                    Швейтсария</a></strong>,
-                <strong><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Пажӯҳишгоҳи энергетикии
+                байналмилалӣ, аз ҷумла <span><a href="https://psi.ch" target="_blank">Пажӯҳишгоҳи
+                    Пол Шеррер
+                    Швейтсария</a></span>,
+                <span><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Пажӯҳишгоҳи энергетикии
                     Оксфорди
-                    Британия</a></strong>, <strong><a href="https://tum.de" target="_blank">Донишгоҳи техникии Мюнхени
-                    Олмон</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Мактаби олии роҳи
+                    Британия</a></span>, <span><a href="https://tum.de" target="_blank">Донишгоҳи техникии Мюнхени
+                    Олмон</a></span>, <span><a href="https://ecoledesponts.fr/en" target="_blank">Мактаби олии роҳи
                     оҳани
-                    Париж</a></strong>, <strong><a href="https://xfel.eu" target="_blank">Фазелитрони озоди электронии
+                    Париж</a></span>, <span><a href="https://xfel.eu" target="_blank">Фазелитрони озоди электронии
                     Иттиҳоди
-                    Аврупо</a></strong> фаъолият ва таҷрибаомӯзӣ кардааст. Ӯ бо ширкатҳои трансмиллии <strong>Тойотаи
-                  Ҷопон</strong> ва
-                <strong>Инфинеони Олмон</strong> ҳамкориҳои амиқи таҳқиқотӣ анҷом додааст. Илова бар ин, ӯ ба таври
+                    Аврупо</a></span> фаъолият ва таҷрибаомӯзӣ кардааст. Ӯ бо ширкатҳои
+                трансмиллии <span>Тойотаи
+                  Ҷопон</span> ва
+                <span>Инфинеони Олмон</span> ҳамкориҳои амиқи таҳқиқотӣ анҷом додааст.
+                Илова бар ин, ӯ ба таври
                 пурра стипендияро аз
-                <strong><a href="https://quantic.edu/mba" target="_blank">Мактаби бизнеси Quantic</a></strong> гирифта,
+                <span><a href="https://quantic.edu/mba" target="_blank">Мактаби
+                    бизнеси Quantic</a></span> гирифта,
                 дараҷаи магистри
-                идораи бизнесро ба тариқи фосилавӣ хатм кардааст. Ӯ инчунин стипендияи Banco Santander-ро барои омӯзиши
+                идораи бизнесро ба тариқи фосилавӣ хатм кардааст. Ӯ инчунин
+                стипендияи Banco Santander-ро барои омӯзиши
                 курси "Гузариши
-                сабз" дар <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">Мактаби бизнеси
-                    Кембриҷ</a></strong> гирифтааст
-                ва дар таҳияи гузоришҳои амиқи ширкатҳои саҳомӣ (A-SAHAM & NASDAQ) ва фаъолияти сармоягузории венчурӣ
+                сабз" дар <span><a href="https://www.jbs.cam.ac.uk/" target="_blank">Мактаби бизнеси
+                    Кембриҷ</a></span> гирифтааст
+                ва дар таҳияи гузоришҳои амиқи ширкатҳои саҳомӣ (A-SAHAM &
+                NASDAQ) ва фаъолияти сармоягузории венчурӣ
                 дар бахши
                 энергетикаи нав ширкат кардааст.
               </p>
 
               <p id="kazakh-content" align="justify" style="display: none;">
-                Қазіргі таңда доктор Сюй Хоң Германия өнеркәсібінде <strong>жаңа энергия қуат жүйелері</strong>
+                Қазіргі таңда доктор Сюй Хоң Германия өнеркәсібінде <span>жаңа энергия қуат жүйелері</span>
                 саласының
-                сарапшы-инженері болып қызмет атқарып, <strong>энергетика мен көлік</strong> саласындағы тиімділікті
+                сарапшы-инженері болып қызмет атқарып, <span>энергетика мен көлік</span> саласындағы тиімділікті
                 арттыру мен
-                <strong>көміртегі бейтараптығын</strong> қамтамасыз етуге бағытталған. Диплом алу кезінде ол трансұлттық
+                <span>көміртегі бейтараптығын</span> қамтамасыз етуге бағытталған. Диплом алу кезінде ол трансұлттық
                 компаниялар мен
-                Орталық және Шығыс Еуропаның академиялық мекемелерімен бірлесіп <strong>мақалалар<span
+                Орталық және Шығыс Еуропаның академиялық мекемелерімен бірлесіп <span>мақалалар<span
                     class="no_of_papers"></span>
-                  жариялады</strong> және <strong><span class="no_of_patents"></span> патент алу</strong> құқығын
-                иеленді. Ол <strong><a href="https://unfccc.int/" target="_blank">БҰҰ-ның Бонндағы климаттық өзгерістер
-                    конференциясында</a></strong>
-                "Қытайдың <strong>энергетикалық трансформациясы</strong> және технологиялық жаңашылдық" тақырыбындағы
+                  жариялады</span> және <span><span class="no_of_patents"></span> патент алу</span> құқығын
+                иеленді. Ол <span><a href="https://unfccc.int/" target="_blank">БҰҰ-ның Бонндағы климаттық
+                    өзгерістер
+                    конференциясында</a></span>
+                "Қытайдың <span>энергетикалық трансформациясы</span> және технологиялық жаңашылдық"
+                тақырыбындағы
                 секцияны басқарды,
-                бірнеше рет <strong><a href="https://unece.org/" target="_blank">БҰҰ-ның Еуропалық экономикалық
-                    комиссиясы</a></strong>
-                ұйымдастырған <strong>климат пен көлік бойынша сарапшылар тобының</strong> және <strong>сутегі энергиясы
+                бірнеше рет <span><a href="https://unece.org/" target="_blank">БҰҰ-ның Еуропалық
+                    экономикалық
+                    комиссиясы</a></span>
+                ұйымдастырған <span>климат пен көлік бойынша сарапшылар тобының</span> және <span>сутегі
+                  энергиясы
                   жұмыс
-                  тобының</strong> жиындарына қатысты, сондай-ақ БҰҰ-ның Тұрақты даму мақсаттарын (SDGs) қолдап, 7-ші
+                  тобының</span> жиындарына қатысты, сондай-ақ БҰҰ-ның Тұрақты даму мақсаттарын (SDGs)
+                қолдап, 7-ші
                 (Тазартылған
-                энергия), 9-шы (Өнеркәсіптік инновация) және 13-ші (Климаттық іс-қимыл) мақсаттарды жақтайды. Сонымен
+                энергия), 9-шы (Өнеркәсіптік инновация) және 13-ші (Климаттық іс-қимыл) мақсаттарды
+                жақтайды. Сонымен
                 қатар, ол
-                энергетика мен көлік саласындағы жоғары рейтингті журналдардың <strong>рецензенті</strong>,
+                энергетика мен көлік саласындағы жоғары рейтингті журналдардың
+                <span>рецензенті</span>,
                 Швейцариядағы
-                <strong>Сент-Галлен халықаралық форумының</strong> <strong>академиялық сарапшысы</strong> болып
+                <span>Сент-Галлен халықаралық форумының</span> <span>академиялық сарапшысы</span>
+                болып
                 табылады. Ол Австрияның
-                <strong><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                <span><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
                     target="_blank">Зальцбург халықаралық
-                    семинары</a></strong>ның саяхат сыйлығын, <strong>АҚШ Электрохимиялық қоғамының мақалалар
-                  шақыруы</strong> мен
-                саяхат сыйлығын, Еуропалық Одақтың Эразмус стипендиясын, "Challenge Cup" ұлттық кәсіпкерлік кубогінің
+                    семинары</a></span>ның саяхат сыйлығын, <span>АҚШ Электрохимиялық
+                  қоғамының мақалалар
+                  шақыруы</span> мен
+                саяхат сыйлығын, Еуропалық Одақтың Эразмус стипендиясын, "Challenge Cup"
+                ұлттық кәсіпкерлік кубогінің
                 қола медалін және
                 басқа да наградаларды алған.
 
                 <br><br>
 
-                2021 жылдың басында ол <strong><a href="https://ethz.ch/en.html" target="_blank">Цюрих федералдық
+                2021 жылдың басында ол <span><a href="https://ethz.ch/en.html" target="_blank">Цюрих федералдық
                     технологиялық
-                    университетінен</a></strong> докторлық дәрежесін алды, ал магистратура мен докторлық кезеңдерінде
+                    университетінен</a></span> докторлық дәрежесін алды, ал магистратура
+                мен докторлық кезеңдерінде
                 ғылыми зерттеулері
-                <strong>көміртегі бейтараптығы/жаңа энергия</strong> саласына бағытталды. Ол <strong><a
-                    href="https://psi.ch" target="_blank">Швейцарияның Пауль Шер Институты</a></strong>, <strong><a
-                    href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Ұлыбританияның Оксфорд
+                <span>көміртегі бейтараптығы/жаңа энергия</span> саласына бағытталды. Ол
+                <span><a href="https://psi.ch" target="_blank">Швейцарияның Пауль Шер
+                    Институты</a></span>, <span><a href="https://www.oxfordenergy.org/authors/hong-xu/"
+                    target="_blank">Ұлыбританияның Оксфорд
                     энергетика
-                    институты</a></strong>, <strong><a href="https://tum.de" target="_blank">Германияның Мюнхен
+                    институты</a></span>, <span><a href="https://tum.de" target="_blank">Германияның Мюнхен
                     техникалық
-                    университеті</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Францияның
+                    университеті</a></span>, <span><a href="https://ecoledesponts.fr/en" target="_blank">Францияның
                     Париж жоғары
-                    техника және көпірлер университеті</a></strong>, <strong><a href="https://xfel.eu"
+                    техника және көпірлер университеті</a></span>, <span><a href="https://xfel.eu"
                     target="_blank">Еуропалық еркін
-                    электронды лазер</a></strong> сияқты халықаралық ұйымдарда жұмыс істеп, тәжірибе жинақтады, сонымен
+                    электронды лазер</a></span> сияқты халықаралық ұйымдарда
+                жұмыс істеп, тәжірибе жинақтады, сонымен
                 қатар
-                <strong>Жапонияның Toyota</strong>, <strong>Германияның Infineon Semiconductors</strong> сияқты
+                <span>Жапонияның Toyota</span>, <span>Германияның Infineon
+                  Semiconductors</span> сияқты
                 трансұлттық
-                компаниялармен терең ғылыми зерттеу жұмыстарын жүргізді. Бұдан басқа, ол <strong><a
-                    href="https://quantic.edu/mba" target="_blank">АҚШ-тың Quantic Business School</a></strong>
+                компаниялармен терең ғылыми зерттеу жұмыстарын жүргізді.
+                Бұдан басқа, ол <span><a href="https://quantic.edu/mba" target="_blank">АҚШ-тың Quantic Business
+                    School</a></span>
                 тарапынан толық грантпен оқуға қабылданып,
-                <strong>Іскерлік әкімшілік магистрі</strong> дәрежесін алды, сондай-ақ <strong><a
-                    href="https://www.jbs.cam.ac.uk/" target="_blank">Кембридж университетінің бизнес
-                    мектебінде</a></strong> "жасыл трансформация" бойынша бизнес курсын
-                оқыды. Ол сондай-ақ жетекші бағалау орталықтарында (A қорлары және АҚШ қорлары) жеке акциялар бойынша
+                <span>Іскерлік әкімшілік магистрі</span> дәрежесін
+                алды, сондай-ақ <span><a href="https://www.jbs.cam.ac.uk/" target="_blank">Кембридж университетінің
+                    бизнес
+                    мектебінде</a></span> "жасыл трансформация"
+                бойынша бизнес курсын
+                оқыды. Ол сондай-ақ жетекші бағалау орталықтарында
+                (A қорлары және АҚШ қорлары) жеке акциялар бойынша
                 терең зерттеу
-                мақалаларын жазып, қос валюта қорларында (Seed Round → A Round) жаңа энергия бағыты бойынша венчурлық
+                мақалаларын жазып, қос валюта қорларында (Seed
+                Round → A Round) жаңа энергия бағыты бойынша
+                венчурлық
                 капитал
                 практикасын жүргізді.
               </p>
@@ -1025,63 +1109,81 @@
                 Тᠦᠦᠨᠴᠯᠡᠨ ᠲᠡᠷᠡᠡᠷ ану᠊ыᠨ кᠸᠠᠨᠲыᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯᠢᠠᠰ ᠪᠦᠷᠡᠨ ᠲᠡᠲᠭᠡᠯᠡᠭᠡᠡᠷ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠣᠨᠯᠠᠶᠨ ᠪᠣᠯᠣᠸᠰᠷᠣᠯыᠨ
                 ᠰᠤᠷᠭᠠᠯᠲыᠭ ᠬᠢᠶᠵ᠂ бᠢᠽᠨᠧᠰᠢᠶᠨ уᠳᠢᠷᠳᠯᠠᠭыᠨ мᠠᠭᠢᠰᠲᠷкᠠᠮᠪᠷᠢᠳᠵᠢᠶᠨ бᠢᠽᠨᠧᠰᠢᠶᠨ сᠤᠷᠭᠤᠤᠯь ᠳᠡᠡᠷ "нᠣᠭᠣᠣᠨ ᠱᠢᠯᠵᠢᠯᠲ" ᠰᠡᠳᠸᠡᠡᠷ
                 ᠪᠣᠯᠣᠸᠰᠷᠣᠯ ᠡᠽᠡᠮᠱᠰᠡᠨ.
-                <hr>
+
               </p>
 
 
               <p id="mongol-cyrillic-content" align="justify" style="display: none;">
-                Одоогийн байдлаар, доктор Сюй Хонг Герман дахь аж үйлдвэрийн салбарт <strong>шинэ эрчим хүчний
+                Одоогийн байдлаар, доктор Сюй Хонг Герман дахь аж үйлдвэрийн салбарт <span>шинэ эрчим хүчний
                   хөдөлгүүрийн
-                  систем</strong>ийн мэргэжилтэн инженерээр ажиллаж, <strong>эрчим хүч ба тээвэр</strong> салбарын үр
+                  систем</span>ийн мэргэжилтэн инженерээр ажиллаж, <span>эрчим хүч ба тээвэр</span> салбарын үр
                 ашигтай байдлыг
-                дээшлүүлэх болон <strong>нямкаар</strong> үйл ажиллагаа явуулж байна. Судалгааны үедээ олон улсын
+                дээшлүүлэх болон <span>нямкаар</span> үйл ажиллагаа явуулж байна. Судалгааны үедээ олон улсын
                 компаниуд болон төв
-                Европын академийн байгууллагуудтай хамтран <strong><span class="no_of_papers"></span> гаруй</strong>
+                Европын академийн байгууллагуудтай хамтран <span><span class="no_of_papers"></span> гаруй</span>
                 өгүүлэл нийтлэж,
-                <strong><span class="no_of_patents"></span> патентын эрх</strong> эзэмшсэн. <strong><a
+                <span><span class="no_of_patents"></span> патентын эрх</span> эзэмшсэн. <span><a
                     href="https://unfccc.int/" target="_blank">НҮБ-ын Бонн дахь Уур амьсгалын өөрчлөлтийн бага
-                    хурал</a></strong>-д <strong>"Эрчим хүчний шилжилт
-                  ба технологийн инноваци"</strong> сэдвээр хурал хуралдуулсан бөгөөд <strong><a
-                    href="https://unece.org/" target="_blank">НҮБ-ын Европын эдийн засгийн комисс</a></strong>-ын
-                <strong>тээвэр ба уур амьсгалын
-                  мэргэжилтнүүдийн бүлэг</strong> болон <strong>төмөр хүчилтөрөгчийн ажил эрхлэгчдийн бүлэг</strong>
+                    хурал</a></span>-д <span>"Эрчим хүчний шилжилт
+                  ба технологийн инноваци"</span> сэдвээр хурал хуралдуулсан бөгөөд <span><a href="https://unece.org/"
+                    target="_blank">НҮБ-ын Европын эдийн засгийн
+                    комисс</a></span>-ын
+                <span>тээвэр ба уур амьсгалын
+                  мэргэжилтнүүдийн бүлэг</span> болон <span>төмөр хүчилтөрөгчийн ажил эрхлэгчдийн
+                  бүлэг</span>
                 хуралдаанд
-                оролцож, НҮБ-ын Тогтвортой Хөгжлийн Зорилт (SDGs) 7-р (Цэвэр эрчим хүч), 9-р (Аж үйлдвэрийн инноваци)
+                оролцож, НҮБ-ын Тогтвортой Хөгжлийн Зорилт (SDGs) 7-р (Цэвэр эрчим хүч), 9-р (Аж
+                үйлдвэрийн инноваци)
                 болон 13-р (Уур
-                амьсгалын үйл ажиллагаа) зорилтыг санаачлан дэмжиж байна. Мөн тэрээр эрчим хүч, тээвэр салбарын өндөр
+                амьсгалын үйл ажиллагаа) зорилтыг санаачлан дэмжиж байна. Мөн тэрээр эрчим хүч,
+                тээвэр салбарын өндөр
                 түвшний
-                сэтгүүлүүдийн <strong>шүүмжлэгч</strong>, Швейцарийн <strong>Санкт-Галлен олон улсын форум</strong> -ын
-                <strong>академийн шүүмжлэгч</strong>ээр ажилладаг. Тэрээр Австри улсын <strong><a
+                сэтгүүлүүдийн <span>шүүмжлэгч</span>, Швейцарийн <span>Санкт-Галлен олон улсын
+                  форум</span> -ын
+                <span>академийн шүүмжлэгч</span>ээр ажилладаг. Тэрээр Австри улсын <span><a
                     href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076" target="_blank">Зальцбургийн
                     олон улсын
-                    семинар</a></strong>-ийн аялан тоглолтын шагнал, <strong>АНУ-ын цахилгаан химийн нийгэмлэгийн эрдэм
+                    семинар</a></span>-ийн аялан тоглолтын шагнал, <span>АНУ-ын цахилгаан
+                  химийн нийгэмлэгийн эрдэм
                   шинжилгээний
-                  хуралд урилгаар оролцох шагнал</strong>, Европын Холбооны Эрасмус тэтгэлэг, "Томсдох тэмцээн"-д
+                  хуралд урилгаар оролцох шагнал</span>, Европын Холбооны Эрасмус тэтгэлэг,
+                "Томсдох тэмцээн"-д
                 Үндэсний хүрэл
                 шагнал, бусад олон шагнал хүртсэн.
                 <br><br>
-                Тэрээр 2021 оны эхээр <strong><a href="https://ethz.ch/en.html" target="_blank">Цюрихийн Холбооны
+                Тэрээр 2021 оны эхээр <span><a href="https://ethz.ch/en.html" target="_blank">Цюрихийн Холбооны
                     Технологийн Их
-                    Сургууль</a></strong>-д докторын зэрэг хамгаалсан бөгөөд, докторын болон магистрийн зэрэг хамгаалж
-                байх хугацаандаа судалгаагаа <strong>нямкаар/шинэ эрчим хүч</strong> салбарын чиглэлээр явуулсан.
-                Тэрээр <strong><a href="https://psi.ch" target="_blank">Швейцарийн Паул Шерр Институт</a></strong>,
-                <strong><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Их Британийн Оксфордын
+                    Сургууль</a></span>-д докторын зэрэг хамгаалсан бөгөөд, докторын болон
+                магистрийн зэрэг хамгаалж
+                байх хугацаандаа судалгаагаа <span>нямкаар/шинэ эрчим хүч</span>
+                салбарын чиглэлээр явуулсан.
+                Тэрээр <span><a href="https://psi.ch" target="_blank">Швейцарийн Паул
+                    Шерр Институт</a></span>,
+                <span><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Их Британийн Оксфордын
                     Эрчим хүчний
-                    Судалгааны Институт</a></strong>, <strong><a href="https://tum.de" target="_blank">Германы Мюнхений
+                    Судалгааны Институт</a></span>, <span><a href="https://tum.de" target="_blank">Германы Мюнхений
                     Технологийн Их
-                    Сургууль</a></strong>, <strong><a href="https://ecoledesponts.fr/en" target="_blank">Францын Парисын
+                    Сургууль</a></span>, <span><a href="https://ecoledesponts.fr/en" target="_blank">Францын
+                    Парисын
                     Үндэсний Их
-                    Сургууль</a></strong><strong> болон <a href="https://xfel.eu" target="_blank">Европын Чөлөөт
+                    Сургууль</a></span><span> болон <a href="https://xfel.eu" target="_blank">Европын Чөлөөт
                     Электрон
-                    Лазер</a></strong> зэрэг олон улсын байгууллагуудаас ажиллаж, дадлага хийсэн. Мөн Япон дахь
-                <strong>Тойота</strong>, Германы <strong>Infineon</strong> зэрэг олон улсын компаниудтай гүнзгий
+                    Лазер</a></span> зэрэг олон улсын байгууллагуудаас
+                ажиллаж, дадлага хийсэн. Мөн Япон дахь
+                <span>Тойота</span>, Германы <span>Infineon</span> зэрэг
+                олон улсын компаниудтай гүнзгий
                 судалгаа
-                хөгжүүлэлтийн хамтын ажиллагаа явуулсан. Түүнчлэн тэрээр <strong><a href="https://quantic.edu/mba"
-                    target="_blank">АНУ-ын Квантын Бизнесийн Сургуулиас</a></strong> бүрэн тэтгэлэгээр олон улсын онлайн
+                хөгжүүлэлтийн хамтын ажиллагаа явуулсан. Түүнчлэн тэрээр
+                <span><a href="https://quantic.edu/mba" target="_blank">АНУ-ын Квантын Бизнесийн
+                    Сургуулиас</a></span> бүрэн тэтгэлэгээр олон улсын
+                онлайн
                 боловсролын
-                сургалтыг хийж, <strong>Бизнесийн Удирдлагын Магистр</strong>-ийн зэрэг хамгаалсан. Мөн түүний
-                байгуулсан "Грийн Революци" цогц сургалт болон хөрөнгө оруулалтын чиглэлээр <strong><a
-                    href="https://www.jbs.cam.ac.uk/" target="_blank">Камбриджийн Бизнесийн Сургууль</a></strong> дээр
+                сургалтыг хийж, <span>Бизнесийн Удирдлагын
+                  Магистр</span>-ийн зэрэг хамгаалсан. Мөн түүний
+                байгуулсан "Грийн Революци" цогц сургалт болон
+                хөрөнгө оруулалтын чиглэлээр <span><a href="https://www.jbs.cam.ac.uk/" target="_blank">Камбриджийн
+                    Бизнесийн
+                    Сургууль</a></span> дээр
                 "Ногоон
                 шилжилт" сэдвээр боловсрол эзэмшсэн.
               </p>
@@ -1089,6 +1191,7 @@
             </div>
 
             <p style="text-align:left;">
+              <hr>
               PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
             </p>
 
@@ -1138,28 +1241,28 @@
                   <div class="story">
                     <p align="justify">
 
-                      目前，徐泓博士在德国工业界担任<strong>新能源动力系统</strong>专家工程师，致力于实现<strong>能源与交通</strong>领域效率提升与<strong>碳中和</strong>。攻读学位期间与跨国企业及中欧学术机构合作发表<strong>论文<span
-                          class="no_of_papers"></span>余篇</strong>，并获得<strong><span
-                          class="no_of_patents"></span>项专利授权</strong>。曾在<strong><a href="https://unfccc.int/"
-                          target="_blank">联合国波恩气候变化大会</a></strong>主持“中国<strong>能源转型</strong>与技术创新”主题分会，多次参与<strong><a
+                      目前，徐泓博士在德国工业界担任<text>新能源动力系统</span>专家工程师，致力于实现<text>能源与交通</text>领域效率提升与<text>碳中和</text>。攻读学位期间与跨国企业及中欧学术机构合作发表<text>论文<span
+                          class="no_of_papers"></span>余篇</text>，并获得<text><span
+                          class="no_of_patents"></span>项专利授权</text>。曾在<text><a href="https://unfccc.int/"
+                          target="_blank">联合国波恩气候变化大会</a></text>主持“中国<text>能源转型</text>与技术创新”主题分会，多次参与<text><a
                           href="https://unece.org/"
-                          target="_blank">联合国欧洲经济委员会</a></strong>关于<strong>交通与气候专家组</strong>会议以及<strong>氢能工作小组</strong>会议讨论，积极倡导联合国可持续发展目标
-                      (SDGs) 第7项 (清洁能源), 第9项 (产业创新), 以及第13项 (气候行动)。同时他还担任10余本能源与交通领域高引期刊的<strong>审稿人</strong>,
-                      瑞士<strong>圣加仑国际论坛</strong>的<strong>学术评审</strong>。曾获得奥地利<strong>萨尔茨堡国际研讨会</strong>旅行奖、<strong>美国电化学学会论文邀请</strong>及旅行奖、欧盟伊拉斯谟奖学金、“挑战杯”创业全国铜奖等。
+                          target="_blank">联合国欧洲经济委员会</a></text>关于<text>交通与气候专家组</text>会议以及<text>氢能工作小组</text>会议讨论，积极倡导联合国可持续发展目标
+                      (SDGs) 第7项 (清洁能源), 第9项 (产业创新), 以及第13项 (气候行动)。同时他还担任10余本能源与交通领域高引期刊的<text>审稿人</text>,
+                      瑞士<text>圣加仑国际论坛</text>的<text>学术评审</text>。曾获得奥地利<text>萨尔茨堡国际研讨会</text>旅行奖、<text>美国电化学学会论文邀请</text>及旅行奖、欧盟伊拉斯谟奖学金、“挑战杯”创业全国铜奖等。
                     </p>
 
 
                     <p align="justify">
-                      他于2021年初获得<strong><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></strong>博士学位,
-                      本硕博期间学术研究专注于<strong>碳中和/新能源</strong>领域，曾在<strong><a href="https://psi.ch"
-                          target="_blank">瑞士保罗谢尔研究院</a></strong>、<strong><a href="https://oxfordenergy.org"
-                          target="_blank">英国牛津能源研究所</a></strong>、<strong><a href="https://tum.de"
-                          target="_blank">德国慕尼黑工业大学</a></strong>、<strong><a href="https://ecoledesponts.fr/en"
-                          target="_blank">法国巴黎高科路桥大学</a></strong><strong>、<a href="https://xfel.eu"
-                          target="_blank">欧盟自由电子激光器</a></strong>等国际机构工作/实习，同时与<strong>日本丰田汽车</strong>、<strong>德国英飞凌半导体</strong>等跨国公司开展深度研发合作。此外，他被<strong><a
+                      他于2021年初获得<text><a href="https://ethz.ch/en.html" target="_blank">苏黎世联邦理工大学</a></text>博士学位,
+                      本硕博期间学术研究专注于<text>碳中和/新能源</text>领域，曾在<text><a href="https://psi.ch"
+                          target="_blank">瑞士保罗谢尔研究院</a></text>、<text><a href="https://oxfordenergy.org"
+                          target="_blank">英国牛津能源研究所</a></text>、<text><a href="https://tum.de"
+                          target="_blank">德国慕尼黑工业大学</a></text>、<text><a href="https://ecoledesponts.fr/en"
+                          target="_blank">法国巴黎高科路桥大学</a></text><text>、<a href="https://xfel.eu"
+                          target="_blank">欧盟自由电子激光器</a></text>等国际机构工作/实习，同时与<text>日本丰田汽车</text>、<text>德国英飞凌半导体</text>等跨国公司开展深度研发合作。此外，他被<text><a
                           href="https://quantic.edu/mba"
-                          target="_blank">美国昆藤商学院</a></strong>全奖录取远程学习并颁发<strong>MBA</strong>学位，曾获桑坦德银行奖学金赴<strong><a
-                          href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学商学院</a></strong>学习“绿色转型”企管课程，并曾在头部证券研究所
+                          target="_blank">美国昆藤商学院</a></text>全奖录取远程学习并颁发<text>MBA</text>学位，曾获桑坦德银行奖学金赴<text><a
+                          href="https://www.jbs.cam.ac.uk/" target="_blank">剑桥大学商学院</a></text>学习“绿色转型”企管课程，并曾在头部证券研究所
                       (A股&美股)
                       撰写个股深度报告以及在双币基金 (种子轮➔A轮) 从事新能源赛道风投实践。
                     </p>
@@ -1587,7 +1690,11 @@
 
           // 强制将字体选择器设置为默认选项
           fontSelector.value = "default";
+          directionSelector.value = "horizontal-layout";
 
+          // 手动触发切换布局的函数
+          changeTextLayout(); // 调用切换布局的逻辑
+          updateFontSelector(); // 调用字体选择的逻辑
           // 获取所有需要应用字体设置的内容元素
           var contentIds = ["chinese-content", "canton-content", "old-chinese-content", "jianjie"];
           contentIds.forEach(id => {
@@ -1604,7 +1711,47 @@
           fontSelector.disabled = false;
           directionSelector.disabled = false;
         }
+
+        // 重置所有字体大小为默认值
+        resetFontSize();
+
       }
+
+      const defaultFontSizes = {
+        chinese: "16px",
+        canton: "16px",
+        "old-chinese": "16px",
+        korean: '17px',
+        tibetan: '21px',
+        "mongol-traditional": '14.5px',
+        uyghur: '18px',
+        kazakh: '16px',
+        tajik: '16px',
+        yi: '22px',
+        hmong: "16px",
+        vahcuengh: "16px"
+      };
+
+      // 重置字体大小为默认值
+      function resetFontSize() {
+        const selectedLanguage = document.getElementById('languages-4').value;
+        const storyContainer = document.querySelector('.story');
+        const contentElements = storyContainer.querySelectorAll('*');
+
+        // 获取当前语言的默认字体大小
+        const defaultFontSize = defaultFontSizes[selectedLanguage] || '16px'; // 如果未定义，则使用 16px 作为默认值
+
+        contentElements.forEach(element => {
+          // 恢复为当前语言的默认字体大小
+          element.style.fontSize = defaultFontSize;
+
+          // 特殊处理：对于 korean 语言的 <rt> 元素，设置为 0.8em
+          if (selectedLanguage === "korean" && element.tagName.toLowerCase() === "rt") {
+            element.style.fontSize = '0.8em';
+          }
+        });
+      }
+
     </script>
 
     <script>
@@ -1703,13 +1850,16 @@
     <!-- 字体大小JavaScript -->
     <script>
       function changeFontSize(step) {
-        // 获取 <div class="story"> 内的所有子元素
-        const storyContainer = document.querySelector('.story');
-        const contentElements = storyContainer.querySelectorAll('*');
+        // 获取当前选中的语言
+        const selectedLanguage = document.getElementById('languages-4').value;
 
-        contentElements.forEach(element => {
-          // 获取当前元素的字体大小
-          const currentFontSize = window.getComputedStyle(element).fontSize;
+        // 获取当前语言的内容区域（在 .story 容器内）
+        const currentContent = document.querySelector(`.story #${selectedLanguage}-content`);
+
+        // 如果当前内容区域存在
+        if (currentContent) {
+          // 获取内容区域的当前字体大小
+          const currentFontSize = window.getComputedStyle(currentContent).fontSize;
 
           // 解析字体大小为数值
           let fontSize = parseInt(currentFontSize);
@@ -1721,14 +1871,59 @@
           if (fontSize < 10) fontSize = 10; // 最小字体大小
           if (fontSize > 50) fontSize = 50; // 最大字体大小
 
-          // 更新字体大小
-          element.style.fontSize = fontSize + 'px';
-        });
+          // 更新内容区域的字体大小
+          currentContent.style.fontSize = fontSize + 'px';
+
+          // 将所有子元素的字体大小设置为 1em（基于父元素的字体大小）
+          const contentElements = currentContent.querySelectorAll('*');
+          contentElements.forEach(element => {
+            element.style.fontSize = '1em';
+          });
+        } else {
+          console.error(`未找到内容区域：${selectedLanguage}-content`);
+        }
       }
     </script>
 
-
     <script>
+      // 定义每种字体的样式参数
+      const fontStyles = {
+        default: { maxHeight: '450px', lineHeight: '2em' },
+        HanYiChenTiJiaGuWen: { maxHeight: '1000px', lineHeight: '2em' },
+        YiShanBeiZhuanTi: { maxHeight: '880px', lineHeight: '1.8em' },
+        HanYiMinJinLiShu: { maxHeight: '970px', lineHeight: '1.85em' },
+        DanZhaiCaoShuZiTi: { maxHeight: '990px', lineHeight: '1.9em' },
+        RiBenJieKaiShuTi: { maxHeight: '860px', lineHeight: '1.78em' },
+        KeShiLuYanTi: { maxHeight: '765px', lineHeight: '1.77em' },
+        HanYiShouJinShuFan: { maxHeight: '975px', lineHeight: '1.77em' },
+        WangHanZongCuMingTiFan: { maxHeight: '755px', lineHeight: '1.76em' },
+        KangXiZiDianTi: { maxHeight: '745px', lineHeight: '1.74em' },
+        ShangShouHongZhiShouXieTi: { maxHeight: '910px', lineHeight: '1.74em' }
+      };
+
+      // 监听字体选择器的变化
+      document.getElementById('font-selector').addEventListener('change', function () {
+        const selectedFont = this.value;
+        const storyContainer = document.getElementById('story-container');
+
+        // 获取对应的样式参数
+        const { maxHeight, lineHeight } = fontStyles[selectedFont];
+
+        // 更新样式
+        storyContainer.style.maxHeight = maxHeight;
+        storyContainer.style.lineHeight = lineHeight;
+      });
+
+      // 切换横排竖排布局
+      function changeTextLayout() {
+        const select = document.getElementById('character-direction-selector');
+        const layout = select.value;
+        const storyContainer = document.getElementById('story-container');
+
+        // 切换样式
+        storyContainer.classList.remove('horizontal-layout', 'vertical-layout');
+        storyContainer.classList.add(layout);
+      }
 
     </script>
   </div>
