@@ -1849,7 +1849,7 @@
         // 如果是手机端且选择的字体不是默认字体
         if (window.innerWidth <= 767 && selectedFont !== "default") {
           // 运行 4 次 changeFontSize(step)
-          for (let i = 0; i < 6; i++) {
+          for (let i = 0; i < 2; i++) {
             changeFontSize(-1); // 假设 step 为 -1
           }
         }
@@ -1903,8 +1903,8 @@
     <script>
       // 定义每种字体的样式参数
       const fontStyles = {
-        default: { maxHeight: '540px', lineHeight: '2em' },
-        HanYiChenTiJiaGuWen: { maxHeight: '1000px', lineHeight: '2em' },
+        default: { maxHeight: '510px', lineHeight: '1.5em' },
+        HanYiChenTiJiaGuWen: { maxHeight: '1000px', lineHeight: '1.8em' },
         YiShanBeiZhuanTi: { maxHeight: '900px', lineHeight: '1.8em' },
         HanYiMinJinLiShu: { maxHeight: '970px', lineHeight: '1.85em' },
         DanZhaiCaoShuZiTi: { maxHeight: '990px', lineHeight: '1.9em' },
@@ -1924,8 +1924,12 @@
         // 获取对应的样式参数
         const { maxHeight, lineHeight } = fontStyles[selectedFont];
 
+        // 根据设备宽度调整 maxHeight
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const adjustedMaxHeight = isMobile ? `${parseInt(maxHeight, 10) * 2}px` : maxHeight;
+
         // 更新样式
-        storyContainer.style.maxHeight = maxHeight;
+        storyContainer.style.maxHeight = adjustedMaxHeight;
         storyContainer.style.lineHeight = lineHeight;
       });
 
