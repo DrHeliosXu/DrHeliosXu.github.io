@@ -549,7 +549,7 @@
 
                 <!-- 在select元素中切换各种不同语言的内容 -->
                 <select id="languages-4" name="languages"
-                  style="width: auto; height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                  style="width: auto; height: 25px;  align-items: center; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
                                                                                   text-align-last: center; /* 确保选中的选项居中 */" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
                   <option value="chinese">汉/普通话</option>
@@ -571,7 +571,7 @@
                 </select>
                 <!-- 在select元素中切换各种不同的字体 -->
                 <select id="font-selector" name="font-selector" style="
-                                          width: 60px; height: 25px;
+                                          width: 60px; height: 25px;  align-items: center; 
                                           margin-left: 5px;
                                           border-radius: 0;
                                           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -592,7 +592,7 @@
                 </select>
 
                 <!-- 在select元素中切换竖排横排 -->
-                <select id="character-direction-selector" name="character-direction-selector" style="width: 60px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0,
+                <select id="character-direction-selector" name="character-direction-selector" style="width: 60px; height: 25px;  align-items: center; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0,
                                   0, 0.1);
                                   text-align: center; text-align-last: center;" onchange="changeTextLayout()">
                   <option value="horizontal-layout" selected>横排</option>
@@ -600,8 +600,10 @@
                 </select>
 
                 <!-- 调整字体大小 -->
-                <button id="increase-font" onclick="changeFontSize(1)" style="font-size: 15px;">A+</button>
-                <button id="decrease-font" onclick="changeFontSize(-1)" style="font-size: 15px;">A-</button>
+                <button id="increase-font" onclick="changeFontSize(1)" style=" height: 25px; font-size: 15px;      border-radius: 0;
+    border: 1px solid #ccc; align-items: center; box-sizing: border-box;">A+</button>
+                <button id="decrease-font" onclick="changeFontSize(-1)" style="  height: 25px; font-size: 15px;      border-radius: 0;
+    border: 1px solid #ccc; align-items: center; box-sizing: border-box; ">A-</button>
 
               </div>
             </h1>
