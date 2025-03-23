@@ -899,7 +899,7 @@
 
 
 
-                                        <!-- <li class="timeline-item period">
+                                        <li class="timeline-item period">
                                             <div class="timeline-info"></div>
                                             <div class="timeline-marker"></div>
 
@@ -1557,7 +1557,7 @@
                                                 <p></p>
                                             </div>
                                         </li>
-
+                                        <!--
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
                                             <div class="timeline-marker"></div>
@@ -1923,6 +1923,10 @@
                                                 <p></p>
                                             </div>
                                         </li>
+
+                                       
+
+
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
                                             <div class="timeline-marker"></div>
@@ -2732,14 +2736,23 @@
 
                         // 日期验证逻辑
                         if (dateSpan) {
-                            const dateMatch = dateSpan.textContent.trim().match(/(\d{4})年(\d{2})月(\d{2})日/);
+                            // 更新的正则表达式，允许月份和日期为1位数字，并处理可能的空格
+                            const dateMatch = dateSpan.textContent.trim().match(/(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+
                             if (dateMatch) {
+                                // 解析年份、月份和日期
                                 const eventDate = new Date(
-                                    parseInt(dateMatch[1]),
-                                    parseInt(dateMatch[2]) - 1,
-                                    parseInt(dateMatch[3])
+                                    parseInt(dateMatch[1]),                      // 年份
+                                    parseInt(dateMatch[2]) - 1,                  // 月份 (从0开始)
+                                    parseInt(dateMatch[3])                       // 日期
                                 );
+
+                                // 设置时间为当天的开始
                                 eventDate.setHours(0, 0, 0, 0);
+
+                                // 判断事件日期是否在当前日期之前
+                                const now = new Date();
+                                now.setHours(0, 0, 0, 0);  // 确保当前日期的小时数清零进行比较
                                 isValid = eventDate <= now;
                             }
                         }
