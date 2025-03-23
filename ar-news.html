@@ -344,7 +344,7 @@
                             الأخبار الأخيرة
                             <select id="event-selector" name="event-selector"
                                 style="
-                                                                                                                                                  width: 120px;
+                                                                                                                                                  width: 80px;
                                                                                                                                                   height: 25px;
                                                                                                                                                   margin-left: 5px;
                                                                                                                                                   border-radius: 0;
@@ -417,7 +417,7 @@
                                         </li>
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
-                                            <div class="timeline-marker"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
                                             <div class="timeline-content">
                                                 <hr>
                                                 <h3 class="timeline-title">2024 / سنة التنين <img
@@ -606,7 +606,7 @@
 
                                         <li class="timeline-item period">
                                             <div class="timeline-info"></div>
-                                            <div class="timeline-marker"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
                                             <div class="timeline-content">
                                                 <hr>
                                                 <h3 class="timeline-title">2023 / سنة الأرنب <img
@@ -1103,7 +1103,209 @@
         <script src="js/user_ip_ar.js" type="module"></script>
         <script type="text/javascript" src="update_info_script.js"></script>
         <script src="js/24jieqi.js"></script>
+        <script>
+            // 增强版国家代码映射表（可扩展）
+            // Enhanced country code mapping (transliterated to English)
+            const COUNTRY_MAP = {
+                // الدول الأوروبية
+                'al': { name: 'ألبانيا', color: '#E41E1E' },
+                'ad': { name: 'أندورا', color: '#FF0000' },
+                'at': { name: 'النمسا', color: '#ED2939' },
+                'by': { name: 'بيلاروسيا', color: '#D22730' },
+                'be': { name: 'بلجيكا', color: '#000000' },
+                'ba': { name: 'البوسنة والهرسك', color: '#002395' },
+                'bg': { name: 'بلغاريا', color: '#00966E' },
+                'hr': { name: 'كرواتيا', color: '#FF0000' },
+                'cy': { name: 'قبرص', color: '#0033A0' },
+                'cz': { name: 'التشيك', color: '#D7141A' },
+                'dk': { name: 'الدنمارك', color: '#C60C30' },
+                'ee': { name: 'إستونيا', color: '#4891D9' },
+                'fi': { name: 'فنلندا', color: '#003580' },
+                'fr': { name: 'فرنسا', color: '#0055A4' },
+                'de': { name: 'ألمانيا', color: '#000000' },
+                'gr': { name: 'اليونان', color: '#0D5EAF' },
+                'hu': { name: 'هنغاريا', color: '#436F4D' },
+                'is': { name: 'آيسلندا', color: '#003897' },
+                'ie': { name: 'أيرلندا', color: '#009A44' },
+                'it': { name: 'إيطاليا', color: '#009246' },
+                'lv': { name: 'لاتفيا', color: '#9E3039' },
+                'li': { name: 'ليختنشتاين', color: '#002B7F' },
+                'lt': { name: 'ليتوانيا', color: '#006A44' },
+                'lu': { name: 'لوكسمبورغ', color: '#00A1DE' },
+                'mt': { name: 'مالطا', color: '#CF142B' },
+                'md': { name: 'مولدوفا', color: '#0033A0' },
+                'mc': { name: 'موناكو', color: '#CE1126' },
+                'me': { name: 'الجبل الأسود', color: '#C40308' },
+                'nl': { name: 'هولندا', color: '#AE1C28' },
+                'mk': { name: 'مقدونيا الشمالية', color: '#D20000' },
+                'no': { name: 'النرويج', color: '#EF2B2D' },
+                'pl': { name: 'بولندا', color: '#DC143C' },
+                'pt': { name: 'البرتغال', color: '#006600' },
+                'ro': { name: 'رومانيا', color: '#002B7F' },
+                'ru': { name: 'روسيا', color: '#D52B1E' },
+                'sm': { name: 'سان مارينو', color: '#008C45' },
+                'rs': { name: 'صربيا', color: '#0C4076' },
+                'sk': { name: 'سلوفاكيا', color: '#EE1C25' },
+                'si': { name: 'سلوفينيا', color: '#005AA6' },
+                'es': { name: 'إسبانيا', color: '#AA151B' },
+                'se': { name: 'السويد', color: '#005AA6' },
+                'ch': { name: 'سويسرا', color: '#D52B1E' },
+                'ua': { name: 'أوكرانيا', color: '#0057B7' },
+                'gb': { name: 'المملكة المتحدة', color: '#012169' },
 
+                // الدول الآسيوية الرئيسية
+                'cn': { name: 'الصين', color: '#EE1C25' },
+                'in': { name: 'الهند', color: '#FF9933' },
+                'jp': { name: 'اليابان', color: '#BC002D' },
+                'kr': { name: 'كوريا الجنوبية', color: '#CD2E3A' },
+                'sg': { name: 'سنغافورة', color: '#EF3340' },
+                'th': { name: 'تايلاند', color: '#A51931' },
+                'id': { name: 'إندونيسيا', color: '#CE1126' },
+                'sa': { name: 'المملكة العربية السعودية', color: '#006C35' },
+                'tr': { name: 'تركيا', color: '#E30A17' },
+
+                // الدول الأمريكية الرئيسية
+                'us': { name: 'الولايات المتحدة', color: '#3C3B6E' },
+                'ca': { name: 'كندا', color: '#FF0000' },
+                'br': { name: 'البرازيل', color: '#009C3B' },
+                'ar': { name: 'الأرجنتين', color: '#75AADB' },
+                'mx': { name: 'المكسيك', color: '#006341' },
+
+                // الدول الأفريقية الرئيسية
+                'za': { name: 'جنوب أفريقيا', color: '#009639' },
+                'eg': { name: 'مصر', color: '#CE1126' },
+                'ng': { name: 'نيجيريا', color: '#008751' },
+                'ke': { name: 'كينيا', color: '#000000' },
+
+                // أوقيانوسيا
+                'au': { name: 'أستراليا', color: '#00008B' },
+                'nz': { name: 'نيوزيلندا', color: '#00247D' },
+
+                // المنظمات الدولية
+                'eu': { name: 'الاتحاد الأوروبي', color: '#003399' },
+                'un': { name: 'الأمم المتحدة', color: '#4B92C3' },
+                'asean': { name: 'رابطة دول جنوب شرق آسيا', color: '#004B87' }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const selector = document.getElementById('event-selector');
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // 标准化当前日期
+
+                // 1. 初始化处理时间线结构
+                const timeline = document.querySelector('.timeline');
+                const allItems = Array.from(timeline.children);
+
+                // 构建年份分组结构
+                const yearGroups = [];
+                let currentYearGroup = null;
+
+                // 2. 处理所有元素并过滤未来事件
+                allItems.forEach(element => {
+                    if (element.classList.contains('period')) {
+                        // 处理年份标题
+                        currentYearGroup = {
+                            node: element,
+                            events: [],
+                            hasValidEvents: false,
+                            year: element.querySelector('.timeline-title').textContent.match(/\d{4}/)?.[0]
+                        };
+                        yearGroups.push(currentYearGroup);
+                    } else if (currentYearGroup && element.classList.contains('timeline-item')) {
+                        // 处理事件项
+                        const dateSpan = element.querySelector('.timeline-info span');
+                        let isValid = false;
+
+                        // 日期验证逻辑
+                        // 日期验证逻辑
+                        if (dateSpan) {
+                            const dateText = dateSpan.textContent.trim();
+
+                            // 匹配日.月.年的日期格式：11.01.2023
+                            const dateMatch = dateText.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+
+                            if (dateMatch) {
+                                const day = parseInt(dateMatch[1]);    // 日
+                                const month = parseInt(dateMatch[2]) - 1;  // 月（注意：JavaScript中的月份是从0开始的）
+                                const year = parseInt(dateMatch[3]);   // 年
+
+                                const eventDate = new Date(year, month, day);
+                                eventDate.setHours(0, 0, 0, 0);  // 标准化时间
+                                isValid = eventDate <= now;      // 检查是否是过去的日期
+                            }
+                        }
+
+
+                        // 初始显示设置
+                        element.style.display = isValid ? '' : 'none';
+
+                        // 记录有效事件
+                        if (isValid) {
+                            currentYearGroup.hasValidEvents = true;
+                            currentYearGroup.events.push(element);
+                        }
+                    }
+                });
+
+                // 3. 初始化隐藏无有效事件的年份
+                yearGroups.forEach(group => {
+                    group.node.style.display = group.hasValidEvents ? '' : 'none';
+                });
+
+                // 4. 构建国家统计数据
+                const flagCounter = yearGroups.reduce((acc, group) => {
+                    group.events.forEach(item => {
+                        const flagImg = item.querySelector('.timeline-info img');
+                        if (flagImg) {
+                            const codeMatch = flagImg.src.match(/wflags\/(\w+)\.png/);
+                            if (codeMatch) {
+                                const code = codeMatch[1];
+                                acc[code] = (acc[code] || 0) + 1;
+                            }
+                        }
+                    });
+                    return acc;
+                }, {});
+
+                // 5. 动态生成选择器选项
+                selector.innerHTML = [
+                    '<option value="default" selected>اختر البلد</option>',
+                    ...Object.entries(flagCounter)
+                        .sort((a, b) => b[1] - a[1] || COUNTRY_MAP[a[0]]?.name?.localeCompare(COUNTRY_MAP[b[0]]?.name))
+                        .map(([code, count]) => `
+                    <option value="${code}" 
+                            style="color: ${COUNTRY_MAP[code]?.color || '#333'}; 
+                                   font-weight: 500">
+                      [${count}] ${COUNTRY_MAP[code]?.name || code.toUpperCase()}
+                    </option>
+                  `)
+                ].join('');
+
+                // 6. 筛选功能实现
+                selector.onchange = function () {
+                    const selectedCode = this.value;
+
+                    // 处理事件显示
+                    yearGroups.forEach(group => {
+                        let hasVisible = false;
+
+                        group.events.forEach(item => {
+                            // 判断国家匹配
+                            const flagImg = item.querySelector('.timeline-info img');
+                            const itemCode = flagImg?.src.match(/wflags\/(\w+)\.png/)?.[1];
+                            const matchCountry = selectedCode === 'default' || itemCode === selectedCode;
+
+                            item.style.display = matchCountry ? '' : 'none';
+                            if (matchCountry) hasVisible = true;
+                        });
+
+                        // 处理年份标题显示
+                        const shouldShowYear = hasVisible && group.hasValidEvents;
+                        group.node.style.display = shouldShowYear ? '' : 'none';
+                    });
+                };
+            });
+        </script>
     </div>
     </div>
 </body>
