@@ -68,8 +68,110 @@
       font-size: 0.7em;
       /* 适当增大字体大小 */
     }
+
+
+    /* 在手机设备上隐藏 #character-direction-selector */
+    @media only screen and (max-width: 767px) {
+      #character-direction-selector {
+        display: none;
+      }
+    }
+  </style>
+  <style>
+    button {
+      font-size: 8px;
+      /* 字体大小稍微增大一点 */
+      padding: 0;
+      /* 去掉内边距 */
+      margin: 4px;
+      /* 去掉外边距 */
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 0px;
+      background-color: #ffffff;
+      transition: background-color 0.3s;
+      display: inline-block;
+      width: 30px;
+      /* 调整宽度，使按钮更紧凑 */
+      height: 25px;
+      /* 设置高度为25px */
+      line-height: 25px;
+      /* 使文字垂直居中 */
+      text-align: center;
+      /* 使文字水平居中 */
+      font-weight: bold;
+      /* 让文字更突出 */
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    button:active {
+      background-color: #ccc;
+    }
+
+    /* 让两个按钮紧挨在一起 */
+    button+button {
+      margin-left: -12px;
+      /* 设置两个按钮之间的间距 */
+    }
   </style>
 
+
+  <style>
+    #story-container {
+      display: block;
+      width: 100%;
+      /* 父容器宽度 */
+    }
+
+    .column {
+      text-align: justify;
+      line-height: 1.5em;
+      /* 默认行间距 */
+      margin: 0;
+    }
+
+    #character-direction-selector {
+      width: 60px;
+      height: 25px;
+      margin-left: 5px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-align-last: center;
+    }
+
+    /* 竖排样式 */
+    .vertical-layout {
+      writing-mode: vertical-rl;
+      text-align: justify;
+      text-orientation: upright;
+      column-count: 1;
+      column-gap: 1.2em;
+      font-size: 17px;
+      line-height: 1.6em;
+      /* 增大行间距 */
+      max-height: 650px;
+      /* 限制列的高度 */
+      /* 列间距 */
+      width: 100%;
+      /* 占满容器宽度 */
+
+      overflow: auto;
+      /* 超出部分滚动 */
+
+      overflow-y: auto;
+      /* 允许垂直滚动 */
+      overflow-x: auto;
+      /* 允许水平滚动 */
+      height: 100%;
+      /* 高度限制 */
+      white-space: wrap;
+      /* 不换行，确保竖排内容从右向左扩展 */
+    }
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -340,7 +442,8 @@
 
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               紹 介
-              <select id="languages-4" name="languages" style="
+              <div>
+                <select id="languages-4" name="languages" style="
                                                     width:auto;
                                                     height: 25px;
                                                     margin-left: 5px;
@@ -349,21 +452,40 @@
                                                     text-align: center; /* 新增 */
                                                     text-align-last: center; /* 确保选中的选项居中 */
                                                   " onchange="changeLanguage()">
-                <option value="japanese" selected>現代日本語</option>
-                <option value="old-japanese">上代日本語</option>
-                <option value="hiragana">ふりがな天国</option>
-                <option value="katakana">カタカナ地獄</option>
-                <option value="fake-chinese">偽中国語</option>
-              </select>
+                  <option value="japanese" selected>現代日本語</option>
+                  <option value="old-japanese">上代日本語</option>
+                  <option value="hiragana">ふりがな天国</option>
+                  <option value="katakana">カタカナ地獄</option>
+                  <option value="fake-chinese">偽中国語</option>
+
+                </select>
+
+                <!-- 在select元素中切换竖排横排 -->
+                <select id="character-direction-selector" name="character-direction-selector" style="width: 70px; height: 25px;  align-items: center; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0,
+                                                  0, 0.1);
+                                                  text-align: center; text-align-last: center;"
+                  onchange="changeTextLayout()">
+                  <option value="horizontal-layout" selected>横書き</option>
+                  <option value="vertical-layout">縦書き</option>
+                </select>
+
+                <!-- 调整字体大小 -->
+                <!-- 调整字体大小 -->
+                <button id="increase-font" onclick="changeFontSize(1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A+</button>
+                <button id="decrease-font" onclick="changeFontSize(-1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A-</button>
+              </div>
             </h1>
 
             <hr>
-            <div class="story">
+            <div id="story-container" class="story horizontal-layout">
+
               <p id="japanese-content" align="justify" style="display: block;">
-                現在、徐泓 (
+                現在、徐泓 （
                 <script
                   id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>
-                歳)
+                歳）
                 博士は <strong>研究者</strong> および <strong>エンジニア</strong>として <strong>再生可能エネルギー</strong>と
                 <strong>e-電力システム</strong>を
                 専門にしており、エネルギーおよび交通分野で効率性の優秀さとカーボンニュートラリティを追求しています。
@@ -375,15 +497,14 @@
                 スイスのセントガレンシンポジウム、オーストリアのザルツブルグ グローバルセミナー、中国の中信証券、及びオックスフォードエネルギー研究所などの著名な
                 組織と協力して、アジアと
                 ヨーロッパの<strong>クリーンエネルギー経済および政策</strong>分析に集中してきました。国際開発に積極的に貢献し、徐博士は
-                <strong><a href="https://unece.org/" target="_blank">国連欧州経済委員会</a></strong> (UNECE) の専門家グループ (GE)
-                委員として
+                <strong><a href="https://unece.org/" target="_blank">国連欧州経済委員会</a></strong>（UNECE）の専門家グループ（GE）委員として
                 活動し、
-                <strong><a href="https://unfccc.int/" target="_blank">国連気候変動会議</a></strong> (UNFCCC)
+                <strong><a href="https://unfccc.int/" target="_blank">国連気候変動会議</a></strong>（UNFCCC）
                 において並行セッションを主催し
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">国連持続可能な開発目標</a></strong> (SDGs)
+                <strong><a href="https://sdgs.un.org/goals" target="_blank">国連持続可能な開発目標</a></strong>（SDGs）
                 <strong>7
-                </strong>(手頃なエネルギー)、 <strong>9 </strong>(産業革新),
-                および <strong>13 </strong>(気候行動)を擁護しました。
+                </strong>（手頃なエネルギー）、 <strong>9 </strong>（産業革新）,
+                および <strong>13 </strong>（気候行動）を擁護しました。
                 <br><br>
                 心から学者であり、<strong>再生可能エネルギー</strong>分野で<strong><a href="https://ethz.ch/en.html"
                     target="_blank">チューリッヒ工科大学</a></strong>で博士号を取得し、スイスの<strong><a href="https://psi.ch"
@@ -436,49 +557,84 @@
               </p>
 
               <p id="fake-chinese-content" align="justify" style="display: none;">
-
-                現在、徐泓（32歳）博士 研究者 及 技術者 再生可能能源 e-電力系統 専門、能源及交通分野 効率性優秀性 炭素中立 追求。過去10年間、彼 欧亜大陸全体 多国籍企業 主要機関 協力、電動化 清浄能源
-                新素材産業 技術革新
-                推進。15編論文発表、3件特許付与。彼 工学活動 共 徐博士 瑞西 聖加倫研究会 墺地利 薩爾斯堡全球会議 中華 中信証券 牛津能源研究所等 著名組織 協力、亜細亜 欧羅巴 清浄能源経済 政策分析
-                集中。国際開発 積極貢献 徐博士
-                国際連合欧州経済委員会（UNECE）専門家集団（GE）委員 活動、国際連合気候変動会議（UNFCCC）並行会議主催 国際連合持続可能開発目標（SDGs）7（低廉能源）9（産業革新）13（気候行動）擁護。
+                現在、徐泓（32歳）博士 研究者 及 技術者 再生可能能源
+                <strong>e-電力系統</strong> 専門、能源及交通分野 効率性優秀性 炭素中立 追求。過去10年間、彼
+                <strong>欧亜大陸</strong> 全体
+                多国籍企業
+                主要機関 協力、
+                <strong>電動化</strong>
+                <strong>清浄能源</strong>
+                <strong>新素材産業</strong> 技術革新 推進。15編論文発表、3件特許付与。彼 工学活動 共 徐博士
+                <a href="https://www.stgallen.com" target="_blank">瑞西 聖加倫研究会</a>
+                <a href="https://www.salzburgglobal.org" target="_blank">墺地利 薩爾斯堡全球会議</a>
+                中華 中信証券
+                <a href="https://www.oxfordenergy.org" target="_blank">牛津能源研究所</a> 等 著名組織 協力、亜細亜 欧羅巴
+                <strong><a href="https://cleantechnology.com" target="_blank">清浄能源経済</a></strong> 政策分析 集中。国際開発 積極貢献 徐博士
+                <strong><a href="https://unece.org/" target="_blank">国際連合欧州経済委員会（UNECE）</a></strong>
+                専門家集団（GE）委員 活動、
+                <strong><a href="https://unfccc.int/" target="_blank">国際連合気候変動会議（UNFCCC）</a></strong> 並行会議主催
+                <strong><a href="https://sdgs.un.org/goals" target="_blank">国際連合持続可能開発目標（SDGs）</a></strong>
+                7（低廉能源）9（産業革新）13（気候行動）擁護。
                 <br><br>
-                真摯学者、再生可能能源分野 聚利希工科大学 博士号取得 瑞西保羅謝勒研究所 協力。其之前 彼 明亨工科大学 材料科学修士号取得 欧州X線自由電子激光会社 印飛仁苑 実習実施。影響力研究 対 情熱 彼
-                日本豊田自動車 独逸福来登堡集団等
-                水素燃料電池産業 業界指導者 長期関係 導。学際視野追求 彼 経営学修士 匡迪克商学校 取得 劍橋大学商学校 追加経営教育受領 中華 複数通貨冒険資本会社 主要証券会社 実務経験積。
+                真摯学者、
+                <strong><a href="https://www.ethz.ch" target="_blank">聚利希工科大学</a></strong> 博士号取得
+                <a href="https://psi.ch" target="_blank">瑞西保羅謝勒研究所</a> 協力。其之前 彼
+                <a href="https://www.tum.de" target="_blank">明亨工科大学</a> 材料科学修士号取得
+                <a href="https://xfel.eu" target="_blank">欧州X線自由電子激光会社</a>
+                <a href="https://infineon.com" target="_blank">印飛仁苑</a> 実習実施。影響力研究 対 情熱 彼
+                <a href="https://www.toyota-global.com" target="_blank">日本豊田自動車</a>
+                <a href="https://www.freudenberg.com" target="_blank">独逸福来登堡集団</a> 等
+                水素燃料電池産業 業界指導者 長期関係 導。学際視野追求 彼
+                <strong><a href="https://quantic.edu/mba" target="_blank">経営学修士 匡迪克商学校</a></strong> 取得
+                <a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大学商学校</a> 追加経営教育受領
+                中華 複数通貨冒険資本会社
+                主要証券会社 実務経験積。
                 <br><br>
               </p>
 
 
               <p id="katakana-content" align="justify" style="display: none;">
 
-                現在、シュイ・ホン (32 サイ) ドクター・オブ・フィロソフィー ハ リサーチャー アンド エンジニア トシテ、リニューアブル・エネルギー アンド e-パワー・システム ニ スペシャライズシ、エネルギー
-                アンド
-                トランスポーテーション・フィールド デ エフィシエンシー・エクセレンス アンド カーボン・ニュートラリティ ヲ プルスートシテイマス。 パスト10ネンカン、カレ ハ ユーラシア・コンティネント ゼンタイ デ
-                マルチナショナル・カンパニーズ
-                アンド メジャー・インスティテューションズ ト コラボレートシ、e-モビリティ、クリーン・エネルギー、アンド ニュー・マテリアルズ・インダストリー ノ テクノロジー・イノベーション ヲ
-                プロモートシテキマシタ。 フィフティーン・ペーパーズ
-                ガ パブリッシュサレ、スリー・パテンツ ガ グランティドサレマシタ。カレノ エンジニアリング・アクティビティーズ ト トモニ、シュイ・ドクター ハ スイス ノ セント・ガレン・シンポジウム、オーストリア ノ
-                ザルツブルグ・グローバル・セミナー、チャイナ ノ CITICセキュリティーズ、アンド オックスフォード・エネルギー・インスティテュート ナド ノ レプテーブル・オーガニゼーションズ ト コラボレートシ、アジア
-                アンド ヨーロッパ ノ
-                クリーン・エネルギー・エコノミー アンド ポリシー・アナリシス ニ フォーカスシテキマシタ。インターナショナル・ディベロップメント ニ アクティブリー コントリビュートシ、シュイ・ドクター ハ
-                UNECE（ユナイテッド・ネイションズ・ヨーロッパン・エコノミック・コミッション）ノ エキスパート・グループ（GE）メンバー トシテ アクティビティ ヲ
-                オコナイ、UNFCCC（ユナイテッド・ネーションズ・フレームワーク・コンベンション・オン・クライメート・チェンジ）デ パラレル・セッション ヲ
-                ホストシ、SDGs（サステイナブル・ディベロップメント・ゴールズ）7（アフォーダブル・エネルギー）、9（インダストリアル・イノベーション）、13（クライメート・アクション）ヲ アドボケートシマシタ。
+                現在、シュイ・ホン （32
+                サイ）
+                ハクシハ <strong>ケンキュウシャ</strong> オヨビ <strong>エンジニア</strong>トシテ <strong>サイセイカノウエネルギー</strong>ト
+                <strong>e-デンリョクシステム</strong>ヲ
+                センモンニシテオリ、エネルギーオヨビコウツウブンヤデコウリツセイノユウシュウサトカーボンニュートラリティヲツイキュウシテイマス。
+                カコ10ネンカン、カレハユーラシアタイリクゼンタイデタコクセキキギョウオヨビシュヨウキカントキョウリョクシ、<strong>e-モビリティ</strong>、<strong>クリーンエネルギー</strong>、オヨビ
+                <strong>シンソザイ</strong>サンギョウノギジュツカクシンヲスイシンシテキマシタ。
+                <strong><span class="no_of_papers"></span> ホンノロンブン</strong>ガハッピョウサレ、<strong><span
+                    class="no_of_patents"></span>
+                  ケンノトッキョウ</strong>ガフヨサレマシタ。カレノエンジニアリングカツドウトトモニ、シュイハクシハ
+                スイスノセントガレンシンポジウム、オーストリアノザルツブルグ グローバルセミナー、チュウゴクノチュウシンショウケン、オヨビオックスフォードエネルギーケンキュウジョナドノチョメイナ
+                ソシキトキョウリョクシテ、アジアト
+                ヨーロッパノ<strong>クリーンエネルギーケイザイオヨビセイサク</strong>ブンセキニシュウチュウシテキマシタ。コクサイカイハツニセッキョクテキニコウケンシ、徐ハクシハ
+                <strong><a href="https://unece.org/" target="_blank">コクレンオウシュウケイザイイインカイ</a></strong> （UNECE） ノセンモンカグループ
+                （GE）
+                イイントシテ
+                カツドウシ、
+                <strong><a href="https://unfccc.int/" target="_blank">コクレンキコウヘンドウカイギ</a></strong> （UNFCCC）
+                ニオイテヘイコウセッションヲシュサイシ
+                <strong><a href="https://sdgs.un.org/goals" target="_blank">コクレンジゾクカノウナカイハツモクヒョウ</a></strong>（SDGs）
+                <strong>7
+                </strong>（テゴロナエネルギー）、 <strong>9 </strong>（サンギョウカクシン）,
+                オヨビ <strong>13 </strong>（キコウコウドウ）ヲヨウゴシマシタ。
                 <br><br>
-                コア・アカデミシャン トシテ、リニューアブル・エネルギー・フィールド デ ETHチューリッヒ（アイティーエイチ・チューリッヒ）カラ ドクター・ディグリー ヲ アキワードシ、スイス ノ
-                ポール・シェラー・インスティテュート ト
-                コラボレートシマシタ。プリアーリー、カレ ハ ミュンヘン・テック（テクニカル・ユニバーシティ・オブ・ミュンヘン）デ マテリアルズ・サイエンス・マスターズ ヲ
-                アキワードシ、ヨーロピアンX-レイ・フリーエレクトロン・レーザー・カンパニー
-                アンド インフィニオン デ インターンシップ ヲ パフォームシマシタ。インパクトフル・リサーチ ヘノ パッション ハ、カレ ヲ ジャパン ノ トヨタ・モーター・コーポレーション アンド ジャーマニー ノ
-                フロイデンベルク・グループ ナド ノ
-                ハイドロジェン・アンド フューエル・セル・インダストリー ノ インダストリー・リーダーズ トノ ロングターム・リレーションシップ ヘ ガイドシマシタ。インターディシプリナリー・ビジョン ヲ パースートシ、カレ
-                ハ
-                MBA（マスター・オブ・ビジネス・アドミニストレーション）ヲ クアンティック・ビジネス・スクール カラ アキワードシ、ケンブリッジ・ビジネス・スクール デ アドディショナル・マネジメント・エデュケーション ヲ
-                レシーブシ、チャイナ ノ
-                デュアル・カレンシー・ベンチャー・キャピタル・カンパニー アンド メジャー・セキュリティーズ・カンパニーズ デ プラクティカル・エクスペリエンス ヲ アキュムレートシマシタ。
-
-
+                ココロカラガクシャデアリ、<strong>サイセイカノウエネルギー</strong>ブンヤデ<strong><a href="https://ethz.ch/en.html"
+                    target="_blank">チューリッヒコウカダイガク</a></strong>デハクシゴウヲシュウトクシ、スイスノ<strong><a href="https://psi.ch"
+                    target="_blank">ポール・シェラーケンキュウジョ</a></strong>トキョウリョクシマシタ。 ソノマエニ、
+                カレハ<strong><a href="https://tum.de"
+                    target="_blank">ミュンヘンコウカダイガク</a></strong>デザイリョウカガクノシュウシゴウヲシュウトクシ、<strong><a href="https://xfel.eu"
+                    target="_blank">オウシュウXセンジユウデンシレーザーカイシャ</a></strong>オヨビ<strong><a href="https://infineon.com"
+                    target="_blank">インフィニオン</a></strong>デインターンシップヲオコナイマシタ。
+                エイキョウリョクノアルケンキュウニタイスルカレノジョウネツハ、カレヲニホンノ<strong>トヨタジドウシャ</strong>ヤドイツノ<strong>フロイデンベルクグループ</strong>ナドノスイソオヨビネンリョウデンチサンギョウノギョウカイ
+                リーダートノチョウキテキナカンケイヘトミチビキマシタ。
+                ガクサイテキナシヤヲツイキュウシ、カレハ<strong>ケイエイガクシュウシ</strong>ヲ<strong><a href="https://quantic.edu/mba"
+                    target="_blank">クアンティック
+                    ビジネス
+                    スクール</a></strong>デシュウトクシ、
+                <strong><a href="https://www.jbs.cam.ac.uk/"
+                    target="_blank">ケンブリッジダイガクビジネススクール</a></strong>デツイカノケイエイキョウイクヲウケ、
+                チュウゴクノニジュウツウカベンチャーキャピタルカイシャトシュヨウショウケンカイシャデジツムケイケンヲツミマシタ。
               </p>
 
 
@@ -492,10 +648,10 @@
                 </ruby><ruby>泓<rp>(</rp>
                   <rt>おう</rt>
                   <rp>)</rp>
-                </ruby> ( 32 <ruby>歳<rp>(</rp>
+                </ruby>（32 <ruby>歳<rp>(</rp>
                   <rt>とし</rt>
                   <rp>)</rp>
-                </ruby>) <ruby>博士<rp>(</rp>
+                </ruby>）<ruby>博士<rp>(</rp>
                   <rt>はかせ</rt>
                   <rp>)</rp>
                 </ruby>は <ruby>研究<rp>(</rp>
@@ -690,13 +846,13 @@
                 </ruby><ruby>会<rp>(</rp>
                   <rt>かい</rt>
                   <rp>)</rp>
-                </ruby> (UNECE) の<ruby>専門<rp>(</rp>
+                </ruby>（UNECE） の<ruby>専門<rp>(</rp>
                   <rt>せんもん</rt>
                   <rp>)</rp>
                 </ruby><ruby>家<rp>(</rp>
                   <rt>か</rt>
                   <rp>)</rp>
-                </ruby>グループ (GE) <ruby>委員<rp>(</rp>
+                </ruby>グループ（GE）<ruby>委員<rp>(</rp>
                   <rt>いいん</rt>
                   <rp>)</rp>
                 </ruby>として <ruby>活動<rp>(</rp>
@@ -714,7 +870,7 @@
                 </ruby><ruby>会議<rp>(</rp>
                   <rt>かいぎ</rt>
                   <rp>)</rp>
-                </ruby> (UNFCCC) において<ruby>並行<rp>(</rp>
+                </ruby>（UNFCC）において<ruby>並行<rp>(</rp>
                   <rt>へいこう</rt>
                   <rp>)</rp>
                 </ruby>セッションを<ruby>主催<rp>(</rp>
@@ -735,16 +891,16 @@
                 </ruby><ruby>目標<rp>(</rp>
                   <rt>もくひょう</rt>
                   <rp>)</rp>
-                </ruby> (SDGs) 7 (<ruby>手頃<rp>(</rp>
+                </ruby>（SDGs）7 (<ruby>手頃<rp>(</rp>
                   <rt>てごろ</rt>
                   <rp>)</rp>
-                </ruby>なエネルギー)、 9 (<ruby>産業<rp>(</rp>
+                </ruby>なエネルギー)、 9（<ruby>産業<rp>(</rp>
                   <rt>さんぎょう</rt>
                   <rp>)</rp>
                 </ruby><ruby>革新<rp>(</rp>
                   <rt>かくしん</rt>
                   <rp>)</rp>
-                </ruby>), および 13 (<ruby>気候<rp>(</rp>
+                </ruby>）, および 13 (<ruby>気候<rp>(</rp>
                   <rt>きこう</rt>
                   <rp>)</rp>
                 </ruby><ruby>行動<rp>(</rp>
@@ -968,12 +1124,13 @@
               </p>
 
 
-              <p style="text-align:left;">
-                PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
 
-              </p>
             </div>
+            <hr>
+            <p style="text-align:left;">
+              PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
 
+            </p>
             <br>
             <h1 class="mb-4">
               ビデオ
@@ -1410,7 +1567,133 @@
       }
     </script>
 
+    <!-- 字体大小JavaScript -->
+    <script>
+      function changeFontSize(step) {
+        // 获取当前选中的语言
+        const selectedLanguage = document.getElementById('languages-4').value;
 
+        // 获取当前语言的内容区域（在 .story 容器内）
+        const currentContent = document.querySelector(`.story #${selectedLanguage}-content`);
+
+        // 如果当前内容区域存在
+        if (currentContent) {
+          // 获取内容区域的当前字体大小
+          const currentFontSize = window.getComputedStyle(currentContent).fontSize;
+
+          // 解析字体大小为数值
+          let fontSize = parseInt(currentFontSize);
+
+          // 增加或减少字体大小
+          fontSize += step;
+
+          // 限制字体大小范围
+          if (fontSize < 10) fontSize = 10; // 最小字体大小
+          if (fontSize > 50) fontSize = 50; // 最大字体大小
+
+          // 更新内容区域的字体大小
+          currentContent.style.fontSize = fontSize + 'px';
+          // 动态调整行高和高度
+          currentContent.style.lineHeight = `${fontSize * 1.5}px`; // 行高为字体大小的 1.5 倍
+          currentContent.style.height = 'auto'; // 高度自动调整
+          // 将所有子元素的字体大小设置为 1em（基于父元素的字体大小）
+          const contentElements = currentContent.querySelectorAll('*');
+          contentElements.forEach(element => {
+            element.style.fontSize = '1em';
+          });
+        } else {
+          console.error(`未找到内容区域：${selectedLanguage}-content`);
+        }
+      }
+    </script>
+
+    <script>
+      function changeTextLayout() {
+        const select = document.getElementById('character-direction-selector');
+        const layout = select.value;
+        const storyContainer = document.getElementById('story-container');
+
+        // 切换样式
+        storyContainer.classList.remove('horizontal-layout', 'vertical-layout');
+        storyContainer.classList.add(layout);
+
+        // 替换标点符号
+        replacePunctuation(layout === 'horizontal-layout' ? 'horizontal' : 'vertical');
+      }
+
+      const punctuationMap = {
+        horizontal: {
+          '、': '、',
+          '。': '。',
+          '，': '，',
+          '：': '：',
+          '；': '；',
+          '？': '？',
+          '！': '！',
+          '（': '(',
+          '）': ')',
+          '﹁': '(',
+          '﹂': ')',
+          '﹃': '“',
+          '﹄': '”',
+          '【': '【',
+          '】': '】',
+          '《': '《',
+          '》': '》',
+          '“': '“',
+          '”': '”',
+          '‘': '‘',
+          '’': '’'
+        },
+        vertical: {
+          ',': ',',
+          '、': '︑',
+          '。': '︒',
+          '，': '︓',
+          '：': '︓',
+          '；': '︔',
+          '？': '︖',
+          '！': '︕',
+          '(': '﹁',
+          ')': '﹂',
+          '（': '﹁',
+          '）': '﹂',
+          '【': '︷',
+          '】': '︸',
+          '《': '︽',
+          '》': '︾',
+          '“': '﹁',
+          '”': '﹂',
+          '‘': '﹃',
+          '’': '﹄'
+        }
+      };
+
+
+      function replacePunctuation(direction) {
+        console.log(`Replacing punctuation for: ${direction}`);
+        const paragraphs = document.querySelectorAll('#story-container p');
+        const map = punctuationMap[direction];
+
+        // 动态生成正则表达式以匹配所有标点符号
+        const punctuationKeys = Object.keys(map);
+        const regex = new RegExp('[' + punctuationKeys.join('') + ']', 'g');
+
+        paragraphs.forEach((p) => {
+          // 替换标点符号
+          p.innerHTML = p.innerHTML.replace(regex, (match) => map[match] || match);
+
+          // 去除标点符号前后的空格
+          p.innerHTML = p.innerHTML.replace(/(\s*[\、。\，：；？！（）【】《》“”‘’﹁﹂︑︒︓︔︖︕﹁﹂︷︸︽︾﹁﹂﹃﹄,]\s*)/g, '$1');
+
+          // 去除多余的空白符号：包括多个空格、换行符、制表符等
+          p.innerHTML = p.innerHTML.replace(/\s+/g, ' ')   // 将多个空格替换为一个空格
+            .replace(/^\s+|\s+$/g, '')  // 去除开头和结尾的空格
+            .replace(/&nbsp;/g, '')     // 移除HTML实体字符（&nbsp;）
+            .replace(/\n+/g, '');       // 移除多余的换行符
+        });
+      }
+    </script>
   </div>
 </body>
 

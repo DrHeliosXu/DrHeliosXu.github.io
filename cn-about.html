@@ -239,6 +239,7 @@
     .vertical-layout {
       writing-mode: vertical-rl;
       text-orientation: upright;
+      text-align: justify;
       column-count: 1;
       column-gap: 1.2em;
       font-size: 17px;
@@ -251,7 +252,18 @@
       /* 超出部分滚动 */
       line-height: 1.65em;
       /* 增大行间距 */
-
+      overflow-y: auto;
+      /* 允许垂直滚动 */
+      overflow-x: auto;
+      /* 允许水平滚动 */
+      height: 100%;
+      /* 高度限制 */
+      white-space: wrap;
+      /* 不换行，确保竖排内容从右向左扩展 */
+      display: flex;
+      /* 使用flex布局确保子元素扩展 */
+      align-items: flex-start;
+      /* 内容顶部对齐 */
     }
 
 
@@ -1890,7 +1902,7 @@
           // 更新内容区域的字体大小
           currentContent.style.fontSize = fontSize + 'px';
           // 动态调整行高和高度
-          currentContent.style.lineHeight = `${fontSize * 1.3}px`; // 行高为字体大小的 1.5 倍
+          currentContent.style.lineHeight = `${fontSize * 1.5}px`; // 行高为字体大小的 1.5 倍
           currentContent.style.height = 'auto'; // 高度自动调整
           // 将所有子元素的字体大小设置为 1em（基于父元素的字体大小）
           const contentElements = currentContent.querySelectorAll('*');

@@ -43,6 +43,13 @@
     }
 
 
+    /* 在手机设备上隐藏 #character-direction-selector */
+    @media only screen and (max-width: 767px) {
+      #character-direction-selector {
+        display: none;
+      }
+    }
+
     select {
       width: 150px;
       /* 设置宽度 */
@@ -76,6 +83,59 @@
       /* 增加每行之间的间距 */
     }
   </style>
+
+  <style>
+    #story-container {
+      display: block;
+      width: 100%;
+      /* 父容器宽度 */
+    }
+
+    .column {
+      text-align: justify;
+      line-height: 1.5em;
+      /* 默认行间距 */
+      margin: 0;
+    }
+
+    #character-direction-selector {
+      width: 60px;
+      height: 25px;
+      margin-left: 5px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-align-last: center;
+    }
+
+    /* 竖排样式 */
+    .vertical-layout {
+      writing-mode: vertical-rl;
+      text-align: justify;
+      text-orientation: upright;
+      column-count: 1;
+      column-gap: 1.2em;
+      font-size: 17px;
+      /* 列间距 */
+      width: 100%;
+      /* 占满容器宽度 */
+      max-height: 700px;
+      /* 限制列的高度 */
+      overflow: auto;
+      /* 超出部分滚动 */
+      line-height: 1.5em;
+      /* 增大行间距 */
+      overflow-y: auto;
+      /* 允许垂直滚动 */
+      overflow-x: auto;
+      /* 允许水平滚动 */
+      height: 100%;
+      /* 高度限制 */
+      white-space: wrap;
+      /* 不换行，确保竖排内容从右向左扩展 */
+    }
+  </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -377,7 +437,8 @@
 
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               소 개
-              <select id="languages-4" name="languages" style="
+              <div>
+                <select id="languages-4" name="languages" style="
                                         width:auto;
                                         height: 25px;
                                         margin-left: 5px;
@@ -386,15 +447,30 @@
                                         text-align: center; /* 新增 */
                                         text-align-last: center; /* 确保选中的选项居中 */
                                       " onchange="changeLanguage()">
-                <option value="korean">표준 한국어</option>
-                <option value="chinese-korean">한자 한글</option>
-              </select>
+                  <option value="korean">표준 한국어</option>
+                  <option value="chinese-korean">한자 한글</option>
+                </select><!-- 在select元素中切换竖排横排 -->
+                <select id="character-direction-selector" name="character-direction-selector" style="width: 80px; height: 25px;  align-items: center; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0,
+                                                                0, 0.1);
+                                                                text-align: center; text-align-last: center;"
+                  onchange="changeTextLayout()">
+                  <option value="horizontal-layout" selected>가로쓰기</option>
+                  <option value="vertical-layout">세로쓰기</option>
+                </select>
+
+                <!-- 调整字体大小 -->
+                <!-- 调整字体大小 -->
+                <button id="increase-font" onclick="changeFontSize(1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A+</button>
+                <button id="decrease-font" onclick="changeFontSize(-1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A-</button>
+              </div>
             </h1>
 
 
 
             <hr>
-            <div class="story">
+            <div id="story-container" class="story horizontal-layout">
               <p id="korean-content" align="justify" style="display: block;">
                 현재, 쉬홍 (
                 <script
@@ -520,12 +596,13 @@
               </p>
 
 
-              <p style="text-align:left;">
-                PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
 
-              </p>
             </div>
+            <hr>
+            <p style="text-align:left;">
+              PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
 
+            </p>
             <br>
             <h1 class="mb-4">
               비디오
@@ -970,7 +1047,133 @@
         document.getElementById(selectedLanguage + "-content").style.display = "block";
       }
     </script>
+    <!-- 字体大小JavaScript -->
+    <script>
+      function changeFontSize(step) {
+        // 获取当前选中的语言
+        const selectedLanguage = document.getElementById('languages-4').value;
 
+        // 获取当前语言的内容区域（在 .story 容器内）
+        const currentContent = document.querySelector(`.story #${selectedLanguage}-content`);
+
+        // 如果当前内容区域存在
+        if (currentContent) {
+          // 获取内容区域的当前字体大小
+          const currentFontSize = window.getComputedStyle(currentContent).fontSize;
+
+          // 解析字体大小为数值
+          let fontSize = parseInt(currentFontSize);
+
+          // 增加或减少字体大小
+          fontSize += step;
+
+          // 限制字体大小范围
+          if (fontSize < 10) fontSize = 10; // 最小字体大小
+          if (fontSize > 50) fontSize = 50; // 最大字体大小
+
+          // 更新内容区域的字体大小
+          currentContent.style.fontSize = fontSize + 'px';
+          // 动态调整行高和高度
+          currentContent.style.lineHeight = `${fontSize * 1.5}px`; // 行高为字体大小的 1.5 倍
+          currentContent.style.height = 'auto'; // 高度自动调整
+          // 将所有子元素的字体大小设置为 1em（基于父元素的字体大小）
+          const contentElements = currentContent.querySelectorAll('*');
+          contentElements.forEach(element => {
+            element.style.fontSize = '1em';
+          });
+        } else {
+          console.error(`未找到内容区域：${selectedLanguage}-content`);
+        }
+      }
+    </script>
+
+    <script>
+      function changeTextLayout() {
+        const select = document.getElementById('character-direction-selector');
+        const layout = select.value;
+        const storyContainer = document.getElementById('story-container');
+
+        // 切换样式
+        storyContainer.classList.remove('horizontal-layout', 'vertical-layout');
+        storyContainer.classList.add(layout);
+
+        // 替换标点符号
+        replacePunctuation(layout === 'horizontal-layout' ? 'horizontal' : 'vertical');
+      }
+
+      const punctuationMap = {
+        horizontal: {
+          '、': '、',
+          '。': '。',
+          '，': '，',
+          '：': '：',
+          '；': '；',
+          '？': '？',
+          '！': '！',
+          '（': '(',
+          '）': ')',
+          '﹁': '(',
+          '﹂': ')',
+          '﹃': '“',
+          '﹄': '”',
+          '【': '【',
+          '】': '】',
+          '《': '《',
+          '》': '》',
+          '“': '“',
+          '”': '”',
+          '‘': '‘',
+          '’': '’'
+        },
+        vertical: {
+          ',': ',',
+          '、': '︑',
+          '。': '︒',
+          '，': '︓',
+          '：': '︓',
+          '；': '︔',
+          '？': '︖',
+          '！': '︕',
+          '(': '﹁',
+          ')': '﹂',
+          '（': '﹁',
+          '）': '﹂',
+          '【': '︷',
+          '】': '︸',
+          '《': '︽',
+          '》': '︾',
+          '“': '﹁',
+          '”': '﹂',
+          '‘': '﹃',
+          '’': '﹄'
+        }
+      };
+
+
+      function replacePunctuation(direction) {
+        console.log(`Replacing punctuation for: ${direction}`);
+        const paragraphs = document.querySelectorAll('#story-container p');
+        const map = punctuationMap[direction];
+
+        // 动态生成正则表达式以匹配所有标点符号
+        const punctuationKeys = Object.keys(map);
+        const regex = new RegExp('[' + punctuationKeys.join('') + ']', 'g');
+
+        paragraphs.forEach((p) => {
+          // 替换标点符号
+          p.innerHTML = p.innerHTML.replace(regex, (match) => map[match] || match);
+
+          // 去除标点符号前后的空格
+          p.innerHTML = p.innerHTML.replace(/(\s*[\、。\，：；？！（）【】《》“”‘’﹁﹂︑︒︓︔︖︕﹁﹂︷︸︽︾﹁﹂﹃﹄,]\s*)/g, '$1');
+
+          // 去除多余的空白符号：包括多个空格、换行符、制表符等
+          p.innerHTML = p.innerHTML.replace(/\s+/g, ' ')   // 将多个空格替换为一个空格
+            .replace(/^\s+|\s+$/g, '')  // 去除开头和结尾的空格
+            .replace(/&nbsp;/g, '')     // 移除HTML实体字符（&nbsp;）
+            .replace(/\n+/g, '');       // 移除多余的换行符
+        });
+      }
+    </script>
   </div>
 
 </body>
