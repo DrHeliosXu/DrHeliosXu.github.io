@@ -2,7 +2,7 @@
 
 const data = {
     "web_update_year": 2025,
-    "web_update_month": "02",  // 两位数，01-09
+    "web_update_month": "03",  // 两位数，01-09
     "web_update_day": 1,
     "born_year": 1993,
     "age": 31,

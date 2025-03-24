@@ -30,6 +30,8 @@
   <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
+
+
   <style>
     body {
       font-family: "Tahoma", "Noto Sans", sans-serif;
@@ -103,7 +105,8 @@
                                             " onchange="window.location.href=this.options[this.selectedIndex].value">
                       <!-- <option value="cn-about.html">中文</option>
                       <option value="jp-about.html">日本語</option>
-                      <option value="kr-about.html">한국어</option> -->
+                      <option value="kr-about.html">한국어</option>
+                      <option value="th-about.html">ไทย</option>-->
                       <option value="de-about.html">Deutsch</option>
                       <option value="en-about.html" selected>English</option>
                       <option value="es-about.html">Español</option>
@@ -203,15 +206,16 @@
                   text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
                   <!-- <option value="cn-about.html">中文</option>
-                  <option value="jp-about.html">日本語</option>
-                  <option value="kr-about.html">한국어</option> -->
+                                            <option value="jp-about.html">日本語</option>
+                                            <option value="kr-about.html">한국어</option>
+                                            <option value="th-about.html">ไทย</option>-->
                   <option value="de-about.html">Deutsch</option>
                   <option value="en-about.html" selected>English</option>
                   <option value="es-about.html">Español</option>
                   <option value="fr-about.html">Français</option>
                   <option value="it-about.html">Italiano</option>
                   <!-- <option value="ru-about.html">Русский</option>
-                  <option value="ar-about.html">اللغة العربية</option> -->
+                                            <option value="ar-about.html">اللغة العربية</option> -->
                 </select>
               </span>
             </div>
@@ -281,15 +285,16 @@
                       text-align-last: center; /* 确保选中的选项居中 */
                       " onchange="window.location.href=this.options[this.selectedIndex].value">
             <!-- <option value="cn-about.html">中文</option>
-            <option value="jp-about.html">日本語</option>
-            <option value="kr-about.html">한국어</option> -->
+                                            <option value="jp-about.html">日本語</option>
+                                            <option value="kr-about.html">한국어</option>
+                                            <option value="th-about.html">ไทย</option>-->
             <option value="de-about.html">Deutsch</option>
             <option value="en-about.html" selected>English</option>
             <option value="es-about.html">Español</option>
             <option value="fr-about.html">Français</option>
             <option value="it-about.html">Italiano</option>
             <!-- <option value="ru-about.html">Русский</option>
-            <option value="ar-about.html">اللغة العربية</option> -->
+                                            <option value="ar-about.html">اللغة العربية</option> -->
           </select>
           <select id="content-list" name="content-list" style="
                   width:auto;height: 25px;
@@ -1014,6 +1019,7 @@
         document.getElementById(selectedLanguage + "-content").style.display = "block";
       }
     </script>
+
   </div>
 </body>
 

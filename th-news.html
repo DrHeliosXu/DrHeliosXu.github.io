@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>หง ซู :: ปริญญาเอก :: วิศวกร</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/timeline-simple.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Tahoma', 'Noto Sans', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- block save as ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="en.html" class="site-logo">
+                            <img src="images/logo-full-th.png" alt="Image" class="site-logo" style="height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+                                    <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                                        <a href="https://www.linkedin.com/in/xuhong/"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-linkedin"></span>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-google"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                                            class="social-icon d-inline-block p-3">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </div>
+
+                                    <img src="images/flag_th.png" class="flag d-inline-block d-lg-none" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+
+
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" style="
+                                                     width:auto;
+                                                      height: 25px;
+                                                      margin-left: 5px;
+                                                      border-radius: 0;
+                                                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                      text-align: center; /* 新增 */
+                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                    "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="cn-news.html">中文</option>
+                                            <option value="jp-news.html">日本語</option>
+                                            <option value="kr-news.html">한국어</option>
+                                            <option value="th-news.html" selected>ไทย</option>
+                                            <option value="de-news.html">Deutsch</option>
+                                            <option value="en-news.html">English</option>
+                                            <option value="es-news.html">Español</option>
+                                            <option value="fr-news.html">Français</option>
+                                            <option value="it-news.html">Italiano</option>
+                                            <option value="ru-news.html">Русский</option>
+                                            <option value="ar-news.html">اللغة العربية</option>
+                                        </select>
+                                        <select id="content-list-2" name="content-list" style="
+                                                                                                            width: auto;height: 25px;
+                                                                                                            margin-left: 5px;
+                                                                                                            border-radius: 0;
+                                                                                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                            text-align: center; /* 新增 */
+                                                                                                            text-align-last: center; /* 确保选中的选项居中 */
+                                                                                                            "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="th.html">หน้าแรก</option>
+                                            <option value="th-research.html">การวิจัย</option>
+                                            <option value="th-news.html" selected>ข่าวสาร</option>
+                                            <option value="th-projects.html">โครงการ</option>
+                                            <option value="th-about.html">เกี่ยวกับ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right " role="navigation">
+
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                                    style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+
+
+                                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                                    <li>
+                                        <a href="th.html" class="nav-link text-left">หน้าแรก&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="th-research.html" class="nav-link text-left">การวิจัย&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li>
+                                        <a href="th-news.html" class="nav-link text-left">ข่าวสาร</a>
+                                    </li>
+                                    <li>
+                                        <a href="th-projects.html" class="nav-link text-left">โครงการ</a>
+                                    </li>
+                                    <!-- <li>
+                                                                          <a href="en-activities.html" class="nav-link text-left">Activities</a>
+                                                                      </li> -->
+                                    <li>
+                                        <a href="th-about.html" class="nav-link text-left">เกี่ยวกับ</a>
+                                    </li>
+                                    <li id="festival-item">
+                                        <a id="dynamic-greeting" href="#" target="_blank" class="nav-link text-left">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center;">
+                                <!-- 简体字和国旗 -->
+
+                                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                                    <img src="images/flag_th.png" alt="flag"
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                                </a>
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages-2" name="languages" style="width:auto;height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn-news.html">中文</option>
+                                    <option value="jp-news.html">日本語</option>
+                                    <option value="kr-news.html">한국어</option>
+                                    <option value="th-news.html" selected>ไทย</option>
+                                    <option value="de-news.html">Deutsch</option>
+                                    <option value="en-news.html">English</option>
+                                    <option value="es-news.html">Español</option>
+                                    <option value="fr-news.html">Français</option>
+                                    <option value="it-news.html">Italiano</option>
+                                    <option value="ru-news.html">Русский</option>
+                                    <option value="ar-news.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">เมนู</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="th.html">Hong Xu, <small>PhD</small></a><br />
+                    </li>
+                    <li>
+                        <a href="th-research.html">การวิจัย ➔</a>
+                    </li>
+
+                    <li>
+                        <a href="th-news.html">ข่าวสาร ➔</a>
+                    </li>
+                    <li>
+                        <a href="th-projects.html">โครงการ ➔</a>
+                    </li>
+                    <li>
+                        <a href="th-about.html">เกี่ยวกับ ➔</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+        <!------>
+        <!-- 简化版导航栏内容 -->
+        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <img src="images/logo-full-en-long2.png" alt="Image" class="site-logo"
+                    style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+                <div></div>
+
+                <div style="display: flex; align-items: center;">
+                    <a class="flag d-inline-block d-lg-none">
+                        <img src="images/flag_th.png" alt="flag"
+                            style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                    </a>
+                    <select id="languages-3" name="languages" style="
+                                                width:auto;
+                                                height: 25px;
+                        margin-left: 5px;
+                        border-radius: 0;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        text-align: center; /* 新增 */
+                        text-align-last: center; /* 确保选中的选项居中 */
+                        " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="cn-news.html">中文</option>
+                        <option value="jp-news.html">日本語</option>
+                        <option value="kr-news.html">한국어</option>
+                        <option value="th-news.html" selected>ไทย</option>
+                        <option value="de-news.html">Deutsch</option>
+                        <option value="en-news.html">English</option>
+                        <option value="es-news.html">Español</option>
+                        <option value="fr-news.html">Français</option>
+                        <option value="it-news.html">Italiano</option>
+                        <option value="ru-news.html">Русский</option>
+                        <option value="ar-news.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list" name="content-list" style="
+                    width:auto;
+                    height: 25px;
+                    margin-left: 5px;
+                    border-radius: 0;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    text-align: center; /* 新增 */
+                    text-align-last: center; /* 确保选中的选项居中 */
+                    " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="th.html">หน้าแรก</option>
+                        <option value="th-research.html">การวิจัย</option>
+                        <option value="th-news.html" selected>ข่าวสาร</option>
+                        <option value="th-projects.html">โครงการ</option>
+                        <option value="th-about.html">เกี่ยวกับ</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!------>
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&ensp;</p>
+            <p class="d-sm-block d-none">&ensp;</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 single-content">
+                        <p class="mb-5">
+                            &nbsp;
+                            <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+                        </p>
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+                            ข่าวสารล่าสุด
+                            <select id="event-selector" name="event-selector" style="
+                          width: 120px;
+                          height: 25px;
+                          margin-left: 5px;
+                          border-radius: 0;
+                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          text-align: center;
+                          text-align-last: center;">
+                                <option value="default" selected>เลือกประเทศ</option>
+                            </select>
+                        </h1>
+
+
+                        <div class="container-fluid">
+                            <div class="row example-basic">
+                                <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1">
+                                    <ul class="timeline">
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <hr>
+                                            <div class="timeline-content">
+                                                <h3 class="timeline-title">พ.ศ.2568 | ค.ศ.2025 | ปีมะเส็ง <img
+                                                        src="./images/12-snake.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -3px;" /></h3>
+                                                <h6>• ในปีนี้, <a
+                                                        href="https://www.pillsburylaw.com/en/services/regulatory/trump-resource-center.html"
+                                                        target="_blank">Trump 2.0</a> ได้ปรับโฉมเทคโนโลยี, พลังงาน, และ
+                                                    <a href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+                                                        target="_blank">ระบบภาษีศุลกากร</a> ของสหรัฐอเมริกา, ขณะที่ <a
+                                                        href="https://www.worldoil.com/news/2024/10/7/saudi-arabia-to-invest-10-billion-in-green-hydrogen-production/"
+                                                        target="_blank">กองทุนอธิปไตยจากตะวันออกกลาง</a>
+                                                    ได้ลงทุนเต็มที่ใน <a
+                                                        href="https://www.spglobal.com/commodity-insights/en/news-research/blog/energy-transition/011325-middle-east-eyes-global-role-in-green-hydrogen-trade"
+                                                        target="_blank">คอร์ริเดอร์ไฮโดรเจนสีเขียว</a>. การแข่งขันในด้าน
+                                                    <a href="https://irregularwarfarecenter.org/publications/insights/the-emerging-potential-for-quantum-computing-in-irregular-warfare/"
+                                                        target="_blank">การคำนวณควอนตัม</a> และ <a
+                                                        href="https://www2.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html"
+                                                        target="_blank">ชิปคุณภาพสูง</a> ระหว่างสหรัฐอเมริกา, จีน,
+                                                    และยุโรปได้ทวีความรุนแรงขึ้น, และสนามรบในอนาคตสำหรับ
+                                                    <a href="https://www.cep.eu/eu-topics/details/eu-energy-sovereignty-cepadhoc.html"
+                                                        target="_blank">อธิปไตยพลังงาน</a> ได้ย้ายจากพื้นดินไปยังเมฆ.
+                                                    สันติภาพโลกและวันพรุ่งนี้ที่ดีขึ้น...
+                                                </h6>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">27 มิถุนายน 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมงานแสดงสินค้าทางอุตสาหกรรม
+                                                    "Automatica" 2025</h5>
+                                                <p>ธีม: Automatica 2025<br>สถานที่: มิวนิก, เยอรมนี / ผู้จัดงาน: Messe
+                                                    München</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">8 พฤษภาคม 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมงานแสดงสินค้าทางอุตสาหกรรม "The
+                                                    smarter E Europe" 2025</h5>
+                                                <p>ธีม: The smarter E Europe 2025<br>สถานที่: มิวนิก, เยอรมนี /
+                                                    ผู้จัดงาน: Messe München</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/jp.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">20 เมษายน 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เริ่มทัวร์อีสเตอร์ในเอเชียตะวันออก: เซี่ยงไฮ้
+                                                    - ฉงชิ่ง - เฉิงตู - โอซาก้า - โตเกียว -
+                                                    ไทเป - ฮ่องกง - เซินเจิ้น - หนานจิง</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">3 เมษายน 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการประชุมกลุ่มทำงาน "UNECE Transport
+                                                    Division"</h5>
+                                                <p>ธีม: การพัฒนาคำแนะนำที่ดีที่สุด<br>สถานที่: UN เจนีวา & ออนไลน์ /
+                                                    ผู้จัดงาน: UNECE e-Mobility Task Force</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">1 เมษายน 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมงานแสดงสินค้าทางอุตสาหกรรม "Hannover
+                                                    Messe" 2025</h5>
+                                                <p>ธีม: การสร้างอนาคตด้วยเทคโนโลยี<br>สถานที่: ฮันโนเฟอร์, เยอรมนี /
+                                                    ผู้จัดงาน: Hannover Messe</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">24 มีนาคม 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการประชุมเชิงปฏิบัติการ "UNECE
+                                                    Sustainable Energy Division"</h5>
+                                                <p>ธีม: การส่งเสริมการเติบโตที่ยั่งยืนในตลาดไฮโดรเจน<br>สถานที่: UN
+                                                    เจนีวา & ออนไลน์ / ผู้จัดงาน: UNECE
+                                                    Sustainable Energy</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">28 มกราคม 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมงาน "งานกาลาตรุษจีน" ที่มิวนิก
+                                                </h5>
+                                                <p>ธีม: ฤดูใบไม้ผลิในมิวนิก / สถานที่: อาคารรัฐสภาเก่าในมิวนิก</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">15 กุมภาพันธ์ 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมคอนเสิร์ตซิมโฟนี
+                                                    "การประชุมด้านความปลอดภัยมิวนิค"</h5>
+                                                <p>ธีม: ไกลจากสันติภาพและความสามัคคี<br>สถานที่: Residenz München /
+                                                    ผู้จัดงาน: Munich Security Conference (MSC)
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">16 มกราคม 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการพูดคุยของ Cameron Abadi,
+                                                    รองบรรณาธิการของ Foreign Policy, ที่มิวนิก</h5>
+                                                <p>ธีม: Climate Radicals: Why Our Environmental Politics
+                                                    Fails<br>สถานที่: Amerikahaus München</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cz.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">1 มกราคม 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">ฉลองปีใหม่บนเที่ยวบินปักกิ่ง-ปราก</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">พ.ศ.2567 | ค.ศ.2024 | ปีมังกร <img
+                                                        src="./images/12-dragon.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -8px;" /></h3>
+                                                <h6>• ในปีนี้ จีนได้ผ่านกฎหมายพลังงานฉบับแรกของตนอย่างเป็นทางการ <a
+                                                        href="https://climatecooperation.cn/climate/china-releases-its-first-energy-law/"
+                                                        target="_blank">Energy
+                                                        Law</a>,
+                                                    และ <a
+                                                        href="https://www.pwc.com/gx/en/services/tax/esg-tax/cbam-supply-chain-imperatives.html"
+                                                        target="_blank">ภาษีคาร์บอน CBAM ของสหภาพยุโรป</a>
+                                                    ขับเคลื่อนการลดการปล่อยคาร์บอนในอุตสาหกรรมทั่วโลก. <a
+                                                        href="https://www.imperial.ac.uk/news/242258/breakthrough-fusion-experiment-generates-excess-energy/"
+                                                        target="_blank">ฟิวชันนิวเคลียร์ที่ควบคุมได้</a>
+                                                    ประสบความสำเร็จในการทำให้ได้พลังงานสุทธิครั้งแรก, และ <a
+                                                        href="https://commonslibrary.parliament.uk/what-is-the-global-south/"
+                                                        target="_blank">ประเทศในโลกภาคใต้</a>
+                                                    ท้าทาย <a
+                                                        href="https://responsiblestatecraft.org/dedollarization-china-russia/"
+                                                        target="_blank">อำนาจการใช้น้ำมันของดอลลาร์สหรัฐฯ</a> ——<a
+                                                        href="https://www.unep.org/topics/climate-action/climate-finance"
+                                                        target="_blank">การเงินด้านสภาพภูมิอากาศ</a>
+                                                    และการปฏิวัติเทคโนโลยี
+                                                    กำลังก่อร่างรหัสพื้นฐานของอารยธรรมมนุษย์ใหม่...</h6>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">4 ธันวาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เริ่มต้นโครงการริเริ่มร่วม Salzburg-KFAS</h5>
+                                                <p>หัวข้อ: KFAS-SALZBURG Global Leadership Initiative -
+                                                    การเชื่อมโยงเทคโนโลยี<br>สถานที่: Schloss Leopoldskron /
+                                                    ผู้จัดงาน: Salzburg Global Seminar</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">20 ตุลาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">
+                                                    เข้าร่วมการประชุมสุดยอดยุโรปซัลซ์บูร์กครั้งที่ 20</h5>
+                                                <p>หัวข้อ: 20th Salzburg Europe Summit EU: No Future without
+                                                    Reforms<br>สถานที่: สภาเมืองซัลซ์บูร์ก / ผู้จัดงาน:
+                                                    Institut der Regionen Europas (IRE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">23 กันยายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการประชาสัมพันธ์ Zhongguancun Science
+                                                    Park 2024</h5>
+                                                <p>สถานที่: Munich Urban Colab / ผู้จัดงาน: Zhongguancun Science Park
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">7 กันยายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการประชุมพัฒนาเศรษฐกิจระดับต่ำใน Wuhu
+                                                    2024</h5>
+                                                <p>สถานที่: ศูนย์นิทรรศการนานาชาติ Wuhu / ผู้จัดงาน: รัฐบาลเทศบาลเมือง
+                                                    Wuhu</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">14 สิงหาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมคอนเสิร์ตของ Adele ในมิวนิค!</h5>
+                                                <p>สถานที่: Messe Stadt München | ผู้จัดงาน: Adele in Munich</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 มิถุนายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการประชุมสภาพภูมิอากาศของ UN Bonn
+                                                    2024</h5>
+                                                <p>หัวข้อ: 2024 Bonn Climate Change Conference<br>สถานที่: UN Bonn
+                                                    Campus | ผู้จัดงาน: UN Framework Convention
+                                                    on Climate Change (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">8 มิถุนายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เริ่มต้นทัวร์ UK-Ireland:
+                                                    อังกฤษ-เวลส์-สกอตแลนด์-ไอร์แลนด์เหนือ-ไอร์แลนด์</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">29 พฤษภาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมกลุ่มงาน E-Mobility ของ UNECE</h5>
+                                                <p>สถานที่: Palais des Nations, Geneva / ผู้จัดงาน: UN Economic
+                                                    Commission for Europe (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2 พฤษภาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการสัมมนา St. Gallen Symposium
+                                                    ครั้งที่ 53 ในฐานะผู้นำที่กำลังมาแรง</h5>
+                                                <p>หัวข้อ: 53rd St. Gallen Symposium - Confronting Scarcity<br>สถานที่:
+                                                    University of St. Gallen / ผู้จัดงาน:
+                                                    St. Gallen Symposium</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">22 เมษายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมงาน Hannover Messe Industrial Fair
+                                                    2024</h5>
+                                                <p>หัวข้อ: Energizing a Sustainable Industry<br>สถานที่: Hanover
+                                                    Exhibition Center / ผู้จัดงาน: Hannover Messe
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">17 เมษายน 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">ได้รับเชิญให้เข้าร่วมการสัมมนา PSI - 40th
+                                                    Swiss Electrochemistry Symposium</h5>
+                                                <p>หัวข้อ: Critical Raw Materials for the Energy Transition<br>สถานที่:
+                                                    Kultur & Kongresshaus Aarau / ผู้จัดงาน:
+                                                    40th Swiss Electrochemistry Symposium/PSI</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">7 มีนาคม 2024</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">กล่าวสุนทรพจน์ที่ UNECE Expert Group on
+                                                    Climate Change and Inland Transport</h5>
+                                                <p>หัวข้อ: Group of Experts on Assessment of Climate Change Impacts and
+                                                    Adaptation for Inland
+                                                    Transport<br>สถานที่: Palais des Nations, Geneva / ผู้จัดงาน: UN
+                                                    Economic Commission for Europe (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">พ.ศ.2566 | ค.ศ.2023 | ปีกระต่าย <img
+                                                        src="./images/12-rabbit.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -5px;" /></h3>
+
+                                                <h6>• ในปีนี้ การประชุม <a
+                                                        href="https://unfccc.int/cop28/5-key-takeaways">UAE COP28</a>
+                                                    ตัดสินใจเป็นครั้งแรกที่จะ "<a
+                                                        href="https://www.brookings.edu/articles/why-are-fossil-fuels-so-hard-to-quit/">ค่อยๆ
+                                                        เลิกใช้พลังงานจากฟอสซิล</a>" ในขณะที่ <a
+                                                        href="https://www.iea.org/reports/global-ev-outlook-2024/trends-in-electric-cars">การส่งออก
+                                                        EV ของจีน</a>
+                                                    ครองตำแหน่งสูงสุดของโลก และ <a
+                                                        href="https://www.offshore-energy.biz/worlds-longest-and-deepest-e2-4-billion-subsea-green-electricity-interconnector-given-a-go-at-mediterranean-energy-map-metamorphosis/">โครงการพลังงานไฟฟ้าทางทะเลระหว่างทวีปยูเรเชีย</a>
+                                                    ได้รับการเปิดตัว——จุดเปลี่ยนของการเปลี่ยนแปลงพลังงานระหว่างพลังงานเก่าและใหม่ได้ปะทะกับการเติบโตอย่างระเบิดของ
+                                                    <a href="https://www.nature.com/articles/d41586-024-03408-z">พลังการคำนวณ
+                                                        AI</a>...
+                                                </h6>
+
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">5 ธันวาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">
+                                                    เข้าร่วมการสัมมนาพลังงานไฮโดรเจนที่สถาบันพลังงานแห่งมหาวิทยาลัยอ็อกซ์ฟอร์ด
+                                                </h5>
+                                                <p>หัวข้อ: การสร้างสภาพแวดล้อมสำหรับเศรษฐกิจไฮโดรเจน:
+                                                    นโยบายและระเบียบข้อบังคับ<br>สถานที่: วิทยาลัย St. Hugh's,
+                                                    มหาวิทยาลัยอ็อกซ์ฟอร์ด / ผู้จัดงาน:
+                                                    สถาบันพลังงานแห่งมหาวิทยาลัยอ็อกซ์ฟอร์ด</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">6 ตุลาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">
+                                                    เข้าร่วมฟอรั่มพลังงานและสภาพภูมิอากาศนานาชาติที่เวียนนา</h5>
+                                                <p>หัวข้อ: ฟอรั่มพลังงานและสภาพภูมิอากาศนานาชาติที่เวียนนา<br>สถานที่:
+                                                    ฮอฟบูร์ก เวียนนา / ผู้จัดงาน:
+                                                    องค์การพัฒนาอุตสาหกรรมแห่งสหประชาชาติ (UNIDO)</p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">21 สิงหาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">ปีนยอดเขา Mt. Herzogstand ในเยอรมนี (1731m
+                                                    a.s.l.)</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/lu.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">29 กรกฎาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">
+                                                    เข้าร่วมการประชุมเทคโนโลยีระดับโลกที่ลักเซมเบิร์ก</h5>
+                                                <p>หัวข้อ: การประชุมเทคโนโลยีระดับโลก:
+                                                    ที่ที่นวัตกรรมทางธุรกิจสร้างความแตกต่าง<br>สถานที่: LuxExpo /
+                                                    ผู้จัดงาน:
+                                                    ICT Spring</p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 มิถุนายน 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">
+                                                    เข้าร่วมการประชุมสภาพภูมิอากาศแห่งสหประชาชาติที่บอนน์ 2023</h5>
+                                                <p>หัวข้อ: การประชุมสภาพภูมิอากาศแห่งสหประชาชาติที่บอนน์
+                                                    2023<br>สถานที่: วิทยาเขต UN บอนน์ / ผู้จัดงาน:
+                                                    องค์การกรอบการเปลี่ยนแปลงสภาพภูมิอากาศแห่งสหประชาชาติ (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">21 พฤษภาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมการบรรยายของ CEO ของ OpenAI - Sam
+                                                    Altman ที่มหาวิทยาลัยเทคนิคมิวนิก</h5>
+                                                <p>สถานที่: TUM AudiMax / ผู้จัดงาน: TUM Speaker Series</p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">4 พฤษภาคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมเป็นผู้ประเมินทางวิชาการในงานสัมมนา
+                                                    St. Gallen Symposium ครั้งที่ 52</h5>
+                                                <p>หัวข้อ: งานสัมมนา St. Gallen ครั้งที่ 52 - สัญญารุ่นใหม่<br>สถานที่:
+                                                    มหาวิทยาลัย St. Gallen / ผู้จัดงาน: St.
+                                                    Gallen Symposium</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">11 มกราคม 2023</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">เข้าร่วมสัมมนาของ Christoph Heusgen,
+                                                    ประธานการประชุมความมั่นคงมิวนิก</h5>
+                                                <p>สถานที่: TUM Think Tank / ผู้จัดงาน: Munich Political Academy</p>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 ml-auto">
+                        <br>
+                        <div class="section-title">
+                            <h2>ประวัติการเดินทาง</h2> <small><a href="periodic.html"
+                                    target="_blank">[ตามช่วงเวลา]</a></small>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2021-ปัจจุบัน</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">เยอรมนี, สวิตเซอร์แลนด์, สเปน, อิตาลี, สโลวีเนีย, โครเอเชีย,
+                                        บอสเนียและเฮอร์เซโกวีนา, เซอร์เบีย, แคนาดา, สหราชอาณาจักร, ไอร์แลนด์,
+                                        ยิบรอลตาร์, กรีซ, จีน</span>
+                                    <span class="date-read">วิศวกร R&D</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">CH</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2016-2021</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">สวิตเซอร์แลนด์, เยอรมนี, ฝรั่งเศส, อิตาลี, ไอซ์แลนด์,
+                                        นอร์เวย์, สวีเดน, ฟินแลนด์,
+                                        เดนมาร์ก, เนเธอร์แลนด์, โปแลนด์, เอสโตเนีย, ลิกเตนสไตน์, รัสเซีย, สหรัฐอเมริกา,
+                                        แคนาดา, ตุรกี, ไทย,
+                                        จีน</span>
+                                    <span class="date-read">นักศึกษาปริญญาเอก</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2015-2016</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">เยอรมนี, ออสเตรีย, อิตาลี, ฝรั่งเศส, สวิตเซอร์แลนด์, เช็กเกีย,
+                                        ฮังการี, จีน</span>
+                                    <span class="date-read">นักศึกษาปริญญาโท</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">FR</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2014-2015</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">ฝรั่งเศส, สเปน, เบลเยียม, เนเธอร์แลนด์, ลักเซมเบิร์ก</span>
+                                    <span class="date-read">นักศึกษาปริญญาโท</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">CN</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">2009-2014</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">ปักกิ่ง, เซี่ยงไฮ้, เหอหนาน, อานฮุย, ยูนนาน, เหลียวหนิง,
+                                        จี๋หลิน, เฮย์หลงเจียง,
+                                        ชานซี, หูหนาน, เจ้อเจียง, เจียงซู, ซานตง, ไต้หวัน</span>
+                                    <span class="date-read">นักศึกษาปริญญาตรี</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!---
+    <div class="site-section subscribe bg-light">
+      <div class="container">
+        <form action="#" class="row align-items-center">
+          <div class="col-md-5 mr-auto">
+            <h2>Newsletter Subcribe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    --->
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                  style="
+                    height: 1px;
+                    background-color: gray;
+                    border: none;
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    width: 100vw;
+                    transform: translateX(-50%);
+                  "
+                /> -->
+
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img src="./images/wflags/eu.png" style="
+                                                                                height: 0.9em;
+                                                                                vertical-align: -6%;
+                                                                                display: inline-block;
+                                                                                margin-right: 0em;
+                                                                              " /> ติดต่อฉัน</h2>
+                        <p>
+                            อีเมล | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                            ลิงค์อิน |
+                            <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+                            อินสตาแกรม |
+                            <a href="https://www.instagram.com/helios.h.xu/"
+                                target="_blank">instagram.com/helios.h.xu</a><br /><br />
+                            <span class="currentDateInLang" language="english"></span><br />
+                            <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="timezone - Zurich" target="_blank" rel="nofollow">เวลาในยุโรป
+                                    [CET]</a></strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                          border: none;
+                          border-top: 1px solid #c7c7c7;
+                          margin: 0px 0;
+                        " />
+                    </div>
+
+                    <!-- 第二栏 -->
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start --><a id="weather" target="_blank"
+                            href="https://www.booked.net/weather/beijing-18391"><img
+                                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" /></a><!-- weather widget end -->
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                                style="
+                                                                                                                                                    height: 0.9em;
+                                                                                                                                                    vertical-align: -6%;
+                                                                                                                                                    display: inline-block;
+                                                                                                                                                    margin-right: 0em;
+                                                                                                                                                  " /> โชคชะตาส่องทางให้เรา</h2>
+                        <p>
+                            ภาพถ่าย |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                            การเขียน |
+                            <a href="https://site.inconstruction.io" target="_blank">site.inconstruction.io</a><br />
+                            นักวิชาการ |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+                            <span class="currentZodiacInLang" language="english"></span> - <a class="jieqi-24"
+                                language="english"></a><br>
+                            <a href="//24timezones.com/Bangkok/time" style="text-decoration: none" class="clock24"
+                                id="tz24-1742849597-c128-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                title="time zone Bangkok" target="_blank" rel="nofollow">เวลากรุงเทพฯ [ICT]</a>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                          border: none;
+                          border-top: 1px solid #c7c7c7;
+                          margin: 0px 0;
+                        " />
+                    </div>
+
+                    <!-- 第三栏 -->
+
+                    <div class="col-md-5">
+                        <br />
+                        <div id="clustrmap-container"
+                            style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
+                            <script type="text/javascript" id="clustrmaps"
+                                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                                </script>
+                        </div>
+
+                        <style>
+                            /* 默认是电脑端，transform: translateX(15px); */
+                            #clustrmap-container {
+                                transform: translateX(15px) !important;
+                            }
+
+                            @media (max-width: 768px) {
+                                #clustrmap-container {
+                                    transform: translateX(-40px) !important;
+                                }
+                            }
+                        </style>
+
+                    </div>
+                </form>
+            </div>
+            <br />
+
+            <!-- <div class="container">
+                  <form action="#" class="row align-items-center">
+                    <div class="col-md-5 mr-auto"></div>
+                    <div class="col-md-6 ml-auto"></div>
+                  </form>
+                </div>
+                <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                    height: 1px;
+                    background-color: gray;
+                    border: none;
+                    margin: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 150vw;
+                    transform: translateX(-50%);
+                  " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+                style="
+                  height: 1px;
+                  border-width: 0;
+                  color: gray;
+                  background-color: gray;
+                "
+              /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag" src="" alt="国旗" style="
+                              height: 0.9em;
+                              vertical-align: -6%;
+                              display: inline-block;
+                              margin-right: 0em;
+                            " />
+                                <text>ยินดีต้อนรับเพื่อนจาก
+                                    <span class="location">โลก</span>! ผ่าน
+                                    <span class="distance-info"> ∞ กิโลเมตร</span> ของอวกาศโลก
+                                    เราเชื่อมต่อกันเสมอ!</text>
+                                <img src="./images/wflags/de.png" style="
+                              height: 0.9em;
+                              vertical-align: -6%;
+                              display: inline-block;
+                              margin-right: 0em;
+                            " />
+                                <br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                ลิขสิทธิ์ &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | Hong Xu | อัปเดต: <span class="web_update_month"></span>. <span
+                                    class="web_update_year"></span> |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <!-- <a href="https://info.flagcounter.com/D897"
+                            ><img
+                              src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                              border="0"
+                          /></a> -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                              display: inline-block;
+                              width: 94%;
+                              height: 95%;
+                              overflow: hidden;
+                              position: relative;
+                            ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                                width: auto;
+                                height: auto;
+                                object-fit: fill;
+                                object-position: top right;
+                                transform: translateX(3.5%) translateY(30%);
+                              " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/jquery.mb.YTPlayer.min.js"></script>
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_en.js" type="module"></script>
+        <script type="text/javascript" src="update_info_script.js"></script>
+        <script src="js/festival.js"></script>
+        <script src="js/24jieqi.js"></script>
+
+
+        <script>
+            // 增强版国家代码映射表（可扩展）
+            // Enhanced country code mapping (transliterated to English)
+
+
+            const COUNTRY_MAP = {
+                // European countries
+                'al': { name: 'แอลเบเนีย', color: '#E41E1E' },
+                'ad': { name: 'อันดอร์รา', color: '#FF0000' },
+                'at': { name: 'ออสเตรีย', color: '#ED2939' },
+                'by': { name: 'เบลารุส', color: '#D22730' },
+                'be': { name: 'เบลเยียม', color: '#000000' },
+                'ba': { name: 'บอสเนียและเฮอร์เซโกวีนา', color: '#002395' },
+                'bg': { name: 'บัลแกเรีย', color: '#00966E' },
+                'hr': { name: 'โครเอเชีย', color: '#FF0000' },
+                'cy': { name: 'ไซปรัส', color: '#0033A0' },
+                'cz': { name: 'เช็กเกีย', color: '#D7141A' },
+                'dk': { name: 'เดนมาร์ก', color: '#C60C30' },
+                'ee': { name: 'เอสโตเนีย', color: '#4891D9' },
+                'fi': { name: 'ฟินแลนด์', color: '#003580' },
+                'fr': { name: 'ฝรั่งเศส', color: '#0055A4' },
+                'de': { name: 'เยอรมนี', color: '#000000' },
+                'gr': { name: 'กรีซ', color: '#0D5EAF' },
+                'hu': { name: 'ฮังการี', color: '#436F4D' },
+                'is': { name: 'ไอซ์แลนด์', color: '#003897' },
+                'ie': { name: 'ไอร์แลนด์', color: '#009A44' },
+                'it': { name: 'อิตาลี', color: '#009246' },
+                'lv': { name: 'ลัตเวีย', color: '#9E3039' },
+                'li': { name: 'ลิกเตนสไตน์', color: '#002B7F' },
+                'lt': { name: 'ลิทัวเนีย', color: '#006A44' },
+                'lu': { name: 'ลักเซมเบิร์ก', color: '#00A1DE' },
+                'mt': { name: 'มอลตา', color: '#CF142B' },
+                'md': { name: 'มอลโดวา', color: '#0033A0' },
+                'mc': { name: 'โมนาโก', color: '#CE1126' },
+                'me': { name: 'มอนเตเนโกร', color: '#C40308' },
+                'nl': { name: 'เนเธอร์แลนด์', color: '#AE1C28' },
+                'mk': { name: 'มาซิโดเนียเหนือ', color: '#D20000' },
+                'no': { name: 'นอร์เวย์', color: '#EF2B2D' },
+                'pl': { name: 'โปแลนด์', color: '#DC143C' },
+                'pt': { name: 'โปรตุเกส', color: '#006600' },
+                'ro': { name: 'โรมาเนีย', color: '#002B7F' },
+                'ru': { name: 'รัสเซีย', color: '#D52B1E' },
+                'sm': { name: 'ซานมาริโน', color: '#008C45' },
+                'rs': { name: 'เซอร์เบีย', color: '#0C4076' },
+                'sk': { name: 'สโลวะเกีย', color: '#EE1C25' },
+                'si': { name: 'สโลวีเนีย', color: '#005AA6' },
+                'es': { name: 'สเปน', color: '#AA151B' },
+                'se': { name: 'สวีเดน', color: '#005AA6' },
+                'ch': { name: 'สวิตเซอร์แลนด์', color: '#D52B1E' },
+                'ua': { name: 'ยูเครน', color: '#0057B7' },
+                'gb': { name: 'สหราชอาณาจักร', color: '#012169' },
+
+                // Major Asian countries
+                'cn': { name: 'จีน', color: '#EE1C25' },
+                'in': { name: 'อินเดีย', color: '#FF9933' },
+                'jp': { name: 'ญี่ปุ่น', color: '#BC002D' },
+                'kr': { name: 'เกาหลีใต้', color: '#CD2E3A' },
+                'sg': { name: 'สิงคโปร์', color: '#EF3340' },
+                'th': { name: 'ประเทศไทย', color: '#A51931' },
+                'id': { name: 'อินโดนีเซีย', color: '#CE1126' },
+                'sa': { name: 'ซาอุดีอาระเบีย', color: '#006C35' },
+                'tr': { name: 'ตุรกี', color: '#E30A17' },
+
+                // Major American countries
+                'us': { name: 'สหรัฐอเมริกา', color: '#3C3B6E' },
+                'ca': { name: 'แคนาดา', color: '#FF0000' },
+                'br': { name: 'บราซิล', color: '#009C3B' },
+                'ar': { name: 'อาร์เจนตินา', color: '#75AADB' },
+                'mx': { name: 'เม็กซิโก', color: '#006341' },
+
+                // Major African countries
+                'za': { name: 'แอฟริกาใต้', color: '#009639' },
+                'eg': { name: 'อียิปต์', color: '#CE1126' },
+                'ng': { name: 'ไนจีเรีย', color: '#008751' },
+                'ke': { name: 'เคนยา', color: '#000000' },
+
+                // Oceania
+                'au': { name: 'ออสเตรเลีย', color: '#00008B' },
+                'nz': { name: 'นิวซีแลนด์', color: '#00247D' },
+
+                // International organizations
+                'eu': { name: 'สหภาพยุโรป', color: '#003399' },
+                'un': { name: 'สหประชาชาติ', color: '#4B92C3' },
+                'asean': { name: 'อาเซียน', color: '#004B87' }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const selector = document.getElementById('event-selector');
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // 标准化当前日期
+
+                // 1. 初始化处理时间线结构
+                const timeline = document.querySelector('.timeline');
+                const allItems = Array.from(timeline.children);
+
+                // 构建年份分组结构
+                const yearGroups = [];
+                let currentYearGroup = null;
+
+                // 2. 处理所有元素并过滤未来事件
+                allItems.forEach(element => {
+                    if (element.classList.contains('period')) {
+                        // 处理年份标题
+                        currentYearGroup = {
+                            node: element,
+                            events: [],
+                            hasValidEvents: false,
+                            year: element.querySelector('.timeline-title').textContent.match(/\d{4}/)?.[0]
+                        };
+                        yearGroups.push(currentYearGroup);
+                    } else if (currentYearGroup && element.classList.contains('timeline-item')) {
+                        // 处理事件项
+                        const dateSpan = element.querySelector('.timeline-info span');
+                        let isValid = false;
+
+                        if (dateSpan) {
+                            const dateText = dateSpan.textContent.trim();
+
+                            // 泰语月份映射
+                            const monthMap = {
+                                'มกราคม': 1,
+                                'กุมภาพันธ์': 2,
+                                'มีนาคม': 3,
+                                'เมษายน': 4,
+                                'พฤษภาคม': 5,
+                                'มิถุนายน': 6,
+                                'กรกฎาคม': 7,
+                                'สิงหาคม': 8,
+                                'กันยายน': 9,
+                                'ตุลาคม': 10,
+                                'พฤศจิกายน': 11,
+                                'ธันวาคม': 12
+                            };
+
+                            // 匹配泰语日期格式：27 มิถุนายน 2025
+                            const dateMatch = dateText.match(/(\d{1,2})\s+([\u0E00-\u0E7F]+)\s+(\d{4})/);
+                            if (dateMatch && monthMap[dateMatch[2]]) {
+                                const eventDate = new Date(
+                                    parseInt(dateMatch[3]),        // 年
+                                    monthMap[dateMatch[2]] - 1,   // 月（注意：JavaScript 月份从 0 开始）
+                                    parseInt(dateMatch[1])        // 日
+                                );
+                                eventDate.setHours(0, 0, 0, 0);  // 标准化时间
+                                const now = new Date();
+                                now.setHours(0, 0, 0, 0);       // 标准化当前时间
+                                isValid = eventDate <= now;     // 检查是否是过去的日期
+                            }
+                        }
+
+
+                        // 初始显示设置
+                        element.style.display = isValid ? '' : 'none';
+
+                        // 记录有效事件
+                        if (isValid) {
+                            currentYearGroup.hasValidEvents = true;
+                            currentYearGroup.events.push(element);
+                        }
+                    }
+                });
+
+                // 3. 初始化隐藏无有效事件的年份
+                yearGroups.forEach(group => {
+                    group.node.style.display = group.hasValidEvents ? '' : 'none';
+                });
+
+                // 4. 构建国家统计数据
+                const flagCounter = yearGroups.reduce((acc, group) => {
+                    group.events.forEach(item => {
+                        const flagImg = item.querySelector('.timeline-info img');
+                        if (flagImg) {
+                            const codeMatch = flagImg.src.match(/wflags\/(\w+)\.png/);
+                            if (codeMatch) {
+                                const code = codeMatch[1];
+                                acc[code] = (acc[code] || 0) + 1;
+                            }
+                        }
+                    });
+                    return acc;
+                }, {});
+
+                // 5. 动态生成选择器选项
+                selector.innerHTML = [
+                    '<option value="default" selected>เลือกประเทศ</option>',
+                    ...Object.entries(flagCounter)
+                        .sort((a, b) => b[1] - a[1] || COUNTRY_MAP[a[0]]?.name?.localeCompare(COUNTRY_MAP[b[0]]?.name))
+                        .map(([code, count]) => `
+                <option value="${code}" 
+                        style="color: ${COUNTRY_MAP[code]?.color || '#333'}; 
+                               font-weight: 500">
+                  [${count}] ${COUNTRY_MAP[code]?.name || code.toUpperCase()}
+                </option>
+              `)
+                ].join('');
+
+                // 6. 筛选功能实现
+                selector.onchange = function () {
+                    const selectedCode = this.value;
+
+                    // 处理事件显示
+                    yearGroups.forEach(group => {
+                        let hasVisible = false;
+
+                        group.events.forEach(item => {
+                            // 判断国家匹配
+                            const flagImg = item.querySelector('.timeline-info img');
+                            const itemCode = flagImg?.src.match(/wflags\/(\w+)\.png/)?.[1];
+                            const matchCountry = selectedCode === 'default' || itemCode === selectedCode;
+
+                            item.style.display = matchCountry ? '' : 'none';
+                            if (matchCountry) hasVisible = true;
+                        });
+
+                        // 处理年份标题显示
+                        const shouldShowYear = hasVisible && group.hasValidEvents;
+                        group.node.style.display = shouldShowYear ? '' : 'none';
+                    });
+                };
+            });
+        </script>
+
+
+
+
+    </div>
+    </div>
+</body>
+
+</html>

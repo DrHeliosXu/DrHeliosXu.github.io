@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>หง ซู :: ปริญญาเอก :: วิศวกร</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/jquery-ui.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+  <link rel="stylesheet" href="css/aos.css" />
+  <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/mobilenav.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about_style.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
+
+
+  <style>
+    body {
+      font-family: "Tahoma", "Noto Sans", sans-serif;
+      /* 全局字体 */
+      font-size: 16px;
+      color: #373737;
+      line-height: 1.6;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="en.html" class="site-logo">
+              <img src="images/logo-full-th.png" alt="Image" class="site-logo" style="height: 80px" />
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+              <!---<span class="icon-menu h3"></span>--->
+            </a>
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-end">
+            <div class="top-social d-flex align-items-center">
+              <div class="social-icons-container">
+                <div class="ml-md-auto top-social d-lg-inline-block">
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
+
+                  <img src="images/flag_th.png" class="flag d-inline-block d-lg-none" alt="flag"
+                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
+
+
+                  <div class="ml-auto d-inline-block d-lg-none">
+                    <select id="languages" name="languages" style="
+                                             width:auto;
+                                              height: 25px;
+                                              margin-left: 5px;
+                                              border-radius: 0;
+                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                                            " onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="cn-about.html">中文</option>
+                      <option value="jp-about.html">日本語</option>
+                      <option value="kr-about.html">한국어</option>
+                      <option value="th-about.html" selected>ไทย</option>
+                      <option value="de-about.html">Deutsch</option>
+                      <option value="en-about.html">English</option>
+                      <option value="es-about.html">Español</option>
+                      <option value="fr-about.html">Français</option>
+                      <option value="it-about.html">Italiano</option>
+                      <option value="ru-about.html">Русский</option>
+                      <option value="ar-about.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list-2" name="content-list" style="
+                                                                                        width: auto;height: 25px;
+                                                                                        margin-left: 5px;
+                                                                                        border-radius: 0;
+                                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                        text-align: center; /* 新增 */
+                                                                                        text-align-last: center; /* 确保选中的选项居中 */
+                                                                                        "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="th.html">หน้าแรก</option>
+                      <option value="th-research.html">การวิจัย</option>
+                      <option value="th-news.html">ข่าวสาร</option>
+                      <option value="th-projects.html">โครงการ</option>
+                      <option value="th-about.html" selected>เกี่ยวกับ</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-block d-lg-none text-right"></div>
+        </div>
+      </div>
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+        role="banner">
+        <div class="container">
+          <div class="d-flex align-items-center">
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+
+                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+
+                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                  <li>
+                    <a href="th.html" class="nav-link text-left">หน้าแรก&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="active">
+                    <a href="th-research.html" class="nav-link text-left">การวิจัย&nbsp;&nbsp;</a>
+                  </li>
+                  <li>
+                    <a href="th-news.html" class="nav-link text-left">ข่าวสาร</a>
+                  </li>
+                  <li>
+                    <a href="th-projects.html" class="nav-link text-left">โครงการ</a>
+                  </li>
+                  <!-- <li>
+                                                          <a href="en-activities.html" class="nav-link text-left">Activities</a>
+                                                      </li> -->
+                  <li>
+                    <a href="th-about.html" class="nav-link text-left">เกี่ยวกับ</a>
+                  </li>
+                  <li id="festival-item">
+                    <a id="dynamic-greeting" href="#" target="_blank" class="nav-link text-left">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- 语言选择框 -->
+            <div class="ml-auto">
+              <span style="display: flex; align-items: center">
+                <!-- 简体字和国旗 -->
+
+                <a href="" class="d-inline-block" style="margin-right: 5px">
+                  <img src="images/flag_th.png" alt="flag" style="
+                        height: 15px;
+                        margin-right: 2px;
+                        position: relative;
+                        top: -1px;
+                      " />
+                </a>
+                <!-- 选择语言的下拉框 -->
+                <select id="languages-3" name="languages" style="
+                      width:auto;
+                      height: 25px;
+                      margin-left: 5px;
+                      border-radius: 0;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                        text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                    " onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <option value="cn-about.html">中文</option>
+                  <option value="jp-about.html">日本語</option>
+                  <option value="kr-about.html">한국어</option>
+                  <option value="th-about.html" selected>ไทย</option>
+                  <option value="de-about.html">Deutsch</option>
+                  <option value="en-about.html">English</option>
+                  <option value="es-about.html">Español</option>
+                  <option value="fr-about.html">Français</option>
+                  <option value="it-about.html">Italiano</option>
+                  <option value="ru-about.html">Русский</option>
+                  <option value="ar-about.html">اللغة العربية</option>
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+    </div>
+    <hr class="d-block d-sm-none" style="
+          height: 1px;
+          border-width: 0;
+          color: gray;
+          background-color: gray;
+        " />
+
+    <!---Mobile MENU Bar--->
+    <a class="d-inline-block d-sm-none">
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+        <span class="burger-text">เมนู</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="th.html">Hong Xu, <small>PhD</small></a><br />
+          </li>
+          <li>
+            <a href="th-research.html">การวิจัย ➔</a>
+          </li>
+
+          <li>
+            <a href="th-news.html">ข่าวสาร ➔</a>
+          </li>
+          <li>
+            <a href="th-projects.html">โครงการ ➔</a>
+          </li>
+          <li>
+            <a href="th-about.html">เกี่ยวกับ ➔</a>
+          </li>
+        </ul>
+      </nav>
+    </a>
+    <!------>
+    <!-- 简化版导航栏内容 -->
+    <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <img src="images/logo-full-en-long2.png" alt="Image" class="site-logo"
+          style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+        <div></div>
+
+        <div style="display: flex; align-items: center;">
+          <a class="flag d-inline-block d-lg-none">
+            <img src="images/flag_th.png" alt="flag"
+              style="height:15px; margin-right:2px; position:relative; top:-1px;">
+          </a>
+          <select id="languages-2" name="languages" style="
+                                              width:auto;
+                                              height: 25px;
+                      margin-left: 5px;
+                      border-radius: 0;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      text-align: center; /* 新增 */
+                      text-align-last: center; /* 确保选中的选项居中 */
+                      " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="cn-about.html">中文</option>
+            <option value="jp-about.html">日本語</option>
+            <option value="kr-about.html">한국어</option>
+            <option value="th-about.html" selected>ไทย</option>
+            <option value="de-about.html">Deutsch</option>
+            <option value="en-about.html">English</option>
+            <option value="es-about.html">Español</option>
+            <option value="fr-about.html">Français</option>
+            <option value="it-about.html">Italiano</option>
+            <option value="ru-about.html">Русский</option>
+            <option value="ar-about.html">اللغة العربية</option>
+          </select>
+          <select id="content-list" name="content-list" style="
+                  width:auto;height: 25px;
+                  margin-left: 5px;
+                  border-radius: 0;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                  " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="th.html">หน้าแรก</option>
+            <option value="th-research.html">การวิจัย</option>
+            <option value="th-news.html">ข่าวสาร</option>
+            <option value="th-projects.html">โครงการ</option>
+            <option value="th-about.html" selected>เกี่ยวกับ</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!------>
+    <div class="site-section">
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 single-content">
+            <p class="mb-5">
+            <div style="position: relative; display: inline-block;">
+              <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
+                style="position: relative; top: -15px;" />
+              <div
+                style="position: absolute; bottom: 10px; right: 10px; color: white; background-color: rgba(0, 0, 0, 0); padding: 10px; font-size: 17px; font-weight: normal;">
+                「 วิทยาศาสตร์ไร้พรมแดน 」
+              </div>
+            </div>
+            </p>
+            <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+              ชีวประวัติ
+              <div><select id="languages-4" name="languages" style="
+                                                                width:auto;
+                                                                height: 25px;
+                                                                margin-left: 5px;
+                                                                border-radius: 0;
+                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                text-align: center; /* 新增 */
+                                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                              " onchange="changeLanguage()">
+                  <option value="thai">ไทย / เพิ่มเติม</option>
+                  <option value="laos">ພາສາລາວ / Lao</option>
+                  <option value="khmer">ខ្មែរ / Khmer</option>
+                  <option value="myanmar">မြန်မာ / Myanmar</option>
+                </select>
+
+                <!-- 调整字体大小 -->
+                <button id="increase-font" onclick="changeFontSize(1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A+</button>
+                <button id="decrease-font" onclick="changeFontSize(-1)"
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A-</button>
+              </div>
+            </h1>
+
+            <hr>
+            <div id="story-container" class="story horizontal-layout">
+              <p id="thai-content" align="justify" style="display: block;">
+                ปัจจุบัน ดร. ฮอง ซู เป็น <text>นักวิจัย</text> และ <text>วิศวกร</text> ที่ทุ่มเท
+                โดยเชี่ยวชาญใน
+                <text>พลังงานทดแทน</text> และ <text>ระบบพลังงานไฟฟ้า</text> มุ่งมั่นเพื่อ
+                ประสิทธิภาพสูงสุด
+                และ
+                การทำให้เป็นกลางทางคาร์บอนในภาคพลังงานและการขนส่ง ตลอดระยะเวลา 10 ปีที่ผ่านมา เขาได้ร่วมงานกับ
+                บริษัทข้ามชาติและสถาบันชั้นนำทั่วทวีปยูเรเซีย ขับเคลื่อนความก้าวหน้าทางเทคนิคในอุตสาหกรรม
+                <text>การเคลื่อนย้ายด้วยไฟฟ้า</text>, <text>พลังงานสะอาด</text>, และ <text>วัสดุใหม่</text>
+                โดยมี <text><span class="no_of_papers"></span> บทความ</text> ที่ตีพิมพ์และ
+                <text><span class="no_of_patents"></span> สิทธิบัตร</text> ที่ได้รับการอนุมัติ นอกจากนี้
+                ในขณะที่เขาทำงานวิศวกรรม
+                เขายังได้มีส่วนร่วมกับองค์กรที่มีชื่อเสียง เช่น
+                St. Gallen Symposium, Salzburg Global Seminar, CITIC
+                Securities และ Oxford Institute for Energy Studies โดยมุ่งเน้นการวิเคราะห์เศรษฐศาสตร์และ
+                นโยบายพลังงานสะอาดในภูมิภาคเอเชียและยุโรป ในฐานะผู้มีส่วนร่วมที่กระตือรือร้นใน
+                การพัฒนาระดับนานาชาติ ดร. ซู ได้ดำรงตำแหน่งสมาชิกกลุ่มผู้เชี่ยวชาญ (GE) ที่
+                <text><a href="https://unece.org/"
+                    target="_blank">คณะกรรมาธิการเศรษฐกิจแห่งสหประชาชาติสำหรับยุโรป</a></text> (UNECE)
+                ที่เจนีวา และเป็นประธานในเซสชั่นขนานที่
+                <text><a href="https://unfccc.int/"
+                    target="_blank">การประชุมการเปลี่ยนแปลงสภาพภูมิอากาศของสหประชาชาติ</a></text>
+                (UNFCCC)
+                ที่บอนน์
+                โดยสนับสนุน <text><a href="https://sdgs.un.org/goals"
+                    target="_blank">เป้าหมายการพัฒนาอย่างยั่งยืนของสหประชาชาติ</a></text> (SDGs) <text>7 </text>
+                (พลังงานที่สามารถเข้าถึงได้), <text>9</text> (นวัตกรรมอุตสาหกรรม),
+                และ <text>13 </text> (การดำเนินการเพื่อสภาพภูมิอากาศ) .
+                <br><br>
+                ในฐานะนักวิชาการ ดร. ซู ได้ศึกษาปริญญาเอกในสาขา <text>พลังงานทดแทน</text> จาก <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text> ร่วมกับ
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> ในประเทศสวิสเซอร์แลนด์
+                ก่อนหน้านี้เขา
+                ได้รับปริญญาโทสาขาวิทยาศาสตร์วัสดุจาก <text><a href="https://tum.de" target="_blank">Technical
+                    University of
+                    Munich</a></text> พร้อมฝึกงานที่ <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text> และ <text><a href="https://infineon.com" target="_blank">Infineon</a></text>
+                ในประเทศเยอรมนี ความหลงใหลในงานวิจัยที่มีผลกระทบสำคัญทำให้เขามีส่วนร่วมอย่างยาวนานกับผู้นำในอุตสาหกรรม
+                ไฮโดรเจนและเซลล์เชื้อเพลิง รวมถึง <text>Toyota Motor</text> ในประเทศญี่ปุ่นและ
+                <text>Freudenberg
+                  Group</text>
+                ในประเทศเยอรมนี ในการแสวงหาขอบเขตข้ามสาขา เขาได้รับการศึกษาฝึกอบรมจาก <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge
+                    Judge Business
+                    School</a></text>
+                และได้รับประสบการณ์จากบริษัทเงินทุนร่วมลงทุนในสกุลเงินสองสกุลและบริษัทหลักทรัพย์ชั้นนำใน
+                ประเทศจีน
+              </p>
+
+
+              <p id="laos-content" align="justify" style="display: none;">
+                ປະຈຸບັນ, ທ່ານດຣ Hong Xu ເປັນ <text>ນັກຄົ້ນຄວ້າ</text> ແລະ <text>ວິສະວະກອນ</text> ທີ່ອຸທິດຕົນ,
+                ຊ່ຽວຊານໃນ
+                <text>ພະລັງງານທົດແທນ</text> ແລະ <text>ລະບົບໄຟຟ້າ e-Power</text>, ພະຍາຍາມເພື່ອປະສິດທິພາບ
+                ເລີດແລະ
+                ຄວາມເປັນກາງຂອງຄາບອນພາຍໃນຂະແໜງພະລັງງານ ແລະ ການຂົນສົ່ງ. ໃນໄລຍະ 10 ປີທີ່ຜ່ານມາ, ລາວໄດ້ເຮັດວຽກ
+                ກັບ
+                ບໍລິສັດຂ້າມຊາດແລະສະຖາບັນຊັ້ນນໍາໃນທົ່ວທະວີບ Eurasian, ຂັບລົດ
+                ດ້ານວິຊາການ
+                ຄວາມກ້າວໜ້າໃນ <text>e-Mobility</text>, <text>ພະລັງງານສະອາດ</text> ແລະ <text>ໃໝ່
+                  ວັດສະດຸ</text>
+                ອຸດສາຫະກໍາທີ່ມີ <text><span class="no_of_papers"></span> ເອກະສານ</text> ຈັດພີມມາແລະ
+                <text><span class="no_of_patents"></span>
+                  ສິດທິບັດ</text> ໄດ້ຮັບ. ຄຽງຂ້າງລາວ
+                pursuits ວິສະວະກໍາ, ລາວມີ
+                ມີສ່ວນຮ່ວມກັບອົງການຈັດຕັ້ງທີ່ມີຊື່ສຽງ, ໂດຍສະເພາະ St. Gallen Symposium, Salzburg Global
+                ສໍາມະນາ, CITIC
+                ຫຼັກຊັບ,
+                ແລະ Oxford Institute for Energy Studies, ສຸມໃສ່ Clean <text>Energy Economics ແລະ
+                  ນະໂຍບາຍ</text> ການວິເຄາະ
+                ໃນ​ອາ​ຊີ​ແລະ​
+                ເອີຣົບ. ​ໃນ​ຖານະ​ທີ່​ເປັນ​ຜູ້​ປະກອບສ່ວນ​ຢ່າງ​ຕັ້ງໜ້າ​ເຂົ້າ​ໃນ​ການ​ພັດທະນາ​ສາກົນ, ທ່ານ​ດຣ
+                ເປັນກຸ່ມຂອງ
+                ຜູ້ຊ່ຽວຊານ (GE)
+                ສະມາຊິກຢູ່
+                <text><a href="https://unece.org/" target="_blank">ຄະນະກຳມາທິການເສດຖະກິດຂອງສະຫະປະຊາຊາດ
+                    ສໍາລັບເອີຣົບ</a></text> (UNECE) ໃນເຈນີວາ, ແລະເປັນປະທານກອງປະຊຸມຂະຫນານທີ່
+                <text><a href="https://unfccc.int/" target="_blank">ການປ່ຽນແປງດິນຟ້າອາກາດຂອງສະຫະປະຊາຊາດ
+                    ກອງປະຊຸມ</a></text> (UNFCCC)
+                ໃນ Bonn,
+                ສະໜັບສະໜູນ <text><a href="https://sdgs.un.org/goals" target="_blank">UN
+                    ຍືນຍົງ
+                    ການພັດທະນາ
+                    ເປົ້າໝາຍ</a></text> (SDGs) <text>7 </text>(ພະລັງງານທີ່ສາມາດຊື້ໄດ້), <text>9
+                </text>(ອຸດສາຫະກຳ
+                ນະວັດຕະກໍາ),
+                ແລະ
+                <text>13 </text>(ການປະຕິບັດສະພາບອາກາດ).
+                <br><br>
+                ນັກວິຊາການດ້ວຍຫົວໃຈ, ລາວໄດ້ຮຽນປະລິນຍາເອກໃນ <text>ພະລັງງານທົດແທນ</text> ຈາກ <text><a
+                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, ໂດຍການຮ່ວມມືກັບ
+                <text><a href="https://psi.ch" target="_blank">ສະຖາບັນ Paul Scherrer</a></text> ໃນ
+                ສະວິດເຊີແລນ. ກ່ອນ​ໜ້າ​ນັ້ນ, ລາວ
+                ໄດ້ຮັບ MSc ໃນວິທະຍາສາດວັດສະດຸຈາກ <text><a href="https://tum.de" target="_blank">Technical
+                    ມະຫາວິທະຍາໄລ
+                    Munich</a></text> ດ້ວຍການຝຶກງານຢູ່ທີ່ <text><a href="https://xfel.eu" target="_blank">ເອີຣົບ
+                    XFEL</a></text> ແລະ <text><a href="https://infineon.com" target="_blank">Infineon</a></text>
+                ໃນ
+                ເຢຍລະມັນ.
+                ຄວາມກະຕືລືລົ້ນຂອງລາວສໍາລັບການຄົ້ນຄວ້າທີ່ມີຜົນກະທົບໄດ້ເຮັດໃຫ້ການມີສ່ວນພົວພັນໃນໄລຍະຍາວກັບອຸດສາຫະກໍາ
+                ຜູ້ນໍາ
+                ໃນ
+                ຈຸລັງໄຮໂດເຈນ ແລະນໍ້າມັນເຊື້ອໄຟ, ລວມທັງ <text>Toyota Motor</text> ໃນປະເທດຍີ່ປຸ່ນ ແລະ
+                <text>Freudenberg
+                  ກຸ່ມ</text>
+                ໃນເຢຍລະມັນ. ໃນການຕິດຕາມຂອບເຂດຂອງ interdisciplinary, ລາວໄດ້ຮັບ
+                ການສຶກສາບໍລິຫານຢູ່ທີ່ <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge
+                    ທຸລະກິດຜູ້ພິພາກສາ
+                    ໂຮງຮຽນ</a></text>, ເພີ່ມຂຶ້ນ
+                ປະສົບການປະຕິບັດຢູ່ບໍລິສັດທຶນຮ່ວມທຶນສອງສະກຸນເງິນ ແລະຫຼັກຊັບຊັ້ນນໍາ
+                ບໍລິສັດໃນ
+                ຈີນ.
+              </p>
+
+              <p id="khmer-content" align="justify" style="display: none;">
+                បច្ចុប្បន្ននេះ លោកបណ្ឌិត Hong Xu គឺជា <text>អ្នកស្រាវជ្រាវ</text> និង <text>វិស្វករ</text>
+                ដែលខិតខំប្រឹងប្រែង។
+                ឯកទេស
+                <text>ថាមពលកកើតឡើងវិញ</text> និង <text>ប្រព័ន្ធថាមពលអេឡិចត្រូនិច</text> ខិតខំដើម្បីប្រសិទ្ធភាព
+                ឧត្តមភាព និង
+                អព្យាក្រឹតភាពកាបូននៅក្នុងវិស័យថាមពល និងដឹកជញ្ជូន។ ក្នុងរយៈពេល 10 ឆ្នាំកន្លងមកនេះគាត់បានធ្វើការ
+                ជាមួយ
+                សាជីវកម្មចម្រុះជាតិសាសន៍ និងស្ថាប័នឈានមុខគេនៅទូទាំងទ្វីបអឺរ៉ាស៊ី បើកបរ
+                បច្ចេកទេស
+                ភាពជឿនលឿនក្នុង <text>e-Mobility</text> <text>ថាមពលស្អាត</text> និង <text>ថ្មី
+                  សម្ភារៈ</text>
+                ឧស្សាហកម្មដែលមាន <text><span class="no_of_papers"></span> ឯកសារ</text> បោះពុម្ពផ្សាយ និង
+                <text><span class="no_of_patents"></span>
+                  ប៉ាតង់</text> បានផ្តល់។ នៅក្បែរគាត់
+                ការខិតខំប្រឹងប្រែងផ្នែកវិស្វកម្ម គាត់មាន
+                ចូលរួមជាមួយអង្គការល្បីៗ ជាពិសេសគឺ St. Gallen Symposium, Salzburg Global
+                សិក្ខាបទ, ស៊ីធី
+                មូលបត្រ
+                និងវិទ្យាស្ថាន Oxford សម្រាប់ការសិក្សាថាមពល ដោយផ្តោតលើ Clean <text>Energy Economics និង
+                  គោលការណ៍</text> ការវិភាគ
+                នៅអាស៊ី និង
+                អឺរ៉ុប។ ក្នុងនាមជាអ្នករួមចំណែកយ៉ាងសកម្មក្នុងការអភិវឌ្ឍន៍អន្តរជាតិ លោកបណ្ឌិត Xu បានបម្រើការ
+                ជាក្រុមនៃ
+                អ្នកជំនាញ (GE)
+                សមាជិកនៅ
+                <text><a href="https://unece.org/" target="_blank">គណៈកម្មការសេដ្ឋកិច្ចរបស់អង្គការសហប្រជាជាតិ
+                    សម្រាប់ទ្វីបអឺរ៉ុប</a></text> (UNECE) នៅទីក្រុងហ្សឺណែវ ហើយបានដឹកនាំសម័យប្រជុំស្របគ្នានៅឯ
+                <text><a href="https://unfccc.int/" target="_blank">ការប្រែប្រួលអាកាសធាតុរបស់អង្គការសហប្រជាជាតិ
+                    សន្និសីទ</a></text> (UNFCCC)
+                នៅ Bonn,
+                ការតស៊ូមតិសម្រាប់ <text><a href="https://sdgs.un.org/goals" target="_blank">UN
+                    និរន្តរភាព
+                    ការអភិវឌ្ឍន៍
+                    គោលដៅ</a></text> (SDGs) <text>7 </text>(ថាមពលដែលអាចទទួលយកបាន), <text>9
+                </text>(ឧស្សាហកម្ម
+                ការច្នៃប្រឌិត),
+                និង
+                <text>13 </text>(សកម្មភាពអាកាសធាតុ)។
+                <br><br>
+                អ្នកប្រាជ្ញដោយបេះដូង គាត់បានបន្តការសិក្សាថ្នាក់បណ្ឌិតរបស់គាត់នៅក្នុង <text>ថាមពលកកើតឡើងវិញ</text> ពី
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text> ដោយសហការជាមួយ
+                <text><a href="https://psi.ch" target="_blank">វិទ្យាស្ថាន Paul Scherrer</a></text> នៅក្នុង
+                ស្វីស។ មុន​នោះ​គាត់​
+                បានទទួល MSc ផ្នែកវិទ្យាសាស្ត្រសម្ភារៈពី <text><a href="https://tum.de" target="_blank">បច្ចេកទេស
+                    សាកលវិទ្យាល័យ
+                    Munich</a></text> ជាមួយនឹងកម្មសិក្សានៅ <text><a href="https://xfel.eu" target="_blank">អឺរ៉ុប
+                    XFEL</a></text> និង <text><a href="https://infineon.com" target="_blank">Infineon</a></text>
+                ក្នុង
+                អាល្លឺម៉ង់។
+                ចំណង់ចំណូលចិត្តរបស់គាត់សម្រាប់ការស្រាវជ្រាវដែលមានឥទ្ធិពលបាននាំឱ្យមានការចូលរួមយូរអង្វែងជាមួយឧស្សាហកម្ម
+                មេដឹកនាំ
+                ក្នុង
+                កោសិកាអ៊ីដ្រូសែន និងឥន្ធនៈ រួមទាំង <text>Toyota Motor</text> នៅប្រទេសជប៉ុន និង
+                <text>ហ្វ្រូដិនបឺក
+                  ក្រុម</text>
+                នៅប្រទេសអាល្លឺម៉ង់។ ក្នុង​ការ​ស្វែង​រក​ការ​ផ្តួច​ផ្តើម​នៃ​ការ​ផ្តួច​ផ្តើម​គំនិត​លោក​បាន​ទទួល​
+                ការអប់រំប្រតិបត្តិនៅ <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge
+                    ចៅក្រមអាជីវកម្ម
+                    សាលា</a></text> ទទួលបាន
+                បទពិសោធន៍ជាក់ស្តែងនៅក្រុមហ៊ុនវិនិយោគរូបិយប័ណ្ណពីរ និងមូលបត្រឈានមុខគេ
+                ក្រុមហ៊ុននៅក្នុង
+                ចិន។
+              </p>
+
+
+
+              <p id="myanmar-content" align="justify" style="display: none;">
+                ယခုအခါ၊ ဒေါက်တာ ဟောင် စူသည် <text>သုတေသနရှင်</text> နှင့် <text>အင်ဂျင်နီယာ</text> အဖြစ်
+                အလွန်တတ်ကျွမ်းပြီး
+                <text>ပြန်လည်အသုံးပြုနိုင်သောစွမ်းအင်</text> နှင့် <text>အီ-ဓာတ်အားစနစ်များ</text> ကို
+                အထူးပြု၍
+                စွမ်းဆောင်ရည်အပြည့်အစုံနှင့်
+                ကာဘွန်အညီလျော်သောစနစ်များကို
+                စွမ်းအင်နှင့် သယ်ယူပို့ဆောင်ရေးဌာနများတွင် ရယူရန်အတွက် ကြိုးပမ်းနေသည်။ နောက်ပြီး တစ်ပတ်လည်ထိ
+                ဒါရိုက်တာဟောင်စူသည်
+                ကမ္ဘာတလွှားရှိ ကုမ္ပဏီများနှင့်
+                အထိပ်တန်းအဖွဲ့အစည်းများနှင့် ပူးပေါင်းပြီး
+                <text>အီ-မိုဘီလစ်တီ</text>, <text>သန့်ရှင်းသောစွမ်းအင်</text> နှင့် <text>ပစ္စည်းအသစ်များ</text> အပါအဝင်
+                အင်အားမြှင့်တင်ဆန်းသစ်မှုများကို
+                ဆောင်ရွက်ခဲ့ပြီး <text><span class="no_of_papers"></span> စာတမ်း</text> များကို ထုတ်ပြန်ထားသည်နှင့်
+                <text><span class="no_of_patents"></span> ပုံသဏ္ဍာန်များ</text> ရရှိခဲ့ပါသည်။ အင်ဂျင်နီယာရေးဆွဲရာတွင်
+                ဤသို့လည်း
+                သူသည် St. Gallen Symposium, Salzburg Global Seminar, CITIC
+                Securities နှင့် Oxford Institute for Energy Studies အစရှိသည့် ကျော်ကြားသောအဖွဲ့အစည်းများနှင့်
+                ပူးပေါင်းလုပ်ဆောင်ပြီး
+                အာရှနှင့် ဥရောပတို့တွင် သန့်ရှင်းသော <text>စွမ်းအင်ဌာန၏ စီးပွားရေးနှင့် မူဝါဒ</text> ကို
+                ရှင်းလင်းဆွေးနွေးခဲ့ပါသည်။
+                ဒါ့အပြင်
+                နိုင်ငံတကာဖွံ့ဖြိုးတိုးတက်ရေးဆိုင်ရာ လှုပ်ရှားမှုတွင် ဒေါက်တာဟောင်စူသည်
+                <text><a href="https://unece.org/"
+                    target="_blank">ကမ္ဘာလုံးဆိုင်ရာစီးပွားရေးကုမ္ပဏီတည်ဆောက်ရေးနှင့်ဥရောပ၏
+                    စီးပွားရေးအဖွဲ့</a></text>
+                (UNECE) တွင်
+                လည်း
+                အဖွဲ့ဝင်တစ်ဦးအဖြစ် ဝင်ရောက်ပါသည်။ ထို့အပြင်
+                <text><a href="https://unfccc.int/" target="_blank">UN Climate Change Conference</a></text> (UNFCCC)
+                အတွက် parallel sessions ကို ဦးဆောင်၍
+                <text><a href="https://sdgs.un.org/goals" target="_blank">UN ရဲ့ တည်ဆောက်ပညာတိုးတက်မှု ဆိုင်ရာ
+                    ညွှန်ကြားမှု
+                    (SDGs)</a></text> 7
+                (သက်တမ်းတိုအဆင့်သော စွမ်းအင်),
+                9 (စက်မှုနည်းပညာစွမ်းဆောင်ရည်),
+                နှင့်
+                <text>13</text> (အလွှာတိုးအောင်ဆောင်ရွက်ခြင်း)တို့ကို မဟာဗျူဟာစွာထောက်ခံခဲ့ပါသည်။
+                <br><br>
+                စာပေဝါသနာရှင်တစ်ဦးအဖြစ်၊ သူသည် <text>ပြန်လည်အသုံးပြုနိုင်သောစွမ်းအင်</text> အတွက် PhD အထောက်အထားကို
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text> နှင့်
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> တွင်
+                ဗွီဇီတီနှင့် ပူးပေါင်းလေ့လာခဲ့ပါသည်။ အဖွဲ့ဝင်အချိန်များအတွင်း
+                <text><a href="https://tum.de" target="_blank">Technical
+                    University of
+                    Munich</a></text> နှင့်
+                <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> နှင့်
+                <text><a href="https://infineon.com" target="_blank">Infineon</a></text>
+                ၌အလုပ်အကိုင်လေ့လာခြင်းများဖြင့် MSc ကို လက်ခံခဲ့ပါသည်။
+                သို့သော်လည်း သူ၏ သုတေသနနှင့် သဘာဝကျသောစွမ်းအင်ကို မိမိအတူတကွကာအရေးပါစွာနေရာယူပြီး
+                ဟိုတုန်းက
+                <text>Toyota Motor</text> နှင့်
+                <text>Freudenberg Group</text> တွင်လည်းအဆက်မပြတ်ဆောင်ရွက်လျက်ရှိနေခဲ့ပါသည်။
+                ရိုးရာပညာရေးအတူရလဒ်ပေးတဲ့ကတိတရားအမျိုးမျိုးမပြတ်တိုးတက်လာရန်ကျွမ်းကျင်ခဲ့ပြီး
+                <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a></text>
+                မှာ
+                တတ်ကျွမ်းမှုအတွေ့အကြုံများရယူခဲ့ပြီး
+                အရှေ့တောင်တရုတ်တွင်
+                အခြားမူဝါဒများသုံးပြီး အင်ဂျင်နီယာထောက်ပံ့မှုခံယူခဲ့ပါသည်
+              </p>
+
+
+
+              <p style="text-align:left;">
+
+                PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
+
+              </p>
+            </div>
+
+            <br>
+            <h1 class="mb-4">
+              วิดีโอ
+            </h1>
+            <hr>
+            <br>
+
+            <!-- Preview Images for the Videos with Titles -->
+            <div class="preview-container">
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_UN_Bonn_2024_CN_Subtitle_13MB.png"
+                  data-video="video/UN_Bonn_2023_CN_Subtitle_10MB.mp4" alt="Preview 1">
+                <div class="image-title"></div>
+              </div>
+              <div class="preview-item">
+                <img class="preview-image" src="video/Preview_Graduation_Ceremony_25MB.png"
+                  data-video="video/Graduation_Ceremony_25MB.mp4" alt="Preview 2">
+                <div class="image-title"></div>
+              </div>
+            </div>
+
+            <!-- Modal for Playing Video -->
+            <div class="modal" id="videoModal">
+              <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <video id="modalVideo" controls>
+                  <source id="videoSource" src="" type="video/mp4">
+                  เบราว์เซอร์ของคุณไม่รองรับแท็กวิดีโอ
+                </video>
+              </div>
+            </div>
+
+            <div class="container">
+
+
+            </div>
+          </div>
+
+          <div class="col-lg-3 ml-auto">
+            &nbsp;
+            <div class="section-title">
+              <h2>งานอดิเรก</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-camera"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">การถ่ายภาพ</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">การถ่ายภาพ, การตรวจวัดภาพ, การถ่ายทำ, การตัดต่อวิดีโอ</span>
+                  <span class="date-read">ตั้งแต่ปี 2011</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-plane"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">การเดินทาง</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">มากกว่า 40 ประเทศในเอเชีย, ยุโรป และอเมริกาเหนือ</span>
+                  <span class="date-read">ตั้งแต่ปี 2012</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-running"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">กีฬา</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">การเดินป่าภูเขา, การปั่นจักรยาน, ปิงปอง, แบดมินตัน</span>
+                  <span class="date-read">ตั้งแต่เด็ก</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex pl-0">
+              <div class="number align-self-start"><i class="fas fa-utensils"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">อาหาร</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">รักอาหารจีน, ฝรั่งเศส และกรีก</span>
+                  <span class="date-read">ตั้งแต่เกิด</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---
+        <div class="section-title">
+              
+          <h2>Footprint</h2>
+        </div>
+
+
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="periodic.html" allowfullscreen></iframe>
+        </div>
+--->
+        </div>
+      </div>
+
+      <p class="">&nbsp;</p>
+      <div class="site-section subscribe bg-light" style="position: relative">
+        <!-- 上方 hr -->
+        <!-- <hr
+              style="
+                height: 1px;
+                background-color: gray;
+                border: none;
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 100vw;
+                transform: translateX(-50%);
+              "
+            /> -->
+
+        <h2>&nbsp;&nbsp;</h2>
+        <div class="container">
+          <form action="#" class="row align-items-start">
+            <!-- 第一栏 -->
+            <div class="col-md-4">
+              <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+              <h2><img src="./images/wflags/eu.png" style="
+                                                                            height: 0.9em;
+                                                                            vertical-align: -6%;
+                                                                            display: inline-block;
+                                                                            margin-right: 0em;
+                                                                          " /> ติดต่อฉัน</h2>
+              <p>
+                อีเมล | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                ลิงค์อิน |
+                <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+                อินสตาแกรม |
+                <a href="https://www.instagram.com/helios.h.xu/"
+                  target="_blank">instagram.com/helios.h.xu</a><br /><br />
+                <span class="currentDateInLang" language="english"></span><br />
+                <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+                    id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                    title="timezone - Zurich" target="_blank" rel="nofollow">เวลาในยุโรป [CET]</a></strong>
+                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+              <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+              </p>
+            </div>
+
+            <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+              <hr style="
+                      border: none;
+                      border-top: 1px solid #c7c7c7;
+                      margin: 0px 0;
+                    " />
+            </div>
+
+            <!-- 第二栏 -->
+            <div class="col-md-3">
+              <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+              <!-- weather widget start --><a id="weather" target="_blank"
+                href="https://www.booked.net/weather/beijing-18391"><img
+                  src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                  alt="booked.net" /></a><!-- weather widget end -->
+              <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                style="width: 55px; height: 60px" /><br /><br />
+              <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                  style="
+                                                                                                                                                height: 0.9em;
+                                                                                                                                                vertical-align: -6%;
+                                                                                                                                                display: inline-block;
+                                                                                                                                                margin-right: 0em;
+                                                                                                                                              " /> โชคชะตาส่องทางให้เรา</h2>
+              <p>
+                ภาพถ่าย |
+                <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                การเขียน |
+                <a href="https://site.inconstruction.io" target="_blank">site.inconstruction.io</a><br />
+                นักวิชาการ |
+                <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+                <span class="currentZodiacInLang" language="english"></span> - <a class="jieqi-24"
+                  language="english"></a><br>
+                <a href="//24timezones.com/Bangkok/time" style="text-decoration: none" class="clock24"
+                  id="tz24-1742849597-c128-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                  title="time zone Bangkok" target="_blank" rel="nofollow">เวลากรุงเทพฯ [ICT]</a>
+                <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+              <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+              </p>
+            </div>
+
+            <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+              <hr style="
+                      border: none;
+                      border-top: 1px solid #c7c7c7;
+                      margin: 0px 0;
+                    " />
+            </div>
+
+            <!-- 第三栏 -->
+
+            <div class="col-md-5">
+              <br />
+              <div id="clustrmap-container"
+                style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
+                <script type="text/javascript" id="clustrmaps"
+                  src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                  </script>
+              </div>
+
+              <style>
+                /* 默认是电脑端，transform: translateX(15px); */
+                #clustrmap-container {
+                  transform: translateX(15px) !important;
+                }
+
+                @media (max-width: 768px) {
+                  #clustrmap-container {
+                    transform: translateX(-40px) !important;
+                  }
+                }
+              </style>
+
+            </div>
+          </form>
+        </div>
+        <br />
+
+        <!-- <div class="container">
+              <form action="#" class="row align-items-center">
+                <div class="col-md-5 mr-auto"></div>
+                <div class="col-md-6 ml-auto"></div>
+              </form>
+            </div>
+            <h2>&nbsp;&nbsp;</h2> -->
+        <!-- 下方 hr -->
+        <hr style="
+                height: 1px;
+                background-color: gray;
+                border: none;
+                margin: 0;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 150vw;
+                transform: translateX(-50%);
+              " />
+      </div>
+
+      <!-- .site-wrap -->
+      <!-- <hr
+            style="
+              height: 1px;
+              border-width: 0;
+              color: gray;
+              background-color: gray;
+            "
+          /> -->
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="copyright">
+                <p>
+                  <img class="country-flag" src="" alt="国旗" style="
+                          height: 0.9em;
+                          vertical-align: -6%;
+                          display: inline-block;
+                          margin-right: 0em;
+                        " />
+                  <text>ยินดีต้อนรับเพื่อนจาก
+                    <span class="location">โลก</span>! ผ่าน
+                    <span class="distance-info"> ∞ กิโลเมตร</span> ของอวกาศโลก เราเชื่อมต่อกันเสมอ!</text>
+                  <img src="./images/wflags/de.png" style="
+                          height: 0.9em;
+                          vertical-align: -6%;
+                          display: inline-block;
+                          margin-right: 0em;
+                        " />
+                  <br />
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  ลิขสิทธิ์ &copy; 2017 -
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  | Hong Xu | อัปเดต: <span class="web_update_month"></span>. <span class="web_update_year"></span> |
+                  <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                  <!-- <a href="https://info.flagcounter.com/D897"
+                        ><img
+                          src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                          border="0"
+                      /></a> -->
+                  <a href="https://info.flagcounter.com/D897" style="
+                          display: inline-block;
+                          width: 94%;
+                          height: 95%;
+                          overflow: hidden;
+                          position: relative;
+                        ">
+                    <img
+                      src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                      border="0" style="
+                            width: auto;
+                            height: auto;
+                            object-fit: fill;
+                            object-position: top right;
+                            transform: translateX(3.5%) translateY(30%);
+                          " />
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- .site-wrap -->
+      <!-- loader -->
+      <div id="loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#ff5e15" />
+        </svg>
+      </div>
+
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/jquery.countdown.min.js"></script>
+      <script src="js/bootstrap-datepicker.min.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/jquery.mb.YTPlayer.min.js"></script>
+      <script src="js/mobilenav.js"></script>
+
+      <script src="js/main.js"></script>
+      <script src="js/user_ip_en.js" type="module"></script>
+      <script type="text/javascript" src="update_info_script.js"></script>
+      <script src="js/festival.js"></script>
+      <script src="js/24jieqi.js"></script>
+      <script src="js/video-player.js"></script>
+      <script>
+        function changeLanguage() {
+          // 隐藏所有语言的内容
+          var languages = ["thai-content", "laos-content", "myanmar-content", "khmer-content"];
+          languages.forEach(function (language) {
+            document.getElementById(language).style.display = "none";
+          });
+
+          // 获取选择的语言值
+          var selectedLanguage = document.getElementById("languages-4").value;
+
+          // 显示所选语言的内容
+          document.getElementById(selectedLanguage + "-content").style.display = "block";
+        }
+      </script>
+      <!-- 字体大小JavaScript -->
+      <script>
+        function changeFontSize(step) {
+          // 获取当前选中的语言
+          const selectedLanguage = document.getElementById('languages-4').value;
+
+          // 获取当前语言的内容区域（在 .story 容器内）
+          const currentContent = document.querySelector(`.story #${selectedLanguage}-content`);
+
+          // 如果当前内容区域存在
+          if (currentContent) {
+            // 获取内容区域的当前字体大小
+            const currentFontSize = window.getComputedStyle(currentContent).fontSize;
+
+            // 解析字体大小为数值
+            let fontSize = parseInt(currentFontSize);
+
+            // 增加或减少字体大小
+            fontSize += step;
+
+            // 限制字体大小范围
+            if (fontSize < 10) fontSize = 10; // 最小字体大小
+            if (fontSize > 50) fontSize = 50; // 最大字体大小
+
+            // 更新内容区域的字体大小
+            currentContent.style.fontSize = fontSize + 'px';
+            // 动态调整行高和高度
+            currentContent.style.lineHeight = `${fontSize * 1.5}px`; // 行高为字体大小的 1.5 倍
+            currentContent.style.height = 'auto'; // 高度自动调整
+            // 将所有子元素的字体大小设置为 1em（基于父元素的字体大小）
+            const contentElements = currentContent.querySelectorAll('*');
+            contentElements.forEach(element => {
+              element.style.fontSize = '1em';
+            });
+          } else {
+            console.error(`未找到内容区域：${selectedLanguage}-content`);
+          }
+        }
+      </script>
+    </div>
+</body>
+
+</html>

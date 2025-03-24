@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>หง ซู :: ปริญญาเอก :: วิศวกร</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
+
+  <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
+
+  <!-- <link rel="stylesheet" href="css/aos.css"> -->
+  <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" href="css/mobilenav.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+  <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Tahoma', 'Noto Sans', sans-serif;
+      /* 全局字体 */
+      font-size: 16px;
+      color: #373737;
+      line-height: 1.6;
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <!-- block save as ================================================== -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
+        }
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
+
+        return false;
+      }
+    }
+  </script>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="en.html" class="site-logo">
+              <img src="images/logo-full-th.png" alt="Image" class="site-logo" style="height:80px;">
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+              <!---<span class="icon-menu h3"></span>--->
+            </a>
+
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-end">
+            <div class="top-social d-flex align-items-center">
+              <div class="social-icons-container">
+                <div class="ml-md-auto top-social d-lg-inline-block">
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
+                  <img src="images/flag_th.png" class="flag d-inline-block d-lg-none" alt="flag"
+                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
+
+
+                  <div class="ml-auto d-inline-block d-lg-none">
+                    <select id="languages" name="languages" style="
+                                    width:auto;
+                                    height: 25px;
+                                    margin-left: 5px;
+                                    border-radius: 0;
+                                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                    text-align: center; /* 新增 */
+                                                text-align-last: center; /* 确保选中的选项居中 */
+                                  " onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="cn-research.html">中文</option>
+                      <option value="jp-research.html">日本語</option>
+                      <option value="kr-research.html">한국어</option>
+                      <option value="th-research.html" selected>ไทย</option>
+                      <option value="de-research.html">Deutsch</option>
+                      <option value="en-research.html">English</option>
+                      <option value="es-research.html">Español</option>
+                      <option value="fr-research.html">Français</option>
+                      <option value="it-research.html">Italiano</option>
+                      <option value="ru-research.html">Русский</option>
+                      <option value="ar-research.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list-2" name="content-list" style="
+                                                                                        width: auto;height: 25px;
+                                                                                        margin-left: 5px;
+                                                                                        border-radius: 0;
+                                                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                        text-align: center; /* 新增 */
+                                                                                        text-align-last: center; /* 确保选中的选项居中 */
+                                                                                        "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="th.html">หน้าแรก</option>
+                      <option value="th-research.html" selected>การวิจัย</option>
+                      <option value="th-news.html">ข่าวสาร</option>
+                      <option value="th-projects.html">โครงการ</option>
+                      <option value="th-about.html">เกี่ยวกับ</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+        role="banner">
+
+        <div class="container">
+
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right " role="navigation">
+
+                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+
+                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                  <li>
+                    <a href="th.html" class="nav-link text-left">หน้าแรก&nbsp;&nbsp;</a>
+                  </li>
+                  <li class="active">
+                    <a href="th-research.html" class="nav-link text-left">การวิจัย&nbsp;&nbsp;</a>
+                  </li>
+                  <li>
+                    <a href="th-news.html" class="nav-link text-left">ข่าวสาร</a>
+                  </li>
+                  <li>
+                    <a href="th-projects.html" class="nav-link text-left">โครงการ</a>
+                  </li>
+                  <!-- <li>
+                                                                            <a href="en-activities.html" class="nav-link text-left">Activities</a>
+                                                                        </li> -->
+                  <li>
+                    <a href="th-about.html" class="nav-link text-left">เกี่ยวกับ</a>
+                  </li>
+                  <li id="festival-item">
+                    <a id="dynamic-greeting" href="#" target="_blank" class="nav-link text-left">
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- 语言选择框 -->
+            <div class="ml-auto">
+              <span style="display: flex; align-items: center;">
+                <!-- 简体字和国旗 -->
+                <a href='' class="d-inline-block" style="margin-right: 5px;">
+                  <img src="images/flag_th.png" alt="flag"
+                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
+                </a>
+                <!-- 选择语言的下拉框 -->
+                <select id="languages-2" name="languages" style="width:auto; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                text-align: center; /* 新增 */
+                                                text-align-last: center; /* 确保选中的选项居中 */"
+                  onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <option value="cn-research.html">中文</option>
+                  <option value="jp-research.html">日本語</option>
+                  <option value="kr-research.html">한국어</option>
+                  <option value="th-research.html" selected>ไทย</option>
+                  <option value="de-research.html">Deutsch</option>
+                  <option value="en-research.html">English</option>
+                  <option value="es-research.html">Español</option>
+                  <option value="fr-research.html">Français</option>
+                  <option value="it-research.html">Italiano</option>
+                  <option value="ru-research.html">Русский</option>
+                  <option value="ar-research.html">اللغة العربية</option>
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+    </div>
+    <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+    <!---Mobile MENU Bar--->
+    <a class="d-inline-block d-sm-none">
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+        <span class="burger-text">เมนู</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="th.html">Hong Xu, <small>PhD</small></a><br />
+          </li>
+          <li>
+            <a href="th-research.html">การวิจัย ➔</a>
+          </li>
+
+          <li>
+            <a href="th-news.html">ข่าวสาร ➔</a>
+          </li>
+          <li>
+            <a href="th-projects.html">โครงการ ➔</a>
+          </li>
+          <li>
+            <a href="th-about.html">เกี่ยวกับ ➔</a>
+          </li>
+        </ul>
+      </nav>
+    </a>
+    <!------>
+    <!-- 简化版导航栏内容 -->
+    <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <img src="images/logo-full-en-long2.png" alt="Image" class="site-logo"
+          style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+        <div></div>
+
+        <div style="display: flex; align-items: center;">
+          <a class="flag d-inline-block d-lg-none">
+            <img src="images/flag_th.png" alt="flag"
+              style="height:15px; margin-right:2px; position:relative; top:-1px;">
+          </a>
+          <select id="languages-3" name="languages" style="
+                                              width:auto;
+                                              height: 25px;
+                      margin-left: 5px;
+                      border-radius: 0;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      text-align: center; /* 新增 */
+                      text-align-last: center; /* 确保选中的选项居中 */
+                      " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="cn-research.html">中文</option>
+            <option value="jp-research.html">日本語</option>
+            <option value="kr-research.html">한국어</option>
+            <option value="th-research.html" selected>ไทย</option>
+            <option value="de-research.html">Deutsch</option>
+            <option value="en-research.html">English</option>
+            <option value="es-research.html">Español</option>
+            <option value="fr-research.html">Français</option>
+            <option value="it-research.html">Italiano</option>
+            <option value="ru-research.html">Русский</option>
+            <option value="ar-research.html">اللغة العربية</option>
+          </select>
+          <select id="content-list" name="content-list" style="
+                  width:auto;height: 25px;
+                  margin-left: 5px;
+                  border-radius: 0;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                  " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="th.html">หน้าแรก</option>
+            <option value="th-research.html" selected>การวิจัย</option>
+            <option value="th-news.html">ข่าวสาร</option>
+            <option value="th-projects.html">โครงการ</option>
+            <option value="th-about.html">เกี่ยวกับ</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!------>
+
+    <div class="site-section">
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 single-content">
+            <p class="mb-5">
+              <img src="images/banner_img_1.jpg" alt="Image" class="img-fluid">
+            </p>
+            <h1 class="mb-4">
+              ภาพรวมการวิจัย
+            </h1>
+            <h6 style="text-align: center;">ระบบพลังงานโลว์คาร์บอนที่ประสานพลังงานไฮโดรเจนและไฟฟ้าโดยมุ่งเน้นที่กริด
+            </h6>
+            <hr>
+            <img src="/images/research_overview_en.jpg" alt="Research Overview"
+              style="display: block; width: 98%; height: auto;">
+
+
+            <br><br>
+            <hr>
+            <h1 class="mb-4">
+              สิ่งตีพิมพ์
+            </h1>
+
+            <ul class="square">
+              <li><span style="font-weight: bold;">พลังงานหมุนเวียน / ไฟฟ้าเคมี:</span><br></li>
+            </ul>
+            <ol>
+              <li>
+                S. N. Artigas, <strong>H. Xu*</strong> [FDB], F. Mack<br>
+                Use of distribution of relaxation times analysis as an in-situ diagnostic tool for water management in
+                PEM fuel
+                cells applications [J]<br>
+                ความร่วมมือ: <text style="color:rgb(37, 84, 238)">[Freudenberg Group]</text> | อ้างจาก:
+                <text style="color:rgb(133, 36, 197)">[Tsinghua University]</text><br>
+                2024 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0378775324001307"
+                  target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ liquid water
+                desaturation via
+                evaporation [J]<br>
+                ความร่วมมือ: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> | อ้างจาก: <text
+                  style="color:rgb(250, 49, 14)">[Toyota Motor Corporation]</text> <text
+                  style="color:rgb(141, 20, 20)">[Bosch,
+                  Germany]</text><br>
+                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S.
+                Haussener
+                [EPFL]<br>
+                Conductive heat transfer in partially saturated gas diffusion layers with evaporative cooling [J]<br>
+                ความร่วมมือ: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> <text
+                  style="color:rgb(250, 49, 14)">[EPFL]</text><br>
+                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J.
+                Eller
+                [PSI]<br>
+                Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond
+                operando X-ray
+                tomographic microscopy [J]<br>
+                ความร่วมมือ: <text style="color:rgb(250, 49, 14)">[Toyota Motor Corporation]</text> | อ้างจาก: <text
+                  style="color:rgb(141, 20, 20)">[Bosch, Germany]</text> <text style="color:rgb(133, 36, 197)">[Tsinghua
+                  University]</text> <text style="color:rgb(36, 95, 197)">[University of Toronto]</text><br>
+                2021 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [PSI]<br>
+                Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando liquid water
+                saturation and gas
+                diffusion properties [J]<br>
+                ความร่วมมือ: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> | อ้างจาก: <text
+                  style="color:rgb(74, 7, 241)">[German Aerospace Center]</text> <text
+                  style="color:rgb(250, 49, 14)">[Toyota Motor
+                  Corporation]</text> <text style="color:rgb(133, 36, 197)">[Tsinghua University]</text><br>
+                2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br>
+                Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell Performance [J]<br>
+                ความร่วมมือ: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> | อ้างจาก: <text
+                  style="color:rgb(74, 7, 241)">[Tokyo Institute of Technology]</text> <text
+                  style="color:rgb(248, 114, 5)">[Hong
+                  Kong University of Science and Technology]</text> <text style="color:rgb(133, 36, 197)">[Tsinghua
+                  University]</text><br>
+                2021 | <em><strong>ACS Appl. Energy Mater.</strong></em> [<a
+                  href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, F. Marone, <strong>H. Xu*</strong>
+                [PSI], F. N.
+                Büchi<br>
+                Improving water management in fuel cells through microporous layer modifications: Fast operando
+                tomographic imaging
+                of liquid water [J]<br>
+                ความร่วมมือ: <text style="color:rgb(250, 49, 14)">[Toyota Motor Corporation]</text> | อ้างจาก: <text
+                  style="color:rgb(241, 26, 7)">[MIT]</text> <text style="color:rgb(74, 7, 241)">[German Aerospace
+                  Center]</text>
+                <text style="color:rgb(7, 38, 241)">[State Power Investment Corporation, China]</text><br>
+                2019 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943"
+                  target="_blank">PDF</a>]
+              </li>
+            </ol>
+            <ul class="square">
+              <li><span style="font-weight: bold;">การสร้างภาพเชิงคำนวณ / การเรียนรู้เชิงลึก</span></li>
+            </ul>
+
+            <ol>
+              <li>
+                M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni
+                [ETH],
+                F. Marone [SLS]<br>
+                Deep learning based classification of dynamic processes in time-resolved XTM [J] <br>
+                Co-author: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> <text
+                  style="color:rgb(191, 9, 228)">[CWI Amsterdam]</text> | Cited by: <text
+                  style="color:rgb(236, 52, 36)">[Stanford
+                  Univ.]</text> <text style="color:rgb(12, 26, 230)">[RWTH
+                  Aachen]</text> <br>
+                2021 | <em><strong>Scientific Reports </strong></em> [<a
+                  href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>]
+              </li>
+              <li>
+                M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, Prof. J. Sijbers, Prof. M. Stampanoni [ETH],
+                F. Marone [SLS]<br>
+                Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data [J] <br>
+                Co-author: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> <text
+                  style="color:rgb(104, 9, 228)">[Univ. of Antwerp]</text> | Cited by: <text
+                  style="color:rgb(248, 101, 15)">[Univ.
+                  of Tokyo]</text> <text style="color:rgb(12, 117, 230)">[Univ. of
+                  Toronto]</text> <br>
+                2021 | <em><strong>Scientific Reports</strong></em> [<a
+                  href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [ETH]<br>
+                Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers. [J] <br>
+                Co-author: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> | Cited by: <text
+                  style="color:rgb(74, 7, 241)">[CAS Dalian Institute of Chemical Physics]</text> <text
+                  style="color:rgb(250, 49, 14)">[Univ. of Toronto]</text> <text style="color:rgb(133, 36, 197)">[Univ.
+                  College London]</text> <br>
+                2020 | <em><strong>J. Electrochem. Soc. </strong></em> [<a
+                  href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima, H. Nguyen, K. Kishita, F. N. Büchi, J. Eller<br>
+                <strong>(Invited)</strong> Exploring sub-second and sub-micron XTM imaging of liquid water in PEFC GDLs.
+                [J]
+                <br>
+                Co-author: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> | Cited by: <text
+                  style="color:rgb(14, 97, 250)">[European
+                  Synchrotron Radiation Facility]</text> <text style="color:rgb(250, 49, 14)">[US National Fuel Cell
+                  Research Center]</text> | <text style="color:rgb(14, 97, 250)">[ECS Meeting Travel Award]</text><br />
+                2019 | <em><strong>ECS Transactions </strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/09208.0011ecst" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [PSI]<br>
+                Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of PEFC. [J] <br>
+                Co-author: <text style="color:rgb(8, 114, 31)">[Swiss Light Source/PSI]</text> | Cited by: <text
+                  style="color:rgb(74, 7, 241)">[Argonne National Laboratory]</text> <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> | <text style="color:rgb(8, 114, 31)">[Swiss Light
+                  Source]</text> | <text style="color:rgb(14, 97, 250)">[ModVal
+                  Best Poster Award]</text><br>
+                2017 | <em><strong>ECS Transactions </strong></em> [<a
+                  href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830" target="_blank">PDF</a>]
+              </li>
+            </ol>
+
+            <ul class="square">
+              <li><span style="font-weight: bold;">วิทยาศาสตร์วัสดุ / วิศวกรรมเคมี</span></li>
+            </ul>
+
+            <ol>
+              <li>
+                Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT], T. Zhang
+                <br>
+                A simple spray reaction synthesis and characterization of hierarchically porous SnO2 microspheres for an
+                enhanced dye sensitized solar cell. [J] <br>
+                2017 | <em><strong>RSC Advances</strong></em> [<a
+                  href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract"
+                  target="_blank">PDF</a>]
+                <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+
+              <li>
+                Prof. H. Zhang [BJTU], <strong>H. Xu*</strong> [BJTU], J. Wan, Prof. L. Yan, C. Dai<br>
+                Preparations of new porous oxides spherical powders by spray reaction technique. [J]<br>
+                2012 | <em><strong>Vacuum and Cryogenics</strong></em> [<a
+                  href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2012&filename=ZKDW201203005&uniplatform=NZKPT&v=n8kUCXQ29XK8uOcXQdI-5jgJqVfzr5uxF9oPXi_7Jb8CNlMTVCM7mmeU-Xw7WoTH"
+                  target="_blank">Link</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+
+              <li>
+                Q. Xiaoyue, <strong>H. Xu*</strong> [BJTU], X. Zhou <br>
+                Degradation of highly active cypermethrin via ultrasonic irradiation combined with photocatalysis by
+                TiO2<br>
+                2012 | <em><strong>Chemistry Research</strong></em> [<a
+                  href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HXYA201203011&dbname=cjfdtotal&dbcode=CJFD&v=MTUxNDFnOC96aFlVN3pzT1QzaVFyUmN6RnJDVVI3aWVadVJ0RmkzaFVidk1MVFhTYjdHNEg5UE1ySTlFWllSNkQ="
+                  target="_blank">Link</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+            </ol>
+
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              สิทธิบัตรของประเทศ
+            </h1>
+
+            <ol>
+              <li>
+                <strong>อุปกรณ์แยกแม่เหล็กที่ใช้การกระตุ้นของอินเตอร์เฟซก๊าซ-ของเหลวแบบวงกลม [P]</strong><br />
+                ผู้ประดิษฐ์: ศ. ม. ฟู, ศ. ห. จาง, <strong>ห. ซู</strong> (BJTU), ศ. ล. ยาน<br />
+                สิทธิบัตรจีน หมายเลข: CN102441489B, ได้รับสิทธิ์เมื่อวันที่ 11 ตุลาคม 2013. [<a
+                  href="https://patents.google.com/patent/CN102441489B/en" target="_blank">สิทธิ์</a>]
+              </li>
+              <li>
+                <strong>อุปกรณ์แยกแม่เหล็กที่ใช้การกระตุ้นของอินเตอร์เฟซก๊าซ-ของเหลวแบบวงกลมที่ทำงานต่อเนื่อง
+                  [P]</strong><br />
+                ผู้ประดิษฐ์: ศ. ห. จาง, <strong>ห. ซู</strong> (BJTU), ศ. ม. ฟู, ศ. ล. ยาน<br />
+                สิทธิบัตรจีน หมายเลข: CN102441490A, ได้รับสิทธิ์เมื่อวันที่ 1 พฤศจิกายน 2013. [<a
+                  href="https://patents.google.com/patent/CN102441490A/en" target="_blank">สิทธิ์</a>]
+              </li>
+              <li>
+                <strong>อุปกรณ์ทำความสะอาดผลไม้และผักที่ใช้การออกซิเดชันด้วยอัลตราโซนิก-โฟโตแคตาลิติก [P]</strong><br />
+                ผู้ประดิษฐ์: เอ็กซ์. โจว, <strong>ห. ซู</strong> (BJTU), ศ. ห. เจียง, เอ็กซ์. ฉี<br />
+                สิทธิบัตรจีน หมายเลข: CN202311136U, ได้รับสิทธิ์เมื่อวันที่ 9 พฤษภาคม 2012. [<a
+                  href="https://patents.google.com/patent/CN202311136U/en" target="_blank">สิทธิ์</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+
+            <h1 class="mb-4">
+              รายงานทางเทคนิค
+            </h1>
+            <ol>
+              <li>
+                <strong>ห. ซู</strong> [TUM], ดร. บี. วินซอน-เลเต, ย. ลั่ว<br>
+                การจำลองพลศาสตร์ของไซยาโนแบคทีเรียสำหรับอ่างเก็บน้ำยูฉีโอในเมืองเทียนจิน, ประเทศจีน [R] <br>
+                2016 | รายงานการฝึกงาน. <text style="color:rgb(37, 142, 140)">[École des Ponts ParisTech]</text> & <text
+                  style="color:rgb(30, 45, 73)">[École Polytechnique]</text>. ปารีส, ฝรั่งเศส.
+              </li>
+
+              <li>
+                <strong>ห. ซู</strong> [UR1], ดร. วี. หลู, ดร. เอ. แมดเซ่น, ศ. เอส. ดิ มาเตโอ<br>
+                การออกแบบและการก่อสร้างสถานีทดสอบสำหรับเส้นแยกและหน่วงเวลา ที่ European XFEL [R]<br>
+                2015 | รายงานการฝึกงาน. <text style="color:rgb(67, 25, 237)">[European XFEL]</text>, ฮัมบูร์ก, เยอรมนี.
+                [<a href="https://arxiv.org/abs/2408.01472" target="_blank">PDF</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              การวิจัยหุ้น
+            </h1>
+            <ul class="square">
+              <li><span style="font-weight: bold;">การวิจัยมหภาคอุตสาหกรรม</span> (ภูมิภาคจีนใหญ่):
+                <br> 2022 | <strong>อุตสาหกรรมพลังงานใหม่</strong>:
+                ปัจจัยขับเคลื่อนการเป็นผู้ประกอบการในอุตสาหกรรมพลังงานใหม่ของจีนภายใต้
+                นโยบายการลดคาร์บอนสองเท่า <br>
+                2020 | <strong>อุตสาหกรรมวัสดุใหม่</strong>: ซีรีส์วัสดุเซมิคอนดักเตอร์ตอนที่ 4: 5G
+                ขับเคลื่อนอุตสาหกรรมการสื่อสารด้วยแสง, วัสดุอินเดียมฟอสไฟด์พร้อมสำหรับการเติบโต<br>
+                <hr>
+              </li>
+              <li><span style="font-weight: bold;">การวิจัยตลาดหลัก</span> (บริษัทที่ได้รับการลงทุนจากทุน Series A ถึง
+                D):<br>
+                2021 | <strong>UISEE Technology</strong>: รายงานซีรีส์ผู้บุกเบิกเทคโนโลยีเกี่ยวกับ UISEE Technology:
+                ผู้ให้บริการโซลูชันการขับขี่อัตโนมัติหลายสถานการณ์<br>
+                2021 | <strong>SemiDrive Technology</strong>: รายงานซีรีส์ผู้บุกเบิกเทคโนโลยีเกี่ยวกับ SemiDrive
+                Technology:
+                ผู้ให้บริการชิป IP รถยนต์อัจฉริยะ<br>
+                2021 | <strong>Xi'an ESWIN Semiconductors</strong>: รายงานการวิเคราะห์การวิจัยเกี่ยวกับ Xian ESWIN
+                Semiconductors<br>
+                <hr>
+              </li>
+              <li><span style="font-weight: bold;">การวิจัยตลาดรอง</span> (บริษัทที่จดทะเบียนในตลาดหลักทรัพย์ A-Share &
+                ตลาดหลักทรัพย์สหรัฐ):<br>
+                2021 | <strong>National Silicon Industry</strong> (688126.SH):
+                ผู้นำพลังงานซิลิคอนชั้นนำขับเคลื่อนการท้องถิ่นของชิป
+                (รายงานการครอบคลุมเริ่มต้น) <br>
+                2021 | <strong>CREE</strong> (NASDAQ:CREE): รายงานซีรีส์ผู้บุกเบิกเทคโนโลยีเกี่ยวกับ CREE:
+                ผู้ให้บริการอุปกรณ์
+                พลังงาน/RF และ LED ทั่วโลก (หุ้นสหรัฐ)<br>
+                2021 | <strong>Jingwei Hirain</strong> (688326.SH): รายงานซีรีส์ผู้บุกเบิกเทคโนโลยีเกี่ยวกับ Jingwei
+                Hirain
+                Technology: ผู้ให้บริการระบบเทคโนโลยีอิเล็กทรอนิกส์ยานยนต์<br>
+                2020 | <strong>TankeBlue</strong> (870013.OC): ผู้ผลิตเวเฟอร์ SiC ชั้นนำในประเทศ<br>
+                2020 | <strong>Hangzhou Li-on Microelectronics</strong> (605358.SH): ตลาดกว้างสำหรับการทดแทนในประเทศ,
+                การอุตสาหกรรมเวเฟอร์ซิลิคอนขนาดใหญ่ใกล้จะเกิดขึ้น<br>
+                2020 | <strong>Shandong Sinocera</strong> (300285.SZ): อุตสาหกรรมวัสดุเซรามิกทันตกรรม, แนวโน้มที่เอื้อ
+                ประโยชน์ต่อวัสดุเซอร์โคเนีย<br>
+              </li>
+            </ul>
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              ชุดข้อมูลสาธารณะ
+            </h1>
+            <ol>
+              <li>
+                <span style="font-weight: bold;">TomoBank: ชุดข้อมูลการถ่ายภาพรังสีของเซลล์เชื้อเพลิง</span><br>
+                ผู้ดูแล: M. Bührer, <strong>H. Xu*</strong> [PSI], F. Marone<br>
+                2019 | กระทรวงพลังงานสหรัฐฯ - ห้องปฏิบัติการแห่งชาติอาร์กอน © ลิขสิทธิ์. Rev. f4253f55. [<a
+                  href="https://tomobank.readthedocs.io/en/latest/source/data/docs.data.dynamic.html#fuel-cell-data"
+                  target="_blank">ลิงก์</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              ผู้ช่วยสอน
+            </h1>
+            <ol>
+              <li>
+                <span style="font-weight: bold;">เทคโนโลยีพลังงานทดแทน II, การเก็บพลังงานและการแปลงพลังงาน</span><br />
+                ETH Zürich, หลักสูตรปริญญาโท (529-0191-01L )<br />
+                2017-2019 | ภาคเรียนฤดูใบไม้ผลิ [<a
+                  href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+                  target="_blank">ลิงก์</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              การประชุม
+            </h1>
+
+            <ul class="square">
+              <!-- <hr> -->
+              <li><span style="font-weight: bold;">เคมีไฟฟ้า / ฟิสิกส์ / วิทยาศาสตร์วัสดุ:</span><br>
+            </ul>
+
+            <ol>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br>
+                2019 | <em>236th Meeting of The Electrochemical Society (ECS)</em>, Atlanta, USA.
+                <strong>[Speaker]</strong>
+                [<a href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller<br>
+                Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC.<br>
+                2018 | <em>8th International Conference on Fundamentals & Development of Fuel Cells (FDFC)</em>, Nantes,
+                France. <strong>[Speaker]</strong> [<a href="https://fdfc2019.sciencesconf.org/"
+                  target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller<br>
+                Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray Tomographic Microscopy<br>
+                2018 | <em>69th Annual Meeting of the International Society of Electrochemistry (ISE)</em>, Bologna,
+                Italy.
+                <strong>[Poster]</strong> [<a href="https://www.ise-online.org/ise-conferences/past_ISE-meetings.php"
+                  target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller<br>
+                Water Distribution in the Gas Diffusion Layer of PEFCs: X-ray Tomographic Microscopy Studies<br>
+                2018 | <em>15th Symposium on Fuel Cell Modelling and Experimental Validation (ModVal)</em>, Aarau,
+                Switzerland. <strong>[Best Poster Award]</strong> [<a href="https://indico.psi.ch/event/5151/"
+                  target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of PEFC.<br>
+                2017 | <em>6th European PEFC and Electrolyser Forum (EFCF)</em>, Lucerne, Switzerland.
+                <strong>[Speaker]</strong> [<a
+                  href="https://past.efcf.com/fileadmin/EFCF-Pict-Logo/EFCF_2017/Download/6th_PEFC-Electrol-Forum_2017_4-7July-FinAnnounc-Progr_s.pdf"
+                  target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Contrast-to-Noise Ratio Evaluation for X-ray Computed Tomographic Imaging of Water in Polymer
+                Electrolyte
+                Fuel Cells<br>
+                2017 | <em>14th Symposium on Fuel Cell Modelling and Experimental Validation (ModVal)</em>, Karlsruhe,
+                Germany. <strong>[Poster]</strong> [<a href="https://www.modval14.kit.edu/" target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum<br>
+                Nanoparticles Embedded Thermoresponsive Diblock Copolymers for Magnetic Sensor Application.<br>
+                2016 | <em>Annual Meeting of the EU Erasmus MaMaSELF Project</em>, Rigi Mountain, Switzerland.
+                <strong>[Speaker]</strong> [<a href="https://www.mamaself.eu/status-meeting" target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum<br>
+                Magnetic properties and structure of thermoresponsive polystyrene-block-poly(N-isopropylacrylamide)/iron
+                oxide nanocomposite thin films.<br>
+                2016 | <em>80th Annual Meeting of the German Physical Society & DPG Spring Meeting (DPG)</em>,
+                Regensburg,
+                Germany. <strong>[Poster]</strong> [<a
+                  href="https://www.dpg-physik.de/aktivitaeten-und-programme/tagungen/fruehjahrstagungen"
+                  target="_blank">Link</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu<br>
+                Mesoporous SnO2 Microspheres: Synthesis, Characterization, and Application in Enhanced Dye-sensitized
+                Solar
+                Cells and Lithium Batteries.<br>
+                2013 | <em>Tsinghua University Energy Particles Frontier Seminar</em>, Beijing, China.
+                <strong>[Poster]</strong> [<a href="https://www.tsinghua.edu.cn/info/1175/20925.htm"
+                  target="_blank">Link</a>]
+              </li>
+            </ol>
+          </div>
+
+
+          <div class="col-lg-3 ml-auto">
+
+            <div class="section-title">
+
+              <h2>ความสนใจในการวิจัย</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-sun"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">พลังงานทดแทน</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">พลังงานไฮโดรเจน / เซลล์เชื้อเพลิง / อิเล็กโทรไลเซอร์ / เซลล์แสงอาทิตย์ /
+                    แบตเตอรี่ลิเทียม-ไอออน</span>
+                  <span class="date-read">2013–ปัจจุบัน</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-file-alt"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">เศรษฐศาสตร์พลังงานและนโยบาย</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">จีน / สหภาพยุโรป / กลยุทธ์ไฮโดรเจน / การเปลี่ยนแปลงพลังงาน</span>
+                  <span class="date-read">2023–ปัจจุบัน</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-bus"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">การขนส่งที่ชาญฉลาดและคาร์บอนต่ำ</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">การขนส่งที่ปลอดคาร์บอน / การปรับปรุงประสิทธิภาพ / การขับขี่อัตโนมัติ</span>
+                  <span class="date-read">2021–ปัจจุบัน</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-tools"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">วัสดุที่มีคุณสมบัติพิเศษ</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">วัสดุเซมิคอนดักเตอร์ / วัสดุคาร์บอน / วัสดุคริสตัล /
+                    วัสดุพอลิเมอร์ที่มีคุณสมบัติพิเศษ</span>
+                  <span class="date-read">2013–2016</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-radiation"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">การถ่ายภาพรังสี</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">การถ่ายภาพคอมพิวเตอร์รังสี (CT) / การกระจายรังสีเอ็กซ์แบบมุมเล็ก (SAXS) /
+                    การดูดซับรังสีเอกซ์</span>
+                  <span class="date-read">2016–2021</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex pl-0">
+              <div class="number align-self-start"><i class="fas fa-eye"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">วิสัยทัศน์คอมพิวเตอร์</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">การแบ่งส่วนภาพ / การแสดงผล 3D / การลดสัญญาณรบกวนในภาพ /
+                    เครือข่ายประสาทเทียมคอนโวลูชั่น</span>
+                  <span class="date-read">2017–2021</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="">&nbsp;</p>
+    <div class="site-section subscribe bg-light" style="position: relative">
+      <!-- 上方 hr -->
+      <!-- <hr
+                    style="
+                      height: 1px;
+                      background-color: gray;
+                      border: none;
+                      margin: 0;
+                      position: absolute;
+                      top: 0;
+                      left: 50%;
+                      width: 100vw;
+                      transform: translateX(-50%);
+                    "
+                  /> -->
+
+      <h2>&nbsp;&nbsp;</h2>
+      <div class="container">
+        <form action="#" class="row align-items-start">
+          <!-- 第一栏 -->
+          <div class="col-md-4">
+            <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+            <h2><img src="./images/wflags/eu.png" style="
+                                                                                  height: 0.9em;
+                                                                                  vertical-align: -6%;
+                                                                                  display: inline-block;
+                                                                                  margin-right: 0em;
+                                                                                " /> ติดต่อฉัน</h2>
+            <p>
+              อีเมล | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+              ลิงค์อิน |
+              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+              อินสตาแกรม |
+              <a href="https://www.instagram.com/helios.h.xu/" target="_blank">instagram.com/helios.h.xu</a><br /><br />
+              <span class="currentDateInLang" language="english"></span><br />
+              <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+                  id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                  title="timezone - Zurich" target="_blank" rel="nofollow">เวลาในยุโรป [CET]</a></strong>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                            border: none;
+                            border-top: 1px solid #c7c7c7;
+                            margin: 0px 0;
+                          " />
+          </div>
+
+          <!-- 第二栏 -->
+          <div class="col-md-3">
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            <!-- weather widget start --><a id="weather" target="_blank"
+              href="https://www.booked.net/weather/beijing-18391"><img
+                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                alt="booked.net" /></a><!-- weather widget end -->
+            <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+              style="width: 55px; height: 60px" /><br /><br />
+            <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                style="
+                                                                                                                                                      height: 0.9em;
+                                                                                                                                                      vertical-align: -6%;
+                                                                                                                                                      display: inline-block;
+                                                                                                                                                      margin-right: 0em;
+                                                                                                                                                    " /> โชคชะตาส่องทางให้เรา</h2>
+            <p>
+              ภาพถ่าย |
+              <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+              การเขียน |
+              <a href="https://site.inconstruction.io" target="_blank">site.inconstruction.io</a><br />
+              นักวิชาการ |
+              <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+              <span class="currentZodiacInLang" language="english"></span> - <a class="jieqi-24"
+                language="english"></a><br>
+              <a href="//24timezones.com/Bangkok/time" style="text-decoration: none" class="clock24"
+                id="tz24-1742849597-c128-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                title="time zone Bangkok" target="_blank" rel="nofollow">เวลากรุงเทพฯ [ICT]</a>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                            border: none;
+                            border-top: 1px solid #c7c7c7;
+                            margin: 0px 0;
+                          " />
+          </div>
+
+          <!-- 第三栏 -->
+
+          <div class="col-md-5">
+            <br />
+            <div id="clustrmap-container"
+              style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
+              <script type="text/javascript" id="clustrmaps"
+                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
+                </script>
+            </div>
+
+            <style>
+              /* 默认是电脑端，transform: translateX(15px); */
+              #clustrmap-container {
+                transform: translateX(15px) !important;
+              }
+
+              @media (max-width: 768px) {
+                #clustrmap-container {
+                  transform: translateX(-40px) !important;
+                }
+              }
+            </style>
+
+          </div>
+        </form>
+      </div>
+      <br />
+
+      <!-- <div class="container">
+                    <form action="#" class="row align-items-center">
+                      <div class="col-md-5 mr-auto"></div>
+                      <div class="col-md-6 ml-auto"></div>
+                    </form>
+                  </div>
+                  <h2>&nbsp;&nbsp;</h2> -->
+      <!-- 下方 hr -->
+      <hr style="
+                      height: 1px;
+                      background-color: gray;
+                      border: none;
+                      margin: 0;
+                      position: absolute;
+                      bottom: 0;
+                      left: 50%;
+                      width: 150vw;
+                      transform: translateX(-50%);
+                    " />
+    </div>
+
+    <!-- .site-wrap -->
+    <!-- <hr
+                  style="
+                    height: 1px;
+                    border-width: 0;
+                    color: gray;
+                    background-color: gray;
+                  "
+                /> -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              <p>
+                <img class="country-flag" src="" alt="国旗" style="
+                                height: 0.9em;
+                                vertical-align: -6%;
+                                display: inline-block;
+                                margin-right: 0em;
+                              " />
+                <text>ยินดีต้อนรับเพื่อนจาก
+                  <span class="location">โลก</span>! ผ่าน
+                  <span class="distance-info"> ∞ กิโลเมตร</span> ของอวกาศโลก เราเชื่อมต่อกันเสมอ!</text>
+                <img src="./images/wflags/de.png" style="
+                                height: 0.9em;
+                                vertical-align: -6%;
+                                display: inline-block;
+                                margin-right: 0em;
+                              " />
+                <br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                ลิขสิทธิ์ &copy; 2017 -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                | Hong Xu | อัปเดต: <span class="web_update_month"></span>. <span class="web_update_year"></span> |
+                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <!-- <a href="https://info.flagcounter.com/D897"
+                              ><img
+                                src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                border="0"
+                            /></a> -->
+                <a href="https://info.flagcounter.com/D897" style="
+                                display: inline-block;
+                                width: 94%;
+                                height: 95%;
+                                overflow: hidden;
+                                position: relative;
+                              ">
+                  <img
+                    src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                    border="0" style="
+                                  width: auto;
+                                  height: auto;
+                                  object-fit: fill;
+                                  object-position: top right;
+                                  transform: translateX(3.5%) translateY(30%);
+                                " />
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .site-wrap -->
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#ff5e15" />
+      </svg>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/mobilenav.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/user_ip_en.js" type="module"></script>
+    <script type="text/javascript" src="update_info_script.js"></script>
+    <script src="js/festival.js"></script>
+    <script src="js/24jieqi.js"></script>
+  </div>
+</body>
+
+</html>
