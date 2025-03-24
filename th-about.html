@@ -45,6 +45,48 @@
       font-weight: bold;
     }
   </style>
+
+  <style>
+    button {
+      font-size: 8px;
+      /* 字体大小稍微增大一点 */
+      padding: 0;
+      /* 去掉内边距 */
+      margin: 4px;
+      /* 去掉外边距 */
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 0px;
+      background-color: #ffffff;
+      transition: background-color 0.3s;
+      display: inline-block;
+      width: 30px;
+      /* 调整宽度，使按钮更紧凑 */
+      height: 25px;
+      /* 设置高度为25px */
+      line-height: 25px;
+      /* 使文字垂直居中 */
+      text-align: center;
+      /* 使文字水平居中 */
+      font-weight: bold;
+      /* 让文字更突出 */
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+
+    button:active {
+      background-color: #ccc;
+    }
+
+    /* 让两个按钮紧挨在一起 */
+    button+button {
+      margin-left: -12px;
+      /* 设置两个按钮之间的间距 */
+    }
+  </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -342,9 +384,9 @@
 
                 <!-- 调整字体大小 -->
                 <button id="increase-font" onclick="changeFontSize(1)"
-                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A+</button>
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A+</button>
                 <button id="decrease-font" onclick="changeFontSize(-1)"
-                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: -1px;">A-</button>
+                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A-</button>
               </div>
             </h1>
 
