@@ -565,9 +565,9 @@
                   style="width: auto; height: 25px;  align-items: center; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
                                                                                   text-align-last: center; /* 确保选中的选项居中 */" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
-                  <option value="chinese">汉/普通话</option>
-                  <option value="canton">汉/粤语</option>
+                  <!-- <option value="chinese">汉/普通话</option> -->
                   <option value="old-chinese">汉/文言文</option>
+                  <option value="canton">汉/粤语</option>
                   <!-- <option value="huoxing">中/火星文</option> -->
                   <!-- <option value="blind">中/盲文</option> -->
                   <option value="korean">朝/조선어</option>
@@ -1798,7 +1798,7 @@
             convertToTraditional(); // 转换为繁体字
           }
 
-
+          changeFontSize(1);
           // 如果选择了默认字体
           if (selectedFont === "default") {
             content.style.fontFamily = "";  // 恢复到网页的默认字体
