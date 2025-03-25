@@ -347,15 +347,32 @@
                 text-align: center; /* 新增 */
                 text-align-last: center; /* 确保选中的选项居中 */
               " onchange="changeLanguage()">
-                <option value="hochdeutsch" selected>Hochdeutsch</option>
-                <option value="alte-hochdeutsch">Althochdeutsch</option>
-                <option value="bairisch">Bairisch</option>
-                <option value="wienerisch">Wienerisch</option>
-                <option value="zueritueetsch">Züritüütsch</option>
-                <option value="niederdeutsch">Niederdeutsch</option>
-                <option value="alte-niederdeutsch">Altniederdeutsch</option>
-                <option value="luxembourgish">Lëtzebuergesch</option>
-                <option value="dutch">Dutch</option>
+
+                <optgroup label="Hochdeutsche Dialekte">
+                  <option value="hochdeutsch" selected>Hochdeutsch</option>
+                  <option value="alte-hochdeutsch">Althochdeutsch</option>
+                <optgroup label="Oberdeutsche Dialekte">
+                  <option value="bairisch">Bairisch</option>
+                  <option value="zueritueetsch">Schwiizerdütsch</option>
+                  <option value="wienerisch">Wienerisch</option>
+                </optgroup>
+                </optgroup>
+                <optgroup label="Niederdeutsche Dialekte">
+                  <option value="niederdeutsch">Niederdeutsch</option>
+                  <option value="alte-niederdeutsch">Altniederdeutsch</option>
+                </optgroup>
+                <optgroup label="Germanische Sprachen">
+                  <option value="luxembourgish">Lëtzebuergesch</option>
+                  <option value="dutch">Dutch</option>
+                </optgroup>
+                <optgroup label="Nordische Sprachen">
+                  <option value="danish">Dansk</option>
+                  <option value="swedish">Svenska</option>
+                  <option value="norway">Norsk</option>
+                  <option value="finnish">Suomi</option>
+                  <option value="iceland">Íslenska</option>
+                </optgroup>
+
               </select>
             </h1>
             <hr />
@@ -438,7 +455,7 @@
 
               <p id="alte-hochdeutsch-content" align="justify" style="display: none;">
                 Nû ist Her Hong Xu ein ênhaftîg
-                <text>foriscari</text> enti <text>machinari</text>, der sîn selbes
+                <strong>foriscari</strong> enti <strong>machinari</strong>, der sîn selbes
                 an
                 <text>ernewerlihhe krafta</text> enti <text>e-krafta-giwerc</text> irspehhalōt habêt
                 enti
@@ -504,7 +521,7 @@
 
               <p id="niederdeutsch-content" align="justify" style="display: none;">
                 Dr. Hong Xu is een engagierten
-                <text>Forscher</text> un <text>Ingenieur</text>, de sük op
+                <strong>Forscher</strong> un <strong>Ingenieur</strong>, de sük op
                 <text>erneerbaare Energien</text> un <text>e-Power-Systeme</text> spetzialisert hett un no
                 Effizienzexzellenz un Kohlenstoffneutralität in de Energie- un Verkeerstechnologie sträbt.
                 In de letzten 10 Johren hett he mit multinationaalen Förrn un föhrenden Instituts up den
@@ -575,7 +592,7 @@
 
               <p id="alte-niederdeutsch-content" align="justify" style="display: none;">
                 Her Hong Xu is nu ēn ivig
-                <text>forscari</text> endi <text>makinari</text>, the sīn selƀon
+                <strong>forscari</strong> endi <strong>makinari</strong>, the sīn selƀon
                 an
                 <text>ernewerliko krafta</text> endi <text>e-krafta-gerihti</text> besundrod habad
                 endi
@@ -640,7 +657,7 @@
 
               <p id="zueritueetsch-content" align="justify" style="display: none;">
                 Dr Hong Xu isch dezyt e gärngsähener
-                <text>Forschig</text> und <text>Ingenieur</text>, wo sich uf
+                <strong>Forschig</strong> und <strong>Ingenieur</strong>, wo sich uf
                 <text>erneierbari Energii</text> und <text>e-Power-System</text> spezialisiärt hät und
                 noh
                 Effiziänz-Exzellenz und
@@ -713,7 +730,7 @@
 
               <p id="bairisch-content" align="justify" style="display: none;">
                 Derzait is da Dr. Hong Xu a engagierter
-                <text>Foarscha</text> und <text>Ingenieur</text>, der si auf
+                <strong>Foarscha</strong> und <strong>Ingenieur</strong>, der si auf
                 <text>erneierbare Energien</text> und <text>e-Power-Systeme</text> spezialisiert hod und
                 noch
                 Effizienzexzellenz und
@@ -788,7 +805,7 @@
 
               <p id="wienerisch-content" align="justify" style="display: none;">
                 Derzeit is da Dr. Hong Xu a engagierter
-                <text>Forscha</text> und <text>Ingeniä</text>, de si auf
+                <strong>Forscha</strong> und <strong>Ingeniä</strong>, de si auf
                 <text>erneuabare Energien</text> und <text>e-Power-Systeme</text> spezialisier hat und
                 nocha Effizienzexzellenz und Kohlenstoffneutralität in da Energiewirtschaft und im Verkehr
                 schaugt.
@@ -856,7 +873,7 @@
 
               <p id="dutch-content" align="justify" style="display: none;">
                 Momenteel is Dr. Hong Xu een toegewijde
-                <text>onderzoeker</text> en <text>ingenieur</text>, die zich heeft gespecialiseerd in
+                <strong>onderzoeker</strong> en <strong>ingenieur</strong>, die zich heeft gespecialiseerd in
                 <text>hernieuwbare energie</text> en <text>e-Power-systemen</text> en streeft naar
                 efficiëntie-excellentie en
                 koolstofneutraliteit in de sectoren energie en transport.
@@ -929,7 +946,7 @@
 
               <p id="luxembourgish-content" align="justify" style="display: none;">
                 Derzäit ass Dr. Hong Xu e engagéierten
-                <text>Fuerscher</text> an <text>Ingenieur</text>, deen sech op
+                <strong>Fuerscher</strong> an <strong>Ingenieur</strong>, deen sech op
                 <text>erneierbar Energie</text> an <text>e-Power-Systemer</text> spezialiséiert huet an
                 no
                 Effizienzexzellenz an
@@ -1003,6 +1020,323 @@
                 Währungs-Venture-Capital-Firma an och an engem
                 féierendem
                 Währungsdokumentfirma zu China.
+              </p>
+
+
+              <p id="danish-content" align="justify" style="display: none;">
+                På nuværende tidspunkt er Dr. Hong Xu en engageret
+                <strong>forsker</strong> og <strong>ingeniør</strong>, der specialiserer sig i
+                <text>vedvarende energi</text> og <text>e-power-systemer</text>, og
+                stræber efter
+                effektivitetsekspertise og
+                kulstofneutralitet inden for energi og transport.
+                I de sidste 10 år har han arbejdet sammen med
+                multinationale virksomheder og førende institutioner på den eurasiske kontinent
+                og
+                fremmet teknologiske
+                fremskridt inden for <text>e-mobilitet</text>, <text>ren energi</text> og
+                <text>nye materialer</text>,
+                med <text><span class="no_of_papers"></span> publicerede artikler</text>
+                og
+                <text><span class="no_of_patents"></span> tildelte patenter</text>.
+                Udover sine
+                ingeniørmæssige aktiviteter har han
+                arbejdet sammen med anerkendte organisationer, især Sankt Gallen Symposium,
+                Salzburg Global Seminar, CITIC
+                Værdipapir
+                og Oxford Institut for Energiestudier, og fokuseret på analysen af
+                ren
+                <text>energiekonomier
+                  og -politikker</text> i Asien og
+                Europa. Som en proaktiv bidrager til den internationale udvikling har
+                Dr. Xu fungeret som
+                medlem af
+                ekspertgruppen (GE)
+                ved <text><a href="https://unece.org/" target="_blank">FN's Økonomiske Kommission for
+                    Europa</a></text>
+                (UNECE) i Genève
+                og ledet parallelle sessioner ved <text><a href="https://unfccc.int/" target="_blank">FN's
+                    Klimakonference</a></text>
+                (UNFCCC) i Bonn og arbejdet for <text><a href="https://sdgs.un.org/goals" target="_blank">FN's
+                    Bæredygtighedsmål</a></text>
+                (SDGs) <text>7</text> (Overkommelig energi), <text>9</text>
+                (Industriinnovation)
+                og <text>13</text> (Klimaindsats).
+                <br><br>
+                En videnskabsmand i hjertet, han promoverede i <text>vedvarende energi</text> ved
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></text> i
+                samarbejde med
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institut</a></text> i
+                Schweiz.
+                Tidligere opnåede han
+                en MSc i materialvidenskab fra <text><a href="https://tum.de" target="_blank">TU München</a></text>,
+                hvor han
+                gennemførte praktikophold på <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> og
+                hos <text><a href="https://infineon.com" target="_blank">Infineon</a></text> i Tyskland. Hans passion
+                for
+                effektiv forskning har ført til et langt samarbejde med
+                industriledere inden for
+                brint og brændselsceller, herunder
+                <text>Toyota Motor</text> i Japan
+                og
+                <text>Freudenberg Gruppe</text>
+                i Tyskland. I jagten på tværfaglige horisonter opnåede han en videreuddannelse på <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">University of Cambridge Business School</a></text>
+                og
+                opnåede praktisk erfaring i et dualt
+                valutainvesteringskapitalfirma samt et
+                førende
+                værdipapirfirma i Kina.
+              </p>
+
+
+              <p id="swedish-content" align="justify" style="display: none;">
+                För närvarande är Dr. Hong Xu en engagerad
+                <strong>forskare</strong> och <strong>ingenjör</strong>, som är specialiserad på
+                <text>förnybar energi</text> och <text>e-power-system</text>, och
+                strävar efter
+                effektivitetsexcellens och
+                koldioxidneutralitet inom energi och transport.
+                Under de senaste 10 åren har han arbetat med
+                multinationella företag och ledande institutioner på den eurasiska kontinenten
+                och
+                drivit tekniska
+                framsteg inom områdena <text>e-mobilitet</text>, <text>ren energi</text> och
+                <text>nya material</text>,
+                med <text><span class="no_of_papers"></span> publicerade artiklar</text>
+                och
+                <text><span class="no_of_patents"></span> beviljade patent</text>.
+                Förutom sina
+                ingenjörsaktiviteter har han
+                samarbetat med välkända organisationer, särskilt Sankt Gallen Symposium,
+                Salzburg Global Seminar, CITIC
+                Värdepapper
+                och Oxford Institute for Energy Studies, och fokuserat på analys av
+                ren
+                <text>energi-ekonomier
+                  och -politiker</text> i Asien och
+                Europa. Som en proaktiv bidragsgivare till internationell utveckling har
+                Dr. Xu fungerat som
+                medlem av
+                expertgruppen (GE)
+                vid <text><a href="https://unece.org/" target="_blank">FN:s ekonomiska kommission för
+                    Europa</a></text>
+                (UNECE) i Genève
+                och lett parallella sessioner vid <text><a href="https://unfccc.int/" target="_blank">FN:s
+                    klimatkonferens</a></text>
+                (UNFCCC) i Bonn och arbetat för <text><a href="https://sdgs.un.org/goals" target="_blank">FN:s
+                    hållbarhetsmål</a></text>
+                (SDGs) <text>7</text> (Prisvärd energi), <text>9</text>
+                (Industrinnovationen)
+                och <text>13</text> (Klimatåtgärder).
+                <br><br>
+                En lärd man i hjärtat, han promoverades i <text>förnybar energi</text> vid
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></text> i
+                samarbete med
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institut</a></text> i
+                Schweiz.
+                Tidigare tog han
+                en MSc i materialvetenskap från <text><a href="https://tum.de" target="_blank">TU München</a></text>,
+                där han
+                genomförde praktik på <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> och hos
+                <text><a href="https://infineon.com" target="_blank">Infineon</a></text> i Tyskland. Hans passion för
+                effektiv forskning har lett till långsiktigt
+                samarbete med
+                branschledare inom
+                väte och bränsleceller, inklusive
+                <text>Toyota Motor</text> i Japan
+                och
+                <text>Freudenberg Gruppen</text>
+                i Tyskland. I jakten på tvärvetenskapliga horisonter tog han vidareutbildning vid <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">University of Cambridge Business School</a></text>
+                och
+                samlade praktisk erfarenhet i ett dualt
+                valutaföretag samt ett
+                ledande
+                värdepappersföretag i Kina.
+              </p>
+
+
+              <p id="finnish-content" align="justify" style="display: none;">
+                Tällä hetkellä tohtori Hong Xu on omistautunut
+                <strong>tutkija</strong> ja <strong>insinööri</strong>, joka on erikoistunut
+                <text>uusiutuvaan energiaan</text> ja <text>e-voimajärjestelmiin</text>, ja
+                pyrkii
+                tehokkuusosaamiseen ja
+                hiilineutraaliuteen energian ja liikenteen alueilla.
+                Viimeisten 10 vuoden aikana hän on työskennellyt
+                monikansallisten yritysten ja johtavien instituutioiden kanssa Euraasian mantereella
+                ja
+                edistänyt teknisiä
+                edistysaskeleita alueilla kuten <text>e-mobiilisuus</text>, <text>puhtaat energiat</text> ja
+                <text>uudet materiaalit</text>,
+                julkaisemalla <text><span class="no_of_papers"></span> artikkeleita</text>
+                ja
+                saamalla <text><span class="no_of_patents"></span> myönnettyä patenttia</text>.
+                Insinööriaktiviteettiensa lisäksi hän on
+                tehnyt yhteistyötä tunnetuiden organisaatioiden kanssa, erityisesti Sankt Gallen Symposiumin,
+                Salzburg Global Seminarin, CITIC
+                Arvopaperin
+                ja Oxfordin energiatutkimuslaitoksen kanssa, keskittyen puhtaan
+                <text>energiaekonomian ja -politiikan</text> analysointiin Aasiassa ja
+                Euroopassa. Proaktiivisena kansainvälisen kehityksen edistäjänä tohtori Xu on toiminut
+                asiantuntijaryhmän (GE)
+                jäsenenä <text><a href="https://unece.org/" target="_blank">YK:n Euroopan talouskomiteassa</a></text>
+                (UNECE) Genevessä
+                ja johtanut rinnakkaisistuntoja <text><a href="https://unfccc.int/" target="_blank">YK:n
+                    ilmastokokouksessa</a></text>
+                (UNFCCC) Bonnissa, työskentellen <text><a href="https://sdgs.un.org/goals" target="_blank">YK:n kestävän
+                    kehityksen
+                    tavoitteiden</a></text>
+                (SDGs) hyväksi, erityisesti <text>7</text> (Edullinen energia), <text>9</text>
+                (Teollisuusinnovaatio)
+                ja <text>13</text> (Ilmasto toimenpiteet).
+                <br><br>
+                Sydämeltään oppinut, hän väitteli <text>uusiutuvasta energiasta</text>
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zürichissä</a></text> yhteistyössä
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Instituutin</a></text> kanssa Sveitsissä.
+                Aiemmin hän suoritti
+                maisterin tutkinnon materiaalitieteessä <text><a href="https://tum.de" target="_blank">TU
+                    Münchenissä</a></text>,
+                jossa hän teki harjoittelut <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text>
+                -laitoksessa ja
+                <text><a href="https://infineon.com" target="_blank">Infineonissa</a></text> Saksassa. Hänen intohimonsa
+                vaikuttavaan tutkimukseen on johtanut pitkäaikaiseen yhteistyöhön
+                teollisuuden johtavien yritysten kanssa,
+                erityisesti vety- ja polttokennoteknologioiden alalla, kuten
+                <text>Toyota Motor</text> Japanissa
+                ja
+                <text>Freudenberg Group</text>
+                Saksassa. Monitieteisten horisonttien etsimisessä hän sai jatkokoulutuksen <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridgen yliopiston liikekoulussa</a></text> ja
+                hankki käytännön kokemusta kaksikielisessä
+                valuutta-riskipääomayrityksessä sekä johtavassa
+                arvopaperiyrityksessä Kiinassa.
+              </p>
+
+              <p id="norway-content" align="justify" style="display: none;">
+                For øyeblikket er Dr. Hong Xu en engasjert
+                <strong>forsker</strong> og <strong>ingeniør</strong>, som er spesialisert på
+                <text>fornybar energi</text> og <text>e-strømsystemer</text>, og
+                streber etter
+                effektivitetseksellens og
+                karbonnøytralitet innen energi og transport.
+                De siste 10 årene har han samarbeidet med
+                multinasjonale selskaper og ledende institusjoner på den eurasiske kontinentet
+                og
+                drevet tekniske
+                fremskritt innen områdene <text>e-mobilitet</text>, <text>ren energi</text> og
+                <text>nye materialer</text>,
+                med <text><span class="no_of_papers"></span> publiserte artikler</text>
+                og
+                <text><span class="no_of_patents"></span> tildelte patenter</text>.
+                I tillegg til sine
+                ingeniøraktiviteter har han
+                samarbeidet med anerkjente organisasjoner, spesielt Sankt Gallen Symposium,
+                Salzburg Global Seminar, CITIC
+                Verdipapir
+                og Oxford Institute for Energy Studies, og har fokusert på analysen av
+                ren
+                <text>energiekonomier
+                  og -politikker</text> i Asia og
+                Europa. Som en proaktiv bidragsyter til internasjonal utvikling har
+                Dr. Xu fungert som
+                medlem av
+                ekspertgruppen (GE)
+                ved <text><a href="https://unece.org/" target="_blank">FN-kommisjonen for
+                    økonomi i Europa</a></text>
+                (UNECE) i Genève
+                og ledet parallelle sesjoner ved <text><a href="https://unfccc.int/"
+                    target="_blank">FN-klimakonferansen</a></text>
+                (UNFCCC) i Bonn og jobbet for <text><a href="https://sdgs.un.org/goals" target="_blank">FN’s
+                    bærekraftsmål</a></text>
+                (SDGs) <text>7</text> (Rimelig energi), <text>9</text>
+                (Industrinnovasjon)
+                og <text>13</text> (Klimatiltak).
+                <br><br>
+                En lærde i hjertet, han avla doktorgrad i <text>fornybar energi</text> ved
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></text> i samarbeid med
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institutt</a></text> i Sveits.
+                Før dette tok han
+                en MSc i materialvitenskap fra <text><a href="https://tum.de" target="_blank">TU München</a></text>,
+                hvor han gjorde
+                praksis ved <text><a href="https://xfel.eu" target="_blank">European XFEL</a></text> og hos <text><a
+                    href="https://infineon.com" target="_blank">Infineon</a></text> i Tyskland. Hans lidenskap for
+                effektiv forskning har ført til langvarig
+                samarbeid med
+                bransjeledere innen
+                hydrogen og brenselceller, inkludert
+                <text>Toyota Motor</text> i Japan
+                og
+                <text>Freudenberg Group</text>
+                i Tyskland. I jakten på tverrfaglige horisonter fikk han videreutdanning ved <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge University Business School</a></text> og
+                samlet praktisk erfaring i et tospråklig
+                venturekapital-selskap samt i et ledende
+                verdipapirselskap i Kina.
+              </p>
+
+
+              <p id="iceland-content" align="justify" style="display: none;">
+                Á þessari stundu er Dr. Hong Xu ákafur
+                <strong>rannsakandi</strong> og <strong>verkfræðingur</strong>, sem sérhæfir sig í
+                <text>endurnýjanlegri orku</text> og <text>e-orkukerfum</text>, og
+                stefnir að
+                árangursríku og
+                kolefnishlutlausri orku- og samgöngumiðlun.
+                Á síðustu 10 árum hefur hann unnið með
+                alþjóðlegum fyrirtækjum og leiðandi stofnunum á evrasísku meginlandi
+                og
+                stuðlað að tækniþróun á sviðum eins og <text>e-hreyfanleiki</text>, <text>hrein orka</text> og
+                <text>ný efni</text>,
+                með <text><span class="no_of_papers"></span> birtingum á greinum</text>
+                og
+                <text><span class="no_of_patents"></span> veittum einkaleyfum</text>.
+                Auk verkfræðilegra verkefna hefur hann
+                unnið með virtum stofnunum, sérstaklega Sankt Gallen Symposium,
+                Salzburg Global Seminar, CITIC
+                verðbréf
+                og Oxford Energy Studies Institute, og einbeitt sér að greiningu á
+                hreinum
+                <text>orkuhagkerfum
+                  og -stefnum</text> í Asíu og
+                Evrópu. Sem virkur þátttakandi í alþjóðlegri þróun hefur
+                Dr. Xu starfað sem
+                meðlimur í
+                sérfræðingahópi (GE)
+                hjá <text><a href="https://unece.org/" target="_blank">Efnahags- og félagsmálanefnd Sameinuðu þjóðanna
+                    fyrir
+                    Evrópu</a></text>
+                (UNECE) í Genf
+                og leitt samhliða fundi á <text><a href="https://unfccc.int/" target="_blank">Loftslagsráðstefnu
+                    Sameinuðu
+                    þjóðanna</a></text>
+                (UNFCCC) í Bonn og unnið að <text><a href="https://sdgs.un.org/goals"
+                    target="_blank">Sjálfbærnimarkmiðum Sameinuðu
+                    þjóðanna</a></text>
+                (SDGs) <text>7</text> (Aðgengileg orka), <text>9</text>
+                (Nýsköpun í iðnaði)
+                og <text>13</text> (Aðgerðir í loftslagsmálum).
+                <br><br>
+                Hann er fræðimaður að hjarta, hann útskrifaðist með doktorsgráðu í <text>endurnýjanlegri orku</text> frá
+                <text><a href="https://ethz.ch/en.html" target="_blank">ETH Zürich</a></text> í samvinnu við
+                <text><a href="https://psi.ch" target="_blank">Paul Scherrer Institute</a></text> í Sviss.
+                Áður en hann lauk gráðu sinni í
+                eðlisfræði, aflaði hann MSc í efnafræði við <text><a href="https://tum.de" target="_blank">TU
+                    München</a></text>, þar
+                sem hann tók þátt í námskeiðum hjá <text><a href="https://xfel.eu" target="_blank">European
+                    XFEL</a></text> og hjá
+                <text><a href="https://infineon.com" target="_blank">Infineon</a></text> í Þýskalandi. Áhugi hans á
+                áhrifaríkri
+                rannsóknum hefur leitt til langtímasamstarfs
+                með leiðandi fyrirtækjum á sviði vetnis og eldsneytisfrumna, þar á meðal
+                <text>Toyota Motor</text> í Japan
+                og
+                <text>Freudenberg Group</text>
+                í Þýskalandi. Á leið sinni til að rannsaka mismunandi fræðasvið fékk hann framhaldsnám við <text><a
+                    href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge University Business School</a></text> og
+                safnaði reynslu í tvítypum
+                áhættufjárfestingarfyrirtæki og í leiðandi verðbréfa fyrirtæki í Kína.
               </p>
 
               <p style="text-align:left;">
@@ -1338,7 +1672,7 @@
     <script>
       function changeLanguage() {
         // 隐藏所有语言的内容
-        var languages = ["hochdeutsch-content", "luxembourgish-content", "dutch-content", "niederdeutsch-content", "wienerisch-content", "bairisch-content", "zueritueetsch-content", "alte-hochdeutsch-content", "alte-niederdeutsch-content"];
+        var languages = ["hochdeutsch-content", "luxembourgish-content", "dutch-content", "niederdeutsch-content", "wienerisch-content", "bairisch-content", "zueritueetsch-content", "alte-hochdeutsch-content", "alte-niederdeutsch-content", "danish-content", "finnish-content", "norway-content", "iceland-content", "swedish-content"];
         languages.forEach(function (language) {
           document.getElementById(language).style.display = "none";
         });
