@@ -345,15 +345,26 @@
                                                                 text-align: center; /* 新增 */
                                                                 text-align-last: center; /* 确保选中的选项居中 */
                                                               " onchange="changeLanguage()">
-                <option value="russian" selected>Русский / Ещё</option>
-                <option value="old-russian">Древнерусский</option>
-                <option value="belarusian">Беларускі</option>
-                <option value="ukrainian">Украї́нська</option>
-                <option value="bulgarian">Българска</option>
-                <option value="serbian">Српски језик</option>
-                <option value="tajik">Тоҷикӣ</option>
-                <option value="kazakh">Қазақ</option>
-                <option value="mongol">Монгол</option>
+                <optgroup label="Славянские языки">
+                  <option value="russian" selected>Русский / Ещё</option>
+                  <option value="old-russian">Древнерусский</option>
+                  <option value="belarusian">Беларускі</option>
+                  <option value="ukrainian">Украї́нська</option>
+                  <option value="bulgarian">Българска</option>
+                  <option value="serbian">Српски језик</option>
+                </optgroup>
+
+                <optgroup label="Иранские языки">
+                  <option value="tajik">Тоҷикӣ</option>
+                </optgroup>
+
+                <optgroup label="Тюркские языки">
+                  <option value="kazakh">Қазақ</option>
+                </optgroup>
+
+                <optgroup label="Монгольские языки">
+                  <option value="mongol">Монгол</option>
+                </optgroup>
 
 
               </select>
