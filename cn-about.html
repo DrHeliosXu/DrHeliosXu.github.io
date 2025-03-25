@@ -1995,7 +1995,7 @@
 
         // 根据设备宽度调整 maxHeight
         const isMobile = window.matchMedia('(max-width: 768px)').matches;
-        const adjustedMaxHeight = isMobile ? `${parseInt(maxHeight, 10) * 2}px` : maxHeight;
+        const adjustedMaxHeight = isMobile ? `${parseInt(maxHeight, 10) * 1.5}px` : maxHeight;
 
         // 更新样式
         storyContainer.style.maxHeight = adjustedMaxHeight;
