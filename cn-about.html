@@ -199,7 +199,7 @@
       background-color: #ffffff;
       transition: background-color 0.3s;
       display: inline-block;
-      width: 30px;
+      width: 30.5px;
       /* 调整宽度，使按钮更紧凑 */
       height: 25px;
       /* 设置高度为25px */
@@ -226,6 +226,65 @@
     }
   </style>
 
+  <style>
+    /* 默认样式（电脑端） */
+    .adjustable-select {
+      width: 100px;
+      height: 25px;
+      margin-left: 5px;
+      font-size: 14px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-align-last: center;
+      position: relative;
+      top: 0px;
+    }
+
+
+    #font-selector {
+      width: 60px;
+    }
+
+    #character-direction-selector {
+      width: 88px;
+      height: 25px;
+      margin-left: 5px;
+      border-radius: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-align-last: center;
+    }
+
+    .adjustable-button {
+      height: 25px;
+      font-size: 15px;
+      border-radius: 0;
+      border: 1px solid #ccc;
+      position: relative;
+      top: 1px;
+    }
+
+    /* 手机端样式 */
+    @media (max-width: 768px) {
+      .adjustable-select {
+        top: 9px;
+      }
+
+      #character-direction-selector {
+        top: -1px;
+      }
+
+      .adjustable-button {
+        top: 0px;
+      }
+
+      #huanhang {
+        display: block !important;
+        /* 强制覆盖 */
+      }
+    }
+  </style>
 
   <style>
     #story-container {
@@ -241,15 +300,8 @@
       margin: 0;
     }
 
-    #character-direction-selector {
-      width: 60px;
-      height: 25px;
-      margin-left: 5px;
-      border-radius: 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      text-align-last: center;
-    }
+
+
 
     /* 竖排样式 */
     .vertical-layout {
@@ -447,7 +499,7 @@
                     alt="flag" style="height:15px; margin-right:2px;position:relative; top:-1px;">繁
                 </a>
                 <!-- 选择语言的下拉框 -->
-                <select id="languages-2" name="languages" style="width: auto;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
+                <select id="languages-2" name="languages" style="width: auto;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); text-align: center; /* 新增 */
                     text-align-last: center; /* 确保选中的选项居中 */" onchange="handleLanguageChange(this)">
                   <option value="cn-about.html" selected>中文</option>
                   <option value="jp-about.html">日本語</option>
@@ -576,40 +628,26 @@
             </p>
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               <text id="jianjie" style="font-size: 1em;">简 介</text>
-              <div>
 
-
-                <!-- 在select元素中切换各种不同语言的内容 -->
-                <select id="languages-4" name="languages"
-                  style="width: auto; height: 25px;  align-items: center; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                    text-align: center; /* 新增 */
-                                                                                  text-align-last: center; /* 确保选中的选项居中 */" onchange="changeLanguage()">
+              <div style="font-size: 1em;">
+                <!-- 语言选择 -->
+                <select id="languages-4" name="languages" class="adjustable-select" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
-                  <!-- <option value="chinese">汉/普通话</option> -->
                   <option value="old-chinese">汉/文言文</option>
                   <option value="canton">汉/粤语</option>
-                  <!-- <option value="huoxing">中/火星文</option> -->
-                  <!-- <option value="blind">中/盲文</option> -->
                   <option value="korean">朝/조선어</option>
                   <option value="tibetan">藏/བོད་མི</option>
                   <option value="mongol-traditional">蒙/ᠮᠣᠩᠭᠣᠯ</option>
-                  <!-- <option value="mongol-cyrillic">蒙/Монгол</option> -->
                   <option value="uyghur">维/ئۇيغۇر</option>
                   <option value="kazakh">哈/Қазақ</option>
                   <option value="tajik">塔/Тоҷикӣ</option>
                   <option value="yi">彝/ꆈꌠꁱꂷ</option>
                   <option value="hmong">苗/Hmong</option>
                   <option value="vahcuengh">壮/Vahcuengh</option>
-
                 </select>
-                <!-- 在select元素中切换各种不同的字体 -->
-                <select id="font-selector" name="font-selector" style="
-                                          width: 60px; height: 25px;  align-items: center; 
-                                          margin-left: 5px;
-                                          border-radius: 0;
-                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                          text-align: center; /* 新增 */
-                                          text-align-last: center; /* 确保选中的选项居中 */
-                                          ">
+
+                <!-- 字体选择 -->
+                <select id="font-selector" name="font-selector" class="adjustable-select">
                   <option value="default" data-size="14px" selected>字体</option>
                   <option value="HanYiChenTiJiaGuWen" data-size="26px">商/甲骨文</option>
                   <option value="YiShanBeiZhuanTi" data-size="26px">秦/小篆</option>
@@ -623,21 +661,18 @@
                   <option value="ShangShouHongZhiShouXieTi" data-size="26px">现代/手写</option>
                 </select>
 
-                <!-- 在select元素中切换竖排横排 -->
-                <select id="character-direction-selector" name="character-direction-selector" style="width: 60px; height: 25px;  align-items: center; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0,
-                                  0, 0.1);
-                                  text-align: center; text-align-last: center;" onchange="changeTextLayout()">
-                  <option value="horizontal-layout" selected>横排</option>
-                  <option value="vertical-layout">竖排</option>
+                <br id="huanhang" style="display: none;">
+
+                <!-- 方向选择 -->
+                <select id="character-direction-selector" name="character-direction-selector" class="adjustable-select"
+                  onchange="changeTextLayout()">
+                  <option value="horizontal-layout" selected>现代横排</option>
+                  <option value="vertical-layout">古典竖排</option>
                 </select>
 
-                <!-- 调整字体大小 -->
-                <!-- 调整字体大小 -->
-                <button id="increase-font" onclick="changeFontSize(1)"
-                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A+</button>
-                <button id="decrease-font" onclick="changeFontSize(-1)"
-                  style="height: 25px; font-size: 15px; border-radius: 0; border: 1px solid #ccc; align-items: center; box-sizing: border-box; position: relative; top: 1px;">A-</button>
-
+                <!-- 字体调整 -->
+                <button id="increase-font" onclick="changeFontSize(1)" class="adjustable-button">A+</button>
+                <button id="decrease-font" onclick="changeFontSize(-1)" class="adjustable-button">A-</button>
               </div>
             </h1>
             <hr>
