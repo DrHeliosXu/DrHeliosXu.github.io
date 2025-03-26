@@ -1733,6 +1733,7 @@
 
     <script>
       function changeLanguage() {
+
         const selectedLanguage = document.getElementById('languages-4').value;
 
         // 隐藏所有内容部分
@@ -1802,6 +1803,8 @@
             content.style.fontSize = "";    // 恢复默认字体大小
             content.style.fontWeight = "";  // 恢复字体粗细
           }
+          changeFontSize(1);
+          changeFontSize(-1);
         });
       }
 
@@ -1820,8 +1823,7 @@
         const selectedLanguage = document.getElementById('languages-4').value;
         const storyContainer = document.querySelector('.story');
         const defaultFontSize = defaultFontSizes[selectedLanguage] || "14px";
-        changeFontSize(1);
-        changeFontSize(-1);
+
         storyContainer.querySelectorAll('*').forEach(element => {
           element.style.fontSize = defaultFontSize;
 
@@ -1831,6 +1833,9 @@
           }
         });
       }
+
+
+
     </script>
 
     <script>
