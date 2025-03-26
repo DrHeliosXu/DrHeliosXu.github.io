@@ -1785,8 +1785,11 @@
         } else if (selectedLanguage === "mongol-traditional") {
           directionSelector.disabled = false;
           directionSelector.value = "vertical-layout";
+          // 在这里可以强制应用竖排布局
+          document.getElementById('story-container').classList.add('vertical-layout');
         } else {
           directionSelector.value = "horizontal-layout";
+          document.getElementById('story-container').classList.add('horizontal-layout');
         }
 
         // 重置字体选择器为默认选项
