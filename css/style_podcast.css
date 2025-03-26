@@ -162,4 +162,12 @@
   #en-subtitles {
     width: 60%; /* 手机端英文字幕宽度 */
   }
+
+#captions-container  {
+min-height: 40px;
+}
+
+.mejs__controls {
+  display: block;
+  background: none !important;
 }

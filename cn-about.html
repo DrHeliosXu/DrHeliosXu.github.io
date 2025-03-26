@@ -2195,100 +2195,10 @@
     <script
       src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
     <script src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
-    <script src="./js/script_podcast.js"></script>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/vtt.js@0.14.1/dist/vtt.min.js"></script>
-    <script>
-      // 新增全局变量存储字幕数据
-      let cnCues = []; // 中文字幕数组
-      let enCues = []; // 英文字幕数组
-      const audioPlayer = document.querySelector('audio');
-      const cnSubtitle = document.getElementById('cn-subtitles');
-      const enSubtitle = document.getElementById('en-subtitles');
 
-      // 加载并解析VTT文件
-      async function loadSubtitles(lang) {
-        try {
-          const response = await fetch(`video/Xu-Expertise-Interview-${lang}.vtt`);
-          const vttText = await response.text();
-
-          // 手动解析VTT文本（替代VTTCueList）
-          const cues = parseVtt(vttText);
-          return lang === 'cn' ? cues : lang === 'en' ? cues : [];
-        } catch (error) {
-          console.error('字幕加载失败:', error);
-          return [];
-        }
-      }
-
-      // VTT解析函数
-      function parseVtt(text) {
-        const lines = text.split('\n').filter(line => line.trim() !== '');
-        const cues = [];
-        let currentCue = null;
-
-        lines.forEach((line, index) => {
-          if (line.startsWith('WEBVTT')) return;
-
-          if (line.startsWith('00:00:00.000')) return; // 跳过头部
-
-          // 跳过索引数字行
-          if (/^\d+$/.test(line) && currentCue === null) return; // 跳过索引行，但保留时间轴和文本
-
-          if (/^\d{2}:\d{2}:\d{2}.\d{3}/.test(line)) {
-            // 时间轴行（示例：00:00:05.000 --> 00:00:08.000）
-            const [start, end] = line.split(' --> ').map(t => t.replace(',', '.'));
-            currentCue = { start: parseTime(start), end: parseTime(end), text: '' };
-          } else if (currentCue) {
-            // 字幕文本行
-            currentCue.text += (currentCue.text ? '' : '') + line;
-
-            // 如果是最后一行或下一行为时间轴
-            if (index === lines.length - 1 || /^\d{2}:\d{2}:\d{2}.\d{3}/.test(lines[index + 1])) {
-              cues.push(currentCue);
-              currentCue = null;
-            }
-          }
-        });
-
-        return cues;
-      }
-
-      // 时间字符串转秒数
-      function parseTime(timeStr) {
-        const [h, m, s] = timeStr.split(':').map(Number);
-        return h * 3600 + m * 60 + s;
-      }
-
-      // 初始化字幕
-      async function initSubtitles() {
-        cnCues = await loadSubtitles('cn');
-        enCues = await loadSubtitles('en');
-
-        // 初始更新
-        updateSubtitles(audioPlayer.currentTime);
-      }
-
-      // 更新字幕显示
-      function updateSubtitles(currentTime) {
-        // 查找当前生效的中文字幕
-        const activeCn = cnCues.find(cue => currentTime >= cue.start && currentTime <= cue.end);
-        cnSubtitle.textContent = activeCn ? activeCn.text : ' ';
-
-        // 查找当前生效的英文字幕
-        const activeEn = enCues.find(cue => currentTime >= cue.start && currentTime <= cue.end);
-        enSubtitle.textContent = activeEn ? activeEn.text : ' ';
-      }
-
-      // 绑定事件
-      audioPlayer.addEventListener('timeupdate', () => updateSubtitles(audioPlayer.currentTime));
-      document.addEventListener('DOMContentLoaded', initSubtitles);
-    </script>
-
-
+    <script src="./js/script_podcast.js"></script>
   </div>
 </body>
 
