@@ -1,0 +1,165 @@
+.podcast-container {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.mejs__container {
+  margin-top: 10px;
+}
+.mejs__controls {
+  display: block;
+}
+.mejs__controls, .mejs__container {
+  background: none !important;
+}
+.mejs__time {
+  color: #777;
+  font-weight: normal;
+}
+
+.podcast {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 3px;
+}
+.podcast__episode_title {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  color: #333;
+}
+.podcast__title {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #555;
+}
+.podcast__title i {
+  font-style: normal;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+.podcast__meta {
+  background: #ddd;
+  margin: 40px -30px -30px -30px;
+  padding: 0 30px 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.podcast__meta .artwork {
+  margin-right: 0;
+  transform: translateY(-70px);
+}
+.podcast__meta .artwork > img {
+  border-radius: 3px;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: -80px;
+}
+
+.mejs-prepended-buttons {
+  display: flex;
+}
+
+.mejs-appended-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mejs__play > button {
+  background: transparent url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg") no-repeat;
+}
+
+.mejs__pause > button {
+  background: transparent url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg") no-repeat;
+  background-position: -20px 0;
+}
+
+.mejs__mute > button {
+  background: transparent url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg") no-repeat;
+  background-position: -60px 0;
+}
+
+.mejs__unmute > button {
+  background: transparent url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg") no-repeat;
+  background-position: -40px 0;
+}
+
+.mejs-skip-back-button > button,
+.mejs__skip-back-button > button {
+  background: transparent url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/skipback.svg");
+}
+
+.mejs-jump-forward-button > button, .mejs__jump-forward-button > button {
+  background: url("https://cdn.jsdelivr.net/gh/ivorpad/images-src/jumpforward.svg") no-repeat;
+}
+
+.mejs__button > button {
+  color: #555;
+}
+
+.mejs__horizontal-volume-slider {
+  display: none !important;
+}
+
+
+.subtitle-track {
+  width: 80%;
+  min-height: 20px;
+  /* background: linear-gradient(transparent 12px, #989898 12px); */
+  color: #f83d04;
+  text-align: left;
+  line-height: 1em;
+  margin-top: 30px;
+  margin-bottom:10px;
+  transition: all 0.3s ease;
+  position: relative; /* 使用相对定位 */
+}
+
+#cn-subtitles {
+  /* 为中文字幕设置位置 */
+  width: 90%; /* PC端中文字幕宽度 */
+  bottom: 3px; /* 根据需要调整 */
+    color: #ff7300; /* 中文字幕的颜色 */
+  font-size: 14px; /* 中文字幕的字体大小 */
+}
+
+#en-subtitles {
+  /* 为英文字幕设置位置 */
+   width: 70%; /* PC端英文字幕宽度 */
+  bottom: 2px; /* 使其稍微低于中文字幕 */
+    color: #383838; /* 英文字幕的颜色 */
+  font-size: 14px; /* 英文字幕的字体大小 */
+}
+
+/* 双语字幕间隔 */
+.subtitle-track:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* 保证容器适当布局 */
+.captions-container {
+  position: relative;
+  min-height: 20px; /* 设置最小高度，根据需要调整 */
+  height: auto;  /* 保证容器高度根据内容调整 */
+}
+
+/* 手机端样式（最大宽度为768px，适用于手机、平板等设备） */
+@media (max-width: 768px) {
+  /* 手机端中文字幕 */
+  #cn-subtitles {
+    width: 90%; /* 手机端中文字幕宽度 */
+  }
+
+  /* 手机端英文字幕 */
+  #en-subtitles {
+    width: 60%; /* 手机端英文字幕宽度 */
+  }
+}

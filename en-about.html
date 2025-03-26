@@ -31,6 +31,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
 
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css'>
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css'>
+  <link rel='stylesheet'
+    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
+  <link rel="stylesheet" href="./css/style_podcast.css">
+
 
   <style>
     body {
@@ -335,6 +344,7 @@
               <select id="languages-4" name="languages" style="
                                                                 width:auto;
                                                                 height: 25px;
+                                                                 font-size: 14px;
                                                                 margin-left: 5px;
                                                                 border-radius: 0;
                                                                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -834,6 +844,39 @@
               </div>
             </div>
 
+
+            <br>
+            <h1 class="mb-4">
+              Podcast
+            </h1>
+            <hr>
+            <div class="podcast-container">
+              <div class="podcast">
+                <h4 class="podcast__episode_title">DeepDive : Hong's Renewable Horizons<br>
+                  <h5>An Inspiring Journey
+                    to Sustainable
+                    Innovation
+                  </h5>
+                </h4>
+                <h5 class="podcast__title">
+                  deepdive.fm
+                  <i> | </i> <i>Episode 128</i> <i> | </i> <i>2025</i>
+                </h5>
+
+                <div class="podcast__meta">
+                  <audio controls width="100%">
+                    <source src="video/Xu_Expertise_Interview.wav">
+                    Your browser does not support the audio tag.
+                  </audio>
+                  <a href="#" class="artwork">
+                    <img src="images/podcast.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <br>
+
+
             <div class="container">
 
 
@@ -1169,6 +1212,15 @@
         document.getElementById(selectedLanguage + "-content").style.display = "block";
       }
     </script>
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
+    <script src="./js/script_podcast.js"></script>
+
 
   </div>
 </body>
