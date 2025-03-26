@@ -162,6 +162,32 @@
   #en-subtitles {
     width: 60%; /* 手机端英文字幕宽度 */
   }
+}
+
+/* 针对手机端（最大宽度768px） */
+@media (max-width: 768px) {
+  .subtitle-track {
+    min-height: 60px; /* 更小的高度适应手机端 */
+    font-size: 12px; /* 可选：减少字体大小以适配小屏 */
+  }
+}
+
+/* 针对平板或小屏幕笔记本（最大宽度1024px） */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .subtitle-track {
+    min-height: 35px; /* 平板端高度适中 */
+    font-size: 13px; /* 可选：调整字体大小 */
+  }
+}
+
+/* 针对大屏幕（宽度大于1024px） */
+@media (min-width: 1025px) {
+  .subtitle-track {
+    min-height: 20px; /* 大屏幕更大的高度 */
+    font-size: 14px; /* 可选：增加字体大小以适配大屏 */
+  }
+}
+
 
 #captions-container  {
 min-height: 40px;
