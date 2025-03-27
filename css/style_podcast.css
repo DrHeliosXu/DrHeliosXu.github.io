@@ -191,9 +191,12 @@
 
 #captions-container  {
 min-height: 40px;
+z-index: 1000; /* 确保字幕容器位于最上层 */
 }
 
 .mejs__controls {
   display: block;
   background: none !important;
 }
+
+

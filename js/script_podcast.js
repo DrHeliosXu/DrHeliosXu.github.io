@@ -100,9 +100,16 @@ function parseTime(timeStr) {
 }
 
 // 初始化字幕
+// 获取 <div> 元素中的内容
+const lang_1 = document.getElementById('cn-subtitles').textContent.trim();
+const lang_2 = document.getElementById('en-subtitles').textContent.trim();
+// 输出到控制台（可选）
+console.log('Language 1:', lang_1);
+console.log('Language 2:', lang_2);
+
 async function initSubtitles() {
-  cnCues = await loadSubtitles('cn');
-  enCues = await loadSubtitles('en');
+  cnCues = await loadSubtitles(lang_1);
+  enCues = await loadSubtitles(lang_2);
   updateSubtitles(audioPlayer.currentTime);
 }
 
