@@ -352,7 +352,9 @@ jQuery(document).ready(function($) {
     russian: { date: { day: 'numeric', month: 'long', year: 'numeric' }, separator: ' - ' },
     japanese: { date: { year: 'numeric', month: 'numeric', day: 'numeric' }, separator: ' - ' },
     korean: { date: { year: 'numeric', month: 'numeric', day: 'numeric' }, separator: ' - ' },
-    arabic: { date: { day: 'numeric', month: 'long', year: 'numeric' }, separator: ' - ' } // 新增阿拉伯语配置
+    arabic: { date: { day: 'numeric', month: 'long', year: 'numeric' }, separator: ' - ' },
+    thai_gregorian: { date: { day: 'numeric', month: 'long', year: 'numeric' }, separator: ' - ' }, // 公历
+    thai_buddhist: { date: { day: 'numeric', month: 'long', year: 'numeric' }, separator: ' - ' }  // 佛历
   };
 
   const locales = {
@@ -365,14 +367,16 @@ jQuery(document).ready(function($) {
     russian: 'ru-RU',
     japanese: 'ja-JP',
     korean: 'ko-KR',
-    arabic: 'ar-SA' // 新增阿拉伯语区域
+    arabic: 'ar-SA',
+    thai_gregorian: 'th-TH',
+    thai_buddhist: 'th-TH-u-ca-buddhist' // 使用泰国佛教历
   };
 
   document.querySelectorAll('[class*="currentDateInLang"]').forEach(span => {
     const lang = span.getAttribute('language');
     const now = new Date();
     const config = formatMap[lang];
-    
+
     // RTL排版支持
     if(lang === 'arabic') {
       span.style.direction = 'rtl';
@@ -381,8 +385,7 @@ jQuery(document).ready(function($) {
 
     // 日期格式化
     let dateStr = now.toLocaleDateString(locales[lang], config.date);
-    
-	
+
     // 特殊语言调整
     switch(lang) {
       case 'chinese':
@@ -394,23 +397,26 @@ jQuery(document).ready(function($) {
       case 'korean':
         dateStr = dateStr.replace(/(\d+)\. (\d+)\. (\d+)\./, '$1년 $2월 $3일');
         break;
-      case 'arabic': // 阿拉伯语数字修正
+      case 'arabic':
         dateStr = dateStr.replace(/،/g, ' - '); // 替换阿拉伯语逗号
+        break;
+      case 'thai_buddhist': 
+        const buddhistYear = now.getFullYear() + 543;
+        dateStr = dateStr.replace(/\d{4}/, buddhistYear); // 替换公历为佛历
         break;
     }
 
     // 自定义日期格式
     let dateParts = now.toLocaleDateString(locales[lang], config.date).split(' ');
-    if(lang === 'english') dateParts = [dateParts[0], dateParts[1], dateParts[2]]; // 调整英语顺序
-    //if(lang === 'german') dateParts[0] = dateParts[0].replace('.', ''); // 去除德语日期点号
-	if(lang === 'german') dateParts[1] = dateParts[1].replace('.', ''); // 去除德语日期点号
+    if(lang === 'english') dateParts = [dateParts[0], dateParts[1], dateParts[2]];
+    if(lang === 'german') dateParts[1] = dateParts[1].replace('.', ''); 
 
     // 星期格式化
     const weekdayStr = now.toLocaleString(locales[lang], { weekday: 'long' });
-    
+
     // 最终组合
     let finalStr = `${dateStr}${config.separator}${weekdayStr}`;
-    
+
     // 西班牙语优化
     if(lang === 'spanish') {
       finalStr = finalStr.replace(' de ', ' ');
@@ -429,6 +435,7 @@ jQuery(document).ready(function($) {
   const zodiacConfig = {
     formats: {
       en: { names: ['Capricorn', 'Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius'] },
+	  th: { names: ['ราศีมกร', 'ราศีกุมภ์', 'ราศีมีน', 'ราศีเมษ', 'ราศีพฤษภ', 'เราศีเมถุน', 'ราศีกรกฎ', 'ราศีสิงห์', 'ราศีกันย์', 'ราศีตุล', '	ราศีพิจิก', 'ราศีธนู'] },
       zh: { names: ['摩羯', '水瓶', '双鱼', '白羊', '金牛', '双子', '巨蟹', '狮子', '处女', '天秤', '天蝎', '射手'] },
       ja: { names: ['山羊', '水瓶', '魚座', '牡羊', '牡牛', '双子', '蟹座', '獅子', '乙女', '天秤', '蠍座', '射手'] },
       ko: { names: ['염소자리', '물병자리', '물고기자리', '양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리'] },
@@ -466,6 +473,7 @@ jQuery(document).ready(function($) {
     german: 'de',
     spanish: 'es',
     russian: 'ru',
+	thai: 'th',
 	arabic: 'ar' // 新增映射
 
   };

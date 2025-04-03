@@ -26,6 +26,13 @@ chinese: [
     "大雪",
     "冬至"
 ],
+
+thai: [
+  "หนาวเล็ก", "หนาวใหญ่", "เริ่มต้นฤดูใบไม้ผลิ", "น้ำค้างฝน", "แมลงตื่นจากจำศีล", "วสันตวิษุวัต", "ชิงหมิง", "ฝนหล่อเลี้ยงต้นกล้า", 
+  "เริ่มต้นฤดูร้อน", "ธัญญาหารสมบูรณ์", "รวงข้าวเริ่มออกรวง", "ครีษมายัน", "ร้อนเล็ก", "ร้อนใหญ่", "เริ่มต้นฤดูใบไม้ร่วง", "สิ้นสุดความร้อน", 
+  "น้ำค้างขาว", "ศารทวิษุวัต", "น้ำค้างเย็น", "น้ำค้างแข็งลง", "เริ่มต้นฤดูหนาว", "หิมะเล็ก", "หิมะใหญ่", "เหมายัน"
+],
+
     english: [
     "The Lesser Cold", "The Greater Cold", "Beginning of Spring", "The Rain Water", "Awakening of Insects", "The Spring Equinox", "The Pure Brightness", "The Grain Rain", "Beginning of Summer", "The Fullness of Grain", "The Grain in Beard", "The Summer Solstice", "The Lesser Heat", "The Greater Heat", "Beginning of Autumn", "End of Heat", "The White Dew", "The Autumn Equinox", "The Cold Dew", "The Frost Descent", "Beginning of Winter", "The Lesser Snow", "The Greater Snow", "The Winter Solstice"
   ],
