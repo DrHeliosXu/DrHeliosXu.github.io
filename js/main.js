@@ -400,9 +400,9 @@ jQuery(document).ready(function($) {
       case 'arabic':
         dateStr = dateStr.replace(/،/g, ' - '); // 替换阿拉伯语逗号
         break;
-      case 'thai_buddhist': 
+      case 'thai_gregorian': 
         const buddhistYear = now.getFullYear() + 543;
-        dateStr = dateStr.replace(/\d{4}/, buddhistYear); // 替换公历为佛历
+          dateStr = dateStr.replace(/\d{4}/, `พ.ศ. ${buddhistYear}`); // 使用模板字符串插入变量
         break;
     }
 
