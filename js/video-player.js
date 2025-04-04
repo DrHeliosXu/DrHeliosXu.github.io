@@ -13,32 +13,31 @@ async function parseVTT(subtitleUrl) {
     if (!response.ok) {
       throw new Error(`Failed to fetch subtitle file: ${response.status} ${response.statusText}`);
     }
-    
+
     const text = await response.text();
-    
+
     // Check if this is a VTT file by looking for WEBVTT header
     const isVTT = text.trim().startsWith('WEBVTT');
-    
-    // If it's not a VTT file, try to parse it as a simple subtitle format
+
     if (!isVTT) {
-      // Fallback handling: try to extract timestamps and text in a more lenient way
+      // Fallback handling for non-VTT subtitles
       const subtitles = [];
       const lines = text.split('\n');
-      
+
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
         if (line.includes('-->')) {
           const times = line.split('-->').map(time => time.trim());
           const startTime = timeToSeconds(times[0]);
           const endTime = timeToSeconds(times[1]);
-          
+
           let subtitleText = '';
           i++;
           while (i < lines.length && lines[i].trim() !== '') {
             subtitleText += lines[i] + '\n';
             i++;
           }
-          
+
           if (subtitleText) {
             subtitles.push({
               startTime,
@@ -48,37 +47,37 @@ async function parseVTT(subtitleUrl) {
           }
         }
       }
-      
+
       console.log(`Parsed ${subtitles.length} subtitles in non-VTT format`);
       return subtitles;
     }
-    
+
     // Standard VTT parsing
     const lines = text.split('\n');
     const subtitles = [];
     let currentSubtitle = null;
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
-      
+
       // Skip empty lines and WEBVTT header
       if (!line || line === 'WEBVTT') continue;
-      
+
       // Check if line contains timestamps (00:00:00.000 --> 00:00:00.000)
       if (line.includes('-->')) {
         const times = line.split('-->').map(time => time.trim());
         const startTime = timeToSeconds(times[0]);
         const endTime = timeToSeconds(times[1]);
-        
+
         currentSubtitle = { startTime, endTime, text: '' };
         subtitles.push(currentSubtitle);
-      } 
+      }
       // If we have a current subtitle and this line isn't a timestamp or cue identifier, it's subtitle text
       else if (currentSubtitle && !line.match(/^\d+$/) && !line.includes(':')) {
         currentSubtitle.text += (currentSubtitle.text ? '\n' : '') + line;
       }
     }
-    
+
     console.log(`Parsed ${subtitles.length} subtitles in VTT format`);
     return subtitles;
   } catch (error) {
@@ -121,13 +120,24 @@ function showSubtitle(subtitles, currentTime) {
   const currentSubtitle = subtitles.find(
     subtitle => currentTime >= subtitle.startTime && currentTime <= subtitle.endTime
   );
-  
+
   if (currentSubtitle) {
-    subtitleDisplay.textContent = currentSubtitle.text;
-    subtitleDisplay.style.visibility = 'visible'; // Use visibility instead of display
+    // Check if the subtitle is a single line or multi-line
+    const subtitleLines = currentSubtitle.text.split('\n');
+    
+    // Clear existing content and create new multi-line subtitle display
+    subtitleDisplay.innerHTML = '';
+    subtitleLines.forEach(line => {
+      const span = document.createElement('span');
+      span.textContent = line;
+      subtitleDisplay.appendChild(span);
+      subtitleDisplay.appendChild(document.createElement('br')); // Add line breaks for multi-line
+    });
+
+    subtitleDisplay.style.visibility = 'visible'; // Show subtitle
   } else {
-    subtitleDisplay.textContent = '\u00A0'; // Non-breaking space to maintain height
-    subtitleDisplay.style.visibility = 'hidden'; // Hide text but keep the space
+    subtitleDisplay.innerHTML = '&nbsp;'; // Non-breaking space for hidden subtitles
+    subtitleDisplay.style.visibility = 'hidden'; // Hide subtitle
   }
 }
 
@@ -139,7 +149,7 @@ function styleSubtitleDisplay() {
   // Position the subtitle display below the video with padding
   // Style the subtitle display to appear below the video (inside the same container)
   subtitleDisplay.style.position = 'absolute';
-  subtitleDisplay.style.bottom = (-105) + 'px'; // 10px below the video
+  subtitleDisplay.style.bottom = (-115) + 'px'; // 10px below the video
   subtitleDisplay.style.left = '0';
   subtitleDisplay.style.width = '100%';
   subtitleDisplay.style.minHeight = '40px';
@@ -147,7 +157,7 @@ function styleSubtitleDisplay() {
   subtitleDisplay.style.color = 'white';
   subtitleDisplay.style.textAlign = 'center';
   subtitleDisplay.style.padding = '5px';
-  subtitleDisplay.style.fontSize = '16px';
+  subtitleDisplay.style.fontSize = '15px';
   subtitleDisplay.style.zIndex = '1001';
   subtitleDisplay.style.textShadow = '1px 1px 1px rgba(0, 0, 0, 0)';
   subtitleDisplay.style.border = 'none';
