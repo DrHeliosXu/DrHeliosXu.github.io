@@ -2,34 +2,6 @@
 // 定义节日字典
 const festivals = {
   solar: [
-      {
-      start: "02-24",
-      end: "02-24",
-      greetings: {
-        en: "Happy Testing Year!",
-        cn: "新年测试快乐！",
-        ja: "新年测试おめでとうございます！",
-        ko: "새해测试 복 많이 받으세요!",
-        de: "Frohes Testing neues Jahr!",
-        es: "¡Feliz Testing Año Nuevo!",
-        fr: "Bonne Testing année!",
-        it: "Buon Testing anno!",
-        ru: "С Testing Новым годом!",
-        ar: "عام سعيد!"
-      },
-      wiki: {
-        en: "https://en.wikipedia.org/wiki/New_Year's_Day",
-        cn: "https://zh.wikipedia.org/wiki/元旦",
-        ja: "https://ja.wikipedia.org/wiki/元日",
-        ko: "https://ko.wikipedia.org/wiki/새해",
-        de: "https://de.wikipedia.org/wiki/Neujahr",
-        es: "https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo",
-        fr: "https://fr.wikipedia.org/wiki/Jour_de_l%27An",
-        it: "https://it.wikipedia.org/wiki/Capodanno",
-        ru: "https://ru.wikipedia.org/wiki/Новый_год",
-        ar: "https://ar.wikipedia.org/wiki/عيد_رأس_السنة"
-      }
-    },
     {
       start: "01-01",
       end: "01-01",
@@ -207,34 +179,34 @@ const festivals = {
     "ar": "https://ar.wikipedia.org/wiki/مهرجان_الفوانيس"
   }
 },
-    {
-      start: "03-12",
-      end: "03-16",
-      greetings: {
-        en: "Happy Birthday!",
-        cn: "祝我生日快乐！",
-        ja: "旧正月おめでとうございます！",
-        ko: "새해 복 많이 받으세요!",
-        de: "Frohes Mondneujahr!",
-        es: "¡Feliz Año Nuevo Lunar!",
-        fr: "Bonne année lunaire!",
-        it: "Buon anno lunare!",
-        ru: "С новым лунным годом!",
-        ar: "عام قمري سعيد!"
-      },
-      wiki: {
-        en: "https://en.wikipedia.org/wiki/Chinese_New_Year",
-        cn: "https://zh.wikipedia.org/wiki/春节",
-        ja: "https://ja.wikipedia.org/wiki/春節",
-        ko: "https://ko.wikipedia.org/wiki/설날",
-        de: "https://de.wikipedia.org/wiki/Chinesisches_Neujahr",
-        es: "https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo_Chino",
-        fr: "https://fr.wikipedia.org/wiki/Nouvel_An_chinois",
-        it: "https://it.wikipedia.org/wiki/Capodanno_cinese",
-        ru: "https://ru.wikipedia.org/wiki/Китайский_Новый_год",
-        ar: "https://ar.wikipedia.org/wiki/عيد_رأس_السنة_الصينية"
-      }
-    },
+    // {
+    //   start: "03-12",
+    //   end: "03-16",
+    //   greetings: {
+    //     en: "Happy Birthday!",
+    //     cn: "祝我生日快乐！",
+    //     ja: "旧正月おめでとうございます！",
+    //     ko: "새해 복 많이 받으세요!",
+    //     de: "Frohes Mondneujahr!",
+    //     es: "¡Feliz Año Nuevo Lunar!",
+    //     fr: "Bonne année lunaire!",
+    //     it: "Buon anno lunare!",
+    //     ru: "С новым лунным годом!",
+    //     ar: "عام قمري سعيد!"
+    //   },
+    //   wiki: {
+    //     en: "https://en.wikipedia.org/wiki/Chinese_New_Year",
+    //     cn: "https://zh.wikipedia.org/wiki/春节",
+    //     ja: "https://ja.wikipedia.org/wiki/春節",
+    //     ko: "https://ko.wikipedia.org/wiki/설날",
+    //     de: "https://de.wikipedia.org/wiki/Chinesisches_Neujahr",
+    //     es: "https://es.wikipedia.org/wiki/A%C3%B1o_Nuevo_Chino",
+    //     fr: "https://fr.wikipedia.org/wiki/Nouvel_An_chinois",
+    //     it: "https://it.wikipedia.org/wiki/Capodanno_cinese",
+    //     ru: "https://ru.wikipedia.org/wiki/Китайский_Новый_год",
+    //     ar: "https://ar.wikipedia.org/wiki/عيد_رأس_السنة_الصينية"
+    //   }
+    // },
     {
       start: "05-05",
       end: "05-08",
