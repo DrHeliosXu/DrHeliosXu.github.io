@@ -410,7 +410,6 @@
                                         </li>
 
                                         <li class="timeline-item">
-
                                             <div class="timeline-info">
                                                 <img src="images/wflags/de.png" alt="flag"
                                                     style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
@@ -428,6 +427,22 @@
                                         <li class="timeline-item">
                                             <div class="timeline-info">
                                                 <img src="images/wflags/jp.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">April 24, 2025</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Visited "Osaka EXPO 2025" in Kansai Region,
+                                                    Japan</h5>
+                                                <p>Theme: Designing Future Society for Our Lives<br>Location: Osaka,
+                                                    Japan /
+                                                    Organizer: Osaka Expo 2025</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
                                                     style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
                                                 <span style="margin-left: 15px; ">April 20, 2025</span>
                                             </div>
@@ -948,11 +963,11 @@
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">DE</div>
                             <div class="trend-contents">
-                                <h2><a href="" target="_blank">2021-Present</a></h2>
+                                <h2><a href="" target="_blank">2021-<span class="web_update_year"></span></a></h2>
                                 <div class="post-meta">
                                     <span class="d-block">Germany, Switzerland, Spain, Italy, Slovenia, Croatia, Bosnia
-                                        and Herzegovina, Serbia, Canada, the United Kingdom,
-                                        Ireland, Gibraltar, Greece, China</span>
+                                        and Herzegovina, Serbia, Canada, England, Scotland, Wales, Ireland, Gibraltar,
+                                        Greece, Japan, Mainland China, Hong Kong, Taiwan</span>
                                     <span class="date-read">R&D Engineer</span>
                                 </div>
                             </div>
@@ -1422,7 +1437,7 @@
                             if (dateMatch && monthMap[dateMatch[1]]) {
                                 const eventDate = new Date(
                                     parseInt(dateMatch[3]),        // 年
-                                    monthMap[dateMatch[1]],       // 月
+                                    monthMap[dateMatch[1]] - 1,       // 月
                                     parseInt(dateMatch[2])        // 日
                                 );
                                 eventDate.setHours(0, 0, 0, 0);  // 标准化时间
