@@ -40,6 +40,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
   <link rel="stylesheet" href="./css/style_podcast.css">
 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/book.css" />
+  <script src="js/modernizr.custom.js"></script>
 
   <style>
     body {
@@ -54,6 +57,26 @@
       font-weight: bold;
     }
   </style>
+
+  <style>
+    .align {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .align>li {
+      flex: 0 0 45%;
+      margin: 2%;
+      box-sizing: border-box;
+    }
+  </style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -369,78 +392,64 @@
             <hr />
             <div class="story">
               <p id="italian-content" align="justify" style="display: block;">
-                Attualmente, il Dr. Hong Xu è un <text>Ricercatore</text> e <text>Ingegnere</text>
-                impegnato, specializzato in
-                <text>Energia Rinnovabile</text> e <text>Sistemi e-Power</text>, che si sforza di
-                raggiungere
-                l'Eccellenza in Efficienza e
-                la Neutralità del Carbonio nei settori dell'Energia e dei Trasporti.
-                Negli ultimi 10 anni, ha lavorato con
-                multinazionali e istituzioni di primo piano in tutto il continente eurasiatico,
-                promuovendo progressi
-                tecnologici nelle
-                industrie della <text>e-Mobilità</text>, dell'<text>Energia Pulita</text> e dei <text>Nuovi
-                  Materiali</text>
-                con <text><span class="no_of_papers"></span> articoli</text> pubblicati e <text><span
-                    class="no_of_patents"></span>
-                  brevetti</text> concessi. Parallelamente alle sue
-                attività ingegneristiche, ha
-                collaborato con organizzazioni rinomate, tra cui il Simposio di St. Gallen, il
-                Seminario
-                Globale di
-                Salisburgo,
-                CITIC
-                Valori mobiliari,
-                e l'Istituto di Oxford per gli studi energetici, concentrandosi sull'analisi
-                dell'economia di
-                <text>Energia Pulita
-                  e Politiche</text>
-                in Asia e
-                in Europa. Come contributore proattivo allo sviluppo internazionale, il Dr. Xu è
-                stato
-                membro del Gruppo
-                di Esperti (GE) presso
-                la <text><a href="https://unece.org/" target="_blank">Commissione Economica delle
-                    Nazioni Unite
-                    per l'Europa</a></text> (UNECE) a Ginevra, e ha presieduto sessioni parallele
-                alla
-                <text><a href="https://unfccc.int/" target="_blank">Conferenza delle Nazioni Unite
-                    sui
-                    Cambiamenti
-                    Climatici</a></text> (UNFCCC) a Bonn,
-                sostenendo gli <text><a href="https://sdgs.un.org/goals" target="_blank">Obiettivi di
-                    Sviluppo
-                    Sostenibile</a></text> (OSS) <text>7</text> (Energia Accessibile),
-                <text>9</text>
-                (Innovazione
-                Industriale),
-                e
-                <text>13</text> (Azione Climatica).
+                All'incrocio tra innovazione e business, il dott. Hong Xu lavora come ingegnere di ricerca e sviluppo
+                (R&D) e consulente
+                MBA,
+                specializzato in energie rinnovabili e materiali innovativi, impegnato nell’eccellenza dell’efficienza
+                energetica e
+                nella neutralità carbonica. Negli ultimi dieci anni, ha collaborato con aziende multinazionali e
+                istituzioni leader in
+                Europa e Cina, culminando in <span class="no_of_papers"></span>
+                pubblicazioni nei campi dei materiali e dell’energia, e <span class="no_of_patents_sum"></span>
+                brevetti
+                depositati presso <a href="https://www.epo.org/en" target="_blank">l’Ufficio Europeo dei Brevetti
+                  (EPO)</a>
+                e <a href="https://english.cnipa.gov.cn/" target="_blank">l’Amministrazione Nazionale della Proprietà
+                  Intellettuale
+                  della Cina (CNIPA)</a>.
+                Parallelamente alle sue attività ingegneristiche, ha collaborato con think tank rinomati, in particolare
+                il
+                Simposio di San Gallo,
+                l’Organizzazione Globale di Salisburgo e l’Istituto di Oxford per gli Studi Energetici, concentrandosi
+                sull’economia
+                dell’energia pulita
+                e sull’analisi delle politiche energetiche in Asia ed Europa. In quanto attore impegnato nello sviluppo
+                internazionale,
+                il dott. Xu
+                è stato membro del Gruppo di Esperti (GE) presso la <a href="https://unece.org/"
+                  target="_blank">Commissione Economica
+                  per l’Europa delle Nazioni Unite</a> (UNECE) a Ginevra, e ha presieduto sessioni parallele alla <a
+                  href="https://unfccc.int/" target="_blank">Conferenza delle Nazioni Unite sui Cambiamenti
+                  Climatici</a> (UNFCCC) a
+                Bonn, sostenendo gli <a href="https://sdgs.un.org/goals" target="_blank">Obiettivi di Sviluppo
+                  Sostenibile</a> dell’ONU:
+                7 (Energia Accessibile), 9 (Innovazione Industriale)
+                e 13 (Azione Climatiche).
+
                 <br><br>
-                Un erudito nell'animo, ha conseguito il dottorato in <text>Energia Rinnovabile</text> presso
-                il <text><a href="https://ethz.ch/en.html" target="_blank">Politecnico Federale di
-                    Zurigo</a></text>, in
-                collaborazione con l'<text><a href="https://psi.ch" target="_blank">Istituto Paul
-                    Scherrer</a></text> in
-                Svizzera. Prima di ciò, ha ottenuto un MSc in Scienza dei Materiali presso l'<text><a
-                    href="https://tum.de" target="_blank">Università Tecnica di Monaco</a></text> con
-                tirocini
+
+                Studioso nel profondo, ha conseguito il dottorato in energie rinnovabili presso la <a
+                  href="https://ethz.ch/en.html" target="_blank">Scuola Politecnica Federale di Zurigo</a>, in
+                collaborazione con l'<a href="https://psi.ch" target="_blank">Istituto Paul Scherrer
+                </a> in Svizzera. Prima di ciò, ha ottenuto una laurea magistrale in scienza dei materiali presso la <a
+                  href="https://tum.de" target="_blank">Università Tecnica di Monaco di Baviera</a>, con tirocini presso
+                il <a href="https://xfel.eu" target="_blank">XFEL Europeo</a>, <a href="https://infineon.com"
+                  target="_blank">Infineon</a> e
                 presso
-                il <text><a href="https://xfel.eu" target="_blank">XFEL europeo</a></text> e presso <text><a
-                    href="https://infineon.com" target="_blank">Infineon</a></text> in
-                Germania. La sua passione per la ricerca impattante lo ha portato a un impegno a lungo
-                termine con
-                leader industriali nel
-                campo dell'idrogeno e delle celle a combustibile, tra cui <text>Toyota Motor</text> in
-                Giappone e il
-                <text>Gruppo
-                  Freudenberg</text>
-                in Germania. Nel suo percorso verso orizzonti interdisciplinari, ha ricevuto
-                un'educazione esecutiva presso la <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Judge
-                    Business
-                    School di Cambridge</a></text>, acquisendo esperienza pratica in una società di
-                venture capital a doppia valuta e in
-                una compagnia leader nel settore dei titoli in Cina.
+                <a href="https://ecoledesponts.fr/" target="_blank">l’Istituto Politecnico di Parigi</a>.
+
+                La sua passione per la ricerca applicata lo ha portato a collaborazioni a lungo termine con leader
+                industriali
+                nel settore
+                dell’idrogeno e delle celle a combustibile, in particolare TOYOTA Motor
+                e il
+                Gruppo Freudenberg. Nel perseguire un approfondimento interdisciplinare, ha ottenuto una borsa MBA
+                presso il <a href="https://cdi.eu/mba/mba-for-engineers-and-scientists.html" target="_blank">Collegio
+                  des Ingegneri</a>, e
+                ha seguito un programma esecutivo presso la <a href="https://www.jbs.cam.ac.uk/" target="_blank">Scuola
+                  di Commercio
+                  di Cambridge</a> con una borsa Santander, acquisendo esperienza pratica presso MiraclePlus
+                Capitale di rischio e CITIC Titoli.
               </p>
 
 
@@ -554,7 +563,7 @@
 
               <p style="text-align:left;">
 
-                PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
+                PEK (Nǐ Hǎo)→ CDG (Bonjour)→ HAM (Moin Moin)→ MUC (Servus)→ ZRH (Grüezi)→ ?
 
               </p>
             </div>
@@ -593,7 +602,208 @@
                 <div class="subtitle-display"></div>
               </div>
             </div>
+            <h1 class="mb-4">
+              Libri scelti
+            </h1>
+            <hr>
+            <br>
 
+            <div class="component">
+
+              <ul class="align">
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign yellow">
+                          <span class="ribbon">In corso</span>
+                          <h1>Europa</h1>
+                          <p>Contro l'Europa</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Scarica</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Europa contro l'Europa</h5>
+                      <span>Helios Xu</span>
+                      <p>Attualmente in scrittura. Restate sintonizzati!</p>
+                    </figcaption>
+                  </figure>
+
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign blue">
+                          <span class="ribbon">In corso</span>
+                          <h2>Dieci anni in Europa</h2>
+                          <p>La trasformazione del dottore</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Scarica</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Dieci anni in Europa: La trasformazione del dottore</h5>
+                      <span>Helios Xu</span>
+                      <p>Attualmente in scrittura. Restate sintonizzati!</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <!-- <span class="ribbon">Raccomandato</span> -->
+                        <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Scarica</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Giochi finiti e infiniti</h5>
+                      <span>[USA] James P. Carse</span>
+                      <p>La prospettiva di un filosofo sul mondo del gioco: ci sono due tipi di giochi e nessuno può
+                        giocare da
+                        solo.</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Scarica</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Il mondo di ieri</h5>
+                      <span>[Austria] Stefan Zweig</span>
+                      <p>Dalla vigilia della Prima Guerra Mondiale alla crisi della Seconda Guerra Mondiale: il ricordo
+                        di un
+                        giovane studente europeo nella Vienna della fine del XIX secolo.</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+
+            </div>
             <br>
             <h1 class="mb-4">
               Podcast
@@ -636,6 +846,71 @@
           </div>
 
           <div class="col-lg-3 ml-auto">
+            &nbsp;
+            <div class="section-title">
+              <h2>Link Correlati</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-address-card"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://cdi.eu/fellows.html" target="_blank">Collegio des
+                    Ingegneri <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Borsista MBA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-graduation-cap"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Istituto di Oxford per gli
+                    Studi
+                    sull'Energia
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Ricercatore Ospite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-globe"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://www.salzburgglobal.org/people?userID=55428" target="_blank">Organizzazione Globale
+                    di
+                    Salisburgo
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Borsista KFAS-Salisburgo</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-file-invoice-dollar"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://data.snf.ch/grants/person/695765" target="_blank">Fondazione Nazionale Svizzera per
+                    la Scienza
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Ricercatore di Dottorato</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="trend-entry d-flex">
+  <div class="number align-self-start"><i class="fas fa-hand-sparkles"></i> </div>
+  <div class="trend-contents">
+    <h2><a
+        href="https://www.psi.ch/en/lec/scientific-highlights/temperature-dependent-water-transport-mechanism"
+        target="_blank">Istituto Paul Scherrer, Svizzera <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+    <div class="post-meta">
+      <span class="d-block">Highlight di Ricerca</span>
+    </div>
+  </div>
+</div> -->
             &nbsp;
             <div class="section-title">
               <h2>Passatempi</h2>

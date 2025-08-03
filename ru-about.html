@@ -39,6 +39,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
   <link rel="stylesheet" href="./css/style_podcast.css">
 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/book.css" />
+  <script src="js/modernizr.custom.js"></script>
 
   <style>
     body {
@@ -53,6 +56,26 @@
       font-weight: bold;
     }
   </style>
+
+  <style>
+    .align {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .align>li {
+      flex: 0 0 45%;
+      margin: 2%;
+      box-sizing: border-box;
+    }
+  </style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1031,7 +1054,206 @@
               </div>
             </div>
 
+            <h1 class="mb-4">
+              Рекомендуемые книги
+            </h1>
+            <hr>
+            <br>
 
+            <div class="component">
+
+              <ul class="align">
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign yellow">
+                          <span class="ribbon">В процессе</span>
+                          <h1>Европа</h1>
+                          <p>Против Европы</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Скачать</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Европа против Европы</h5>
+                      <span>Helios Xu</span>
+                      <p>В настоящее время пишется. Оставайтесь с нами!</p>
+                    </figcaption>
+                  </figure>
+
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign blue">
+                          <span class="ribbon">В процессе</span>
+                          <h2>Десять лет в Европе</h2>
+                          <p>Преображение доктора</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Скачать</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Десять лет в Европе: Преображение доктора</h5>
+                      <span>Helios Xu</span>
+                      <p>В настоящее время пишется. Оставайтесь с нами!</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <!-- <span class="ribbon">Рекомендовано</span> -->
+                        <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Скачать</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Конечные и бесконечные игры</h5>
+                      <span>[США] Джеймс П. Карс</span>
+                      <p>Философский взгляд на мир игры: есть два типа игр, и никто не может играть в одиночку.</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">Скачать</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>Мир вчерашнего дня</h5>
+                      <span>[Австрия] Стефан Цвейг</span>
+                      <p>От кануна Первой мировой войны до кризиса Второй мировой войны: воспоминания молодого
+                        европейского студента
+                        в Вене конца XIX века.</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+
+            </div>
             <br>
             <h1 class="mb-4">
               Подкаст
@@ -1072,6 +1294,59 @@
           </div>
 
           <div class="col-lg-3 ml-auto">
+            &nbsp;
+
+            <div class="section-title">
+              <h2>Связанные ссылки</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-address-card"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://cdi.eu/fellows.html" target="_blank">Французский колледж инженеров
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Стипендиат MBA</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-graduation-cap"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">Оксфордский институт
+                    изучения энергетики
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Приглашённый научный сотрудник</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-globe"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://www.salzburgglobal.org/people?userID=55428" target="_blank">Зальцбургская
+                    глобальная
+                    организация
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Стипендиат KFAS-Зальцбург</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-file-invoice-dollar"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://data.snf.ch/grants/person/695765" target="_blank">Швейцарский национальный научный
+                    фонд
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Докторант-исследователь</span>
+                </div>
+              </div>
+            </div>
             &nbsp;
             <div class="section-title">
               <h2>Хобби</h2>

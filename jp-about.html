@@ -40,7 +40,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
   <link rel="stylesheet" href="./css/style_podcast.css">
 
-
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/book.css" />
+  <script src="js/modernizr.custom.js"></script>
 
 
   <script src="js/chinese_lunar_calendar.min.js"></script>
@@ -133,6 +135,26 @@
       /* 设置两个按钮之间的间距 */
     }
   </style>
+
+
+  <style>
+    .align {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .align>li {
+      flex: 0 0 45%;
+      margin: 2%;
+      box-sizing: border-box;
+    }
+  </style>
+
 
 
   <style>
@@ -501,644 +523,257 @@
             <div id="story-container" class="story horizontal-layout">
 
               <p id="japanese-content" align="justify" style="display: block;">
-                現在、徐泓 （
-                <script
-                  id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>
-                歳）
-                博士は <strong>研究者</strong> および <strong>エンジニア</strong>として <strong>再生可能エネルギー</strong>と
-                <strong>e-電力システム</strong>を
-                専門にしており、エネルギーおよび交通分野で効率性の優秀さとカーボンニュートラリティを追求しています。
-                過去10年間、彼はユーラシア大陸全体で多国籍企業および主要機関と協力し、<strong>e-モビリティ</strong>、<strong>クリーンエネルギー</strong>、および
-                <strong>新素材</strong>産業の技術革新を推進してきました。
-                <strong><span class="no_of_papers"></span> 本の論文</strong>が発表され、<strong><span
-                    class="no_of_patents"></span>
-                  件の特許</strong>が付与されました。彼のエンジニアリング活動とともに、徐博士は
-                スイスのセントガレンシンポジウム、オーストリアのザルツブルグ グローバルセミナー、中国の中信証券、及びオックスフォードエネルギー研究所などの著名な
-                組織と協力して、アジアと
-                ヨーロッパの<strong>クリーンエネルギー経済および政策</strong>分析に集中してきました。国際開発に積極的に貢献し、徐博士は
-                <strong><a href="https://unece.org/" target="_blank">国連欧州経済委員会</a></strong>（UNECE）の専門家グループ（GE）委員として
-                活動し、
-                <strong><a href="https://unfccc.int/" target="_blank">国連気候変動会議</a></strong>（UNFCCC）
-                において並行セッションを主催し
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">国連持続可能な開発目標</a></strong>（SDGs）
-                <strong>7
-                </strong>（手頃なエネルギー）、 <strong>9 </strong>（産業革新）,
-                および <strong>13 </strong>（気候行動）を擁護しました。
+                現在、徐泓博士 (<span class="age"></span>歳)
+                はヨーロッパの産業界において<span>新エネルギー</span>エンジニアおよびビジネスコンサルタントとして活躍しており、
+                <span>エネルギーと交通</span>分野における効率向上と<span>ネットゼロ排出</span>の実現に尽力しています。学位取得中には、多国籍企業および中欧の学術機関と連携し、<span>論文<span
+                    class="no_of_papers"></span>本以上</span>を発表し、<span
+                  class="google_scholar_citation"></span>回以上引用されました。<span><span
+                    class="no_of_patents"></span>件の中国特許</span>を取得し、<span
+                  class="no_of_patents_in_review"></span>件のEU特許を主申請者として出願しました。<span><a href="https://unfccc.int/"
+                    target="_blank">国連ボン気候変動会議</a></span>では「中国における<span>エネルギー転換</span>と技術革新」をテーマとした分科会の議長を務め、<span><a
+                    href="https://unece.org/"
+                    target="_blank">国連欧州経済委員会</a></span>の<span>交通と気候に関する専門家グループ</span>や<span>クリーンエネルギー作業部会</span>の会議に幾度も参加し、国連の持続可能な開発目標（SDGs）である第7項「クリーンエネルギー」、第9項「産業とイノベーション」、第13項「気候変動対策」を積極的に推進しています。同時に、エネルギーと交通分野の10誌以上の高インパクトジャーナルで<span>査読者</span>を務め、
+                スイスの<span>ザンクト・ガレン国際フォーラム</span>では<span>学術審査員</span>として活動しています。さらに、オーストリアの<span><a
+                    href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                    target="_blank">ザルツブルク国際会議</a></span>渡航奨学金、<span>米国電気化学会による論文招待</span>および渡航補助、EUエラスムス奨学金、「チャレンジカップ」全国起業大会銅賞などを受賞しました。
                 <br><br>
-                心から学者であり、<strong>再生可能エネルギー</strong>分野で<strong><a href="https://ethz.ch/en.html"
-                    target="_blank">チューリッヒ工科大学</a></strong>で博士号を取得し、スイスの<strong><a href="https://psi.ch"
-                    target="_blank">ポール・シェラー研究所</a></strong>と協力しました。 その前に、
-                彼は<strong><a href="https://tum.de" target="_blank">ミュンヘン工科大学</a></strong>で材料科学の修士号を取得し、<strong><a
-                    href="https://xfel.eu" target="_blank">欧州X線自由電子レーザー会社</a></strong>および<strong><a
-                    href="https://infineon.com" target="_blank">インフィニオン</a></strong>でインターンシップを行いました。
-                影響力のある研究に対する彼の情熱は、彼を日本の<strong>トヨタ自動車</strong>やドイツの<strong>フロイデンベルクグループ</strong>などの水素および燃料電池産業の業界
-                リーダーとの長期的な関係へと導きました。
-                学際的な視野を追求し、彼は<strong>経営学修士</strong>を<strong><a href="https://quantic.edu/mba" target="_blank">クアンティック
-                    ビジネス
-                    スクール</a></strong>で取得し、
-                <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">ケンブリッジ大学ビジネススクール</a></strong>で追加の経営教育を受け、
-                中国の二重通貨ベンチャーキャピタル会社と主要証券会社で実務経験を積みました。
+
+                2021年初頭に<span><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ工科大学</a></span>で博士号を取得し、
+                学士・修士・博士課程を通して<span>新エネルギーとカーボンニュートラル</span>分野に焦点を当てた研究を行ってきました。これまでに、<span><a href="https://psi.ch"
+                    target="_blank">スイス連邦PSI研究所</a></span>、<span><a href="https://www.oxfordenergy.org/authors/hong-xu/"
+                    target="_blank">オックスフォード・エネルギー研究所</a></span>、<span><a href="https://tum.de"
+                    target="_blank">ミュンヘン工科大学</a></span>、<span><a href="https://ecoledesponts.fr/en"
+                    target="_blank">パリ工科大学</a></span><span>、<a href="https://xfel.eu"
+                    target="_blank">EU自由電子レーザー施設</a></span>などの国際機関で勤務およびインターンを経験し、<span>トヨタ自動車</span>、<span>インフィニオン半導体</span>、<span>フロイデンベルク・エレクトリックシステム</span>、<span>ヘレウス貴金属</span>などの多国籍企業との共同研究・実務経験を有しています。さらに、<span><a
+                    href="https://cdi.eu"
+                    target="_blank">フランス技術者学院</a></span>のMBAプログラムに全額奨学金で合格し、サンタンデール銀行の支援を受けて<span><a
+                    href="https://www.jbs.cam.ac.uk/"
+                    target="_blank">ケンブリッジ大学ビジネススクール</a></span>で「グリーントランスフォーメーション」に関する経営管理コースを履修。また、トップ証券研究所にて「A株および米国株」の個別企業に関する深掘りレポートを執筆し、デュアルカレンシーファンドにて「シード期からシリーズA」に至る新エネルギー分野のベンチャー投資業務にも従事しました。
               </p>
 
               <p id="old-japanese-content" align="justify" style="display: none;">
-                今、徐泓 （32歳）の大夫は <strong>研究者</strong> 及び <strong>工匠</strong> として <strong>再生なる力</strong> と
-                <strong>e-電力すゑ</strong> を
-                専らにし、力および御車の分野にて能の秀びたると炭を減らす事を追ひ求む。
-                過ぎし十年、彼は洲羅之大なる地の上、多国の商工および大事の所と力を合はせ、
-                <strong>e-行き</strong>、<strong>清き力</strong>、および<strong>新しき材</strong>
-                工の革新を成さしむ。
-                <strong><span class="no_of_papers"></span>本の文</strong> を出だし、<strong><span class="no_of_patents"></span>
-                  件の書</strong> を得たり。彼が工匠としての事業とともに、徐博士は
-                瑞西のセントガレンの會、墺太利のザルツブルグ 世界會議、唐国の中信證券、ならびに牛津の力研究所といふ名の高き
-                所とともに、亜細亜および
-                洲羅之大なる地の <strong>清き力の經済および策</strong> の調へを専らにしつ。
-                世の事を益くし、徐博士は
-                <strong><a href="https://unece.org/" target="_blank">国連欧州の經済會議</a></strong>（UNECE）の識者の衆（GE）
-                の一人として働き、
-                <strong><a href="https://unfccc.int/" target="_blank">国連氣候の変動會議</a></strong>（UNFCCC）
-                にて并せて座を主とし
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">国連の成し遂げを目する事</a></strong>（SDGs）
-                <strong>七
-                </strong>（手近なる力）、 <strong>九 </strong>（業の革新）、および <strong>十三 </strong>（氣候の事を施す）を稱ふ。
+                今、徐泓博士 (<span class="age"></span>歳)、欧羅巴産業界に於て新型動力技術士並びに経営顧問の任に在り、能源及び行路分野に於ける能率向上と零炭素排出之実現に力を致せり。
+
+                学階修得の砌、多国籍之企業並びに唐欧之学府と聯袂し、<span>論文<span class="no_of_papers"></span>篇超</span>を著し、<span
+                  class="google_scholar_citation"></span>回を超ゆる引用を得たり。<span><span
+                    class="no_of_patents"></span>件の唐国特許</span>を取得し、<span
+                  class="no_of_patents_in_review"></span>件の欧州連合特許を主申請者として出願せり。
+
+                <span><a href="https://unfccc.int/"
+                    target="_blank">国際連合波恩気候変動會議</a></span>に於ては、「支那に於ける能源之転換と技術刷新」を議題とする分科會にて議長を司どり、<span><a
+                    href="https://unece.org/"
+                    target="_blank">国際連合欧州経済委員会</a></span>の行路及び気候に関する專門会合並びに清潔動力部会に屡々列し、国際連合の持続的開発目標（SDGs）たる第七「清潔動力」、第九「産業と刷新」、第十三「気候行動」之推進に尽瘁せり。
+
+                並びに、能源・行路分野に於ける十余の高影響力を有する学術誌にて査読の任に当たり、瑞西のザンクト・ガレン国際論壇に於ては審査官を務めたり。
+
+                又、墺地利の<a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                  target="_blank">ザルツブルク国際會議</a>渡航奨学金、米国電気化学会による論文招聘および旅費補助、欧州連合エラスムス奨学金、「挑戦杯」全国創業大會銅賞等を拝受す。
+
                 <br><br>
-                心より學人にして、<strong>再生なる力</strong> の領にて<strong><a href="https://ethz.ch/en.html"
-                    target="_blank">チューリッヒの工藝大學</a></strong>
-                にて博士の位を得、瑞西の <strong><a href="https://psi.ch" target="_blank">ポール・シェラーの研究所</a></strong> と共に働きつ。 その前に、
-                彼は<strong><a href="https://tum.de" target="_blank">慕尼黒の工藝大學</a></strong> にて材の學問を修め、<strong><a
-                    href="https://xfel.eu" target="_blank">欧州の光之新社</a></strong> 及び <strong><a
-                    href="https://infineon.com" target="_blank">インフィニオン</a></strong> にて弟子として仕へつ。
-                研究への志深く、日本の <strong>豊田の自動車</strong> ならびに独逸の <strong>フロイデンベルクの群</strong> といふ
-                水素および燃えざる炭の事を業とする所との長き結びを成さしむ。
-                学と事を兼ぬべく、彼は<strong>經營の學</strong> を <strong><a href="https://quantic.edu/mba" target="_blank">クアンティック
-                    の商學院</a></strong> にて修め、
-                <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋の大學商學院</a></strong> にて經營の教へを更に受け、
-                唐国の二つの金の商ひを主とする所および證券所にて仕へつ。
+
+                令和参年孟春、<a href="https://ethz.ch/en.html"
+                  target="_blank">蘇黎世工科大学</a>にて博士之学位を授与され、学士・修士・博士の各課程を通じて、常に新型動力及び炭素中立に焦点を置き、研鑽を積み重ねたり。
+
+                曾て、<a href="https://psi.ch" target="_blank">瑞西連邦原子力研究所</a>、<a
+                  href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">牛津能源研究所</a>、<a
+                  href="https://tum.de" target="_blank">独逸工科大学慕尼黒</a>、<a href="https://ecoledesponts.fr/en"
+                  target="_blank">仏蘭西工科大学巴里</a>、<a href="https://xfel.eu"
+                  target="_blank">欧州自由電子光源施設</a>等に於て勤務及び研修を重ね、豊田自動車、英飛凌半導体、弗洛伊デン貝克電動系統、赫雷烏斯貴金属等と共に研究並びに実務を遂行せり。
+
+                又、<a href="https://cdi.eu" target="_blank">仏蘭西技術士学院</a>の経営修士課程（MBA）に全額奨学金にて合格し、桑坦徳銀行の助成を受け、<a
+                  href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大学商学院</a>に於て「緑色転換」経営課程を履修せり。
+
+                加之、最上位証券研究所に於て「唐国A株及び米国株」に関する企業分析報告を起草し、雙通貨制投資基金に於て「草創期より甲輪」段階に属する新型動力分野の創業投資に従事したり。
+
               </p>
 
               <p id="fake-chinese-content" align="justify" style="display: none;">
-                現在、徐泓（32歳）博士 研究者 及 技術者 再生可能能源
-                <strong>e-電力系統</strong> 専門、能源及交通分野 効率性優秀性 炭素中立 追求。過去10年間、彼
-                <strong>欧亜大陸</strong> 全体
-                多国籍企業
-                主要機関 協力、
-                <strong>電動化</strong>
-                <strong>清浄能源</strong>
-                <strong>新素材産業</strong> 技術革新 推進。15編論文発表、3件特許付与。彼 工学活動 共 徐博士
-                <a href="https://www.stgallen.com" target="_blank">瑞西 聖加倫研究会</a>
-                <a href="https://www.salzburgglobal.org" target="_blank">墺地利 薩爾斯堡全球会議</a>
-                中華 中信証券
-                <a href="https://www.oxfordenergy.org" target="_blank">牛津能源研究所</a> 等 著名組織 協力、亜細亜 欧羅巴
-                <strong><a href="https://cleantechnology.com" target="_blank">清浄能源経済</a></strong> 政策分析 集中。国際開発 積極貢献 徐博士
-                <strong><a href="https://unece.org/" target="_blank">国際連合欧州経済委員会（UNECE）</a></strong>
-                専門家集団（GE）委員 活動、
-                <strong><a href="https://unfccc.int/" target="_blank">国際連合気候変動会議（UNFCCC）</a></strong> 並行会議主催
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">国際連合持続可能開発目標（SDGs）</a></strong>
-                7（低廉能源）9（産業革新）13（気候行動）擁護。
+                現在、徐泓博士（<span
+                  class="age"></span>歳）、欧州産業界在、新能源技術者兼経営顧問之任従、能源及交通領域於効率改善並炭素中立達成尽力。学位取得期間中、国際企業並中欧学術機関協働、論文十五篇超公表、四百二十回超引用有之。中国特許三件取得、欧州連合特許二件主願人出願畢。
+
+                国際連合波恩気候変動会議於、「中国之能源転換及技術革新」為主題之分科会議長拝命、国際連合欧州経済委員会所轄交通気候専門家会合及清潔能源作業部会数度参画、国際連合持続可能開発目標（持続目標）中、第七項「清潔能源」、第九項「産業及技術革新」、第十三項「気候行動」之推進積極寄与。
+
+                并及、能源交通領域於十種超高影響力学術誌査読職掌担任、瑞西聖加侖国際論壇於学術審査員職務奉仕。復又、墺地利薩爾茨堡国際会議渡航奨学金、米国電気化学会主催論文招聘渡航補助、欧州連合伊拉斯穆斯奨学金、「挑戦杯」全国創業大会銅賞等褒賞拝受。
                 <br><br>
-                真摯学者、
-                <strong><a href="https://www.ethz.ch" target="_blank">聚利希工科大学</a></strong> 博士号取得
-                <a href="https://psi.ch" target="_blank">瑞西保羅謝勒研究所</a> 協力。其之前 彼
-                <a href="https://www.tum.de" target="_blank">明亨工科大学</a> 材料科学修士号取得
-                <a href="https://xfel.eu" target="_blank">欧州X線自由電子激光会社</a>
-                <a href="https://infineon.com" target="_blank">印飛仁苑</a> 実習実施。影響力研究 対 情熱 彼
-                <a href="https://www.toyota-global.com" target="_blank">日本豊田自動車</a>
-                <a href="https://www.freudenberg.com" target="_blank">独逸福来登堡集団</a> 等
-                水素燃料電池産業 業界指導者 長期関係 導。学際視野追求 彼
-                <strong><a href="https://quantic.edu/mba" target="_blank">経営学修士 匡迪克商学校</a></strong> 取得
-                <a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大学商学校</a> 追加経営教育受領
-                中華 複数通貨冒険資本会社
-                主要証券会社 実務経験積。
-                <br><br>
+                二千二十一年初頭、蘇黎世工科大学博士号取得。学士修士博士課程貫通、新能源及炭素中立領域焦点置、学術研究推進。自今、瑞西連邦原子力研究所、牛津能源研究所、独逸慕尼黒工科大学、仏蘭西巴黎工科大学、欧州自由電子光源施設等勤務実習遂行、豊田自動車、英飛凌半導体、弗洛伊デン貝克電動系統、赫雷烏斯貴金属等多国籍企業共同研究及実務経験蓄積。
+
+                又、仏蘭西技術士学院経営学課程（経営修士）全額奨学金合格、桑坦徳銀行助成賜受、英國劍橋大学商学院於「緑色転換」経営課程修習。加之、上位証券研究機関「甲類株及美利堅株」個別企業分析報告執筆、并且二重通貨制投資基金於「創業初期至甲輪」段階属新能源領域創業投資業務従事。
               </p>
 
 
               <p id="katakana-content" align="justify" style="display: none;">
 
-                現在、シュイ・ホン （32
-                サイ）
-                ハクシハ <strong>ケンキュウシャ</strong> オヨビ <strong>エンジニア</strong>トシテ <strong>サイセイカノウエネルギー</strong>ト
-                <strong>e-デンリョクシステム</strong>ヲ
-                センモンニシテオリ、エネルギーオヨビコウツウブンヤデコウリツセイノユウシュウサトカーボンニュートラリティヲツイキュウシテイマス。
-                カコ10ネンカン、カレハユーラシアタイリクゼンタイデタコクセキキギョウオヨビシュヨウキカントキョウリョクシ、<strong>e-モビリティ</strong>、<strong>クリーンエネルギー</strong>、オヨビ
-                <strong>シンソザイ</strong>サンギョウノギジュツカクシンヲスイシンシテキマシタ。
-                <strong><span class="no_of_papers"></span> ホンノロンブン</strong>ガハッピョウサレ、<strong><span
-                    class="no_of_patents"></span>
-                  ケンノトッキョウ</strong>ガフヨサレマシタ。カレノエンジニアリングカツドウトトモニ、シュイハクシハ
-                スイスノセントガレンシンポジウム、オーストリアノザルツブルグ グローバルセミナー、チュウゴクノチュウシンショウケン、オヨビオックスフォードエネルギーケンキュウジョナドノチョメイナ
-                ソシキトキョウリョクシテ、アジアト
-                ヨーロッパノ<strong>クリーンエネルギーケイザイオヨビセイサク</strong>ブンセキニシュウチュウシテキマシタ。コクサイカイハツニセッキョクテキニコウケンシ、徐ハクシハ
-                <strong><a href="https://unece.org/" target="_blank">コクレンオウシュウケイザイイインカイ</a></strong> （UNECE） ノセンモンカグループ
-                （GE）
-                イイントシテ
-                カツドウシ、
-                <strong><a href="https://unfccc.int/" target="_blank">コクレンキコウヘンドウカイギ</a></strong> （UNFCCC）
-                ニオイテヘイコウセッションヲシュサイシ
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">コクレンジゾクカノウナカイハツモクヒョウ</a></strong>（SDGs）
-                <strong>7
-                </strong>（テゴロナエネルギー）、 <strong>9 </strong>（サンギョウカクシン）,
-                オヨビ <strong>13 </strong>（キコウコウドウ）ヲヨウゴシマシタ。
+                ゲンザイ、ジョコウハクシ（<span class="age"></span>サイ）
+                ハ ヨーロッパ ノ サンギョウカイ ニ オイテ <span>シンエネルギー</span> エンジニア オヨビ ビジネスコンサルタント トシテ カツヤク シテオリ、
+                <span>エネルギー ト コウツウ</span> ブンヤ ニ オケル コウリツ コウジョウ ト <span>ネットゼロ ハイシュツ</span> ノ ジツゲン ニ ジンリョク シテイマス。ガクイ
+                シュトクチュウ ニハ、タコクセキ キギョウ
+                オヨビ チュウオウ ノ ガクジュツ キカン ト レンケイ シ、
+                <span>ロンブン <span class="no_of_papers"></span>ホン イジョウ</span> オ ハッピョウ シ、<span
+                  class="google_scholar_citation"></span>カイ
+                イジョウ インヨウ サレマシタ。
+                <span><span class="no_of_patents"></span>ケン ノ チュウゴク トッキョ</span> オ シュトク シ、<span
+                  class="no_of_patents_in_review"></span>ケン
+                ノ EU トッキョ オ シュ シンセイシャ トシテ シュツガン シマシタ。
+                <span><a href="https://unfccc.int/" target="_blank">コクレン ボン キコウ ヘンドウ カイギ</a></span> デハ「チュウゴク ニ オケル
+                <span>エネルギー
+                  テンカン</span> ト ギジュツ カクシン」ヲ テーマ トシタ ブンカカイ ノ ギチョウ ヲ ツトメ、
+                <span><a href="https://unece.org/" target="_blank">コクレン オウシュウ ケイザイ イインカイ</a></span> ノ <span>コウツウ ト キコウ ニ
+                  カンスル センモンカ
+                  グループ</span> ヤ
+                <span>クリーン エネルギー サギョウ ブカイ</span> ノ カイギ ニ イクド モ サンカ シ、コクレン ノ ジゾク カノウ ナ カイハツ モクヒョウ（SDGs）デ アル ダイ 7 コウ「クリーン
+                エネルギー」、ダイ 9
+                コウ「サンギョウ ト イノベーション」、ダイ 13 コウ「キコウ ヘンドウ タイサク」ヲ セッキョクテキ ニ スイシン シテイマス。
+                ドウジ ニ、エネルギー ト コウツウ ブンヤ ノ 10シ イジョウ ノ コウ インパクト ジャーナル デ <span>サドクシャ</span> ヲ ツトメ、
+                スイス ノ <span>ザンクト・ガレン コクサイ フォーラム</span> デハ <span>ガクジュツ シンサイン</span> トシテ カツドウ シテイマス。
+                サラニ、オーストリア ノ <span><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                    target="_blank">ザルツブルク
+                    コクサイ カイギ</a></span> トコウ ショウガクキン、
+                <span>ベイコク デンキ カガクカイ ニ ヨル ロンブン ショウタイ</span> オヨビ トコウ ホジョ、EU エラスムス ショウガクキン、「チャレンジカップ」 ゼンコク キギョウ タイカイ ドウショウ
+                ナド オ ジュショウ
+                シマシタ。
                 <br><br>
-                ココロカラガクシャデアリ、<strong>サイセイカノウエネルギー</strong>ブンヤデ<strong><a href="https://ethz.ch/en.html"
-                    target="_blank">チューリッヒコウカダイガク</a></strong>デハクシゴウヲシュウトクシ、スイスノ<strong><a href="https://psi.ch"
-                    target="_blank">ポール・シェラーケンキュウジョ</a></strong>トキョウリョクシマシタ。 ソノマエニ、
-                カレハ<strong><a href="https://tum.de"
-                    target="_blank">ミュンヘンコウカダイガク</a></strong>デザイリョウカガクノシュウシゴウヲシュウトクシ、<strong><a href="https://xfel.eu"
-                    target="_blank">オウシュウXセンジユウデンシレーザーカイシャ</a></strong>オヨビ<strong><a href="https://infineon.com"
-                    target="_blank">インフィニオン</a></strong>デインターンシップヲオコナイマシタ。
-                エイキョウリョクノアルケンキュウニタイスルカレノジョウネツハ、カレヲニホンノ<strong>トヨタジドウシャ</strong>ヤドイツノ<strong>フロイデンベルクグループ</strong>ナドノスイソオヨビネンリョウデンチサンギョウノギョウカイ
-                リーダートノチョウキテキナカンケイヘトミチビキマシタ。
-                ガクサイテキナシヤヲツイキュウシ、カレハ<strong>ケイエイガクシュウシ</strong>ヲ<strong><a href="https://quantic.edu/mba"
-                    target="_blank">クアンティック
-                    ビジネス
-                    スクール</a></strong>デシュウトクシ、
-                <strong><a href="https://www.jbs.cam.ac.uk/"
-                    target="_blank">ケンブリッジダイガクビジネススクール</a></strong>デツイカノケイエイキョウイクヲウケ、
-                チュウゴクノニジュウツウカベンチャーキャピタルカイシャトシュヨウショウケンカイシャデジツムケイケンヲツミマシタ。
+
+                2021ネン ショトウ ニ <span><a href="https://ethz.ch/en.html" target="_blank">チューリッヒ コウカ ダイガク</a></span> デ ハクシゴウ
+                ヲ シュトク シ、
+                ガクシ・シュウシ・ハクシ カテイ ヲ トオシテ <span>シンエネルギー ト カーボンニュートラル</span> ブンヤ ニ ショウテン ヲ アテタ ケンキュウ ヲ オコナッテキマシタ。
+                コレマデ ニ、<span><a href="https://psi.ch" target="_blank">スイス レンポウ PSI ケンキュウジョ</a></span>、
+                <span><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">オックスフォード・エネルギー
+                    ケンキュウジョ</a></span>、
+                <span><a href="https://tum.de" target="_blank">ミュンヘン コウカ ダイガク</a></span>、
+                <span><a href="https://ecoledesponts.fr/en" target="_blank">パリ コウカ ダイガク</a></span>、
+                <span><a href="https://xfel.eu" target="_blank">EU ジユウ デンシ レーザー シセツ</a></span> ナド ノ コクサイ キカン デ キンム オヨビ
+                インターン ヲ ケイケン シ、
+                <span>トヨタ ジドウシャ</span>、<span>インフィニオン ハンドウタイ</span>、
+                <span>フロイデンベルク・エレクトリック システム</span>、
+                <span>ヘレウス キキンゾク</span> ナド ノ タコクセキ キギョウ ト ノ キョウドウ ケンキュウ・ジツム ケイケン ヲ ユウシテイマス。
+                サラニ、<span><a href="https://cdi.eu" target="_blank">フランス ギジュツシャ ガクイン</a></span> ノ MBA プログラム ニ ゼンガク
+                ショウガクキン デ ゴウカク シ、
+                サンタンデール ギンコウ ノ シエン ヲ ウケテ <span><a href="https://www.jbs.cam.ac.uk/" target="_blank">ケンブリッジ ダイガク ビジネス
+                    スクール</a></span> デ
+                「グリーン トランスフォーメーション」ニ カンスル ケイエイ カンリ コース ヲ リシュウ。
+                マタ、トップ ショウケン ケンキュウジョ ニテ「Aカブ オヨビ ベイコク カブ」ノ コベツ キギョウ ニ カンスル フカボリ レポート ヲ シッピツ シ、
+                デュアル カレンシー ファンド ニテ「シードキ カラ シリーズA」ニ イタル シンエネルギー ブンヤ ノ ベンチャー トウシ ギョウム ニモ ジュウジ シマシタ。
               </p>
 
 
-              <p id="hiragana-content" align="justify" style="display: none;">
-                <ruby>現在<rp>(</rp>
-                  <rt>げんざい</rt>
-                  <rp>)</rp>
-                </ruby>、<ruby>徐<rp>(</rp>
-                  <rt>じょ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>泓<rp>(</rp>
-                  <rt>おう</rt>
-                  <rp>)</rp>
-                </ruby>（32 <ruby>歳<rp>(</rp>
-                  <rt>とし</rt>
-                  <rp>)</rp>
-                </ruby>）<ruby>博士<rp>(</rp>
-                  <rt>はかせ</rt>
-                  <rp>)</rp>
-                </ruby>は <ruby>研究<rp>(</rp>
-                  <rt>けんきゅう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>者<rp>(</rp>
-                  <rt>しゃ</rt>
-                  <rp>)</rp>
-                </ruby> および エンジニアとして <ruby>再生<rp>(</rp>
-                  <rt>さいせい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>可能<rp>(</rp>
-                  <rt>かのう</rt>
-                  <rp>)</rp>
-                </ruby>エネルギーと e-<ruby>電力<rp>(</rp>
-                  <rt>でんりょく</rt>
-                  <rp>)</rp>
-                </ruby>システムを <ruby>専門<rp>(</rp>
-                  <rt>せんもん</rt>
-                  <rp>)</rp>
-                </ruby>にしており、エネルギーおよび<ruby>交通<rp>(</rp>
-                  <rt>こうつう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>分野<rp>(</rp>
-                  <rt>ぶんや</rt>
-                  <rp>)</rp>
-                </ruby>で<ruby>効率<rp>(</rp>
-                  <rt>こうりつ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>性<rp>(</rp>
-                  <rt>せい</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>優秀<rp>(</rp>
-                  <rt>ゆうしゅう</rt>
-                  <rp>)</rp>
-                </ruby>さとカーボンニュートラリティを<ruby>追求<rp>(</rp>
-                  <rt>ついきゅう</rt>
-                  <rp>)</rp>
-                </ruby>しています。 <ruby>過去<rp>(</rp>
-                  <rt>かこ</rt>
-                  <rp>)</rp>
-                </ruby>10<ruby>年間<rp>(</rp>
-                  <rt>ねんかん</rt>
-                  <rp>)</rp>
-                </ruby>、<ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>はユーラシア<ruby>大陸<rp>(</rp>
-                  <rt>たいりく</rt>
-                  <rp>)</rp>
-                </ruby><ruby>全体<rp>(</rp>
-                  <rt>ぜんたい</rt>
-                  <rp>)</rp>
-                </ruby>で<ruby>多<rp>(</rp>
-                  <rt>た</rt>
-                  <rp>)</rp>
-                </ruby><ruby>国籍<rp>(</rp>
-                  <rt>こくせき</rt>
-                  <rp>)</rp>
-                </ruby><ruby>企業<rp>(</rp>
-                  <rt>きぎょう</rt>
-                  <rp>)</rp>
-                </ruby>および<ruby>主要<rp>(</rp>
-                  <rt>しゅよう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>機関<rp>(</rp>
-                  <rt>きかん</rt>
-                  <rp>)</rp>
-                </ruby>と<ruby>協力<rp>(</rp>
-                  <rt>きょうりょく</rt>
-                  <rp>)</rp>
-                </ruby>し、e-モビリティ、クリーンエネルギー、および <ruby>新<rp>(</rp>
-                  <rt>しん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>素材<rp>(</rp>
-                  <rt>そざい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>産業<rp>(</rp>
-                  <rt>さんぎょう</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>技術<rp>(</rp>
-                  <rt>ぎじゅつ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>革新<rp>(</rp>
-                  <rt>かくしん</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>推進<rp>(</rp>
-                  <rt>すいしん</rt>
-                  <rp>)</rp>
-                </ruby>してきました。 15 <ruby>本<rp>(</rp>
-                  <rt>ほん</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>論文<rp>(</rp>
+
+
+              <p id="hiragana-content" align="justify" style="display: none; line-height: 2.3;">
+
+                <ruby>現<rt>げん</rt></ruby><ruby>在<rt>ざい</rt></ruby>、<ruby>徐<rt>じょ</rt></ruby><ruby>泓<rt>おう</rt>
+                </ruby><ruby>博<rt>はく</rt>
+                </ruby><ruby>士<rt>し</rt></ruby> (<ruby>32<rt></rt></ruby><ruby>歳<rt>さい</rt></ruby>) はヨーロッパの<ruby>産業界<rt>
+                    さんぎょうかい</rt></ruby>において<ruby>新<rt>しん</rt>
+                </ruby>エネルギーエンジニアおよびビジネスコンサルタントとして<ruby>活躍<rt>かつやく</rt></ruby>しており、 エネルギーと<ruby>交通<rt>こうつう</rt>
+                </ruby><ruby>分野<rt>
+                    ぶんや</rt></ruby>における<ruby>効率<rt>こうりつ</rt></ruby><ruby>向上<rt>こうじょう</rt></ruby>とネットゼロ<ruby>排出<rt>はいしゅつ
+                  </rt>
+                </ruby>の<ruby>実現<rt>じつげん</rt></ruby>に<ruby>尽力<rt>じんりょく</rt></ruby>しています。<ruby>学位<rt>がくい</rt>
+                </ruby><ruby>取得中<rt>
+                    しゅとくちゅう</rt></ruby>には、<ruby>多国籍<rt>たこくせき</rt></ruby><ruby>企業<rt>きぎょう</rt></ruby>および<ruby>中欧<rt>ちゅうおう
+                  </rt>
+                </ruby>の<ruby>学術<rt>がくじゅつ</rt></ruby><ruby>機関<rt>きかん</rt></ruby>と<ruby>連携<rt>れんけい</rt></ruby>し、<ruby>論文
                   <rt>ろんぶん</rt>
-                  <rp>)</rp>
-                </ruby>が<ruby>発表<rp>(</rp>
-                  <rt>はっぴょう</rt>
-                  <rp>)</rp>
-                </ruby>され、3 <ruby>件<rp>(</rp>
-                  <rt>けん</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>特許<rp>(</rp>
-                  <rt>とっきょ</rt>
-                  <rp>)</rp>
-                </ruby>が<ruby>付与<rp>(</rp>
-                  <rt>ふよ</rt>
-                  <rp>)</rp>
-                </ruby>されました。<ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>のエンジニアリング<ruby>活動<rp>(</rp>
-                  <rt>かつどう</rt>
-                  <rp>)</rp>
-                </ruby>とともに、<ruby>徐<rp>(</rp>
-                  <rt>じょ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>博士<rp>(</rp>
-                  <rt>はかせ</rt>
-                  <rp>)</rp>
-                </ruby>は スイスのセントガレンシンポジウム、オーストリアのザルツブルグ グローバルセミナー、<ruby>中国<rp>(</rp>
-                  <rt>ちゅうごく</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>中<rp>(</rp>
-                  <rt>なか</rt>
-                  <rp>)</rp>
-                </ruby><ruby>信<rp>(</rp>
-                  <rt>しん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>証券<rp>(</rp>
-                  <rt>しょうけん</rt>
-                  <rp>)</rp>
-                </ruby>、<ruby>及<rp>(</rp>
-                  <rt>およ</rt>
-                  <rp>)</rp>
-                </ruby>びオックスフォードエネルギー<ruby>研究所<rp>(</rp>
-                  <rt>けんきゅうじょ</rt>
-                  <rp>)</rp>
-                </ruby>などの<ruby>著名<rp>(</rp>
-                  <rt>ちょめい</rt>
-                  <rp>)</rp>
-                </ruby>な <ruby>組織<rp>(</rp>
-                  <rt>そしき</rt>
-                  <rp>)</rp>
-                </ruby>と<ruby>協力<rp>(</rp>
-                  <rt>きょうりょく</rt>
-                  <rp>)</rp>
-                </ruby>して、アジアと ヨーロッパのクリーンエネルギー<ruby>経済<rp>(</rp>
-                  <rt>けいざい</rt>
-                  <rp>)</rp>
-                </ruby>および<ruby>政策<rp>(</rp>
-                  <rt>せいさく</rt>
-                  <rp>)</rp>
-                </ruby><ruby>分析<rp>(</rp>
-                  <rt>ぶんせき</rt>
-                  <rp>)</rp>
-                </ruby>に<ruby>集中<rp>(</rp>
-                  <rt>しゅうちゅう</rt>
-                  <rp>)</rp>
-                </ruby>してきました。<ruby>国際<rp>(</rp>
+                </ruby>15本以上を<ruby>発表<rt>はっぴょう</rt></ruby>し、420回以上<ruby>引用<rt>いんよう</rt></ruby>されました。3件の<ruby>中国<rt>ちゅうごく
+                  </rt>
+                </ruby><ruby>特許<rt>とっきょ</rt></ruby>を<ruby>取得<rt>しゅとく</rt></ruby>し、2件のEU<ruby>特許<rt>とっきょ</rt>
+                </ruby>を<ruby>主申請者<rt>
+                    しゅしんせいしゃ</rt></ruby>として<ruby>出願<rt>しゅつがん</rt></ruby>しました。<ruby>国連<rt>こくれん</rt></ruby><ruby>ボン<rt>ぼん
+                  </rt>
+                </ruby><ruby>気候変動<rt>きこうへんどう</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>では「<ruby>中国<rt>ちゅうごく</rt>
+                </ruby>におけるエネルギー<ruby>転換
+                  <rt>てんかん</rt>
+                </ruby>と<ruby>技術<rt>ぎじゅつ</rt></ruby><ruby>革新<rt>かくしん</rt></ruby>」を<ruby>テーマ<rt>てーま</rt>
+                </ruby>とした<ruby>分科会<rt>ぶんかかい</rt></ruby>の<ruby>議長<rt>ぎちょう</rt></ruby>を<ruby>務<rt>つと</rt>
+                </ruby>め、<ruby>国連<rt>こくれん
+                  </rt></ruby><ruby>欧州<rt>おうしゅう</rt></ruby><ruby>経済<rt>けいざい</rt></ruby><ruby>委員会<rt>いいんかい</rt>
+                </ruby>の<ruby>交通<rt>こうつう
+                  </rt></ruby>と<ruby>気候<rt>きこう</rt></ruby>に<ruby>関<rt>かん</rt></ruby>する<ruby>専門家<rt>せんもんか</rt>
+                </ruby><ruby>グループ<rt>ぐるーぷ
+                  </rt></ruby>やクリーンエネルギー<ruby>作業部会<rt>さぎょうぶかい</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>幾度<rt>いくど
+                  </rt>
+                </ruby>も<ruby>参加<rt>さんか</rt></ruby>し、<ruby>国連<rt>こくれん</rt></ruby>の<ruby>持続可能<rt>じぞくかのう</rt>
+                </ruby>な<ruby>開発<rt>かいはつ
+                  </rt></ruby><ruby>目標<rt>もくひょう</rt></ruby>（SDGs）である<ruby>第<rt>だい</rt></ruby>7<ruby>項<rt>こう</rt>
+                </ruby>「クリーンエネルギー」、<ruby>第<rt>だい</rt></ruby>9<ruby>項<rt>こう</rt></ruby>「<ruby>産業<rt>さんぎょう</rt>
+                </ruby>とイノベーション」、<ruby>第<rt>だい</rt></ruby>13<ruby>項<rt>こう</rt></ruby>「<ruby>気候変動<rt>きこうへんどう</rt>
+                </ruby><ruby>対策<rt>
+                    たいさく</rt></ruby>」を<ruby>積極的<rt>せっきょくてき</rt></ruby>に<ruby>推進<rt>すいしん</rt></ruby>しています。
+
+                <ruby>同時<rt>どうじ</rt></ruby>に、エネルギーと<ruby>交通<rt>こうつう</rt></ruby><ruby>分野<rt>ぶんや</rt></ruby>の10<ruby>誌<rt>
+                    し</rt>
+                </ruby>以上の<ruby>高<rt>こう</rt></ruby>インパクトジャーナルで<ruby>査読者<rt>さどくしゃ</rt></ruby>を<ruby>務<rt>つと</rt></ruby>め、
+                <ruby>スイス
+                  <rt>すいす</rt>
+                </ruby>の<ruby>ザンクト・ガレン<rt>ざんくと・がれん</rt></ruby><ruby>国際<rt>こくさい</rt></ruby><ruby>フォーラム<rt>ふぉーらむ</rt>
+                </ruby>では<ruby>学術<rt>がくじゅつ</rt></ruby><ruby>審査員<rt>しんさいん</rt></ruby>として<ruby>活動<rt>かつどう</rt>
+                </ruby>しています。
+
+                <ruby>更<rt>さら</rt></ruby>に、<ruby>オーストリア<rt>おーすとりあ</rt></ruby>の<ruby>ザルツブルク<rt>ざるつぶるく</rt></ruby><ruby>国際
                   <rt>こくさい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>開発<rp>(</rp>
-                  <rt>かいはつ</rt>
-                  <rp>)</rp>
-                </ruby>に<ruby>積極<rp>(</rp>
-                  <rt>せっきょく</rt>
-                  <rp>)</rp>
-                </ruby><ruby>的<rp>(</rp>
-                  <rt>てき</rt>
-                  <rp>)</rp>
-                </ruby>に<ruby>貢献<rp>(</rp>
-                  <rt>こうけん</rt>
-                  <rp>)</rp>
-                </ruby>し、<ruby>徐<rp>(</rp>
-                  <rt>じょ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>博士<rp>(</rp>
-                  <rt>はかせ</rt>
-                  <rp>)</rp>
-                </ruby>は <ruby>国連<rp>(</rp>
-                  <rt>こくれん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>欧州<rp>(</rp>
-                  <rt>おうしゅう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>経済<rp>(</rp>
-                  <rt>けいざい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>委員<rp>(</rp>
-                  <rt>いいん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>会<rp>(</rp>
-                  <rt>かい</rt>
-                  <rp>)</rp>
-                </ruby>（UNECE） の<ruby>専門<rp>(</rp>
-                  <rt>せんもん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>家<rp>(</rp>
-                  <rt>か</rt>
-                  <rp>)</rp>
-                </ruby>グループ（GE）<ruby>委員<rp>(</rp>
-                  <rt>いいん</rt>
-                  <rp>)</rp>
-                </ruby>として <ruby>活動<rp>(</rp>
-                  <rt>かつどう</rt>
-                  <rp>)</rp>
-                </ruby>し、 <ruby>国連<rp>(</rp>
-                  <rt>こくれん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>気候<rp>(</rp>
-                  <rt>きこう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>変動<rp>(</rp>
-                  <rt>へんどう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>会議<rp>(</rp>
-                  <rt>かいぎ</rt>
-                  <rp>)</rp>
-                </ruby>（UNFCC）において<ruby>並行<rp>(</rp>
-                  <rt>へいこう</rt>
-                  <rp>)</rp>
-                </ruby>セッションを<ruby>主催<rp>(</rp>
-                  <rt>しゅさい</rt>
-                  <rp>)</rp>
-                </ruby>し <ruby>国連<rp>(</rp>
-                  <rt>こくれん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>持続<rp>(</rp>
-                  <rt>じぞく</rt>
-                  <rp>)</rp>
-                </ruby><ruby>可能<rp>(</rp>
-                  <rt>かのう</rt>
-                  <rp>)</rp>
-                </ruby>な<ruby>開発<rp>(</rp>
-                  <rt>かいはつ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>目標<rp>(</rp>
-                  <rt>もくひょう</rt>
-                  <rp>)</rp>
-                </ruby>（SDGs）7 (<ruby>手頃<rp>(</rp>
-                  <rt>てごろ</rt>
-                  <rp>)</rp>
-                </ruby>なエネルギー)、 9（<ruby>産業<rp>(</rp>
-                  <rt>さんぎょう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>革新<rp>(</rp>
-                  <rt>かくしん</rt>
-                  <rp>)</rp>
-                </ruby>）, および 13 (<ruby>気候<rp>(</rp>
-                  <rt>きこう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>行動<rp>(</rp>
-                  <rt>こうどう</rt>
-                  <rp>)</rp>
-                </ruby>)を<ruby>擁護<rp>(</rp>
-                  <rt>ようご</rt>
-                  <rp>)</rp>
-                </ruby>しました。<br><br><ruby>心<rp>(</rp>
-                  <rt>こころ</rt>
-                  <rp>)</rp>
-                </ruby>から<ruby>学者<rp>(</rp>
-                  <rt>がくしゃ</rt>
-                  <rp>)</rp>
-                </ruby>であり、<ruby>再生<rp>(</rp>
-                  <rt>さいせい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>可能<rp>(</rp>
-                  <rt>かのう</rt>
-                  <rp>)</rp>
-                </ruby>エネルギー<ruby>分野<rp>(</rp>
-                  <rt>ぶんや</rt>
-                  <rp>)</rp>
-                </ruby>でチューリッヒ<ruby>工科<rp>(</rp>
-                  <rt>こうか</rt>
-                  <rp>)</rp>
-                </ruby><ruby>大学<rp>(</rp>
-                  <rt>だいがく</rt>
-                  <rp>)</rp>
-                </ruby>で<ruby>博士<rp>(</rp>
-                  <rt>はかせ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>号<rp>(</rp>
-                  <rt>ごう</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>取得<rp>(</rp>
-                  <rt>しゅとく</rt>
-                  <rp>)</rp>
-                </ruby>し、スイスのポール・シェラー<ruby>研究所<rp>(</rp>
-                  <rt>けんきゅうじょ</rt>
-                  <rp>)</rp>
-                </ruby>と<ruby>協力<rp>(</rp>
-                  <rt>きょうりょく</rt>
-                  <rp>)</rp>
-                </ruby>しました。 その<ruby>前<rp>(</rp>
-                  <rt>まえ</rt>
-                  <rp>)</rp>
-                </ruby>に、 <ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>はミュンヘン<ruby>工科<rp>(</rp>
-                  <rt>こうか</rt>
-                  <rp>)</rp>
-                </ruby><ruby>大学<rp>(</rp>
-                  <rt>だいがく</rt>
-                  <rp>)</rp>
-                </ruby>で<ruby>材料<rp>(</rp>
-                  <rt>ざいりょう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>科学<rp>(</rp>
-                  <rt>かがく</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>修士<rp>(</rp>
-                  <rt>しゅうし</rt>
-                  <rp>)</rp>
-                </ruby><ruby>号<rp>(</rp>
-                  <rt>ごう</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>取得<rp>(</rp>
-                  <rt>しゅとく</rt>
-                  <rp>)</rp>
-                </ruby>し、<ruby>欧州<rp>(</rp>
-                  <rt>おうしゅう</rt>
-                  <rp>)</rp>
-                </ruby>X<ruby>線<rp>(</rp>
-                  <rt>せん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>自由<rp>(</rp>
-                  <rt>じゆう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>電子<rp>(</rp>
-                  <rt>でんし</rt>
-                  <rp>)</rp>
-                </ruby>レーザー<ruby>会社<rp>(</rp>
-                  <rt>かいしゃ</rt>
-                  <rp>)</rp>
-                </ruby>およびインフィニオンでインターンシップを<ruby>行<rp>(</rp>
+                </ruby><ruby>会議<rt>かいぎ</rt></ruby><ruby>渡航<rt>とこう</rt></ruby><ruby>奨学金<rt>しょうがくきん</rt></ruby>、<ruby>米国
+                  <rt>べいこく</rt>
+                </ruby><ruby>電気<rt>でんき</rt></ruby><ruby>化学会<rt>かがくかい</rt></ruby>による<ruby>論文<rt>ろんぶん</rt></ruby><ruby>招待
+                  <rt>しょうたい
+                  </rt>
+                </ruby>および<ruby>渡航<rt>とこう</rt></ruby><ruby>補助<rt>ほじょ</rt></ruby>、EU<ruby>エラスムス<rt></rt>
+                </ruby><ruby>奨学金
+                  <rt>しょうがくきん</rt>
+                </ruby>、「チャレンジカップ」<ruby>全国<rt>ぜんこく</rt></ruby><ruby>起業<rt>きぎょう</rt></ruby><ruby>大会<rt>たいかい</rt>
+                </ruby><ruby>銅賞<rt>どうしょう</rt></ruby>などを<ruby>受賞<rt>じゅしょう</rt></ruby>しました。
+                <br><br>
+                2021<ruby>年<rt>ねん</rt></ruby><ruby>初頭<rt>しょとう</rt></ruby>にチューリッヒ<ruby>工科大学<rt>こうかだいがく</rt>
+                </ruby>で<ruby>博士号<rt>はくしごう
+                  </rt></ruby>を<ruby>取得<rt>しゅとく</rt></ruby>し、 <ruby>学士<rt>がくし</rt></ruby>・<ruby>修士<rt>しゅうし</rt>
+                </ruby>・<ruby>博士課程<rt>
+                    はくしかてい</rt></ruby>を<ruby>通<rt>とお</rt></ruby>して<ruby>新<rt>しん</rt></ruby>エネルギーとカーボンニュートラル<ruby>分野<rt>
+                    ぶんや</rt>
+                </ruby>に<ruby>焦点<rt>しょうてん</rt></ruby>を<ruby>当<rt>あ</rt></ruby>てた<ruby>研究<rt>けんきゅう</rt></ruby>を<ruby>行
                   <rt>おこな</rt>
-                  <rp>)</rp>
-                </ruby>いました。 <ruby>影響<rp>(</rp>
-                  <rt>えいきょう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>力<rp>(</rp>
-                  <rt>りょく</rt>
-                  <rp>)</rp>
-                </ruby>のある<ruby>研究<rp>(</rp>
-                  <rt>けんきゅう</rt>
-                  <rp>)</rp>
-                </ruby>に<ruby>対<rp>(</rp>
-                  <rt>たい</rt>
-                  <rp>)</rp>
-                </ruby>する<ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>情熱<rp>(</rp>
-                  <rt>じょうねつ</rt>
-                  <rp>)</rp>
-                </ruby>は、<ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>日本<rp>(</rp>
-                  <rt>にっぽん</rt>
-                  <rp>)</rp>
-                </ruby>のトヨタ<ruby>自動車<rp>(</rp>
-                  <rt>じどうしゃ</rt>
-                  <rp>)</rp>
-                </ruby>やドイツのフロイデンベルクグループなどの<ruby>水素<rp>(</rp>
-                  <rt>すいそ</rt>
-                  <rp>)</rp>
-                </ruby>および<ruby>燃料<rp>(</rp>
-                  <rt>ねんりょう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>電池<rp>(</rp>
-                  <rt>でんち</rt>
-                  <rp>)</rp>
-                </ruby><ruby>産業<rp>(</rp>
-                  <rt>さんぎょう</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>業界<rp>(</rp>
-                  <rt>ぎょうかい</rt>
-                  <rp>)</rp>
-                </ruby> リーダーとの<ruby>長期<rp>(</rp>
-                  <rt>ちょうき</rt>
-                  <rp>)</rp>
-                </ruby><ruby>的<rp>(</rp>
-                  <rt>てき</rt>
-                  <rp>)</rp>
-                </ruby>な<ruby>関係<rp>(</rp>
-                  <rt>かんけい</rt>
-                  <rp>)</rp>
-                </ruby>へと<ruby>導<rp>(</rp>
-                  <rt>みちび</rt>
-                  <rp>)</rp>
-                </ruby>きました。 <ruby>学際<rp>(</rp>
-                  <rt>がくさい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>的<rp>(</rp>
-                  <rt>てき</rt>
-                  <rp>)</rp>
-                </ruby>な<ruby>視野<rp>(</rp>
-                  <rt>しや</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>追求<rp>(</rp>
-                  <rt>ついきゅう</rt>
-                  <rp>)</rp>
-                </ruby>し、<ruby>彼<rp>(</rp>
-                  <rt>かれ</rt>
-                  <rp>)</rp>
-                </ruby>は<ruby>経営<rp>(</rp>
-                  <rt>けいえい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>学修<rp>(</rp>
-                  <rt>がくしゅう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>士<rp>(</rp>
-                  <rt>し</rt>
-                  <rp>)</rp>
-                </ruby>をクアンティック ビジネス スクールで<ruby>取得<rp>(</rp>
-                  <rt>しゅとく</rt>
-                  <rp>)</rp>
-                </ruby>し、 ケンブリッジ<ruby>大学<rp>(</rp>
-                  <rt>だいがく</rt>
-                  <rp>)</rp>
-                </ruby>ビジネススクールで<ruby>追加<rp>(</rp>
-                  <rt>ついか</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>経営<rp>(</rp>
-                  <rt>けいえい</rt>
-                  <rp>)</rp>
-                </ruby><ruby>教育<rp>(</rp>
-                  <rt>きょういく</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>受<rp>(</rp>
-                  <rt>う</rt>
-                  <rp>)</rp>
-                </ruby>け、 <ruby>中国<rp>(</rp>
-                  <rt>ちゅうごく</rt>
-                  <rp>)</rp>
-                </ruby>の<ruby>二<rp>(</rp>
-                  <rt>に</rt>
-                  <rp>)</rp>
-                </ruby><ruby>重<rp>(</rp>
-                  <rt>じゅう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>通貨<rp>(</rp>
-                  <rt>つうか</rt>
-                  <rp>)</rp>
-                </ruby>ベンチャーキャピタル<ruby>会社<rp>(</rp>
-                  <rt>かいしゃ</rt>
-                  <rp>)</rp>
-                </ruby>と<ruby>主要<rp>(</rp>
-                  <rt>しゅよう</rt>
-                  <rp>)</rp>
-                </ruby><ruby>証券<rp>(</rp>
-                  <rt>しょうけん</rt>
-                  <rp>)</rp>
-                </ruby><ruby>会社<rp>(</rp>
-                  <rt>かいしゃ</rt>
-                  <rp>)</rp>
-                </ruby>で<ruby>実務<rp>(</rp>
-                  <rt>じつむ</rt>
-                  <rp>)</rp>
-                </ruby><ruby>経験<rp>(</rp>
+                </ruby>ってきました。
+
+                これまでに、<ruby>スイス<rt></rt></ruby><ruby>連邦<rt>れんぽう</rt></ruby>PSI<ruby>研究所<rt>けんきゅうじょ</rt>
+                </ruby>、<ruby>オックスフォード<rt>
+                  </rt></ruby>・エネルギー<ruby>研究所<rt>けんきゅうじょ</rt></ruby>、<ruby>ミュンヘン<rt></rt>
+                </ruby><ruby>工科大学<rt>こうかだいがく
+                  </rt></ruby>、<ruby>パリ<rt></rt></ruby><ruby>工科大学<rt>こうかだいがく</rt></ruby>、EU<ruby>自由電子<rt>じゆうでんし</rt>
+                </ruby>レーザー<ruby>施設<rt>しせつ</rt></ruby>などの<ruby>国際<rt>こくさい</rt></ruby><ruby>機関<rt>きかん</rt>
+                </ruby>で<ruby>勤務<rt>きんむ
+                  </rt></ruby>およびインターンを<ruby>経験<rt>けいけん</rt></ruby>し、<ruby>トヨタ自動車<rt>とよたじどうしゃ</rt></ruby>、<ruby>インフィニオン
+                  <rt>
+                  </rt>
+                </ruby><ruby>半導体<rt>はんどうたい</rt></ruby>、<ruby>フロイデンベルク<rt></rt></ruby>・<ruby>エレクトリックシステム
+                  <rt>
+                  </rt>
+                </ruby>、<ruby>ヘレウス<rt></rt></ruby><ruby>貴金属<rt>ききんぞく</rt></ruby>などの<ruby>多国籍<rt>たこくせき</rt>
+                </ruby><ruby>企業
+                  <rt>きぎょう</rt>
+                </ruby>との<ruby>共同<rt>きょうどう</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>・<ruby>実務<rt>じつむ</rt></ruby><ruby>経験
                   <rt>けいけん</rt>
-                  <rp>)</rp>
-                </ruby>を<ruby>積<rp>(</rp>
-                  <rt>つ</rt>
-                  <rp>)</rp>
-                </ruby>みました。<br>
+                </ruby>を<ruby>有<rt>ゆう</rt></ruby>しています。
+
+                <ruby>更<rt>さら</rt></ruby>に、<ruby>フランス<rt></rt></ruby><ruby>技術者学院<rt>ぎじゅつしゃがくいん</rt>
+                </ruby>のMBA<ruby>プログラム<rt>
+                  </rt></ruby>に<ruby>全額<rt>ぜんがく</rt></ruby><ruby>奨学金<rt>しょうがくきん</rt></ruby>で<ruby>合格<rt>ごうかく</rt>
+                </ruby>し、<ruby>サンタンデール銀行<rt>さんたんでーるぎんこう</rt></ruby>の<ruby>支援<rt>しえん</rt></ruby>を<ruby>受<rt>う</rt>
+                </ruby>けてケンブリッジ<ruby>大学<rt>だいがく</rt></ruby><ruby>ビジネススクール<rt></rt>
+                </ruby>で「グリーントランスフォーメーション」に<ruby>関
+                  <rt>かん</rt>
+                </ruby>する<ruby>経営<rt>けいえい</rt></ruby><ruby>管理<rt>かんり</rt></ruby><ruby>コース<rt>こーす</rt></ruby>を<ruby>履修
+                  <rt>
+                    りしゅう</rt>
+                </ruby>。
+
+                また、トップ<ruby>証券<rt>しょうけん</rt></ruby><ruby>研究所<rt>けんきゅうじょ</rt></ruby>にて「A<ruby>株<rt>かぶ</rt>
+                </ruby>および<ruby>米国株<rt>べいこくかぶ
+                  </rt></ruby>」の<ruby>個別<rt>こべつ</rt></ruby><ruby>企業<rt>きぎょう</rt></ruby>に<ruby>関<rt>かん</rt>
+                </ruby>する<ruby>深掘<rt>ふかぼ
+                  </rt></ruby>りレポートを<ruby>執筆<rt>しっぴつ</rt></ruby>し、デュアルカレンシーファンドにて「シード<ruby>期<rt>き</rt>
+                </ruby>からシリーズA」に<ruby>至<rt>いた
+                  </rt></ruby>る<ruby>新<rt>しん</rt></ruby>エネルギー<ruby>分野<rt>ぶんや</rt></ruby>の<ruby>ベンチャー<rt>べんちゃー</rt>
+                </ruby><ruby>投資<rt>
+                    とうし</rt></ruby><ruby>業務<rt>ぎょうむ</rt></ruby>にも<ruby>従事<rt>じゅうじ</rt></ruby>しました。
+
 
               </p>
 
@@ -1147,7 +782,10 @@
             </div>
             <hr>
             <p style="text-align:left;">
-              PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
+              PEK (NǐHǎo/ニーハオ)➔ CDG (Bonjour/ボンジュール)➔ HAM (MoinMoin/モインモイン)➔ MUC (Servus/ゼルヴス)➔ ZRH (Grüezi/グリュエツィ)➔ LHR
+              (Hello/ハロー)➔ TRN
+              (Ciao/チャオ)➔ FRA
+              (Ei Gude/アイグーデ)➔ ?
 
             </p>
             <br>
@@ -1183,6 +821,206 @@
                 </video>
                 <div class="subtitle-display"></div>
               </div>
+            </div>
+
+
+            <h1 class="mb-4">
+              推薦書
+            </h1>
+            <hr>
+            <br>
+
+            <div class="component">
+
+              <ul class="align">
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign yellow">
+                          <span class="ribbon">執筆中</span>
+                          <h1>ヨーロッパ</h1>
+                          <p>ヨーロッパへの反対</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ダウンロード</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>欧州、自己との闘争</h5>
+                      <span>Helios Xu</span>
+                      <p>現在執筆中、ご期待ください！</p>
+                    </figcaption>
+                  </figure>
+
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign blue">
+                          <span class="ribbon">執筆中</span>
+                          <h2>欧州滞在十年</h2>
+                          <p>博士変身記</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ダウンロード</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>留欧十年：博士変形記</h5>
+                      <span>Helios Xu</span>
+                      <p>現在執筆中、ご期待ください！</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <!-- <span class="ribbon">推薦</span> -->
+                        <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ダウンロード</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>有限と無限のゲーム</h5>
+                      <span>[米] ジェームズ・カーシュ</span>
+                      <p>哲学者の目に映る競技の世界：世の中には二種類のゲームがあり、誰も一人ではゲームをすることはできない</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ダウンロード</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>昨日の世界</h5>
+                      <span>[墺] シュテファン・ツヴァイク</span>
+                      <p>第一次世界大戦前夜から第二次世界大戦危機まで：19世紀末ウィーンの若きヨーロッパ学生の回想</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+
             </div>
 
 
@@ -1288,6 +1126,17 @@
             &nbsp;
             <div class="section-title">
               <h2>関連リンク</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-address-card"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://cdi.eu/fellows.html" target="_blank">フランス・エンジニア学院 <i
+                      class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">MBA奨学生</span>
+                </div>
+              </div>
             </div>
 
             <div class="trend-entry d-flex">

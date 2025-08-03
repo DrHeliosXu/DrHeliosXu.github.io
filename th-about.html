@@ -41,6 +41,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
   <link rel="stylesheet" href="./css/style_podcast.css">
 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/book.css" />
+  <script src="js/modernizr.custom.js"></script>
 
   <style>
     body {
@@ -55,6 +58,25 @@
       font-weight: bold;
     }
   </style>
+
+  <style>
+    .align {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .align>li {
+      flex: 0 0 45%;
+      margin: 2%;
+      box-sizing: border-box;
+    }
+  </style>
+
 
   <style>
     button {
@@ -419,118 +441,99 @@
             <hr>
             <div id="story-container" class="story horizontal-layout">
               <p id="thai-content" align="justify" style="display: block;">
-                ปัจจุบัน ดร. หง ซู เป็น <text>นักวิจัย</text> และ <text>วิศวกร</text> ที่ทุ่มเท
-                โดยเชี่ยวชาญใน
-                <text>พลังงานทดแทน</text> และ <text>ระบบพลังงานไฟฟ้า</text> มุ่งมั่นเพื่อ
-                ประสิทธิภาพสูงสุด
-                และ
-                การทำให้เป็นกลางทางคาร์บอนในภาคพลังงานและการขนส่ง ตลอดระยะเวลา 10 ปีที่ผ่านมา เขาได้ร่วมงานกับ
-                บริษัทข้ามชาติและสถาบันชั้นนำทั่วทวีปยูเรเซีย ขับเคลื่อนความก้าวหน้าทางเทคนิคในอุตสาหกรรม
-                <text>การเคลื่อนย้ายด้วยไฟฟ้า</text>, <text>พลังงานสะอาด</text>, และ <text>วัสดุใหม่</text>
-                โดยมี <text><span class="no_of_papers"></span> บทความ</text> ที่ตีพิมพ์และ
-                <text><span class="no_of_patents"></span> สิทธิบัตร</text> ที่ได้รับการอนุมัติ นอกจากนี้
-                ในขณะที่เขาทำงานวิศวกรรม
-                เขายังได้มีส่วนร่วมกับองค์กรที่มีชื่อเสียง เช่น
-                สัมมนาเซนต์กัลเลน, สัมมนาโลกซัลซ์เบิร์ก, บริษัทหลักทรัพย์ ซีไอทีซี และ
-                สถาบันออกซ์ฟอร์ดเพื่อการศึกษาด้านพลังงาน โดยมุ่งเน้นการวิเคราะห์เศรษฐศาสตร์และ
-                นโยบายพลังงานสะอาดในภูมิภาคเอเชียและยุโรป ในฐานะผู้มีส่วนร่วมที่กระตือรือร้นใน
-                การพัฒนาระดับนานาชาติ ดร. ซู ได้ดำรงตำแหน่งสมาชิกกลุ่มผู้เชี่ยวชาญ (GE) ที่
-                <text><a href="https://unece.org/"
-                    target="_blank">คณะกรรมาธิการเศรษฐกิจแห่งสหประชาชาติสำหรับยุโรป</a></text> (UNECE)
-                ที่เจนีวา และเป็นประธานในเซสชั่นขนานที่
-                <text><a href="https://unfccc.int/"
-                    target="_blank">การประชุมการเปลี่ยนแปลงสภาพภูมิอากาศของสหประชาชาติ</a></text>
-                (UNFCCC)
-                ที่บอนน์
-                โดยสนับสนุน <text><a href="https://sdgs.un.org/goals"
-                    target="_blank">เป้าหมายการพัฒนาอย่างยั่งยืนของสหประชาชาติ</a></text> (SDGs) <text>7 </text>
-                (พลังงานที่สามารถเข้าถึงได้), <text>9</text> (นวัตกรรมอุตสาหกรรม),
-                และ <text>13 </text> (การดำเนินการเพื่อสภาพภูมิอากาศ) .
+                ที่จุดตัดระหว่างนวัตกรรมและธุรกิจ ดร. หง ซู (Dr. Hong Xu) ทำหน้าที่เป็นวิศวกรวิจัยและพัฒนา (R&D
+                Engineer)
+                และที่ปรึกษา
+                MBA
+                ที่มีความเชี่ยวชาญด้าน
+                พลังงานทดแทนและวัสดุใหม่ มุ่งมั่นสู่ความเป็นเลิศด้านประสิทธิภาพและความเป็นกลางทางคาร์บอน ตลอด
+                10 ปีที่ผ่านมา เขาได้ร่วมมือกับบริษัทข้ามชาติและ
+                สถาบันชั้นนำในยุโรปและจีน จนนำไปสู่ <span class="no_of_papers"></span>
+                งานตีพิมพ์ในสาขาวัสดุและ
+                พลังงาน รวมถึง <span class="no_of_patents_sum"></span>
+                สิทธิบัตร
+                ที่จดทะเบียนกับ <a href="https://www.epo.org/en" target="_blank">สำนักงานสิทธิบัตรยุโรป</a>
+                และ <a href="https://english.cnipa.gov.cn/" target="_blank">สำนักงานทรัพย์สินทางปัญญาของจีน</a>
+                นอกจากการทำงานด้านวิศวกรรมแล้ว เขายังมีส่วนร่วมกับสถาบันความคิดชั้นนำ เช่น การประชุมสัมมนาสต็อกกอล์น
+                (สมาคมสต็อกกอล์น),
+                ซาลซ์บูร์ก โกลบอล, และ สถาบันศึกษาพลังงานแห่งมหาวิทยาลัยอ๊อกซ์ฟอร์ด โดยเน้นการวิเคราะห์เศรษฐศาสตร์
+                และนโยบายพลังงานสะอาดในเอเชียและยุโรป ในฐานะผู้มีส่วนร่วมเชิงรุกในการพัฒนาระหว่างประเทศ ดร. ซู
+                เคยดำรงตำแหน่งสมาชิกคณะผู้เชี่ยวชาญ (Group of Experts) ที่ <a href="https://unece.org/"
+                  target="_blank">คณะกรรมาธิการเศรษฐกิจแห่งสหประชาชาติเพื่อยุโรป</a> (UNECE) ณ กรุงเจนีวา
+                และเป็นประธานการประชุมกลุ่มย่อยใน <a href="https://unfccc.int/"
+                  target="_blank">การประชุมสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ</a> (UNFCCC) ที่เมืองบอนน์
+                สนับสนุน <a href="https://sdgs.un.org/goals"
+                  target="_blank">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</a> ได้แก่ 7
+                (พลังงานที่เข้าถึงได้และราคาไม่แพง), 9 (อุตสาหกรรมนวัตกรรม) และ 13
+                (การรับมือการเปลี่ยนแปลงสภาพภูมิอากาศ)
+
                 <br><br>
-                ในฐานะนักวิชาการ ดร. ซู ได้ศึกษาปริญญาเอกในสาขา <text>พลังงานทดแทน</text> จาก <text><a
-                    href="https://ethz.ch/en.html" target="_blank">สถาบันเทคโนโลยีแห่งสหพันธ์สวิส ซือริช</a></text>
-                ร่วมกับ
-                <text><a href="https://psi.ch" target="_blank">สถาบันพอล เชอเรอร์</a></text> ในประเทศสวิสเซอร์แลนด์
-                ก่อนหน้านี้เขา
-                ได้รับปริญญาโทสาขาวิทยาศาสตร์วัสดุจาก <text><a href="https://tum.de"
-                    target="_blank">มหาวิทยาลัยเทคนิคมิวนิก
-                  </a></text> พร้อมฝึกงานที่ <text><a href="https://xfel.eu"
-                    target="_blank">โรงงานเลเซอร์อิเล็กตรอนอิสระเอกซเรย์แห่งยุโรป</a></text> และ <text><a
-                    href="https://infineon.com" target="_blank">อินฟิเนียน เทคโนโลยี</a></text>
-                ในประเทศเยอรมนี ความหลงใหลในงานวิจัยที่มีผลกระทบสำคัญทำให้เขามีส่วนร่วมอย่างยาวนานกับผู้นำในอุตสาหกรรม
-                ไฮโดรเจนและเซลล์เชื้อเพลิง รวมถึง <text>โตโยต้า</text> ในประเทศญี่ปุ่นและ
-                <text>กลุ่มฟรอยเดนเบิร์ก</text>
-                ในประเทศเยอรมนี ในการแสวงหาขอบเขตข้ามสาขา เขาได้รับการศึกษาฝึกอบรมจาก <text><a
-                    href="https://www.jbs.cam.ac.uk/" target="_blank">โรงเรียนธุรกิจ Judge
-                    แห่งมหาวิทยาลัยเคมบริดจ์</a></text>
-                และได้รับประสบการณ์จากบริษัทเงินทุนร่วมลงทุนในสกุลเงินสองสกุลและบริษัทหลักทรัพย์ชั้นนำใน
-                ประเทศจีน
+
+                ในฐานะนักวิชาการที่แท้จริง เขาได้ศึกษาต่อระดับปริญญาเอกสาขาพลังงานทดแทนที่ <a
+                  href="https://ethz.ch/en.html" target="_blank">สถาบันเทคโนโลยีแห่งชาติสวิสเซอร์แลนด์ เมืองซูริค (ETH
+                  ซูริค)</a> ร่วมกับ <a href="https://psi.ch" target="_blank">สถาบันพอล เชอร์เรอร์</a>
+                ในประเทศสวิตเซอร์แลนด์ ก่อนหน้านั้น เขาได้รับปริญญาโทสาขาวิทยาศาสตร์วัสดุจาก
+                <a href="https://tum.de" target="_blank">มหาวิทยาลัยเทคนิคมิวนิก</a> พร้อมฝึกงานที่ <a
+                  href="https://xfel.eu" target="_blank">แหล่งรังสีเอกซ์ยุโรป</a>, <a href="https://infineon.com"
+                  target="_blank">อินฟินิออน</a> และ <a href="https://ecoledesponts.fr/"
+                  target="_blank">สถาบันโพลีเทคนิคแห่งปารีส</a>
+
+                ความหลงใหลในงานวิจัยที่มีผลกระทบทำให้เขามีความสัมพันธ์ระยะยาวกับผู้นำในอุตสาหกรรมไฮโดรเจนและเซลล์เชื้อเพลิง
+                ได้แก่
+                TOYOTA Motor และ
+                กลุ่มบริษัท
+                Freudenberg ในการแสวงหาความรู้แบบสหสาขาวิชา เขาได้รับทุน MBA ที่ <a
+                  href="https://cdi.eu/mba/mba-for-engineers-and-scientists.html"
+                  target="_blank">โรงเรียนวิศวกรแห่งปารีส</a> และ
+                สำเร็จหลักสูตรบริหารระดับสูงที่ <a href="https://www.jbs.cam.ac.uk/"
+                  target="_blank">โรงเรียนบริหารธุรกิจเคมบริดจ์ จัดจ์</a> โดยได้รับทุน Santander
+                พร้อมทั้งได้รับประสบการณ์จริงที่
+                MiraclePlus Venture
+                Capital และ CITIC Securities
+
               </p>
 
 
               <p id="laos-content" align="justify" style="display: none;">
-                ປະຈຸບັນ, ທ່ານດຣ ຫົງຊູ ເປັນ <text>ນັກຄົ້ນຄວ້າ</text> ແລະ <text>ວິສະວະກອນ</text> ທີ່ອຸທິດຕົນ,
-                ຊ່ຽວຊານໃນ
-                <text>ພະລັງງານທົດແທນ</text> ແລະ <text>ລະບົບໄຟຟ້າ e-Power</text>, ພະຍາຍາມເພື່ອປະສິດທິພາບ
-                ເລີດແລະ
-                ຄວາມເປັນກາງຂອງຄາບອນພາຍໃນຂະແໜງພະລັງງານ ແລະ ການຂົນສົ່ງ. ໃນໄລຍະ 10 ປີທີ່ຜ່ານມາ, ລາວໄດ້ເຮັດວຽກ
-                ກັບ
-                ບໍລິສັດຂ້າມຊາດແລະສະຖາບັນຊັ້ນນໍາໃນທົ່ວທະວີບ Eurasian, ຂັບລົດ
-                ດ້ານວິຊາການ
-                ຄວາມກ້າວໜ້າໃນ <text>e-Mobility</text>, <text>ພະລັງງານສະອາດ</text> ແລະ <text>ໃໝ່
-                  ວັດສະດຸ</text>
-                ອຸດສາຫະກໍາທີ່ມີ <text><span class="no_of_papers"></span> ເອກະສານ</text> ຈັດພີມມາແລະ
-                <text><span class="no_of_patents"></span>
-                  ສິດທິບັດ</text> ໄດ້ຮັບ. ຄຽງຂ້າງລາວ
-                pursuits ວິສະວະກໍາ, ລາວມີ
-                ມີສ່ວນຮ່ວມກັບອົງການຈັດຕັ້ງທີ່ມີຊື່ສຽງ, ໂດຍສະເພາະ St. Gallen Symposium, Salzburg Global
-                ສໍາມະນາ, CITIC
-                ຫຼັກຊັບ,
-                ແລະ Oxford Institute for Energy Studies, ສຸມໃສ່ Clean <text>Energy Economics ແລະ
-                  ນະໂຍບາຍ</text> ການວິເຄາະ
-                ໃນ​ອາ​ຊີ​ແລະ​
-                ເອີຣົບ. ​ໃນ​ຖານະ​ທີ່​ເປັນ​ຜູ້​ປະກອບສ່ວນ​ຢ່າງ​ຕັ້ງໜ້າ​ເຂົ້າ​ໃນ​ການ​ພັດທະນາ​ສາກົນ, ທ່ານ​ດຣ
-                ເປັນກຸ່ມຂອງ
-                ຜູ້ຊ່ຽວຊານ (GE)
-                ສະມາຊິກຢູ່
-                <text><a href="https://unece.org/" target="_blank">ຄະນະກຳມາທິການເສດຖະກິດຂອງສະຫະປະຊາຊາດ
-                    ສໍາລັບເອີຣົບ</a></text> (UNECE) ໃນເຈນີວາ, ແລະເປັນປະທານກອງປະຊຸມຂະຫນານທີ່
-                <text><a href="https://unfccc.int/" target="_blank">ການປ່ຽນແປງດິນຟ້າອາກາດຂອງສະຫະປະຊາຊາດ
-                    ກອງປະຊຸມ</a></text> (UNFCCC)
-                ໃນ Bonn,
-                ສະໜັບສະໜູນ <text><a href="https://sdgs.un.org/goals" target="_blank">UN
-                    ຍືນຍົງ
-                    ການພັດທະນາ
-                    ເປົ້າໝາຍ</a></text> (SDGs) <text>7 </text>(ພະລັງງານທີ່ສາມາດຊື້ໄດ້), <text>9
-                </text>(ອຸດສາຫະກຳ
-                ນະວັດຕະກໍາ),
-                ແລະ
-                <text>13 </text>(ການປະຕິບັດສະພາບອາກາດ).
+                ຢູ່ໃນຈຸດຕັ້ງຂອງນິ້ວເປັນແລະທຸລະກິດ, ດຣ. ຫົງ ຊູ ດໍາເນີນວຽກເປັນວິສະວະກຳອອກແບບ ແລະ ທີມທີ່ປຶກສາ MBA
+                ເຊິ່ງມີຄວາມຊ້ອນຊື້ນໃນພາລະກິດພະລັງງານທີ່ສາມາດຕິດຕັ້ງໄດ້ໃໝ່ ແລະ ວັດຖຸດິນໃໝ່,
+                ມຸ່ງຫມັ້ນທີ່ຈະພັດທະນາປະສິດທິພາບແລະການບໍ່ມີການປ່ອຍກາຣ້າຍການຄາດຄະເນອາກາດອາການ. ໃນກອງມະຫາສົບ 10 ປີຜ່ານມາ,
+                ທ່ານໄດ້ຮ່ວມງານກັບບໍລິສັດລາວປະເທດຫຼາຍແລະສູນກາງຊັ້ນນຳໃນອາຍຸເພດຢູ່ຢູ່ຢູ່ໂຣບແລະຈີນ, ເຮັດໃຫ້ມີຜົນງານລາຍງານ
+                <span class="no_of_papers"></span> ການຕີພິມໃນສາຂາວັດຖຸດິນແລະພາລະກິດພະລັງງານ, ແລະມີສິດທິ <span
+                  class="no_of_patents_sum"></span> ທີ່ຖືກຂໍທີ່ <a href="https://www.epo.org/en"
+                  target="_blank">ອົງການສິດທິຢູ່ອາຍຸເພດ
+                  (EPO)</a> ແລະ <a href="https://english.cnipa.gov.cn/" target="_blank">ອົງການສິດທິຈີນ (CNIPA)</a>.
+                ນອກຈາກງານວິສະວະກຳ,
+                ທ່ານໄດ້ມີການມີສ່ວນຮ່ວມກັບສະຖາບັນຄິດເຫັນຊື່ດັງ, ເຊັ່ນ <em>ການປະຊຸມສະຫຼຸບ St. Gallen</em>, <em>Salzburg
+                  Global</em>, ແລະ
+                <em>ສະຖາບັນອອກສະຫຼະເພື່ອການສຶກສາພາລະກິດພະລັງງານ Oxford</em>,
+                ມຸ່ງເນັ້ນເພື່ອການວິເຄາະເລກທຶນແລະນະໂຍບາຍການພາລະກິດພະລັງງານສະອາດໃນອາເຊຍ ແລະ ໂຣບ.
+                ດ້ວຍການເປັນຜູ້ມີສ່ວນຮ່ວມໃນການພັດທະນາສາກົນ, ດຣ. ຊູ ເຄີຍເປັນສະມາຊິກກຸ່ມຜູ້ເຊື່ອມໂຍງຄວາມຮູ້ (GE) ທີ່ <a
+                  href="https://unece.org/" target="_blank">ຄະນະກຳມະການເສດຖະກິດຂອງອົງການສະຫະພາບອາຍຸເພດ (UNECE)</a>
+                ໃນຈິນີວາ,
+                ແລະເປັນປະທານການປະຊຸມພາກຍ່ອຍທີ່ <a href="https://unfccc.int/" target="_blank">ການປ່ຽນແປງສະພາບອາກາດໂລກ UN
+                  (UNFCCC)</a>
+                ໃນເມືອງບອນ, ສະໜັບສະໜູນເພື່ອ <a href="https://sdgs.un.org/goals" target="_blank">ເປົ້າໝາຍການພັດທະນາຍືນຍົງ
+                  UN (SDGs)</a>:
+                ເລກ 7 (ພາລະກິດພະລັງງານທີ່ສາມາດຈ່າຍໄດ້), 9 (ນິວເຕີເຊີນອຸດສາຫະກຳ), ແລະ 13 (ການດໍາເນີນການກັບຄືນສະພາບອາກາດ).
                 <br><br>
-                ນັກວິຊາການດ້ວຍຫົວໃຈ, ລາວໄດ້ຮຽນປະລິນຍາເອກໃນ <text>ພະລັງງານທົດແທນ</text> ຈາກ <text><a
-                    href="https://ethz.ch/en.html" target="_blank">ETH Zurich</a></text>, ໂດຍການຮ່ວມມືກັບ
-                <text><a href="https://psi.ch" target="_blank">ສະຖາບັນ Paul Scherrer</a></text> ໃນ
-                ສະວິດເຊີແລນ. ກ່ອນ​ໜ້າ​ນັ້ນ, ລາວ
-                ໄດ້ຮັບ MSc ໃນວິທະຍາສາດວັດສະດຸຈາກ <text><a href="https://tum.de" target="_blank">Technical
-                    ມະຫາວິທະຍາໄລ
-                    Munich</a></text> ດ້ວຍການຝຶກງານຢູ່ທີ່ <text><a href="https://xfel.eu" target="_blank">ເອີຣົບ
-                    XFEL</a></text> ແລະ <text><a href="https://infineon.com" target="_blank">Infineon</a></text>
-                ໃນ
-                ເຢຍລະມັນ.
-                ຄວາມກະຕືລືລົ້ນຂອງລາວສໍາລັບການຄົ້ນຄວ້າທີ່ມີຜົນກະທົບໄດ້ເຮັດໃຫ້ການມີສ່ວນພົວພັນໃນໄລຍະຍາວກັບອຸດສາຫະກໍາ
-                ຜູ້ນໍາ
-                ໃນ
-                ຈຸລັງໄຮໂດເຈນ ແລະນໍ້າມັນເຊື້ອໄຟ, ລວມທັງ <text>Toyota Motor</text> ໃນປະເທດຍີ່ປຸ່ນ ແລະ
-                <text>Freudenberg
-                  ກຸ່ມ</text>
-                ໃນເຢຍລະມັນ. ໃນການຕິດຕາມຂອບເຂດຂອງ interdisciplinary, ລາວໄດ້ຮັບ
-                ການສຶກສາບໍລິຫານຢູ່ທີ່ <text><a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge
-                    ທຸລະກິດຜູ້ພິພາກສາ
-                    ໂຮງຮຽນ</a></text>, ເພີ່ມຂຶ້ນ
-                ປະສົບການປະຕິບັດຢູ່ບໍລິສັດທຶນຮ່ວມທຶນສອງສະກຸນເງິນ ແລະຫຼັກຊັບຊັ້ນນໍາ
-                ບໍລິສັດໃນ
-                ຈີນ.
+                ນັກສຶກສາທີ່ມີໃຈຮັກການຄົ້ນຄ້ວາ, ທ່ານໄດ້ຮຽນຈຸດປະສົງດອກເດັດພາລະກິດພະລັງງານທີ່ສາມາດຕິດຕັ້ງໄດ້ໃໝ່ທີ່ <a
+                  href="https://ethz.ch/en.html" target="_blank">ETH ຊູຣິຊ</a> ດ້ວຍການຮ່ວມງານກັບ <a
+                  href="https://psi.ch" target="_blank">ສະຖາບັນ Paul Scherrer</a> ໃນສະຫະລັດສະວິດ. ກ່ອນນັ້ນ,
+                ທ່ານໄດ້ຮັບປະລິນຍາໂທ ສາຂາວັດຖຸດິນຈາກ <a href="https://tum.de"
+                  target="_blank">ມະຫັດທະຍາໄລເຕັກນິກໂມນິກເມືອງມິູນິກ</a>, ມີການຝຶກງານຢູ່ <a href="https://xfel.eu"
+                  target="_blank">European XFEL</a>, <a href="https://infineon.com" target="_blank">Infineon</a>, ແລະ <a
+                  href="https://ecoledesponts.fr/" target="_blank">Institut Polytechnique de Paris</a>.
+                ຄວາມຫມາຍໃນງານຄົ້ນຄ້ວາທີ່ມີຜົນກະທົບໄດ້ນຳໃຊ້ໄປສູ່ການຮ່ວມງານລະຍະຍາວກັບຜູ້ນຳອຸດສາຫະກຳໃນພາລະກິດພະລັງງານຄະລອບຫຼັກຂອງໄຮໂດຣແລະເຊື້ອເຊື້ອໄຟ,
+                ເຊັ່ນ TOYOTA Motor ແລະ ກຸ່ມບໍລິສັດ Freudenberg. ເພື່ອສົ່ງເສີມຄວາມຮູ້ຂອງວິຊາສານຫຼາຍສາຂາ, ທ່ານໄດ້ຮັບຮູບແບບ
+                MBA ຈາກ <a href="https://cdi.eu/mba/mba-for-engineers-and-scientists.html" target="_blank">Collège des
+                  Ingénieurs</a>,
+                ແລະສຳເລັດການຮຽນໃນໂຄງການຜູ້ບໍລິຫານຈາກ <a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge
+                  Judge Business
+                  School</a> ດ້ວຍການຮັບທຶນສົງຄົມ Santander, ພ້ອມການຮຽນຮູ້ທົດສອບຈາກ MiraclePlus Venture Capital ແລະ CITIC
+                Securities.
               </p>
+
 
               <p id="khmer-content" align="justify" style="display: none;">
                 បច្ចុប្បន្ននេះ លោកបណ្ឌិត ហុង ស៊ូ គឺជា <text>អ្នកស្រាវជ្រាវ</text> និង <text>វិស្វករ</text>
@@ -932,7 +935,207 @@
               </div>
             </div>
 
+            <h1 class="mb-4">
+              แนะนำหนังสือ
+            </h1>
+            <hr>
+            <br>
 
+            <div class="component">
+
+              <ul class="align">
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign yellow">
+                          <span class="ribbon">กำลังเขียน</span>
+                          <h1>ยุโรป</h1>
+                          <p>ต่อต้านยุโรป</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ดาวน์โหลด</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>ยุโรปต่อต้านยุโรป</h5>
+                      <span>Helios Xu</span>
+                      <p>กำลังอยู่ในขั้นตอนการเขียน โปรดติดตาม!</p>
+                    </figcaption>
+                  </figure>
+
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign blue">
+                          <span class="ribbon">กำลังเขียน</span>
+                          <h2>สิบปีในยุโรป</h2>
+                          <p>การเปลี่ยนแปลงของด็อกเตอร์</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ดาวน์โหลด</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>สิบปีในยุโรป: การเปลี่ยนแปลงของด็อกเตอร์</h5>
+                      <span>Helios Xu</span>
+                      <p>กำลังอยู่ในขั้นตอนการเขียน โปรดติดตาม!</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <!-- <span class="ribbon">แนะนำ</span> -->
+                        <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ดาวน์โหลด</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>เกมจำกัดและเกมไม่จำกัด</h5>
+                      <span>[สหรัฐฯ] เจมส์ คาร์ส</span>
+                      <p>โลกการแข่งขันในสายตานักปรัชญา: โลกนี้มีเกมอยู่สองประเภท และไม่มีใครสามารถเล่นเกมได้เพียงลำพัง
+                      </p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">ดาวน์โหลด</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>โลกเมื่อวาน</h5>
+                      <span>[ออสเตรีย] สเตฟาน ซไวค์</span>
+                      <p>จากคืนก่อนสงครามโลกครั้งที่หนึ่งถึงวิกฤติสงครามโลกครั้งที่สอง:
+                        ความทรงจำของนักศึกษายุโรปหนุ่มในเวียนนา
+                        ปลายศตวรรษที่ 19</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+
+            </div>
             <br>
             <h1 class="mb-4">
               พอดแคสต์
@@ -977,6 +1180,17 @@
             &nbsp;
             <div class="section-title">
               <h2>ลิงก์ที่เกี่ยวข้อง</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-address-card"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://cdi.eu/fellows.html" target="_blank">วิทยาลัยวิศวกรแห่งฝรั่งเศส <i
+                      class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">นักศึกษาทุน MBA</span>
+                </div>
+              </div>
             </div>
 
             <div class="trend-entry d-flex">

@@ -41,6 +41,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
   <link rel="stylesheet" href="./css/style_podcast.css">
 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/book.css" />
+  <script src="js/modernizr.custom.js"></script>
 
 
   <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
@@ -136,6 +139,26 @@
       /* 设置两个按钮之间的间距 */
     }
   </style>
+
+  <style>
+    .align {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .align>li {
+      flex: 0 0 45%;
+      margin: 2%;
+      box-sizing: border-box;
+    }
+  </style>
+
+
   <style>
     #story-container {
       display: block;
@@ -527,126 +550,198 @@
             <hr>
             <div id="story-container" class="story horizontal-layout">
               <p id="korean-content" align="justify" style="display: block;">
-                현재, 쉬홍 (
-                <script
-                  id="first-script">const currentYear = new Date().getFullYear() - 1993; document.write(currentYear);</script>
-                세)
-                박사는 <strong>연구원</strong> 및 <strong>엔지니어</strong>로서 <strong>재생 에너지</strong>와 <strong>e-전력 시스템</strong>을
-                전문으로 하며, 에너지 및 교통 분야에서 효율성 우수성과 탄소 중립성을 추구하고 있습니다.
-                지난 10년 동안 그는 유라시아 대륙 전역에서 다국적 기업 및 주요 기관들과 협력하여 <strong>e-모빌리티</strong>, <strong>청정 에너지</strong>, 및
-                <strong>신소재</strong> 산업의 기술 발전을 이끌어왔습니다.
-                <strong><span class="no_of_papers"></span> 개의 논문</strong>이 발표되었고 <strong><span
-                    class="no_of_patents"></span>
-                  개의 특허</strong>가 부여되었습니다. 그의 엔지니어링 활동과 함께, 쉬홍 박사는
-                스위스 세인트 갈렌 심포지엄, 오스트리아 잘츠부르크-한국고등교육재단 글로벌 세미나, 중국 중신증권, 및 옥스퍼드 에너지 연구소와 같은 저명한
-                조직들과 협력하여 아시아와
-                유럽의 <strong>청정 에너지 경제 및 정책</strong> 분석에 집중해왔습니다. 국제 개발에 적극적으로 기여하며, 쉬홍 박사는
-                <strong><a href="https://unece.org/" target="_blank">유엔 유럽 경제 위원회</a></strong> (UNECE) 에서 전문가 그룹 (GE)
-                위원으로
-                활동했으며,
-                <strong><a href="https://unfccc.int/" target="_blank">유엔 기후 변화 회의</a></strong> (UNFCCC) 에서 병행 세션을 주재하며
-                <strong><a href="https://sdgs.un.org/goals" target="_blank">유엔 지속 가능한 개발 목표</a></strong> (SDGs)
-                <strong>7
-                </strong>(저렴한 에너지), <strong>9 </strong>(산업 혁신),
-                및 <strong>13 </strong>(기후 행동)을 옹호했습니다.
-
+                현재, 쉬홍 (<span class="age"></span>세)
+                박사는 유럽 산업계에서 <strong><span>신재생 에너지</span></strong> 엔지니어 및 비즈니스 컨설턴트로 활동하며,
+                <strong><span>에너지 및 교통</span></strong> 분야의 효율성 향상과 <strong><span>탄소 중립</span></strong> 달성을 위해 노력하고 있습니다.
+                학위 과정 동안 다국적 기업 및 중·유럽 학술 기관들과 협력하여 <strong><span>논문<span class="no_of_papers"></span>편
+                    이상</span></strong>을 발표하였고,
+                <span class="google_scholar_citation"></span>회 이상 인용되었으며,
+                <strong><span><span class="no_of_patents"></span>건의 중국 특허</span></strong>를 획득하고
+                <strong><span class="no_of_patents_in_review"></span>건의 유럽 특허</strong>를 주도적으로 출원하였습니다.
+                또한 <strong><span><a href="https://unfccc.int/" target="_blank">유엔 본 기후변화 회의</a></span></strong>에서
+                「중국 <strong><span>에너지 전환</span></strong>과 기술 혁신」 주제 분과를 주재하였으며,
+                <strong><span><a href="https://unece.org/" target="_blank">유엔 유럽경제위원회</a></span></strong>의
+                <strong><span>교통 및 기후 전문가 그룹</span></strong> 및 <strong><span>청정에너지 워킹그룹</span></strong> 회의에 여러 차례 참여하였고,
+                유엔 지속가능발전목표 제7항 「<strong>청정 에너지</strong>」, 제9항 「<strong>산업 혁신</strong>」, 제13항 「<strong>기후 행동</strong>」을
+                적극 지지해 왔습니다.
+                동시에 <strong>에너지 및 교통</strong> 분야의 인용지수가 높은 10여 개 저널의 <strong><span>심사위원</span></strong>이자,
+                스위스 <strong><span>장크트갈렌 국제 포럼</span></strong>의 <strong><span>학술 평가위원</span></strong>으로 활동 중입니다.
+                오스트리아의 <strong><span><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                      target="_blank">잘츠부르크
+                      글로벌 세미나</a></span></strong> 여행 장학금,
+                <strong><span>미국 전기화학회 논문 초청</span></strong> 및 여행 장학금, <strong>EU 에라스무스 장학금</strong>,
+                「챌린지컵」 창업 전국 동상 등을 수상한 바 있습니다.
                 <br><br>
-                마음으로는 학자이고, <strong>재생 에너지</strong> 분야에서 <strong><a href="https://ethz.ch/en.html" target="_blank">취리히
-                    연방
-                    공과대학교</a></strong>에서 박사 학위를 취득하였으며, 스위스의 <strong><a href="https://psi.ch" target="_blank">폴 셔러
-                    연구소</a></strong>와 협력하였습니다. 그 이전에는,
-                그는 <strong><a href="https://tum.de" target="_blank">뮌헨 공과대학교</a></strong>에서 재료 과학 석사 학위를 취득하였으며,
-                <strong><a href="https://xfel.eu" target="_blank">유럽 엑스레이 자유 전자 레이저 회사</a></strong> 및 <strong><a
-                    href="https://infineon.com" target="_blank">인피니온</a></strong>에서 인턴십을 수행했습니다.
-                영향력 있는 연구에 대한 그의 열정은 그를 일본의 <strong>토요타 자동차</strong>와 독일의 <strong>프로이덴베르크 그룹</strong>과 같은 수소 및 연료 전지 산업의
-                산업
-                리더들과의 장기적인 관계로 이끌었습니다.
-                학제간 지평을 추구하며, 그는 <strong>경영학 석사 </strong> 를 <strong><a href="https://quantic.edu/mba" target="_blank">퀀틱
-                    비즈니스
-                    스쿨</a></strong>에서 취득하였으며,
-                <strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">케임브리지 대학교 경영대학원</a></strong>에서 추가적인 경영 교육을
-                받으며,
-                중국의 이중 통화 벤처 캐피탈 회사와 주요 증권 회사에서 실무 경험을 쌓았습니다.
+
+                그는 2021년 초 <strong><span><a href="https://ethz.ch/en.html" target="_blank">취리히
+                      연방공과대학교</a></span></strong>에서 박사 학위를
+                취득하였으며,
+                학부·석사·박사 기간 동안의 연구는 <strong><span>신재생 에너지 및 탄소중립</span></strong> 분야에 집중되었고,
+                <strong><span><a href="https://psi.ch" target="_blank">스위스 PSI 연구소</a></span></strong>,
+                <strong><span><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">옥스퍼드 에너지
+                      연구소</a></span></strong>,
+                <strong><span><a href="https://tum.de" target="_blank">뮌헨공과대학교</a></span></strong>,
+                <strong><span><a href="https://ecoledesponts.fr/en" target="_blank">파리 고등기술학교</a></span></strong>,
+                <strong><span><a href="https://xfel.eu" target="_blank">유럽 자유전자 레이저 연구소</a></span></strong> 등 국제기관에서 연구
+                및 인턴 경험을 쌓았으며,
+                <strong><span>도요타 자동차</span></strong>, <strong><span>인피니언 반도체</span></strong>,
+                <strong><span>프라이덴베르크 전기시스템</span></strong>, <strong><span>헤레우스 귀금속</span></strong> 등 다국적 기업들과 공동 R&D
+                프로젝트를 수행하였습니다.
+                또한 그는 <strong><span><a href="https://cdi.eu" target="_blank">프랑스 공학자 대학</a></span></strong>의 MBA 전액
+                장학생으로 선발되었으며,
+                산탄데르 은행 장학금을 받아 <strong><span><a href="https://www.jbs.cam.ac.uk/" target="_blank">케임브리지 대학교
+                      경영대학원</a></span></strong>에서
+                「그린 전환」 관련 경영 과정을 이수하였고,
+                상위권 <strong>증권 리서치 기관</strong>에서 「<strong>중국 및 미국 주식</strong>」에 대한 종목 분석 리포트를 작성하고,
+                <strong>이중 통화 펀드</strong>의 「<strong>시드 라운드에서 시리즈 A까지</strong>」 <strong>신재생 에너지 벤처 투자</strong> 실무도 수행한
+                경험이 있습니다.
               </p>
 
 
               <p id="chinese-korean-content" align="justify" style="display: none;">
-
-                현재, <ruby>徐泓<rt>서홍</rt></ruby> <ruby>博士<rt>박사</rt></ruby>는 <ruby>研究員<rt>연구원</rt></ruby> 및 엔지니어로서
-                <ruby>再生<rt>재생</rt></ruby> 에너지와
-                e-<ruby>電力<rt>
-                    전력</rt></ruby> 시스템을 전문으로 하며, <ruby>能源<rt>에너지</rt></ruby> 및 <ruby>交通<rt>교통</rt></ruby> <ruby>分野<rt>분야
-                  </rt></ruby>에서
-                <ruby>效率性<rt>효율성</rt></ruby>과 <ruby>炭素<rt>탄소</rt></ruby> <ruby>中立性<rt>중립성</rt></ruby>을 추구하고 있습니다. 지난 10년
-                동안 그는 유라시아
-                <ruby>大陸<rt>대륙</rt></ruby> 전역에서 <ruby>多國籍<rt>다국적</rt></ruby> 기업 및 주요 <ruby>機構<rt>기관</rt></ruby>들과
-                <ruby>協力<rt>협력</rt>
-                </ruby>하여 e-모빌리티, <ruby>淸淨<rt>청정</rt></ruby> 에너지, 및 <ruby>新素材<rt>신소재</rt></ruby> <ruby>産業<rt>산업</rt>
-                </ruby>의 <ruby>技術
-                  <rt>기술</rt>
-                </ruby> <ruby>發展<rt>발전</rt></ruby>을 이끌어왔습니다. 15개의 <ruby>論文<rt>논문</rt></ruby>이 <ruby>發表<rt>발표</rt>
-                </ruby>되었고
-                3개의 <ruby>特許<rt>특허</rt></ruby>가 <ruby>賦與<rt>부여</rt></ruby>되었습니다. 그의 엔지니어링 활동과 함께, <ruby>徐泓<rt>서홍</rt>
-                </ruby> 博士는 스위스
-                <ruby>聖加倫<rt>생갈렌</rt></ruby> 심포지엄, 오스트리아 <ruby>薩爾茨堡<rt>잘츠부르크</rt></ruby>-한국고등교육재단 글로벌 세미나, <ruby>中國<rt>
-                    중국</rt></ruby>
-                <ruby>中信證券<rt>중신증권</rt></ruby>, 및 <ruby>牛津<rt>옥스포드</rt></ruby> <ruby>能源<rt>에너지</rt></ruby> <ruby>研究所<rt>
-                    연구소</rt></ruby>와
-                같은 <ruby>著名<rt>주밍</rt></ruby>한 <ruby>組織<rt>조직</rt></ruby>들과 <ruby>協力<rt>협력</rt></ruby>하여 아시아와 유럽의
-                <ruby>淸淨<rt>청정</rt>
-                </ruby> 에너지 <ruby>經濟<rt>경제</rt></ruby> 및 <ruby>政策<rt>정책</rt></ruby> <ruby>分析<rt>분석</rt></ruby>에 집중해왔습니다.
-                <ruby>國際<rt>
-                    국제</rt></ruby> <ruby>開發<rt>개발</rt></ruby>에 <ruby>積極<rt>적극</rt></ruby>적으로 <ruby>貢獻<rt>공헌</rt>
-                </ruby>하며, <ruby>徐泓<rt>
-                    서홍</rt></ruby> 博士는 <ruby>聯合國<rt>연합국</rt></ruby> <ruby>歐洲<rt>유럽</rt></ruby> <ruby>經濟<rt>경제</rt>
-                </ruby> <ruby>委員會<rt>
-                    위원회</rt></ruby> (UNECE) 에서 <ruby>專家<rt>전문가</rt></ruby> 그룹 (GE) <ruby>委員<rt>위원</rt></ruby>으로 활동했으며,
-                <ruby>聯合國<rt>연합국
-                  </rt></ruby> <ruby>氣候<rt>기후</rt></ruby> <ruby>變化<rt>변화</rt></ruby> <ruby>會議<rt>회의</rt></ruby> (UNFCCC)
-                에서 <ruby>竝行<rt>
-                    병행</rt></ruby> 세션을 <ruby>主宰<rt>주재</rt></ruby>하며 <ruby>聯合國<rt>연합국</rt></ruby> <ruby>持続<rt>지속</rt>
-                </ruby>가능한 <ruby>開發
-                  <rt>개발</rt>
-                </ruby> <ruby>目標<rt>목표</rt></ruby> (SDGs) 7 (<ruby>低廉<rt>저렴</rt></ruby>한 에너지), 9 (<ruby>産業<rt>산업</rt>
-                </ruby> 혁신), 및 13 (<ruby>氣候
-                  <rt>기후</rt>
-                </ruby> <ruby>行動<rt>행동</rt></ruby>) 을 <ruby>擁護<rt>옹호</rt></ruby>했습니다.
-
-                <br><br>
-                마음으로는 <ruby>學者<rt>학자</rt></ruby>이고, <ruby>再生<rt>재생</rt></ruby> 에너지 <ruby>分野<rt>분야</rt></ruby>에서
-                <ruby>蘇黎世<rt>취리히</rt>
-                </ruby> <ruby>聯邦<rt>연방</rt></ruby> <ruby>工科大學校<rt>공과대학교</rt></ruby>에서 博士 <ruby>學位<rt>학위</rt></ruby>를
-                <ruby>取得<rt>취득
-                  </rt></ruby>하였으며, 스위스의 <ruby>保羅謝勒<rt>폴셸러</rt></ruby> <ruby>研究所<rt>연구소</rt></ruby>와 <ruby>協力<rt>협력</rt>
-                </ruby>하였습니다. 그
-                이전에는, 그는 <ruby>慕尼黑<rt>뮌헨</rt></ruby> <ruby>工科大學校<rt>공과대학교</rt></ruby>에서 <ruby>材料<rt>재료</rt></ruby>
-                <ruby>科學<rt>과학</rt>
-                </ruby> <ruby>碩士<rt>석사</rt></ruby> <ruby>學位<rt>학위</rt></ruby>를 <ruby>取得<rt>취득</rt></ruby>하였으며, <ruby>歐洲
-                  <rt>유럽</rt>
-                </ruby> 엑스레이 <ruby>自由<rt>자유</rt></ruby> <ruby>電子<rt>전자</rt></ruby> 레이저 <ruby>會社<rt>회사</rt></ruby> 및
-                <ruby>英飛凌<rt>인피니온
-                  </rt></ruby>에서 <ruby>實習<rt>실습</rt></ruby>을 <ruby>遂行<rt>수행</rt></ruby>했습니다. <ruby>影響力<rt>영향력</rt>
-                </ruby> 있는
-                <ruby>硏究<rt>연구
-                  </rt></ruby>에 대한 그의 <ruby>熱情<rt>열정</rt></ruby>은 그를 일본의 <ruby>豐田<rt>도요타</rt></ruby> <ruby>自動車<rt>자동차
-                  </rt></ruby>와
-                <ruby>獨逸<rt>독일</rt></ruby>의 <ruby>弗洛伊登貝格<rt>프뢰덴베르크</rt></ruby> 그룹과 같은 <ruby>水素<rt>수소</rt></ruby> 및
-                <ruby>燃料<rt>연료</rt>
-                </ruby> <ruby>電池<rt>배터리</rt></ruby> <ruby>産業<rt>산업</rt></ruby>의 <ruby>産業<rt>산업</rt></ruby> 리더들과의
-                <ruby>長期的<rt>장기적</rt>
-                </ruby>인 <ruby>關係<rt>관계</rt></ruby>로 이끌었습니다. <ruby>學際間<rt>학제간</rt></ruby> <ruby>地平<rt>지평</rt></ruby>을
-                <ruby>追求<rt>추구
-                  </rt></ruby>하며, 그는 <ruby>經營學<rt>경영학</rt></ruby> <ruby>碩士<rt>석사</rt></ruby>를 퀀틱 <ruby>經營<rt>경영</rt>
-                </ruby> <ruby>學校<rt>
-                    학교</rt></ruby>에서 <ruby>取得<rt>취득</rt></ruby>하였으며, <ruby>劍橋<rt>캠브리지</rt></ruby> <ruby>大學校<rt>대학교</rt>
+                현재, <ruby>徐泓<rt>서홍</rt></ruby> (<span class="age"></span><ruby>歳<rt>세</rt></ruby>) 박사는 유럽 산업계에서
+                <ruby>新再生<rt>신재생</rt></ruby>
+                에너지 <ruby>技術者
+                  <rt>기술자</rt>
+                </ruby> 및 ビ즈니스 <ruby>顧問<rt>고문</rt></ruby>으로 활동하며, 에너지 및 <ruby>交通<rt>교통</rt></ruby> <ruby>分野<rt>분야</rt>
+                </ruby>의 <ruby>效率性<rt>효율성</rt></ruby> <ruby>向上<rt>향상</rt></ruby>과 <ruby>炭素<rt>탄소</rt></ruby> <ruby>中立
+                  <rt>중립</rt>
+                </ruby> <ruby>達成<rt>달성</rt></ruby>을 위해 <ruby>努力<rt>노력</rt></ruby>하고 있습니다. <ruby>學位<rt>학위</rt></ruby>
+                <ruby>課程<rt>
+                    과정</rt></ruby> 동안 <ruby>多國籍<rt>다국적</rt></ruby> <ruby>企業<rt>기업</rt></ruby> 및 中·歐 <ruby>學術<rt>학술</rt>
                 </ruby>
-                <ruby>經營大學院<rt>경영대학원</rt></ruby>에서 <ruby>追加<rt>추가</rt></ruby>적인 <ruby>經營<rt>경영</rt></ruby> <ruby>敎育<rt>
-                    교육</rt></ruby>을
-                받으며, <ruby>中國<rt>중국</rt></ruby>의 <ruby>二重<rt>이중</rt></ruby> <ruby>通貨<rt>통화</rt></ruby> 벤처 캐피탈 <ruby>會社
-                  <rt>회사</rt>
-                </ruby>와 주요 <ruby>證券<rt>증권</rt></ruby> <ruby>會社<rt>회사</rt></ruby>에서 <ruby>實務<rt>실무</rt></ruby> <ruby>經驗
-                  <rt>경험</rt>
-                </ruby>을 쌓았습니다.
+                <ruby>機關<rt>기관</rt></ruby>들과 <ruby>協力<rt>협력</rt></ruby>하여 <ruby>論文<rt>논문</rt></ruby>15<ruby>篇<rt>편</rt>
+                </ruby>
+                <ruby>以上<rt>이상</rt></ruby>을 <ruby>發表<rt>발표</rt></ruby>하였고, 420回 <ruby>以上<rt>이상</rt></ruby> <ruby>引用<rt>
+                    인용</rt>
+                </ruby>되었으며, 3<ruby>件<rt>건</rt></ruby>의 <ruby>中國<rt>중국</rt></ruby> <ruby>特許<rt>특허</rt></ruby>를 <ruby>獲得
+                  <rt>획득</rt>
+                </ruby>하고 2<ruby>件<rt>건</rt></ruby>의 <ruby>歐洲<rt>유럽</rt></ruby> <ruby>特許<rt>특허</rt></ruby>를 <ruby>主導<rt>
+                    주도</rt>
+                </ruby>적으로 <ruby>出願<rt>출원</rt></ruby>하였습니다. 또한 <ruby>國際連合<rt>국제연합</rt></ruby> <ruby>本部<rt>본부</rt></ruby>
+                <ruby>氣候變化<rt>기후변화</rt></ruby> <ruby>會議<rt>회의</rt></ruby>에서 「<ruby>中國<rt>중국</rt></ruby> 에너지 <ruby>轉換<rt>
+                    전환</rt>
+                </ruby>과 <ruby>技術<rt>기술</rt></ruby> <ruby>革新<rt>혁신</rt></ruby>」 <ruby>主題<rt>주제</rt></ruby> <ruby>分科<rt>
+                    분과</rt>
+                </ruby>를 <ruby>主宰<rt>주재</rt></ruby>하였으며, <ruby>國際連合<rt>국제연합</rt></ruby> <ruby>歐洲經濟委員會<rt>유럽경제위원회</rt>
+                </ruby>의
+                <ruby>交通<rt>교통</rt></ruby> 및 <ruby>氣候<rt>기후</rt></ruby> <ruby>專門家<rt>전문가</rt></ruby> 그룹 및 <ruby>淸淨<rt>청정
+                  </rt>
+                </ruby>에너지 워킹그룹 <ruby>會議<rt>회의</rt></ruby>에 <ruby>旅次<rt>여차</rt></ruby> <ruby>參與<rt>참여</rt></ruby>하였고,
+                <ruby>國際連合
+                  <rt>국제연합</rt>
+                </ruby> <ruby>持續可能發展目標<rt>지속가능발전목표</rt></ruby> 第7<ruby>項<rt>항</rt></ruby> 「<ruby>淸淨<rt>청정</rt></ruby>
+                에너지」, 第9<ruby>項<rt>항</rt></ruby> 「<ruby>産業<rt>산업</rt></ruby> <ruby>革新<rt>혁신</rt></ruby>」, 第13<ruby>項<rt>
+                    항</rt>
+                </ruby> 「<ruby>氣候<rt>기후</rt></ruby> <ruby>行動<rt>행동</rt></ruby>」을 <ruby>積極<rt>적극</rt></ruby> <ruby>支持<rt>
+                    지지</rt>
+                </ruby>해 왔습니다. <ruby>同時<rt>동시</rt></ruby>에 에너지 및 <ruby>交通<rt>교통</rt></ruby> <ruby>分野<rt>분야</rt></ruby>의
+                <ruby>引用
+                  <rt>인용</rt>
+                </ruby><ruby>指數<rt>지수</rt></ruby>가 높은 10餘 個 ジャーナル의 <ruby>審査委員<rt>심사위원</rt></ruby>이자, <ruby>瑞士<rt>스위스
+                  </rt></ruby> <ruby>聖加侖<rt>장크트갈렌</rt></ruby> <ruby>國際<rt>국제</rt></ruby> 포럼의 <ruby>學術<rt>학술</rt></ruby>
+                <ruby>評價委員
+                  <rt>평가위원</rt>
+                </ruby>으로 <ruby>活動<rt>활동</rt></ruby> 중입니다. <ruby>奧地利<rt>오스트리아</rt></ruby>의 잘츠부르크 글로벌 세미나 <ruby>旅行<rt>
+                    여행</rt></ruby> <ruby>奬學金<rt>장학금</rt></ruby>, <ruby>美國<rt>미국</rt></ruby> <ruby>電氣化學會<rt>전기화학회</rt>
+                </ruby>
+                <ruby>論文<rt>논문</rt></ruby> <ruby>招請<rt>초청</rt></ruby> 및 <ruby>旅行<rt>여행</rt></ruby> <ruby>奬學金<rt>장학금</rt>
+                </ruby>,
+                <ruby>歐盟<rt>유럽연합</rt></ruby> Erasmus <ruby>奬學金<rt>장학금</rt></ruby>, 「챌린지컵」 <ruby>創業<rt>창업</rt></ruby>
+                <ruby>全國<rt>전국
+                  </rt></ruby> <ruby>銅賞<rt>동상</rt></ruby> 등을 <ruby>受賞<rt>수상</rt></ruby>한 바 있습니다.
+                <br><br>
+                그는 2021<ruby>年<rt>년</rt></ruby> <ruby>初<rt>초</rt></ruby> 취리히 <ruby>聯邦工科大學校<rt>연방공과대학교</rt></ruby>에서
+                <ruby>博士<rt>박사
+                  </rt></ruby> <ruby>學位<rt>학위</rt></ruby>를 <ruby>取得<rt>취득</rt></ruby>하였으며, <ruby>學部<rt>학부</rt>
+                </ruby>·<ruby>碩士<rt>석사
+                  </rt></ruby>·<ruby>博士<rt>박사</rt></ruby> <ruby>期間<rt>기간</rt></ruby> 동안의 <ruby>硏究<rt>연구</rt></ruby>는
+                <ruby>新再生<rt>
+                    신재생</rt></ruby> 에너지 및 <ruby>炭素<rt>탄소</rt></ruby><ruby>中立<rt>중립</rt></ruby> <ruby>分野<rt>분야</rt>
+                </ruby>에 <ruby>集中
+                  <rt>집중</rt>
+                </ruby>되었고, <ruby>瑞士<rt>스위스</rt></ruby> PSI <ruby>硏究所<rt>연구소</rt></ruby>, 옥스퍼드 에너지 <ruby>硏究所<rt>연구소
+                  </rt></ruby>, <ruby>慕尼黑工科大學校<rt>뮌헨공과대학교</rt></ruby>, <ruby>巴黎<rt>파리</rt></ruby> <ruby>高等技術學校<rt>고등기술학교
+                  </rt>
+                </ruby>, <ruby>歐洲<rt>유럽</rt></ruby> <ruby>自由電子<rt>자유전자</rt></ruby> 레이저 <ruby>硏究所<rt>연구소</rt></ruby> 등
+                <ruby>國際<rt>
+                    국제</rt></ruby><ruby>機關<rt>기관</rt></ruby>에서 <ruby>硏究<rt>연구</rt></ruby> 및 イン턴 <ruby>經驗<rt>경험</rt>
+                </ruby>을 쌓았으며,
+                トヨ타 <ruby>自動車<rt>자동차</rt></ruby>, インフィニオン <ruby>半導體<rt>반도체</rt></ruby>, 프라이덴베르크 <ruby>電氣系統<rt>전기시스템</rt>
+                </ruby>,
+                헤레우스 <ruby>貴金屬<rt>귀금속</rt></ruby> 등 <ruby>多國籍<rt>다국적</rt></ruby> <ruby>企業<rt>기업</rt></ruby>들과 <ruby>共同
+                  <rt>공동</rt>
+                </ruby> R&D 프로젝트를 <ruby>遂行<rt>수행</rt></ruby>하였습니다. 또한 그는 프랑스 <ruby>工學者<rt>공학자</rt></ruby> <ruby>大學<rt>대학
+                  </rt>
+                </ruby>의 MBA <ruby>全額<rt>전액</rt></ruby> <ruby>奬學生<rt>장학생</rt></ruby>으로 <ruby>選拔<rt>선발</rt></ruby>되었으며,
+                산탄데르
+                <ruby>銀行<rt>은행</rt></ruby> <ruby>奬學金<rt>장학금</rt></ruby>을 받아 <ruby>劍橋大學校<rt>케임브리지대학교</rt></ruby>
+                <ruby>經營大學院<rt>경영대학원
+                  </rt></ruby>에서 「<ruby>綠色<rt>녹색</rt></ruby> <ruby>轉換<rt>전환</rt></ruby>」 <ruby>關聯<rt>관련</rt></ruby>
+                <ruby>經營<rt>경영
+                  </rt></ruby> <ruby>課程<rt>과정</rt></ruby>을 <ruby>履修<rt>이수</rt></ruby>하였고, <ruby>上位圈<rt>상위권</rt></ruby>
+                <ruby>證券<rt>
+                    증권</rt></ruby> 리서치 <ruby>機關<rt>기관</rt></ruby>에서 「<ruby>中國<rt>중국</rt></ruby> 및 <ruby>美國<rt>미국</rt>
+                </ruby>
+                <ruby>株式<rt>주식</rt></ruby>」에 대한 <ruby>種目<rt>종목</rt></ruby> <ruby>分析<rt>분석</rt></ruby> 리포트를 <ruby>作成<rt>
+                    작성</rt>
+                </ruby>하고, <ruby>二重<rt>이중</rt></ruby> <ruby>通貨<rt>통화</rt></ruby> 펀드의 「시드 라운드에서 시리즈 A까지」 <ruby>新再生<rt>신재생
+                  </rt>
+                </ruby> 에너지 벤처 <ruby>投資<rt>투자</rt></ruby> <ruby>實務<rt>실무</rt></ruby>도 <ruby>遂行<rt>수행</rt></ruby>한
+                <ruby>經驗<rt>경험
+                  </rt></ruby>이 있습니다.
+              </p>
+
+
+
+
+              <p id="chinese-korean-content-2" align="justify" style="display: none;">
+                현재, 徐泓 (<span class="age"></span>歳)
+                박사는 유럽 산업계에서 <strong><span>新再生 에너지</span></strong> 技術者 및 ビ즈니스 顧問으로 활동하며,
+                <strong><span>에너지 및 交通</span></strong> 分野의 效率性 向上과 <strong><span>炭素 中立</span></strong> 達成을 위해 努力하고 있습니다.
+                學位 課程 동안 多國籍 企業 및 中·歐 學術 機關들과 協力하여 <strong><span>論文<span class="no_of_papers"></span>篇
+                    以上</span></strong>을 發表하였고,
+                <span class="google_scholar_citation"></span>回 以上 引用되었으며,
+                <strong><span><span class="no_of_patents"></span>件의 中國 特許</span></strong>를 獲得하고
+                <strong><span class="no_of_patents_in_review"></span>件의 歐洲 特許</strong>를 主導적으로 出願하였습니다.
+                또한 <strong><span><a href="https://unfccc.int/" target="_blank">國際連合 本部 氣候變化 會議</a></span></strong>에서
+                「中國 <strong><span>에너지 轉換</span></strong>과 技術 革新」 主題 分科를 主宰하였으며,
+                <strong><span><a href="https://unece.org/" target="_blank">國際連合 歐洲經濟委員會</a></span></strong>의
+                <strong><span>交通 및 氣候 專門家 그룹</span></strong> 및 <strong><span>淸淨에너지 워킹그룹</span></strong> 會議에 旅次 參與하였고,
+                國際連合 持續可能發展目標 第7項 「<strong>淸淨 에너지</strong>」, 第9項 「<strong>産業 革新</strong>」, 第13項 「<strong>氣候
+                  行動</strong>」을 積極 支持해 왔습니다.
+                同時에 <strong>에너지 및 交通</strong> 分野의 引用指數가 높은 10餘 個 ジャーナル의 <strong><span>審査委員</span></strong>이자,
+                瑞士 <strong><span>聖加侖 國際 포럼</span></strong>의 <strong><span>學術 評價委員</span></strong>으로 活動 中입니다.
+                奧地利의 <strong><span><a href="https://www.salzburgglobal.org/people?userID=55428&eventID=11076"
+                      target="_blank">잘츠부르크
+                      글로벌 세미나</a></span></strong> 旅行 奬學金,
+                <strong><span>美國 電氣化學會 論文 招請</span></strong> 및 旅行 奬學金, <strong>歐盟 Erasmus 奬學金</strong>,
+                「챌린지컵」 創業 全國 銅賞 等을 受賞한 바 있습니다.
+                <br><br>
+
+                그는 2021年 初 <strong><span><a href="https://ethz.ch/en.html" target="_blank">취리히
+                      聯邦工科大學校</a></span></strong>에서 博士 學位를
+                取得하였으며,
+                學部·碩士·博士 期間 동안의 硏究는 <strong><span>新再生 에너지 및 炭素中立</span></strong> 分野에 集中되었고,
+                <strong><span><a href="https://psi.ch" target="_blank">瑞士 PSI 硏究所</a></span></strong>,
+                <strong><span><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_blank">옥스퍼드 에너지
+                      硏究所</a></span></strong>,
+                <strong><span><a href="https://tum.de" target="_blank">慕尼黑工科大學校</a></span></strong>,
+                <strong><span><a href="https://ecoledesponts.fr/en" target="_blank">巴黎 高等技術學校</a></span></strong>,
+                <strong><span><a href="https://xfel.eu" target="_blank">歐洲 自由電子 레이저 硏究所</a></span></strong> 等 國際機關에서 硏究
+                및 イン턴 經驗을
+                쌓았으며,
+                <strong><span>トヨタ 自動車</span></strong>, <strong><span>インフィニオン 半導體</span></strong>,
+                <strong><span>프라이덴베르크 電氣系統</span></strong>, <strong><span>헤레우스 貴金屬</span></strong> 等 多國籍 企業들과 共同 R&D
+                프로젝트를 遂行하였습니다.
+                또한 그는 <strong><span><a href="https://cdi.eu" target="_blank">프랑스 工學者 大學</a></span></strong>의 MBA 全額
+                奬學生으로 選拔되었으며,
+                산탄데르 銀行 奬學金을 받아 <strong><span><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學校
+                      經營大學院</a></span></strong>에서
+                「綠色 轉換」 關聯 經營 課程을 履修하였고,
+                上位圈 <strong>證券 리서치 機關</strong>에서 「<strong>中國 및 美國 株式</strong>」에 대한 種目 分析 리포트를 作成하고,
+                <strong>二重 通貨 펀드</strong>의 「<strong>시드 라운드에서 시리즈 A까지</strong>」 <strong>新再生 에너지 벤처 投資</strong> 實務도 遂行한
+                經驗이 있습니다.
 
               </p>
 
@@ -655,7 +750,10 @@
             </div>
             <hr>
             <p style="text-align:left;">
-              PEK (NǐHǎo)➔ CDG (Bonjour)➔ HAM (MoinMoin)➔ MUC (Servus)➔ ZRH (Grüezi)➔ ?
+              PEK (NǐHǎo/니하오)➔ CDG (Bonjour/봉쥬르)➔ HAM (MoinMoin/모인모인)➔ MUC (Servus/제어부스)➔ ZRH (Grüezi/그뤼에치)➔ LHR
+              (Hello/헬로)➔ TRN
+              (Ciao/차오)➔ FRA (Ei
+              Gude/아이 구데)➔ ?
 
             </p>
             <br>
@@ -693,7 +791,204 @@
               </div>
             </div>
 
+            <h1 class="mb-4">
+              추천 도서
+            </h1>
+            <hr>
+            <br>
 
+            <div class="component">
+
+              <ul class="align">
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign yellow">
+                          <span class="ribbon">집필 중</span>
+                          <h1>유럽</h1>
+                          <p>유럽에 반대하다</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">다운로드</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>유럽에 반대하는 유럽</h5>
+                      <span>Helios Xu</span>
+                      <p>현재 집필 중입니다. 기대해 주세요!</p>
+                    </figcaption>
+                  </figure>
+
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <div class="coverDesign blue">
+                          <span class="ribbon">집필 중</span>
+                          <h2>유럽 유학 10년</h2>
+                          <p>박사 변신기</p>
+                        </div>
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">다운로드</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>유럽 유학 10년: 박사 변신기</h5>
+                      <span>Helios Xu</span>
+                      <p>현재 집필 중입니다. 기대해 주세요!</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <!-- <span class="ribbon">추천</span> -->
+                        <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">다운로드</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>유한과 무한의 게임</h5>
+                      <span>[미] 제임스 카스</span>
+                      <p>철학자가 바라본 경기 세계: 세상에는 두 가지 게임이 있으며, 아무도 혼자서는 게임을 할 수 없다</p>
+                    </figcaption>
+                  </figure>
+                </li>
+
+                <hr class="d-block d-sm-none"
+                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
+
+                <li>
+                  <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                      <li>
+                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
+                      </li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                      <li></li>
+                      <li>
+                        <a class="btn-book" href="#">다운로드</a>
+                      </li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <figcaption>
+                      <h5>어제의 세계</h5>
+                      <span>[오] 슈테판 츠바이크</span>
+                      <p>1차 대전 전야부터 2차 대전 위기까지: 19세기 말 빈의 젊은 유럽 유학생의 회고</p>
+                    </figcaption>
+                  </figure>
+                </li>
+              </ul>
+
+            </div>
 
             <br>
             <h1 class="mb-4">
@@ -740,6 +1035,17 @@
             &nbsp;
             <div class="section-title">
               <h2>관련 링크</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-address-card"></i> </div>
+              <div class="trend-contents">
+                <h2><a href="https://cdi.eu/fellows.html" target="_blank">프랑스 엔지니어 대학 <i
+                      class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
+                <div class="post-meta">
+                  <span class="d-block">MBA 장학생</span>
+                </div>
+              </div>
             </div>
 
             <div class="trend-entry d-flex">
