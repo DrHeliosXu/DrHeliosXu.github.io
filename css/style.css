@@ -19,7 +19,12 @@ body {
 
 }
 
+footer {
+  border: none !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
 
+}
 
 ::-moz-selection {
   background: #000;
