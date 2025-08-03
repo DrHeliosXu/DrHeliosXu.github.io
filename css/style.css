@@ -3,6 +3,12 @@ html {
   overflow-x: hidden;
 }
 
+  html {
+    -webkit-text-size-adjust: 100%; /* iOS Safari */
+    -ms-text-size-adjust: 100%;     /* IE Mobile */
+    text-size-adjust: 100%;         /* 标准属性 */
+  }
+
 body {
   line-height: 1.7;
   color: gray;
