@@ -6,7 +6,6 @@ const data = {
     "web_update_month": "08",  // 两位数，01-09
     "web_update_day": 1,
     "born_year": 1993,
-    "age": 32,
     "year_of_experience": 8,
     "no_of_papers": 15,
     "google_scholar_citation": 420,
