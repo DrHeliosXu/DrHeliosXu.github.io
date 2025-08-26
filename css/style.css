@@ -182,6 +182,17 @@ iframe {
   }
 }
 
+@media (max-width: 768px) {
+  .hero-logo {
+    transform: scale(0.75);   /* 缩小到 60% */
+    transform-origin: top left; /* 缩放基准点在左上角 */
+  }
+
+  .hero-text {
+    transform: scale(0.75) translate(-13px, -3px);  /* 文本也缩小 */
+    transform-origin: top left;
+  }
+}
 
 /* Navbar */
 .site-logo {

@@ -91,7 +91,7 @@ const festivals = {
     th: "https://th.wikipedia.org/wiki/วันสามกษัตริย์"
   }
 },
-    
+
     {
   start: "02-14",
   end: "02-14",
@@ -247,7 +247,7 @@ const festivals = {
       greetings: {
         en: "Happy Labour Day!",
         cn: "劳动节快乐！",
-        ja: "メーデーおめでとうございます！", 
+        ja: "メーデーおめでとうございます！",
         ko: "노동절 축하합니다!",
         de: "Frohen Tag der Arbeit!",
         es: "¡Feliz Día del Trabajo!",
@@ -257,7 +257,7 @@ const festivals = {
         ar: "عيد عمال سعيد!"
       },
       wiki: { /* 劳动节各语言链接 */ }
-    },    
+    },
     {
       start: "05-04",
       end: "05-04",
@@ -346,7 +346,7 @@ const festivals = {
     ru: "https://ru.wikipedia.org/wiki/Праздник_фонарей",
     ar: "https://ar.wikipedia.org/wiki/عيد_الفوانيس"
   }
-}, 
+},
 {
   start: "03-14",
   end: "03-14",
