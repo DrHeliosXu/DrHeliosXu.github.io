@@ -111,15 +111,22 @@
     document.addEventListener('DOMContentLoaded', async function () {
 
       try {
-        // 使用 ipinfo 获取位置（需要在 ipinfo.io 申请免费 token）
+        // 使用 ipinfo 获取位置
         let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
         let data = await response.json();
 
-        // 判断 region 是否为 Bavaria
-        if (data.region && data.region.toLowerCase() === "bavaria") {
+        // 定义需要跳转到 eng.html 的国家
+        const engCountries = {
+          "DE": true, // 德国
+          "ES": true  // 西班牙
+          // 以后需要新增，直接在这里加，例如 "FR": true
+        };
+
+        if (data.country && engCountries[data.country.toUpperCase()]) {
           window.location.href = "eng.html";
           return;
         }
+
       } catch (e) {
         console.error("GeoIP 检测失败：", e);
         // 如果 GeoIP 检测失败，默认跳转 eng.html
@@ -127,7 +134,7 @@
         return;
       }
 
-      // 如果不是 Bavaria，则执行语言检测逻辑
+      // 语言逻辑
       var userLang = navigator.language || navigator.userLanguage;
       var languageMap = {
         'ar': 'ar.html',
