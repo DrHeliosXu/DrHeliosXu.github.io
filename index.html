@@ -108,24 +108,24 @@
   </script> -->
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', async function () {
 
-      // try {
-      //   // 使用 ipinfo 获取位置（需要在 ipinfo.io 申请免费 token）
-      //   let response = await fetch("https://ipinfo.io/json?token=你的token");
-      //   let data = await response.json();
+      try {
+        // 使用 ipinfo 获取位置（需要在 ipinfo.io 申请免费 token）
+        let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+        let data = await response.json();
 
-      //   // 判断 region 是否为 Bavaria
-      //   if (data.region && data.region.toLowerCase() === "bavaria") {
-      //     window.location.href = "eng.html";
-      //     return;
-      //   }
-      // } catch (e) {
-      //   console.error("GeoIP 检测失败：", e);
-      //   // 如果 GeoIP 检测失败，默认跳转 eng.html
-      //   window.location.href = "eng.html";
-      //   return;
-      // }
+        // 判断 region 是否为 Bavaria
+        if (data.region && data.region.toLowerCase() === "bavaria") {
+          window.location.href = "eng.html";
+          return;
+        }
+      } catch (e) {
+        console.error("GeoIP 检测失败：", e);
+        // 如果 GeoIP 检测失败，默认跳转 eng.html
+        window.location.href = "eng.html";
+        return;
+      }
 
       // 如果不是 Bavaria，则执行语言检测逻辑
       var userLang = navigator.language || navigator.userLanguage;
