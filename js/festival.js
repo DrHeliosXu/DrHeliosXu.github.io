@@ -151,21 +151,53 @@ const festivals = {
         ar: "https://ar.wikipedia.org/wiki/عيد_الفصح"
       }
       },
+
+{
+  start: "05-17",
+  end: "05-17",
+  greetings: {
+    en: "World Rainbow Day 🏳️‍🌈",
+    cn: "世界彩虹日 🏳️‍🌈",
+    ja: "世界レインボーデー 🏳️‍🌈",
+    ko: "세계 레인보우 데이 🏳️‍🌈",
+    th: "วันสายรุ้งโลก 🏳️‍🌈",
+    de: "Welt-Regenbogentag 🏳️‍🌈",
+    es: "¡Día Mundial del Arcoíris 🏳️‍🌈",
+    fr: "Journée mondiale de l’arc-en-ciel  🏳️‍🌈",
+    it: "Giornata mondiale dell’arcobaleno 🏳️‍🌈",
+    ru: "Всемирный день радуги 🏳️‍🌈",
+    ar: "يوم قوس قزح العالمي 🏳️‍🌈"
+  },
+  wiki: {
+    en: "https://en.wikipedia.org/wiki/International_Day_Against_Homophobia,_Transphobia_and_Biphobia",
+    cn: "https://zh.wikipedia.org/wiki/国际不再恐同日",
+    ja: "https://ja.wikipedia.org/wiki/国際反ホモフォビア・トランスフォビア・バイフォビアの日",
+    ko: "https://ko.wikipedia.org/wiki/국제_성소수자혐오_반대의_날",
+    th: "https://th.wikipedia.org/wiki/วันสากลต่อต้านการหวาดกลัวคนรักเพศเดียวกัน",
+    de: "https://de.wikipedia.org/wiki/Internationaler_Tag_gegen_Homophobie,_Transphobie_und_Biphobie",
+    es: "https://es.wikipedia.org/wiki/Día_Internacional_contra_la_Homofobia,_Transfobia_y_Bifobia",
+    fr: "https://fr.wikipedia.org/wiki/Journée_internationale_contre_l%27homophobie,_la_transphobie_et_la_biphobie",
+    it: "https://it.wikipedia.org/wiki/Giornata_internazionale_contro_omofobia,_transfobia_e_bifobia",
+    ru: "https://ru.wikipedia.org/wiki/Международный_день_борьбы_с_гомофобией,_трансфобией_и_бифобией",
+    ar: "https://ar.wikipedia.org/wiki/اليوم_الدولي_لمناهضة_رهاب_المثلية_والتحول_والازدواجية"
+  }
+},
+
 {
   start: "08-27",
   end: "08-27",
   greetings: {
-    en: `Celebrating ${yearInEurope} years in Europe`,
-    cn: `纪念留欧第${yearInEurope}年`,
-    ja: `ヨーロッパ滞在${yearInEurope}周年記念`,
-    ko: `유럽 거주 ${yearInEurope}주년 기념`,
-    es: `Celebrando ${yearInEurope} años viviendo en Europa`,
-    fr: `Célébration des ${yearInEurope} ans passés en Europe`,
-    it: `Celebrazione di ${yearInEurope} anni in Europa`,
-    de: `Feier von ${yearInEurope} Jahren in Europa`,
-    ru: `Отмечаем ${yearInEurope} лет проживания в Европе`,
-    ar: `الاحتفال بمرور ${yearInEurope} سنة في أوروبا`,
-    th: `เฉลิมฉลอง ${yearInEurope} ปีแห่งการอยู่ในยุโรป`
+    en: `The ${yearInEurope} years in Europe `,
+    cn: `留欧${yearInEurope}年纪念 `,
+    ja: `ヨーロッパ滞在${yearInEurope}周年記念 `,
+    ko: `유럽 거주 ${yearInEurope}주년 기념 `,
+    es: `Celebrando ${yearInEurope} años viviendo en Europa `,
+    fr: `Célébration des ${yearInEurope} ans passés en Europe `,
+    it: `Celebrazione di ${yearInEurope} anni in Europa `,
+    de: `Feier von ${yearInEurope} Jahren in Europa `,
+    ru: `Отмечаем ${yearInEurope} лет проживания в Европе `,
+    ar: `الاحتفال بمرور ${yearInEurope} سنة في أوروبا `,
+    th: `เฉลิมฉลอง ${yearInEurope} ปีแห่งการอยู่ในยุโรป `
   },
   wiki: {
     en: "",
