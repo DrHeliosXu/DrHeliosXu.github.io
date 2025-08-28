@@ -10,6 +10,7 @@ const data = {
     "no_of_papers": 15,
     "google_scholar_citation": 430,
     "h_index": 10,
+    "no_of_journals_for_review": 10,
     "no_of_reviews": 55,
     "no_of_patents": 3,
     "no_of_patents_in_review": 2,
