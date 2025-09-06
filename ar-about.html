@@ -358,16 +358,49 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 single-content">
+
             <p class="mb-5">
-            <div style="position: relative; display: inline-block;">
-              <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
-                style="position: relative; top: -15px; transform: scaleX(-1);" />
-              <div
-                style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0); padding: 10px; font-size: 17px; font-weight: normal;">
-                「 العلم بلا حدود 」
+              <div class="d-none d-sm-block" style="position: relative; display: inline-block;">
+                <div style="position: relative; text-align: center;transform: scaleX(-1); ">
+                <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
+                  style="position: relative; top: -15px;" />
+                  <div style="
+                      position: absolute;
+                      bottom: 13%;  /* 用百分比，而不是 em/px */
+                      right: 9%;   /* 文字随图片比例缩放 */
+                      color: rgba(238, 245, 255, 0.922);
+                      font-size: clamp(12px, 1.1vw, 15px);   /* 相对屏幕宽度，保证自适应 */
+                      transform: scaleX(-1);
+                              ">
+                <span class="skew-text" style="display: inline-block; transform: skew(4deg) rotate(4.5deg);">
+                  「 العلم بلا حدود 」
+                </span>
+                </div>
               </div>
-            </div>
-            </p>
+              </div>
+              <div class="d-block d-sm-none" style="position: relative; display: inline-block;">
+                <div style="position: relative; text-align: center; transform: scaleX(-1);">
+                <img src="images/banner_img_mobi_3.png" alt="Image" class="img-fluid"
+                  style="position: relative; top: -15px;" />
+                  <div style="
+                      position: absolute;
+                      bottom: 13%;  /* 用百分比，而不是 em/px */
+                      right: 21%;   /* 文字随图片比例缩放 */
+                      color: rgba(238, 245, 255, 0.922);
+                      font-size: clamp(4px, 4vw, 14px);   /* 相对屏幕宽度，保证自适应 */
+                      font-weight: normal;
+                      transform: scaleX(-1);
+                              ">
+                 <span class="skew-text" style="display: inline-block; transform: skew(4deg) rotate(4.5deg);">
+                    「 العلم بلا حدود 」
+                  </span>
+                </div>
+              </div>
+              </div>
+            </p>    
+
+
+
             <h1 class="mb-4">السيرة الذاتية</h1>
             <hr>
             <div class="">
