@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="bo">
 
 <head>
-    <title>徐泓 | ནུས་ཤུགས་གསར་པའི་འབུམ་རམས་པ། | འཆར་འགོད་པ</title>
+    <title>ཞུའུ་ཧོང་། | ནུས་ཤུགས་གསར་པའི་འབུམ་རམས་པ། | འཆར་འགོད་པ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/mobilenav.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <script src="js/chinese_lunar_calendar.min.js"></script>
+    <!-- <script src="js/chinese_lunar_calendar.min.js"></script> -->
 
     <style></style>
 
@@ -34,7 +34,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-6 d-flex">
                         <a href="cn.html" class="site-logo">
-                            <img src="images/logo-full-cn.png" alt="Image" class="site-logo"
+                            <img src="images/logo-full-tb.png" alt="Image" class="site-logo"
                                 style="width: auto; height: 80px" />
                         </a>
                         <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
@@ -72,9 +72,8 @@
         border-radius: 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         " onchange="handleChange(this)">
-                                            <option value="cn.html" selected>中文简体</option>
-                                            <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
-                                            </option>
+                                            <option value="tb.html" selected>བོད་སྐད་དང་།</option>
+                                            <option value="cn.html">中文</option>
                                             <option value="jp.html">日本語</option>
                                             <option value="kr.html">한국어</option>
                                             <option value="de.html">Deutsch</option>
@@ -101,19 +100,19 @@
                             <nav class="site-navigation position-relative text-right" role="navigation">
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
                                     <li class="active">
-                                        <a href="cn.html" class="nav-link text-left">ཡུལ&nbsp;&nbsp;</a>
+                                        <a href="tb.html" class="nav-link text-left">ཡུལ&nbsp;&nbsp;</a>
                                     </li>
                                     <li>
-                                        <a href="cn-research.html" class="nav-link text-left">ཞིབ་འཇུག</a>
+                                        <a href="tb-research.html" class="nav-link text-left">ཞིབ་འཇུག</a>
                                     </li>
                                     <li>
-                                        <a href="cn-news.html" class="nav-link text-left">གསར་འགྱུར</a>
+                                        <a href="tb-news.html" class="nav-link text-left">གསར་འགྱུར</a>
                                     </li>
                                     <li>
-                                        <a href="cn-projects.html" class="nav-link text-left">ལས་གཞི</a>
+                                        <a href="tb-projects.html" class="nav-link text-left">ལས་གཞི</a>
                                     </li>
                                     <li>
-                                        <a href="cn-about.html" class="nav-link text-left">ཉེ་སྐོར་དུ</a>
+                                        <a href="tb-about.html" class="nav-link text-left">ཉེ་སྐོར་དུ</a>
                                     </li>
                                     <li class="festival-item">
                                         <a href="#" target="_blank" class="dynamic-greeting nav-link text-left">
@@ -127,28 +126,19 @@
                         <div class="ml-auto">
                             <span style="display: flex; align-items: center">
                                 <!-- 简体字和国旗 -->
-                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
-                                    class="d-inline-block" id="switch-cn" style="margin-right: 5px;">
+                                
                                     <img src="images/flag_cn.png" alt="flag"
-                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">简
-                                </a> /
-                                <!-- 繁体字和国旗 -->
-                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
-                                    class="d-inline-block" id="switch-tw" style="margin-left: 5px; margin-right: 5px;">
-                                    <img src="images/flag_hk.png" alt="flag"
-                                        style="height:15px; margin-right:5px;position:relative; top:-1px;"><img
-                                        src="images/flag_mc.png" alt="flag"
-                                        style="height:15px; margin-right:2px;position:relative; top:-1px;">繁
-                                </a>
+                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
                                 <!-- 选择语言的下拉框 -->
                                 <select id="languages" name="languages" style="
-                      width: 70px;
+                      width: 83px;
                       height: 25px;
                       margin-left: 5px;
                       border-radius: 0;
                       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
-                                    <option value="cn.html" selected>中文</option>
+                                    <option value="tb.html" selected>བོད་སྐད་དང་།</option>
+                                    <option value="cn.html">中文</option>
                                     <option value="jp.html">日本語</option>
                                     <option value="kr.html">한국어</option>
                                     <option value="de.html">Deutsch</option>
@@ -177,32 +167,77 @@
         <a class="d-inline-block d-sm-none">
             <button id="burger" class="open-main-nav">
                 <span class="burger"></span>
-                <span class="burger-text">ནང་དོན་རེའུ་མིག།</span>
+                <span class="burger-text">དཀར་ཆག</span>
             </button>
 
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li>
-                        <a href="cn.html">徐 泓 <small>འབུམ་རམས་པ།</small> </a> <br>
+                        <a href="tb.html">ཞུའུ་ཧོང་། <small>འབུམ་རམས་པ།</small> </a> <br>
                     </li>
                     <li>
-                        <a href="cn-research.html">ཞིབ་འཇུག ➔</a>
+                        <a href="tb-research.html">ཞིབ་འཇུག ➔</a>
                     </li>
                     <li>
-                        <a href="cn-news.html">གསར་འགྱུར ➔</a>
+                        <a href="tb-news.html">གསར་འགྱུར ➔</a>
                     </li>
                     <li>
-                        <a href="cn-projects.html">ལས་གཞི ➔</a>
+                        <a href="tb-projects.html">ལས་གཞི ➔</a>
                     </li>
                     <li>
-                        <a href="cn-about.html">ཉེ་སྐོར་དུ ➔</a>
+                        <a href="tb-about.html">ཉེ་སྐོར་དུ ➔</a>
                     </li>
 
                 </ul>
             </nav>
         </a>
         <!------>
+   <!-- 简化版导航栏内容 -->
+   <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
 
+    <div style="display: flex; justify-content: space-between; align-items:
+    center;">
+
+      <img src="images/logo-full-tb-long2.png" alt="Image" class="site-logo" style="width: auto; height: 55px; position: absolute; top: 11px; left:
+      15px;" />
+
+      <div></div>
+
+      <div style="display: flex; align-items: center;">
+        <a class="flag d-inline-block d-lg-none">
+          <img src="images/flag_cn.png" alt="flag" style="height:15px;
+          margin-right:2px; position:relative; top:-1px;">
+        </a>
+        <select id="languages-2" name="languages" style=" width:auto; height:
+        25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px
+        rgba(0, 0, 0, 0.1); text-align: center; /* 新增 */ text-align-last:
+        center; /* 确保选中的选项居中 */ " onchange="window.location.href=this.options[this.selectedIndex].value">
+                     <option value="tb.html" selected>བོད་སྐད་དང་།</option>
+                     <option value="cn.html">中文</option>
+                     <option value="jp.html">日本語</option>
+                     <option value="kr.html">한국어</option>
+                     <option value="de.html">Deutsch</option>
+                     <option value="en.html">English</option>
+                     <option value="es.html">Español</option>
+                     <option value="fr.html">Français</option>
+                     <option value="it.html">Italiano</option>
+                     <option value="ru.html">Русский</option>
+                     <option value="ar.html">اللغة العربية</option>
+        </select>
+        <select id="content-list" name="content-list" style="
+        width:auto;height: 25px; margin-left: 5px; border-radius: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); text-align: center; /* 新增
+        */ text-align-last: center; /* 确保选中的选项居中 */ "
+          onchange="window.location.href=this.options[this.selectedIndex].value">
+          <option value="tb.html" selected>ཡུལ</option>
+          <option value="tb-research.html">ཞིབ་འཇུག</option>
+          <option value="tb-news.html">གསར་འགྱུར</option>
+          <option value="tb-projects.html">ལས་གཞི</option>
+          <option value="tb-about.html" >ཉེ་སྐོར་དུ</option>
+        </select>
+      </div>
+    </div>
+  </div>
         <div class="site-section py-0">
             <div class="owl-carousel hero-slide owl-style">
                 <div class="site-section">
@@ -289,7 +324,7 @@
                                 <h3>ཛ་དྲག་གི་བྱེད་ཐབས་སྤྱད་དེ་གནམ་གཤིས་འགྱུར་ལྡོག་དང་དེའི་ཤུགས་རྐྱེན་ངན་པར་ཁ་གཏད་གཅོག་པ།
                                 </h3>
                                 <p class="mb-3">
-                                    -
+                                   
                                     མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་བྷོན་གནམ་གཤིས་འགྱུར་ལྡོག་ཚོགས་ཆེན་ཐོག་ཐད་གཏོང་གཏམ་བཤད་གནང་ནས་གནམ་གཤིས་ཀྱི་ཤུགས་རྐྱེན་སེལ་ཐབས་ལ་ཛ་དྲག་གི་བྱ་སྤྱོད་སྤེལ་དགོས་པའི་འབོད་སྐུལ་བཏང་།
                                 </p>
 
@@ -350,7 +385,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        清洁
+                                        གཙང་དག
                                     </p>
                                 </div>
                                 <div style="
@@ -367,7 +402,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        能源
+                                       ནུས་ཤུགས
                                     </p>
                                 </div>
                                 <!-- Flag Image -->
@@ -382,17 +417,17 @@
                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 7: 可负担的清洁能源</a> <br></h2>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 7: རིན་གོང་མཐོ་བའི་དྭངས་གཙང་ནུས་ཁུངས།</a> <br></h2>
                                 <h3>
-                                    确保所有的人都可取得负担的起、可靠的、永续的，以及现代的能源
+                                    མི་ཚང་མར་རིན་གོང་ཆུང་བ་དང་བརྟན་པོ་དང་ཡུན་གནས་ཐུབ་པ་དང་དེང་རབས་ཀྱི་ནུས་ཁུངས་ཐོབ་པར་ཁག་ཐེག་བྱེད་དགོས།
                                 </h3>
                                 <p class="mb-3">
-                                    - 在台北举办的东元科技创意竞赛上，给嘉宾讲解柔性太阳能电池商业计划，专注于创新清洁能源解决方案
+                                    ཐའེ་པེ་གྲོང་ཁྱེར་དུ་འཚོགས་པའི་TECOལག་རྩལ་གསར་གཏོད་འགྲན་བསྡུར་ཐོག་ཁོང་གིས་མགྲོན་པོ་ཚོར་མཉེན་ལྩུག་ལྡན་པའི་ཉི་འོད་གློག་རྫས་ཀྱི་ཚོང་ལས་འཆར་གཞི་འགྲེལ་བཤད་བརྒྱབ་སྟེ་གསར་གཏོད་ཀྱི་ནུས་ཁུངས་གཙང་མའི་ཐབས་ལམ་ལ་གཙོ་བོར་བལྟས་ཡོད།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">台北, 中国</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">རྒྱ་ནག་ཐའེ་པེ།</a></span>
                                     <span class="date-read">2012</span>
                                 </div>
                             </div>
@@ -447,7 +482,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        经济
+                                        དཔལ་འབྱོར
                                     </p>
                                 </div>
                                 <div style="
@@ -464,7 +499,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        增长
+                                        འཕེལ་རྒྱས
                                     </p>
                                 </div>
                                 <!-- Flag Image -->
@@ -479,16 +514,16 @@
                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 8: 经济增长与良好工作</a> <br></h2>
-                                <h3>促进包容且永续的经济成长，达到全面且生产力的就业</h3>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 8: དཔལ་འབྱོར་འཕེལ་རྒྱས་དང་ལས་གནས་བཟང་བ།</a> <br></h2>
+                                <h3>ཕྱོགས་བསྡུས་རང་བཞིན་དང་བརྟན་པོའི་ངང་དཔལ་འབྱོར་འཕར་སྣོན་ཡོང་བར་སྐུལ་འདེད་བཏང་ནས་ལས་ཞུགས་འཐུས་ཚང་དང་ཐོན་ལས་ཅན་མངོན་འགྱུར་བྱེད་པ།</h3>
                                 <p class="mb-3">
-                                    -
-                                    作为日内瓦联合国欧洲经济委员会专家组成员，为可持续经济增长和体面工作政策贡献力量
+                                    
+                                    རི་ནེ་ཝར་ཡོད་པའི་མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་ཡུ་རོབ་དཔལ་འབྱོར་ལྷན་ཁང་གི་ཆེད་མཁས་ཚོགས་པའི་ཚོགས་མི་ཞིག་ཡིན་པའི་ཆ་ནས་ཡུན་རིང་དཔལ་འབྱོར་འཕེལ་རྒྱས་དང་འོས་འཚམ་གྱི་ལས་ཀའི་སྲིད་ཇུས་ལ་ཕན་ཐོགས་ཡོད།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">日内瓦, 瑞士</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">སུད་སིའི་ཇི་ནི་ཝ།</a></span>
                                     <span class="date-read">2021</span>
                                 </div>
                             </div>
@@ -543,7 +578,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        产业
+                                        བཟོ་ལས
                                     </p>
                                 </div>
                                 <div style="
@@ -560,7 +595,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        创新
+                                        ལེགས་བཅོས
                                     </p>
                                 </div>
                                 <!-- Flag Image -->
@@ -575,18 +610,18 @@
                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 9: 产业创新及基础设施</a> <br></h2>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 9: ཐོན་ལས་གསར་གཏོད་དང་རྨང་གཞིའི་སྒྲིག་བཀོད།</a> <br></h2>
                                 <h3>
-                                    建立具有韧性的基础建设，促进包容且永续的工业，并加速创新
+                                    བརྟན་ལྷིང་གི་རྨང་གཞིའི་སྒྲིག་བཀོད་འཛུགས་སྐྲུན་བྱས་ཏེ་གཞི་ཁྱོན་ཅན་དང་ཡུན་རིང་ཐོན་ལས་ལ་སྐུལ་འདེད་གཏོང་བ་དང་གསར་གཏོད་བྱེད་མགྱོགས་སུ་གཏོང་བ།
                                 </h3>
                                 <p class="mb-3">
-                                    -
-                                    在瑞士光源进行同步辐射实验，推动燃料电池诊断技术创新，通过大型研究设施促进尖端技术突破。
+                                    
+                                    སུད་སིའི་འོད་ཀྱི་འབྱུང་ཁུངས་སུ་སིན་ཁོ་ཊོན་འོད་འཕྲོའི་ཚོད་ལྟ་སྤེལ་བ་དང་། སྣུམ་ཁམས་ཕྲན་གྱི་ནད་རྟགས་བརྟག་དཔྱད་ཀྱི་གསར་གཏོད་ལ་སྐུལ་འདེད་གཏོང་བ།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">菲利根, 瑞士</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">སུད་སིའི་གྲོང་ཁྱེར་ཝི་ལི་གྷན།</a></span>
                                     <span class="date-read">2019</span>
                                 </div>
                             </div>
@@ -641,7 +676,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        可持续
+                                        རྒྱུན་འཛིན་ཐུབ་པའི
                                     </p>
                                 </div>
                                 <div style="
@@ -658,7 +693,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        城市社区
+                                      གྲོང་ཁྱེར་གྱི་སྡེ་ཚོགས།
                                     </p>
                                 </div>
                                 <!-- Flag Image -->
@@ -673,16 +708,16 @@
                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 11: 可持续城市及社区</a> <br></h2>
-                                <h3>促使城市与人类居住具包容、安全、韧性及永续性</h3>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 11: རྒྱུན་སྲིང་ཐུབ་པའི་གྲོང་ཁྱེར་དང་སྤྱི་ཚོགས།</a> <br></h2>
+                                <h3>གྲོང་ཁྱེར་དང་འགྲོ་བ་མིའི་གཞིས་ཆགས་ཚང་མ་ཁྱབ་གདལ་དང་བདེ་འཇགས་དང་བརྟན་འཇགས་དང་ཡུན་གནས་ཐུབ་པ་བྱ་དགོས།</h3>
                                 <p class="mb-3">
-                                    -
-                                    身着传统巴伐利亚服饰参加拥有百年历史的慕尼黑啤酒节，庆祝文化可持续性与社区发展
+                                    
+                                    བཱ་ཝ་རི་ཡའི་སྲོལ་རྒྱུན་གྱི་གྱོན་ཆས་གྱོན་ནས་དུས་རབས་ཁ་ཤས་རིང་གི་ཨོ་ཀ་ཊོ་བར་ཕེས་ཊི་ཡིས་རིག་གནས་ཡུན་གནས་དང་སྤྱི་ཚོགས་འཕེལ་རྒྱས་ལ་རྟེན་འབྲེལ་ཞུ་བཞིན་ཡོད།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">慕尼黑, 德国</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">འཇར་མན་གྱི་གྲོང་ཁྱེར་མུ་ནིག།</a></span>
                                     <span class="date-read">2023</span>
                                 </div>
                             </div>
@@ -737,7 +772,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        海洋
+                                       རྒྱ་མཚོ
                                     </p>
                                 </div>
                                 <div style="
@@ -754,7 +789,7 @@
                         font-weight: bold;
                         text-transform: uppercase;
                       ">
-                                        生物
+                                       སྐྱེ་དངོས་རིག་པ།
                                     </p>
                                 </div>
                                 <!-- Flag Image -->
@@ -769,16 +804,16 @@
                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 14: 海洋生物</a> <br></h2>
-                                <h3>保育及永续利用海洋与海洋资源，以确保可持续发展</h3>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 14: རྒྱ་མཚོའི་སྲོག་ཆགས།</a> <br></h2>
+                                <h3>རྒྱ་མཚོ་དང་རྒྱ་མཚོའི་ཐོན་ཁུངས་སྲུང་སྐྱོང་དང་རྒྱུན་མཐུད་བེད་སྤྱོད་བྱས་ཏེ་རྒྱུན་མཐུད་ངང་འཕེལ་རྒྱས་ཡོང་བར་ཁག་ཐེག་བྱེད་པ།</h3>
                                 <p class="mb-3">
-                                    -
-                                    在联合国气候变化框架公约海洋与气候变化对话会议记录展板前，呼吁保护海洋生物，促进全球海洋可持续发展
+                                    
+                                    UNFCCC རྒྱ་མཚོ་དང་གནམ་གཤིས་འགྱུར་ལྡོག་སྐོར་གྱི་གྲོས་མོལ་ཡིག་ཆའི་འགྲེམས་སྟོན་སྒྲོམ་གྱི་མདུན་དུ་མི་རྣམས་ཀྱིས་རྒྱ་མཚོའི་སྲོག་ཆགས་ལ་སྲུང་སྐྱོབ་དང་འཛམ་གླིང་རྒྱ་མཚོའི་ཡུན་གནས་གོང་འཕེལ་ལ་སྐུལ་འདེད་གཏོང་དགོས་པའི་འབོད་སྐུལ་བྱས་ཡོད།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">波恩, 德国</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">འཇར་མན་གྱི་གྲོང་ཁྱེར་བྷོན།</a></span>
                                     <span class="date-read">2021</span>
                                 </div>
                             </div>
@@ -833,7 +868,7 @@
                                         font-weight: bold;
                                         text-transform: uppercase;
                                       ">
-                                        和平
+                                        ཞི་བདེ
                                     </p>
                                 </div>
                                 <div style="
@@ -850,7 +885,7 @@
                                         font-weight: bold;
                                         text-transform: uppercase;
                                       ">
-                                        正义
+                                       དྲང་བདེན
                                     </p>
                                 </div>
                                 <img src="images/flags/de.png" alt="Person" style="
@@ -864,17 +899,17 @@
                                     " />
                             </div>
                             <div class="contents">
-                                <span class="caption">可持续发展目标 2030</span>
-                                <h2><a href="#">SDG 16: 和平与正义</a> <br></h2>
+                                <span class="caption">2030ལོའི་རྒྱུན་མཐུད་འཕེལ་རྒྱས་ཀྱི་དམིགས་ཚད།</span>
+                                <h2><a href="#">SDG 16: ཞི་བདེ་དང་དྲང་བདེན།</a> <br></h2>
                                 <h3>
-                                    创建和平、正义、包容的可持续社会，建立负责的国际司法体系
+                                    ཞི་བདེ་དང་དྲང་བདེན།ཁྱབ་གདལ་དང་རྒྱུན་མཐུད་རང་བཞིན་གྱི་སྤྱི་ཚོགས་བསྐྲུན་ནས་འགན་འཁྲི་ལྡན་པའི་རྒྱལ་སྤྱིའི་དྲང་བདེན་མ་ལག་འཛུགས་དགོས།
                                 </h3>
                                 <p class="mb-3">
-                                    - 参加慕尼黑安全会议 (MSC) 的萨尔茨堡角活动，围绕特朗普2.0时代，讨论全球何去何从？
+                                   མུ་ནིག་གི་བདེ་འཇགས་ཚོགས་ཆེན་(MSC)ལ་སལ་ཟི་བྷར་གྷི་ཟུར་ཁང་གི་བྱེད་སྒོའི་ནང་མཉམ་ཞུགས་བྱས་ནས་ཊ་རམཔ་༢.༠ཡི་དུས་སྐབས་ནང་འཛམ་གླིང་གི་མ་འོངས་པ་གྲོས་བསྡུར་བྱེད་རོགས།
                                 </p>
 
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">慕尼黑, 德国</a></span>
+                                    <span class="d-block"><a href="#"></a><a href="#">འཇར་མན་གྱི་གྲོང་ཁྱེར་མུ་ནིག།</a></span>
                                     <span class="date-read">2025</span>
                                 </div>
                             </div>
@@ -920,11 +955,11 @@
                                 <div class="post-entry-2 d-flex bg-light">
                                     <div class="thumbnail" style="background-image: url('images/img_h_28.jpg')"></div>
                                     <div class="contents">
-                                        <h2><a href="#">新能源技术</a></h2>
+                                        <h2><a href="#">ནུས་ཁུངས་གསར་བའི་ལག་རྩལ།</a></h2>
                                         <div class="post-meta">
-                                            <span class="d-block">氢能 / 燃料电池 / 电解池 <br>太阳能电池 / 锂电池
+                                            <span class="d-block">ཆུ་རླངས་ནུས་ཤུགས། སྣུམ་ཕྲ་ཕུང་། གློག་སྒྱུར་ཆས། <br>ཉི་འོད་ཕྲ་ཕུང་། ལི་ཐི་ཡམ་གློག་རྫས།
                                             </span>
-                                            <span class="date-read">2012年至今 <span class="mx-1"></span><span
+                                            <span class="date-read">2012ལོ་ནས་ད་བར་དུ། <span class="mx-1"></span><span
                                                     class="icon-star2"></span></span>
                                         </div>
                                     </div>
@@ -933,10 +968,10 @@
                                 <div class="post-entry-2 d-flex">
                                     <div class="thumbnail" style="background-image: url('images/img_h_26.jpg')"></div>
                                     <div class="contents">
-                                        <h2><a href="#">能源经济与政策</a></h2>
+                                        <h2><a href="#">ནུས་ཁུངས་དཔལ་འབྱོར་དང་སྲིད་ཇུས།</a></h2>
                                         <div class="post-meta">
-                                            <span class="d-block">中国 / 欧盟 / 氢能战略 / 能源转型</span>
-                                            <span class="date-read">2023年至今<span class="mx-1"></span><span
+                                            <span class="d-block">རྒྱ་ནག / ཡུ་རོབ་མནའ་འབྲེལ་ / ཆུ་རླངས་འཐབ་ཇུས། / ནུས་ཁུངས་བརྗེ་སྤོར།</span>
+                                            <span class="date-read">2023ལོ་ནས་ད་ལྟའི་བར།<span class="mx-1"></span><span
                                                     class="icon-star2"></span></span>
                                         </div>
                                     </div>
@@ -945,10 +980,10 @@
                                 <div class="post-entry-2 d-flex">
                                     <div class="thumbnail" style="background-image: url('images/img_h_27.jpg')"></div>
                                     <div class="contents">
-                                        <h2><a href="#">新材料研发</a></h2>
+                                        <h2><a href="#">རྒྱུ་ཆ་གསར་པ་འཚོལ་ཞིབ་དང་།</a></h2>
                                         <div class="post-meta">
-                                            <span class="d-block">半导体 / 碳材料 / 高分子材料</span>
-                                            <span class="date-read">2013年至今<span class="mx-1"></span><span
+                                            <span class="d-block">གློག་འདྲེན་ཕྱེད་ཀ་/ནག་རྫས་རྒྱུ་ཆ་/ཕོ་ལི་མར་རྒྱུ་ཆ།</span>
+                                            <span class="date-read">2013ལོ་ནས་ད་བར་དུ།<span class="mx-1"></span><span
                                                     class="icon-star2"></span></span>
                                         </div>
                                     </div>
@@ -957,10 +992,10 @@
                                 <div class="post-entry-2 d-flex">
                                     <div class="thumbnail" style="background-image: url('images/img_h_29.jpeg')"></div>
                                     <div class="contents">
-                                        <h2><a href="#">低碳智慧交通</a></h2>
+                                        <h2><a href="#">ཐཱན་ཉུང་གི་རིག་ནུས་འགྲིམ་འགྲུལ།</a></h2>
                                         <div class="post-meta">
-                                            <span class="d-block">零碳交通 / 效能提升 / 无人驾驶</span>
-                                            <span class="date-read">2021年至今<span class="mx-1"></span><span
+                                            <span class="d-block">ནག་རྫས་ཀླད་ཀོར་གྱི་སྐྱེལ་འདྲེན། ཕན་འབྲས་མཐོར་འདེགས། རང་འགུལ་གྱིས་ཁ་ལོ་བསྒྱུར་བ།</span>
+                                            <span class="date-read">2021ལོ་ནས་ད་ལྟའི་བར།<span class="mx-1"></span><span
                                                     class="icon-star2"></span></span>
                                         </div>
                                     </div>
@@ -969,7 +1004,7 @@
                         </div>
 
                         <p>
-                            <a href="./cn-research.html" class="more">查看研究成果 <span
+                            <a href="./cn-research.html" class="more">ཞིབ་འཇུག་གྲུབ་འབྲས་ལ་ལྟ་བ། <span
                                     class="icon-keyboard_arrow_right"></span></a>
                         </p>
                     </div>
@@ -987,14 +1022,14 @@
 
                     <div class="col-lg-4">
                         <div class="section-title">
-                            <h2>新闻动态</h2>
+                            <h2>གསར་འགྱུར</h2>
                         </div>
 
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start" style="text-align: right; padding-right: 2px;">
                                 <small
                                     style="vertical-align: top; display: inline-block; position: relative; top: -1px;">
-                                    <span style="font-size: 0.9em;margin-right: -2px;">10月</span>
+                                    <span style="font-size: 0.7em;margin-right: -2px;">ཟླ་10པ།</span>
                                     <span style=" font-size: 0.7em;">2024</span>
                                 </small>
                             </div>
@@ -1002,12 +1037,12 @@
                                 <h2>
                                     <a href="https://www.salzburgglobal.org/multi-year-series/kfas/pageId/11076#people"
                                         target="“_blank”"><small
-                                            style="font-size: 0.9em"><strong>参加萨尔茨堡-KFAS全球研讨会</strong></small></a>
+                                            style="font-size: 0.9em"><strong>སཱལ་ཟི་བྷར་གྷི་ཀེ་ཨེཕ་ཨེ་ཨེས། རྒྱལ་སྤྱིའི་བགྲོ་གླེང་ཚོགས་འདུ་ལ་མཉམ་ཞུགས་བྱས།</strong></small></a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">雷翁波德斯克恩宫 (Leopoldskron
+                                    <span class="d-block"><a href="#"></a><a href="#">ལེའོན་པོད་ཁྲོན་ཕོ་བྲང་། (Leopoldskron
                                             Palace)</a></span>
-                                    <span class="date-read">萨尔茨堡, 奥地利 <img src="images/wflags/at.png" alt="flag" style="
+                                    <span class="date-read">ཨོ་སི་ཁྲུ་རི་ཡ། <img src="images/wflags/at.png" alt="flag" style="
                                                             height: 11px;
                                                             margin-right: 0px;
                                                             position: relative;
@@ -1023,19 +1058,19 @@
                             <div class="number align-self-start" style="text-align: right; padding-right: 2px;">
                                 <small
                                     style="vertical-align: top; display: inline-block; position: relative; top: -1px;">
-                                    <span style="font-size: 0.9em;margin-right: -2px;">3月</span>
+                                    <span style="font-size: 0.7em;margin-right: -2px;">ཟླ་3པ།</span>
                                     <span style=" font-size: 0.7em;">2024</span>
                                 </small>
                             </div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://symposium.org/" target="“_blank”"><small
-                                            style="font-size: 0.9em"><strong>担任联合国欧洲经济委员会专家组成员</strong></small></a>
+                                            style="font-size: 0.9em"><strong>མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་ཡོ་རོབ་དཔལ་འབྱོར་ཨུ་ཡོན་ལྷན་ཁང་གི་ཆེད་མཁས་ཚོགས་པའི་ཁོངས་མིའི་འགན་བཞེས།</strong></small></a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">联合国万国宫 (Palais des
+                                    <span class="d-block"><a href="#"></a><a href="#">མཉམ་འབྲེལ་རྒྱལ་ཚོགས་ཀྱི་ཕོ་བྲང་། (Palais des
                                             Nations)</a></span>
-                                    <span class="date-read">日内瓦, 瑞士 <img src="images/wflags/un.png" alt="flag" style="
+                                    <span class="date-read">སུད་སིའི་ཇི་ནི་ཝ། <img src="images/wflags/un.png" alt="flag" style="
                                                                                                 height: 11px;
                                                                                                 margin-right: 0px;
                                                                                                 position: relative;
@@ -1051,18 +1086,18 @@
                             <div class="number align-self-start" style="text-align: right; padding-right: 2px;">
                                 <small
                                     style="vertical-align: top; display: inline-block; position: relative; top: -1px;">
-                                    <span style="font-size: 0.9em;margin-right: -2px;">2月</span>
+                                    <span style="font-size: 0.7em;margin-right: -2px;">ཟླ་2པ།</span>
                                     <span style=" font-size: 0.7em;">2024</span>
                                 </small>
                             </div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://symposium.org/" target="“_blank”"><small
-                                            style="font-size: 0.9em"><strong>任职瑞士圣加仑经济论坛学术评审</strong></small></a>
+                                            style="font-size: 0.9em"><strong>སུད་སིའི་སེནཊ་གྷ་ལེན་དཔལ་འབྱོར་གླེང་སྟེགས་ཀྱི་ཤེས་ཡོན་བསྐྱར་ཞིབ་པ་གནང་ཡོད།</strong></small></a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">圣加仑大学 (HSG)</a></span>
-                                    <span class="date-read">圣加仑, 瑞士 <img src="images/wflags/ch.png" alt="flag" style="
+                                    <span class="d-block"><a href="#"></a><a href="#">སེནཊ་གྷ་ལེན་གཙུག་ལག་སློབ་གཉེར་ཁང་། (HSG)</a></span>
+                                    <span class="date-read">སུད་སིའི་སེནཊ་གྷ་ལེན། <img src="images/wflags/ch.png" alt="flag" style="
                                                                                                 height: 11px;
                                                                                                 margin-right: 0px;
                                                                                                 position: relative;
@@ -1078,18 +1113,18 @@
                             <div class="number align-self-start" style="text-align: right; padding-right: 2px;">
                                 <small
                                     style="vertical-align: top; display: inline-block; position: relative; top: -1px;">
-                                    <span style="font-size: 0.9em;margin-right: -2px;">10月</span>
+                                    <span style="font-size: 0.7em;margin-right: -2px;">ཟླ་10པ།</span>
                                     <span style=" font-size: 0.7em;">2023</span>
                                 </small>
                             </div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://www.irena.org/" target="“_blank”"><small
-                                            style="font-size: 0.9em"><strong>开始在慕尼黑工大担任校友导师</strong></small></a>
+                                            style="font-size: 0.9em"><strong>མུ་ནིག་ལག་རྩལ་སློབ་ཆེན་གྱི་སློབ་མ་རྙིང་པའི་སློབ་སྟོན་པ་ཞིག་ཏུ་ལས་ཀ་བྱེད་འགོ་ཚུགས།</strong></small></a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">慕尼黑工业大学 (TUM)</a></span>
-                                    <span class="date-read">慕尼黑, 德国 <img src="images/wflags/de.png" alt="flag" style="
+                                    <span class="d-block"><a href="#"></a><a href="#">མུ་ནིག་ལག་རྩལ་སློབ་ཆེན། (TUM)</a></span>
+                                    <span class="date-read">འཇར་མན་གྱི་གྲོང་ཁྱེར་མུ་ནིག། <img src="images/wflags/de.png" alt="flag" style="
                                                                                                 height: 11px;
                                                                                                 margin-right: 0px;
                                                                                                 position: relative;
@@ -1104,18 +1139,18 @@
                             <div class="number align-self-start" style="text-align: right; padding-right: 2px;">
                                 <small
                                     style="vertical-align: top; display: inline-block; position: relative; top: -1px;">
-                                    <span style="font-size: 0.9em;margin-right: -2px;">9月</span>
+                                    <span style="font-size: 0.7em;margin-right: -2px;">ཟླ9པ</span>
                                     <span style=" font-size: 0.7em;">2023</span>
                                 </small>
                             </div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://www.oxfordenergy.org/authors/hong-xu/"
-                                        target="“_blank”">开启牛津能源研究所访问学者</a>
+                                        target="“_blank”">ཨོག་ཕོརཌ་ནུས་ཁུངས་ཞིབ་འཇུག་ལྟེ་གནས་སུ་འཚམས་འདྲིའི་སློབ་གཉེར་བའི་ལས་གནས་འགོ་འཛུགས།</a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">牛津能源研究所 (OIES)</a></span>
-                                    <span class="date-read">牛津郡, 英国 <img src="images/wflags/gb.png" alt="flag" style="
+                                    <span class="d-block"><a href="#"></a><a href="#">ཨོག་སི་ཧྥོར་ཌི་ནུས་ཁུངས་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་། (OIES)</a></span>
+                                    <span class="date-read">དབྱིན་ཇིའི་ཨོག་ཕོརཌ་ཤི་ཡར། <img src="images/wflags/gb.png" alt="flag" style="
                                                                                                 height: 11px;
                                                                                                 margin-right: 0px;
                                                                                                 position: relative;
@@ -1127,7 +1162,7 @@
                         </div>
 
                         <p>
-                            <a href="./cn-news.html" class="more">查看所有新闻 <span
+                            <a href="./cn-news.html" class="more">གསར་འགྱུར་ཚང་མར་གཟིགས། <span
                                     class="icon-keyboard_arrow_right"></span></a>
                         </p>
                     </div>
@@ -1145,32 +1180,30 @@
                         <span class="caption"></span>
                         <h2>
                             <a href="#">
-                                <ruby>徐<rt></rt></ruby>
-                                <ruby>&nbsp;泓 <rt></rt></ruby>
-                                <small><small>&nbsp;博士</small></small>
+                                <ruby>ཞུའུ་ཧོང་།<rt></rt></ruby>
+                                <small><small>&nbsp;འབུམ་རམས་པ།</small></small>
                             </a>
                         </h2>
                         <p class="mb-3">
                             <br>
                             <img src="images/wflags/ch.png" alt="flag"
                                 style="height: 11px;margin-right: 0px;position: relative;top: -2px;" />
-                            苏黎世联邦理工大学 / 新能源博士 <br>
+                                ནུས་ཤུགས་གསར་པའི་ཐོག་འབུམ་རམས་པ། ཟུ་རིཆ། <br>
                             <!-- <img src="images/wflags/us.png" alt="flag"
                                 style="height: 11px;margin-right: 0px;position: relative;top: -2px;" />
                             量化商学院 /
                             MBA <br> -->
                             <img src="images/wflags/de.png" alt="flag"
                                 style="height: 11px;margin-right: 0px;position: relative;top: -2px;" />
-                            慕尼黑工业大学 /
-                            硕士 <br>
+                                མུ་ནིག་ལག་རྩལ་སློབ་ཆེན།/གཙུག་ལག་རབ་འབྱམས་པ། <br>
                             <img src="images/wflags/cn.png" alt="flag"
                                 style="height: 11px;margin-right: 0px;position: relative;top: -2px;" />
-                            北京交通大学 / 本科
+                                པེ་ཅིན་ཅའོ་ཏུང་སློབ་ཆེན།/འབུམ་རམས་པ།
                         </p>
                         <div class="post-meta">
-                            <span class="d-block"><a href="#" target="“_blank”"></a> 致力于
-                                <a href="#">可再生能源</a>, <a href="#">低碳交通</a> 以及
-                                <a href="#">可持续发展</a> 等领域</span>
+                            <span class="d-block"><a href="#" target="“_blank”"></a> <a href="#">སླར་གསོ་ཐུབ་པའི་ནུས་ཁུངས་</a>ལ་དམིགས་ནས།
+                                <a href="#">ཐཱན་ཉུང་འགྲིམ་འགྲུལ།</a>
+                                དང<a href="#">རྒྱུན་མཐུད་འཕེལ་རྒྱས</a>།
                         </div>
                     </div>
                 </div>
@@ -1185,17 +1218,17 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="section-title">
-                            <h2><a href="./cn-research.html" style="color:black">出版物</a></h2>
+                            <h2><a href="./cn-research.html" style="color:black">དཔེ་སྐྲུན།</a></h2>
                         </div>
                         <div class="post-entry-3 d-flex">
                             <div class="thumbnail order-md-2" style="background-image: url('images/img_h_5.jpg')"></div>
                             <div class="contents order-md-1 pl-0">
                                 <h2>
                                     <a href="https://doi.org/10.1016/j.jpowsour.2021.229492"
-                                        target="_blank">通过亚秒级原位X射线断层显微技术揭示质子交换膜氢燃料电池气体扩散层中的温度依赖性水传输机制
+                                        target="_blank">དྲོད་ཚད་ལ་རག་སླ་བའི་ཆུ་སྐྱེལ་འདྲེན་བྱེད་ཐབས་ནི་གློག་རྡུལ་བརྗེ་རེས་བྱེད་པའི་ཆུ་རླངས་སྣུམ་ཕྲ་ཕུང་གི་རླངས་རྫས་ཁྱབ་གདལ་གྱི་བང་རིམ་ནང་དུ་སྐར་ཆ་ཆུང་བའི་གློག་འོད་པར་རིས་ཀྱིས་གསལ་སྟོན་བྱས།
                                     </a>
                                 </h2>
-                                <p class="mb-3">J. Power Sources. 丰田合著 | PSI官网展示</p>
+                                <p class="mb-3">J. Power Sources. ཊོ་ཡོ་ཊ་ཡིས་མཉམ་འབྲེལ་རྩོམ་སྒྲིག་བྱས། PSI ཡི་གཞུང་འབྲེལ་དྲ་ཚིགས་ཐོག་བསྟན་ཡོད།</p>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#">H. Xu</a>, S. Nagashima, Dr. H. Nguyen, K.
                                         Kishita, Dr. F. Marone, Dr. F. N. Büchi, Dr. J. Eller <a href="#"></a></span>
@@ -1212,11 +1245,11 @@
                             <div class="contents order-md-1 pl-0">
                                 <h2>
                                     <a href="https://doi.org/10.3929/ethz-b-000487441"
-                                        target="_blank">亚秒级原位X射线断层显微术揭示质子交换膜氢燃料电池中液态水的动态分布
+                                        target="_blank">གློག་འོད་པར་རིས་ཀྱིས་གློག་རྡུལ་བརྗེ་རེས་བྱེད་པའི་ཆུ་རླངས་སྣུམ་ཕྲ་ཕུང་ནང་དུ་ཆུ་གཤེར་གྱི་སྒུལ་ཤུགས་ལྡན་པའི་བཀྲམ་སྤེལ་གསལ་སྟོན་བྱས།
 
                                     </a>
                                 </h2>
-                                <p class="mb-3">博士论文 | 苏黎世联邦理工学院 | 浏览下载量2000余次</p>
+                                <p class="mb-3">འབུམ་རམས་པའི་ཞིབ་འཇུག་རྩོམ་ཡིག | ETH ཟུ་རིཆ | ལྟ་ཀློག་དང་ཕབ་ལེན་བྱེད་ཚད་2000ལྷག་ཙམ་ཟིན་པ།</p>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#">H. Xu</a>, Prof. T. J. Schmidt, Prof. M.
                                         Stampanoni, Dr. J. Eller</span>
@@ -1235,10 +1268,10 @@
                             <div class="contents order-md-1 pl-0">
                                 <h2>
                                     <a href="https://doi.org/10.1149/1945-7111/ac1035"
-                                        target="_blank">气体扩散层基材对质子交换膜氢燃料电池水管理的影响: 原位液态水饱和度与气体扩散特性</a>
+                                        target="_blank">རླངས་རྫས་ཁྱབ་གདལ་གྱི་བང་རིམ་གྱི་གཞི་རྩའི་གློག་རྡུལ་བརྗེ་རེས་ཕྱི་ལྤགས་ཆུ་རླངས་སྣུམ་ཁམས་ཕྲན་གྱི་ཆུ་དོ་དམ་ལ་ཤུགས་རྐྱེན།</a>
                                 </h2>
                                 <p class="mb-3">
-                                    J. Electrochem. Soc. 瑞士光源合作 | 瑞士国家科学基金项目
+                                    J. Electrochem. Soc. སུད་སིའི་འོད་ཀྱི་ཐོན་ཁུངས་མཉམ་ལས། | སུད་སི་རྒྱལ་ཡོངས་ཚན་རིག་ཐེབས་རྩའི་ལས་གཞི།
                                 </p>
                                 <div class="post-meta">
                                     <span class="d-block"><a href="#">H. Xu</a> , Dr. M. Bührer, Dr. F. Marone, Prof. T.
@@ -1254,7 +1287,7 @@
 
                         <p>
                             <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao" target="_blank"
-                                class="more">查看谷歌学术<span class="icon-keyboard_arrow_right"></span></a>
+                                class="more">གུ་གུལ་སློབ་གཉེར་བ་ལ་གཟིགས།<span class="icon-keyboard_arrow_right"></span></a>
                         </p>
                     </div>
 
@@ -1271,75 +1304,74 @@
 
                     <div class="col-lg-3">
                         <div class="section-title">
-                            <h2>国家专利</h2>
+                            <h2>བདག་དབང་།</h2>
                         </div>
 
                         <div class="trend-entry d-flex">
-                            <div class="number align-self-start">欧</div>
+                            <div class="number align-self-start">ཡུ་རོབ།</div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://patents.google.com/patent/CN102441489B/en"
-                                        target="_blank">氢燃料电池先进水管理的方法</a>
+                                        target="_blank">ཡོ་རོབ་མནའ་འབྲེལ་གྱི་བདག་དབང་རེ་ཞུ་གཉིས་ཕུལ་ཡོད།</a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block">欧盟专利
-                                        (申请中)</span>
-                                    <span class="date-read">2024 <span class="mx-1">&bullet;</span>德国慕尼黑<span
+                                    <span class="d-block">ཡུ་རོབ་ཀྱི་བདག་དབང་།
+                                        (རེ་སྒུག)</span>
+                                    <span class="date-read">2025 <span class="mx-1">&bullet;</span>འཇར་མན་གྱི་གྲོང་ཁྱེར་མུ་ནིག།<span
                                             class="icon-star2"></span></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="trend-entry d-flex">
-                            <div class="number align-self-start">中</div>
+                            <div class="number align-self-start">རྒྱ་ནག།</div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://patents.google.com/patent/CN102441489B/en"
-                                        target="_blank">环形气液界面跳汰磁选装置</a>
+                                        target="_blank">སྒོར་སྒོར་གྱི་རླངས་རྫས་དང་གཤེར་གཟུགས་ཀྱི་འབྲེལ་མཐུད་ཁབ་ལེན་དབྱེ་འབྱེད་ཀྱི་ཡོ་ཆས།</a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block">发明专利
+                                    <span class="d-block">གསར་གཏོད་བདག་དབང་།
                                         CN102441489B</span>
-                                    <span class="date-read">2013 <span class="mx-1">&bullet;</span>中国北京<span
+                                    <span class="date-read">2013 <span class="mx-1">&bullet;</span>རྒྱ་ནག་པེ་ཅིང་།<span
                                             class="icon-star2"></span></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="trend-entry d-flex">
-                            <div class="number align-self-start">中</div>
+                            <div class="number align-self-start">རྒྱ་ནག།</div>
                             <div class="trend-contents">
                                 <h2>
                                     <a href="https://patents.google.com/patent/CN102441490A/en"
-                                        target="_blank">可连续运行的气液界面跳汰磁选可控环形装置</a>
+                                        target="_blank">རླངས་རྫས་དང་ཁུ་བའི་འབྲེལ་མཐུད་ཀྱི་ཁབ་ལེན་དབྱེ་འབྱེད་ཀྱི་མུ་མཐུད་དུ་བཀོལ་སྤྱོད་བྱེད་པའི་ཚོད་འཛིན་ཐུབ་པའི་འཁོར་ལོའི་སྒྲིག་ཆས།</a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block">发明专利
+                                    <span class="d-block">གསར་གཏོད་བདག་དབང་།
                                         CN102441490A </span>
-                                    <span class="date-read">2013 <span class="mx-1">&bullet;</span>中国北京<span
+                                    <span class="date-read">2013 <span class="mx-1">&bullet;</span>རྒྱ་ནག་པེ་ཅིང་།<span
                                             class="icon-star2"></span></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="trend-entry d-flex">
-                            <div class="number align-self-start">中</div>
+                            <div class="number align-self-start">རྒྱ་ནག།</div>
                             <div class="trend-contents">
                                 <h2>
-                                    <a href="https://patents.google.com/patent/CN202311136U/en" target="_blank">超声 -
-                                        光催化氧化耦合果蔬清洗装置</a>
+                                    <a href="https://patents.google.com/patent/CN202311136U/en" target="_blank">འོད་རླབས་འགྱུར་རྫས་ཀྱི་འཚོ་རླུང་སྦྲེལ་བའི་ཤིང་ཏོག་དང་སྔོ་ཚལ་གཙང་བཟོའི་ཡོ་ཆས།</a>
                                 </h2>
                                 <div class="post-meta">
-                                    <span class="d-block">实用新型专利
+                                    <span class="d-block">བེད་སྤྱོད་དཔེ་སྟོན་གྱི་བདག་དབང་།
                                         CN202311136U</span>
-                                    <span class="date-read">2012 <span class="mx-1">&bullet;</span>中国北京<span
+                                    <span class="date-read">2012 <span class="mx-1">&bullet;</span>རྒྱ་ནག་པེ་ཅིང་།<span
                                             class="icon-star2"></span></span>
                                 </div>
                             </div>
                         </div>
                         <p>
                             <a href="https://patents.google.com/?inventor=%E5%BE%90%E6%B3%93&assignee=Beijing+Jiaotong+University&oq=%E5%BE%90%E6%B3%93+Beijing+Jiaotong+University"
-                                target="_blank" class="more">查看谷歌专利<span class="icon-keyboard_arrow_right"></span></a>
+                                target="_blank" class="more">གུ་གུལ་གྱི་བདག་དབང་ལྟ་བ།<span class="icon-keyboard_arrow_right"></span></a>
                         </p>
                     </div>
                 </div>
@@ -1373,20 +1405,20 @@
                                                     vertical-align: -6%;
                                                     display: inline-block;
                                                     margin-right: 0em;
-                                                  " /> 联系我</h2>
+                                                  " /> འབྲེལ་བ་བྱོས།</h2>
                             <p>
-                                邮件 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a> <br>
-                                领英 |
+                                ཡིག་ཟམ། | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a> <br>
+                                ལིན་ཀི་ཌིན། |
                                 <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
-                                知乎 |
+                                ཞི་ཧུ། |
                                 <a href="https://www.zhihu.com/people/dr.of.nothing"
                                     target="_blank">zhihu.com/people/dr.of.nothing</a> <br>
                                 <br>
-                                <span id="currentDate"></span> - <span id="currentWeekday"></span><br>
+                                <span class="currentDateInLang" language="english"></span><br>
                                 <text><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
                                         class="clock24"
                                         id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
-                                        title="timezone - Zurich" target="_blank" rel="nofollow">西欧时间 [CET]</a></text>
+                                        title="timezone - Zurich" target="_blank" rel="nofollow">ཡོ་རོབ་ནུབ་མའི་དུས་ཚོད། [CET]</a></text>
                                 <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
                             <h2>&nbsp;&nbsp;</h2>
@@ -1419,20 +1451,20 @@
                                                                                                 vertical-align: -6%;
                                                                                                 display: inline-block;
                                                                                                 margin-right: 0em;
-                                                                                              " /> 世界之大, 为何我们相遇</h2>
+                                                                                              " /> ང་ཚོ་འཇིག་རྟེན་འདིར་ཅིའི་ཕྱིར་མཇལ།</h2>
                             <p>
-                                摄影 |
+                                པར་ལེན། |
                                 <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a> <br>
-                                写作 |
+                                རྩོམ་བྲིས |
                                 <a href="https://site.in.construction/" target="_blank">site.in.construction</a> <br>
-                                学术 |
+                                སློབ་གསོ། |
                                 <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a> <br> <br>
-                                <a class="nongli"></a> - <a class="jieqi-24" language="chinese"></a><a
-                                    class="currentZodiacInLang" language="chinese"></a><br>
+                                <a class="jieqi-24" language="tibetan"></a> - <a
+                                    class="currentZodiacInLang" language="tibetan"></a><br>
                                 <text><a href="//24timezones.com/Beijing/time" style="text-decoration: none"
                                         class="clock24"
                                         id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
-                                        title="Time - Beijing" target="_blank" rel="nofollow">北京时间 [CST]</a></text>
+                                        title="Time - Beijing" target="_blank" rel="nofollow">ལྷ་སའི་དུས་ཚོད། [CST]</a></text>
                                 <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
                             <h2>&nbsp;&nbsp;</h2>
@@ -1516,9 +1548,8 @@
                         display: inline-block;
                         margin-right: 0em;
                       " />
-                                    <text>欢迎来自<span class="location">地球</span>的朋友!
-                                        跨越地表
-                                        <span class="distance-info"> ∞ 公里</span>, 过去未来共斟酌!</text>
+                                    <text><span class="location">འཛམ་གླིང</span> གྱི་གྲོགས་པོ་རྣམས་ལ་དགའ་བསུ་ཞུ།
+                                        འཛམ་གླིང་གི་ཕྱི་ངོས་ <span class="distance-info">∞ ཀི་ལོ་མི་ཊར་</span> བརྒལ་ནས་ང་ཚོས་འདས་པ་དང་མ་འོངས་པ་མཉམ་དུ་བསམ་གཞིག་བྱེད་ཀྱི་ཡོད།</text>
                                     <img src="./images/wflags/de.png" style="
                         height: 0.9em;
                         vertical-align: -6%;
@@ -1527,11 +1558,11 @@
                       " />
                                     <br>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    版权 &copy; 2017 -
+                                    པར་དབང་། &copy; 2017 -
                                     <script>
                                         document.write(new Date().getFullYear());
                                     </script>
-                                    | 徐泓 | 更新: <span class="web_update_year"></span>.<span
+                                    | ཞུའུ་ཧོང་། | གསར་བཅོས་བྱས།: <span class="web_update_year"></span>.<span
                                         class="web_update_month"></span> |
                                     <a href="https://colorlib.com" target="_blank">Colorlib</a> <br>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -1586,8 +1617,8 @@
             <script src="js/mobilenav.js"></script>
 
             <script src="js/main.js"></script>
-            <script src="js/user_ip_cn.js" type="module"></script>
-            <script src="js/cn_fanti_translate.js"></script>
+            <script src="js/user_ip_en.js" type="module"></script>
+            <!-- <script src="js/cn_fanti_translate.js"></script> -->
             <script type="text/javascript" src="update_info_script.js"></script>
             <script type="module" src="js/festival.js"></script>
             <script src="js/24jieqi.js"></script>
