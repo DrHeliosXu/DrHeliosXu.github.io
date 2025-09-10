@@ -9,7 +9,7 @@ const cnProvincesMap = {
     "Jilin": { name: "吉林", slogan: "白山松水, 吉祥吉林! " },
     "Heilongjiang": { name: "黑龙江", slogan: "北国好风光, 尽在黑龙江! " },
     "Shanghai": { name: "上海", slogan: "上善若水, 海纳百川! " },
-    "Jiangsu": { name: "江苏", slogan: "水韵江南, 风华苏秀! " },
+    "Jiangsu": { name: "江苏", slogan: "水韵江苏, 风华天下! " },
     "Zhejiang": { name: "浙江", slogan: "诗画江南, 活力浙江! " },
     "Anhui": { name: "安徽", slogan: "美好安徽, 迎客天下! " },
     "Fujian": { name: "福建", slogan: "福来福往, 自由自在! " },
