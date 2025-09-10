@@ -1,3 +1,4 @@
+// ------------------- 配置数据 -------------------
 const cnProvincesMap = {
     "Beijing": { name: "北京", slogan: "北境长城, 京华盛世! " },
     "Tianjin": { name: "天津", slogan: "天天乐道, 津津有味! " },
@@ -35,8 +36,19 @@ const cnProvincesMap = {
     "Taiwan": { name: "台湾", slogan: "让世界看见台湾! " }
   };
   
+  const yourLocation = {
+    lat: 48.1487175, // Munich latitude
+    lon: 11.5658895, // Munich longitude
+  };
+  
+  // ------------------- 工具函数 -------------------
   async function fetchCountries() {
     const response = await fetch("/js/countries.json");
+    return response.json();
+  }
+  
+  async function fetchCityMap() {
+    const response = await fetch('/js/city_name.json');
     return response.json();
   }
   
@@ -45,17 +57,14 @@ const cnProvincesMap = {
     return country ? country[language] || country.english : "地球";
   }
   
-  function updateLocationAndFlag(countryName, countryCode) {
+  function updateLocationAndFlag(name, code) {
     const locationElements = document.querySelectorAll('.location');
     const flagElements = document.querySelectorAll('.country-flag');
   
-    locationElements.forEach(location => {
-      location.textContent = countryName;
-    });
-  
+    locationElements.forEach(location => location.textContent = name);
     flagElements.forEach(flag => {
-      flag.src = `./images/wflags/${countryCode}.png`;
-      flag.alt = countryName;
+      flag.src = `./images/wflags/${code}.png`;
+      flag.alt = name;
     });
   }
   
@@ -65,99 +74,105 @@ const cnProvincesMap = {
       const provinceSlogan = cnProvincesMap[region].slogan;
   
       const locationElements = document.querySelectorAll('.location');
-      locationElements.forEach(location => {
-        location.textContent = provinceName;
-      });
+      locationElements.forEach(location => location.textContent = provinceName);
   
       let sloganElements = document.querySelectorAll('.province-slogan');
       if (sloganElements.length === 0) {
-        // 如果页面没有这个元素，则创建一个
-        sloganElements = [];
         locationElements.forEach(location => {
           const span = document.createElement('span');
           span.className = 'province-slogan';
           span.textContent = provinceSlogan;
           location.insertAdjacentElement('afterend', span);
-          sloganElements.push(span);
         });
       } else {
-        sloganElements.forEach(span => {
-          span.textContent = provinceSlogan;
-        });
+        sloganElements.forEach(span => span.textContent = provinceSlogan);
       }
     }
   }
   
   function calculateDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Earth's radius in km
+    const R = 6371;
     const dLat = ((lat2 - lat1) * Math.PI) / 180;
     const dLon = ((lon2 - lon1) * Math.PI) / 180;
     const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos((lat1 * Math.PI) / 180) *
-        Math.cos((lat2 * Math.PI) / 180) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) ** 2;
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Distance in km
+    return R * c;
   }
   
-  const yourLocation = {
-    lat: 48.1487175, // Munich latitude
-    lon: 11.5658895, // Munich longitude
-  };
+  // 标准化城市名，去大小写、重音、空格
+  function normalizeCityName(name) {
+    if (!name) return "";
+    return name
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
   
+  // ------------------- 主逻辑 -------------------
   async function displayCountryInfoAndDistance() {
     const countries = await fetchCountries();
+    const cityMapList = await fetchCityMap();
+    const cityMap = cityMapList[0]; // 假设 city_name.json 是 [{...}] 结构
+  
     const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
     const data = await response.json();
     const countryCode = data.country.toLowerCase();
-    const language = "chinese";
-    const countryName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
   
-    // 更新位置和国旗
-    updateLocationAndFlag(countryName, countryCode);
+    let displayName = "";
   
-    // 更新省份信息（如果是中国大陆、香港、澳门或台湾）
-    const chinaRegionCodes = ["CN", "HK", "MO", "TW"];
-    if (chinaRegionCodes.includes(countryCode.toUpperCase()) && data.region) {
-    updateProvinceInfo(data.region);
+    // ---- 城市中文名优先 ----
+    if (data.city) {
+      const normalizedCity = normalizeCityName(data.city);
+      for (const key in cityMap) {
+        if (normalizeCityName(key) === normalizedCity && cityMap[key]["ZH-CN"]) {
+          displayName = cityMap[key]["ZH-CN"];
+          break;
+        }
+      }
     }
   
+    // ---- 城市未匹配，回退到省份或国家 ----
+    if (!displayName) {
+      const language = "chinese";
+      displayName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
+  
+      const chinaRegionCodes = ["CN", "HK", "MO", "TW"];
+      if (chinaRegionCodes.includes(countryCode.toUpperCase()) && data.region) {
+        if (cnProvincesMap[data.region]) {
+          displayName = cnProvincesMap[data.region].name;
+        }
+      }
+    }
+  
+    // ---- 更新显示 ----
+    updateLocationAndFlag(displayName, countryCode);
+    if (cnProvincesMap[data.region]) updateProvinceInfo(data.region);
+  
+    // ---- 距离计算 ----
     const loc = data.loc ? data.loc.split(",") : null;
+    const distanceElements = document.querySelectorAll('.distance-info');
     if (loc && loc.length === 2) {
       const userLat = parseFloat(loc[0]);
       const userLon = parseFloat(loc[1]);
       if (!isNaN(userLat) && !isNaN(userLon)) {
         const distanceKm = calculateDistance(yourLocation.lat, yourLocation.lon, userLat, userLon);
-        let displayDistance;
-        if (distanceKm >= 1) {
-          displayDistance = `${Math.round(distanceKm)} 公里`;
-        } else if (distanceKm < 1 && distanceKm > 0) {
-          displayDistance = `${Math.round(distanceKm * 1000)} 米`;
-        } else {
-          displayDistance = "♾️ 公里";
-        }
-  
-        const distanceElements = document.querySelectorAll('.distance-info');
-        distanceElements.forEach(distanceElement => {
-          distanceElement.innerText = displayDistance;
-        });
+        const displayDistance = distanceKm >= 1 ? `${Math.round(distanceKm)} 公里` :
+                                distanceKm > 0 ? `${Math.round(distanceKm * 1000)} 米` : "♾️ 公里";
+        distanceElements.forEach(el => el.innerText = displayDistance);
   
         document.documentElement.style.setProperty('--user-latitude', userLat);
         document.documentElement.style.setProperty('--user-longitude', userLon);
-  
       } else {
-        const distanceElements = document.querySelectorAll('.distance-info');
-        distanceElements.forEach(distanceElement => {
-          distanceElement.innerText = "♾️ 公里";
-        });
+        distanceElements.forEach(el => el.innerText = "♾️ 公里");
       }
     } else {
-      const distanceElements = document.querySelectorAll('.distance-info');
-      distanceElements.forEach(distanceElement => {
-        distanceElement.innerText = "♾️ 公里";
-      });
+      distanceElements.forEach(el => el.innerText = "♾️ 公里");
     }
   }
   
