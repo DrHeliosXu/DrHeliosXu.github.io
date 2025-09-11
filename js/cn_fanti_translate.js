@@ -6,16 +6,29 @@ window.addEventListener('DOMContentLoaded', function () {
     initializeLanguage();
     updateSelectBox();
     updateLogo(); // 初始化时更新 logo
+
+    // ✅ 根据localStorage执行简繁切换，保证新页面保持上次选择
+    if (currentLanguage === '繁体') {
+        runFanTiJavaScript();
+    } else if (currentLanguage === '简体') {
+        runJianTiJavaScript();
+    }
 });
 
 // 初始化语言状态
 function initializeLanguage() {
-    const selectBox = document.getElementById('languages');
-    const selectedOption = selectBox.querySelector('option[selected]');
-    if (selectedOption) {
-        currentLanguage = selectedOption.textContent.trim();
+    // 优先读取 localStorage
+    const savedLang = localStorage.getItem('langMode');
+    if (savedLang) {
+        currentLanguage = savedLang;
     } else {
-        console.error('未找到默认选项，确保HTML正确配置');
+        const selectBox = document.getElementById('languages');
+        const selectedOption = selectBox.querySelector('option[selected]');
+        if (selectedOption) {
+            currentLanguage = selectedOption.textContent.trim();
+        } else {
+            console.error('未找到默认选项，确保HTML正确配置');
+        }
     }
 }
 
@@ -25,16 +38,18 @@ function handleChange(select) {
 
     if (selectedValue === 'javascript:runFanTiJavaScript();') {
         // 切换到繁体中文
-        runFanTiJavaScript();
         currentLanguage = '繁体';
-        updateSelectBox(); // 确保选框同步状态
-        updateLogo(); // 切换语言时更新 logo
+        localStorage.setItem('langMode', currentLanguage); // ✅ 提前保存
+        runFanTiJavaScript();
+        updateSelectBox();
+        updateLogo();
     } else {
         // 切换到其他语言或简体中文
         if (selectedValue !== '') {
             currentLanguage = select.options[select.selectedIndex].textContent.trim();
-            updateLogo(); // 切换语言时更新 logo
-            window.location.href = selectedValue; // 跳转页面
+            localStorage.setItem('langMode', currentLanguage); // ✅ 提前保存
+            updateLogo();
+            window.location.href = selectedValue; // ✅ 跳转放最后，确保localStorage已写入
         }
     }
 }
@@ -80,14 +95,12 @@ function updateSelectBox() {
     const selectBox = document.getElementById('languages');
     const currentValue = selectBox.querySelector('option[selected]')?.value;
 
-    // 确保 currentLanguage 与 selectBox.value 映射一致
     if (currentLanguage === '繁体') {
         selectBox.value = 'javascript:runFanTiJavaScript();';
     } else if (currentLanguage === '简体' && currentValue) {
-        selectBox.value = currentValue; // 使用默认选项值
+        selectBox.value = currentValue;
     }
 
-    // 检查是否成功设置了选项
     if (!selectBox.value) {
         console.error('选框值未正确设置，检查 updateSelectBox 中的逻辑');
     }
@@ -97,38 +110,36 @@ function updateSelectBox() {
 function updateLogo() {
     const logoImage = document.querySelector('.site-logo img');
     const logoLink = document.querySelector('.site-logo');
-    const flagImage = document.querySelector('.flag img'); // 找到国旗元素
+    const flagImage = document.querySelector('.flag img');
     if (!logoImage || !logoLink || !flagImage) {
         console.error('未找到 logo 或 flag 元素，检查 HTML 配置');
         return;
     }
 
     if (currentLanguage === '繁体') {
-        logoImage.src = 'images/logo-full-tw.png'; // 繁体中文 logo
-        logoLink.href = 'cn.html'; // 繁体中文链接
-        flagImage.src = 'images/flag_hk.png'; // 更新国旗为香港旗帜
+        logoImage.src = 'images/logo-full-tw.png';
+        logoLink.href = 'cn.html';
+        flagImage.src = 'images/flag_hk.png';
     } else if (currentLanguage === '简体') {
-        logoImage.src = 'images/logo-full-cn.png'; // 简体中文 logo
-        logoLink.href = 'cn.html'; // 简体中文链接
-        flagImage.src = 'images/flag_cn.png'; // 更新国旗为中国旗帜
+        logoImage.src = 'images/logo-full-cn.png';
+        logoLink.href = 'cn.html';
+        flagImage.src = 'images/flag_cn.png';
     }
 }
 
 // 监听点击事件，切换简体和繁体 logo
 document.getElementById('switch-cn').addEventListener('click', function() {
-    // 执行简体转换
-    runJianTiJavaScript();
-
-    // 切换语言并更新 logo
     currentLanguage = '简体';
+    localStorage.setItem('langMode', currentLanguage); // ✅ 记住选择
+    runJianTiJavaScript();
     updateLogo();
 });
 
 document.getElementById('switch-tw').addEventListener('click', function() {
-    // 执行繁体转换
-    runFanTiJavaScript();
-
-    // 切换语言并更新 logo
     currentLanguage = '繁体';
+    localStorage.setItem('langMode', currentLanguage); // ✅ 记住选择
+    runFanTiJavaScript();
     updateLogo();
 });
+
+
