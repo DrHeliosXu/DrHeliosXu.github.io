@@ -361,8 +361,14 @@
       align-items: flex-start;
       /* 内容顶部对齐 */
     }
-
-
+        .main-nav ul {
+      position: relative;
+      z-index: 1002;
+    }
+    .main-nav {
+      position: fixed;
+      z-index: 1001;
+    }
     /* 横排样式 */
     .horizontal-layout {
       writing-mode: horizontal-tb;
@@ -553,33 +559,34 @@
     <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
 
 
-    <!---Mobile MENU Bar--->
-    <a class="d-inline-block d-sm-none ">
-      <button id="burger" class="open-main-nav">
-        <span class="burger"></span>
-        <span class="burger-text">目 录</span>
-      </button>
 
-      <nav class="main-nav" id="main-nav">
-        <ul>
-          <li>
-            <a href="cn.html">徐 泓 <small>博士</small> </a><br>
-          </li>
-          <li>
-            <a href="cn-research.html">研究 ➔</a>
-          </li>
-          <li>
-            <a href="cn-news.html">新闻 ➔</a>
-          </li>
-          <li>
-            <a href="cn-projects.html">项目 ➔</a>
-          </li>
-          <li>
-            <a href="cn-about.html">关于 ➔</a>
-          </li>
-        </ul>
-      </nav>
-    </a>
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+          <button id="burger" class="open-main-nav">
+              <span class="burger"></span>
+              <span class="burger-text">目 录</span>
+          </button>
+
+          <nav class="main-nav" id="main-nav">
+              <ul>
+                  <li>
+                      <a href="cn.html">徐 泓 <small>博士</small> </a><br>
+                  </li>
+                  <li>
+                      <a href="cn-research.html">研究 ➔</a>
+                  </li>
+                  <li>
+                      <a href="cn-news.html">新闻 ➔</a>
+                  </li>
+                  <li>
+                      <a href="cn-projects.html">项目 ➔</a>
+                  </li>
+                  <li>
+                      <a href="cn-about.html">关于 ➔</a>
+                  </li>
+              </ul>
+          </nav>
+      </a>
     <!------>
     <!-- 简化版导航栏内容 -->
     <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
@@ -689,11 +696,11 @@
                 <!-- 语言选择 -->
                 <select id="languages-4" name="languages" class="adjustable-select" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
-                  <option value="old-chinese">汉/文言文</option>
+                  <option value="oldchinese">汉/文言文</option>
                   <option value="canton">汉/粤语</option>
                   <option value="korean">朝/조선어</option>
                   <option value="tibetan">藏/བོད་མི</option>
-                  <option value="mongol-traditional">蒙/ᠮᠣᠩᠭᠣᠯ</option>
+                  <option value="mongoltraditional">蒙/ᠮᠣᠩᠭᠣᠯ</option>
                   <option value="uyghur">维/ئۇيغۇر</option>
                   <option value="kazakh">哈/Қазақ</option>
                   <option value="tajik">塔/Тоҷикӣ</option>
@@ -761,7 +768,7 @@
               </p>
 
 
-              <p id="old-chinese-content" lass="column story-content" align="justify" style="display: none;">
+              <p id="oldchinese-content" lass="column story-content" align="justify" style="display: none;">
                 自鑽木生火，迄於電車驅行，能源者，文明進步之基石也。秉“<strong>創先-創新–創效</strong>”之旨，徐博專心於<strong>能源與交通</strong>之域，務於<strong>效能增進</strong>及<strong>碳中和</strong>，所研涵太陽能電池、鋰電池、电解槽及氫燃料電池。攻學期間，與跨國企業及中歐學術機構交游合作，發表<strong>論文十五餘篇</strong>，申專利五項（三已授權）。憑<strong><a href="https://psi.ch" target="_blank">瑞士光明之源</a></strong>與<strong><a href="https://www.tytlabs.co.jp/" target="_blank">豐田中樞術研之所</a></strong>共研燃料電池健康診斷之超速高分倫琴射線斷層攝影術，其功績獲瑞士聯邦<strong><a href="https://psi.ch" target="_blank">保羅謝爾研習院</a></strong>推舉，並蒙<strong>美國電化學學會</strong>邀與資助，赴亞特蘭大會報。又曾於<strong><a href="https://unfccc.int/" target="_blank">聯合國波恩氣候變化大會</a></strong>主持“<strong>中國能源轉型</strong>與技術創新”分會，多次參與<strong><a href="https://unece.org/" target="_blank">聯合國歐洲經濟委員會</a></strong><strong>交通與氣候專家組</strong>及<strong>氫能工作小組</strong>議論。兼為十餘能源與交通高引期刊之<strong>審稿人</strong>，曾任瑞士<strong><a href="https://symposium.org/" target="_blank">聖加倫國際經濟論壇</a></strong>學術評審、<strong><a href="https://tum.de" target="_blank">德意志慕尼黑工業學府</a></strong>校友導師、<strong><a href="https://oxfordenergy.org" target="_blank">英吉利牛津能源研究所</a></strong>訪研，以及<strong><a href="https://salzburgglobal.org" target="_blank">奧地利薩爾茨堡國際</a></strong>學者也。
                 <br><br>
                 新冠元年春，歲在辛丑，徐君榮膺<strong><a href="https://ethz.ch/en.html" target="_blank">蘇黎世聯邦理工大學校</a></strong>新能源博士之位，資助自瑞士科學基金。碩業於<strong><a href="https://tum.de" target="_blank">德意志慕尼黑工業學府</a></strong>，蒙歐盟伊拉斯謨獎學金；本科於<strong><a href="https://bjtu.edu.cn" target="_blank">北京交通大學</a></strong>，得創新獎學金。自本碩博之際，專心於<strong>新能源</strong>及<strong>新材料</strong>研發。曾於<strong><a href="https://xfel.eu" target="_blank">歐羅巴自由電子激光器所</a></strong>、<strong><a href="https://ecoledesponts.fr/en" target="_blank">法蘭西巴黎理工學院</a></strong>、<strong><a href="https://lmu.de" target="_blank">德意志慕尼黑大學校</a></strong>實習，亦與<strong>豐田汽車</strong>、<strong>英飛凌半導體</strong>、<strong>科德寶動力</strong>等跨國企業深研合作，曾掌二年瑞士-日本<strong>校企技術轉移</strong>專案，並主持中法合作框架下技術培訓之事。科研之暇，獲<strong><a href="https://cdi.eu" target="_blank">法蘭西工程師學院</a></strong>MBA全額錄取，蒙桑坦德銀行獎學金，赴<strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></strong>修“綠色轉型”企管課程；又於頂尖證券研究所撰個股深度報，並於雙幣基金從事新能源賽道風險投資實務也。
@@ -984,7 +991,7 @@
               </p>
 
 
-              <p id="mongol-traditional-content" align="justify" style="font-size: 14px; display: none;">
+              <p id="mongoltraditional-content" align="justify" style="font-size: 14px; display: none;">
                 Оᠳᠣᠣᠭᠢᠶᠨ ᠪᠠᠶᠳᠯᠠᠠᠷ᠂ ᠳᠣᠺᠲᠣᠷ сюᠶ хᠣᠨᠭ гᠧᠷᠮᠠᠨ ᠳᠠᠬь ᠠᠵ ᠦᠶᠯᠳᠸᠡᠷᠢᠶᠨ ᠰᠠᠯᠪᠠᠷᠲ ᠱᠢᠨᠡ ᠡᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ ᠬᠥᠳᠥᠯᠭᠦᠦᠷᠢᠶᠨ
                 ᠰᠢᠰᠲᠧᠮᠢᠶᠨ ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠡᠨ ᠢᠨᠵᠧᠨᠧᠷᠡᠡᠷ ᠠᠵᠢᠯᠯᠠᠵ᠂ ᠡᠷᠴᠢᠮ ᠬᠦᠴ ᠪᠠ ᠲᠡᠡᠸᠡᠷ ᠰᠠᠯᠪᠠᠷыᠨ ᠦᠷ ᠠᠱᠢᠭᠲᠠᠶ ᠪᠠᠶᠳᠯыᠭ ᠳᠡᠡᠱᠯᠦᠦᠯᠡᠬ
                 ᠪᠣᠯᠣᠨ ᠨяᠮᠺᠠᠠᠷ ᠦᠶᠯ ᠠᠵᠢᠯᠯᠠᠭᠠᠠ яᠸᠤᠤᠯᠵ ᠪᠠᠶᠨᠠ. Сᠤᠳᠠᠯᠭᠠᠠᠨы ᠦᠧᠳᠡᠡ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠺᠣᠮᠫᠠᠨᠢᠤᠳ ᠪᠣᠯᠣᠨ ᠲᠥᠸ еᠸᠷᠣᠫыᠨ
@@ -1758,7 +1765,7 @@
         directionSelector.disabled = true;
 
         // 根据语言启用特定设置
-        if (["chinese", "canton", "old-chinese"].includes(selectedLanguage)) {
+        if (["chinese", "canton", "oldchinese"].includes(selectedLanguage)) {
           fontSelector.disabled = false;
           directionSelector.disabled = false;
 
@@ -1784,7 +1791,7 @@
         <option value="RiBenJieKaiShuTi">隋/楷書</option>
         <option value="WangHanZongCuMingTiFan">明/明體</option>
       `;
-        } else if (selectedLanguage === "mongol-traditional") {
+        } else if (selectedLanguage === "mongoltraditional") {
           directionSelector.disabled = false;
           directionSelector.value = "vertical-layout";
           // 在这里可以强制应用竖排布局
@@ -1801,7 +1808,7 @@
         resetFontSize();
 
         // 恢复内容样式为默认值
-        ["chinese-content", "canton-content", "old-chinese-content", "jianjie"].forEach(id => {
+        ["chinese-content", "canton-content", "oldchinese-content", "jianjie"].forEach(id => {
           const content = document.getElementById(id);
           if (content) {
             content.style.fontFamily = "";  // 恢复默认字体
@@ -1816,12 +1823,12 @@
       const defaultFontSizes = {
         chinese: "14px",
         canton: "14px",
-        "old-chinese": "14px",
-        korean: "16px",
-        "mongol-traditional": "14.5px",
+        oldchinese: "14px",
+        korean: "14px",
+        mongoltraditional: "10.5px",
         yi: "22px",
         hmong: "14px",
-        tibetan: "16px",
+        tibetan: "13px",
         uyghur: "16px"
       };
 
@@ -1838,6 +1845,11 @@
           if (selectedLanguage === "korean" && element.tagName.toLowerCase() === "rt") {
             element.style.fontSize = "0.8em";
           }
+          elif (selectedLanguage === "mongoltraditional") 
+          directionSelector.disabled = false;
+          directionSelector.value = "vertical-layout";
+          // 在这里可以强制应用竖排布局
+          document.getElementById('story-container').classList.add('vertical-layout');
         });
       }
 
@@ -2047,7 +2059,7 @@
         const settings = fontSettings[selectedFont] || fontSettings.default; // 获取字体配置
         const direction = document.getElementById("character-direction-selector").value; // 布局方向
         const isMobile = window.innerWidth <= 768; // 判断是否为移动端
-        const contentIds = ["chinese-content", "canton-content", "old-chinese-content", "korean-content"]; // 内容ID数组
+        const contentIds = ["chinese-content", "canton-content", "oldchinese-content", "korean-content"]; // 内容ID数组
 
         // 遍历所有内容并调整样式
         contentIds.forEach((id) => {
@@ -2072,7 +2084,7 @@
         const selectedFont = document.getElementById("font-selector").value; // 当前字体
         const settings = fontSettings[selectedFont] || fontSettings.default;
         const direction = document.getElementById("character-direction-selector").value; // 布局方向
-        const contentIds = ["chinese-content", "canton-content", "old-chinese-content", "korean-content"]; // 内容ID数组
+        const contentIds = ["chinese-content", "canton-content", "oldchinese-content", "korean-content"]; // 内容ID数组
 
         // 遍历所有内容并重新调整样式
         contentIds.forEach((id) => {
