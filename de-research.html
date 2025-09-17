@@ -1012,31 +1012,55 @@
                       " />
           </div>
 
-          <!-- 第三栏 -->
+     <!-- 第三栏 -->
+     <div class="col-md-5">
+      <br />
+      <div id="clustrmap-container"
+        style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
 
-          <div class="col-md-5">
-            <br />
-            <div id="clustrmap-container"
-              style="width: 100%; text-align: center; position: relative; transform: translateX(15px);">
-              <script type="text/javascript" id="clustrmaps"
-                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
-                </script>
-            </div>
+        <!-- 默认占位图片 -->
+        <img id="clustrmap-fallback" 
+            src="images/default-map.png" 
+            alt="Visitor Map" 
+            style="width:100%; max-width:470px;">
 
-            <style>
-              /* 默认是电脑端，transform: translateX(15px); */
-              #clustrmap-container {
-                transform: translateX(15px) !important;
-              }
+        <!-- Clustrmaps 脚本 -->
+        <script type="text/javascript">
+          // 创建并加载 Clustrmaps 脚本
+          var script = document.createElement("script");
+          script.src = "https://cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+          script.async = true;
 
-              @media (max-width: 768px) {
-                #clustrmap-container {
-                  transform: translateX(-40px) !important;
-                }
-              }
-            </style>
+          // 脚本加载成功后隐藏占位图片
+          script.onload = function () {
+            var fallback = document.getElementById("clustrmap-fallback");
+            if (fallback) {
+              fallback.style.display = "none";
+            }
+          };
 
-          </div>
+          // 脚本加载失败时保留占位图
+          script.onerror = function () {
+            console.warn("Clustrmaps failed to load, showing fallback image.");
+          };
+
+          document.getElementById("clustrmap-container").appendChild(script);
+        </script>
+      </div>
+
+      <style>
+        /* 默认是电脑端 */
+        #clustrmap-container {
+          transform: translateX(15px) !important;
+        }
+
+        @media (max-width: 768px) {
+          #clustrmap-container {
+            transform: translateX(-40px) !important;
+          }
+        }
+      </style>
+    </div>
         </form>
       </div>
       <br />
