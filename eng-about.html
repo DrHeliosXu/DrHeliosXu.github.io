@@ -963,15 +963,23 @@
             </div>
 
             <style>
-              /* 默认电脑端偏移 */
+              /* 默认电脑端偏移 + 强制创建层叠上下文 */
               #clustrmap-container {
                 transform: translateX(15px) !important;
                 position: relative;
+                z-index: 10; /* ✅ 保证比 <hr> 更高 */
               }
-
+            
+              #clustrmap-fallback-link {
+                z-index: 1; /* fallback 在容器层叠上下文中 */
+                position: absolute;
+              }
+            
+              /* 移动端适配 */
               @media (max-width: 768px) {
                 #clustrmap-container {
                   transform: translateX(-40px) !important;
+                  z-index: 10; /* ✅ 确保移动端同样高于 <hr> */
                 }
               }
             </style>
