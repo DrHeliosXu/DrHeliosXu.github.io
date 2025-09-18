@@ -664,38 +664,78 @@
                               " />
           </div>
  
-          <!-- 第三栏 -->
-          <div class="col-md-5">
-            <br />
-            <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+       <!-- 第三栏 -->
+<div class="col-md-5">
+  <br />
+  <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
 
-              <!-- 默认占位图片 -->
-              <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
-                style="display:block; position:absolute; top:0; left:0; width:100%; max-width:470px; z-index:0;">
-                <img src="images/default-map.png" alt="Visitor Map" style="width:100%; max-width:470px; display:block;">
-              </a>
-            
-              <!-- Clustrmaps 脚本 -->
-              <script type="text/javascript" id="clustrmaps"
-                src='//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12'>
-              </script>
-            
-            </div>
+    <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+       style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+      <img src="images/default-map.png" alt="Visitor Map"
+           class="fallback-img">
+    </a>
 
-            <style>
-              /* 默认电脑端偏移 */
-              #clustrmap-container {
-                transform: translateX(15px) !important;
-                position: relative;
-              }
+  </div>
 
-              @media (max-width: 768px) {
-                #clustrmap-container {
-                  transform: translateX(-40px) !important;
-                }
-              }
-            </style>
-          </div>
+  <style>
+    /* 默认电脑端偏移 */
+    #clustrmap-container {
+      transform: translateX(15px) !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* 默认图片样式：PC/iPad 保持最大 470px */
+    .fallback-img {
+      width: 100%;
+      max-width: 470px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* 移动端特殊处理：让图片铺满屏幕宽度 */
+    @media (max-width: 480px) {
+      .fallback-img {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      #clustrmap-container {
+        transform: translateX(0) !important; /* 移动端不再横向偏移 */
+      }
+    }
+
+    @media (max-width: 768px) {
+      #clustrmap-container {
+        transform: translateX(0px) !important;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // 判断是否是移动端或 iPad
+      var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.id = "clustrmaps";
+        script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+        script.onload = function () {
+          var fallback = document.getElementById("clustrmap-fallback-link");
+          if (fallback) fallback.style.display = "none";
+        };
+
+        document.getElementById("clustrmap-container").appendChild(script);
+      } else {
+        console.log("📱 Mobile device detected, showing static fallback image.");
+      }
+    })();
+  </script>
+</div>
 
         </form>
       </div>
