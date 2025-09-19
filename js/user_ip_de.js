@@ -1,3 +1,10 @@
+const languageCountryFlagMap = {
+    'at': 'at.svg',
+    'ch': 'ch.svg',
+    'li': 'li.svg',
+    'lu': 'lu.svg'
+};
+
 async function fetchCountries() {
     const response = await fetch("/js/countries.json");
     return response.json();
@@ -20,6 +27,29 @@ function updateLocationAndFlag(countryName, countryCode) {
         flag.src = `./images/wflags/${countryCode}.png`;
         flag.alt = countryName;
     });
+}
+
+function updateLanguageFlag(countryCode) {
+    const languageFlag = document.getElementById("language-flag");
+    if (!languageFlag) return; // 如果页面没有这个元素就直接退出
+
+    // 默认显示 UN 图标
+    languageFlag.src = "./images/wflags_svg/un.svg";
+    languageFlag.style.display = "inline-block";
+
+    // 检查是否在映射表中
+    if (languageCountryFlagMap.hasOwnProperty(countryCode)) {
+        const newSrc = `./images/wflags_svg/${countryCode}.svg`;
+        languageFlag.src = newSrc;
+
+        // 如果加载失败就隐藏
+        languageFlag.onerror = () => {
+            languageFlag.style.display = "none";
+        };
+    } else {
+        // 不在映射表中直接隐藏
+        languageFlag.style.display = "none";
+    }
 }
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -46,47 +76,49 @@ async function displayCountryInfoAndDistance() {
     const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
     const data = await response.json();
     const countryCode = data.country.toLowerCase();
-    const language = "germen"; // 更改为您想要显示的语言
+    const language = "germen"; 
     const countryName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
 
-    // 更新位置和国旗
     updateLocationAndFlag(countryName, countryCode);
 
-    const loc = data.loc ? data.loc.split(",") : null;
+    // === 新增：更新 language-flag 显示 ===
+    const languageFlag = document.getElementById("language-flag");
+    if (languageFlag) {
+        if (languageCountryFlagMap[countryCode]) {
+            languageFlag.src = `./images/wflags_svg/${countryCode}.svg`;
 
+            if (countryCode === "ch") {
+                // 如果是瑞士，去掉宽度限制，只保留高度
+                languageFlag.style.height = "15px";
+                languageFlag.style.removeProperty("width");
+            } else {
+                // 其他国家正常设置
+                languageFlag.style.height = "15px";
+                languageFlag.style.width = "24px";
+            }
+            languageFlag.style.display = "inline-block";
+        } else {
+            // 找不到对应 flag 就隐藏
+            languageFlag.style.display = "none";
+        }
+    }
+
+    const loc = data.loc ? data.loc.split(",") : null;
     if (loc && loc.length === 2) {
         const userLat = parseFloat(loc[0]);
         const userLon = parseFloat(loc[1]);
-
-        // Check if lat/lon are valid numbers
         if (!isNaN(userLat) && !isNaN(userLon)) {
             const distanceKm = calculateDistance(yourLocation.lat, yourLocation.lon, userLat, userLon);
             let displayDistance;
-
             if (distanceKm >= 1) {
                 displayDistance = `${Math.round(distanceKm)} km`;
             } else if (distanceKm < 1 && distanceKm > 0) {
                 displayDistance = `${Math.round(distanceKm * 1000)} m`;
             } else {
-                displayDistance = "♾️ km"; // In case of an invalid distance
+                displayDistance = "♾️ km";
             }
-
-            // 更新距离信息
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = displayDistance;
-            });
-        } else {
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = "♾️ km";
-            });
+            document.querySelectorAll('.distance-info').forEach(d => d.innerText = displayDistance);
         }
-    } else {
-        const distanceElements = document.querySelectorAll('.distance-info');
-        distanceElements.forEach(distanceElement => {
-            distanceElement.innerText = "♾️ km";
-        });
     }
 }
 

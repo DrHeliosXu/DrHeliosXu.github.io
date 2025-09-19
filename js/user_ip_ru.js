@@ -1,13 +1,28 @@
+// 俄语主要国家的 language-flag
+const languageCountryFlagMap = {
+    'ru': 'ru.svg', // 俄罗斯
+    'by': 'by.svg', // 白俄罗斯
+    // 'kz': 'kz.svg', // 哈萨克斯坦
+    // 'kg': 'kg.svg', // 吉尔吉斯斯坦
+    // 'tj': 'tj.svg', // 塔吉克斯坦
+    // 'uz': 'uz.svg', // 乌兹别克斯坦
+    // 'md': 'md.svg', // 摩尔多瓦
+    // 'ua': 'ua.svg', // 乌克兰
+};
+
+// 获取国家数据
 async function fetchCountries() {
     const response = await fetch("/js/countries.json");
     return response.json();
 }
 
+// 根据国家代码和语言获取国家名称
 function getCountryNameByCode(countries, code, language = "russian") {
     const country = countries.find((country) => country.abbr === code);
     return country ? country[language] || country.english : "Земля";
 }
 
+// 更新位置和通用国旗
 function updateLocationAndFlag(countryName, countryCode) {
     const locationElements = document.querySelectorAll('.location');
     const flagElements = document.querySelectorAll('.country-flag');
@@ -22,18 +37,17 @@ function updateLocationAndFlag(countryName, countryCode) {
     });
 }
 
+// 计算距离（公里）
 function calculateDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Earth's radius in km
+    const R = 6371;
     const dLat = ((lat2 - lat1) * Math.PI) / 180;
     const dLon = ((lon2 - lon1) * Math.PI) / 180;
     const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos((lat1 * Math.PI) / 180) *
-        Math.cos((lat2 * Math.PI) / 180) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Distance in km
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(lat1 * Math.PI / 180) *
+        Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) ** 2;
+    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 }
 
 const yourLocation = {
@@ -46,47 +60,52 @@ async function displayCountryInfoAndDistance() {
     const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
     const data = await response.json();
     const countryCode = data.country.toLowerCase();
-    const language = "russian"; // 更改为您想要显示的语言
+    const language = "russian";
     const countryName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
 
-    // 更新位置和国旗
+    // 更新位置和通用国旗
     updateLocationAndFlag(countryName, countryCode);
 
-    const loc = data.loc ? data.loc.split(",") : null;
+    // === 更新俄语 language-flag ===
+    const languageFlag = document.getElementById("language-flag");
+    if (languageFlag) {
+        if (languageCountryFlagMap[countryCode]) {
+            languageFlag.src = `./images/wflags_svg/${languageCountryFlagMap[countryCode]}`;
+            languageFlag.alt = countryName;
+            languageFlag.style.display = "inline-block";
 
-    if (loc && loc.length === 2) {
+            // 其他特殊国家可在此处理高度/宽度，这里默认 15x24
+            languageFlag.style.height = '15px';
+            languageFlag.style.width = '24px';
+
+        } else {
+            languageFlag.style.display = "none";
+        }
+
+        languageFlag.onerror = () => { languageFlag.style.display = 'none'; };
+    }
+
+    // === 距离计算 ===
+    const loc = data.loc ? data.loc.split(",") : null;
+    if (loc?.length === 2) {
         const userLat = parseFloat(loc[0]);
         const userLon = parseFloat(loc[1]);
-
-        // Check if lat/lon are valid numbers
         if (!isNaN(userLat) && !isNaN(userLon)) {
             const distanceKm = calculateDistance(yourLocation.lat, yourLocation.lon, userLat, userLon);
             let displayDistance;
-
             if (distanceKm >= 1) {
                 displayDistance = `${Math.round(distanceKm)} км`;
-            } else if (distanceKm < 1 && distanceKm > 0) {
+            } else if (distanceKm > 0) {
                 displayDistance = `${Math.round(distanceKm * 1000)} м`;
             } else {
-                displayDistance = "♾️ км"; // In case of an invalid distance
+                displayDistance = "♾️ км";
             }
-
-            // 更新距离信息
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = displayDistance;
-            });
+            document.querySelectorAll('.distance-info').forEach(d => d.innerText = displayDistance);
         } else {
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = "♾️ км";
-            });
+            document.querySelectorAll('.distance-info').forEach(d => d.innerText = "♾️ км");
         }
     } else {
-        const distanceElements = document.querySelectorAll('.distance-info');
-        distanceElements.forEach(distanceElement => {
-            distanceElement.innerText = "♾️ км";
-        });
+        document.querySelectorAll('.distance-info').forEach(d => d.innerText = "♾️ км");
     }
 }
 

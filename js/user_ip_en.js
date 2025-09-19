@@ -1,3 +1,15 @@
+const languageCountryFlagMap = {
+    'us': 'us.svg',
+    'ca': 'ca.svg',
+    'au': 'au.svg',
+    'nz': 'nz.svg',
+    'ie': 'ie.svg',
+    'za': 'za.svg',
+    'in': 'in.svg',
+    'sg': 'sg.svg',
+    'hk': 'hk.svg'
+};
+
 async function fetchCountries() {
     const response = await fetch("/js/countries.json");
     return response.json();
@@ -23,22 +35,20 @@ function updateLocationAndFlag(countryName, countryCode) {
 }
 
 function calculateDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Earth's radius in km
+    const R = 6371;
     const dLat = ((lat2 - lat1) * Math.PI) / 180;
     const dLon = ((lon2 - lon1) * Math.PI) / 180;
     const a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos((lat1 * Math.PI) / 180) *
-        Math.cos((lat2 * Math.PI) / 180) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Distance in km
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(lat1 * Math.PI / 180) *
+        Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) ** 2;
+    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
 }
 
 const yourLocation = {
-    lat: 48.1487175, // Munich latitude
-    lon: 11.5658895, // Munich longitude
+    lat: 48.1487175,
+    lon: 11.5658895,
 };
 
 async function displayCountryInfoAndDistance() {
@@ -46,47 +56,44 @@ async function displayCountryInfoAndDistance() {
     const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
     const data = await response.json();
     const countryCode = data.country.toLowerCase();
-    const language = "english"; // 更改为您想要显示的语言
+    const language = "english";
     const countryName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
 
     // 更新位置和国旗
     updateLocationAndFlag(countryName, countryCode);
 
-    const loc = data.loc ? data.loc.split(",") : null;
+    // === 更新语言旗帜 ===
+    const languageFlag = document.getElementById("language-flag");
+    if (languageFlag) {
+        if (languageCountryFlagMap[countryCode]) {
+            languageFlag.src = `./images/wflags_svg/${languageCountryFlagMap[countryCode]}`;
+            languageFlag.style.display = "inline-block";
+        } else {
+            languageFlag.style.display = "none";
+        }
+    }
 
-    if (loc && loc.length === 2) {
+    // === 计算距离 ===
+    const loc = data.loc ? data.loc.split(",") : null;
+    if (loc?.length === 2) {
         const userLat = parseFloat(loc[0]);
         const userLon = parseFloat(loc[1]);
-
-        // Check if lat/lon are valid numbers
         if (!isNaN(userLat) && !isNaN(userLon)) {
             const distanceKm = calculateDistance(yourLocation.lat, yourLocation.lon, userLat, userLon);
             let displayDistance;
-
             if (distanceKm >= 1) {
                 displayDistance = `${Math.round(distanceKm)} km`;
-            } else if (distanceKm < 1 && distanceKm > 0) {
+            } else if (distanceKm > 0) {
                 displayDistance = `${Math.round(distanceKm * 1000)} m`;
             } else {
-                displayDistance = "♾️ km"; // In case of an invalid distance
+                displayDistance = "♾️ km";
             }
-
-            // 更新距离信息
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = displayDistance;
-            });
+            document.querySelectorAll('.distance-info').forEach(d => d.innerText = displayDistance);
         } else {
-            const distanceElements = document.querySelectorAll('.distance-info');
-            distanceElements.forEach(distanceElement => {
-                distanceElement.innerText = "♾️ km";
-            });
+            document.querySelectorAll('.distance-info').forEach(d => d.innerText = "♾️ km");
         }
     } else {
-        const distanceElements = document.querySelectorAll('.distance-info');
-        distanceElements.forEach(distanceElement => {
-            distanceElement.innerText = "♾️ km";
-        });
+        document.querySelectorAll('.distance-info').forEach(d => d.innerText = "♾️ km");
     }
 }
 
