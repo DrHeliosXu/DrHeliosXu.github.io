@@ -28,3 +28,20 @@ window.addEventListener('load', function(e) {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+	const burger = document.getElementById("burger");
+	const mainNav = document.getElementById("main-nav");
+
+	if (burger) {
+		burger.addEventListener("click", () => {
+		  document.getElementById("main-nav").classList.toggle("open");
+		});
+	  }
+	  
+	if (burger && mainNav) {
+	  burger.addEventListener("click", () => {
+		burger.classList.toggle("is-open");
+		mainNav.classList.toggle("is-open");
+	  });
+	}
+  });
