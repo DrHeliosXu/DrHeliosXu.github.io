@@ -70,9 +70,32 @@ const yourLocation = {
 };
 
 async function displayCountryInfoAndDistance() {
+    // 判断是否为强制刷新（hard reload）
+    let isHardReload = false;
+    if (window.performance) {
+        if (performance.getEntriesByType) {
+            const navs = performance.getEntriesByType('navigation');
+            if (navs && navs.length > 0 && navs[0].type === 'reload') {
+                isHardReload = true;
+            }
+        } else if (performance.navigation) {
+            isHardReload = performance.navigation.type === 1;
+        }
+    }
+    // 优先读取缓存，除非强制刷新
+    let data = null;
+    try {
+        const cache = JSON.parse(localStorage.getItem('user_device_info'));
+        if (!isHardReload && cache && cache.geoInfo && cache.geoTimestamp && (Date.now() - cache.geoTimestamp < 3600 * 1000)) {
+            data = cache.geoInfo;
+        }
+    } catch {}
+    if (!data) {
+        // 缓存无效或过期，或强制刷新，重新请求
+        const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+        data = await response.json();
+    }
     const countries = await fetchCountries();
-    const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
-    const data = await response.json();
     const countryCode = data.country.toLowerCase();
     const language = "ar";
     const countryName = getCountryNameByCode(countries, countryCode, language);
@@ -92,7 +115,6 @@ async function displayCountryInfoAndDistance() {
         } else {
             languageFlag.style.display = "none";
         }
-
         languageFlag.onerror = () => { languageFlag.style.display = 'none'; };
     }
 

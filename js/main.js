@@ -542,12 +542,13 @@ document.addEventListener('scroll', function () {
 
 // JavaScript to adjust the width based on the selected option
 function adjustWidth(selectElement) {
+    if (!selectElement) return;
     const tempSelect = document.createElement('select');
     tempSelect.style.visibility = 'hidden';
     document.body.appendChild(tempSelect);
 
     const selectedOption = selectElement.options[selectElement.selectedIndex];
-    tempSelect.innerHTML = `<option>${selectedOption.text}</option>`;
+    tempSelect.innerHTML = `<option>${selectedOption ? selectedOption.text : ''}</option>`;
     tempSelect.style.width = 'auto';
     const maxWidth = tempSelect.clientWidth;
 
@@ -572,13 +573,13 @@ adjustWidth(languages3Element);
 adjustWidth(languages4Element);
 adjustWidth(fontSelector);
 
-contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
-contentList2Element.addEventListener('change', () => adjustWidth(contentList2Element));
-languagesElement.addEventListener('change', () => adjustWidth(languagesElement));
-languages2Element.addEventListener('change', () => adjustWidth(languages2Element));
-languages3Element.addEventListener('change', () => adjustWidth(languages3Element));
-languages4Element.addEventListener('change', () => adjustWidth(languages4Element));
-fontSelector.addEventListener('change', () => adjustWidth(fontSelector));
+if (contentListElement) contentListElement.addEventListener('change', () => adjustWidth(contentListElement));
+if (contentList2Element) contentList2Element.addEventListener('change', () => adjustWidth(contentList2Element));
+if (languagesElement) languagesElement.addEventListener('change', () => adjustWidth(languagesElement));
+if (languages2Element) languages2Element.addEventListener('change', () => adjustWidth(languages2Element));
+if (languages3Element) languages3Element.addEventListener('change', () => adjustWidth(languages3Element));
+if (languages4Element) languages4Element.addEventListener('change', () => adjustWidth(languages4Element));
+if (fontSelector) fontSelector.addEventListener('change', () => adjustWidth(fontSelector));
 
 window.addEventListener('resize', () => {
     adjustWidth(contentListElement);
@@ -589,10 +590,6 @@ window.addEventListener('resize', () => {
 	adjustWidth(languages4Element);
 	adjustWidth(fontSelector);
 });
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {

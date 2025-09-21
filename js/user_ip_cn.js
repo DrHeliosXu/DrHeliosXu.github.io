@@ -116,16 +116,39 @@ const cnProvincesMap = {
   
   // ------------------- 主逻辑 -------------------
   async function displayCountryInfoAndDistance() {
+    // 判断是否为强制刷新（hard reload）
+    let isHardReload = false;
+    if (window.performance) {
+        if (performance.getEntriesByType) {
+            const navs = performance.getEntriesByType('navigation');
+            if (navs && navs.length > 0 && navs[0].type === 'reload') {
+                isHardReload = true;
+            }
+        } else if (performance.navigation) {
+            isHardReload = performance.navigation.type === 1;
+        }
+    }
     const countries = await fetchCountries();
     const cityMapList = await fetchCityMap();
     const cityMap = cityMapList[0]; // 假设 city_name.json 是 [{...}] 结构
-  
-    const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
-    const data = await response.json();
+
+    // 优先读取缓存，除非强制刷新
+    let data = null;
+    try {
+        const cache = JSON.parse(localStorage.getItem('user_device_info'));
+        if (!isHardReload && cache && cache.geoInfo && cache.geoTimestamp && (Date.now() - cache.geoTimestamp < 3600 * 1000)) {
+            data = cache.geoInfo;
+        }
+    } catch {}
+    if (!data) {
+        // 缓存无效或过期，或强制刷新，重新请求
+        const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+        data = await response.json();
+    }
     const countryCode = data.country.toLowerCase();
-  
+
     let displayName = "";
-  
+
     // ---- 城市中文名优先 ----
     if (data.city) {
       const normalizedCity = normalizeCityName(data.city);
@@ -136,12 +159,12 @@ const cnProvincesMap = {
         }
       }
     }
-  
+
     // ---- 城市未匹配，回退到省份或国家 ----
     if (!displayName) {
       const language = "chinese";
       displayName = getCountryNameByCode(countries, countryCode.toUpperCase(), language);
-  
+
       const chinaRegionCodes = ["CN", "HK", "MO", "TW"];
       if (chinaRegionCodes.includes(countryCode.toUpperCase()) && data.region) {
         if (cnProvincesMap[data.region]) {
@@ -149,11 +172,11 @@ const cnProvincesMap = {
         }
       }
     }
-  
+
     // ---- 更新显示 ----
     updateLocationAndFlag(displayName, countryCode);
     if (cnProvincesMap[data.region]) updateProvinceInfo(data.region);
-  
+
     // ---- 距离计算 ----
     const loc = data.loc ? data.loc.split(",") : null;
     const distanceElements = document.querySelectorAll('.distance-info');
@@ -165,7 +188,7 @@ const cnProvincesMap = {
         const displayDistance = distanceKm >= 1 ? `${Math.round(distanceKm)} 公里` :
                                 distanceKm > 0 ? `${Math.round(distanceKm * 1000)} 米` : "♾️ 公里";
         distanceElements.forEach(el => el.innerText = displayDistance);
-  
+
         document.documentElement.style.setProperty('--user-latitude', userLat);
         document.documentElement.style.setProperty('--user-longitude', userLon);
       } else {

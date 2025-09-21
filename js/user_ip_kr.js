@@ -44,18 +44,39 @@ const yourLocation = {
 };
 
 async function displayCountryInfoAndDistance() {
+    // 判断是否为强制刷新（hard reload）
+    let isHardReload = false;
+    if (window.performance) {
+        if (performance.getEntriesByType) {
+            const navs = performance.getEntriesByType('navigation');
+            if (navs && navs.length > 0 && navs[0].type === 'reload') {
+                isHardReload = true;
+            }
+        } else if (performance.navigation) {
+            isHardReload = performance.navigation.type === 1;
+        }
+    }
+    // 优先读取缓存，除非强制刷新
+    let data = null;
+    try {
+        const cache = JSON.parse(localStorage.getItem('user_device_info'));
+        if (!isHardReload && cache && cache.geoInfo && cache.geoTimestamp && (Date.now() - cache.geoTimestamp < 3600 * 1000)) {
+            data = cache.geoInfo;
+        }
+    } catch {}
+    if (!data) {
+        // 缓存无效或过期，或强制刷新，重新请求
+        const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+        data = await response.json();
+    }
     const countries = await fetchCountries();
-    const response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
-    const data = await response.json();
-    const countryCode = data.country.toLowerCase();  // 这里不需要使用 toLowerCase()，假设返回的国家代码是大写
-    const language = "ko"; // 更改为您想要显示的语言
-
+    const countryCode = data.country.toLowerCase();
+    const language = "ko";
     // 确保 getCountryNameByCode 函数已经定义
     function getCountryNameByCode(countries, countryCode, language) {
         const country = countries.find(country => country.alpha2 === countryCode);
         return country ? country[language] : null;
     }
-
     const countryName = getCountryNameByCode(countries, countryCode, language);
 
     // 更新位置和国旗
@@ -66,21 +87,16 @@ async function displayCountryInfoAndDistance() {
     if (loc && loc.length === 2) {
         const userLat = parseFloat(loc[0]);
         const userLon = parseFloat(loc[1]);
-
-        // Check if lat/lon are valid numbers
         if (!isNaN(userLat) && !isNaN(userLon)) {
             const distanceKm = calculateDistance(yourLocation.lat, yourLocation.lon, userLat, userLon);
             let displayDistance;
-
             if (distanceKm >= 1) {
                 displayDistance = `${Math.round(distanceKm)} km`;
             } else if (distanceKm < 1 && distanceKm > 0) {
                 displayDistance = `${Math.round(distanceKm * 1000)} m`;
             } else {
-                displayDistance = "♾️ km"; // In case of an invalid distance
+                displayDistance = "♾️ km";
             }
-
-            // 更新距离信息
             const distanceElements = document.querySelectorAll('.distance-info');
             distanceElements.forEach(distanceElement => {
                 distanceElement.innerText = displayDistance;
