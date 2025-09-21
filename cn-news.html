@@ -371,7 +371,7 @@
 
                         <p class="mb-5 d-sm-block d-none">
                             &nbsp;
-                            <div class="mb-5 d-sm-block d-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: center; width: 100%;">
+                            <div class="mb-5 d-sm-block d-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
                                 <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
                                 
                                 <!-- 火焰容器 -->
@@ -382,7 +382,7 @@
                                      style="position: absolute; bottom: 5%; right: 2%; color: white; 
                                             font-size: 1rem;  opacity: 0;
                                             transition: opacity 0.8s ease-in-out;">
-                                   长城·薪火相传
+                                   万里长城 · 薪火相传
                                 </div>
                             </div>
                             <style>
@@ -410,11 +410,9 @@
                                   { left: "53.8%", top: "62%", width: 12, scale: 1.7 },
                                   { left: "81%", top: "9.5%", width: 57, scale: 1.0 }
                                 ];
-                              
                                 const container = document.getElementById('flame-container');
                                 const flameElements = [];
                                 const beaconText = document.getElementById('beacon-text');
-                              
                                 // 初始化火焰元素
                                 flames.forEach((f) => {
                                   const flame = document.createElement('img');
@@ -427,22 +425,22 @@
                                   container.appendChild(flame);
                                   flameElements.push(flame);
                                 });
-                              
-                                function animateFlames() {
-                                  // 依次点亮
+                                function animateFlamesLoop() {
+                                  // 1. 全部熄灭
+                                  flameElements.forEach(f => f.style.opacity = 0);
+                                  beaconText.style.opacity = 0;
+                                  // 2. 依次点亮
                                   flameElements.forEach((flame, index) => {
                                     setTimeout(() => {
                                       flame.style.opacity = 1;
                                     }, index * 1000);
                                   });
-                              
-                                  // 显示 Beacon Signaling
+                                  // 3. 显示文字
                                   const totalAppearTime = flameElements.length * 1000;
                                   setTimeout(() => {
                                     beaconText.style.opacity = 1;
                                   }, totalAppearTime);
-                              
-                                  // 隐藏文字并依次熄灭火焰
+                                  // 4. 隐藏文字并依次熄灭火焰
                                   setTimeout(() => {
                                     beaconText.style.opacity = 0;
                                     flameElements.slice().reverse().forEach((flame, index) => {
@@ -450,20 +448,18 @@
                                         flame.style.opacity = 0;
                                       }, index * 1000);
                                     });
-                                  }, totalAppearTime + 3000); // 文字显示3秒
-                              
-                                  // 重新循环
+                                  }, totalAppearTime + 3000);
+                                  // 5. 下一轮循环
                                   const totalCycleTime = totalAppearTime + 3000 + flameElements.length * 1000 + 1000;
-                                  setTimeout(animateFlames, totalCycleTime);
+                                  setTimeout(animateFlamesLoop, totalCycleTime);
                                 }
-                              
-                                animateFlames();
+                                animateFlamesLoop();
                               </script>
                         </p>
 
                         <p class="mb-5 d-sm-none" style="margin-top: -20px;">
                             &nbsp;
-                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: center; width: 100%;">
+                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
                                 <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
                                 
                                 <!-- 火焰容器 -->
@@ -474,7 +470,7 @@
                                      style="position: absolute; bottom: 5%; right: 4%; color: white; 
                                             font-size: 0.9rem;  opacity: 0;
                                             transition: opacity 0.8s ease-in-out;">
-                                   长城·薪火相传
+                                   万里长城 · 薪火相传
                                 </div>
                             </div>
                             <style>
@@ -519,22 +515,22 @@
                                   container2.appendChild(flame2);
                                   flameElements2.push(flame2);
                                 });
-                              
-                                function animateFlames() {
-                                  // 依次点亮
+                                function animateFlamesLoop2() {
+                                  // 1. 全部熄灭
+                                  flameElements2.forEach(f => f.style.opacity = 0);
+                                  beaconText2.style.opacity = 0;
+                                  // 2. 依次点亮
                                   flameElements2.forEach((flame2, index) => {
                                     setTimeout(() => {
                                       flame2.style.opacity = 1;
                                     }, index * 1000);
                                   });
-                              
-                                  // 显示 Beacon Signaling
+                                  // 3. 显示文字
                                   const totalAppearTime2 = flameElements2.length * 1000;
                                   setTimeout(() => {
                                     beaconText2.style.opacity = 1;
                                   }, totalAppearTime2);
-                              
-                                  // 隐藏文字并依次熄灭火焰
+                                  // 4. 隐藏文字并依次熄灭火焰
                                   setTimeout(() => {
                                     beaconText2.style.opacity = 0;
                                     flameElements2.slice().reverse().forEach((flame2, index) => {
@@ -542,14 +538,12 @@
                                         flame2.style.opacity = 0;
                                       }, index * 1000);
                                     });
-                                  }, totalAppearTime2 + 3000); // 文字显示3秒
-                              
-                                  // 重新循环
+                                  }, totalAppearTime2 + 3000);
+                                  // 5. 下一轮循环
                                   const totalCycleTime2 = totalAppearTime2 + 3000 + flameElements2.length * 1000 + 1000;
-                                  setTimeout(animateFlames, totalCycleTime2);
+                                  setTimeout(animateFlamesLoop2, totalCycleTime2);
                                 }
-                              
-                                animateFlames();
+                                animateFlamesLoop2();
                               </script>
                         </p>
 

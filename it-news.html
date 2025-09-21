@@ -347,12 +347,180 @@
                     <div class="col-lg-8 single-content">
                         <p class="mb-5 d-sm-block d-none">
                             &nbsp;
-                            <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+                            <div class="mb-5 d-sm-block d-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+                                
+                                <!-- 火焰容器 -->
+                                <div id="flame-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+                              
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text" 
+                                     style="position: absolute; bottom: 5%; right: 2%; color: white; 
+                                            font-size: 1rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                   La Grande Muraglia Cinese<br>Notizie della Torre di Guardia
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+                              
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                  { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                  { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                  { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "41.8%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "53.8%", top: "62%", width: 12, scale: 1.7 },
+                                  { left: "81%", top: "9.5%", width: 57, scale: 1.0 }
+                                ];
+                                const container = document.getElementById('flame-container');
+                                const flameElements = [];
+                                const beaconText = document.getElementById('beacon-text');
+                                // 初始化火焰元素
+                                flames.forEach((f) => {
+                                  const flame = document.createElement('img');
+                                  flame.src = "images/fire-large.gif";
+                                  flame.classList.add('flame');
+                                  flame.style.left = f.left;
+                                  flame.style.top = f.top;
+                                  flame.style.width = f.width + "px";
+                                  flame.style.transform = `scale(${f.scale})`;
+                                  container.appendChild(flame);
+                                  flameElements.push(flame);
+                                });
+                                function animateFlamesLoop() {
+                                  // 1. 全部熄灭
+                                  flameElements.forEach(f => f.style.opacity = 0);
+                                  beaconText.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements.forEach((flame, index) => {
+                                    setTimeout(() => {
+                                      flame.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime = flameElements.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 1;
+                                  }, totalAppearTime);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 0;
+                                    flameElements.slice().reverse().forEach((flame, index) => {
+                                      setTimeout(() => {
+                                        flame.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime = totalAppearTime + 3000 + flameElements.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop, totalCycleTime);
+                                }
+                                animateFlamesLoop();
+                              </script>
                         </p>
 
                         <p class="mb-5 d-sm-none" style="margin-top: -20px;">
                             &nbsp;
-                            <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
+                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
+                                
+                                <!-- 火焰容器 -->
+                                <div id="flame-container-2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+                              
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text-2" 
+                                     style="position: absolute; bottom: 5%; right: 4%; color: white; 
+                                            font-size: 0.9rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                   La Grande Muraglia Cinese<br>Notizie della Torre di Guardia
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+                              
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames2 = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                //   { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                //   { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                //   { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "5%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "24%", top: "63%", width: 10, scale: 1.7 },
+                                  { left: "69%", top: "10.5%", width: 48, scale: 1.0 }
+                                ];
+                              
+                                const container2 = document.getElementById('flame-container-2');
+                                const flameElements2 = [];
+                                const beaconText2 = document.getElementById('beacon-text-2');
+                              
+                                // 初始化火焰元素
+                                flames2.forEach((f) => {
+                                  const flame2 = document.createElement('img');
+                                  flame2.src = "images/fire-large.gif";
+                                  flame2.classList.add('flame');
+                                  flame2.style.left = f.left;
+                                  flame2.style.top = f.top;
+                                  flame2.style.width = f.width + "px";
+                                  flame2.style.transform = `scale(${f.scale})`;
+                                  container2.appendChild(flame2);
+                                  flameElements2.push(flame2);
+                                });
+                                function animateFlamesLoop2() {
+                                  // 1. 全部熄灭
+                                  flameElements2.forEach(f => f.style.opacity = 0);
+                                  beaconText2.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements2.forEach((flame2, index) => {
+                                    setTimeout(() => {
+                                      flame2.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime2 = flameElements2.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 1;
+                                  }, totalAppearTime2);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 0;
+                                    flameElements2.slice().reverse().forEach((flame2, index) => {
+                                      setTimeout(() => {
+                                        flame2.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime2 + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime2 = totalAppearTime2 + 3000 + flameElements2.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop2, totalCycleTime2);
+                                }
+                                animateFlamesLoop2();
+                              </script>
                         </p>
 
                         <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
