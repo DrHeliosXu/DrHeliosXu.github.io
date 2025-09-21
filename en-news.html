@@ -40,6 +40,18 @@
         }
     </style>
 
+    <style>
+    @media (max-width: 767px) {
+      h1.mb-4[style*="display: flex"] {
+        margin-top: -30px !important;
+      }
+    }
+    @media (min-width: 768px) {
+      h1.mb-4[style*="display: flex"] {
+        margin-top: 0px !important;
+      }
+    }
+    </style>
 
 </head>
 
@@ -432,7 +444,7 @@
 
                         <p class="mb-5 d-sm-none" style="margin-top: -20px;">
                             &nbsp;
-                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
+                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -60px; text-align: right; width: 100%;">
                                 <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
                                 
                                 <!-- 火焰容器 -->
@@ -520,7 +532,7 @@
                               </script>
                         </p>
 
-                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;margin-top: 45px;">
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center; margin-top: 0px;">
                             Recent News
                             <select id="event-selector" name="event-selector" style="
                           width: 120px;
@@ -533,6 +545,18 @@
                                 <option value="default" selected>Select Country</option>
                             </select>
                         </h1>
+                        <style>
+                        @media (max-width: 767px) {
+                          h1.mb-4[style*="display: flex"] {
+                            margin-top: -30px !important;
+                          }
+                        }
+                        @media (min-width: 768px) {
+                          h1.mb-4[style*="display: flex"] {
+                            margin-top: 0px !important;
+                          }
+                        }
+                        </style>
 
 
                         <div class="container-fluid">
