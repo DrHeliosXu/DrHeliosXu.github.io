@@ -133,32 +133,65 @@
       }
       fetchGeoInfoAndStore();
 
+      // 优先使用缓存的地理位置信息
+      let geoData = null;
       try {
-        // 使用 ipinfo 获取位置
-        let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
-        let data = await response.json();
+        // 尝试从缓存获取地理位置信息
+        const cachedInfo = JSON.parse(localStorage.getItem('user_device_info'));
+        if (cachedInfo && cachedInfo.geoInfo && cachedInfo.geoTimestamp && 
+            (Date.now() - cachedInfo.geoTimestamp < 3600 * 1000)) {
+          geoData = cachedInfo.geoInfo;
+          console.log("使用缓存的地理位置信息:", geoData);
+        }
+      } catch (e) {
+        console.log("缓存读取失败，将重新获取地理位置信息");
+      }
 
-        // 定义需要跳转到 eng.html 的国家
-        const engCountries = {
-          "DE": true, // 德国
-          "ES": true  // 西班牙
-          // 以后需要新增，直接在这里加，例如 "FR": true
-        };
-
-        if (data.country && engCountries[data.country.toUpperCase()]) {
+      // 如果缓存无效，重新获取地理位置信息
+      if (!geoData) {
+        try {
+          let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+          geoData = await response.json();
+          console.log("重新获取的地理位置信息:", geoData);
+        } catch (e) {
+          console.error("GeoIP 检测失败：", e);
+          // 如果 GeoIP 检测失败，默认跳转 eng.html
           window.location.href = "eng.html";
           return;
         }
+      }
 
-      } catch (e) {
-        console.error("GeoIP 检测失败：", e);
-        // 如果 GeoIP 检测失败，默认跳转 eng.html
+      // 定义需要跳转到 eng.html 的国家
+      const engCountries = {
+        "DE": true, // 德国
+        "ES": true  // 西班牙
+        // 以后需要新增，直接在这里加，例如 "FR": true
+      };
+
+      if (geoData.country && engCountries[geoData.country.toUpperCase()]) {
         window.location.href = "eng.html";
         return;
       }
 
-      // 语言逻辑
-      var userLang = navigator.language || navigator.userLanguage;
+      // 语言逻辑 - 优先使用缓存的语言信息
+      let userLang = null;
+      try {
+        // 尝试从缓存获取语言信息
+        const cachedInfo = JSON.parse(localStorage.getItem('user_device_info'));
+        if (cachedInfo && cachedInfo.languageInfo && cachedInfo.languageInfo.language) {
+          userLang = cachedInfo.languageInfo.language;
+          console.log("使用缓存的语言信息:", userLang);
+        }
+      } catch (e) {
+        console.log("缓存语言信息读取失败，使用浏览器语言");
+      }
+
+      // 如果缓存无效，使用浏览器语言
+      if (!userLang) {
+        userLang = navigator.language || navigator.userLanguage;
+        console.log("使用浏览器语言信息:", userLang);
+      }
+
       var languageMap = {
         'ar': 'ar.html',
         'en': 'en.html',
