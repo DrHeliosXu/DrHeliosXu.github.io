@@ -386,17 +386,10 @@ function updateTimeDate() {
 
     // 更新时间显示
     const timeElements = document.querySelectorAll('.digitalTime');
-    console.log('找到时间元素数量:', timeElements.length);
     
     timeElements.forEach((el, index) => {
         let tz = el.getAttribute('timezone');
         const locale = el.getAttribute('locale') || 'en-US';
-
-        console.log(`时间元素 ${index}:`, {
-            timezone: tz,
-            locale: locale,
-            element: el
-        });
 
         if (!tz) {
             tz = getCachedTimeZone(); // 使用缓存的时区
@@ -406,10 +399,7 @@ function updateTimeDate() {
 
         // 处理时区别名
         const actualTimezone = timezoneAliases[tz] || tz;
-        console.log(`实际使用时区: ${actualTimezone}`);
-
         const formattedTime = formatDateTime(now, actualTimezone, locale, true);
-        console.log(`格式化时间: ${formattedTime}`);
         el.textContent = formattedTime;
     });
 
@@ -584,18 +574,14 @@ function getLunarKey() {
     const solarMonth = today.getMonth() + 1;
     const solarDay = today.getDate();
 
-    console.log("Solar Date:", `${solarYear}-${solarMonth}-${solarDay}`);
-
     // 检查农历库是否加载
     if (!window.chinese_lunar_calendar || !window.chinese_lunar_calendar.getLunar) {
-        console.error("Chinese Lunar Calendar library is not loaded correctly.");
         return null;
     }
 
     try {
         // 调用农历转换方法
         const lunarDate = window.chinese_lunar_calendar.getLunar(solarYear, solarMonth, solarDay);
-        console.log("Lunar Date:", lunarDate);
 
         // 提取农历月份和日期
         const lunarMonth = String(lunarDate.lunarMonth).padStart(2, "0");
@@ -603,7 +589,6 @@ function getLunarKey() {
 
         return `${lunarMonth}-${lunarDay}`;
     } catch (error) {
-        console.error("Error getting lunar date:", error);
         return null;
     }
 }
@@ -617,13 +602,8 @@ function updateGreeting() {
     const lunarKey = getLunarKey();
     const festivalItems = document.querySelectorAll(".festival-item");
 
-    console.log("Language:", lang);
-    console.log("Solar Key:", solarKey);
-    console.log("Lunar Key:", lunarKey);
-
     // 检查节日数据是否加载
     if (!window.festivals) {
-        console.warn("Festivals data not loaded yet");
         return;
     }
 
@@ -649,9 +629,6 @@ function updateGreeting() {
         });
     }
 
-    console.log("Solar Festival:", solarFestival);
-    console.log("Lunar Festival:", lunarFestival);
-
     // 根据语言优先级选择节日
     let festival = null;
     if (lang === "zh" || lang === "cn") {
@@ -661,8 +638,6 @@ function updateGreeting() {
         // 非中文网页，优先显示公历节日
         festival = solarFestival || lunarFestival;
     }
-
-    console.log("Selected Festival:", festival);
 
     // 更新所有节日祝福元素
     if (festival) {
@@ -725,7 +700,7 @@ function updateDateAndWish() {
             const lunarZodiac = getLunarZodiac(lunarYearString);
             fullLunarDateStr = `${lunarYearString}${lunarZodiac}年${lunarMonthString}${lunarDayString}`;
         } catch (e) {
-            console.log('农历日期获取失败:', e);
+            // 农历日期获取失败，静默处理
         }
     }
     
@@ -839,22 +814,17 @@ function getLunarZodiac(lunarYearString) {
  */
 document.addEventListener("DOMContentLoaded", async function() {
     try {
-        console.log('开始初始化系统...');
-        
         // 启动时间更新
         updateTimeDate(); // 立即执行一次
         setInterval(updateTimeDate, 1000); // 每秒更新
-        console.log('时间更新已启动');
         
         // 先加载节日数据
         await loadFestivals();
-        console.log('节日数据加载完成');
         
         // 等待农历库加载完成
         setTimeout(function() {
             updateGreeting();
             updateDateAndWish();
-            console.log('节日祝福更新完成');
         }, 1000);
     } catch (error) {
         console.error('系统初始化失败:', error);
