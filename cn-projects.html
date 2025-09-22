@@ -352,14 +352,58 @@
       <p class="d-sm-block d-none">&nbsp;</p>
       <div class="container">
         &nbsp;
-        <h1>项目经历</h1>
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <h1 style="margin: 0;">项目经历&nbsp;</h1>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <select id="filter-topic" style="height:21px; margin-bottom: -7px;"><option value="">主题 (全部)</option></select>
+              <select id="filter-country" style="height:21px; margin-bottom: -7px;"><option value="">国家 (全部)</option></select>
+              <select id="filter-org" style="height:21px; margin-bottom: -7px;"><option value="">机构 (全部)</option></select>
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          /* 桌面端样式 */
+          @media (min-width: 768px) {
+            .filter-container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .filter-selects {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            }
+          }
+          
+          /* 手机端样式 */
+          @media (max-width: 767px) {
+            .filter-container {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .filter-selects {
+              margin-top: 10px;
+              display: flex;
+              gap: 5px;
+              flex-wrap: wrap;
+            }
+            .filter-selects select {
+              width: 50px !important;
+              font-size: 12px;
+            }
+          }
+        </style>
+
         &nbsp;
         </header>
         <div class="band">
           <div class="item-1">
             <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/487441" class="card">
               <div class="thumb" style="background-image: url(images/img_h_35.png);"></div>
-              <article>
+              <article topic="新能源;计算机成像">
                 <h1>氢燃料电池中的次秒级操作X射线CT液态水成像</h1>
                 <p><small>聚合物电解质燃料电池（PEFC）因其较高的能量效率和环境友好型产物，正日益受到关注，成为应对清洁能源危机的主要候选方案之一。</small><br>
                   <small>图片：瑞士同步辐射光源拍摄 (2019)</small>
@@ -373,7 +417,7 @@
           <div class="item-2">
             <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
               <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
-              <article>
+              <article topic="新能源;功能材料">
                 <h1>操作中PEFC气体扩散层中的水传输行为</h1>
                 <p><small>气体扩散层（GDL）中液体饱和度的增加往往导致气体输送不足，从而导致电池性能下降。对GDL的影响因素及其对水管理的影响进行深入理解至关重要。</small><br>
                   <small>图片：H.Xu等，J. Power Sources (2021)</small>
@@ -382,10 +426,12 @@
               </article>
             </a>
           </div>
-          <div class="item-3">
+
+          
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
-              <article>
+              <article topic="新能源;数据可视化">
                 <h1>通过气体清除优化PEFC的水管理</h1>
                 <p><small>在零下启动场景中，过多的液态水会在关键组件内形成冰并膨胀，导致严重的损坏，进而导致性能和耐久性下降。为避免这些影响，常见做法是电池关机后进行干气体清除。</small><br>
                   <small>图片：H.Xu，博士论文，苏黎世联邦理工学院 (2021)</small>
@@ -395,7 +441,7 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_ewaste.png);"></div>
               <article>
@@ -408,7 +454,7 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_cambridge.png);"></div>
               <article>
@@ -421,10 +467,10 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_miracle.png);"></div>
-              <article>
+              <article topic="新能源;政策研究">
                 <h1>碳中和愿景下的新能源机遇与挑战 —— 科技前沿，政策及投资机会</h1>
                 <p><small>MiraclePlus内部分享</small><br>
                   <small>图片：H.Xu，知识分享 (2022)</small>
@@ -434,10 +480,10 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_india.png);"></div>
-              <article>
+              <article topic="商业分析">
                 <h1>Biocon视角下的未来: 印度制药业发展历程</h1>
                 <p><small>Market Case Study Report</small><br>
                   <small>图片：H.Xu，硕士课程 作业 (2019)</small>
@@ -447,10 +493,10 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_aldi.png);"></div>
-              <article>
+              <article topic="商业分析">
                 <h1>Aldi进一步巩固美国市场地位的策略分析</h1>
                 <p><small>ETH Strategic Management Course</small><br>
                   <small>图片：H.Xu，硕士课程 作业 (2019)</small>
@@ -460,7 +506,7 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_swiss_demo.png);"></div>
               <article>
@@ -468,15 +514,15 @@
                 <p><small>IBM 数据科学专业证书结业项目</small><br>
                   <small>图片：H.Xu，证书结业项目 (2019)</small>
                 </p>
-                <span>案例分析<br>线上‧IBM & Coursera</span>
+                <span>案例分析<br>线上‧IBM (Coursera)</span>
               </article>
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_spain.png);"></div>
-              <article>
+              <article topic="商业分析">
                 <h1>西班牙药物市场原型的可视化与分类</h1>
                 <p><small>Novartis Pharma Data Science Hackathon</small><br>
                   <small>图片：H.Xu，黑客松项目 (2019)</small>
@@ -486,10 +532,10 @@
             </a>
           </div>
 
-          <div class="item-4">
+          <div class="item-2">
             <a href="https://arxiv.org/abs/2007.10111" class="card">
               <div class="thumb" style="background-image: url(images/img_h_19.jpg);"></div>
-              <article>
+              <article topic="功能材料">
                 <h1>用于磁传感器应用的热响应共聚物/金属氧化物</h1>
                   <small>图片：H.Xu，硕士论文，慕尼黑工业大学物理系 (2016)</small>
                 </p>
@@ -498,10 +544,10 @@
             </a>
           </div>
 
-          <div class="item-6">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_24.jpg);"></div>
-              <article>
+              <article topic="计算机成像">
                 <h1>欧洲自由电子激光分裂延迟线测试台的设计与建造</h1>
                   <small>图片：H.Xu，实习报告，欧洲自由电子激光公司 (2015)</small>
                 </p>
@@ -509,10 +555,10 @@
               </article>
             </a>
           </div>
-          <div class="item-7">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_25.jpg);"></div>
-              <article>
+              <article topic="建模分析">
                 <h1>中国天津市于桥水库蓝藻动力学建模</h1>
                   <small>图片：H.Xu，培训生报告，巴黎国立路桥大学 (2015)</small>
                 </p>
@@ -521,10 +567,10 @@
             </a>
           </div>
 
-          <div class="item-5">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_23.jpg);"></div>
-              <article>
+              <article topic="新能源;功能材料">
                 <h1>介孔SnO2材料在染料敏化太阳能电池和锂电池中的应用</h1>
                   <small>图片：H.Xu，本科论文，北京交通大学 (2013)</small>
                 </p>
@@ -533,10 +579,10 @@
             </a>
           </div>
 
-          <div class="item-3">
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_dssc.jpg);"></div>
-              <article>
+              <article topic="新能源;商业分析">
                 <h1>商业计划书：北京德胜太阳能科技有限公司</h1>
                 <p><small>第八届挑战杯商业计划竞赛国家级铜奖</small><br>
                   <small>图片：H.Xu，竞赛作品 (2012)</small>
@@ -851,6 +897,221 @@
     <script src="js/24jieqi.js" defer></script>
     <script src="js/nongli.js" defer></script>
     
+
+    <script>
+      (function(){
+        function fillSelect(sel, dataMap) {
+          // 按数量从多到少排序
+          const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+          
+          // 创建临时元素来测量文本宽度
+          const tempDiv = document.createElement('div');
+          tempDiv.style.position = 'absolute';
+          tempDiv.style.visibility = 'hidden';
+          tempDiv.style.whiteSpace = 'nowrap';
+          tempDiv.style.fontSize = '14px';
+          tempDiv.style.fontFamily = 'Arial, sans-serif';
+          document.body.appendChild(tempDiv);
+          
+          // 只测量默认选项的宽度作为初始宽度
+          const defaultOption = sel.querySelector('option[value=""]');
+          let initialWidth = 100; // 默认最小宽度
+          if(defaultOption) {
+            tempDiv.textContent = defaultOption.textContent;
+            initialWidth = tempDiv.offsetWidth + 30; // 默认选项宽度 + 内边距
+          }
+          
+          // 添加所有选项
+          sortedEntries.forEach(([val, count]) => {
+            const opt = document.createElement('option');
+            opt.value = val; 
+            opt.textContent = `[${count}] ${val}`;
+            sel.appendChild(opt);
+          });
+          
+          // 清理临时元素
+          document.body.removeChild(tempDiv);
+          
+          // 设置初始宽度（只基于默认选项）
+          const minWidth = 100; // 最小宽度
+          const maxAllowedWidth = 350; // 最大宽度
+          const newWidth = Math.min(Math.max(initialWidth, minWidth), maxAllowedWidth);
+          sel.style.width = newWidth + 'px';
+          
+          // 调试信息
+          console.log('Select ID:', sel.id, 'Default text:', defaultOption?.textContent, 'Initial width:', newWidth);
+        }
+        // 保存所有原始项目
+        let allItems = [];
+        
+        function filterProjects() {
+          const topic = document.getElementById('filter-topic').value;
+          const org = document.getElementById('filter-org').value;
+          const country = document.getElementById('filter-country').value;
+          const band = document.querySelector('.band');
+          
+          
+          // 如果是第一次运行，保存所有原始项目
+          if(allItems.length === 0) {
+            allItems = Array.from(band.children).map(item => ({
+              element: item.cloneNode(true),
+              article: item.querySelector('article')
+            }));
+          }
+          
+          // 清空容器
+          band.innerHTML = '';
+          
+          // 筛选符合条件的项目
+          const filteredItems = allItems.filter(item => {
+            const article = item.article;
+            let show = true;
+            
+            // 主题筛选
+            if(topic) {
+              const topicAttr = article.getAttribute('topic') || '';
+              show = show && topicAttr.split(/[;；]/).map(s=>s.trim()).includes(topic);
+            }
+            
+            // 机构和国家筛选
+            if(org || country) {
+              const span = article.querySelector('span');
+              if(span) {
+                // 获取span的HTML内容，然后按<br>分割
+                const htmlContent = span.innerHTML;
+                const parts = htmlContent.split(/<br\s*\/?>/i);
+                let foundOrg = '', foundCountry = '';
+                
+                // 找到包含间隔符的部分
+                for(const part of parts) {
+                  if(part.includes('·') || part.includes('‧')) {
+                    // 机构：·或‧后的所有内容（包括空格和括号）
+                    const orgMatch = part.match(/[·‧]([^·‧<]+?)(?:<|$)/);
+                    if(orgMatch) foundOrg = orgMatch[1].trim();
+                    // 国家：·或‧前的内容
+                    const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                    if(countryMatch) {
+                      const country = countryMatch[1].trim();
+                      // 只保留真正的国家名（2-3个字符或"线上"）
+                      if(country && (country.length <= 3 || country === '线上')) {
+                        foundCountry = country;
+                      }
+                    }
+                    break;
+                  }
+                }
+                
+                if(org && foundOrg.toLowerCase() !== org.toLowerCase()) show = false;
+                if(country && foundCountry !== country) show = false;
+              } else {
+                if(org || country) show = false;
+              }
+            }
+            
+            return show;
+          });
+          
+          // 重新插入并重新分配class
+          filteredItems.forEach((item, index) => {
+            const newItem = item.element.cloneNode(true);
+            // 移除所有 item-x class
+            newItem.className = newItem.className.replace(/\bitem-\d+\b/g, '').trim();
+            // 重新分配
+            if(index === 0) {
+              newItem.classList.add('item-1'); // 第一个是大卡片
+            } else {
+              newItem.classList.add('item-2'); // 其余都是小卡片
+            }
+            band.appendChild(newItem);
+          });
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+          const articles = document.querySelectorAll('.band article');
+          const topicMap = new Map();
+          const orgMap = new Map();
+          const countryMap = new Map();
+          
+          articles.forEach(article => {
+            // 主题提取
+            const topicAttr = article.getAttribute('topic') || '';
+            topicAttr.split(/[;；]/).map(s=>s.trim()).filter(Boolean).forEach(t=>{
+              topicMap.set(t, (topicMap.get(t) || 0) + 1);
+            });
+            
+            // 机构和国家提取（直接解析HTML结构）
+            const span = article.querySelector('span');
+            if(span) {
+              // 获取span的HTML内容，然后按<br>分割
+              const htmlContent = span.innerHTML;
+              const parts = htmlContent.split(/<br\s*\/?>/i);
+              
+              // 找到包含间隔符的部分
+              for(const part of parts) {
+                if(part.includes('·') || part.includes('‧')) {
+                  // 机构：·或‧后的所有内容（包括空格和括号）
+                  const orgMatch = part.match(/[·‧]([^·‧<]+?)(?:<|$)/);
+                  if(orgMatch) {
+                    const org = orgMatch[1].trim();
+                    orgMap.set(org, (orgMap.get(org) || 0) + 1);
+                  }
+                  // 国家：·或‧前的内容
+                  const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                  if(countryMatch) {
+                    const country = countryMatch[1].trim();
+                    // 只保留真正的国家名（2-3个字符或"线上"）
+                    if(country && (country.length <= 3 || country === '线上')) {
+                      countryMap.set(country, (countryMap.get(country) || 0) + 1);
+                    }
+                  }
+                  break;
+                }
+              }
+            }
+          });
+          
+          // 分别设置每个select的宽度
+          fillSelect(document.getElementById('filter-topic'), topicMap);
+          fillSelect(document.getElementById('filter-org'), orgMap);
+          fillSelect(document.getElementById('filter-country'), countryMap);
+          
+          // 添加选择后动态调整宽度的功能
+          function adjustSelectWidth(select) {
+            const selectedText = select.options[select.selectedIndex].textContent;
+            const tempDiv = document.createElement('div');
+            tempDiv.style.position = 'absolute';
+            tempDiv.style.visibility = 'hidden';
+            tempDiv.style.whiteSpace = 'nowrap';
+            tempDiv.style.fontSize = '14px';
+            tempDiv.style.fontFamily = 'Arial, sans-serif';
+            tempDiv.textContent = selectedText;
+            document.body.appendChild(tempDiv);
+            
+            const textWidth = tempDiv.offsetWidth;
+            const minWidth = 120;
+            const maxAllowedWidth = 350;
+            const newWidth = Math.min(Math.max(textWidth + 30, minWidth), maxAllowedWidth);
+            select.style.width = newWidth + 'px';
+            
+            document.body.removeChild(tempDiv);
+          }
+          
+          document.getElementById('filter-topic').onchange = function() {
+            adjustSelectWidth(this);
+            filterProjects();
+          };
+          document.getElementById('filter-org').onchange = function() {
+            adjustSelectWidth(this);
+            filterProjects();
+          };
+          document.getElementById('filter-country').onchange = function() {
+            adjustSelectWidth(this);
+            filterProjects();
+          };
+        });
+      })();
+      </script>
+
+
   </div>
   </div>
 </body>
