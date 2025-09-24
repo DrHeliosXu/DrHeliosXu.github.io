@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语筛选功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        select {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .project-item {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .project-item .info {
+            color: #666;
+            font-size: 14px;
+        }
+        .debug {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>日语版项目筛选功能测试</h1>
+    
+    <div class="filter-container">
+        <h3>筛选条件：</h3>
+        <select id="filter-country">
+            <option value="">国 (すべて)</option>
+        </select>
+    </div>
+
+    <div class="debug" id="debug-info">
+        <strong>调试信息：</strong><br>
+        <div id="debug-content">等待页面加载...</div>
+    </div>
+
+    <div class="band">
+        <div class="project-item">
+            <h3>水素燃料電池におけるサブセカンド操作X線CT液体水イメージング</h3>
+            <div class="info">
+                <span>スイス科学財団プロジェクト<br>スイス・ポールシェラー研究所（PSI）</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>作動中PEFCガス拡散層における水輸送挙動</h3>
+            <div class="info">
+                <span>産学連携プロジェクト<br>ベルギー・トヨタ自動車（ヨーロッパ）</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>ガスパージによるPEFCの水管理最適化</h3>
+            <div class="info">
+                <span>産学連携プロジェクト<br>スイス・ポールシェラー研究所 (PSI)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>電子廃棄物から電力へ：ブロックチェーン技術による電子廃棄物産業の再構築</h3>
+            <div class="info">
+                <span>ケース分析<br>オーストリア・ザルツブルクグローバル (SGS)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>GreenByteイニシアティブ: エネルギー消費に基づくコード最適化と企業管理</h3>
+            <div class="info">
+                <span>ケース分析<br>イギリス・ケンブリッジ ジャッジ経営大学院 (CJBS)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>カーボンニュートラルビジョンにおける新エネルギーの機会と課題</h3>
+            <div class="info">
+                <span>ケース分析<br>中国・北京 Miracle+</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>Biocon視点の未来：インド製薬業界の発展</h3>
+            <div class="info">
+                <span>ケース分析<br>アメリカ・クオンティック経営大学院 (QSB)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>Aldiの米国市場での地位強化戦略分析</h3>
+            <div class="info">
+                <span>ケース分析<br>スイス・チューリッヒ工科大学 (ETH)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>スイス人口統計データの精緻な可視化</h3>
+            <div class="info">
+                <span>ケース分析<br>オンライン・IBM (Coursera)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>スペイン医薬品市場プロトタイプの可視化と分類</h3>
+            <div class="info">
+                <span>ケース分析<br>スイス・ノバルティス製薬ハッカソン</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>磁気センサー応用のための熱応答性コポリマー/金属酸化物</h3>
+            <div class="info">
+                <span>修士卒業プロジェクト<br>ドイツ・ミュンヘン工科大学 (TUM)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>欧州自由電子レーザー分岐遅延ライン試験台の設計と建設</h3>
+            <div class="info">
+                <span>サマーインターンプロジェクト<br>ドイツ・欧州自由電子レーザー (XFEL)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>中国天津市于橋貯水池における藍藻動態モデリング</h3>
+            <div class="info">
+                <span>研修プロジェクト<br>フランス・国立道路橋学校 (ENPC)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>メソポーラスSnO2材料の色素増感型太陽電池およびリチウム電池への応用</h3>
+            <div class="info">
+                <span>学部イノベーションプロジェクト<br>中国・北京交通大学 (BJTU)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>ビジネスプラン：北京徳勝ソーラーエナジー株式会社</h3>
+            <div class="info">
+                <span>競技作品<br>中国・北京交通大学 (BJTU)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fillSelect(sel, dataMap) {
+            // 按数量从多到少排序
+            const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+            
+            // 添加所有选项
+            sortedEntries.forEach(([val, count]) => {
+                const opt = document.createElement('option');
+                opt.value = val; 
+                opt.textContent = `[${count}] ${val}`;
+                sel.appendChild(opt);
+            });
+        }
+
+        // 保存所有原始项目
+        let allItems = [];
+        
+        function filterProjects() {
+            const country = document.getElementById('filter-country').value;
+            const band = document.querySelector('.band');
+            
+            // 如果是第一次运行，保存所有原始项目
+            if(allItems.length === 0) {
+                allItems = Array.from(band.children).map(item => ({
+                    element: item.cloneNode(true)
+                }));
+            }
+            
+            // 清空容器
+            band.innerHTML = '';
+            
+            // 筛选符合条件的项目
+            const filteredItems = allItems.filter(item => {
+                const element = item.element;
+                let show = true;
+                
+                // 国家筛选
+                if(country) {
+                    const span = element.querySelector('.info span');
+                    if(span) {
+                        // 获取span的HTML内容，然后按<br>分割
+                        const htmlContent = span.innerHTML;
+                        const parts = htmlContent.split(/<br\s*\/?>/i);
+                        let foundCountry = '';
+                        
+                        console.log('检查项目:', element.querySelector('h3').textContent);
+                        console.log('HTML内容:', htmlContent);
+                        console.log('分割后的部分:', parts);
+                        
+                        // 找到包含间隔符的部分
+                        for(const part of parts) {
+                            console.log('检查部分:', part);
+                            if(part.includes('・')) {
+                                console.log('找到分隔符在:', part);
+                                // 国家：・前的内容
+                                const countryMatch = part.match(/([^・<]+?)・/);
+                                if(countryMatch) {
+                                    const countryName = countryMatch[1].trim();
+                                    console.log('匹配到的国家名:', countryName, '长度:', countryName.length);
+                                    // 只保留真正的国家名（2-10个字符或"线上"）
+                                    if(countryName && (countryName.length <= 10 || countryName === '线上')) {
+                                        foundCountry = countryName;
+                                        console.log('接受国家名:', foundCountry);
+                                    } else {
+                                        console.log('拒绝国家名 - 长度过长:', countryName);
+                                    }
+                                } else {
+                                    console.log('没有匹配到国家名');
+                                }
+                                break;
+                            }
+                        }
+                        
+                        console.log('最终找到的国家:', foundCountry, '筛选条件:', country);
+                        if(foundCountry !== country) {
+                            show = false;
+                        }
+                    } else {
+                        if(country) show = false;
+                    }
+                }
+                
+                return show;
+            });
+            
+            // 重新插入
+            filteredItems.forEach(item => {
+                band.appendChild(item.element.cloneNode(true));
+            });
+            
+            // 更新调试信息
+            updateDebugInfo(country, filteredItems.length);
+        }
+
+        function updateDebugInfo(country, filteredCount) {
+            const debugContent = document.getElementById('debug-content');
+            debugContent.innerHTML = `
+                <strong>当前筛选条件：</strong><br>
+                国家: ${country || '全部'}<br>
+                <strong>筛选结果：</strong> ${filteredCount} 个项目<br>
+                <strong>总项目数：</strong> ${allItems.length} 个项目
+            `;
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const band = document.querySelector('.band');
+            const countryMap = new Map();
+            
+            console.log('开始提取国家信息...');
+            
+            // 提取国家信息
+            band.querySelectorAll('.info span').forEach((span, index) => {
+                const htmlContent = span.innerHTML;
+                const parts = htmlContent.split(/<br\s*\/?>/i);
+                
+                console.log(`项目 ${index + 1}:`, htmlContent);
+                console.log('分割后的部分:', parts);
+                
+                // 找到包含间隔符的部分
+                for(const part of parts) {
+                    if(part.includes('・')) {
+                        console.log('找到分隔符在:', part);
+                        // 国家：・前的内容
+                        const countryMatch = part.match(/([^・<]+?)・/);
+                        if(countryMatch) {
+                            const country = countryMatch[1].trim();
+                            console.log('提取到的国家名:', country, '长度:', country.length);
+                            // 只保留真正的国家名（2-10个字符或"线上"）
+                            if(country && (country.length <= 10 || country === '线上')) {
+                                countryMap.set(country, (countryMap.get(country) || 0) + 1);
+                                console.log('添加到映射:', country);
+                            } else {
+                                console.log('拒绝 - 长度过长:', country);
+                            }
+                        } else {
+                            console.log('没有匹配到国家名');
+                        }
+                        break;
+                    }
+                }
+            });
+            
+            console.log('最终国家映射:', countryMap);
+            
+            // 填充国家选择框
+            fillSelect(document.getElementById('filter-country'), countryMap);
+            
+            // 添加事件监听器
+            document.getElementById('filter-country').onchange = function() {
+                console.log('筛选条件改变:', this.value);
+                filterProjects();
+            };
+            
+            // 初始化调试信息
+            updateDebugInfo('', allItems.length);
+        });
+    </script>
+</body>
+</html>

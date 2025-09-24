@@ -346,215 +346,260 @@
       <p class="d-sm-block d-none">&nbsp;</p>
       <div class="container">
         &nbsp;
-        <h1>추천 프로젝트</h1>
+        <div id="project-title-selecter">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <h1>프로젝트 경험&nbsp;</h1>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <select id="filter-topic" style="height:24px; margin-bottom: -7px;"><option value="">주제 (전체)</option></select>
+              <select id="filter-country" style="height:24px; margin-bottom: -7px;"><option value="">국가 (전체)</option></select>
+              <!-- <select id="filter-org" style="height:24px; margin-bottom: -7px;"><option value="">기관 (전체)</option></select> -->
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          /* 데스크탑 스타일 */
+          @media (min-width: 768px) {
+            .filter-container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .filter-selects {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            }
+          }
+          
+          /* 모바일 스타일 */
+          @media (max-width: 767px) {
+            h1 {
+              margin-bottom: 15px;}
+    
+            .filter-container {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .filter-selects {
+              margin-top: 10px;
+              display: flex;
+              gap: 5px;
+              flex-wrap: wrap;
+            }
+            .filter-selects select {
+              width: 50px !important;
+              font-size: 12px;
+            }
+            #project-title-selecter {
+              margin-bottom: 20px;
+            }
+          }
+        </style>
+    
         &nbsp;
-
+        </header>
         <div class="band">
           <div class="item-1">
             <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/487441" class="card">
               <div class="thumb" style="background-image: url(images/img_h_35.png);"></div>
-              <article>
-                <h1>수소 연료 전지에서의 초순간 X선 CT 액체 물 이미징</h1>
-                <p><small>폴리머 전해질 연료 전지(PEFC)는 높은 에너지 효율과 환경 친화적인 생성물 덕분에 클린 에너지 위기에 대한 주요 후보로 주목받고 있습니다.</small><br>
-                  <small>이미지: 스위스 동기 방사선원 촬영 (2019)</small>
+              <article topic="신재생에너지;컴퓨터 영상">
+                <h1>수소 연료전지의 서브세컨드 작동 X선 CT 액체수 영상화</h1>
+                <p>
+                  <small>사진: 스위스 싱크로트론 방사광원 촬영 (2019)</small>
                 </p>
-                <span>스위스 자연 과학 기금 프로젝트<br>스위스 폴 슈러 연구소 (PSI)</span>
+                <span>스위스 과학재단 프로젝트<br>스위스‧폴 쉐러 연구소 (PSI)</span>
+              </article>
+            </a>
+          </div>
+    
+    
+          <div class="item-2">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
+              <article topic="신재생에너지;기능성 재료">
+                <h1>작동 중인 PEFC 가스 확산층 내 물 전송 거동</h1>
+                <p>
+                  <small>사진: H.Xu 외, J. Power Sources (2021)</small>
+                </p>
+                <span>산학협력 프로젝트<br>벨기에‧도요타 자동차 (유럽)</span>
+              </article>
+            </a>
+          </div>
+    
+          
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
+              <article topic="신재생에너지;데이터 시각화">
+                <h1>가스 퍼지로 최적화된 PEFC 수분 관리</h1>
+                <p>
+                  <small>사진: H.Xu, 박사학위 논문, 취리히 연방공과대학교 (2021)</small>
+                </p>
+                <span>산학협력 프로젝트<br>스위스‧폴 쉐러 연구소 (PSI)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_ewaste.png);"></div>
+              <article>
+                <h1>전자 폐기물에서 에너지로: 블록체인 기술이 전자 폐기물 산업을 재편하다</h1>
+                <p><small>Unplugging the Problem: A Growing crisis of E-Waste</small><br>
+                  <small>사진: H.Xu, 기술 및 정책 이니셔티브 (2024)</small>
+                </p>
+                <span>사례 분석<br>오스트리아‧잘츠부르크 글로벌 (SGS)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_cambridge.png);"></div>
+              <article>
+                <h1>GreenByte 이니셔티브: 에너지 소비 기반 코드 최적화 및 기업 관리</h1>
+                <p><small>Skills in Green Transition</small><br>
+                  <small>사진: H.Xu, 교육 과정 과제 (2023)</small>
+                </p>
+                <span>사례 분석<br>영국‧케임브리지 저지 경영대학원 (CJBS)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_miracle.png);"></div>
+              <article topic="신재생에너지;정책 연구">
+                <h1>탄소중립 비전 속 신재생에너지의 기회와 도전 —— 과학기술 프런티어, 정책 및 투자 기회</h1>
+                <p><small>MiraclePlus 내부 공유</small><br>
+                  <small>사진: H.Xu, 지식 공유 (2022)</small>
+                </p>
+                <span>사례 분석<br>중국‧베이징 Miracle+</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_india.png);"></div>
+              <article topic="경영 분석">
+                <h1>Biocon 시각에서 본 미래: 인도 제약 산업 발전 과정</h1>
+                <p><small>Market Case Study Report</small><br>
+                  <small>사진: H.Xu, 석사 과정 과제 (2019)</small>
+                </p>
+                <span>사례 분석<br>미국‧퀀틱 경영대학원 (QSB)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_aldi.png);"></div>
+              <article topic="경영 분석">
+                <h1>Aldi의 미국 시장 지위 강화 전략 분석</h1>
+                <p><small>ETH 전략 경영 과정</small><br>
+                  <small>사진: H.Xu, 석사 과정 과제 (2019)</small>
+                </p>
+                <span>사례 분석<br>스위스‧취리히 연방공과대학교 (ETH)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_swiss_demo.png);"></div>
+              <article>
+                <h1>스위스 인구 통계 데이터 정밀 시각화</h1>
+                <p><small>IBM 데이터 사이언스 전문 자격증 수료 프로젝트</small><br>
+                  <small>사진: H.Xu, 수료 프로젝트 (2019)</small>
+                </p>
+                <span>사례 분석<br>온라인‧IBM (Coursera)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/project_spain.png);"></div>
+              <article topic="경영 분석">
+                <h1>스페인 의약품 시장 프로토타입의 시각화 및 분류</h1>
+                <p><small>Novartis Pharma Data Science Hackathon</small><br>
+                  <small>사진: H.Xu, 해커톤 프로젝트 (2019)</small>
+                </p>
+                <span>사례 분석<br>스위스‧노바티스 제약 해커톤</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="https://arxiv.org/abs/2007.10111" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_19.jpg);"></div>
+              <article topic="기능성 재료">
+                <h1>자기 센서 응용을 위한 열반응성 공중합체/금속 산화물</h1>
+                  <small>사진: H.Xu, 석사 학위 논문, 뮌헨 공과대학교 물리학과 (2016)</small>
+                </p>
+                <span>석사 졸업 프로젝트<br>독일‧뮌헨 공과대학교 (TUM)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_24.jpg);"></div>
+              <article topic="컴퓨터 영상">
+                <h1>유럽 자유 전자 레이저 분할 지연선 시험대의 설계 및 제작</h1>
+                  <small>사진: H.Xu, 인턴십 보고서, 유럽 자유 전자 레이저 (2015)</small>
+                </p>
+                <span>여름 인턴십 프로젝트<br>독일‧유럽 자유 전자 레이저 (XFEL)</span>
               </article>
             </a>
           </div>
           <div class="item-2">
-            <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
-              <article>
-                <h1>PEFC 가스 확산층에서의 물 전달 거동</h1>
-                <p>
-                  <small>가스 확산층(GDL) 내 액체 포화도의 증가는 가스 전달 부족을 일으키며, 배터리 성능 저하를 초래합니다. GDL의 영향 요소와 그 물 관리에 미치는 영향을 깊이 이해하는
-                    것이
-                    중요합니다.</small><br>
-                  <small>이미지: H.Xu 등, J. Power Sources (2021)</small>
-                </p>
-                <span>산학 협력 프로젝트<br>벨기에 - 토요타 자동차 (유럽)</span>
-              </article>
-            </a>
-          </div>
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
-              <article>
-                <h1>가스 제거에 의한 PEFC의 물 관리 최적화</h1>
-                <p>
-                  <small>저온 시작 장면에서는 과도한 액체 물이 중요한 부품 내에서 얼음을 형성하고 팽창하여 심각한 손상을 초래하고, 성능과 내구성을 저하시킵니다. 이러한 영향을 피하기 위해,
-                    배터리
-                    종료 후 건조 가스를 제거하는 것이 일반적인 방법입니다.</small><br>
-                  <small>이미지: H.Xu, 박사 논문, 스위스 연방 공과대학교 (2021)</small>
-                </p>
-                <span>학술 협력 프로젝트<br>스위스 동기 방사선원 (SLS)</span>
-              </article>
-            </a>
-          </div>
-   
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_ewaste.png);"></div>
-              <article>
-                <h1>전자 폐기물에서 전력 동력으로: 블록체인 기술이 전자 폐기물 산업을 재편</h1>
-                <p><small>Unplugging the Problem: 심화되는 전자 폐기물 위기</small><br>
-                  <small>이미지: H.Xu, 기술 및 정책 이니셔티브 (2024)</small>
-                </p>
-                <span>사례 분석<br>오스트리아 잘츠부르크 글로벌 (SGS)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_cambridge.png);"></div>
-              <article>
-                <h1>GreenByte 이니셔티브: 에너지 소비 기반 코드 최적화와 기업 관리</h1>
-                <p><small>Skills in Green Transition</small><br>
-                  <small>이미지: H.Xu, 교육 과정 과제 (2023)</small>
-                </p>
-                <span>사례 분석<br>영국 케임브리지 저지 경영대학원 (CJBS)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_miracle.png);"></div>
-              <article>
-                <h1>탄소 중립 비전 하의 신재생 에너지 기회와 도전 —— 과학기술 최전선, 정책 및 투자 기회</h1>
-                <p><small>MiraclePlus 내부 공유</small><br>
-                  <small>이미지: H.Xu, 지식 공유 (2022)</small>
-                </p>
-                <span>사례 분석<br>중국 베이징 Miracle+</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_india.png);"></div>
-              <article>
-                <h1>Biocon 관점에서 본 미래: 인도 제약 산업 발전 과정</h1>
-                <p><small>Market Case Study Report</small><br>
-                  <small>이미지: H.Xu, 석사 과정 과제 (2019)</small>
-                </p>
-                <span>사례 분석<br>미국 퀀텀 경영대학원 (QSB)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_aldi.png);"></div>
-              <article>
-                <h1>Aldi의 미국 시장 지위 강화 전략 분석</h1>
-                <p><small>ETH 전략 경영 과정</small><br>
-                  <small>이미지: H.Xu, 석사 과정 과제 (2019)</small>
-                </p>
-                <span>사례 분석<br>스위스 취리히 연방 공과대학 (ETH)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_swiss_demo.png);"></div>
-              <article>
-                <h1>스위스 인구 통계 데이터 세밀 시각화</h1>
-                <p><small>IBM 데이터 과학 전문 자격증 수료 프로젝트</small><br>
-                  <small>이미지: H.Xu, 수료 프로젝트 (2019)</small>
-                </p>
-                <span>사례 분석<br>온라인 IBM & Coursera</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/project_spain.png);"></div>
-              <article>
-                <h1>스페인 의약품 시장 프로토타입의 시각화와 분류</h1>
-                <p><small>Novartis Pharma Data Science Hackathon</small><br>
-                  <small>이미지: H.Xu, 해커톤 프로젝트 (2019)</small>
-                </p>
-                <span>사례 분석<br>스위스 노바티스 제약 해커톤</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-4">
-            <a href="https://arxiv.org/abs/2007.10111" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_19.jpg);"></div>
-              <article>
-                <h1>자기 센서 응용을 위한 열 응답 공중합체/금속 산화물</h1>
-                  <small>이미지: H.Xu, 석사 논문, 뮌헨 공과대학교 물리학과 (2016)</small>
-                </p>
-                <span>석사 졸업 프로젝트<br>독일 뮌헨 공과대학교 (TUM)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-6">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_24.jpg);"></div>
-              <article>
-                <h1>유럽 자유 전자 레이저 분할 지연 라인 시험대 설계 및 구축</h1>
-                  <small>이미지: H.Xu, 인턴십 보고서, 유럽 자유 전자 레이저 (2015)</small>
-                </p>
-                <span>여름 인턴십 프로젝트<br>독일 유럽 자유 전자 레이저 (XFEL)</span>
-              </article>
-            </a>
-          </div>
-          
-          <div class="item-7">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_25.jpg);"></div>
-              <article>
-                <h1>중국 톈진시 위차오 저수지 남조류 동역학 모델링</h1>
-                  <small>이미지: H.Xu, 연수생 보고서, 파리 국립교량학교 (2015)</small>
+              <article topic="모델링 분석">
+                <h1>중국 톈진시 위차오 저수지 남조류 동력학 모델링</h1>
+                  <small>사진: H.Xu, 연수생 보고서, 파리 국립교량고등학교 (2015)</small>
                 </p>
-                <span>프로젝트 연수생<br>프랑스 국립교량학교 (ENPC)</span>
+                <span>프로젝트 연수생<br>프랑스‧국립교량고등학교 (ENPC)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-5">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_23.jpg);"></div>
-              <article>
-                <h1>메조포러스 SnO2 소재의 염료 감응 태양전지 및 리튬 배터리 응용</h1>
-                  <small>이미지: H.Xu, 학사 논문, 베이징 교통대학교 (2013)</small>
+              <article topic="신재생에너지;기능성 재료">
+                <h1>염료 감응형 태양전지와 리튬전지에서의 메조기공 SnO2 재료 응용</h1>
+                  <small>사진: H.Xu, 학부 논문, 베이징 교통대학교 (2013)</small>
                 </p>
-                <span>학사 혁신 프로젝트<br>중국 베이징 교통대학교 (BJTU)</span>
+                <span>학부 혁신 프로젝트<br>중국‧베이징 교통대학교 (BJTU)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_dssc.jpg);"></div>
-              <article>
-                <h1>사업 계획서: 베이징 더성 태양에너지 기술 유한공사</h1>
-                <p><small>제8회 챌린지컵 사업 계획 대회 전국 동상</small><br>
-                  <small>이미지: H.Xu, 대회 출품작 (2012)</small>
+              <article topic="신재생에너지;경영 분석">
+                <h1>사업계획서: 베이징 더성 태양에너지 과학기술유한공사</h1>
+                <p><small>제8회 챌린지컵 사업계획 경진대회 국가 동상</small><br>
+                  <small>사진: H.Xu, 경진대회 작품 (2012)</small>
                 </p>
-                <span>대회 출품작<br>중국 베이징 교통대학교 (BJTU)</span>
+                <span>경진대회 작품<br>중국‧베이징 교통대학교 (BJTU)</span>
               </article>
             </a>
           </div>
-
-
-
-
-
+    
+    
         </div>
+        
         <!-- partial -->
-
-
+    
+    
       </div>
-
+    
     </div>
 
     <p class="">&nbsp;</p>
@@ -857,6 +902,224 @@
     <script src="js/user_ip_kr.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
     <script src="js/24jieqi.js"></script>
+
+
+    <script>
+      (function(){
+        function fillSelect(sel, dataMap) {
+          // 按数量从多到少排序
+          const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+          
+          // 创建临时元素来测量文本宽度
+          const tempDiv = document.createElement('div');
+          tempDiv.style.position = 'absolute';
+          tempDiv.style.visibility = 'hidden';
+          tempDiv.style.whiteSpace = 'nowrap';
+          tempDiv.style.fontSize = '14px';
+          tempDiv.style.fontFamily = 'Arial, sans-serif';
+          document.body.appendChild(tempDiv);
+          
+          // 只测量默认选项的宽度作为初始宽度
+          const defaultOption = sel.querySelector('option[value=""]');
+          let initialWidth = 100; // 默认最小宽度
+          if(defaultOption) {
+            tempDiv.textContent = defaultOption.textContent;
+            initialWidth = tempDiv.offsetWidth + 30; // 默认选项宽度 + 内边距
+          }
+          
+          // 添加所有选项
+          sortedEntries.forEach(([val, count]) => {
+            const opt = document.createElement('option');
+            opt.value = val; 
+            opt.textContent = `[${count}] ${val}`;
+            sel.appendChild(opt);
+          });
+          
+          // 清理临时元素
+          document.body.removeChild(tempDiv);
+          
+          // 设置初始宽度（只基于默认选项）
+          const minWidth = 100; // 最小宽度
+          const maxAllowedWidth = 350; // 最大宽度
+          const newWidth = Math.min(Math.max(initialWidth, minWidth), maxAllowedWidth);
+          sel.style.width = newWidth + 'px';
+          
+          // 调试信息
+          console.log('Select ID:', sel.id, 'Default text:', defaultOption?.textContent, 'Initial width:', newWidth);
+        }
+        // 保存所有原始项目
+        let allItems = [];
+        
+        function filterProjects() {
+          const topic = document.getElementById('filter-topic').value;
+          const org = null; // 机构筛选已禁用
+          const country = document.getElementById('filter-country').value;
+          const band = document.querySelector('.band');
+          
+          
+          // 如果是第一次运行，保存所有原始项目
+          if(allItems.length === 0) {
+            allItems = Array.from(band.children).map(item => ({
+              element: item.cloneNode(true),
+              article: item.querySelector('article')
+            }));
+          }
+          
+          // 清空容器
+          band.innerHTML = '';
+          
+          // 筛选符合条件的项目
+          const filteredItems = allItems.filter(item => {
+            const article = item.article;
+            let show = true;
+            
+            // 主题筛选
+            if(topic) {
+              const topicAttr = article.getAttribute('topic') || '';
+              show = show && topicAttr.split(/[;；]/).map(s=>s.trim()).includes(topic);
+            }
+            
+            // 机构和国家筛选
+            if(org || country) {
+              const span = article.querySelector('span');
+              if(span) {
+                // 获取span的HTML内容，然后按<br>分割
+                const htmlContent = span.innerHTML;
+                const parts = htmlContent.split(/<br\s*\/?>/i);
+                let foundOrg = '', foundCountry = '';
+                
+                // 找到包含间隔符的部分
+                for(const part of parts) {
+                  if(part.includes('‧') || part.includes('・')) {
+                    // 机构：‧或・后的所有内容（包括空格和括号）
+                    const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
+                    if(orgMatch) foundOrg = orgMatch[1].trim();
+                    // 国家：‧或・前的内容
+                    const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
+                    if(countryMatch) {
+                      const country = countryMatch[1].trim();
+                      // 只保留真正的国家名（2-10个字符或"线上"）
+                      if(country && (country.length <= 10 || country === '线上')) {
+                        foundCountry = country;
+                      }
+                    }
+                    break;
+                  }
+                }
+                
+                if(org && foundOrg.toLowerCase() !== org.toLowerCase()) show = false;
+                if(country && foundCountry !== country) show = false;
+              } else {
+                if(org || country) show = false;
+              }
+            }
+            
+            return show;
+          });
+          
+          // 重新插入并重新分配class
+          filteredItems.forEach((item, index) => {
+            const newItem = item.element.cloneNode(true);
+            // 移除所有 item-x class
+            newItem.className = newItem.className.replace(/\bitem-\d+\b/g, '').trim();
+            // 重新分配
+            if(index === 0) {
+              newItem.classList.add('item-1'); // 第一个是大卡片
+            } else {
+              newItem.classList.add('item-2'); // 其余都是小卡片
+            }
+            band.appendChild(newItem);
+          });
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+          const articles = document.querySelectorAll('.band article');
+          const topicMap = new Map();
+          const orgMap = new Map();
+          const countryMap = new Map();
+          
+          articles.forEach(article => {
+            // 主题提取
+            const topicAttr = article.getAttribute('topic') || '';
+            topicAttr.split(/[;；]/).map(s=>s.trim()).filter(Boolean).forEach(t=>{
+              topicMap.set(t, (topicMap.get(t) || 0) + 1);
+            });
+            
+            // 机构和国家提取（直接解析HTML结构）
+            const span = article.querySelector('span');
+            if(span) {
+              // 获取span的HTML内容，然后按<br>分割
+              const htmlContent = span.innerHTML;
+              const parts = htmlContent.split(/<br\s*\/?>/i);
+              
+              // 找到包含间隔符的部分
+              for(const part of parts) {
+                if(part.includes('‧') || part.includes('・')) {
+                  // 机构：‧或・后的所有内容（包括空格和括号）
+                  const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
+                  if(orgMatch) {
+                    const org = orgMatch[1].trim();
+                    orgMap.set(org, (orgMap.get(org) || 0) + 1);
+                  }
+                  // 国家：‧或・前的内容
+                  const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
+                  if(countryMatch) {
+                    const country = countryMatch[1].trim();
+                    // 只保留真正的国家名（2-3个字符或"线上"）
+                    if(country && (country.length <= 10 || country === '线上')) {
+                      countryMap.set(country, (countryMap.get(country) || 0) + 1);
+                    }
+                  }
+                  break;
+                }
+              }
+            }
+          });
+          
+          // 分别设置每个select的宽度
+          fillSelect(document.getElementById('filter-topic'), topicMap);
+          // fillSelect(document.getElementById('filter-org'), orgMap); // 机构筛选已禁用
+          fillSelect(document.getElementById('filter-country'), countryMap);
+          
+          // 添加选择后动态调整宽度的功能
+          function adjustSelectWidth(select) {
+            const selectedText = select.options[select.selectedIndex].textContent;
+            const tempDiv = document.createElement('div');
+            tempDiv.style.position = 'absolute';
+            tempDiv.style.visibility = 'hidden';
+            tempDiv.style.whiteSpace = 'nowrap';
+            tempDiv.style.fontSize = '14px';
+            tempDiv.style.fontFamily = 'Arial, sans-serif';
+            tempDiv.textContent = selectedText;
+            document.body.appendChild(tempDiv);
+            
+            const textWidth = tempDiv.offsetWidth;
+            const minWidth = 110;
+            const maxAllowedWidth = 350;
+            const newWidth = Math.min(Math.max(textWidth + 30, minWidth), maxAllowedWidth);
+            select.style.width = newWidth + 'px';
+            
+            document.body.removeChild(tempDiv);
+          }
+          
+          document.getElementById('filter-topic').onchange = function() {
+            adjustSelectWidth(this);
+            filterProjects();
+          };
+          // document.getElementById('filter-org').onchange = function() { // 机构筛选已禁用
+          //   adjustSelectWidth(this);
+          //   filterProjects();
+          // };
+          document.getElementById('filter-country').onchange = function() {
+            adjustSelectWidth(this);
+            filterProjects();
+          };
+        });
+      })();
+      </script>
+
+
+
+
   </div>
   </div>
 </body>

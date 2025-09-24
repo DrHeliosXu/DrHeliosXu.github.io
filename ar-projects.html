@@ -319,223 +319,261 @@
     <!------>
 
     <div class="site-section">
-      <p class="d-sm-block d-none">&nbsp;</p><br>
       <p class="d-sm-block d-none">&nbsp;</p>
-      <div class="container" style="text-align: right;">
-        <h1>المشاريع المميزة</h1>
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <div class="container">
         &nbsp;
-
+        <div id="project-title-selecter">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+            <h1>خبرات المشروع&nbsp;</h1>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <select id="filter-topic" style="height:24px; margin-bottom: -7px;"><option value="">الموضوع (الكل)</option></select>
+              <select id="filter-country" style="height:24px; margin-bottom: -7px;"><option value="">الدولة (الكل)</option></select>
+              <!-- <select id="filter-org" style="height:24px; margin-bottom: -7px;"><option value="">المؤسسة (الكل)</option></select> -->
+            </div>
+          </div>
+        </div>
+        
+        <style>
+          /* سطح المكتب */
+          @media (min-width: 768px) {
+            .filter-container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .filter-selects {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+            }
+          }
+          
+          /* الهاتف المحمول */
+          @media (max-width: 767px) {
+            h1 {
+              margin-bottom: 15px;}
+            .filter-container {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .filter-selects {
+              margin-top: 10px;
+              display: flex;
+              gap: 5px;
+              flex-wrap: wrap;
+            }
+            .filter-selects select {
+              width: 50px !important;
+              font-size: 12px;
+            }
+            #project-title-selecter {
+              margin-bottom: 20px;
+            }
+          }
+        </style>
+    
+        &nbsp;
+        </header>
         <div class="band">
           <div class="item-1">
             <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/487441" class="card">
               <div class="thumb" style="background-image: url(images/img_h_35.png);"></div>
-              <article>
-                <h1>التصوير بالأشعة السينية على مدار ثانية للسوائل في خلايا وقود الهيدروجين
-                  <hr>
-                </h1>
-                <p>تجذب خلايا الوقود البوليمرية (PEFCs) المزيد من الاهتمام كحل رئيسي لمشكلة الطاقة النظيفة
-                  بفضل كفاءتها العالية نسبيًا في استهلاك الطاقة ومنتجاتها الصديقة للبيئة.<br>
-                  <small>الصورة: تم التقاطها في مصدر الضوء السويسري (2019)</small>
+              <article topic="الطاقة الجديدة;التصوير الحاسوبي">
+                <h1>تصوير الماء السائل بالأشعة السينية CT في خلايا وقود الهيدروجين على مستوى جزء من الثانية</h1>
+                <p>
+                  <small>الصورة: مصدر إشعاع سويسري متزامن (2019)</small>
                 </p>
-                <span>مشروع الدكتوراه SNF في<br> معهد بول شيرر</span>
-              </article>
-            </a>
-          </div>
-          <div class="item-2">
-            <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
-              <article>
-                <h1>سلوك نقل الماء في طبقات انتشار الغاز في خلايا الوقود البوليمرية
-                  <hr>
-                </h1>
-                <p>تؤدي زيادة مستويات التشبع السائل في طبقات انتشار الغاز (GDLs) إلى نقص في توصيل الغاز مما يؤدي
-                  إلى انخفاض الأداء الخلوي. من الضروري فهم العوامل الأساسية وتأثيراتها على إدارة الماء.<br>
-                  <small>الصورة: H.Xu وآخرون، J. Power Sources (2021)</small>
-                </p>
-                <span>مشروع مشترك مع<br> تويوتا موتور أوروبا</span>
-              </article>
-            </a>
-          </div>
-          <div class="item-3">
-            <a href="#" class="card">
-              <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
-              <article>
-                <h1>تحسين إدارة الماء عبر تطهير الغاز الداخلي في خلايا الوقود البوليمرية
-                  <hr>
-                </h1>
-                <p>في سيناريو بدء التشغيل تحت درجة حرارة الصفر، يؤدي الماء السائل الزائد إلى تكوين الجليد وتوسع
-                  الحجم داخل المكونات الحيوية مما يسبب أضرارًا كبيرة وفقدانًا في الأداء والمتانة. لإيقاف هذه
-                  التأثيرات، من الممارسات الشائعة تطهير الغاز الجاف بعد إيقاف الخلية.<br>
-                  <small>الصورة: H.Xu، أطروحة دكتوراه، ETH زيورخ (2021)</small>
-                </p>
-                <span>مشروع مشترك مع<br> مصدر الضوء السويسري</span>
+                <span>مشروع مؤسسة العلوم الطبيعية السويسرية<br>سويسرا‧معهد بول شير (PSI)</span>
               </article>
             </a>
           </div>
     
-
-          <div class="item-3">
+          <div class="item-2">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
+              <article topic="الطاقة الجديدة;المواد الوظيفية">
+                <h1>سلوك نقل الماء في طبقة انتشار الغاز في PEFC أثناء التشغيل</h1>
+                <p>
+                  <small>الصورة: H.Xu وآخرون، J. Power Sources (2021)</small>
+                </p>
+                <span>مشروع تعاون بين الجامعة والشركة<br>بلجيكا‧تويوتا للسيارات (أوروبا)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
+              <article topic="الطاقة الجديدة;تصور البيانات">
+                <h1>تحسين إدارة الماء في PEFC عبر إزالة الغاز</h1>
+                <p>
+                  <small>الصورة: H.Xu، أطروحة دكتوراه، المعهد الفيدرالي السويسري للتكنولوجيا زيورخ (2021)</small>
+                </p>
+                <span>مشروع تعاون بين الجامعة والشركة<br>سويسرا‧معهد بول شير (PSI)</span>
+              </article>
+            </a>
+          </div>
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_ewaste.png);"></div>
               <article>
-                <h1>من النفايات الإلكترونية إلى الطاقة: تقنية البلوك تشين تعيد تشكيل صناعة النفايات الإلكترونية</h1>
-                <p><small>Unplugging the Problem: أزمة النفايات الإلكترونية المتزايدة</small><br>
-                  <small>الصورة: H.Xu، المبادرات التقنية والسياساتية (2024)</small>
+                <h1>من النفايات الإلكترونية إلى الطاقة: إعادة تشكيل صناعة النفايات الإلكترونية باستخدام البلوك تشين</h1>
+                <p><small>حل المشكلة: أزمة متزايدة للنفايات الإلكترونية</small><br>
+                  <small>الصورة: H.Xu، مبادرة تقنية وسياسات (2024)</small>
                 </p>
-                <span>دراسة حالة<br>النمسا‧سالزبورغ غلوبال (SGS)</span>
+                <span>دراسة حالة<br>النمسا‧غلوبال سالزبورغ (SGS)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_cambridge.png);"></div>
               <article>
-                <h1>مبادرة GreenByte: تحسين الأكواد وإدارة الشركات بناءً على استهلاك الطاقة</h1>
-                <p><small>Skills in Green Transition</small><br>
-                  <small>الصورة: H.Xu، مهام الدورة التدريبية (2023)</small>
+                <h1>مبادرة GreenByte: تحسين الكود وإدارة الشركات بناءً على استهلاك الطاقة</h1>
+                <p><small>مهارات في الانتقال الأخضر</small><br>
+                  <small>الصورة: H.Xu، واجب الدورة التدريبية (2023)</small>
                 </p>
-                <span>دراسة حالة<br>المملكة المتحدة‧كلية إدارة الأعمال بجادج، كامبريدج (CJBS)</span>
+                <span>دراسة حالة<br>المملكة المتحدة‧كلية جادج للأعمال، كامبريدج (CJBS)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_miracle.png);"></div>
-              <article>
-                <h1>الفرص والتحديات في الطاقة الجديدة ضمن رؤية الحياد الكربوني — التكنولوجيا المتقدمة والسياسات وفرص الاستثمار</h1>
-                <p><small>مشاركة داخلية MiraclePlus</small><br>
+              <article topic="الطاقة الجديدة;أبحاث السياسات">
+                <h1>فرص وتحديات الطاقة الجديدة في رؤية الحياد الكربوني — الابتكار، السياسات، وفرص الاستثمار</h1>
+                <p><small>مشاركة داخل MiraclePlus</small><br>
                   <small>الصورة: H.Xu، مشاركة المعرفة (2022)</small>
                 </p>
                 <span>دراسة حالة<br>الصين‧بكين Miracle+</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_india.png);"></div>
-              <article>
-                <h1>من منظور Biocon: مسار تطوير صناعة الأدوية في الهند</h1>
-                <p><small>Market Case Study Report</small><br>
-                  <small>الصورة: H.Xu، مهام برنامج الماجستير (2019)</small>
+              <article topic="تحليل الأعمال">
+                <h1>مستقبل صناعة الأدوية في الهند من منظور Biocon</h1>
+                <p><small>تقرير دراسة حالة السوق</small><br>
+                  <small>الصورة: H.Xu، واجب دورة الماجستير (2019)</small>
                 </p>
-                <span>دراسة حالة<br>الولايات المتحدة‧كلية كوانتوم للأعمال (QSB)</span>
+                <span>دراسة حالة<br>الولايات المتحدة‧كلية الأعمال الكمية (QSB)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_aldi.png);"></div>
-              <article>
-                <h1>تحليل استراتيجية Aldi لتعزيز موقعها في السوق الأمريكي</h1>
-                <p><small>دورة إدارة استراتيجية ETH</small><br>
-                  <small>الصورة: H.Xu، مهام الماجستير (2019)</small>
+              <article topic="تحليل الأعمال">
+                <h1>تحليل استراتيجيات Aldi لتعزيز موقعها في السوق الأمريكية</h1>
+                <p><small>دورة إدارة إستراتيجية ETH</small><br>
+                  <small>الصورة: H.Xu، واجب دورة الماجستير (2019)</small>
                 </p>
                 <span>دراسة حالة<br>سويسرا‧المعهد الفيدرالي السويسري للتكنولوجيا زيورخ (ETH)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_swiss_demo.png);"></div>
               <article>
-                <h1>تصوير دقيق للبيانات السكانية في سويسرا</h1>
-                <p><small>مشروع إنهاء شهادة IBM في علم البيانات</small><br>
-                  <small>الصورة: H.Xu، مشروع إنهاء الدورة (2019)</small>
+                <h1>تصور دقيق لبيانات السكان في سويسرا</h1>
+                <p><small>مشروع شهادة IBM في علوم البيانات</small><br>
+                  <small>الصورة: H.Xu، مشروع إتمام الشهادة (2019)</small>
                 </p>
-                <span>دراسة حالة<br>عبر الإنترنت‧IBM & Coursera</span>
+                <span>دراسة حالة<br>عبر الإنترنت‧IBM (Coursera)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_spain.png);"></div>
-              <article>
-                <h1>تصوير وتصنيف نموذج سوق الأدوية الإسبانية</h1>
-                <p><small>Novartis Pharma Data Science Hackathon</small><br>
-                  <small>الصورة: H.Xu، مشروع الهاكاثون (2019)</small>
+              <article topic="تحليل الأعمال">
+                <h1>تصور وتصنيف نموذج سوق الأدوية في إسبانيا</h1>
+                <p><small>هاكاثون Novartis Pharma لعلوم البيانات</small><br>
+                  <small>الصورة: H.Xu، مشروع هاكاثون (2019)</small>
                 </p>
-                <span>دراسة حالة<br>سويسرا‧هاكاثون Novartis Pharma</span>
+                <span>دراسة حالة<br>سويسرا‧هاكاثون نوفارتيس للأدوية </span>
               </article>
             </a>
           </div>
-          
-          <div class="item-4">
+    
+          <div class="item-2">
             <a href="https://arxiv.org/abs/2007.10111" class="card">
               <div class="thumb" style="background-image: url(images/img_h_19.jpg);"></div>
-              <article>
-                <h1>البوليمرات المشتركة / أكاسيد المعادن الحساسة للحرارة لتطبيقات أجهزة الاستشعار المغناطيسية</h1>
-                  <small>الصورة: H.Xu، رسالة الماجستير، قسم الفيزياء، جامعة ميونخ التقنية (2016)</small>
+              <article topic="المواد الوظيفية">
+                <h1>بوليمرات/أكسيدات معدنية مستجيبة حرارياً لتطبيقات أجهزة الاستشعار المغناطيسية</h1>
+                  <small>الصورة: H.Xu، رسالة الماجستير، قسم الفيزياء، جامعة ميونيخ التقنية (2016)</small>
                 </p>
-                <span>مشروع التخرج للماجستير<br>ألمانيا‧جامعة ميونخ التقنية (TUM)</span>
+                <span>مشروع تخرج الماجستير<br>ألمانيا‧جامعة ميونيخ التقنية (TUM)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-6">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_24.jpg);"></div>
-              <article>
-                <h1>تصميم وبناء منصة اختبار خط التأخير الانشطاري للليزر الإلكتروني الحر الأوروبي</h1>
-                  <small>الصورة: H.Xu، تقرير التدريب، European XFEL (2015)</small>
+              <article topic="التصوير الحاسوبي">
+                <h1>تصميم وبناء منصة اختبار خط تأخير الليزر الإلكتروني الحر الأوروبي</h1>
+                  <small>الصورة: H.Xu، تقرير تدريب صيفي، XFEL (2015)</small>
                 </p>
-                <span>مشروع تدريب صيفي<br>ألمانيا‧European XFEL</span>
+                <span>مشروع تدريب صيفي<br>ألمانيا‧ليزر إلكتروني حر، الاتحاد الأوروبي (XFEL)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-7">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_25.jpg);"></div>
-              <article>
-                <h1>نمذجة ديناميكيات الطحالب الزرقاء في خزان Yuqiao، تيانجين، الصين</h1>
-                  <small>الصورة: H.Xu، تقرير المتدرب، مدرسة باريس الوطنية للجسور (2015)</small>
+              <article topic="النمذجة والتحليل">
+                <h1>نمذجة ديناميكيات الطحالب الزرقاء لخزان يوكيوا بمدينة تيانجين، الصين</h1>
+                  <small>الصورة: H.Xu، تقرير تدريب، المدرسة الوطنية للطرق والجسور، باريس (2015)</small>
                 </p>
-                <span>متدرب في المشروع<br>فرنسا‧المدرسة الوطنية للجسور (ENPC)</span>
+                <span>متدرب مشروع<br>فرنسا‧المدرسة الوطنية للطرق والجسور (ENPC)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-5">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/img_h_23.jpg);"></div>
-              <article>
-                <h1>تطبيق مادة SnO2 المسامية في الخلايا الشمسية الحساسة للأصباغ والبطاريات الليثيومية</h1>
-                  <small>الصورة: H.Xu، أطروحة البكالوريوس، جامعة بكين للنقل (2013)</small>
+              <article topic="الطاقة الجديدة;المواد الوظيفية">
+                <h1>تطبيق مواد SnO2 المسامية في الخلايا الشمسية الحساسة للأصباغ وبطاريات الليثيوم</h1>
+                  <small>الصورة: H.Xu، رسالة البكالوريوس، جامعة بكين للنقل (2013)</small>
                 </p>
-                <span>مشروع الابتكار للبكالوريوس<br>الصين‧جامعة بكين للنقل (BJTU)</span>
+                <span>مشروع ابتكار البكالوريوس<br>الصين‧جامعة بكين للنقل (BJTU)</span>
               </article>
             </a>
           </div>
-          
-          <div class="item-3">
+    
+          <div class="item-2">
             <a href="#" class="card">
               <div class="thumb" style="background-image: url(images/project_dssc.jpg);"></div>
-              <article>
-                <h1>خطة عمل: شركة بكين Desheng لتقنيات الطاقة الشمسية المحدودة</h1>
-                <p><small>الميدالية البرونزية الوطنية للمسابقة الثامنة لخطة العمل Challenge Cup</small><br>
-                  <small>الصورة: H.Xu، عمل المسابقة (2012)</small>
+              <article topic="الطاقة الجديدة;تحليل الأعمال">
+                <h1>خطة عمل: شركة بكين ديسن للطاقة الشمسية</h1>
+                <p><small>الجائزة البرونزية الوطنية لمسابقة كأس التحدي الثامنة</small><br>
+                  <small>الصورة: H.Xu، مشروع مسابقة (2012)</small>
                 </p>
-                <span>عمل المسابقة<br>الصين‧جامعة بكين للنقل (BJTU)</span>
+                <span>مشروع مسابقة<br>الصين‧جامعة بكين للنقل (BJTU)</span>
               </article>
             </a>
           </div>
-
-
-
+    
         </div>
+        
         <!-- partial -->
-
-
+    
       </div>
+    
     </div>
-
-  </div>
 
 
   <p class="">&nbsp;</p>
@@ -834,7 +872,218 @@
   <script src="js/user_ip_ar.js" type="module"></script>
   <script type="text/javascript" src="update_info_script.js"></script>
   <script src="js/24jieqi.js"></script>
-
+  <script>
+    (function(){
+      function fillSelect(sel, dataMap) {
+        // 按数量从多到少排序
+        const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+        
+        // 创建临时元素来测量文本宽度
+        const tempDiv = document.createElement('div');
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.visibility = 'hidden';
+        tempDiv.style.whiteSpace = 'nowrap';
+        tempDiv.style.fontSize = '14px';
+        tempDiv.style.fontFamily = 'Arial, sans-serif';
+        document.body.appendChild(tempDiv);
+        
+        // 只测量默认选项的宽度作为初始宽度
+        const defaultOption = sel.querySelector('option[value=""]');
+        let initialWidth = 100; // 默认最小宽度
+        if(defaultOption) {
+          tempDiv.textContent = defaultOption.textContent;
+          initialWidth = tempDiv.offsetWidth + 30; // 默认选项宽度 + 内边距
+        }
+        
+        // 添加所有选项
+        sortedEntries.forEach(([val, count]) => {
+          const opt = document.createElement('option');
+          opt.value = val; 
+          opt.textContent = `[${count}] ${val}`;
+          sel.appendChild(opt);
+        });
+        
+        // 清理临时元素
+        document.body.removeChild(tempDiv);
+        
+        // 设置初始宽度（只基于默认选项）
+        const minWidth = 100; // 最小宽度
+        const maxAllowedWidth = 350; // 最大宽度
+        const newWidth = Math.min(Math.max(initialWidth, minWidth), maxAllowedWidth);
+        sel.style.width = newWidth + 'px';
+        
+        // 调试信息
+        console.log('Select ID:', sel.id, 'Default text:', defaultOption?.textContent, 'Initial width:', newWidth);
+      }
+      // 保存所有原始项目
+      let allItems = [];
+      
+      function filterProjects() {
+        const topic = document.getElementById('filter-topic').value;
+        const org = null; // 机构筛选已禁用
+        const country = document.getElementById('filter-country').value;
+        const band = document.querySelector('.band');
+        
+        
+        // 如果是第一次运行，保存所有原始项目
+        if(allItems.length === 0) {
+          allItems = Array.from(band.children).map(item => ({
+            element: item.cloneNode(true),
+            article: item.querySelector('article')
+          }));
+        }
+        
+        // 清空容器
+        band.innerHTML = '';
+        
+        // 筛选符合条件的项目
+        const filteredItems = allItems.filter(item => {
+          const article = item.article;
+          let show = true;
+          
+          // 主题筛选
+          if(topic) {
+            const topicAttr = article.getAttribute('topic') || '';
+            show = show && topicAttr.split(/[;；]/).map(s=>s.trim()).includes(topic);
+          }
+          
+          // 机构和国家筛选
+          if(org || country) {
+            const span = article.querySelector('span');
+            if(span) {
+              // 获取span的HTML内容，然后按<br>分割
+              const htmlContent = span.innerHTML;
+              const parts = htmlContent.split(/<br\s*\/?>/i);
+              let foundOrg = '', foundCountry = '';
+              
+              // 找到包含间隔符的部分
+              for(const part of parts) {
+                if(part.includes('‧') || part.includes('・')) {
+                  // 机构：‧或・后的所有内容（包括空格和括号）
+                  const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
+                  if(orgMatch) foundOrg = orgMatch[1].trim();
+                  // 国家：‧或・前的内容
+                  const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
+                  if(countryMatch) {
+                    const country = countryMatch[1].trim();
+                    // 只保留真正的国家名（2-20个字符或"线上"）
+                    if(country && (country.length <= 20 || country === '线上')) {
+                      foundCountry = country;
+                    }
+                  }
+                  break;
+                }
+              }
+              
+              if(org && foundOrg.toLowerCase() !== org.toLowerCase()) show = false;
+              if(country && foundCountry !== country) show = false;
+            } else {
+              if(org || country) show = false;
+            }
+          }
+          
+          return show;
+        });
+        
+        // 重新插入并重新分配class
+        filteredItems.forEach((item, index) => {
+          const newItem = item.element.cloneNode(true);
+          // 移除所有 item-x class
+          newItem.className = newItem.className.replace(/\bitem-\d+\b/g, '').trim();
+          // 重新分配
+          if(index === 0) {
+            newItem.classList.add('item-1'); // 第一个是大卡片
+          } else {
+            newItem.classList.add('item-2'); // 其余都是小卡片
+          }
+          band.appendChild(newItem);
+        });
+      }
+      window.addEventListener('DOMContentLoaded', function() {
+        const articles = document.querySelectorAll('.band article');
+        const topicMap = new Map();
+        const orgMap = new Map();
+        const countryMap = new Map();
+        
+        articles.forEach(article => {
+          // 主题提取
+          const topicAttr = article.getAttribute('topic') || '';
+          topicAttr.split(/[;；]/).map(s=>s.trim()).filter(Boolean).forEach(t=>{
+            topicMap.set(t, (topicMap.get(t) || 0) + 1);
+          });
+          
+          // 机构和国家提取（直接解析HTML结构）
+          const span = article.querySelector('span');
+          if(span) {
+            // 获取span的HTML内容，然后按<br>分割
+            const htmlContent = span.innerHTML;
+            const parts = htmlContent.split(/<br\s*\/?>/i);
+            
+            // 找到包含间隔符的部分
+            for(const part of parts) {
+              if(part.includes('‧') || part.includes('・')) {
+                // 机构：‧或・后的所有内容（包括空格和括号）
+                const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
+                if(orgMatch) {
+                  const org = orgMatch[1].trim();
+                  orgMap.set(org, (orgMap.get(org) || 0) + 1);
+                }
+                // 国家：‧或・前的内容
+                const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
+                if(countryMatch) {
+                  const country = countryMatch[1].trim();
+                  // 只保留真正的国家名（2-20个字符或"线上"）
+                  if(country && (country.length <= 20 || country === '线上')) {
+                    countryMap.set(country, (countryMap.get(country) || 0) + 1);
+                  }
+                }
+                break;
+              }
+            }
+          }
+        });
+        
+        // 分别设置每个select的宽度
+        fillSelect(document.getElementById('filter-topic'), topicMap);
+        // fillSelect(document.getElementById('filter-org'), orgMap); // 机构筛选已禁用
+        fillSelect(document.getElementById('filter-country'), countryMap);
+        
+        // 添加选择后动态调整宽度的功能
+        function adjustSelectWidth(select) {
+          const selectedText = select.options[select.selectedIndex].textContent;
+          const tempDiv = document.createElement('div');
+          tempDiv.style.position = 'absolute';
+          tempDiv.style.visibility = 'hidden';
+          tempDiv.style.whiteSpace = 'nowrap';
+          tempDiv.style.fontSize = '14px';
+          tempDiv.style.fontFamily = 'Arial, sans-serif';
+          tempDiv.textContent = selectedText;
+          document.body.appendChild(tempDiv);
+          
+          const textWidth = tempDiv.offsetWidth;
+          const minWidth = 110;
+          const maxAllowedWidth = 350;
+          const newWidth = Math.min(Math.max(textWidth + 30, minWidth), maxAllowedWidth);
+          select.style.width = newWidth + 'px';
+          
+          document.body.removeChild(tempDiv);
+        }
+        
+        document.getElementById('filter-topic').onchange = function() {
+          adjustSelectWidth(this);
+          filterProjects();
+        };
+        // document.getElementById('filter-org').onchange = function() { // 机构筛选已禁用
+        //   adjustSelectWidth(this);
+        //   filterProjects();
+        // };
+        document.getElementById('filter-country').onchange = function() {
+          adjustSelectWidth(this);
+          filterProjects();
+        };
+      });
+    })();
+    </script>
   </div>
   </div>
 </body>

@@ -368,7 +368,7 @@
             <div style="display: flex; gap: 10px; align-items: center;">
               <select id="filter-topic" style="height:24px; margin-bottom: -7px;"><option value="">主题 (全部)</option></select>
               <select id="filter-country" style="height:24px; margin-bottom: -7px;"><option value="">国家 (全部)</option></select>
-              <select id="filter-org" style="height:24px; margin-bottom: -7px;"><option value="">机构 (全部)</option></select>
+              <!-- <select id="filter-org" style="height:24px; margin-bottom: -7px;"><option value="">机构 (全部)</option></select> -->
             </div>
           </div>
         </div>
@@ -957,7 +957,7 @@
         
         function filterProjects() {
           const topic = document.getElementById('filter-topic').value;
-          const org = document.getElementById('filter-org').value;
+          const org = null; // 机构筛选已禁用
           const country = document.getElementById('filter-country').value;
           const band = document.querySelector('.band');
           
@@ -995,18 +995,18 @@
                 
                 // 找到包含间隔符的部分
                 for(const part of parts) {
-                  if(part.includes('·') || part.includes('‧')) {
-                    // 机构：·或‧后的所有内容（包括空格和括号）
-                    const orgMatch = part.match(/[·‧]([^·‧<]+?)(?:<|$)/);
+                  if(part.includes('‧') || part.includes('・')) {
+                    // 机构：‧或・后的所有内容（包括空格和括号）
+                    const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
                     if(orgMatch) foundOrg = orgMatch[1].trim();
-                    // 国家：·或‧前的内容
-                    const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                    // 国家：‧或・前的内容
+                    const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
                     if(countryMatch) {
                       const country = countryMatch[1].trim();
-                      // 只保留真正的国家名（2-3个字符或"线上"）
-                      if(country && (country.length <= 3 || country === '线上')) {
-                        foundCountry = country;
-                      }
+                    // 只保留真正的国家名（2-10个字符或"线上"）
+                    if(country && (country.length <= 10 || country === '线上')) {
+                      foundCountry = country;
+                    }
                     }
                     break;
                   }
@@ -1058,19 +1058,19 @@
               
               // 找到包含间隔符的部分
               for(const part of parts) {
-                if(part.includes('·') || part.includes('‧')) {
-                  // 机构：·或‧后的所有内容（包括空格和括号）
-                  const orgMatch = part.match(/[·‧]([^·‧<]+?)(?:<|$)/);
+                if(part.includes('‧') || part.includes('・')) {
+                  // 机构：‧或・后的所有内容（包括空格和括号）
+                  const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
                   if(orgMatch) {
                     const org = orgMatch[1].trim();
                     orgMap.set(org, (orgMap.get(org) || 0) + 1);
                   }
-                  // 国家：·或‧前的内容
-                  const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                  // 国家：‧或・前的内容
+                  const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
                   if(countryMatch) {
                     const country = countryMatch[1].trim();
-                    // 只保留真正的国家名（2-3个字符或"线上"）
-                    if(country && (country.length <= 3 || country === '线上')) {
+                    // 只保留真正的国家名（2-10个字符或"线上"）
+                    if(country && (country.length <= 10 || country === '线上')) {
                       countryMap.set(country, (countryMap.get(country) || 0) + 1);
                     }
                   }
@@ -1082,7 +1082,7 @@
           
           // 分别设置每个select的宽度
           fillSelect(document.getElementById('filter-topic'), topicMap);
-          fillSelect(document.getElementById('filter-org'), orgMap);
+          // fillSelect(document.getElementById('filter-org'), orgMap); // 机构筛选已禁用
           fillSelect(document.getElementById('filter-country'), countryMap);
           
           // 添加选择后动态调整宽度的功能
@@ -1098,7 +1098,7 @@
             document.body.appendChild(tempDiv);
             
             const textWidth = tempDiv.offsetWidth;
-            const minWidth = 120;
+            const minWidth = 110;
             const maxAllowedWidth = 350;
             const newWidth = Math.min(Math.max(textWidth + 30, minWidth), maxAllowedWidth);
             select.style.width = newWidth + 'px';
@@ -1110,10 +1110,10 @@
             adjustSelectWidth(this);
             filterProjects();
           };
-          document.getElementById('filter-org').onchange = function() {
-            adjustSelectWidth(this);
-            filterProjects();
-          };
+          // document.getElementById('filter-org').onchange = function() { // 机构筛选已禁用
+          //   adjustSelectWidth(this);
+          //   filterProjects();
+          // };
           document.getElementById('filter-country').onchange = function() {
             adjustSelectWidth(this);
             filterProjects();

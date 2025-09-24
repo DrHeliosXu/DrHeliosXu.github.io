@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        select {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .project-item {
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .project-item h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .project-item .info {
+            color: #666;
+            font-size: 14px;
+        }
+        .debug {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>项目筛选功能测试</h1>
+    
+    <div class="filter-container">
+        <h3>筛选条件：</h3>
+        <select id="filter-topic">
+            <option value="">主题 (全部)</option>
+        </select>
+        <select id="filter-country">
+            <option value="">国家 (全部)</option>
+        </select>
+    </div>
+
+    <div class="debug" id="debug-info">
+        <strong>调试信息：</strong><br>
+        <div id="debug-content">等待页面加载...</div>
+    </div>
+
+    <div class="band">
+        <div class="project-item">
+            <h3>氢燃料电池中的次秒级操作X射线CT液态水成像</h3>
+            <div class="info">
+                <span>瑞士自然科学基金项目<br>瑞士‧保罗谢尔研究院（PSI）</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>操作中PEFC气体扩散层中的水传输行为</h3>
+            <div class="info">
+                <span>校企合作项目<br>比利时‧丰田汽车(欧洲)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>通过气体清除优化PEFC的水管理</h3>
+            <div class="info">
+                <span>校企合作项目<br>瑞士‧保罗谢尔研究院 (PSI)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>从电子垃圾到电源动力：区块链技术重塑电子垃圾产业</h3>
+            <div class="info">
+                <span>案例分析<br>奥地利‧萨尔茨堡全球 (SGS)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>GreenByte倡议: 基于能耗的代码优化与公司管理</h3>
+            <div class="info">
+                <span>案例分析<br>英国‧剑桥嘉治商学院 (CJBS)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>碳中和愿景下的新能源机遇与挑战</h3>
+            <div class="info">
+                <span>案例分析<br>中国‧北京 Miracle+</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>Biocon视角下的未来: 印度制药业发展历程</h3>
+            <div class="info">
+                <span>案例分析<br>美国‧量化商学院 (QSB)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>Aldi进一步巩固美国市场地位的策略分析</h3>
+            <div class="info">
+                <span>案例分析<br>瑞士‧苏黎世联邦理工 (ETH)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>瑞士人口统计数据精细可视化</h3>
+            <div class="info">
+                <span>案例分析<br>线上‧IBM (Coursera)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>西班牙药物市场原型的可视化与分类</h3>
+            <div class="info">
+                <span>案例分析<br>瑞士‧诺华医药黑客松</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>用于磁传感器应用的热响应共聚物/金属氧化物</h3>
+            <div class="info">
+                <span>硕士毕业项目<br>德国‧慕尼黑工业大学 (TUM)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>欧洲自由电子激光分裂延迟线测试台的设计与建造</h3>
+            <div class="info">
+                <span>暑期实习项目<br>德国‧欧盟自由电子激光 (XFEL)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>中国天津市于桥水库蓝藻动力学建模</h3>
+            <div class="info">
+                <span>项目培训生<br>法国‧国立路桥大学 (ENPC)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>介孔SnO2材料在染料敏化太阳能电池和锂电池中的应用</h3>
+            <div class="info">
+                <span>本科创新项目<br>中国‧北京交通大学 (BJTU)</span>
+            </div>
+        </div>
+        
+        <div class="project-item">
+            <h3>商业计划书：北京德胜太阳能科技有限公司</h3>
+            <div class="info">
+                <span>竞赛作品<br>中国‧北京交通大学 (BJTU)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fillSelect(sel, dataMap) {
+            // 按数量从多到少排序
+            const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+            
+            // 添加所有选项
+            sortedEntries.forEach(([val, count]) => {
+                const opt = document.createElement('option');
+                opt.value = val; 
+                opt.textContent = `[${count}] ${val}`;
+                sel.appendChild(opt);
+            });
+        }
+
+        // 保存所有原始项目
+        let allItems = [];
+        
+        function filterProjects() {
+            const topic = document.getElementById('filter-topic').value;
+            const country = document.getElementById('filter-country').value;
+            const band = document.querySelector('.band');
+            
+            // 如果是第一次运行，保存所有原始项目
+            if(allItems.length === 0) {
+                allItems = Array.from(band.children).map(item => ({
+                    element: item.cloneNode(true)
+                }));
+            }
+            
+            // 清空容器
+            band.innerHTML = '';
+            
+            // 筛选符合条件的项目
+            const filteredItems = allItems.filter(item => {
+                const element = item.element;
+                let show = true;
+                
+                // 国家筛选
+                if(country) {
+                    const span = element.querySelector('.info span');
+                    if(span) {
+                        // 获取span的HTML内容，然后按<br>分割
+                        const htmlContent = span.innerHTML;
+                        const parts = htmlContent.split(/<br\s*\/?>/i);
+                        let foundCountry = '';
+                        
+                        // 找到包含间隔符的部分
+                        for(const part of parts) {
+                            if(part.includes('·') || part.includes('‧')) {
+                                // 国家：·或‧前的内容
+                                const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                                if(countryMatch) {
+                                    const countryName = countryMatch[1].trim();
+                                    // 只保留真正的国家名（2-10个字符或"线上"）
+                                    if(countryName && (countryName.length <= 10 || countryName === '线上')) {
+                                        foundCountry = countryName;
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                        
+                        if(foundCountry !== country) {
+                            show = false;
+                        }
+                    } else {
+                        if(country) show = false;
+                    }
+                }
+                
+                return show;
+            });
+            
+            // 重新插入
+            filteredItems.forEach(item => {
+                band.appendChild(item.element.cloneNode(true));
+            });
+            
+            // 更新调试信息
+            updateDebugInfo(topic, country, filteredItems.length);
+        }
+
+        function updateDebugInfo(topic, country, filteredCount) {
+            const debugContent = document.getElementById('debug-content');
+            debugContent.innerHTML = `
+                <strong>当前筛选条件：</strong><br>
+                主题: ${topic || '全部'}<br>
+                国家: ${country || '全部'}<br>
+                <strong>筛选结果：</strong> ${filteredCount} 个项目<br>
+                <strong>总项目数：</strong> ${allItems.length} 个项目
+            `;
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const band = document.querySelector('.band');
+            const countryMap = new Map();
+            
+            // 提取国家信息
+            band.querySelectorAll('.info span').forEach(span => {
+                const htmlContent = span.innerHTML;
+                const parts = htmlContent.split(/<br\s*\/?>/i);
+                
+                // 找到包含间隔符的部分
+                for(const part of parts) {
+                    if(part.includes('·') || part.includes('‧')) {
+                        // 国家：·或‧前的内容
+                        const countryMatch = part.match(/([^·‧<]+?)[·‧]/);
+                        if(countryMatch) {
+                            const country = countryMatch[1].trim();
+                            // 只保留真正的国家名（2-10个字符或"线上"）
+                            if(country && (country.length <= 10 || country === '线上')) {
+                                countryMap.set(country, (countryMap.get(country) || 0) + 1);
+                            }
+                        }
+                        break;
+                    }
+                }
+            });
+            
+            // 填充国家选择框
+            fillSelect(document.getElementById('filter-country'), countryMap);
+            
+            // 添加事件监听器
+            document.getElementById('filter-country').onchange = function() {
+                filterProjects();
+            };
+            
+            // 初始化调试信息
+            updateDebugInfo('', '', allItems.length);
+            
+            console.log('国家映射:', countryMap);
+        });
+    </script>
+</body>
+</html>
