@@ -331,6 +331,7 @@ function getCachedTimeZone() {
  * 将常见的时区别名映射到标准的IANA时区标识符
  */
 const timezoneAliases = {
+    // 中国时区
     'Asia/Beijing': 'Asia/Shanghai',
     'Asia/Chongqing': 'Asia/Shanghai',
     'Asia/Harbin': 'Asia/Shanghai',
@@ -338,7 +339,94 @@ const timezoneAliases = {
     'Asia/Urumqi': 'Asia/Urumqi',
     'Asia/Hong_Kong': 'Asia/Hong_Kong',
     'Asia/Macau': 'Asia/Macau',
-    'Asia/Taipei': 'Asia/Taipei'
+    'Asia/Taipei': 'Asia/Taipei',
+    'CST': 'Asia/Shanghai',
+    'China': 'Asia/Shanghai',
+    
+    // 美国时区
+    'EST': 'America/New_York',
+    'EDT': 'America/New_York',
+    'CST_US': 'America/Chicago',
+    'CDT': 'America/Chicago',
+    'MST': 'America/Denver',
+    'MDT': 'America/Denver',
+    'PST': 'America/Los_Angeles',
+    'PDT': 'America/Los_Angeles',
+    'AKST': 'America/Anchorage',
+    'AKDT': 'America/Anchorage',
+    'HST': 'Pacific/Honolulu',
+    'Hawaii': 'Pacific/Honolulu',
+    
+    // 欧洲时区
+    'GMT': 'Europe/London',
+    'BST': 'Europe/London',
+    'CET': 'Europe/Paris',
+    'CEST': 'Europe/Paris',
+    'EET': 'Europe/Athens',
+    'EEST': 'Europe/Athens',
+    'MSK': 'Europe/Moscow',
+    'Russia': 'Europe/Moscow',
+    
+    // 亚洲时区
+    'JST': 'Asia/Tokyo',
+    'Japan': 'Asia/Tokyo',
+    'KST': 'Asia/Seoul',
+    'Korea': 'Asia/Seoul',
+    'IST': 'Asia/Kolkata',
+    'India': 'Asia/Kolkata',
+    'SGT': 'Asia/Singapore',
+    'Singapore': 'Asia/Singapore',
+    'MYT': 'Asia/Kuala_Lumpur',
+    'Malaysia': 'Asia/Kuala_Lumpur',
+    'THA': 'Asia/Bangkok',
+    'Thailand': 'Asia/Bangkok',
+    'ICT': 'Asia/Ho_Chi_Minh',
+    'Vietnam': 'Asia/Ho_Chi_Minh',
+    'PHT': 'Asia/Manila',
+    'Philippines': 'Asia/Manila',
+    'WIB': 'Asia/Jakarta',
+    'Indonesia': 'Asia/Jakarta',
+    
+    // 大洋洲时区
+    'AEST': 'Australia/Sydney',
+    'AEDT': 'Australia/Sydney',
+    'Australia': 'Australia/Sydney',
+    'NZST': 'Pacific/Auckland',
+    'NZDT': 'Pacific/Auckland',
+    'New_Zealand': 'Pacific/Auckland',
+    
+    // 中东和非洲时区
+    'GST': 'Asia/Dubai',
+    'UAE': 'Asia/Dubai',
+    'SAST': 'Africa/Johannesburg',
+    'South_Africa': 'Africa/Johannesburg',
+    'EAT': 'Africa/Nairobi',
+    'Kenya': 'Africa/Nairobi',
+    'CAT': 'Africa/Harare',
+    'Zimbabwe': 'Africa/Harare',
+    
+    // 南美洲时区
+    'BRT': 'America/Sao_Paulo',
+    'Brazil': 'America/Sao_Paulo',
+    'ART': 'America/Argentina/Buenos_Aires',
+    'Argentina': 'America/Argentina/Buenos_Aires',
+    'CLT': 'America/Santiago',
+    'Chile': 'America/Santiago',
+    'PET': 'America/Lima',
+    'Peru': 'America/Lima',
+    'COT': 'America/Bogota',
+    'Colombia': 'America/Bogota',
+    
+    // 加拿大时区
+    'Canada_Eastern': 'America/Toronto',
+    'Canada_Central': 'America/Winnipeg',
+    'Canada_Mountain': 'America/Edmonton',
+    'Canada_Pacific': 'America/Vancouver',
+    
+    // 其他常用时区
+    'UTC': 'UTC',
+    'Zulu': 'UTC',
+    'Greenwich': 'Europe/London'
 };
 
 /**
