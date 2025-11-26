@@ -372,6 +372,17 @@ jQuery(document).ready(function($) {
     thai_buddhist: 'th-TH-u-ca-buddhist' // 使用泰国佛教历
   };
 
+  const weekdayIcons = {
+	0: "☉", // Sunday - Sun
+	1: "☾", // Monday - Moon
+	2: "♂", // Tuesday - Mars
+	3: "☿", // Wednesday - Mercury
+	4: "♃", // Thursday - Jupiter
+	5: "♀", // Friday - Venus
+	6: "♄"  // Saturday - Saturn
+  };
+
+  
   document.querySelectorAll('[class*="currentDateInLang"]').forEach(span => {
     const lang = span.getAttribute('language');
     const now = new Date();
@@ -411,11 +422,13 @@ jQuery(document).ready(function($) {
     if(lang === 'english') dateParts = [dateParts[0], dateParts[1], dateParts[2]];
     if(lang === 'german') dateParts[1] = dateParts[1].replace('.', ''); 
 
-    // 星期格式化
-    const weekdayStr = now.toLocaleString(locales[lang], { weekday: 'long' });
+	const weekdayStr = now.toLocaleString(locales[lang], { weekday: 'long' });
+
+	// 获取对应符号
+	const weekdayIcon = weekdayIcons[now.getDay()];
 
     // 最终组合
-    let finalStr = `${dateStr}${config.separator}${weekdayStr}`;
+    let finalStr = `${dateStr}${config.separator}${weekdayStr} ${weekdayIcon}`;
 
     // 西班牙语优化
     if(lang === 'spanish') {
@@ -437,8 +450,8 @@ jQuery(document).ready(function($) {
       en: { names: ['Capricorn ♑︎', 'Aquarius ♒︎', 'Pisces ♓︎', 'Aries ♈︎', 'Taurus ♉︎', 'Gemini ♊︎', 'Cancer ♋︎', 'Leo ♌︎', 'Virgo ♍︎', 'Libra ♎︎', 'Scorpio ♏︎', 'Sagittarius ♐︎'] },
 	  tb: { names: ['གླང་ཆེན་ ♑︎', 'ཆུ་སྲིན་ ♒︎', 'ཉ་མོ། ♓︎', 'གླང་ཆེན་ ♈︎', 'བོང་བུ། ♉︎', 'གྷེ་མི་ནི་ ♊︎', 'སྐྲན་ནད། ♋︎', 'ལིའོ་ ♌︎', 'བུ་མོ་ ♍︎', 'ལི་བཱར་ ♎︎', 'སྐར་མ ♏︎', 'དཀྱིལ་འཁོར་ ♐︎'] },
 th: { names: ['ราศีมกร ♑︎', 'ราศีกุมภ์ ♒︎', 'ราศีมีน ♓︎', 'ราศีเมษ ♈︎', 'ราศีพฤษภ ♉︎', 'ราศีเมถุน ♊︎', 'ราศีกรกฎ ♋︎', 'ราศีสิงห์ ♌︎', 'ราศีกันย์ ♍︎', 'ราศีตุล ♎︎', 'ราศีพิจิก ♏︎', 'ราศีธนู ♐︎'] },
-zh: { names: ['摩羯♑︎', '水瓶♒︎', '双鱼♓︎', '白羊♈︎', '金牛♉︎', '双子♊︎', '巨蟹♋︎', '狮子♌︎', '处女♍︎', '天秤♎︎', '天蝎♏︎', '射手♐︎'] },
-ja: { names: ['山羊♑︎', '水瓶♒︎', '魚座♓︎', '牡羊♈︎', '牡牛♉︎', '双子♊︎', '蟹座♋︎', '獅子♌︎', '乙女♍︎', '天秤♎︎', '蠍座♏︎', '射手♐︎'] },
+zh: { names: ['摩羯 ♑︎', '水瓶 ♒︎', '双鱼 ♓︎', '白羊 ♈︎', '金牛 ♉︎', '双子 ♊︎', '巨蟹 ♋︎', '狮子 ♌︎', '处女 ♍︎', '天秤 ♎︎', '天蝎 ♏︎', '射手 ♐︎'] },
+ja: { names: ['山羊 ♑︎', '水瓶 ♒︎', '魚座 ♓︎', '牡羊 ♈︎', '牡牛 ♉︎', '双子 ♊︎', '蟹座 ♋︎', '獅子 ♌︎', '乙女 ♍︎', '天秤 ♎︎', '蠍座 ♏︎', '射手 ♐︎'] },
 ko: { names: ['염소자리 ♑︎', '물병자리 ♒︎', '물고기자리 ♓︎', '양자리 ♈︎', '황소자리 ♉︎', '쌍둥이자리 ♊︎', '게자리 ♋︎', '사자자리 ♌︎', '처녀자리 ♍︎', '천칭자리 ♎︎', '전갈자리 ♏︎', '궁수자리 ♐︎'] },
 fr: { names: ['Capricorne ♑︎', 'Verseau ♒︎', 'Poissons ♓︎', 'Bélier ♈︎', 'Taureau ♉︎', 'Gémeaux ♊︎', 'Cancer ♋︎', 'Lion ♌︎', 'Vierge ♍︎', 'Balance ♎︎', 'Scorpion ♏︎', 'Sagittaire ♐︎'] },
 it: { names: ['Capricorno ♑︎', 'Acquario ♒︎', 'Pesci ♓︎', 'Ariete ♈︎', 'Toro ♉︎', 'Gemelli ♊︎', 'Cancro ♋︎', 'Leone ♌︎', 'Vergine ♍︎', 'Bilancia ♎︎', 'Scorpione ♏︎', 'Sagittario ♐︎'] },

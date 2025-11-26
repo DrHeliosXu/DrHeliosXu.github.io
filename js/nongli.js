@@ -19,7 +19,7 @@ const today2 = new Date();
 const weekdayIndex = today2.getDay();
 
 // 定义星期几的中文名称
-const weekdays = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+const weekdays = ["星期日 ☉", "星期一 ☾", "星期二 ♂", "星期三 ☿", "星期四 ♃", "星期五 ♀", "星期六 ♄"];
 
 // 获取今天星期几的中文名称
 const currentWeekday = weekdays[weekdayIndex];
