@@ -1,0 +1,3519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球氢能科研势力数字化矩阵 - 增强版</title>
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@2.3.0/dist/chartjs-chart-treemap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        :root {
+            --bg-deep: #020617;
+            --bg-body: radial-gradient(circle at 50% -20%, #1e293b 0%, #020617 80%);
+            --panel: rgba(15, 23, 42, 0.7);
+            --border: rgba(51, 65, 85, 0.5);
+            --text-main: #f1f5f9;
+            --text-mute: #94a3b8;
+            --accent-cyan: #22d3ee;
+            --accent-indigo: #6366f1;
+            --input-bg: rgba(15, 23, 42, 0.9);
+        }
+
+        [data-theme="light"] {
+            --bg-deep: #edf3fa;
+            --bg-body: linear-gradient(180deg, #f6f9fd 0%, #edf3fa 52%, #e8f0f8 100%);
+            --panel: rgba(255, 255, 255, 0.96);
+            --border: rgba(100, 116, 139, 0.28);
+            --text-main: #0f172a;
+            --text-mute: #334155;
+            --accent-cyan: #0284c7;
+            --accent-indigo: #2563eb;
+            --input-bg: rgba(255, 255, 255, 1);
+        }
+
+        [data-theme="light"] body {
+            color: #0b1220;
+        }
+
+        body { 
+            background: var(--bg-deep);
+            background-image: var(--bg-body);
+            color: var(--text-main); 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .font-tech { font-family: 'Space Grotesk', sans-serif; }
+
+        .glass-panel {
+            background: var(--panel);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, border 0.3s ease;
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .neon-border-hover:hover {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .heatmap-container { height: 250px; width: 100%; border-radius: 20px; overflow: hidden; }
+        .chart-container { position: relative; height: 220px; width: 100%; }
+
+        .trl-segment { height: 3px; border-radius: 2px; background: #33415544; flex: 1; margin: 0 1px; transition: background 0.3s; }
+        .trl-visual-inactive { background: #1e293b; }
+        .trl-color-1 { background: #fbbf24; box-shadow: 0 0 6px rgba(251, 191, 36, 0.6); }
+        .trl-color-2 { background: #faa834; box-shadow: 0 0 6px rgba(250, 168, 52, 0.6); }
+        .trl-color-3 { background: #f99244; box-shadow: 0 0 6px rgba(249, 146, 68, 0.6); }
+        .trl-color-4 { background: #f87c54; box-shadow: 0 0 6px rgba(248, 124, 84, 0.6); }
+        .trl-color-5 { background: #d966b8; box-shadow: 0 0 6px rgba(217, 102, 184, 0.6); }
+        .trl-color-6 { background: #c653cc; box-shadow: 0 0 6px rgba(198, 83, 204, 0.6); }
+        .trl-color-7 { background: #b343e0; box-shadow: 0 0 6px rgba(179, 67, 224, 0.6); }
+        .trl-color-8 { background: #a855f7; box-shadow: 0 0 6px rgba(168, 85, 247, 0.6); }
+        .trl-color-9 { background: #9d4edd; box-shadow: 0 0 6px rgba(157, 78, 221, 0.6); }
+
+        input, select {
+            background: var(--input-bg) !important;
+            border: 1px solid var(--border) !important;
+            color: var(--text-main) !important;
+            outline: none !important;
+        }
+        input:focus { border-color: var(--accent-cyan) !important; }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #64748b; border-radius: 10px; }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .theme-toggle:hover { background: rgba(128,128,128,0.1); }
+
+        /* Stat Card Styles */
+        .stat-card {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.7) 100%);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 20px;
+            padding: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, rgba(99, 102, 241, 0.2) 100%);
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(34, 211, 238, 0.4);
+            box-shadow: 0 20px 40px rgba(34, 211, 238, 0.15), inset 0 1px 0 rgba(34, 211, 238, 0.1);
+        }
+
+        .stat-card:hover::after {
+            opacity: 1;
+        }
+
+        .stat-card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: rgba(148, 163, 184, 0.8);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .stat-value {
+            font-size: 48px;
+            font-weight: 900;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 12px 0;
+            background: linear-gradient(135deg, currentColor 0%, rgba(148, 163, 184, 0.6) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-description {
+            font-size: 12px;
+            font-weight: 500;
+            margin-top: 12px;
+            opacity: 0.8;
+        }
+
+        /* Icon for stat cards */
+        .stat-icon {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 120px;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        [data-theme="light"] .stat-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(226, 232, 240, 0.8) 100%);
+            border-color: rgba(203, 213, 225, 0.6);
+        }
+
+        [data-theme="light"] .stat-label {
+            color: #334155;
+            opacity: 1;
+        }
+
+        [data-theme="light"] .stat-value {
+            background: none;
+            -webkit-background-clip: border-box;
+            -webkit-text-fill-color: currentColor;
+            background-clip: border-box;
+        }
+
+        [data-theme="light"] .stat-description {
+            color: #334155 !important;
+            opacity: 1;
+        }
+
+        [data-theme="light"] .stat-icon {
+            opacity: 0.11;
+            filter: saturate(0.7);
+        }
+
+        [data-theme="light"] .stat-card:hover {
+            border-color: rgba(8, 145, 178, 0.4);
+            box-shadow: 0 20px 40px rgba(8, 145, 178, 0.1), inset 0 1px 0 rgba(8, 145, 178, 0.1);
+        }
+
+        [data-theme="light"] header.glass-panel,
+        [data-theme="light"] section.glass-panel,
+        [data-theme="light"] .glass-panel {
+            background: rgba(255, 255, 255, 0.96) !important;
+            border-color: rgba(100, 116, 139, 0.22) !important;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        }
+
+        [data-theme="light"] .text-white,
+        [data-theme="light"] .text-white\/70,
+        [data-theme="light"] .text-white\/80,
+        [data-theme="light"] .text-white\/90,
+        [data-theme="light"] .text-slate-100,
+        [data-theme="light"] .text-slate-200,
+        [data-theme="light"] .text-slate-300 {
+            color: #0b1220 !important;
+        }
+
+        [data-theme="light"] .text-slate-400 {
+            color: #1e293b !important;
+        }
+
+        [data-theme="light"] .text-slate-500,
+        [data-theme="light"] .text-slate-600 {
+            color: #334155 !important;
+        }
+
+        [data-theme="light"] .bg-slate-950,
+        [data-theme="light"] .bg-slate-950\/80,
+        [data-theme="light"] .bg-slate-950\/60,
+        [data-theme="light"] .bg-slate-950\/50,
+        [data-theme="light"] .bg-slate-950\/40,
+        [data-theme="light"] .bg-slate-900,
+        [data-theme="light"] .bg-slate-900\/10,
+        [data-theme="light"] .bg-slate-800,
+        [data-theme="light"] .bg-slate-800\/50,
+        [data-theme="light"] .bg-slate-800\/40,
+        [data-theme="light"] .bg-slate-700 {
+            background-color: #eef3f8 !important;
+        }
+
+        [data-theme="light"] .border-slate-900,
+        [data-theme="light"] .border-slate-800,
+        [data-theme="light"] .border-slate-700,
+        [data-theme="light"] .border-slate-600 {
+            border-color: rgba(100, 116, 139, 0.28) !important;
+        }
+
+        [data-theme="light"] .neon-glow {
+            text-shadow: none !important;
+        }
+
+        .flag-tooltip {
+            position: fixed;
+            z-index: 120;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            pointer-events: none;
+            transform: translate(-50%, -120%);
+            white-space: normal;
+            border: 1px solid rgba(100, 116, 139, 0.35);
+            box-shadow: 0 8px 20px rgba(2, 6, 23, 0.25);
+            opacity: 0;
+            transition: opacity 0.12s ease;
+            line-height: 1.65;
+            min-width: 270px;
+        }
+
+
+        .flag-focus-item {
+            transition: opacity 0.18s ease, transform 0.18s ease, filter 0.18s ease;
+            transform-origin: center;
+        }
+
+        .flag-focus-item .flag-visual,
+        .flag-focus-item .flag-country-label {
+            transition: transform 0.18s ease, opacity 0.18s ease;
+        }
+
+        .flag-focus-item.flag-focus-dim {
+            opacity: 0.3;
+            filter: saturate(0.6);
+        }
+
+        .flag-focus-item.flag-focus-active {
+            opacity: 1;
+            z-index: 3;
+        }
+
+        .flag-focus-item.flag-focus-active .flag-visual {
+            transform: scale(1.16);
+        }
+
+        .flag-focus-item.flag-focus-active .flag-country-label {
+            transform: scale(1.08);
+            font-weight: 800;
+        }
+
+        body:not([data-theme="light"]) .flag-tooltip {
+            background: rgba(2, 6, 23, 0.9);
+            color: #e2e8f0;
+        }
+
+        [data-theme="light"] .flag-tooltip {
+            background: rgba(255, 255, 255, 0.96);
+            color: #0f172a;
+            border-color: rgba(59, 130, 246, 0.35);
+            box-shadow: 0 10px 26px rgba(37, 99, 235, 0.15);
+        }
+
+
+        .flag-tooltip .tip-grid {
+            display: grid;
+            grid-template-columns: 112px 1fr auto;
+            column-gap: 10px;
+            row-gap: 4px;
+            align-items: start;
+        }
+
+        .flag-tooltip .tip-k { opacity: 0.9; font-weight: 700; }
+        .flag-tooltip .tip-v { font-weight: 700; }
+        .flag-tooltip .tip-e { opacity: 0.85; text-align: right; font-weight: 700; }
+
+        .key-chip {
+            border: 1px solid rgba(34, 211, 238, 0.22);
+            background: rgba(15, 23, 42, 0.55);
+            color: #67e8f9;
+            border-radius: 9999px;
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            position: relative;
+            z-index: 3;
+        }
+
+        .key-chip:hover {
+            border-color: rgba(34, 211, 238, 0.55);
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.24), 0 6px 18px rgba(34, 211, 238, 0.18);
+            transform: translateY(-1px);
+        }
+
+        .key-chip.active {
+            color: #ffffff;
+            border-color: rgba(34, 211, 238, 0.85);
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.3), rgba(79, 70, 229, 0.26));
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.35), 0 10px 24px rgba(34, 211, 238, 0.2);
+        }
+
+        .key-chip.dimmed {
+            opacity: 0.38;
+            filter: saturate(0.7);
+        }
+
+        .key-chip.reset {
+            color: #e2e8f0 !important;
+            border-color: rgba(148, 163, 184, 0.35);
+            background: rgba(30, 41, 59, 0.62);
+        }
+
+        .key-chip.reset:hover {
+            border-color: rgba(226, 232, 240, 0.6);
+            box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.25), 0 8px 20px rgba(15, 23, 42, 0.25);
+        }
+
+        .key-rel-name {
+            appearance: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(15, 23, 42, 0.55);
+            color: rgba(34, 211, 238, 0.95);
+            border-radius: 9999px;
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 6px 16px rgba(34, 211, 238, 0.1);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .key-rel-name:hover {
+            border-color: rgba(34, 211, 238, 0.65);
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.3), 0 8px 20px rgba(34, 211, 238, 0.16);
+            transform: translateY(-1px);
+        }
+
+        .key-rel-flag {
+            width: 18px;
+            height: 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .focus-tag-primary {
+            background: rgba(99, 102, 241, 0.26);
+            color: rgba(224, 231, 255, 0.98);
+            border: 1px solid rgba(165, 180, 252, 0.55);
+        }
+
+        .focus-tag-secondary {
+            background: rgba(99, 102, 241, 0.14);
+            color: rgba(165, 180, 252, 0.9);
+            border: 1px solid rgba(129, 140, 248, 0.32);
+        }
+
+        .key-rel-line {
+            fill: none;
+            stroke: rgba(34, 211, 238, 0.6);
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        [data-theme="light"] .key-chip {
+            background: #f1f5f9;
+            color: #0f172a !important;
+            border-color: rgba(30, 64, 175, 0.32);
+            box-shadow: none;
+        }
+
+        [data-theme="light"] .key-chip:hover {
+            border-color: rgba(14, 116, 144, 0.55);
+            box-shadow: 0 0 0 1px rgba(14, 116, 144, 0.2), 0 6px 14px rgba(14, 116, 144, 0.12);
+        }
+
+        [data-theme="light"] .key-chip.active {
+            color: #ffffff !important;
+            background: linear-gradient(135deg, #0891b2, #2563eb);
+            border-color: rgba(37, 99, 235, 0.45);
+            box-shadow: 0 8px 20px rgba(14, 116, 144, 0.24);
+        }
+
+        [data-theme="light"] .key-chip.reset {
+            color: #334155 !important;
+            background: #e2e8f0;
+            border-color: rgba(100, 116, 139, 0.35);
+        }
+
+        [data-theme="light"] .key-rel-name {
+            background: #f1f5f9;
+            color: #0b1220;
+            border-color: rgba(30, 64, 175, 0.32);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        }
+
+        [data-theme="light"] .key-rel-name:hover {
+            border-color: rgba(14, 116, 144, 0.6);
+            box-shadow: 0 0 0 1px rgba(14, 116, 144, 0.2), 0 8px 18px rgba(15, 23, 42, 0.12);
+        }
+
+        [data-theme="light"] .key-rel-line {
+            stroke: rgba(14, 116, 144, 0.4);
+        }
+
+        [data-theme="light"] #keyFocusRelated {
+            border-top-color: rgba(100, 116, 139, 0.25) !important;
+        }
+
+        [data-theme="light"] .focus-tag-primary {
+            background: rgba(59, 130, 246, 0.16);
+            color: #1e3a8a;
+            border-color: rgba(30, 64, 175, 0.28);
+        }
+
+        [data-theme="light"] .focus-tag-secondary {
+            background: rgba(148, 163, 184, 0.16);
+            color: #334155;
+            border-color: rgba(100, 116, 139, 0.24);
+        }
+
+        [data-theme="light"] .sankey-shell {
+            background: #ffffff;
+            border-color: rgba(100, 116, 139, 0.24);
+        }
+
+        [data-theme="light"] .sankey-empty {
+            color: #334155;
+        }
+
+        [data-theme="light"] .text-cyan-300 { color: #1e3a8a !important; }
+        [data-theme="light"] .text-cyan-400 { color: #1e40af !important; }
+        [data-theme="light"] .text-cyan-500 { color: #1d4ed8 !important; }
+        [data-theme="light"] .text-indigo-300,
+        [data-theme="light"] .text-indigo-400,
+        [data-theme="light"] .text-sky-300,
+        [data-theme="light"] .text-amber-300 {
+            color: #1e3a8a !important;
+        }
+
+        [data-theme="light"] .trl-visual-inactive {
+            background: #cbd5e1;
+            border: 1px solid rgba(100, 116, 139, 0.45);
+        }
+
+        .card-highlight {
+            border-color: rgba(34, 211, 238, 0.85) !important;
+            box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.45), 0 14px 26px rgba(34, 211, 238, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .sankey-shell {
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(51, 65, 85, 0.45);
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0.25), rgba(15, 23, 42, 0.25));
+        }
+
+        .sankey-empty {
+            position: absolute;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .sankey-empty.show { display: flex; }
+
+        .sankey-link {
+            fill: none;
+            stroke-linecap: butt;
+            stroke-opacity: 0.36;
+            transition: stroke-opacity 0.14s ease, filter 0.14s ease;
+        }
+
+        .sankey-link.dimmed { stroke-opacity: 0.08; }
+        .sankey-link.active { stroke-opacity: 0.78; filter: drop-shadow(0 0 4px rgba(34, 211, 238, 0.4)); }
+
+        .sankey-node {
+            rx: 4;
+            ry: 4;
+            stroke: rgba(148, 163, 184, 0.4);
+            stroke-width: 1;
+            transition: opacity 0.14s ease, filter 0.14s ease;
+        }
+
+        .sankey-node.dimmed { opacity: 0.32; }
+        .sankey-node.active { filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.35)); }
+
+        .sankey-tooltip {
+            position: fixed;
+            z-index: 130;
+            pointer-events: none;
+            opacity: 0;
+            transform: translate(-50%, -120%);
+            transition: opacity 0.12s ease;
+            background: rgba(2, 6, 23, 0.92);
+            color: #e2e8f0;
+            border: 1px solid rgba(100, 116, 139, 0.45);
+            border-radius: 10px;
+            padding: 8px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 1.5;
+            min-width: 180px;
+            box-shadow: 0 8px 20px rgba(2, 6, 23, 0.3);
+        }
+
+        .timeline-shell {
+            background: rgba(2, 6, 23, 0.28);
+            border: 1px solid rgba(100, 116, 139, 0.32);
+            border-radius: 20px;
+            padding: 16px;
+        }
+
+        .timeline-track-wrap {
+            position: relative;
+            height: 24px;
+            margin-top: 10px;
+        }
+
+        .timeline-base {
+            position: absolute;
+            top: 11px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 999px;
+            background: rgba(51, 65, 85, 0.55);
+        }
+
+        .timeline-fill {
+            position: absolute;
+            top: 11px;
+            height: 3px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.95), rgba(37, 99, 235, 0.95));
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.32);
+        }
+
+        .timeline-range {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 24px;
+            background: transparent;
+            pointer-events: none;
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+
+        #yearStart.timeline-range { z-index: 3; }
+        #yearEnd.timeline-range { z-index: 4; }
+
+        .timeline-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            pointer-events: auto;
+            width: 27px;
+            height: 27px;
+            border-radius: 999px;
+            border: 2px solid rgba(186, 230, 253, 0.95);
+            background: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(2, 6, 23, 0.45), 0 0 16px rgba(14, 165, 233, 0.45);
+            cursor: ew-resize;
+            position: relative;
+            z-index: 4;
+        }
+
+        .timeline-range::-moz-range-thumb {
+            pointer-events: auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 999px;
+            border: 2px solid rgba(186, 230, 253, 0.95);
+            background: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(2, 6, 23, 0.45), 0 0 16px rgba(14, 165, 233, 0.45);
+            cursor: ew-resize;
+        }
+
+        .timeline-range::-webkit-slider-runnable-track { height: 24px; background: transparent; }
+        .timeline-range::-moz-range-track { height: 24px; background: transparent; }
+
+        .timeline-ticks {
+            margin-top: 8px;
+            overflow: visible;
+            padding-bottom: 6px;
+        }
+
+        .timeline-ticks-inner {
+            position: relative;
+            width: 100%;
+            min-height: 34px;
+        }
+
+        .timeline-tick {
+            position: absolute;
+            top: 0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .timeline-tick::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 8px;
+            margin: 0 auto 3px;
+            background: rgba(148, 163, 184, 0.55);
+        }
+
+        [data-theme="light"] .timeline-shell {
+            background: #ffffff;
+            border-color: rgba(100, 116, 139, 0.28);
+        }
+
+        [data-theme="light"] .timeline-base {
+            background: rgba(148, 163, 184, 0.45);
+        }
+
+        [data-theme="light"] .timeline-fill {
+            background: linear-gradient(90deg, rgba(29, 78, 216, 0.9), rgba(37, 99, 235, 0.9));
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.22);
+        }
+
+        [data-theme="light"] .timeline-range::-webkit-slider-thumb,
+        [data-theme="light"] .timeline-range::-moz-range-thumb {
+            border-color: rgba(30, 64, 175, 0.95);
+            background: #2563eb;
+            box-shadow: 0 0 0 2px rgba(219, 234, 254, 0.95), 0 0 10px rgba(30, 64, 175, 0.26);
+        }
+
+        [data-theme="light"] .timeline-tick {
+            color: #334155;
+        }
+
+        [data-theme="light"] .timeline-tick::before {
+            background: rgba(100, 116, 139, 0.5);
+        }
+
+    </style>
+</head>
+<body class="antialiased min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-[60] border-b border-slate-800/20 glass-panel">
+        <div class="max-w-[1600px] mx-auto px-6 h-16 flex items-center justify-between">
+            <button id="logoReload" type="button" class="flex items-center gap-4 bg-transparent border-0 p-0 text-left cursor-pointer group" title="刷新页面">
+                <div class="w-10 h-10 bg-gradient-to-tr from-indigo-600 to-cyan-400 rounded-xl flex items-center justify-center font-bold text-white shadow-lg transition-transform duration-200 group-hover:scale-[1.03]">H₂</div>
+                <div>
+                    <h1 class="text-base font-black tracking-[0.08em] text-cyan-500 font-tech neon-glow">氢研星图 · 全球矩阵</h1>
+                    <p class="text-[11px] text-slate-400 font-semibold tracking-[0.08em]">Global Hydrogen Synergy Matrix</p>
+                </div>
+            </button>
+            <div class="flex items-center gap-4">
+                <div id="dataTime" class="hidden md:flex items-center gap-2 px-4 py-1.5 bg-slate-900/10 rounded-full border border-slate-700/20">
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                       <span id="lastUpdate">加载中...</span> 更新 
+                    </span>             
+                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                      | &nbsp; Dr. Helios Xu 版权
+                    </span>
+                </div>
+                <div id="themeToggle" class="theme-toggle glass-panel" title="切换显示模式">
+                    <span id="themeIcon">🌙</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1600px] mx-auto px-6 py-8 space-y-8">
+
+        <!-- Hero Section: Macro Stats -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-card-content">
+                    <p class="stat-label">收录机构总数</p>
+                    <h2 id="statTotal" class="stat-value" style="color: #22d3ee;">--</h2>
+                    <div class="stat-description text-emerald-400">全球多中心覆盖</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🌍</div>
+                <div class="stat-card-content">
+                    <p class="stat-label">覆盖国家/地区</p>
+                    <h2 id="statCountries" class="stat-value" style="color: #818cf8;">--</h2>
+                    <div class="stat-description text-indigo-300">主要产氢与消纳市场</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-card-content">
+                    <p class="stat-label">TRL技术成熟度平均</p>
+                    <h2 id="statTrl" class="stat-value" style="color: #38bdf8;">--</h2>
+                    <div class="stat-description text-sky-300">从实验室迈向商业化</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-card-content">
+                    <p class="stat-label">全球领先级机构</p>
+                    <h2 id="statLeading" class="stat-value" style="color: #fbbf24;">--</h2>
+                    <div class="stat-description text-amber-300">头部核心科研力量</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Treemap Heatmap (Compact) -->
+        <section class="glass-panel rounded-[2.5rem] p-6">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-6 bg-cyan-500 rounded-full"></span>
+                    <h3 class="text-xs font-bold uppercase tracking-widest font-tech">全球氢能科研势力热力图 (Treemap)</h3>
+                </div>
+                <div id="heatmapLegend" class="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-[10px] font-bold text-slate-500"></div>
+            </div>
+            <div class="heatmap-container">
+                <canvas id="heatmapChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Sankey Flow -->
+        <section class="glass-panel rounded-[2.5rem] p-6">
+            <button id="sankeyToggleBtn" type="button" class="w-full flex justify-between items-center cursor-pointer text-left" aria-expanded="false">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-6 bg-emerald-500 rounded-full"></span>
+                    <h3 class="text-xs font-bold uppercase tracking-widest font-tech">机构生态流 (Sankey Flow)</h3>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider hidden md:block">区域 → 国家 → 机构性质 → 影响力 → TRL分段</div>
+                    <span id="sankeyToggleIcon" class="text-slate-400 text-sm">▸</span>
+                </div>
+            </button>
+            <div id="sankeyPanel" class="hidden mt-4">
+                <div class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-3 md:hidden">区域 → 国家 → 机构性质 → 影响力 → TRL分段</div>
+                <div id="sankeyShell" class="sankey-shell">
+                    <svg id="sankeySvg" class="w-full h-[500px]"></svg>
+                    <div id="sankeyEmpty" class="sankey-empty">暂无可展示流向数据</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRL Distribution Bar -->
+        <section class="glass-panel rounded-[2.5rem] p-8">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-2 h-6 bg-indigo-500 rounded-full"></span>
+                <h3 class="text-xs font-bold uppercase tracking-widest font-tech">各国科研成熟度分布 (TRL by Country)</h3>
+            </div>
+            
+            <!-- TRL Scale with Labels -->
+            <div class="mb-3">
+                <div class="flex text-[10px] font-bold mb-2">
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(234,179,8), rgb(234,179,8)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">基本原理</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(245,158,11), rgb(245,158,11)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">概念形成</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(217,119,6), rgb(217,119,6)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">实验验证</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(234,88,12), rgb(234,88,12)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">实验示范</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(249,115,22), rgb(249,115,22)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">中试验证</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(168,85,247), rgb(168,85,247)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">工程示范</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(139,92,246), rgb(139,92,246)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">工程验证</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(126,34,206), rgb(126,34,206)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">系统验证</div>
+                    <div style="flex: 0 0 11.11%; background: linear-gradient(to right, rgb(88,28,135), rgb(88,28,135)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" class="text-center">商业部署</div>
+                </div>
+                <div class="flex text-[10px] font-bold mb-2">
+                    <div style="flex: 0 0 11.11%;" class="text-center">1</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">2</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">3</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">4</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">5</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">6</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">7</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">8</div>
+                    <div style="flex: 0 0 11.11%;" class="text-center">9</div>
+                </div>
+            </div>
+
+            <!-- Thin Bar Visualization -->
+            <div class="relative h-1.5 rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-purple-600 overflow-hidden mb-8"></div>
+
+            <!-- Flags by Region -->
+            <div id="regionFlagsContainer" class="space-y-0">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Year Timeline Filter -->
+        <section class="glass-panel rounded-[2.5rem] p-6">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-6 bg-cyan-500 rounded-full"></span>
+                    <h3 class="text-xs font-bold uppercase tracking-widest font-tech">机构成立时间线 (Timeline)</h3>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button id="yearPlayBtn" type="button" class="px-3 py-1 rounded-lg border border-slate-600/40 text-[10px] font-bold uppercase tracking-wider text-cyan-400 hover:border-cyan-400/50">播放模式</button>
+                    <div id="yearRangeMeta" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">--</div>
+                </div>
+            </div>
+            <div class="timeline-shell mt-4">
+                <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    <span id="yearStartVal">----</span>
+                    <span id="yearEndVal">----</span>
+                </div>
+                <div class="timeline-track-wrap">
+                    <div class="timeline-base"></div>
+                    <div id="yearRangeFill" class="timeline-fill"></div>
+                    <input id="yearStart" type="range" class="timeline-range" min="1950" max="2030" step="1" value="1950" />
+                    <input id="yearEnd" type="range" class="timeline-range" min="1950" max="2030" step="1" value="2030" />
+                </div>
+                <div id="yearTicks" class="timeline-ticks">
+                    <div id="yearTicksInner" class="timeline-ticks-inner"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Stats Matrix -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-panel p-6 rounded-3xl">
+                <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">区域分布统计 (Region)</h4>
+                <div class="chart-container"><canvas id="regionChart"></canvas></div>
+            </div>
+            <div class="glass-panel p-6 rounded-3xl">
+                <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">机构性质占比 (Type)</h4>
+                <div class="chart-container"><canvas id="typeChart"></canvas></div>
+            </div>
+            <div class="glass-panel p-6 rounded-3xl">
+                <h4 class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">技术成熟度谱系 (TRL Spectrum)</h4>
+                <div class="chart-container"><canvas id="trlChart"></canvas></div>
+            </div>
+            <div class="glass-panel p-6 rounded-3xl">
+                <h4 id="historyTitle" class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">机构数量增长曲线</h4>
+                <div class="chart-container"><canvas id="historyChart"></canvas></div>
+            </div>
+        </section>
+
+        <!-- Word Cloud -->
+        <section class="glass-panel p-6 rounded-3xl">
+            <h4 class="text-[10px] font-bold text-cyan-500 uppercase tracking-widest mb-4">核心研发关键词 (Key Focus)</h4>
+            <div id="keyFocusZone" class="relative">
+                <svg id="keyFocusLines" class="absolute inset-0 w-full h-full pointer-events-none z-[1]"></svg>
+                <div id="wordCloud" class="flex flex-wrap gap-2 justify-center py-2 relative z-[2]"></div>
+                <div id="keyFocusRelated" class="hidden mt-4 pt-4 border-t border-slate-700/30 relative z-[2]">
+                    <p id="keyFocusTitle" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2"></p>
+                    <div id="keyFocusNames" class="flex flex-wrap gap-2 justify-center"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Advanced Filters -->
+        <section class="glass-panel p-3 rounded-2xl sticky top-20 z-40 border-slate-700/50 flex flex-wrap gap-3 items-center shadow-2xl">
+            <div class="flex-grow relative min-w-[280px]">
+                <span class="absolute left-4 top-2.5 text-slate-500">🔍</span>
+                <input type="text" id="mainSearch" placeholder="搜索机构、学者或技术关键词..." class="w-full pl-11 pr-4 py-2 rounded-xl text-sm font-medium">
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <select id="selRegion" class="px-4 py-2 rounded-xl text-[10px] font-bold uppercase cursor-pointer"><option value="all">所有区域</option></select>
+                <select id="selCountry" class="px-4 py-2 rounded-xl text-[10px] font-bold uppercase cursor-pointer"><option value="all">所有国家</option></select>
+                <select id="selType" class="px-4 py-2 rounded-xl text-[10px] font-bold uppercase cursor-pointer"><option value="all">机构性质</option></select>
+                <select id="selImpact" class="px-4 py-2 rounded-xl text-[10px] font-bold uppercase cursor-pointer"><option value="all">影响力等级</option></select>
+                <select id="selTRL" class="px-4 py-2 rounded-xl text-[10px] font-bold uppercase cursor-pointer"><option value="all">TRL成熟度</option></select>
+                <button id="resetBtn" class="px-4 py-2 text-[10px] font-bold text-cyan-500 hover:bg-slate-100 rounded-xl transition-all">重置</button>
+            </div>
+        </section>
+
+        <section class="flex flex-wrap items-center justify-between gap-3 px-1">
+            <div id="resultMeta" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">数据准备中...</div>
+            <div id="perfMeta" class="text-[10px] font-bold uppercase tracking-wider text-cyan-500"></div>
+        </section>
+
+        <!-- Result Grid -->
+        <section id="resultsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
+            <!-- Shimmer Loading placeholders -->
+            <div class="h-48 glass-panel rounded-[2rem] animate-pulse"></div>
+            <div class="h-48 glass-panel rounded-[2rem] animate-pulse"></div>
+            <div class="h-48 glass-panel rounded-[2rem] animate-pulse"></div>
+        </section>
+        <div id="gridSentinel" class="h-6"></div>
+
+        <div id="noData" class="hidden text-center py-32 text-slate-500">
+            <p class="text-5xl mb-4">🔭</p>
+            <p class="text-xs font-bold uppercase tracking-widest">未发现匹配的科研数据节点</p>
+        </div>
+
+    </main>
+
+    <!-- Modal Details Layer -->
+    <div id="modalOverlay" class="fixed inset-0 z-[100] bg-slate-950/90 backdrop-blur-xl hidden flex items-center justify-center p-4">
+        <div id="modalBox" class="bg-slate-900 border border-slate-700 w-full max-w-5xl max-h-[90vh] rounded-[3rem] shadow-2xl overflow-hidden flex flex-col scale-95 opacity-0 transition-all duration-300">
+            <!-- Modal Header -->
+            <div class="p-8 border-b border-slate-800 bg-slate-950/50 flex justify-between items-start">
+                <div class="space-y-3 text-white">
+                    <span id="mImpact" class="inline-block px-3 py-1 bg-cyan-500 text-slate-950 text-[11px] font-black rounded-lg uppercase tracking-tight shadow-lg">Rank</span>
+                    <h2 id="mCnName" class="text-3xl font-black leading-tight"></h2>
+                    <p id="mEnName" class="text-slate-100 text-lg italic font-medium tracking-wide"></p>
+                </div>
+                <button id="closeModal" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-slate-800 text-slate-500 text-3xl transition-colors">&times;</button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-10 overflow-y-auto custom-scrollbar flex-grow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-8">
+                        <div>
+                            <h5 class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em] mb-4">🔬 研究聚焦 Focus Areas</h5>
+                            <div id="mTags" class="flex flex-wrap gap-2.5"></div>
+                        </div>
+                        <div>
+                            <h5 class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em] mb-3">🤝 合作伙伴 Partners</h5>
+                            <div id="mPartners" class="flex flex-wrap gap-2.5"></div>
+                        </div>
+                        <div>
+                            <h5 class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em] mb-3">🎯 战略角色 Strategic Role</h5>
+                            <div id="mStrategyTags" class="flex flex-wrap gap-2.5"></div>
+                        </div>
+                        <div>
+                            <h5 class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em] mb-3">👨‍🔬 核心学者 Lead Scholars</h5>
+                            <div id="mScholars" class="flex flex-wrap gap-2.5"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="p-8 bg-slate-950 rounded-[2rem] border border-slate-800 shadow-inner">
+                            <h5 class="text-[10px] font-bold text-cyan-500 uppercase tracking-[0.3em] mb-6">基本信息 Basic Info</h5>
+                            <div id="mBasicInfo" class="space-y-3 text-xs"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-8 bg-slate-950/80 border-t border-slate-800">
+                <div class="bg-slate-950/60 p-6 rounded-[1.5rem] border border-slate-800 mb-5">
+                    <div class="flex justify-between items-end mb-4">
+                        <span id="mTrlVal" class="text-3xl font-black text-cyan-400 font-tech">TRL --</span>
+                        <span id="mTrlStage" class="text-[11px] font-semibold text-white/70 leading-relaxed text-right max-w-[72%]">分布阶段</span>
+                    </div>
+                    <div id="mTrlVisual" class="flex gap-2 h-2.5"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                    <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/40">
+                        <div class="text-slate-500 font-bold mb-2">官方链接 Official Site</div>
+                        <a id="mUrl" href="#" target="_blank" class="text-cyan-400 font-semibold break-all hover:text-cyan-300"></a>
+                    </div>
+                    <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/40">
+                        <div class="text-slate-500 font-bold mb-2">通讯联系 Contact</div>
+                        <a id="mMail" href="#" class="text-slate-300 font-semibold break-all hover:text-cyan-300"></a>
+                    </div>
+                    <div class="p-4 rounded-2xl border border-slate-800 bg-slate-950/40">
+                        <div id="mSourceLabel" class="text-slate-500 font-bold mb-2">信息来源 Info Source</div>
+                        <span id="mSource" class="text-indigo-300 font-semibold break-all"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Global App State
+         */
+        const CSV_SOURCE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRRI3tH_gxtL_BsGAvRjutd7-DMXRWScrpWDB0TzFsA2tM7drKtKDQc2TsUl9cwMuLjHKL_MVhngZuL/pub?gid=292734620&single=true&output=csv';
+        
+        let rawDataset = [];
+        let filteredDataset = [];
+        let charts = {};
+
+        const CACHE_KEY = 'h2-inst-cache-v2';
+        const CACHE_TTL_MS = 1000 * 60 * 60 * 6;
+        const FILTER_DEBOUNCE_MS = 220;
+        const GRID_BATCH_SIZE = 120;
+        const KEYWORD_RELATION_LIMIT = 10;
+
+        let appInitialized = false;
+
+        const appState = {
+            debounceTimer: null,
+            resizeTimer: null,
+            chartFrame: null,
+            gridObserver: null,
+            flagTooltip: null,
+            sankeyTooltip: null,
+            renderedCount: 0,
+            activeData: [],
+            lastPerfMs: 0,
+            selectedKeyword: '',
+            selectedKeywordNames: [],
+            keywordPinnedByUser: false,
+            countryOrder: [],
+            yearDomainMin: null,
+            yearDomainMax: null,
+            yearPlayTimer: null,
+            yearPlaying: false
+        };
+
+        const themePalette = {
+            '亚太': '#5B6CFF',
+            '欧洲': '#06B6D4',
+            '美洲': '#14B8A6',
+            '中东': '#F59E0B',
+            '非洲': '#A855F7',
+            '中亚': '#22C55E',
+            '其他': '#64748B',
+            'default': '#64748B'
+        };
+
+        // 国家名称到ISO 2字码映射
+        const countryCodeMap = {
+            '中国': 'cn',
+            '中国大陆': 'cn',
+            '中国台湾': 'cn',
+            '台湾': 'cn',
+            '中国香港': 'hk',
+            '香港': 'hk',
+            '中国澳门': 'mo',
+            '澳门': 'mo',
+            '美国': 'us',
+            '日本': 'jp',
+            '德国': 'de',
+            '英国': 'gb',
+            '法国': 'fr',
+            '加拿大': 'ca',
+            '澳大利亚': 'au',
+            '韩国': 'kr',
+            '印度': 'in',
+            '荷兰': 'nl',
+            '瑞士': 'ch',
+            '瑞典': 'se',
+            '挪威': 'no',
+            '丹麦': 'dk',
+            '芬兰': 'fi',
+            '奥地利': 'at',
+            '比利时': 'be',
+            '西班牙': 'es',
+            '意大利': 'it',
+            '葡萄牙': 'pt',
+            '新西兰': 'nz',
+            '新加坡': 'sg',
+            '泰国': 'th',
+            '马来西亚': 'my',
+            '印度尼西亚': 'id',
+            '菲律宾': 'ph',
+            '越南': 'vn',
+            '巴西': 'br',
+            '墨西哥': 'mx',
+            '阿根廷': 'ar',
+            '圭亚那': 'gy',
+            '以色列': 'il',
+            '阿联酋': 'ae',
+            '沙特阿拉伯': 'sa',
+            '南非': 'za',
+            '俄罗斯': 'ru',
+            '捷克': 'cz',
+            '波兰': 'pl',
+            '匈牙利': 'hu',
+            '土耳其': 'tr',
+            '伊朗': 'ir',
+            '巴基斯坦': 'pk',
+            '孟加拉国': 'bd',
+            '缅甸': 'mm',
+            '智利': 'cl',
+            '冰岛': 'is',
+            '巴基斯坦': 'pk',
+            '乌克兰': 'ua',
+            '罗马尼亚': 'ro',
+            '塞尔维亚': 'rs',
+            '希腊': 'gr',
+            '斯洛伐克': 'sk',
+            '斯洛文尼亚': 'si',
+            '葡萄牙': 'pt',
+            '保加利亚': 'bg',
+            '克罗地亚': 'hr',
+            '立陶宛': 'lt',
+            '拉脱维亚': 'lv',
+            '爱沙尼亚': 'ee',
+            '塞浦路斯': 'cy',
+            '马耳他': 'mt',
+            '卢森堡': 'lu',
+            '爱尔兰': 'ie',
+            '以色列': 'il',
+            '埃及': 'eg',
+            '巴勒斯坦': 'ps',
+            '澳门': 'mo',
+            '柬埔寨': 'kh',
+            '老挝': 'la',
+            '孟加拉': 'bd',
+            '斯里兰卡': 'lk',
+            '巴基斯坦': 'pk',
+            '阿富汗': 'af',
+            '伊拉克': 'iq',
+            '叙利亚': 'sy',
+            '约旦': 'jo',
+            '黎巴嫩': 'lb',
+            '科威特': 'kw',
+            '卡塔尔': 'qa',
+            '阿曼': 'om',
+            '也门': 'ye',
+            '巴林': 'bh',
+            '印度尼西亚': 'id',
+            '马来西亚': 'my',
+            '新加坡': 'sg',
+            '文莱': 'bn',
+            '柬埔寨': 'kh',
+            '老挝': 'la',
+            '缅甸': 'mm',
+            '泰国': 'th',
+            '越南': 'vn',
+            '菲律宾': 'ph',
+            '蒙古': 'mn',
+            '尼泊尔': 'np',
+            '不丹': 'bt',
+            '尼日尔': 'ne',
+            '尼日利亚': 'ng',
+            '肯尼亚': 'ke',
+            '坦桑尼亚': 'tz',
+            '乌干达': 'ug',
+            '埃塞俄比亚': 'et',
+            '摩洛哥': 'ma',
+            '毛里塔尼亚': 'mr',
+            '乍得': 'td',
+            '亚美尼亚': 'am',
+            '阿尔及利亚': 'dz',
+            '突尼斯': 'tn',
+            '利比亚': 'ly',
+            '苏丹': 'sd',
+            '赞比亚': 'zm',
+            '津巴布韦': 'zw',
+            '博茨瓦纳': 'bw',
+            '纳米比亚': 'na',
+            '莫桑比克': 'mz',
+            '马达加斯加': 'mg',
+            '毛里求斯': 'mu',
+            '象牙海岸': 'ci',
+            '加纳': 'gh',
+            '喀麦隆': 'cm',
+            '刚果': 'cg',
+            '刚果民主共和国': 'cd',
+            '秘鲁': 'pe',
+            '哥伦比亚': 'co',
+            '委内瑞拉': 've',
+            '厄瓜多尔': 'ec',
+            '智利': 'cl',
+            '阿根廷': 'ar',
+            '乌拉圭': 'uy',
+            '巴拉圭': 'py',
+            '玻利维亚': 'bo',
+            '巴拿马': 'pa',
+            '哥斯达黎加': 'cr',
+            '萨尔瓦多': 'sv',
+            '尼加拉瓜': 'ni',
+            '洪都拉斯': 'hn',
+            '危地马拉': 'gt',
+            '伯利兹': 'bz',
+            '牙买加': 'jm',
+            '古巴': 'cu',
+            '多米尼加': 'do',
+            '波多黎各': 'pr',
+            '芬兰': 'fi',
+            '希腊': 'gr',
+            '台湾': 'tw',
+            '格鲁吉亚': 'ge',
+            '阿塞拜疆': 'az',
+            '哈萨克斯坦': 'kz',
+            '乌兹别克斯坦': 'uz',
+            '土库曼斯坦': 'tm',
+            '沙特阿拉伯': 'sa',
+            '沙特': 'sa',
+            '阿联酋': 'ae',
+            '塔吉克斯坦': 'tj',
+            '吉尔吉斯斯坦': 'kg'
+        };
+
+        function getCountryFlagUrl(countryName) {
+            const code = countryCodeMap[countryName] || 'xx';
+            return `https://flagpedia.net/data/flags/w80/${code}.webp`;
+        }
+
+        /**
+         * Core Loader
+         */
+        function parseTRLRange(rangeText) {
+            const matches = (rangeText || '').match(/\d+/g);
+            if (!matches || matches.length === 0) return { min: 1, max: 1 };
+            const nums = matches.map(Number);
+            return { min: Math.min(...nums), max: Math.max(...nums) };
+        }
+
+        function normalizeTextKey(v) {
+            return String(v || '').trim().toLowerCase();
+        }
+
+        function splitFocusTerms(raw) {
+            return String(raw || '')
+                .split(/[;；,，\/\n]+/)
+                .map(s => s.trim())
+                .filter(Boolean);
+        }
+
+        function normalizeFuzzyText(v) {
+            return String(v || '')
+                .toLowerCase()
+                .replace(/[\s\-_.()/,，；;:：'"`~!@#$%^&*+=?[\]{}<>|\\]/g, '');
+        }
+
+        function shuffleArray(arr) {
+            const out = [...arr];
+            for (let i = out.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [out[i], out[j]] = [out[j], out[i]];
+            }
+            return out;
+        }
+
+        function ensureSessionCountryOrder(data) {
+            if (appState.countryOrder.length) return;
+            const countries = [...new Set((data || []).map(i => String(i['国家/地区'] || '').trim()).filter(Boolean))];
+            appState.countryOrder = shuffleArray(countries);
+        }
+
+        function countryRank(country) {
+            const c = String(country || '').trim();
+            const idx = appState.countryOrder.indexOf(c);
+            return idx >= 0 ? idx : Number.MAX_SAFE_INTEGER;
+        }
+
+        function diversifyByCountry(baseSorted) {
+            if (!baseSorted.length) return baseSorted;
+            const byCountry = new Map();
+            baseSorted.forEach(item => {
+                const c = String(item['国家/地区'] || '未知').trim() || '未知';
+                if (!byCountry.has(c)) byCountry.set(c, []);
+                byCountry.get(c).push(item);
+            });
+
+            const countries = [...byCountry.keys()].sort((a, b) => countryRank(a) - countryRank(b));
+            const output = [];
+            let added = true;
+            while (added) {
+                added = false;
+                countries.forEach(c => {
+                    const queue = byCountry.get(c);
+                    if (queue && queue.length) {
+                        output.push(queue.shift());
+                        added = true;
+                    }
+                });
+            }
+            return output;
+        }
+
+        function isInternationalKnown(item) {
+            const impact = String(item['影响力'] || '').trim();
+            return impact.includes('全球领先') || impact.includes('国际');
+        }
+
+        function normalizeRecord(item) {
+            const trl = parseTRLRange(item['TRL覆盖范围']);
+            const searchText = [
+                item['中文全名'],
+                item['英文全名'],
+                item['国家/地区'],
+                item['城市（总部）'],
+                item['机构性质'],
+                item['研究领域'],
+                item['著名学者'],
+                item['资金来源'],
+                item['关键合作伙伴']
+            ]
+                .filter(Boolean)
+                .join(' | ')
+                .toLowerCase();
+
+            return {
+                ...item,
+                _trlMin: trl.min,
+                _trlMax: trl.max,
+                _foundedYear: ((item['成立时间'] || '').match(/\d{4}/) || [])[0] ? Number(((item['成立时间'] || '').match(/\d{4}/) || [])[0]) : null,
+                _searchText: searchText
+            };
+        }
+
+        function preprocessDataset(rows) {
+            return rows.map(normalizeRecord);
+        }
+
+        function readCache() {
+            try {
+                const raw = localStorage.getItem(CACHE_KEY);
+                if (!raw) return null;
+                const parsed = JSON.parse(raw);
+                if (!parsed?.ts || !Array.isArray(parsed.data)) return null;
+                const isExpired = Date.now() - parsed.ts > CACHE_TTL_MS;
+                return isExpired ? null : parsed.data;
+            } catch (err) {
+                console.warn('Cache read error:', err);
+                return null;
+            }
+        }
+
+        function writeCache(data) {
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data }));
+            } catch (err) {
+                console.warn('Cache write error:', err);
+            }
+        }
+
+        function parseCsvFromSource() {
+            return new Promise((resolve, reject) => {
+                Papa.parse(CSV_SOURCE, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (res) => resolve(res.data || []),
+                    error: reject
+                });
+            });
+        }
+
+        function updateTimestamp(dateObj = new Date()) {
+            const dateStr = `${dateObj.getFullYear()}年${String(dateObj.getMonth() + 1).padStart(2, '0')}月${String(dateObj.getDate()).padStart(2, '0')}日`;
+            const target = document.getElementById('lastUpdate');
+            if (target) target.textContent = dateStr;
+        }
+
+        function setResultMeta(total, filtered, rendered) {
+            const meta = document.getElementById('resultMeta');
+            if (!meta) return;
+            meta.textContent = `总计 ${total} 条 | 匹配 ${filtered} 条 | 已渲染 ${rendered} 条`;
+        }
+
+        function setPerfMeta(ms, sourceLabel = '') {
+            const perf = document.getElementById('perfMeta');
+            if (!perf) return;
+            const prefix = sourceLabel ? `${sourceLabel} · ` : '';
+            perf.textContent = `${prefix}筛选+渲染 ${ms.toFixed(1)}ms`;
+        }
+
+        function gatherFilters() {
+            const yearStart = Number(document.getElementById('yearStart')?.value);
+            const yearEnd = Number(document.getElementById('yearEnd')?.value);
+            return {
+                query: (document.getElementById('mainSearch')?.value || '').toLowerCase().trim(),
+                region: document.getElementById('selRegion')?.value || 'all',
+                country: document.getElementById('selCountry')?.value || 'all',
+                type: document.getElementById('selType')?.value || 'all',
+                impact: document.getElementById('selImpact')?.value || 'all',
+                trl: document.getElementById('selTRL')?.value || 'all',
+                yearStart: Number.isFinite(yearStart) ? yearStart : appState.yearDomainMin,
+                yearEnd: Number.isFinite(yearEnd) ? yearEnd : appState.yearDomainMax
+            };
+        }
+
+        function matchesFilters(item, filters) {
+            const matchQ = !filters.query || item._searchText.includes(filters.query);
+            const matchR = filters.region === 'all' || item['区域'] === filters.region;
+            const matchC = filters.country === 'all' || item['国家/地区'] === filters.country;
+            const matchT = filters.type === 'all' || item['机构性质'] === filters.type;
+            const matchI = filters.impact === 'all' || item['影响力'] === filters.impact;
+
+            let matchTRL = true;
+            if (filters.trl !== 'all') {
+                if (filters.trl === '1-3') matchTRL = item._trlMax <= 3;
+                else if (filters.trl === '4-5') matchTRL = item._trlMax >= 4 && item._trlMax <= 5;
+                else if (filters.trl === '6-7') matchTRL = item._trlMax >= 6 && item._trlMax <= 7;
+                else if (filters.trl === '8-9') matchTRL = item._trlMax >= 8;
+            }
+
+            const hasYearDomain = Number.isFinite(appState.yearDomainMin) && Number.isFinite(appState.yearDomainMax);
+            let matchYear = true;
+            if (hasYearDomain) {
+                // 累计逻辑：机构一旦成立，在后续年份不会“消失”，按右侧年份做累计截面
+                const upper = Number.isFinite(filters.yearEnd) ? filters.yearEnd : appState.yearDomainMax;
+                if (item._foundedYear == null) matchYear = upper >= appState.yearDomainMax;
+                else matchYear = item._foundedYear <= upper;
+            }
+
+            return matchQ && matchR && matchC && matchT && matchI && matchTRL && matchYear;
+        }
+
+        function getImpactPriority(level) {
+            const txt = String(level || '').trim();
+            if (!txt || txt === 'N/A') return 999;
+            if (txt.includes('全球领先')) return 1;
+            if (txt.includes('国际') && txt.includes('领先')) return 2;
+            if (txt.includes('区域') && txt.includes('领先')) return 3;
+            if (txt.includes('国家') && txt.includes('骨干')) return 4;
+            if (txt.includes('国家') && txt.includes('重要')) return 5;
+            if (txt.includes('成长') || txt.includes('新兴')) return 6;
+            return 100;
+        }
+
+        function getDisplayCnName(item) {
+            return String(item?.['中文缩写'] || item?.['中文全名'] || item?.['英文全名'] || '').trim();
+        }
+
+        function sortByImpactOnly(items) {
+            return [...items].sort((a, b) => {
+                const impactDiff = getImpactPriority(a['影响力']) - getImpactPriority(b['影响力']);
+                if (impactDiff !== 0) return impactDiff;
+                return getDisplayCnName(a).localeCompare(getDisplayCnName(b), 'zh-Hans-CN');
+            });
+        }
+
+        function sortInstitutions(items) {
+            const baseSorted = [...items].sort((a, b) => {
+                const impactDiff = getImpactPriority(a['影响力']) - getImpactPriority(b['影响力']);
+                if (impactDiff !== 0) return impactDiff;
+
+                const trlDiff = (b._trlMax || 0) - (a._trlMax || 0);
+                if (trlDiff !== 0) return trlDiff;
+
+                return String(a['中文全名'] || '').localeCompare(String(b['中文全名'] || ''), 'zh-Hans-CN');
+            });
+            return diversifyByCountry(baseSorted);
+        }
+
+        function pickTopInstitutionsByKeyword(keyword, data, limit = KEYWORD_RELATION_LIMIT) {
+            const key = normalizeTextKey(keyword);
+            if (!key) return [];
+
+            const related = data.filter(item => splitFocusTerms(item['研究领域']).some(tag => normalizeTextKey(tag) === key));
+            if (!related.length) return [];
+
+            const international = related.filter(isInternationalKnown);
+            const candidates = international.length ? international : related;
+
+            const byType = candidates.reduce((acc, item) => {
+                const orgType = String(item['机构性质'] || '其他机构').trim() || '其他机构';
+                if (!acc[orgType]) acc[orgType] = [];
+                acc[orgType].push(item);
+                return acc;
+            }, {});
+
+            const typeGroups = Object.entries(byType)
+                .map(([orgType, items]) => ({ orgType, count: items.length, items: sortByImpactOnly(items) }))
+                .sort((a, b) => b.count - a.count || a.orgType.localeCompare(b.orgType, 'zh-Hans-CN'));
+
+            const chosen = [];
+            const chosenKeys = new Set();
+            const toKey = (item) => String(item['中文全名'] || item['英文全名'] || '').trim();
+
+            // 第一轮：尽量覆盖不同机构性质（公司、研究机构、大学、国家实验室等）
+            typeGroups.forEach(group => {
+                if (chosen.length >= limit) return;
+                const best = group.items[0];
+                if (!best) return;
+                const k = toKey(best);
+                if (!k || chosenKeys.has(k)) return;
+                chosen.push(best);
+                chosenKeys.add(k);
+            });
+
+            if (chosen.length < limit) {
+                sortByImpactOnly(candidates).forEach(item => {
+                    if (chosen.length >= limit) return;
+                    const k = toKey(item);
+                    if (!k || chosenKeys.has(k)) return;
+                    chosen.push(item);
+                    chosenKeys.add(k);
+                });
+            }
+
+            return chosen.slice(0, limit);
+        }
+
+        function clearKeywordRelationView() {
+            appState.selectedKeyword = '';
+            appState.selectedKeywordNames = [];
+            appState.keywordPinnedByUser = false;
+
+            const related = document.getElementById('keyFocusRelated');
+            const names = document.getElementById('keyFocusNames');
+            const title = document.getElementById('keyFocusTitle');
+            const svg = document.getElementById('keyFocusLines');
+            if (related) related.classList.add('hidden');
+            if (names) names.innerHTML = '';
+            if (title) title.textContent = '';
+            if (svg) svg.innerHTML = '';
+
+            const chips = document.querySelectorAll('#wordCloud .key-chip.active');
+            chips.forEach(chip => chip.classList.remove('active'));
+            const dimmed = document.querySelectorAll('#wordCloud .key-chip.dimmed');
+            dimmed.forEach(chip => chip.classList.remove('dimmed'));
+            prioritizeCardsByKeyword();
+            applyCardHighlights();
+        }
+
+        function buildKeywordPrioritizedData(data, selectedNames) {
+            const base = sortInstitutions(data);
+            if (!Array.isArray(selectedNames) || !selectedNames.length) return base;
+
+            const selectedSet = new Set(selectedNames.map(normalizeTextKey));
+            const picked = [];
+            const rest = [];
+
+            base.forEach(item => {
+                const nameKey = normalizeTextKey(item['中文全名']);
+                if (selectedSet.has(nameKey)) picked.push(item);
+                else rest.push(item);
+            });
+
+            return [...picked, ...rest];
+        }
+
+        function prioritizeCardsByKeyword() {
+            const shouldPrioritize = appState.keywordPinnedByUser && appState.selectedKeywordNames.length > 0;
+            const ordered = shouldPrioritize
+                ? buildKeywordPrioritizedData(filteredDataset, appState.selectedKeywordNames)
+                : sortInstitutions(filteredDataset);
+            filteredDataset = ordered;
+            appState.activeData = ordered;
+            renderGrid(ordered);
+            setResultMeta(rawDataset.length, ordered.length, appState.renderedCount);
+        }
+
+        function applyCardHighlights() {
+            const targetSet = new Set((appState.selectedKeywordNames || []).map(normalizeTextKey));
+            const cards = document.querySelectorAll('#resultsGrid [data-cn-name]');
+            cards.forEach(card => {
+                const name = normalizeTextKey(card.getAttribute('data-cn-name'));
+                if (targetSet.size && targetSet.has(name)) card.classList.add('card-highlight');
+                else card.classList.remove('card-highlight');
+            });
+        }
+
+        function drawKeywordLines() {
+            const svg = document.getElementById('keyFocusLines');
+            const zone = document.getElementById('keyFocusZone');
+            const chip = document.querySelector('#wordCloud .key-chip.active');
+            const names = document.querySelectorAll('#keyFocusNames .key-rel-name');
+            if (!svg || !zone) return;
+            svg.innerHTML = '';
+
+            if (!chip || !names.length) return;
+            if (window.matchMedia && window.matchMedia('(max-width: 768px)').matches) return;
+
+            const zoneRect = zone.getBoundingClientRect();
+            const chipRect = chip.getBoundingClientRect();
+            const startX = chipRect.left + chipRect.width / 2 - zoneRect.left;
+            const startY = chipRect.bottom - zoneRect.top;
+
+            names.forEach(node => {
+                const rect = node.getBoundingClientRect();
+                const endX = rect.left + rect.width / 2 - zoneRect.left;
+                const endY = rect.top - zoneRect.top;
+                const curveY = startY + Math.max((endY - startY) * 0.45, 16);
+                const d = `M ${startX} ${startY} C ${startX} ${curveY}, ${endX} ${curveY}, ${endX} ${endY}`;
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', d);
+                path.setAttribute('class', 'key-rel-line');
+                svg.appendChild(path);
+            });
+        }
+
+        function showKeywordRelations(keyword, data, { userInitiated = false } = {}) {
+            const selected = pickTopInstitutionsByKeyword(keyword, data, KEYWORD_RELATION_LIMIT);
+            const selectedNames = selected.map(item => String(item['中文全名'] || '').trim()).filter(Boolean);
+            appState.selectedKeyword = keyword;
+            appState.selectedKeywordNames = selectedNames;
+            if (userInitiated) appState.keywordPinnedByUser = true;
+
+            const title = document.getElementById('keyFocusTitle');
+            const related = document.getElementById('keyFocusRelated');
+            const names = document.getElementById('keyFocusNames');
+            if (!title || !related || !names) return;
+
+            title.textContent = `关键词「${keyword}」相关机构（Top ${KEYWORD_RELATION_LIMIT}）`;
+            names.innerHTML = selected.length
+                ? selected.map(item => {
+                    const fullName = String(item['中文全名'] || '').trim();
+                    const name = getDisplayCnName(item);
+                    const country = String(item['国家/地区'] || 'N/A').trim();
+                    return `<button type="button" class="key-rel-name" data-org-name="${fullName}" title="查看 ${name} 详情"><img loading="lazy" src="${getCountryFlagUrl(country)}" alt="${country}" class="key-rel-flag"><span>${name}</span></button>`;
+                }).join('')
+                : '<span class="text-xs text-slate-500">当前筛选下暂无匹配机构</span>';
+
+            related.classList.remove('hidden');
+
+            const chips = document.querySelectorAll('#wordCloud .key-chip');
+            chips.forEach(chip => {
+                chip.classList.toggle('active', chip.dataset.keyword === keyword);
+                if (chip.dataset.keywordReset === '1') {
+                    chip.classList.remove('dimmed');
+                    return;
+                }
+                const shouldDimOthers = appState.keywordPinnedByUser && !!keyword;
+                chip.classList.toggle('dimmed', shouldDimOthers && chip.dataset.keyword !== keyword);
+            });
+
+            prioritizeCardsByKeyword();
+            applyCardHighlights();
+            requestAnimationFrame(drawKeywordLines);
+
+            names.querySelectorAll('.key-rel-name[data-org-name]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetName = normalizeTextKey(btn.getAttribute('data-org-name'));
+                    if (!targetName) return;
+                    const idx = filteredDataset.findIndex(item => normalizeTextKey(item['中文全名']) === targetName);
+                    if (idx >= 0) openDetailModal(idx);
+                });
+            });
+        }
+
+        function buildCountMap(data, key) {
+            return data.reduce((acc, item) => {
+                const val = item[key];
+                if (!val || val === 'N/A') return acc;
+                acc[val] = (acc[val] || 0) + 1;
+                return acc;
+            }, {});
+        }
+
+        function countByTRLRange(data, rangeKey) {
+            return data.reduce((count, item) => {
+                const max = item._trlMax || 0;
+                if (rangeKey === '1-3') return max <= 3 ? count + 1 : count;
+                if (rangeKey === '4-5') return max >= 4 && max <= 5 ? count + 1 : count;
+                if (rangeKey === '6-7') return max >= 6 && max <= 7 ? count + 1 : count;
+                if (rangeKey === '8-9') return max >= 8 ? count + 1 : count;
+                return count;
+            }, 0);
+        }
+
+        function applyFilterSet(dataset, filters) {
+            const filtered = dataset.filter(item => matchesFilters(item, filters));
+
+            return sortInstitutions(filtered);
+        }
+
+        function scheduleVisualRenders(data) {
+            if (appState.chartFrame) cancelAnimationFrame(appState.chartFrame);
+            appState.chartFrame = requestAnimationFrame(() => {
+                renderHeatmap(data);
+                renderSankey(data);
+                renderTRLDistribution(data);
+                renderStatsCharts(data);
+                renderWordCloud(data);
+            });
+        }
+
+        function bootstrapDataset(data, sourceLabel = '') {
+            rawDataset = preprocessDataset(data);
+            ensureSessionCountryOrder(rawDataset);
+            initYearDomain(rawDataset);
+
+            if (!appInitialized) {
+                initApp();
+                appInitialized = true;
+            }
+
+            populateFilterSelectors(rawDataset);
+            applyFilters({ immediate: true, sourceLabel });
+        }
+
+        window.onload = async () => {
+            initTheme();
+            const cached = readCache();
+            if (cached && cached.length) {
+                updateTimestamp(new Date());
+                bootstrapDataset(cached, '缓存');
+            }
+
+            try {
+                const fresh = await parseCsvFromSource();
+                writeCache(fresh);
+                updateTimestamp(new Date());
+                bootstrapDataset(fresh, cached ? '云端刷新' : '云端');
+            } catch (e) {
+                console.error('Data Sync Error:', e);
+                if (!rawDataset.length) {
+                    const grid = document.getElementById('resultsGrid');
+                    if (grid) grid.innerHTML = `<p class="col-span-full text-center text-red-500 py-20 font-bold uppercase tracking-widest">错误：无法连接云端数据库。</p>`;
+                }
+            }
+        };
+
+        function initApp() {
+            const search = document.getElementById('mainSearch');
+            if (search) {
+                search.addEventListener('input', () => applyFilters({ immediate: false, sourceLabel: '交互' }));
+            }
+
+            ['selRegion', 'selCountry', 'selType', 'selImpact', 'selTRL'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('change', () => applyFilters({ immediate: true, sourceLabel: '交互' }));
+            });
+
+            const reset = document.getElementById('resetBtn');
+            if (reset) reset.onclick = resetFilters;
+
+            const logoReload = document.getElementById('logoReload');
+            if (logoReload) {
+                logoReload.addEventListener('click', () => window.location.reload());
+            }
+
+            ['yearStart', 'yearEnd'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', () => {
+                        stopYearPlayback();
+                        syncYearSliderBounds(id);
+                        applyFilters({ immediate: true, sourceLabel: '交互' });
+                    });
+                    el.addEventListener('change', () => {
+                        stopYearPlayback();
+                        syncYearSliderBounds(id);
+                        applyFilters({ immediate: true, sourceLabel: '交互' });
+                    });
+                }
+            });
+
+            const yearPlayBtn = document.getElementById('yearPlayBtn');
+            if (yearPlayBtn) {
+                yearPlayBtn.addEventListener('click', () => {
+                    if (appState.yearPlaying) stopYearPlayback();
+                    else startYearPlayback();
+                });
+            }
+
+            const sankeyToggleBtn = document.getElementById('sankeyToggleBtn');
+            if (sankeyToggleBtn) {
+                sankeyToggleBtn.addEventListener('click', () => {
+                    const panel = document.getElementById('sankeyPanel');
+                    const icon = document.getElementById('sankeyToggleIcon');
+                    if (!panel) return;
+                    const willOpen = panel.classList.contains('hidden');
+                    panel.classList.toggle('hidden', !willOpen);
+                    sankeyToggleBtn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+                    if (icon) icon.textContent = willOpen ? '▾' : '▸';
+                    if (willOpen) renderSankey(filteredDataset);
+                });
+            }
+
+            const close = document.getElementById('closeModal');
+            if (close) close.onclick = closeDetailModal;
+
+            const overlay = document.getElementById('modalOverlay');
+            if (overlay) overlay.onclick = (e) => { if(e.target.id === 'modalOverlay') closeDetailModal(); };
+
+            window.addEventListener('resize', () => {
+                if (appState.resizeTimer) clearTimeout(appState.resizeTimer);
+                appState.resizeTimer = setTimeout(() => {
+                    updateStats(filteredDataset);
+                    drawKeywordLines();
+                    renderSankey(filteredDataset);
+                }, 180);
+            });
+
+            ensureGridObserver();
+        }
+
+        function initTheme() {
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            if (!toggle || !icon) return;
+
+            toggle.onclick = () => {
+                const isLight = document.body.getAttribute('data-theme') === 'light';
+                document.body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+                icon.textContent = isLight ? '🌙' : '☀️';
+                updateDashboard(filteredDataset, { sourceLabel: '主题切换' });
+            };
+        }
+
+        function populateFilterSelectors(data, activeFilters = gatherFilters()) {
+            const selectorConfig = {
+                selRegion: { dataKey: '区域', filterKey: 'region' },
+                selCountry: { dataKey: '国家/地区', filterKey: 'country' },
+                selType: { dataKey: '机构性质', filterKey: 'type' },
+                selImpact: { dataKey: '影响力', filterKey: 'impact' }
+            };
+
+            const getScopedData = (omitFilterKey) => {
+                const scopedFilters = { ...activeFilters, [omitFilterKey]: 'all' };
+                return data.filter(item => matchesFilters(item, scopedFilters));
+            };
+
+            Object.entries(selectorConfig).forEach(([id, cfg]) => {
+                const sel = document.getElementById(id);
+                if (!sel) return;
+
+                const previousValue = activeFilters[cfg.filterKey] || sel.value || 'all';
+                const baseOption = sel.querySelector('option[value="all"]');
+                sel.innerHTML = '';
+                if (baseOption) sel.appendChild(baseOption);
+                else {
+                    const fallback = document.createElement('option');
+                    fallback.value = 'all';
+                    fallback.textContent = '全部';
+                    sel.appendChild(fallback);
+                }
+
+                const scopedData = getScopedData(cfg.filterKey);
+                const valueCountMap = buildCountMap(scopedData, cfg.dataKey);
+                const values = [...new Set(data.map(i => i[cfg.dataKey]))].filter(v => v && v !== 'N/A');
+                const rankedValues = values
+                    .map(v => ({ value: v, count: valueCountMap[v] || 0, isSelected: v === previousValue }))
+                    .filter(entry => entry.count > 0 || entry.isSelected)
+                    .sort((a, b) => {
+                        if (b.count !== a.count) return b.count - a.count;
+                        return String(a.value).localeCompare(String(b.value), 'zh-Hans-CN');
+                    });
+
+                rankedValues.forEach(entry => {
+                    const o = document.createElement('option');
+                    o.value = entry.value;
+                    o.textContent = `${entry.value} [${entry.count}]`;
+                    sel.appendChild(o);
+                });
+
+                sel.value = rankedValues.some(entry => entry.value === previousValue) ? previousValue : 'all';
+            });
+
+            const trlSel = document.getElementById('selTRL');
+            if (!trlSel) return;
+
+            const prevTrlValue = trlSel.value;
+            const trlBaseOption = trlSel.querySelector('option[value="all"]');
+            trlSel.innerHTML = '';
+            if (trlBaseOption) trlSel.appendChild(trlBaseOption);
+            else {
+                const fallback = document.createElement('option');
+                fallback.value = 'all';
+                fallback.textContent = 'TRL成熟度';
+                trlSel.appendChild(fallback);
+            }
+
+            const trlOptions = [
+                { value: '8-9', text: '商业应用 (≥8)' },
+                { value: '6-7', text: '工程原型 (6-7)' },
+                { value: '4-5', text: '应用研发 (4-5)' },
+                { value: '1-3', text: '基础研究 (≤3)' }
+            ];
+            const trlScopedData = getScopedData('trl');
+            trlOptions.forEach(opt => {
+                const count = countByTRLRange(trlScopedData, opt.value);
+                if (!count && opt.value !== prevTrlValue) return;
+                const o = document.createElement('option');
+                o.value = opt.value;
+                o.textContent = `${opt.text} [${count}]`;
+                trlSel.appendChild(o);
+            });
+            trlSel.value = trlOptions.some(opt => opt.value === prevTrlValue) ? prevTrlValue : 'all';
+        }
+
+        function applyFilters({ immediate = false, sourceLabel = '' } = {}) {
+            if (!immediate) {
+                if (appState.debounceTimer) clearTimeout(appState.debounceTimer);
+                appState.debounceTimer = setTimeout(() => applyFilters({ immediate: true, sourceLabel }), FILTER_DEBOUNCE_MS);
+                return;
+            }
+
+            const t0 = performance.now();
+            const filters = gatherFilters();
+            populateFilterSelectors(rawDataset, filters);
+            const nextData = applyFilterSet(rawDataset, filters);
+            updateDashboard(nextData, { sourceLabel });
+            const dt = performance.now() - t0;
+            appState.lastPerfMs = dt;
+            setPerfMeta(dt, sourceLabel);
+        }
+
+        function resetFilters() {
+            const search = document.getElementById('mainSearch');
+            if (search) search.value = '';
+
+            ['selRegion', 'selCountry', 'selType', 'selImpact', 'selTRL'].forEach(id => {
+                const sel = document.getElementById(id);
+                if (sel) sel.value = 'all';
+            });
+
+            const yearStart = document.getElementById('yearStart');
+            const yearEnd = document.getElementById('yearEnd');
+            if (yearStart && Number.isFinite(appState.yearDomainMin)) yearStart.value = String(appState.yearDomainMin);
+            if (yearEnd && Number.isFinite(appState.yearDomainMax)) yearEnd.value = String(appState.yearDomainMax);
+            stopYearPlayback();
+            syncYearSliderBounds();
+
+            applyFilters({ immediate: true, sourceLabel: '重置' });
+        }
+
+        function initYearDomain(data) {
+            const years = (data || []).map(i => i._foundedYear).filter(y => Number.isFinite(y));
+            if (!years.length) return;
+            const minYear = 1950;
+            const maxYear = Math.max(...years);
+
+            appState.yearDomainMin = minYear;
+            appState.yearDomainMax = maxYear;
+
+            const yearStart = document.getElementById('yearStart');
+            const yearEnd = document.getElementById('yearEnd');
+            if (!yearStart || !yearEnd) return;
+
+            const prevStart = Number(yearStart.value);
+            const prevEnd = Number(yearEnd.value);
+            yearStart.min = String(minYear);
+            yearStart.max = String(maxYear);
+            yearEnd.min = String(minYear);
+            yearEnd.max = String(maxYear);
+
+            yearStart.value = Number.isFinite(prevStart) ? String(Math.min(Math.max(prevStart, minYear), maxYear)) : String(minYear);
+            yearEnd.value = Number.isFinite(prevEnd) ? String(Math.min(Math.max(prevEnd, minYear), maxYear)) : String(maxYear);
+            if (Number(yearStart.value) > Number(yearEnd.value)) {
+                yearStart.value = String(minYear);
+                yearEnd.value = String(maxYear);
+            }
+
+            renderYearTicks(minYear, maxYear);
+            syncYearSliderBounds();
+        }
+
+        function renderYearTicks(minYear, maxYear) {
+            const inner = document.getElementById('yearTicksInner');
+            if (!inner) return;
+            const years = [];
+            for (let y = minYear; y <= maxYear; y += 5) years.push(y);
+            if (years[years.length - 1] !== maxYear) years.push(maxYear);
+            const span = Math.max(1, maxYear - minYear);
+            inner.innerHTML = years.map(y => {
+                const left = ((y - minYear) / span) * 100;
+                return `<div class="timeline-tick" style="left:${left}%">${y}</div>`;
+            }).join('');
+        }
+
+        function syncYearSliderBounds(changedId = '') {
+            const yearStart = document.getElementById('yearStart');
+            const yearEnd = document.getElementById('yearEnd');
+            const fill = document.getElementById('yearRangeFill');
+            const startVal = document.getElementById('yearStartVal');
+            const endVal = document.getElementById('yearEndVal');
+            const meta = document.getElementById('yearRangeMeta');
+            if (!yearStart || !yearEnd || !fill) return;
+
+            let s = Number(yearStart.value);
+            let e = Number(yearEnd.value);
+            if (s > e) {
+                if (changedId === 'yearStart') e = s;
+                else s = e;
+            }
+            yearStart.value = String(s);
+            yearEnd.value = String(e);
+
+            const min = Number(yearStart.min);
+            const max = Number(yearStart.max);
+            const pct = (v) => ((v - min) / Math.max(1, (max - min))) * 100;
+            const left = pct(s);
+            const right = pct(e);
+            fill.style.left = `${left}%`;
+            fill.style.width = `${Math.max(0.8, right - left)}%`;
+
+            if (startVal) startVal.textContent = `${s}`;
+            if (endVal) endVal.textContent = `${e}`;
+            if (meta) meta.textContent = `观察区间 ${s} - ${e} | 累计至 ${e}`;
+        }
+
+        function stopYearPlayback() {
+            if (appState.yearPlayTimer) {
+                clearInterval(appState.yearPlayTimer);
+                appState.yearPlayTimer = null;
+            }
+            appState.yearPlaying = false;
+            const btn = document.getElementById('yearPlayBtn');
+            if (btn) {
+                btn.textContent = '播放模式';
+                btn.classList.remove('border-cyan-400/60');
+            }
+        }
+
+        function startYearPlayback() {
+            const yearStart = document.getElementById('yearStart');
+            const yearEnd = document.getElementById('yearEnd');
+            if (!yearStart || !yearEnd || !Number.isFinite(appState.yearDomainMin) || !Number.isFinite(appState.yearDomainMax)) return;
+
+            appState.yearPlaying = true;
+            yearStart.value = String(appState.yearDomainMin);
+            yearEnd.value = String(appState.yearDomainMin);
+            syncYearSliderBounds();
+            applyFilters({ immediate: true, sourceLabel: '播放' });
+
+            const btn = document.getElementById('yearPlayBtn');
+            if (btn) {
+                btn.textContent = '停止播放';
+                btn.classList.add('border-cyan-400/60');
+            }
+
+            appState.yearPlayTimer = setInterval(() => {
+                let end = Number(yearEnd.value);
+                if (end >= appState.yearDomainMax) {
+                    stopYearPlayback();
+                    return;
+                }
+                end += 1;
+                yearEnd.value = String(end);
+                syncYearSliderBounds();
+                applyFilters({ immediate: true, sourceLabel: '播放' });
+            }, 650);
+        }
+
+        function updateDashboard(data, { sourceLabel = '' } = {}) {
+            const shouldPrioritize = appState.keywordPinnedByUser && appState.selectedKeywordNames.length > 0;
+            const ordered = shouldPrioritize ? buildKeywordPrioritizedData(data, appState.selectedKeywordNames) : data;
+            filteredDataset = ordered;
+            appState.activeData = ordered;
+
+            updateStats(ordered);
+            renderGrid(ordered);
+            scheduleVisualRenders(ordered);
+            setResultMeta(rawDataset.length, ordered.length, appState.renderedCount);
+        }
+
+        function updateStats(data) {
+            // 1. 收录机构总数
+            document.getElementById('statTotal').textContent = data.length;
+            
+            // 2. 覆盖国家/地区
+            const countries = [...new Set(data.map(i => i['国家/地区']).filter(Boolean))];
+            document.getElementById('statCountries').textContent = countries.length;
+            
+            // 3. 技术成熟度平均值
+            let trlSum = 0;
+            let trlCount = 0;
+            data.forEach(i => {
+                const min = i._trlMin || 1;
+                const max = i._trlMax || 1;
+                trlSum += (min + max) / 2;
+                trlCount++;
+            });
+            const avgTRL = trlCount > 0 ? (trlSum / trlCount).toFixed(1) : '--';
+            const trlEl = document.getElementById('statTrl');
+            if (trlEl) {
+                const isMobile = window.matchMedia('(max-width: 767px)').matches;
+                if (avgTRL === '--') {
+                    trlEl.textContent = isMobile ? '--' : 'TRL --';
+                } else {
+                    trlEl.textContent = isMobile ? `${avgTRL}` : `TRL ${avgTRL}`;
+                }
+            }
+            
+            // 4. 全球领先级机构（占比）
+            // 统计影响力等级为"全球领先"的机构
+            const leadingCount = data.filter(i => (i['影响力'] || '').trim() === '全球领先').length;
+            const leadingPercent = data.length > 0 ? Math.round((leadingCount / data.length) * 100) : 0;
+            document.getElementById('statLeading').textContent = `${leadingPercent}%`;
+        }
+
+        function renderHeatmap(data) {
+            const canvas = document.getElementById('heatmapChart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            
+            const groupData = {};
+            data.forEach(i => {
+                const mergedRegion = normalizeTreemapRegion(i['区域']);
+                const k = `${mergedRegion}|${i['国家/地区']}`;
+                groupData[k] = (groupData[k] || 0) + 1;
+            });
+
+            const tree = Object.entries(groupData).map(([key, val]) => {
+                const [region, country] = key.split('|');
+                return { region, country, val };
+            });
+
+            renderHeatmapLegend(data);
+
+            if(charts.heatmap) charts.heatmap.destroy();
+
+            charts.heatmap = new Chart(ctx, {
+                type: 'treemap',
+                data: {
+                    datasets: [{
+                        tree: tree,
+                        key: 'val',
+                        groups: ['region', 'country'],
+                        spacing: 1,
+                        borderWidth: 0,
+                        backgroundColor: (ctx) => {
+                            if (ctx.type !== 'data') return 'transparent';
+                            const r = ctx.raw._data.region;
+                            const baseColor = themePalette[r] || themePalette.default;
+                            if (ctx.raw.l === 1) return `rgba(255, 255, 255, 0.15)`;
+                            return `${baseColor}99`;
+                        },
+                        labels: {
+                            display: true,
+                            formatter: (ctx) => {
+                                if (ctx.type !== 'data') return '';
+                                return [`${ctx.raw.g}`, `${ctx.raw.v}`];
+                            },
+                            font: { size: 10, weight: '700' },
+                            color: '#fff'
+                        }
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#020617', titleColor: '#22d3ee' }
+                    }
+                }
+            });
+        }
+
+        function normalizeTreemapRegion(region) {
+            const r = String(region || '').trim();
+            if (r === '西欧' || r === '东欧') return '欧洲';
+            if (r === '北美' || r === '南美') return '美洲';
+            return r || '其他';
+        }
+
+        function renderHeatmapLegend(data) {
+            const legend = document.getElementById('heatmapLegend');
+            if (!legend) return;
+
+            const regions = [...new Set((data || []).map(i => normalizeTreemapRegion(i['区域'])).filter(Boolean))]
+                .sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'));
+
+            legend.innerHTML = regions.length
+                ? regions.map(region => {
+                    const color = themePalette[region] || themePalette.default;
+                    return `<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-sm" style="background:${color}; opacity:0.65;"></span>${region}</span>`;
+                }).join('')
+                : '<span class="text-slate-500">暂无区域数据</span>';
+        }
+
+        function getTRLBand(item) {
+            const max = item?._trlMax || 0;
+            if (max <= 3) return 'TRL 1-3';
+            if (max <= 5) return 'TRL 4-5';
+            if (max <= 7) return 'TRL 6-7';
+            return 'TRL 8-9';
+        }
+
+        function ensureSankeyTooltip() {
+            if (appState.sankeyTooltip) return appState.sankeyTooltip;
+            const tip = document.createElement('div');
+            tip.className = 'sankey-tooltip';
+            document.body.appendChild(tip);
+            appState.sankeyTooltip = tip;
+            return tip;
+        }
+
+        function showSankeyTooltip(html, x, y) {
+            const tip = ensureSankeyTooltip();
+            tip.innerHTML = html;
+            tip.style.left = `${x}px`;
+            tip.style.top = `${y}px`;
+            tip.style.opacity = '1';
+        }
+
+        function hideSankeyTooltip() {
+            if (!appState.sankeyTooltip) return;
+            appState.sankeyTooltip.style.opacity = '0';
+        }
+
+        function renderSankey(data) {
+            const panel = document.getElementById('sankeyPanel');
+            if (panel && panel.classList.contains('hidden')) return;
+
+            const shell = document.getElementById('sankeyShell');
+            const svg = document.getElementById('sankeySvg');
+            const empty = document.getElementById('sankeyEmpty');
+            if (!shell || !svg || !empty) return;
+
+            const width = Math.max(980, Math.floor(shell.clientWidth || 980));
+            const height = 500;
+            const isLight = document.body.getAttribute('data-theme') === 'light';
+            const layerTitleColor = isLight ? '#334155' : '#94a3b8';
+            const nodeLabelColor = isLight ? '#0f172a' : '#e2e8f0';
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            svg.innerHTML = '';
+
+            if (!Array.isArray(data) || data.length === 0) {
+                empty.classList.add('show');
+                return;
+            }
+            empty.classList.remove('show');
+
+            const countryCount = data.reduce((acc, item) => {
+                const c = String(item['国家/地区'] || '未知国家').trim() || '未知国家';
+                acc[c] = (acc[c] || 0) + 1;
+                return acc;
+            }, {});
+            const topCountries = new Set(
+                Object.entries(countryCount)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 7)
+                    .map(([c]) => c)
+            );
+
+            const typeCount = data.reduce((acc, item) => {
+                const t = String(item['机构性质'] || '其他性质机构').trim() || '其他性质机构';
+                acc[t] = (acc[t] || 0) + 1;
+                return acc;
+            }, {});
+            const topTypes = new Set(
+                Object.entries(typeCount)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 5)
+                    .map(([t]) => t)
+            );
+
+            const records = data.map(item => ({
+                region: String(item['区域'] || '未知区域').trim() || '未知区域',
+                country: topCountries.has(String(item['国家/地区'] || '').trim()) ? (String(item['国家/地区'] || '').trim() || '未知国家') : '其他国家',
+                type: topTypes.has(String(item['机构性质'] || '').trim())
+                    ? (String(item['机构性质'] || '').trim() || '其他性质机构')
+                    : '其他性质机构',
+                impact: String(item['影响力'] || '未知影响力').trim() || '未知影响力',
+                trl: getTRLBand(item)
+            }));
+
+            const layerKeys = ['region', 'country', 'type', 'impact', 'trl'];
+            const layerTitles = ['区域', '国家', '机构性质', '影响力', 'TRL分段'];
+            const nodeMap = new Map();
+            const linkMap = new Map();
+
+            const makeNodeId = (layer, label) => `${layer}|${label}`;
+            const pushNode = (layer, label) => {
+                const id = makeNodeId(layer, label);
+                if (!nodeMap.has(id)) nodeMap.set(id, { id, layer, label, inVal: 0, outVal: 0, value: 0 });
+                return id;
+            };
+
+            records.forEach(rec => {
+                for (let i = 0; i < layerKeys.length; i++) {
+                    pushNode(i, rec[layerKeys[i]]);
+                }
+                for (let i = 0; i < layerKeys.length - 1; i++) {
+                    const s = makeNodeId(i, rec[layerKeys[i]]);
+                    const t = makeNodeId(i + 1, rec[layerKeys[i + 1]]);
+                    const lk = `${s}>>>${t}`;
+                    linkMap.set(lk, (linkMap.get(lk) || 0) + 1);
+                }
+            });
+
+            const links = [...linkMap.entries()].map(([k, v]) => {
+                const [sourceId, targetId] = k.split('>>>');
+                const source = nodeMap.get(sourceId);
+                const target = nodeMap.get(targetId);
+                source.outVal += v;
+                target.inVal += v;
+                return { sourceId, targetId, value: v };
+            });
+
+            nodeMap.forEach(n => { n.value = Math.max(n.inVal, n.outVal, 1); });
+            const layers = Array.from({ length: layerKeys.length }, () => []);
+            nodeMap.forEach(n => layers[n.layer].push(n));
+            layers.forEach(arr => arr.sort((a, b) => b.value - a.value || a.label.localeCompare(b.label, 'zh-Hans-CN')));
+
+            const padTop = 24;
+            const padBottom = 20;
+            const maxLayerSize = Math.max(...layers.map(arr => arr.length), 1);
+            const laneGap = maxLayerSize > 18 ? 4 : (maxLayerSize > 12 ? 6 : 8);
+            const nodeW = 13;
+            const usableH = height - padTop - padBottom;
+            const innerW = width - 180;
+            const xStart = 80;
+            const layerGap = innerW / (layerKeys.length - 1);
+
+            const scales = layers.map(arr => {
+                const total = arr.reduce((s, n) => s + n.value, 0);
+                const gap = Math.max(0, (arr.length - 1) * laneGap);
+                return total > 0 ? (usableH - gap) / total : 1;
+            });
+            // 自适应缩放：确保所有节点和流线都完整落在容器高度内，避免“被放大只看到顶部”
+            const finiteScales = scales.filter(v => Number.isFinite(v) && v > 0);
+            const rawUnit = finiteScales.length ? Math.min(...finiteScales) : 1;
+            const unit = Math.max(0.08, rawUnit);
+
+            layers.forEach((arr, layer) => {
+                const totalH = arr.reduce((s, n) => s + Math.max(0.8, n.value * unit), 0) + Math.max(0, (arr.length - 1) * laneGap);
+                let y = padTop + Math.max(0, (usableH - totalH) / 2);
+                arr.forEach(n => {
+                    n.x = xStart + layer * layerGap;
+                    n.y = y;
+                    n.h = Math.max(0.8, n.value * unit);
+                    y += n.h + laneGap;
+                });
+            });
+
+            const nodeById = Object.fromEntries([...nodeMap.values()].map(n => [n.id, n]));
+            const outOffsets = {};
+            const inOffsets = {};
+            [...nodeMap.keys()].forEach(k => { outOffsets[k] = 0; inOffsets[k] = 0; });
+            const orderedLinks = [...links].sort((a, b) => {
+                const sa = nodeById[a.sourceId];
+                const sb = nodeById[b.sourceId];
+                if (sa.layer !== sb.layer) return sa.layer - sb.layer;
+                if (sa.y !== sb.y) return sa.y - sb.y;
+                return nodeById[a.targetId].y - nodeById[b.targetId].y;
+            });
+
+            const ns = 'http://www.w3.org/2000/svg';
+            const gLinks = document.createElementNS(ns, 'g');
+            const gNodes = document.createElementNS(ns, 'g');
+            const gLabels = document.createElementNS(ns, 'g');
+
+            const linkColorByLayer = ['#22d3ee', '#4ade80', '#a78bfa', '#f59e0b'];
+            orderedLinks.forEach((ln, idx) => {
+                const s = nodeById[ln.sourceId];
+                const t = nodeById[ln.targetId];
+                const w = Math.max(0.8, ln.value * unit);
+                const sy = s.y + outOffsets[s.id] + w / 2;
+                const ty = t.y + inOffsets[t.id] + w / 2;
+                outOffsets[s.id] += w;
+                inOffsets[t.id] += w;
+
+                const x1 = s.x + nodeW;
+                const x2 = t.x;
+                const cx = (x2 - x1) * 0.48;
+                const d = `M ${x1} ${sy} C ${x1 + cx} ${sy}, ${x2 - cx} ${ty}, ${x2} ${ty}`;
+
+                const p = document.createElementNS(ns, 'path');
+                p.setAttribute('d', d);
+                p.setAttribute('class', 'sankey-link');
+                p.setAttribute('stroke', linkColorByLayer[s.layer] || '#22d3ee');
+                p.setAttribute('stroke-width', String(w));
+                p.dataset.sourceId = s.id;
+                p.dataset.targetId = t.id;
+                p.dataset.linkIdx = String(idx);
+                p.dataset.value = String(ln.value);
+                p.addEventListener('mouseenter', (e) => {
+                    const all = gLinks.querySelectorAll('.sankey-link');
+                    all.forEach(el => el.classList.add('dimmed'));
+                    p.classList.remove('dimmed');
+                    p.classList.add('active');
+                    showSankeyTooltip(
+                        `<div>${s.label} → ${t.label}</div><div style="color:#22d3ee">机构数：${ln.value}</div>`,
+                        e.clientX,
+                        e.clientY
+                    );
+                });
+                p.addEventListener('mousemove', (e) => showSankeyTooltip(`<div>${s.label} → ${t.label}</div><div style="color:#22d3ee">机构数：${ln.value}</div>`, e.clientX, e.clientY));
+                p.addEventListener('mouseleave', () => {
+                    const all = gLinks.querySelectorAll('.sankey-link');
+                    all.forEach(el => el.classList.remove('dimmed', 'active'));
+                    hideSankeyTooltip();
+                });
+                gLinks.appendChild(p);
+            });
+
+            const nodeColor = ['#0891b2', '#0284c7', '#4f46e5', '#c2410c', '#7c3aed'];
+            layers.forEach((arr, layerIdx) => {
+                const t = document.createElementNS(ns, 'text');
+                t.setAttribute('x', String(xStart + layerIdx * layerGap));
+                t.setAttribute('y', '14');
+                t.setAttribute('fill', layerTitleColor);
+                t.setAttribute('font-size', '10');
+                t.setAttribute('font-weight', '800');
+                t.textContent = layerTitles[layerIdx];
+                gLabels.appendChild(t);
+
+                arr.forEach(n => {
+                    const rect = document.createElementNS(ns, 'rect');
+                    rect.setAttribute('x', String(n.x));
+                    rect.setAttribute('y', String(n.y));
+                    rect.setAttribute('width', String(nodeW));
+                    rect.setAttribute('height', String(n.h));
+                    rect.setAttribute('fill', nodeColor[layerIdx] || '#22d3ee');
+                    rect.setAttribute('class', 'sankey-node');
+                    rect.dataset.nodeId = n.id;
+
+                    const txt = document.createElementNS(ns, 'text');
+                    txt.setAttribute('x', String(n.x + nodeW + 6));
+                    txt.setAttribute('y', String(n.y + Math.min(n.h - 2, 13)));
+                    txt.setAttribute('fill', nodeLabelColor);
+                    txt.setAttribute('font-size', '10');
+                    txt.setAttribute('font-weight', '700');
+                    const shortLabel = n.label.length > 14 ? `${n.label.slice(0, 14)}…` : n.label;
+                    txt.textContent = `${shortLabel} (${n.value})`;
+
+                    const onNodeEnter = (e) => {
+                        const relLinks = gLinks.querySelectorAll(`.sankey-link[data-source-id="${n.id}"], .sankey-link[data-target-id="${n.id}"]`);
+                        const allLinks = gLinks.querySelectorAll('.sankey-link');
+                        const allNodes = gNodes.querySelectorAll('.sankey-node');
+                        allLinks.forEach(el => el.classList.add('dimmed'));
+                        allNodes.forEach(el => el.classList.add('dimmed'));
+                        rect.classList.remove('dimmed');
+                        rect.classList.add('active');
+                        relLinks.forEach(el => {
+                            el.classList.remove('dimmed');
+                            el.classList.add('active');
+                        });
+                        showSankeyTooltip(`<div>${n.label}</div><div style="color:#22d3ee">节点流量：${n.value}</div>`, e.clientX, e.clientY);
+                    };
+                    const onNodeMove = (e) => showSankeyTooltip(`<div>${n.label}</div><div style="color:#22d3ee">节点流量：${n.value}</div>`, e.clientX, e.clientY);
+                    const onNodeLeave = () => {
+                        gLinks.querySelectorAll('.sankey-link').forEach(el => el.classList.remove('dimmed', 'active'));
+                        gNodes.querySelectorAll('.sankey-node').forEach(el => el.classList.remove('dimmed', 'active'));
+                        hideSankeyTooltip();
+                    };
+
+                    rect.addEventListener('mouseenter', onNodeEnter);
+                    rect.addEventListener('mousemove', onNodeMove);
+                    rect.addEventListener('mouseleave', onNodeLeave);
+                    txt.addEventListener('mouseenter', onNodeEnter);
+                    txt.addEventListener('mousemove', onNodeMove);
+                    txt.addEventListener('mouseleave', onNodeLeave);
+
+                    gNodes.appendChild(rect);
+                    gLabels.appendChild(txt);
+                });
+            });
+
+            svg.appendChild(gLinks);
+            svg.appendChild(gNodes);
+            svg.appendChild(gLabels);
+        }
+
+        function ensureFlagTooltip() {
+            if (appState.flagTooltip) return appState.flagTooltip;
+            const tip = document.createElement('div');
+            tip.className = 'flag-tooltip';
+            document.body.appendChild(tip);
+            appState.flagTooltip = tip;
+            return tip;
+        }
+
+        function showFlagTooltip(payload, x, y) {
+            const tip = ensureFlagTooltip();
+            const row = (k, v, e = '') => `<div class="tip-k">${k}</div><div class="tip-v">${v}</div><div class="tip-e">${e}</div>`;
+            tip.innerHTML = `
+                <div class="tip-grid">
+                    ${row('国家/地区', payload.country, payload.region || 'N/A')}
+                    ${row('初次成立年份', payload.firstYear ? `${payload.firstYear}年` : 'N/A', payload.firstOrgAbbr || 'N/A')}
+                    ${row('最新成立年份', payload.lastGrowthYear ? `${payload.lastGrowthYear}年` : 'N/A', payload.latestOrgAbbr || 'N/A')}
+                    ${row('平均 TRL', payload.avgTRL.toFixed(2), `排名 ${payload.trlRank}/${payload.totalCountries}`)}
+                    ${row('机构总数量', `${payload.count}`, `排名 ${payload.countRank}/${payload.totalCountries}`)}
+                    ${row('大学/研究院', `${payload.category.academy}家`, `${toPct(payload.category.academy, payload.count)}%`)}
+                    ${row('公司/示范区', `${payload.category.company}家`, `${toPct(payload.category.company, payload.count)}%`)}
+                    ${row('政府/国组/标准', `${payload.category.gov}家`, `${toPct(payload.category.gov, payload.count)}%`)}
+                    ${row('金融/协会/联盟', `${payload.category.finance}家`, `${toPct(payload.category.finance, payload.count)}%`)}
+                </div>
+            `;
+            tip.style.left = `${x}px`;
+            tip.style.top = `${y}px`;
+            tip.style.opacity = '1';
+        }
+
+        function hideFlagTooltip() {
+            if (!appState.flagTooltip) return;
+            appState.flagTooltip.style.opacity = '0';
+        }
+
+        function setFlagFocus(activeEl) {
+            const items = document.querySelectorAll('.flag-focus-item');
+            items.forEach((node) => {
+                const isActive = node === activeEl;
+                node.classList.toggle('flag-focus-active', isActive);
+                node.classList.toggle('flag-focus-dim', !isActive);
+            });
+        }
+
+        function clearFlagFocus() {
+            const items = document.querySelectorAll('.flag-focus-item');
+            items.forEach((node) => {
+                node.classList.remove('flag-focus-active', 'flag-focus-dim');
+            });
+        }
+
+        const typeCategoryRules = {
+            academy: ['国家实验室', '国家研究院', '大学实验室', '独立研究机构', '应用型研究院', '工业研究院'],
+            company: ['上市公司', '非上市公司', '跨国公司', '初创企业', '国央企研究院', '企业附属研究院', '产业示范区'],
+            gov: ['政府机构', '政经智库', '国际组织', '行业标准机构'],
+            finance: ['金融机构', '行业协会联盟']
+        };
+
+        function classifyInstitutionType(typeText) {
+            const t = (typeText || '').trim();
+            if (!t) return null;
+            const hit = (list) => list.some(k => t.includes(k));
+            if (hit(typeCategoryRules.academy)) return 'academy';
+            if (hit(typeCategoryRules.company)) return 'company';
+            if (hit(typeCategoryRules.gov)) return 'gov';
+            if (hit(typeCategoryRules.finance)) return 'finance';
+            return null;
+        }
+
+        function toPct(count, total) {
+            if (!total) return 0;
+            return Math.round((count / total) * 100);
+        }
+
+        function toOrgAbbr(name) {
+            const s = (name || '').replace(/（.*?）|\(.*?\)/g, '').trim();
+            if (!s) return 'N/A';
+            return s.length > 12 ? `${s.slice(0, 12)}…` : s;
+        }
+
+        function rankBy(items, valueFn) {
+            const sorted = [...items].sort((a, b) => valueFn(b) - valueFn(a));
+            const rankMap = new Map();
+            sorted.forEach((item, idx) => {
+                rankMap.set(item.country, idx + 1);
+            });
+            return rankMap;
+        }
+
+        function renderTRLDistribution(data) {
+            // 计算每个国家的平均 TRL 和区域信息
+            const countryStats = {};
+            data.forEach(i => {
+                const country = i['国家/地区'];
+                const region = i['区域'];
+                if (!country) return;
+                
+                if (!countryStats[country]) {
+                    countryStats[country] = {
+                        sum: 0,
+                        count: 0,
+                        region,
+                        firstYear: null,
+                        lastGrowthYear: null,
+                        firstOrgName: '',
+                        latestOrgName: '',
+                        category: { academy: 0, company: 0, gov: 0, finance: 0 }
+                    };
+                }
+
+                const min = i._trlMin || 1;
+                const max = i._trlMax || 1;
+                const avg = (min + max) / 2;
+                countryStats[country].sum += avg;
+                countryStats[country].count++;
+
+                const yearMatch = (i['成立时间'] || '').match(/\d{4}/);
+                if (yearMatch) {
+                    const y = Number(yearMatch[0]);
+                    const orgName = (i['中文缩写'] || i['中文全名'] || i['英文全名'] || '').trim();
+                    if (!countryStats[country].firstYear || y < countryStats[country].firstYear) {
+                        countryStats[country].firstYear = y;
+                        countryStats[country].firstOrgName = orgName;
+                    }
+                    if (!countryStats[country].lastGrowthYear || y > countryStats[country].lastGrowthYear) {
+                        countryStats[country].lastGrowthYear = y;
+                        countryStats[country].latestOrgName = orgName;
+                    }
+                }
+
+                const categoryKey = classifyInstitutionType(i['机构性质']);
+                if (categoryKey) countryStats[country].category[categoryKey]++;
+            });
+
+            // 按区域分组（三大区域）
+            const regionMap = {
+                '亚太': [],
+                '欧洲': [],
+                '非/美/中东': []
+            };
+
+            const rankedSource = Object.entries(countryStats).map(([country, stats]) => ({
+                country,
+                avgTRL: stats.count > 0 ? stats.sum / stats.count : 0,
+                count: stats.count
+            }));
+            const trlRankMap = rankBy(rankedSource, (x) => x.avgTRL);
+            const countRankMap = rankBy(rankedSource, (x) => x.count);
+            const totalCountries = rankedSource.length || 1;
+
+            Object.entries(countryStats).forEach(([country, stats]) => {
+                let region = stats.region || '其他';
+                // 映射到三大区域
+                if (region === '亚太') {
+                    region = '亚太';
+                } else if (region === '西欧') {
+                    region = '欧洲';
+                } else {
+                    // 北美、南美、中东、非洲都映射到"非/美/中东"
+                    region = '非/美/中东';
+                }
+                
+                if (!regionMap[region]) {
+                    regionMap[region] = [];
+                }
+                
+                const avgTRL = stats.count > 0 ? stats.sum / stats.count : 0;
+                const percentage = ((avgTRL - 1) / 8) * 100;
+                
+                regionMap[region].push({
+                    country,
+                    avgTRL,
+                    percentage,
+                    count: stats.count,
+                    firstYear: stats.firstYear,
+                    lastGrowthYear: stats.lastGrowthYear,
+                    firstOrgAbbr: toOrgAbbr(stats.firstOrgName),
+                    latestOrgAbbr: toOrgAbbr(stats.latestOrgName),
+                    region: stats.region || 'N/A',
+                    trlRank: trlRankMap.get(country) || totalCountries,
+                    countRank: countRankMap.get(country) || totalCountries,
+                    totalCountries,
+                    category: stats.category
+                });
+            });
+
+            // 生成区域分组的国旗行
+            const regionFlagsContainer = document.getElementById('regionFlagsContainer');
+            if (!regionFlagsContainer) return;
+            
+            regionFlagsContainer.innerHTML = '';
+
+            const regionAbbr = {
+                '亚太': '亚太',
+                '欧洲': '欧洲',
+                '非/美/中东': '非/美/中东'
+            };
+
+            Object.entries(regionMap).forEach(([region, countries]) => {
+                if (countries.length === 0) return; // 跳过空区域
+
+                // 按 TRL 值排序
+                countries.sort((a, b) => a.percentage - b.percentage);
+
+                const regionRow = document.createElement('div');
+                regionRow.className = 'py-0';
+                
+                const regionLabel = regionAbbr[region] || region;
+
+                // 显示区域标签
+                const regionLabelEl = document.createElement('div');
+                regionLabelEl.className = 'text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-0.5';
+                regionLabelEl.textContent = regionLabel;
+                regionRow.appendChild(regionLabelEl);
+
+                // 国旗容器 - 多轨道布局，避免重叠
+                const flagsContainer = document.createElement('div');
+                flagsContainer.className = 'relative w-full';
+
+                const isMobile = window.matchMedia('(max-width: 767px)').matches;
+                const preferredLaneCount = 2;
+                const maxLaneCount = 3;
+                const denseThreshold = isMobile ? 14 : 12;
+                const laneCount = countries.length > denseThreshold ? maxLaneCount : preferredLaneCount;
+                const laneHeight = isMobile ? 28 : 26;
+                const minGapPercent = isMobile ? 5.8 : 5.2;
+
+                flagsContainer.style.height = `${laneCount * laneHeight + 16}px`;
+
+                const laneLastPos = Array(laneCount).fill(-999);
+                const placements = countries.map(flag => {
+                    const pos = Math.max(1.2, Math.min(98.8, flag.percentage));
+                    let lane = laneLastPos.findIndex(last => pos - last >= minGapPercent);
+                    if (lane === -1) lane = laneLastPos.indexOf(Math.min(...laneLastPos));
+                    laneLastPos[lane] = pos;
+                    return { flag, lane, pos };
+                });
+
+                placements.forEach(({ flag, lane, pos }) => {
+                    const flagUrl = getCountryFlagUrl(flag.country);
+
+                    const flagElement = document.createElement('div');
+                    flagElement.className = 'absolute flex flex-col items-center group cursor-pointer flag-focus-item';
+                    flagElement.style.left = `calc(${pos}% - 10px)`;
+                    flagElement.style.top = `${lane * laneHeight}px`;
+
+                    flagElement.innerHTML = `
+                        <div class="flag-visual w-5 h-4 rounded-sm shadow-md overflow-hidden group-hover:scale-125 transition-transform">
+                            <img src="${flagUrl}" alt="${flag.country}" class="w-full h-full object-cover" onerror="this.src='https://flagpedia.net/data/flags/w80/xx.webp'">
+                        </div>
+                        <div class="flag-country-label text-[7px] font-bold text-slate-300 whitespace-nowrap text-center mt-0.5">
+                            ${flag.country}
+                        </div>
+                    `;
+
+                    const payload = {
+                        country: flag.country,
+                        year: new Date().getFullYear(),
+                        firstYear: flag.firstYear,
+                        lastGrowthYear: flag.lastGrowthYear,
+                        firstOrgAbbr: flag.firstOrgAbbr,
+                        latestOrgAbbr: flag.latestOrgAbbr,
+                        region: flag.region,
+                        trlRank: flag.trlRank,
+                        countRank: flag.countRank,
+                        totalCountries: flag.totalCountries,
+                        count: flag.count,
+                        avgTRL: flag.avgTRL,
+                        category: flag.category || { academy: 0, company: 0, gov: 0, finance: 0 }
+                    };
+                    flagElement.title = `${flag.country} | ${payload.year} | 机构 ${flag.count} | 平均TRL ${flag.avgTRL.toFixed(2)}`;
+                    flagElement.addEventListener('mouseenter', (e) => {
+                        setFlagFocus(flagElement);
+                        showFlagTooltip(payload, e.clientX, e.clientY);
+                    });
+                    flagElement.addEventListener('mousemove', (e) => {
+                        setFlagFocus(flagElement);
+                        showFlagTooltip(payload, e.clientX, e.clientY);
+                    });
+                    flagElement.addEventListener('mouseleave', () => {
+                        hideFlagTooltip();
+                        clearFlagFocus();
+                    });
+                    flagElement.addEventListener('click', (e) => {
+                        setFlagFocus(flagElement);
+                        showFlagTooltip(payload, e.clientX || (window.innerWidth / 2), e.clientY || (window.innerHeight / 2));
+                        setTimeout(() => {
+                            hideFlagTooltip();
+                            clearFlagFocus();
+                        }, 1800);
+                    });
+
+                    flagsContainer.appendChild(flagElement);
+                });
+
+                regionRow.appendChild(flagsContainer);
+                regionFlagsContainer.appendChild(regionRow);
+            });
+        }
+
+        function renderStatsCharts(data) {
+            const isLight = document.body.getAttribute('data-theme') === 'light';
+            const gridColor = isLight ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)';
+            const tickColor = isLight ? '#64748b' : '#94a3b8';
+
+            const countBy = (key) => {
+                const o = {};
+                data.forEach(i => o[i[key]] = (o[i[key]] || 0) + 1);
+                return o;
+            };
+
+            // 1. Region Doughnut (With Labels)
+            const rc = countBy('区域');
+            if(charts.r) charts.r.destroy();
+            const rCtx = document.getElementById('regionChart');
+            if(rCtx) {
+                const regionTotal = Object.values(rc).reduce((a, b) => a + b, 0);
+                charts.r = new Chart(rCtx, {
+                    type: 'doughnut',
+                    plugins: [ChartDataLabels],
+                    data: { labels: Object.keys(rc), datasets: [{ data: Object.values(rc), backgroundColor: Object.keys(rc).map(r => themePalette[r] || '#64748b'), borderWidth: 0 }] },
+                    options: { 
+                        maintainAspectRatio: false, 
+                        cutout: '70%', 
+                        plugins: { 
+                            legend: { display: false },
+                            datalabels: {
+                                color: '#fff',
+                                font: { weight: 'bold', size: 9 },
+                                formatter: (val, ctx) => {
+                                    const percentage = Math.round((val / regionTotal) * 100);
+                                    return `${ctx.chart.data.labels[ctx.dataIndex]}\n${percentage}%`;
+                                },
+                                display: (ctx) => ctx.dataset.data[ctx.dataIndex] > (data.length * 0.05)
+                            }
+                        } 
+                    }
+                });
+            }
+
+            // 2. Type Bar
+            const tc = countBy('机构性质');
+            if(charts.t) charts.t.destroy();
+            const tCtx = document.getElementById('typeChart');
+            if(tCtx) {
+                // 找出最大值
+                const maxValue = Math.max(...Object.values(tc));
+                
+                // 为每个bar设置颜色，最大值为亮紫色，其他为默认紫色
+                const typeColors = Object.values(tc).map(val => 
+                    val === maxValue ? 'rgba(168, 85, 247, 0.8)' : 'rgba(99, 102, 241, 0.5)'
+                );
+                
+                charts.t = new Chart(tCtx, {
+                    type: 'bar',
+                    plugins: [ChartDataLabels],
+                    data: { 
+                        labels: Object.keys(tc), 
+                        datasets: [{ 
+                            data: Object.values(tc), 
+                            backgroundColor: typeColors,
+                            borderRadius: 2 
+                        }] 
+                    },
+                    options: { 
+                        indexAxis: 'y',
+                        maintainAspectRatio: false,
+                        plugins: { 
+                            legend: { display: false },
+                            datalabels: {
+                                anchor: 'end',
+                                align: 'end',
+                                color: isLight ? '#4f46e5' : '#c4b5fd',
+                                font: { size: 9, weight: 'bold' },
+                                formatter: (val) => val
+                            }
+                        },
+                        scales: {
+                            x: { grid: { color: gridColor }, ticks: { color: tickColor, font: { size: 8 } } },
+                            y: { grid: { display: false }, ticks: { color: tickColor, font: { size: 8 } } }
+                        }
+                    }
+                });
+            }
+
+            // 3. TRL Spectrum (With Key Definitions)
+            const trlMatrix = Array(9).fill(0);
+            data.forEach(i => {
+                const min = i._trlMin || 1;
+                const max = i._trlMax || 1;
+                for (let k = min; k <= max; k++) {
+                    if (k >= 1 && k <= 9) trlMatrix[k - 1]++;
+                }
+            });
+            if(charts.trl) charts.trl.destroy();
+            const trlCtx = document.getElementById('trlChart');
+            const trlKeywords = { 1: ['基础', '研究'], 3: ['实验', '验证'], 6: ['系统', '原型'], 9: ['商业', '运行'] };
+            
+            // 生成TRL渐变色 (黄色 -> 橙色 -> 紫色)
+            const trlColors = Array.from({length: 9}, (_, i) => {
+                const ratio = i / 8; // 0 to 1
+                let r, g, b;
+                if (ratio < 0.5) {
+                    const t = ratio * 2;
+                    r = Math.round(251 * (1 - t) + 251 * t);
+                    g = Math.round(191 * (1 - t) + 146 * t);
+                    b = Math.round(36 * (1 - t) + 60 * t);
+                } else {
+                    const t = (ratio - 0.5) * 2;
+                    r = Math.round(251 * (1 - t) + 168 * t);
+                    g = Math.round(146 * (1 - t) + 85 * t);
+                    b = Math.round(60 * (1 - t) + 247 * t);
+                }
+                return `rgba(${r}, ${g}, ${b}, 0.7)`;
+            });
+            
+            // 生成TRL文字颜色（与bar相同，但不透明）
+            const trlTextColors = Array.from({length: 9}, (_, i) => {
+                const ratio = i / 8;
+                let r, g, b;
+                if (ratio < 0.5) {
+                    const t = ratio * 2;
+                    r = Math.round(251 * (1 - t) + 251 * t);
+                    g = Math.round(191 * (1 - t) + 146 * t);
+                    b = Math.round(36 * (1 - t) + 60 * t);
+                } else {
+                    const t = (ratio - 0.5) * 2;
+                    r = Math.round(251 * (1 - t) + 168 * t);
+                    g = Math.round(146 * (1 - t) + 85 * t);
+                    b = Math.round(60 * (1 - t) + 247 * t);
+                }
+                return `rgb(${r}, ${g}, ${b})`;
+            });
+            
+            if(trlCtx) charts.trl = new Chart(trlCtx, {
+                type: 'bar',
+                plugins: [ChartDataLabels],
+                data: { labels: ['1','2','3','4','5','6','7','8','9'], datasets: [{ data: trlMatrix, backgroundColor: trlColors, borderRadius: 2 }] },
+                options: { 
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        datalabels: {
+                            anchor: 'end',
+                            align: 'top',
+                            color: (ctx) => trlTextColors[ctx.dataIndex],
+                            font: { size: 8, weight: 'bold' },
+                            formatter: (val, ctx) => trlKeywords[ctx.dataIndex + 1] || ''
+                        }
+                    },
+                    scales: {
+                        y: { display: false },
+                        x: { grid: { display: false }, ticks: { color: tickColor, font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // 4. Growth History (按时间段分类)
+            const hist = {};
+            data.forEach(i => {
+                const y = (i['成立时间'] || '').match(/\d{4}/);
+                if(y) {
+                    hist[y[0]] = (hist[y[0]] || 0) + 1;
+                }
+            });
+
+            const baseHistoryTitle = '机构数量增长曲线';
+            const historyTitle = document.getElementById('historyTitle');
+            const markerYears = [2000, 2005, 2010, 2015, 2020, 2025];
+
+            const cumulativeByYear = (targetYear) => Object.entries(hist).reduce((sum, [year, count]) => {
+                return Number(year) <= targetYear ? sum + count : sum;
+            }, 0);
+
+            if (historyTitle) {
+                const startYear = 2015;
+                const endYear = 2025;
+                const startCount = cumulativeByYear(startYear);
+                const endCount = cumulativeByYear(endYear);
+
+                // 使用“平滑年均增长率”避免基数太小时增长率异常放大
+                const smoothBase = 8;
+                const spanYears = Math.max(1, endYear - startYear);
+                const annualRate = (startCount > 0 && endCount >= startCount)
+                    ? (Math.pow((endCount + smoothBase) / (startCount + smoothBase), 1 / spanYears) - 1) * 100
+                    : null;
+
+                if (annualRate !== null && Number.isFinite(annualRate)) {
+                    historyTitle.textContent = `机构数量年均增长率 ${annualRate.toFixed(1)}% (${startYear}-${endYear})`;
+                } else {
+                    historyTitle.textContent = baseHistoryTitle;
+                }
+            }
+
+            const yearSet = new Set(Object.keys(hist).map(Number));
+            markerYears.forEach(y => yearSet.add(y));
+            const yearRange = Array.from(yearSet).sort((a, b) => a - b).map(String);
+            
+            let accumulator = 0;
+            const chartLabels = [];
+            const chartData = [];
+            const chartPointColors = [];
+            
+            // 计算渐变色函数（蓝色 → 绿色）
+            const getGradientColor = (ratio) => {
+                // ratio: 0 到 1，表示从左到右的位置
+                // 从蓝色 (#0ea5e9) 到 绿色 (#10b981)
+                const t = ratio; // 0 to 1
+                const r = Math.round(14 * (1 - t) + 16 * t);
+                const g = Math.round(165 * (1 - t) + 185 * t);
+                const b = Math.round(233 * (1 - t) + 129 * t);
+                return `rgba(${r}, ${g}, ${b}, 0.7)`;
+            };
+            
+            const getGradientBorderColor = (ratio) => {
+                // 不透明的颜色用于边框
+                const t = ratio;
+                const r = Math.round(14 * (1 - t) + 16 * t);
+                const g = Math.round(165 * (1 - t) + 185 * t);
+                const b = Math.round(233 * (1 - t) + 129 * t);
+                return `rgb(${r}, ${g}, ${b})`;
+            };
+            
+            yearRange.forEach((year, idx) => {
+                accumulator += (hist[year] || 0);
+                chartLabels.push(year);
+                chartData.push(accumulator);
+                const ratio = yearRange.length > 1 ? idx / (yearRange.length - 1) : 0;
+                chartPointColors.push({
+                    fillColor: getGradientColor(ratio),
+                    borderColor: getGradientBorderColor(ratio)
+                });
+            });
+            
+            if(charts.h) charts.h.destroy();
+            const hCtx = document.getElementById('historyChart');
+            if(hCtx) {
+                // 创建 Canvas 上下文用于渐变
+                const canvasElement = hCtx;
+                
+                charts.h = new Chart(hCtx, {
+                    type: 'line',
+                    data: { 
+                        labels: chartLabels, 
+                        datasets: [{ 
+                            data: chartData,
+                            borderColor: (ctx) => {
+                                const idx = ctx.p0DataIndex;
+                                return idx >= 0 && idx < chartPointColors.length 
+                                    ? chartPointColors[idx].borderColor 
+                                    : '#10b981';
+                            },
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            fill: true,
+                            borderWidth: 2,
+                            pointRadius: 4,
+                            pointBorderWidth: 0,
+                            pointBackgroundColor: (ctx) => {
+                                const idx = ctx.dataIndex;
+                                return idx >= 0 && idx < chartPointColors.length 
+                                    ? chartPointColors[idx].borderColor 
+                                    : '#10b981';
+                            },
+                            pointBorderColor: 'rgba(0, 0, 0, 0)',
+                            tension: 0.4
+                        }] 
+                    },
+                    options: {
+                        maintainAspectRatio: false,
+                        plugins: { 
+                            legend: { display: false },
+                            filler: {
+                                propagate: true
+                            },
+                            datalabels: {
+                                formatter: (value, ctx) => {
+                                    const year = Number(ctx.chart.data.labels[ctx.dataIndex]);
+                                    return markerYears.includes(year) ? `${year} (${value}家)` : '';
+                                },
+                                color: tickColor,
+                                font: { size: 10, weight: 'bold' },
+                                anchor: 'center',
+                                align: 'left',
+                                offset: 24,
+                                yAdjust: (ctx) => (ctx.dataIndex % 2 === 0 ? -10 : 10),
+                                clamp: true,
+                                textAlign: 'right'
+                            }
+                        },
+                        scales: {
+                            y: { grid: { color: gridColor }, ticks: { color: tickColor, font: { size: 8 } } },
+                            x: { grid: { color: gridColor }, ticks: { color: tickColor, font: { size: 8 } } }
+                        }
+                    },
+                    plugins: [ChartDataLabels, {
+                        id: 'gradientFill',
+                        afterDatasetsDraw: (chart) => {
+                            const ctx = chart.ctx;
+                            const dataset = chart.data.datasets[0];
+                            const meta = chart.getDatasetMeta(0);
+                            
+                            if (!meta.hidden && meta.data && meta.data.length > 0) {
+                                const xScale = chart.scales.x;
+                                const yScale = chart.scales.y;
+                                
+                                // 获取图表左右两端的像素坐标
+                                const xMin = xScale.getPixelForValue(0);
+                                const xMax = xScale.getPixelForValue(yearRange.length - 1);
+                                
+                                // 创建线性渐变（从左到右）
+                                const gradient = ctx.createLinearGradient(xMin, 0, xMax, 0);
+                                
+                                // 添加颜色停止点，为每种渐变色添加 alpha 通道用于填充效果
+                                chartPointColors.forEach((color, idx) => {
+                                    const stop = idx / Math.max(chartPointColors.length - 1, 1);
+                                    // 从 'rgb(r,g,b)' 转为 'rgba(r,g,b,0.25)' 以适配填充
+                                    const rgbMatch = color.borderColor.match(/\d+/g);
+                                    if (rgbMatch && rgbMatch.length >= 3) {
+                                        gradient.addColorStop(stop, `rgba(${rgbMatch[0]}, ${rgbMatch[1]}, ${rgbMatch[2]}, 0.25)`);
+                                    }
+                                });
+                                
+                                dataset.backgroundColor = gradient;
+                            }
+                        }
+                    }]
+                });
+            }
+        }
+
+        function renderWordCloud(data) {
+            const tags = {};
+            data.forEach(i => {
+                splitFocusTerms(i['研究领域']).forEach(f => {
+                    const t = f.trim();
+                    if(t) tags[t] = (tags[t] || 0) + 1;
+                });
+            });
+            const sorted = Object.entries(tags).sort((a,b) => b[1]-a[1]).slice(0, 10);
+            const container = document.getElementById('wordCloud');
+            if (!container) return;
+            const prevKeyword = appState.selectedKeyword;
+
+            container.innerHTML = sorted.map(([tag, count]) => {
+                const alpha = Math.min(0.45 + (count * 0.08), 1);
+                return `<button type="button" data-keyword="${tag}" style="color: rgba(34, 211, 238, ${alpha})" class="key-chip">${tag} [${count}]</button>`;
+            }).join('') + '<button type="button" class="key-chip reset" data-keyword-reset="1">重置</button>';
+
+            container.querySelectorAll('.key-chip').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (btn.dataset.keywordReset === '1') {
+                        clearKeywordRelationView();
+                        return;
+                    }
+                    const keyword = btn.dataset.keyword || '';
+                    if (!keyword) return;
+                    if (appState.selectedKeyword === keyword) {
+                        clearKeywordRelationView();
+                        return;
+                    }
+                    showKeywordRelations(keyword, filteredDataset, { userInitiated: true });
+                });
+            });
+
+            if (prevKeyword && !sorted.some(([tag]) => tag === prevKeyword)) {
+                clearKeywordRelationView();
+                return;
+            }
+
+            if (prevKeyword) {
+                showKeywordRelations(prevKeyword, filteredDataset);
+            } else if (sorted.length > 0) {
+                showKeywordRelations(sorted[0][0], filteredDataset);
+            } else {
+                clearKeywordRelationView();
+            }
+        }
+
+        function buildTRLDots(min, max) {
+            let trlDots = '';
+            for (let i = 1; i <= 9; i++) {
+                const inRange = i >= min && i <= max;
+                const colorClass = inRange ? `trl-color-${i}` : '';
+                trlDots += `<div class="trl-segment ${colorClass}"></div>`;
+            }
+            return trlDots;
+        }
+
+        function createInstitutionCard(item, index) {
+            const trlRange = item['TRL覆盖范围'] || '1';
+            const min = item._trlMin || 1;
+            const max = item._trlMax || 1;
+
+            const card = document.createElement('div');
+            card.className = 'glass-panel p-5 rounded-2xl neon-border-hover cursor-pointer transition-all flex flex-col min-h-[13.5rem]';
+            card.onclick = () => openDetailModal(index);
+            card.setAttribute('data-cn-name', String(item['中文全名'] || '').trim());
+
+            card.innerHTML = `
+                <div class="flex justify-between items-start mb-1.5">
+                    <div class="flex items-center gap-1.5">
+                        <img loading="lazy" src="${getCountryFlagUrl(item['国家/地区'])}" alt="${item['国家/地区'] || 'N/A'}" class="w-6 h-4 rounded border border-slate-700 object-cover">
+                        <span class="text-[10px] font-black uppercase tracking-widest px-2 py-0.5 bg-slate-800 text-slate-300 rounded border border-slate-700">${item['国家/地区'] || 'N/A'}</span>
+                    </div>
+                    ${item['影响力'] === '全球领先' ? '<span class="text-[10px] font-bold text-amber-500 animate-pulse tracking-tight">● Leading</span>' : ''}
+                </div>
+                <h3 class="text-sm font-bold leading-tight mb-0.5 text-white line-clamp-1">${item['中文全名'] || '未命名机构'}</h3>
+                <p class="text-[12px] text-slate-100 font-medium mb-2 line-clamp-1">${item['英文全名'] || 'Hydrogen Entity'}</p>
+
+                <div class="mt-auto space-y-2">
+                    <div class="flex flex-wrap gap-1">
+                        ${(item['研究领域'] || '').split(/[;；]/).filter(f => f.trim()).map((f, idx) => {
+                            const tierClass = idx < 2 ? 'focus-tag-primary' : 'focus-tag-secondary';
+                            return `<span class="${tierClass} text-[11px] px-1.5 py-0.5 rounded font-bold">${f.trim()}</span>`;
+                        }).join('')}
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[12px] text-slate-400 font-bold uppercase mb-1">
+                            <span class="tracking-widest">TRL</span>
+                            <span class="text-cyan-400 text-[15px]">${trlRange}</span>
+                        </div>
+                        <div class="flex gap-1">${buildTRLDots(min, max)}</div>
+                    </div>
+                    <div class="pt-2 border-t border-slate-500/10 flex justify-between items-center">
+                        <span class="text-[11px] text-slate-400 font-bold uppercase">${item['机构性质'] || 'N/A'}</span>
+                        <span class="text-[11px] text-cyan-400 font-bold">档案 ➜</span>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        function appendGridBatch() {
+            const grid = document.getElementById('resultsGrid');
+            if (!grid) return;
+
+            const data = appState.activeData;
+            if (!data.length || appState.renderedCount >= data.length) return;
+
+            const fragment = document.createDocumentFragment();
+            const nextCount = Math.min(appState.renderedCount + GRID_BATCH_SIZE, data.length);
+
+            for (let idx = appState.renderedCount; idx < nextCount; idx++) {
+                fragment.appendChild(createInstitutionCard(data[idx], idx));
+            }
+
+            grid.appendChild(fragment);
+            appState.renderedCount = nextCount;
+            setResultMeta(rawDataset.length, data.length, appState.renderedCount);
+            applyCardHighlights();
+        }
+
+        function ensureGridObserver() {
+            if (appState.gridObserver) return;
+
+            const sentinel = document.getElementById('gridSentinel');
+            if (!sentinel) return;
+
+            appState.gridObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) appendGridBatch();
+                });
+            }, { root: null, rootMargin: '300px 0px' });
+
+            appState.gridObserver.observe(sentinel);
+        }
+
+        function renderGrid(data) {
+            const grid = document.getElementById('resultsGrid');
+            const empty = document.getElementById('noData');
+            if (!grid) return;
+
+            grid.innerHTML = '';
+            appState.activeData = data;
+            appState.renderedCount = 0;
+
+            if (data.length === 0) {
+                grid.classList.add('hidden');
+                if (empty) empty.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            if (empty) empty.classList.add('hidden');
+
+            appendGridBatch();
+        }
+
+        function findPartnerInstitution(partnerName) {
+            const qRaw = String(partnerName || '').trim();
+            const q = normalizeFuzzyText(qRaw);
+            if (!q) return null;
+
+            let best = null;
+            let bestScore = -1;
+
+            rawDataset.forEach(candidate => {
+                const cnAbbr = normalizeFuzzyText(candidate['中文缩写']);
+                const enAbbr = normalizeFuzzyText(candidate['英文缩写']);
+
+                let score = 0;
+                if (cnAbbr && (cnAbbr === q || q === cnAbbr)) score = Math.max(score, 120);
+                if (enAbbr && (enAbbr === q || q === enAbbr)) score = Math.max(score, 115);
+                if (q.length >= 3 && cnAbbr && (cnAbbr.startsWith(q) || q.startsWith(cnAbbr))) score = Math.max(score, 90);
+                if (q.length >= 3 && enAbbr && (enAbbr.startsWith(q) || q.startsWith(enAbbr))) score = Math.max(score, 86);
+                if (q.length >= 5 && cnAbbr && (cnAbbr.includes(q) || q.includes(cnAbbr))) score = Math.max(score, 78);
+                if (q.length >= 5 && enAbbr && (enAbbr.includes(q) || q.includes(enAbbr))) score = Math.max(score, 74);
+
+                if (!score) return;
+
+                score += Math.max(0, 20 - getImpactPriority(candidate['影响力']));
+                if (score > bestScore) {
+                    bestScore = score;
+                    best = candidate;
+                }
+            });
+
+            return bestScore >= 78 ? best : null;
+        }
+
+        function openDetailModal(index, dataset = filteredDataset) {
+            const source = Array.isArray(dataset) ? dataset : filteredDataset;
+            const item = source[index];
+            if(!item) return;
+
+            const strVal = (v) => (v === undefined || v === null ? '' : String(v).trim());
+            const hasVal = (v) => {
+                const s = strVal(v);
+                return s && s.toUpperCase() !== 'N/A';
+            };
+
+            const safeSet = (id, val, fallback = '') => {
+                const el = document.getElementById(id);
+                if (el) el.textContent = hasVal(val) ? strVal(val) : fallback;
+            };
+
+            safeSet('mCnName', item['中文全名'], '未命名机构');
+            safeSet('mEnName', item['英文全名'], 'Unknown Organization');
+            safeSet('mImpact', item['影响力'], 'N/A');
+
+            const tagField = strVal(item['研究领域']);
+            const tags = tagField ? tagField.split(/[;；,，\/\n]+/).map(t => t.trim()).filter(Boolean) : [];
+            const tagsCont = document.getElementById('mTags');
+            if (tagsCont) {
+                tagsCont.innerHTML = tags.length
+                    ? tags.map(t => `<span class="px-4 py-1.5 bg-indigo-500/10 text-indigo-300 rounded-xl text-xs font-bold border border-indigo-500/20">${t}</span>`).join('')
+                    : '<span class="text-xs text-slate-500">暂无研究聚焦信息</span>';
+            }
+
+            const renderChipList = (container, values, emptyText) => {
+                if (!container) return;
+                container.innerHTML = values.length
+                    ? values.map(v => `<span class="px-4 py-1.5 bg-indigo-500/10 text-indigo-300 rounded-xl text-xs font-bold border border-indigo-500/20">${v}</span>`).join('')
+                    : `<span class="text-xs text-slate-500">${emptyText}</span>`;
+            };
+
+            const partnersCont = document.getElementById('mPartners');
+            const partnersRaw = strVal(item['关键合作伙伴']);
+            const partners = partnersRaw ? partnersRaw.split(/[;；,，\/\n]+/).map(s => s.trim()).filter(Boolean) : [];
+            if (partnersCont) {
+                partnersCont.innerHTML = partners.length
+                    ? partners.map((v, idx) => `<button type="button" class="px-4 py-1.5 bg-indigo-500/10 text-indigo-300 rounded-xl text-xs font-bold border border-indigo-500/20 hover:border-cyan-400/50 transition-colors" data-partner-idx="${idx}" title="查看 ${v} 相关机构">${v}</button>`).join('')
+                    : '<span class="text-xs text-slate-500">暂无合作伙伴信息</span>';
+
+                partnersCont.querySelectorAll('[data-partner-idx]').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const idx = Number(btn.getAttribute('data-partner-idx'));
+                        const partnerName = Number.isFinite(idx) ? (partners[idx] || '') : '';
+                        const target = findPartnerInstitution(partnerName);
+                        if (!target) return;
+                        const targetIndex = rawDataset.findIndex(x => x === target);
+                        if (targetIndex >= 0) openDetailModal(targetIndex, rawDataset);
+                    });
+                });
+            }
+
+            const scholarsCont = document.getElementById('mScholars');
+            const scholarsRaw = strVal(item['著名学者']);
+            const scholars = scholarsRaw ? scholarsRaw.split(/[;；\n]+/).map(s => s.trim()).filter(Boolean) : [];
+            renderChipList(scholarsCont, scholars, '暂无核心学者信息');
+
+            const strategyCont = document.getElementById('mStrategyTags');
+            const strategyRaw = strVal(item['战略角色']);
+            const strategies = strategyRaw ? strategyRaw.split(/[;；,，\/\n]+/).map(s => s.trim()).filter(Boolean) : [];
+            renderChipList(strategyCont, strategies, '暂无战略角色信息');
+
+            const range = strVal(item['TRL覆盖范围']) || '1';
+            safeSet('mTrlVal', `TRL ${range}`, 'TRL --');
+            const matches = range.match(/\d+/g);
+            const min = matches ? Math.min(...matches.map(Number)) : 1;
+            const max = matches ? Math.max(...matches.map(Number)) : 1;
+
+            const trlColorMap = {
+                1: '#fbbf24', 2: '#faa834', 3: '#f99244', 4: '#f87c54',
+                5: '#d966b8', 6: '#c653cc', 7: '#b343e0', 8: '#a855f7', 9: '#9d4edd'
+            };
+
+            let visualHtml = '';
+            for (let i = 1; i <= 9; i++) {
+                const active = i >= min && i <= max;
+                visualHtml += active
+                    ? `<div class="flex-grow rounded-full shadow-[0_0_12px_rgba(0,0,0,0.35)]" style="background-color:${trlColorMap[i]};"></div>`
+                    : '<div class="flex-grow rounded-full trl-visual-inactive"></div>';
+            }
+            const trlVis = document.getElementById('mTrlVisual');
+            if (trlVis) trlVis.innerHTML = visualHtml;
+
+            const trlStageExplainMap = {
+                1: 'TRL 1 - 基础原理观察与报告，处于科学发现起点',
+                2: 'TRL 2 - 提出技术概念与应用设想，形成可行性方向',
+                3: 'TRL 3 - 关键机理完成实验室验证，证明概念可行',
+                4: 'TRL 4 - 在实验室环境完成部件级验证，进入工程化前夜',
+                5: 'TRL 5 - 在相关环境完成中试验证，系统集成能力初步建立',
+                6: 'TRL 6 - 工程原型在相关环境示范，技术路径基本稳定',
+                7: 'TRL 7 - 接近真实场景的系统级示范，具备规模化前提',
+                8: 'TRL 8 - 系统定型并通过完整验证，进入部署准备阶段',
+                9: 'TRL 9 - 在真实商业环境稳定运行，完成商业化部署'
+            };
+            const minStage = trlStageExplainMap[min] || 'TRL阶段信息暂缺';
+            const maxStage = trlStageExplainMap[max] || 'TRL阶段信息暂缺';
+            const mTrlStage = document.getElementById('mTrlStage');
+            if (mTrlStage) {
+                mTrlStage.innerHTML = `${minStage}<br>${maxStage}`;
+            }
+            safeSet('mTrlDesc', item['技术成熟度'], '暂无技术成熟度说明');
+
+            const basicInfoRows = [];
+            const country = strVal(item['国家/地区']);
+            if (hasVal(item['中文缩写'])) basicInfoRows.push({ label: '中文缩写 CN Abbr.', value: strVal(item['中文缩写']) });
+            if (hasVal(item['英文缩写'])) basicInfoRows.push({ label: '英文缩写 EN Abbr.', value: strVal(item['英文缩写']) });
+            if (hasVal(item['区域'])) basicInfoRows.push({ label: '区域 Region', value: strVal(item['区域']) });
+            if (hasVal(country)) {
+                basicInfoRows.push({
+                    label: '国家/地区 Country/Region',
+                    value: `<span class="inline-flex items-center"><img src="${getCountryFlagUrl(country)}" alt="${country}" class="w-5 h-3 rounded border border-slate-600 object-cover inline-block mr-1">${country}</span>`
+                });
+            }
+            if (hasVal(item['城市（总部）'])) basicInfoRows.push({ label: '城市 City', value: strVal(item['城市（总部）']) });
+            if (hasVal(item['机构性质'])) basicInfoRows.push({ label: '性质 Type', value: strVal(item['机构性质']) });
+            if (hasVal(item['成立时间'])) basicInfoRows.push({ label: '设立时间 Founded', value: strVal(item['成立时间']) });
+            if (hasVal(item['资金来源'])) basicInfoRows.push({ label: '资金来源 Funding', value: strVal(item['资金来源']) });
+            if (hasVal(item['知名Spin-offs'])) basicInfoRows.push({ label: '知名 Spin-offs', value: strVal(item['知名Spin-offs']) });
+
+            const basicInfoCont = document.getElementById('mBasicInfo');
+            if (basicInfoCont) {
+                basicInfoCont.innerHTML = basicInfoRows.length
+                    ? basicInfoRows.map(r => `<div class="flex justify-between gap-4 border-b border-slate-800/50 pb-2"><span class="text-slate-500">${r.label}</span><span class="text-slate-300 font-bold text-right">${r.value}</span></div>`).join('')
+                    : '<div class="text-xs text-slate-500">暂无基础信息</div>';
+            }
+
+            const ensureHttps = (url) => {
+                const u = strVal(url);
+                if (!hasVal(u)) return '';
+                return /^https?:\/\//i.test(u) ? u : `https://${u}`;
+            };
+
+            const fullUrl = ensureHttps(item['官网']);
+            const mUrl = document.getElementById('mUrl');
+            if (mUrl) {
+                mUrl.href = fullUrl || '#';
+                mUrl.textContent = fullUrl || '暂无官方链接';
+            }
+
+            const contactRaw = strVal(item['邮件联系方式']);
+            const mMail = document.getElementById('mMail');
+            if (mMail) {
+                if (hasVal(contactRaw)) {
+                    const isMail = /@/.test(contactRaw);
+                    mMail.href = isMail ? `mailto:${contactRaw}` : '#';
+                    mMail.textContent = contactRaw;
+                } else {
+                    mMail.href = '#';
+                    mMail.textContent = '暂无通讯地址';
+                }
+            }
+
+            const sourceRaw = strVal(item['信息来源']);
+            const mSourceLabel = document.getElementById('mSourceLabel');
+            if (mSourceLabel) mSourceLabel.textContent = '信息来源 Data Source';
+            const mSource = document.getElementById('mSource');
+            if (mSource) {
+                mSource.textContent = sourceRaw || '暂无信息来源链接';
+            }
+
+            const overlay = document.getElementById('modalOverlay');
+            const box = document.getElementById('modalBox');
+            if (overlay && box) {
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => { box.classList.remove('scale-95', 'opacity-0'); }, 10);
+            }
+        }
+
+        function closeDetailModal() {
+            const overlay = document.getElementById('modalOverlay');
+            const box = document.getElementById('modalBox');
+            if (box) box.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => { if (overlay) overlay.classList.add('hidden'); document.body.style.overflow = ''; }, 300);
+        }
+
+    </script>
+</body>
+</html>
