@@ -1,0 +1,18 @@
+<footer id="site-footer" class="site-footer">
+  <div id="footer-contact-grid" class="site-footer__grid">
+    <section id="footer-contact-section" class="footer-panel">
+      <img class="footer-panel__logo" src="{{asset:logo.mark.src}}" alt="{{t:assets.logo.markAlt}}">
+      <h2>{{t:footer.contactTitle}}</h2>
+      {{contactLinks}}
+    </section>
+    <section id="footer-visitor-stats" class="footer-panel">
+      <h2>{{t:footer.visitorTitle}}</h2>
+      <p>{{footerWelcome}}</p>
+      {{visitorStats}}
+    </section>
+    <section id="footer-visitor-map" class="footer-panel footer-panel--map">
+      <img src="{{asset:footer.map.src}}" alt="{{t:assets.footer.mapAlt}}">
+    </section>
+  </div>
+  <div id="footer-copyright" class="site-footer__copyright">{{footerCopyright}}</div>
+</footer>

@@ -1,0 +1,14 @@
+:root {
+  --color-brand-blue: #0b2b5c;
+  --color-brand-blue-deep: #061f43;
+  --color-brand-orange: #f26b21;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-surface: #ffffff;
+  --color-soft: #f5f7fb;
+  --color-line: rgba(11, 43, 92, 0.18);
+  --shadow-soft: 0 18px 60px rgba(4, 20, 46, 0.18);
+  --container: 1120px;
+  --header-height: 92px;
+  --font-sans: "Noto Sans", "Noto Sans SC", Arial, sans-serif;
+}

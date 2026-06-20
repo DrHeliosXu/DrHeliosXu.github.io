@@ -1,0 +1,25 @@
+{
+  "patents": [
+    {
+      "id": "patent-eu-epo",
+      "year": 2025,
+      "region": "EU",
+      "title": "Two EU patents filed at EPO under non-disclosure",
+      "status": "pending"
+    },
+    {
+      "id": "patent-cn-jig-separator",
+      "year": 2013,
+      "region": "CN",
+      "title": "Annular Gas-Liquid Interface Jig Magnetic Separator",
+      "status": "granted"
+    },
+    {
+      "id": "patent-cn-continuous-jig",
+      "year": 2013,
+      "region": "CN",
+      "title": "Continuously Annular Gas-Liquid Interface Jig Magnetic Separator",
+      "status": "granted"
+    }
+  ]
+}

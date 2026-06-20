@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Хонг Сюй :: Доктор наук :: Инженер</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+
+  <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
+
+  <link rel="stylesheet" href="css/mobilenav.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    body {
+      font-family: 'Tahoma', 'Noto Sans', sans-serif;
+      /* 全局字体 */
+      font-size: 16px;
+      color: #373737;
+      line-height: 1.6;
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <!-- block save as ================================================== -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
+        }
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
+
+        return false;
+      }
+    }
+  </script>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="ru.html" class="site-logo">
+              <img src="images/logo-full-ru.png" alt="Image" class="site-logo" style="height:80px;">
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+              <!---<span class="icon-menu h3"></span>--->
+            </a>
+
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-end">
+            <div class="top-social d-flex align-items-center">
+              <div class="social-icons-container">
+                <div class="ml-md-auto top-social d-lg-inline-block">
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
+
+                  <div class="ml-auto d-inline-block d-lg-none">
+                    <select id="languages" name="languages" style="
+                                                       width: auto;
+                                                        height: 25px;
+                                                        margin-left: 5px;
+                                                        border-radius: 0;
+                                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                          text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                      "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="cn-research.html">中文</option>
+                      <option value="jp-research.html">日本語</option>
+                      <option value="kr-research.html">한국어</option>
+                      <option value="th-research.html">ไทย</option>
+                      <option value="de-research.html">Deutsch</option>
+                      <option value="en-research.html">English</option>
+                      <option value="es-research.html">Español</option>
+                      <option value="fr-research.html">Français</option>
+                      <option value="it-research.html">Italiano</option>
+                      <option value="ru-research.html" selected>Русский</option>
+                      <option value="ar-research.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list" name="content-list" style="
+                                                          width: auto;height: 25px;
+                                                          margin-left: 5px;
+                                                          border-radius: 0;
+                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                          text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                          "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="ru.html">Главная</option>
+                      <option value="ru-research.html" selected>Исследования</option>
+                      <option value="ru-news.html">Новости</option>
+                      <option value="ru-projects.html">Проекты</option>
+                      <option value="ru-about.html">Обо мне</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+        role="banner">
+
+        <div class="container">
+
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right " role="navigation">
+                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                  <li>
+                    <a href="ru.html" class="nav-link text-left">Главная</a>
+                  </li>
+                  <li>
+                    <a href="ru-research.html" class="nav-link text-left">&nbsp;&nbsp;&nbsp;Исследования</a>
+                  </li>
+                  <li>
+                    <a href="ru-news.html" class="nav-link text-left">&nbsp;&nbsp;&nbsp;Новости</a>
+                  </li>
+                  <li>
+                    <a href="ru-projects.html" class="nav-link text-left">Проекты</a>
+                  </li>
+                  <!-- <li>
+                                    <a href="en-activities.html" class="nav-link text-left">Действия</a>
+                                    </li> -->
+                  <li>
+                    <a href="ru-about.html" class="nav-link text-left">Обо мне</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- 语言选择框 -->
+            <div class="ml-auto">
+              <span style="display: flex; align-items: center">
+
+
+                <!-- 选择语言的下拉框 -->
+                <select id="languages-2" name="languages" style="
+                                  width: auto;
+                                  height: 25px;
+                                  margin-left: 5px;
+                                  border-radius: 0;
+                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                          text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                " onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <option value="cn-research.html">中文</option>
+                  <option value="jp-research.html">日本語</option>
+                  <option value="kr-research.html">한국어</option>
+                  <option value="th-research.html">ไทย</option>
+                  <option value="de-research.html">Deutsch</option>
+                  <option value="en-research.html">English</option>
+                  <option value="es-research.html">Español</option>
+                  <option value="fr-research.html">Français</option>
+                  <option value="it-research.html">Italiano</option>
+                  <option value="ru-research.html" selected>Русский</option>
+                  <option value="ar-research.html">اللغة العربية</option>
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+    </div>
+    <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+    <!---Mobile MENU Bar--->
+    <a class="d-inline-block d-sm-none ">
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+        <span class="burger-text">Меню</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="en.html">Hong Xu, <small>PhD</small></a><br />
+          </li>
+          <li>
+            <a href="en-research.html">Исследования ➔</a>
+          </li>
+          <li>
+            <a href="en-news.html">Новости ➔</a>
+          </li>
+          <li>
+            <a href="en-projects.html">Проекты ➔</a>
+          </li>
+          <li>
+            <a href="en-about.html">Обо мне ➔</a>
+          </li>
+          <!-- <li>
+                            <a href="https://xgraphy.eu.org" target="_blank">Фотография ➔</a>
+                        </li>
+                        <li>
+                            <a href="phd-horizon.html">Горизонт ➔</a>
+                        </li>
+                        <li>
+                            <a href="once-upon-a-phd.html">Однажды о PhD ➔</a>
+                        </li> -->
+        </ul>
+      </nav>
+    </a>
+    <!------>
+
+    <!------>
+    <!-- 简化版导航栏内容 -->
+    <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <img src="images/logo-full-ru-long.png" alt="Image" class="site-logo"
+          style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+        <div></div>
+
+        <div style="display: flex; align-items: center;">
+          <a class="flag d-inline-block d-lg-none">
+            </a>
+          <select id="languages-3" name="languages" style="
+                                                      width: auto;
+                                                      height: 25px;
+                              margin-left: 5px;
+                              border-radius: 0;
+                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                              text-align: center; /* 新增 */
+                              text-align-last: center; /* 确保选中的选项居中 */
+                              " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="cn-research.html">中文</option>
+            <option value="jp-research.html">日本語</option>
+            <option value="kr-research.html">한국어</option>
+            <option value="th-research.html">ไทย</option>
+            <option value="de-research.html">Deutsch</option>
+            <option value="en-research.html">English</option>
+            <option value="es-research.html">Español</option>
+            <option value="fr-research.html">Français</option>
+            <option value="it-research.html">Italiano</option>
+            <option value="ru-research.html" selected>Русский</option>
+            <option value="ar-research.html">اللغة العربية</option>
+          </select>
+          <select id="content-list-2" name="content-list" style="
+                         width: auto; height: 25px;
+                          margin-left: 5px;
+                          border-radius: 0;
+                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          text-align: center; /* 新增 */
+                          text-align-last: center; /* 确保选中的选项居中 */
+                          " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="ru.html">Главная</option>
+            <option value="ru-research.html" selected>Исследования</option>
+            <option value="ru-news.html">Новости</option>
+            <option value="ru-projects.html">Проекты</option>
+            <option value="ru-about.html">Обо мне</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!------>
+
+    <div class="site-section">
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 single-content">
+            <p class="mb-5 d-sm-block d-none">
+              <img src="images/banner_img_1_ru.png" alt="Image" class="img-fluid">
+            </p>
+            <p class="mb-5 d-sm-none" style="margin-top: -20px;">
+              <img src="images/banner_img_1_ru_mobi.png" alt="Image" class="img-fluid">
+            </p>
+            <h1 class="mb-4">
+              Обзор исследования
+            </h1>
+            <h6 style="text-align: center;">Сетевой водородно-электрический синергетический низкоуглеродный энергосистем
+            </h6>
+            <hr>
+            <img src="images/research_overview_en.jpg" alt="Обзор исследований"
+              style="display: block; width: 98%; height: auto;">
+
+
+            <br><br>
+            <hr>
+            <h1 class="mb-4">
+              Публикации
+            </h1>
+            <ul class="square">
+              <li><strong>Чистые энергетические технологии / Электрохимия</strong></li>
+            </ul>
+            <ol>
+              <li>
+                S. N. Artigas, <strong>H. Xu*</strong> [FDB], F. Mack<br>
+                Использование анализа распределения времен релаксации в качестве инструмента ин-ситу диагностики для
+                управления водой в приложениях PEM-топливных элементов [J] <br>
+                Соавтор: <text style="color:rgb(37, 84, 238)">[Freudenberg]</text> | Цитируется: <text
+                  style="color:rgb(133, 36, 197)">[Tsinghua Univ.]</text> <br>
+                2024 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0378775324001307"
+                  target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Влияние субстратов газообменных слоев на управление водой в PEFC: Часть II. In situ десатурация жидкой
+                воды
+                через испарение [J] <br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> | Цитируется: <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> <text style="color:rgb(141, 20, 20)">[BOSCH]</text><br>
+                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi [PSI], Prof. S.
+                Haussener
+                [EPFL]<br>
+                Теплопередача в частично насыщенных газообменных слоях с испарительным охлаждением [J] <br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> <text
+                  style="color:rgb(250, 49, 14)">[EPFL]</text> <br>
+                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], S. Nagashima [TOYOTA], H. Nguyen, K. Kishita, F. Marone, F. N. Büchi, J.
+                Eller [PSI]<br>
+                Механизм переноса воды, зависимый от температуры, в газообменных слоях PEFC, раскрытый с помощью
+                субсекундной
+                операндо рентгеновской томографической микроскопии. [J] <br>
+                Соавтор: <text style="color:rgb(250, 49, 14)">[TOYOTA]</text> | Цитируется: <text
+                  style="color:rgb(141, 20, 20)">[BOSCH]</text> <text style="color:rgb(133, 36, 197)">[Tsinghua
+                  Univ.]</text> <text style="color:rgb(36, 95, 197)">[Univ. of Toronto]</text><br>
+                2021 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [PSI]<br>
+                Влияние субстратов газообменных слоев на управление водой в PEFC: Часть I. Операндо насыщение жидкой
+                водой и
+                свойства газообмена [J] <br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> | Цитируется: <text
+                  style="color:rgb(74, 7, 241)">[Немецкий центр аэрокосмических исследований]</text> <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> <text style="color:rgb(133, 36, 197)">[Tsinghua
+                  Univ.]</text><br>
+                2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi [PSI]<br>
+                Лазерная структура газообменных слоев для улучшенной передачи воды и производительности топливных
+                элементов<br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> | Цитируется: <text
+                  style="color:rgb(74, 7, 241)">[Токийский технологический институт]</text> <text
+                  style="color:rgb(248, 114, 5)">[Гонконгский университет науки и технологии]</text> <text
+                  style="color:rgb(133, 36, 197)">[Tsinghua Univ.]</text><br>
+                2021 | <em><strong>ACS Appl. Energy Mater.</strong></em> [<a
+                  href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                Y. Nagai [TOYOTA], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, F. Marone, <strong>H. Xu*</strong>
+                [PSI],
+                F. N. Büchi.<br>
+                Улучшение управления водой в топливных элементах с помощью модификации микропористых слоев: быстрая
+                операндо
+                томографическая визуализация жидкой воды. [J] <br>
+                Соавтор: <text style="color:rgb(250, 49, 14)">[TOYOTA]</text> | Цитируется: <text
+                  style="color:rgb(241, 26, 7)">[MIT]</text> <text style="color:rgb(74, 7, 241)">[Немецкий центр для
+                  аэрокосмических исследований]</text> <text style="color:rgb(7, 38, 241)">[State Power Investment
+                  Co.]</text><br>
+                2019 | <em><strong>J. Power Sources</strong></em> [<a
+                  href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943"
+                  target="_blank">PDF</a>]
+              </li>
+            </ol>
+
+            <ul class="square">
+              <li><strong>Вычислительная визуализация / Глубокое обучение</strong></li>
+            </ul>
+
+            <ol>
+              <li>
+                M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof. M. Stampanoni
+                [ETH], F.
+                Marone [SLS]<br>
+                Классификация динамических процессов в временно разрешенной XTM с использованием глубокого обучения [J]
+                <br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> <text
+                  style="color:rgb(191, 9, 228)">[CWI Амстердам]</text> | Цитируется: <text
+                  style="color:rgb(236, 52, 36)">[Стэнфордский университет]</text> <text
+                  style="color:rgb(12, 26, 230)">[RWTH
+                  Aachen]</text> <br>
+                2021 | <em><strong>Scientific Reports</strong></em> [<a
+                  href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, Prof. J. Sijbers, Prof. M. Stampanoni [ETH], F.
+                Marone [SLS]<br>
+                Открытие динамики воды в топливных элементах с использованием временно разрешенных томографических
+                данных
+                микроскопии [J]<br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> <text
+                  style="color:rgb(104, 9, 228)">[Антверпенский университет]</text> | Цитируется: <text
+                  style="color:rgb(248, 101, 15)">[Токийский университет]</text> <text
+                  style="color:rgb(12, 117, 230)">[Университет
+                  Торонто]</text> <br>
+                2021 | <em><strong>Scientific Reports</strong></em> [<a
+                  href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [ETH]<br>
+                Оптимальное подавление шума на изображениях для операндо XTM жидкой воды в газообменных слоях PEFC
+                [J]<br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> | Цитируется: <text
+                  style="color:rgb(74, 7, 241)">[Институт химической физики Академии наук Даляня]</text> <text
+                  style="color:rgb(250, 49, 14)">[Университет Торонто]</text> <text
+                  style="color:rgb(133, 36, 197)">[Университет
+                  Колледжа Лондона]</text> <br>
+                2020 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                  href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima, H. Nguyen, K. Kishita, F. N. Büchi, J. Eller<br>
+                <strong>(Приглашено)</strong> Исследование субсекундной и субмикронной XTM-томографии жидкой воды в
+                PEFC-GDLs.
+                [J]<br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> | Цитируется: <text
+                  style="color:rgb(14, 97, 250)">[Европейский
+                  центр синхротронного излучения]</text> <text style="color:rgb(250, 49, 14)">[Национальный центр
+                  исследований
+                  топливных элементов США]</text> | <text style="color:rgb(14, 97, 250)">[Премия за лучший постер
+                  ECS]</text><br />
+                2019 | <em><strong>ECS Transactions</strong></em> [<a
+                  href="https://iopscience.iop.org/article/10.1149/09208.0011ecst" target="_blank">PDF</a>]
+              </li>
+
+              <li>
+                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N. Büchi, J. Eller
+                [PSI]<br>
+                Борьба с шумом: на границах субсекундной рентгеновской томографической микроскопии PEFC [J]<br>
+                Соавтор: <text style="color:rgb(8, 114, 31)">[Швейцарский источник света]</text> | Цитируется: <text
+                  style="color:rgb(74, 7, 241)">[Национальная лаборатория Аргона]</text> <text
+                  style="color:rgb(250, 49, 14)">[TOYOTA]</text> | <text style="color:rgb(8, 114, 31)">[Швейцарский
+                  источник
+                  света]</text> | <text style="color:rgb(14, 97, 250)">[Премия за лучший постер ModVal]</text><br>
+                2017 | <em><strong>ECS Transactions</strong></em> [<a
+                  href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830" target="_blank">PDF</a>]
+              </li>
+            </ol>
+
+            <ul class="square">
+              <li><strong>Наука о материалах / Химическая инженерия</strong></li>
+            </ul>
+
+            <ol>
+              <li>
+                Проф. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT], T. Zhang<br>
+                Простая синтезированная реакция распыления и характеристика иерархически пористых микросфер SnO2 для
+                улучшенных
+                солнечных элементов с чувствительностью к красителям. [J] <br>
+                2017 | <em><strong>RSC Advances</strong></em> [<a
+                  href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract"
+                  target="_blank">PDF</a>]
+                <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+
+              <li>
+                Проф. H. Zhang [BJTU], <strong>H. Xu*</strong> [BJTU], J. Wan, Проф. L. Yan, C. Dai<br>
+                Подготовка новых пористых порошков оксидов с помощью технологии реакции распыления. [J]<br>
+                2012 | <em><strong>Vacuum and Cryogenics</strong></em> [<a
+                  href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2012&filename=ZKDW201203005&uniplatform=NZKPT&v=n8kUCXQ29XK8uOcXQdI-5jgJqVfzr5uxF9oPXi_7Jb8CNlMTVCM7mmeU-Xw7WoTH"
+                  target="_blank">Ссылка</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+
+              <li>
+                Q. Xiaoyue, <strong>H. Xu*</strong> [BJTU], X. Zhou <br>
+                Разложение высокоактивного циклометрия с помощью ультразвуковой облучения в сочетании с фотокатализом с
+                использованием TiO2<br>
+                2012 | <em><strong>Chemistry Research</strong></em> [<a
+                  href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HXYA201203011&dbname=cjfdtotal&dbcode=CJFD&v=MTUxNDFnOC96aFlVN3pzT1QzaVFyUmN6RnJDVVI3aWVadVJ0RmkzaFVidk1MVFhTYjdHNEg5UE1ySTlFWllSNkQ="
+                  target="_blank">Ссылка</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+              </li>
+            </ol>
+
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              Патенты
+            </h1>
+            <ul class="square">
+              <li><span style="font-weight: bold;">Европейские патенты:</span><br></li>
+            </ul>
+            <ol>
+              <li>
+                <strong>Новый метод (не разглашается)</strong><br />
+                Изобретатели: <strong>H. Xu</strong> и др.<br />
+                2025 | Патент ЕС: на рассмотрении, заявка подана в Европейское патентное ведомство (ЕПВ)
+              </li>
+              <li>
+                <strong>Новый материал (не разглашается)</strong><br />
+                Изобретатели: <strong>H. Xu</strong> и др.<br />
+                2025 | Патент ЕС: на рассмотрении, заявка подана в Европейское патентное ведомство (ЕПВ)
+              </li>
+            </ol>
+
+            <ul class="square">
+              <li><span style="font-weight: bold;">Китайские патенты:</span><br></li>
+            </ul>
+            <ol>
+              <li>
+                <strong>Кольцевое устройство магнитной сепарации на газо-жидкостной границе [P]</strong><br />
+                Изобретатели: проф. M. Fu, проф. H. Zhang, <strong>H. Xu</strong> (BJTU), проф. L. Yan<br />
+                2013 | Патент КНР №: CN102441489B, выдан 11 окт. 2013 г. [<a
+                  href="https://patents.google.com/patent/CN102441489B/en" target="_blank">Выдан</a>]
+              </li>
+              <li>
+                <strong>Кольцевое устройство непрерывной работы магнитной сепарации на газо-жидкостной границе
+                  [P]</strong><br />
+                Изобретатели: проф. H. Zhang, <strong>H. Xu</strong> (BJTU), проф. M. Fu, проф. L. Yan<br />
+                2013 | Патент КНР №: CN102441490A, выдан 1 нояб. 2013 г. [<a
+                  href="https://patents.google.com/patent/CN102441490A/en" target="_blank">Выдан</a>]
+              </li>
+              <li>
+                <strong>Ультразвуковое-фотокаталитическое устройство очистки фруктов и овощей [P]</strong><br />
+                Изобретатели: X. Zhou, <strong>H. Xu</strong> (BJTU), проф. H. Jiang, X. Qi<br />
+                2012 | Патент КНР №: CN202311136U, выдан 9 мая 2012 г. [<a
+                  href="https://patents.google.com/patent/CN202311136U/en" target="_blank">Выдан</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+
+            <h1 class="mb-4">
+              Технические отчеты
+            </h1>
+            <ol>
+              <li>
+                <strong>H. Xu</strong> [TUM], Dr. B. Vinçon-Leite, Y. Luo<br>
+                Моделирование динамики цианобактерий для водохранилища YuQiao в Тяньцзине, Китай [R] <br>
+                2016 | Отчет по обучению. <text style="color:rgb(37, 142, 140)">[École des Ponts ParisTech]</text> &
+                <text style="color:rgb(30, 45, 73)">[École Polytechnique]</text>. Париж, Франция.
+              </li>
+
+              <li>
+                <strong>H. Xu</strong> [UR1], Dr. W. Lu, Dr. A. Madsen, Prof. S. Di Matteo<br>
+                Проектирование и строительство испытательной установки для линии разделения и задержки в Европейском
+                XFEL [R]<br>
+                2015 | Отчет о стажировке. <text style="color:rgb(67, 25, 237)">[Europäisches XFEL]</text>, Гамбург,
+                Германия. [<a href="https://arxiv.org/abs/2408.01472" target="_blank">PDF</a>]
+              </li>
+            </ol>
+            &nbsp;
+
+            <hr>
+
+            <h1 class="mb-4">
+              Исследования акций
+            </h1>
+            <ul class="square">
+              <li><strong>Макроэкономические исследования отрасли (регион Большого Китая):</strong><br>
+                2022 | <strong>Новые энергии</strong>: Двигатели предпринимательства в новой энергетической отрасли
+                Китая в рамках
+                политики "двойного углерода"<br>
+                2020 | <strong>Новые материалы</strong>: Полупроводниковые материалы, серия часть 4: 5G стимулирует
+                индустрию
+                оптической связи, материалы на фосфиде индия готовы к росту<br>
+                <hr>
+              </li>
+              <li><strong>Исследования первичного рынка (раунды финансирования A-D):</strong><br>
+                2021 | <strong>UISEE Technology</strong>: Серия отчетов о пионерах технологий UISEE: Поставщик решений
+                для
+                автономного вождения в нескольких сценариях<br>
+                2021 | <strong>SemiDrive Technology</strong>: Серия отчетов о пионерах технологий SemiDrive: Поставщик
+                интеллектуальных автомобильных чипов для автономного вождения<br>
+                2021 | <strong>Xi'an ESWIN Semiconductor</strong>: Аналитический отчет о компании Xi'an ESWIN
+                Semiconductor<br>
+                <hr>
+              </li>
+              <li><strong>Исследования вторичного рынка (акции A и компании, котирующиеся на биржах США):</strong><br>
+                2021 | <strong>National Silicon Industry</strong> (688126.SH): Ведущий пионер по производству больших
+                кремниевых
+                пластин, стимулирующий локализацию чипов (первичный отчет)<br>
+                2021 | <strong>CREE</strong> (NASDAQ:CREE): Серия отчетов о пионерах технологий CREE: Глобальный
+                поставщик
+                компонентов для питания/радиочастотных устройств и светодиодов (акции США)<br>
+                2021 | <strong>Jingwei Hirain</strong> (688326.SH): Серия отчетов о пионерах технологий Jingwei Hirain
+                Technology:
+                Поставщик технологий для автомобильной электроники<br>
+                2020 | <strong>TankeBlue</strong> (870013.OC): Ведущий отечественный производитель кремниевых пластин
+                SiC<br>
+                2020 | <strong>Hangzhou Li-on Microelectronics</strong> (605358.SH): Широкий рынок для отечественной
+                замены,
+                индустриализация крупных кремниевых пластин скоро начнется<br>
+                2020 | <strong>Shandong Sinocera</strong> (300285.SZ): Отрасль зубных керамик, благоприятные тенденции
+                для
+                материалов из циркония<br>
+              </li>
+            </ul>
+            &nbsp;
+
+
+            <hr>
+
+            <h1 class="mb-4">
+              Публичные наборы данных
+            </h1>
+            <ol>
+              <li>
+                <strong>TomoBank: Набор данных рентгеновской томографии для топливных элементов</strong><br>
+                Кураторы: M. Bührer, <strong>H. Xu*</strong> [PSI], F. Marone<br>
+                2019 | Министерство энергетики США - Национальная лаборатория Аргонн © Авторские права. Rev. f4253f55.
+                [<a href="https://tomobank.readthedocs.io/en/latest/source/data/docs.data.dynamic.html#fuel-cell-data"
+                  target="_blank">Ссылка</a>]
+              </li>
+            </ol>
+            &nbsp;
+
+            <hr>
+
+            <h1 class="mb-4">
+              Ассистент преподавателя
+            </h1>
+            <ol>
+              <li>
+                <strong>Технологии возобновляемых источников энергии II, Хранение и преобразование
+                  энергии</strong><br />
+                ETH Zürich, магистерский курс (529-0191-01L)<br />
+                2017-2019 | Весенний семестр [<a
+                  href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+                  target="_blank">Ссылка</a>]
+              </li>
+            </ol>
+            &nbsp;
+            <hr>
+            <h1 class="mb-4">
+              Конференции
+            </h1>
+
+            <ul class="square">
+              <!-- <hr> -->
+              <li><strong>Электрохимия / Физика / Наука о материалах:</strong><br>
+            </ul>
+
+            <ol>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Влияние распределения размеров пор на операционную насыщенность жидкостью в GDL.<br>
+                2019 | <em>236-е собрание Electrochemical Society (ECS)</em>, Атланта, США.
+                <strong>[Докладчик]</strong>
+                [<a href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Прогресс в 10Гц операционной рентгеновской томографической визуализации воды в GDL PEFC.<br>
+                2018 | <em>8-я Международная конференция по фундаментальным вопросам и развитию топливных элементов
+                  (FDFC)</em>,
+                Нант, Франция.
+                <strong>[Докладчик]</strong> [<a href="https://fdfc2019.sciencesconf.org/" target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Исследования распределения воды в газоотводящих слоях PEFC с помощью рентгеновской томографической
+                микроскопии<br>
+                2018 | <em>69-е ежегодное собрание International Society of Electrochemistry (ISE)</em>, Болонья,
+                Италия.
+                <strong>[Постер]</strong> [<a href="https://www.ise-online.org/ise-conferences/past_ISE-meetings.php"
+                  target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Распределение воды в газоотводящих слоях PEFC: Исследования с использованием рентгеновской
+                томографической
+                микроскопии<br>
+                2018 | <em>15-й симпозиум по моделированию и экспериментальной валидации топливных элементов
+                  (ModVal)</em>, Аргау,
+                Швейцария.
+                <strong>[Приз за лучший постер]</strong> [<a href="https://indico.psi.ch/event/5151/"
+                  target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Квантование коэффициента контрастно-шумового отношения для рентгеновской компьютерной томографии воды в
+                полимерных
+                электролитных топливных элементах<br>
+                2017 | <em>6-й Европейский форум по PEFC и электролизерам (EFCF)</em>, Люцерн, Швейцария.
+                <strong>[Докладчик]</strong> [<a
+                  href="https://past.efcf.com/fileadmin/EFCF-Pict-Logo/EFCF_2017/Download/6th_PEFC-Electrol-Forum_2017_4-7July-FinAnnounc-Progr_s.pdf"
+                  target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller<br>
+                Оценка отношения контрастности и шума для рентгеновской компьютерной томографии воды в полимерных
+                электролитных
+                топливных элементах<br>
+                2017 | <em>14-й симпозиум по моделированию и экспериментальной валидации топливных элементов
+                  (ModVal)</em>,
+                Карлсруэ, Германия.
+                <strong>[Постер]</strong> [<a href="https://www.modval14.kit.edu/" target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum<br>
+                Наночастицы в термореактивных диблок-сополимерах для магнитных сенсорных приложений.<br>
+                2016 | <em>Ежегодная встреча проекта EU Erasmus MaMaSELF</em>, Риги-Берг, Швейцария.
+                <strong>[Докладчик]</strong> [<a href="https://www.mamaself.eu/status-meeting"
+                  target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum<br>
+                Магнитные свойства и структура термореактивных нанокомпозитных тонких пленок на основе
+                полистирола-блок-поли(N-изопропилакриламида)/оксид железа.<br>
+                2016 | <em>80-е ежегодное собрание Немецкого физического общества и Весенняя встреча DPG</em>,
+                Регенсбург, Германия.
+                <strong>[Постер]</strong> [<a
+                  href="https://www.dpg-physik.de/aktivitaeten-und-programme/tagungen/fruehjahrstagungen"
+                  target="_blank">Ссылка</a>]
+              </li>
+              <li>
+                <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu<br>
+                Мезопористые микросферы SnO2: Синтез, характеристика и применение в улучшенных солнечных батареях с
+                окрашенным
+                сенсибилизатором и литиевых батареях.<br>
+                2013 | <em>Семинар по энергетическим частицам в Университете Цинхуа</em>, Пекин, Китай.
+                <strong>[Постер]</strong> [<a href="https://www.tsinghua.edu.cn/info/1175/20925.htm"
+                  target="_blank">Ссылка</a>]
+              </li>
+            </ol>
+            &nbsp;
+          </div>
+
+
+
+
+          <div class="col-lg-3 ml-auto">
+
+            <div class="section-title">
+              <h2>Научные интересы</h2>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-sun"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Возобновляемые источники энергии</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Водородная энергия / Топливные элементы / Электролизеры / Солнечные батареи /
+                    Литий-ионные
+                    батареи</span>
+                  <span class="date-read">2013–Настоящее время</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-file-alt"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Энергетическая экономика и политика</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Китай / ЕС / Стратегия водорода / Энергетический переход</span>
+                  <span class="date-read">2023–Настоящее время</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-bus"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Умный транспорт с низким уровнем углерода</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Безуглеродный транспорт / Повышение эффективности / Автономное вождение</span>
+                  <span class="date-read">2021–Настоящее время</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-tools"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Функциональные материалы</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Полупроводниковые материалы / Углеродные материалы / Кристаллические материалы /
+                    Функциональные полимеры</span>
+                  <span class="date-read">2013–2016</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex">
+              <div class="number align-self-start"><i class="fas fa-radiation"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Рентгеновская визуализация</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Рентгеновская компьютерная томография (КТ) / Малый угол рентгеновского рассеяния
+                    (SAXS) /
+                    Рентгеновская абсорбционная спектроскопия</span>
+                  <span class="date-read">2016–2021</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="trend-entry d-flex pl-0">
+              <div class="number align-self-start"><i class="fas fa-eye"></i></div>
+              <div class="trend-contents">
+                <h2><a href="#">Компьютерное зрение</a></h2>
+                <div class="post-meta">
+                  <span class="d-block">Сегментация изображений / 3D визуализация / Удаление шума с изображений /
+                    Свёрточные
+                    нейронные сети</span>
+                  <span class="date-read">2017–2021</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!---
+    <div class="site-section subscribe bg-light">
+      <div class="container">
+        <form action="#" class="row align-items-center">
+          <div class="col-md-5 mr-auto">
+            <h2>Newsletter Subcribe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    --->
+    <p class="">&nbsp;</p>
+    <div class="site-section subscribe bg-light" style="position: relative">
+      <!-- 上方 hr -->
+      <!-- <hr
+                style="
+                  height: 1px;
+                  background-color: gray;
+                  border: none;
+                  margin: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  width: 100vw;
+                  transform: translateX(-50%);
+                "
+              /> -->
+      <h2>&nbsp;&nbsp;</h2>
+      <div class="container">
+        <form action="#" class="row align-items-start">
+          <!-- 第一栏 -->
+          <div class="col-md-4">
+            <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+            <h2><img src="./images/wflags/eu.png"
+                style="
+                                                                                                                                height: 0.9em;
+                                                                                                                                vertical-align: -6%;
+                                                                                                                                display: inline-block;
+                                                                                                                                margin-right: 0em;
+                                                                                                                              " /> Связаться со мной</h2>
+            <p>
+              Э-почта | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+              Линкедин |
+              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+              Инстаграм |
+              <a href="https://www.instagram.com/helios.hsu/" target="_blank">instagram.com/helios.hsu</a><br /><br />
+              <span class="currentDateInLang" language="russian"></span><br />
+              <a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+                id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                title="timezone - Zurich" target="_blank" rel="nofollow">Время в Мюнхене
+                [CET]</a>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                        border: none;
+                        border-top: 1px solid #c7c7c7;
+                        margin: 0px 0;
+                      " />
+          </div>
+
+          <!-- 第二栏 -->
+          <div class="col-md-3">
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            <!-- weather widget start --><a id="weather" target="_blank"
+              href="https://www.booked.net/weather/beijing-18391"><img
+                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                alt="booked.net" /></a><!-- weather widget end -->
+            <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+              style="width: 55px; height: 60px" /><br /><br />
+            <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                style="
+                                                                                                                        height: 0.9em;
+                                                                                                                        vertical-align: -6%;
+                                                                                                                        display: inline-block;
+                                                                                                                        margin-right: 0em;
+                                                                                                                      " />
+              Судьба нас свела</h2>
+            <p>
+              Фотография |
+              <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+              Письмо |
+              <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
+              Ученый |
+              <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+
+              <a class="jieqi-24"
+                language="russian"></a> - <span class="currentZodiacInLang" language="russian"></span> <br>
+              <a href="//24timezones.com/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+                style="text-decoration: none" class="clock24"
+                id="tz24-1737245506-c1166-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InJ1In0="
+                title="время Москва" target="_blank" rel="nofollow">Время в Москве [MSK]</a>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                        border: none;
+                        border-top: 1px solid #c7c7c7;
+                        margin: 0px 0;
+                      " />
+          </div>
+
+
+    <!-- 第三栏 -->
+<div class="col-md-5">
+  <br />
+  <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+
+    <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
+       style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+      <img src="images/default-map.png" alt="Visitor Map"
+           class="fallback-img">
+    </a>
+
+  </div>
+
+  <style>
+    /* 默认电脑端偏移 */
+    #clustrmap-container {
+      transform: translateX(15px) !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* 默认图片样式：PC/iPad 保持最大 470px */
+    .fallback-img {
+      width: 100%;
+      max-width: 470px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* 移动端特殊处理：让图片铺满屏幕宽度 */
+    @media (max-width: 480px) {
+      .fallback-img {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      #clustrmap-container {
+        transform: translateX(0) !important; /* 移动端不再横向偏移 */
+      }
+    }
+
+    @media (max-width: 768px) {
+      #clustrmap-container {
+        transform: translateX(0px) !important;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // 判断是否是移动端或 iPad
+      var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.id = "clustrmaps";
+        script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+        script.onload = function () {
+          var fallback = document.getElementById("clustrmap-fallback-link");
+          if (fallback) fallback.style.display = "none";
+        };
+
+        document.getElementById("clustrmap-container").appendChild(script);
+      } else {
+        console.log("📱 Mobile device detected, showing static fallback image.");
+      }
+    })();
+  </script>
+</div>
+        </form>
+      </div>
+      <br />
+
+      <!-- <div class="container">
+                <form action="#" class="row align-items-center">
+                  <div class="col-md-5 mr-auto"></div>
+                  <div class="col-md-6 ml-auto"></div>
+                </form>
+              </div>
+              <h2>&nbsp;&nbsp;</h2> -->
+      <!-- 下方 hr -->
+      <hr style="
+                  height: 1px;
+                  background-color: gray;
+                  border: none;
+                  margin: 0;
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  width: 150vw;
+                  transform: translateX(-50%);
+                " />
+    </div>
+
+    <!-- .site-wrap -->
+    <!-- <hr
+              style="
+                height: 1px;
+                border-width: 0;
+                color: gray;
+                background-color: gray;
+              "
+            /> -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              <p>
+                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
+                            height: 0.9em;
+                            vertical-align: -6%;
+                            display: inline-block;
+                            margin-right: 0em;
+                          " />
+                <text>Приветствую вас, друзья с
+                  <span class="location">Земли</span>! За пределами
+                  <span class="distance-info"> ∞ км</span> расстояния мы всегда связаны</text>
+                <img src="./images/wflags/de.png" style="
+                            height: 0.9em;
+                            vertical-align: -6%;
+                            display: inline-block;
+                            margin-right: 0em;
+                          " />
+                <br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Авторские права &copy; 2017 -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                | Hong Xu | Обновлено: <span class="web_update_month"></span>. <span class="web_update_year"></span> г.
+                |
+                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <!-- <a href="https://info.flagcounter.com/D897"
+                          ><img
+                            src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                            border="0"
+                        /></a> -->
+                <a href="https://info.flagcounter.com/D897" style="
+                            display: inline-block;
+                            width: 94%;
+                            height: 95%;
+                            overflow: hidden;
+                            position: relative;
+                          ">
+                  <img
+                    src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                    border="0" style="
+                              width: auto;
+                              height: auto;
+                              object-fit: fill;
+                              object-position: top right;
+                              transform: translateX(3.5%) translateY(30%);
+                            " />
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .site-wrap -->
+
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#ff5e15" />
+      </svg>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+
+
+    <script src="js/aos.js"></script>
+
+    <script src="js/jquery.sticky.js"></script>
+
+    <script src="js/mobilenav.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/user_ip_ru.js" type="module"></script>
+    <script type="text/javascript" src="update_info_script.js"></script>
+    <script src="js/24jieqi.js"></script>
+  </div>
+  </div>
+</body>
+
+</html>

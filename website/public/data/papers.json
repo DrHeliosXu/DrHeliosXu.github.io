@@ -1,0 +1,51 @@
+{
+  "papers": [
+    {
+      "id": "paper-operando-xray-water-transport",
+      "year": 2021,
+      "title": "Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by subsecond operando X-ray tomographic microscopy",
+      "authors": [
+        "H. Xu",
+        "S. Nagashima",
+        "H. Nguyen",
+        "K. Kishita",
+        "F. Marone",
+        "F. N. Buechi",
+        "J. Eller"
+      ],
+      "journal": "Journal of Power Sources",
+      "doi": "https://doi.org/10.1016/j.jpowsour.2021.229492",
+      "featured": true
+    },
+    {
+      "id": "paper-subsecond-operando-liquid-water",
+      "year": 2021,
+      "title": "Subsecond Operando X-ray Tomographic Microscopy of Liquid Water in Polymer Electrolyte Fuel Cells",
+      "authors": [
+        "H. Xu",
+        "T. J. Schmidt",
+        "M. Stampanoni",
+        "J. Eller"
+      ],
+      "journal": "PhD dissertation highlight",
+      "doi": "https://doi.org/10.3929/ethz-b-000487441",
+      "featured": true
+    },
+    {
+      "id": "paper-gdl-water-management",
+      "year": 2021,
+      "title": "Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando liquid water saturation and gas diffusion properties",
+      "authors": [
+        "H. Xu",
+        "M. Buehrer",
+        "F. Marone",
+        "T. J. Schmidt",
+        "F. N. Buechi",
+        "J. Eller"
+      ],
+      "journal": "Journal of The Electrochemical Society",
+      "doi": "https://doi.org/10.1149/1945-7111/ac1035",
+      "featured": true
+    }
+  ]
+}

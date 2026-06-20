@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <title>徐泓 | 신에너지 박사 | MBA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timeline-simple.css">
+    <script src="https://use.typekit.net/bkt6ydm.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+
+    <style>
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            /* 默认使用正常字体 */
+            color: #373737;
+            line-height: 1.6;
+        }
+
+
+        select {
+            width: 150px;
+            /* 设置宽度 */
+            height: 15px;
+            /* 设置高度 */
+            border-radius: 0 !important;
+            /* 去除圆角 */
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+            /* 设置阴影 */
+            border: 1px solid #ccc;
+            /* 边框颜色 */
+            padding: 2px 2px;
+            /* 内边距，提升可点击区域 */
+            background-color: #fff;
+            /* 背景色 */
+            font-size: 14px;
+            /* 字体大小 */
+            font-family: 'Nanum Gothic', sans-serif;
+            /* 字体字形，使用无衬线字体 */
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <!-- block save as
+  ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="kr.html" class="site-logo">
+                            <img src="images/logo-full-kr.png" alt="Image" class="site-logo" style="height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+                                    <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                                        <a href="https://www.linkedin.com/in/xuhong/"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-linkedin"></span>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-google"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                                            class="social-icon d-inline-block p-3">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" style="
+                                                                              width: auto;
+                                                                              height: 25px;
+                                                                              margin-left: 5px;
+                                                                              border-radius: 0;
+                                                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                              text-align: center; /* 新增 */
+                                                                              text-align-last: center; /* 确保选中的选项居中 */
+                                                                            "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="cn-news.html">中文</option>
+                                            <option value="jp-news.html">日本語</option>
+                                            <option value="kr-news.html" selected>한국어</option>
+                                            <option value="th-news.html">ไทย</option>
+                                            <option value="de-news.html">Deutsch</option>
+                                            <option value="en-news.html">English</option>
+                                            <option value="es-news.html">Español</option>
+                                            <option value="fr-news.html">Français</option>
+                                            <option value="it-news.html">Italiano</option>
+                                            <option value="ru-news.html">Русский</option>
+                                            <option value="ar-news.html">اللغة العربية</option>
+                                        </select>
+                                        <select id="content-list-2" name="content-list"
+                                            style="
+                                                                                                                                                                width: auto;height: 25px;
+                                                                                                                                                                margin-left: 5px;
+                                                                                                                                                                border-radius: 0;
+                                                                                                                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                                                                text-align: center; /* 新增 */
+                                                                                                                                                                text-align-last: center; /* 确保选中的选项居中 */
+                                                                                                                                                                "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="kr.html">홈</option>
+                                            <option value="kr-research.html">연구</option>
+                                            <option value="kr-news.html" selected>뉴스</option>
+                                            <option value="kr-projects.html">프로젝트</option>
+                                            <option value="kr-about.html">자기소개</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right" role="navigation">
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                                    style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
+                                    <li>
+                                        <a href="kr.html" class="nav-link text-left">홈&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-research.html" class="nav-link text-left">연&nbsp;구</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-news.html" class="nav-link text-left">뉴&nbsp;스</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-projects.html" class="nav-link text-left">프&nbsp;로&nbsp;젝&nbsp;트</a>
+                                    </li>
+                                    <li>
+                                        <a href="kr-about.html" class="nav-link text-left">자&nbsp;기&nbsp;소&nbsp;개</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center">
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages-2" name="languages" style="
+                                                  width: auto;height: 25px;
+                                                  margin-left: 5px;
+                                                  border-radius: 0;
+                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                  text-align: center; /* 新增 */
+                                                  text-align-last: center; /* 确保选中的选项居中 */
+                                                "
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn-news.html">中文</option>
+                                    <option value="jp-news.html">日本語</option>
+                                    <option value="kr-news.html" selected>한국어</option>
+                                    <option value="th-news.html">ไทย</option>
+                                    <option value="de-news.html">Deutsch</option>
+                                    <option value="en-news.html">English</option>
+                                    <option value="es-news.html">Español</option>
+                                    <option value="fr-news.html">Français</option>
+                                    <option value="it-news.html">Italiano</option>
+                                    <option value="ru-news.html">Русский</option>
+                                    <option value="ar-news.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">목 차</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="kr.html">徐 泓 <small>박사</small> </a><br />
+                    </li>
+                    <li>
+                        <a href="kr-research.html">연구 ➔</a>
+                    </li>
+                    <li>
+                        <a href="kr-news.html">뉴스 ➔</a>
+                    </li>
+                    <li>
+                        <a href="kr-projects.html">프로젝트 ➔</a>
+                    </li>
+                    <li>
+                        <a href="kr-about.html">자기소개 ➔</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+        <!------>
+        <!-- 简化版导航栏内容 -->
+        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <img src="images/logo-full-kr-long.png" alt="Image" class="site-logo"
+                    style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+                <div></div>
+
+                <div style="display: flex; align-items: center;">
+                    <a class="flag d-inline-block d-lg-none">
+                        </a>
+                    <select id="languages-3" name="languages" style="
+                    width: auto;height: 25px;
+                    margin-left: 5px;
+                    border-radius: 0;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    text-align: center; /* 新增 */
+                    text-align-last: center; /* 确保选中的选项居中 */
+                    " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="cn-news.html">中文</option>
+                        <option value="jp-news.html">日本語</option>
+                        <option value="kr-news.html" selected>한국어</option>
+                        <option value="th-news.html">ไทย</option>
+                        <option value="de-news.html">Deutsch</option>
+                        <option value="en-news.html">English</option>
+                        <option value="es-news.html">Español</option>
+                        <option value="fr-news.html">Français</option>
+                        <option value="it-news.html">Italiano</option>
+                        <option value="ru-news.html">Русский</option>
+                        <option value="ar-news.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list" name="content-list" style="
+                width: auto;height: 25px;
+                margin-left: 5px;
+                border-radius: 0;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                text-align: center; /* 新增 */
+                text-align-last: center; /* 确保选中的选项居中 */
+                " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="kr.html">홈</option>
+                        <option value="kr-research.html">연구</option>
+                        <option value="kr-news.html" selected>뉴스</option>
+                        <option value="kr-projects.html">프로젝트</option>
+                        <option value="kr-about.html">자기소개</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!------>
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 single-content">
+                        <p class="mb-5 d-sm-block d-none">
+                            &nbsp;
+                            <div class="mb-5 d-sm-block d-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+
+                                <!-- 火焰容器 -->
+                                <div id="flame-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text"
+                                     style="position: absolute; bottom: 5%; right: 2%; color: white;
+                                            font-size: 1rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                  만리장성 · 봉화전신
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                  { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                  { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                  { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "41.8%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "53.8%", top: "62%", width: 12, scale: 1.7 },
+                                  { left: "81%", top: "9.5%", width: 57, scale: 1.0 }
+                                ];
+                                const container = document.getElementById('flame-container');
+                                const flameElements = [];
+                                const beaconText = document.getElementById('beacon-text');
+                                // 初始化火焰元素
+                                flames.forEach((f) => {
+                                  const flame = document.createElement('img');
+                                  flame.src = "images/fire-large.gif";
+                                  flame.classList.add('flame');
+                                  flame.style.left = f.left;
+                                  flame.style.top = f.top;
+                                  flame.style.width = f.width + "px";
+                                  flame.style.transform = `scale(${f.scale})`;
+                                  container.appendChild(flame);
+                                  flameElements.push(flame);
+                                });
+                                function animateFlamesLoop() {
+                                  // 1. 全部熄灭
+                                  flameElements.forEach(f => f.style.opacity = 0);
+                                  beaconText.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements.forEach((flame, index) => {
+                                    setTimeout(() => {
+                                      flame.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime = flameElements.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 1;
+                                  }, totalAppearTime);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 0;
+                                    flameElements.slice().reverse().forEach((flame, index) => {
+                                      setTimeout(() => {
+                                        flame.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime = totalAppearTime + 3000 + flameElements.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop, totalCycleTime);
+                                }
+                                animateFlamesLoop();
+                              </script>
+                        </p>
+
+                        <p class="mb-5 d-sm-none" style="margin-top: -20px;">
+                            &nbsp;
+                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -60px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
+
+                                <!-- 火焰容器 -->
+                                <div id="flame-container-2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text-2"
+                                     style="position: absolute; bottom: 5%; right: 4%; color: white;
+                                            font-size: 0.9rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                   만리장성 · 봉화전신
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames2 = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                //   { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                //   { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                //   { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "5%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "24%", top: "63%", width: 10, scale: 1.7 },
+                                  { left: "69%", top: "10.5%", width: 48, scale: 1.0 }
+                                ];
+
+                                const container2 = document.getElementById('flame-container-2');
+                                const flameElements2 = [];
+                                const beaconText2 = document.getElementById('beacon-text-2');
+
+                                // 初始化火焰元素
+                                flames2.forEach((f) => {
+                                  const flame2 = document.createElement('img');
+                                  flame2.src = "images/fire-large.gif";
+                                  flame2.classList.add('flame');
+                                  flame2.style.left = f.left;
+                                  flame2.style.top = f.top;
+                                  flame2.style.width = f.width + "px";
+                                  flame2.style.transform = `scale(${f.scale})`;
+                                  container2.appendChild(flame2);
+                                  flameElements2.push(flame2);
+                                });
+                                function animateFlamesLoop2() {
+                                  // 1. 全部熄灭
+                                  flameElements2.forEach(f => f.style.opacity = 0);
+                                  beaconText2.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements2.forEach((flame2, index) => {
+                                    setTimeout(() => {
+                                      flame2.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime2 = flameElements2.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 1;
+                                  }, totalAppearTime2);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 0;
+                                    flameElements2.slice().reverse().forEach((flame2, index) => {
+                                      setTimeout(() => {
+                                        flame2.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime2 + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime2 = totalAppearTime2 + 3000 + flameElements2.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop2, totalCycleTime2);
+                                }
+                                animateFlamesLoop2();
+                              </script>
+                        </p>
+
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+                            뉴스 되돌아보기
+                            <select id="event-selector" name="event-selector"
+                                style="
+                                                                                                  width: 90px;
+                                                                                                  height: 25px;
+                                                                                                  margin-left: 5px;
+                                                                                                  border-radius: 0;
+                                                                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                  text-align: center;
+                                                                                                  text-align-last: center;">
+                                <option value="default" selected>국가 선택</option>
+                            </select>
+                        </h1>
+                        <style>
+                            @media (max-width: 767px) {
+                              h1.mb-4[style*="display: flex"] {
+                                margin-top: -20px !important;
+                              }
+                            }
+                            @media (min-width: 768px) {
+                              h1.mb-4[style*="display: flex"] {
+                                margin-top: 0px !important;
+                              }
+                            }
+                            </style>
+
+                        <div class="container-fluid">
+                            <div class="row example-basic">
+                                <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1">
+                                    <ul class="timeline">
+                                        <li class="timeline-item period">
+
+                                            <div class="timeline-info"></div>
+                                            <hr>
+                                            <div class="timeline-content">
+                                                <h3 class="timeline-title">2025 | 뱀의 해 <img src="./images/12-snake.png"
+                                                        alt="flag"
+                                                        style="height: 47px; position: relative; top: -3px;" /></h3>
+                                                <h6>올해, <a
+                                                        href="https://www.pillsburylaw.com/en/services/regulatory/trump-resource-center.html"
+                                                        target="_blank">트럼프
+                                                        2.0</a>은 미국의 기술, 에너지, <a
+                                                        href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+                                                        target="_blank">관세 시스템</a>을 재구성했으며, <a
+                                                        href="https://www.worldoil.com/news/2024/10/7/saudi-arabia-to-invest-10-billion-in-green-hydrogen-production/"
+                                                        target="_blank">중동의 국부펀드</a>는 <a
+                                                        href="https://www.spglobal.com/commodity-insights/en/news-research/blog/energy-transition/011325-middle-east-eyes-global-role-in-green-hydrogen-trade"
+                                                        target="_blank">그린 수소</a> 회랑에 전면 투자했습니다. <a
+                                                        href="https://irregularwarfarecenter.org/publications/insights/the-emerging-potential-for-quantum-computing-in-irregular-warfare/"
+                                                        target="_blank">양자 컴퓨팅</a>과 <a
+                                                        href="https://www2.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html"
+                                                        target="_blank">고급 칩</a> 전쟁이 미국, 중국, 유럽 간에 격화되었으며, <a
+                                                        href="https://www.cep.eu/eu-topics/details/eu-energy-sovereignty-cepadhoc.html"
+                                                        target="_blank">에너지 주권</a>의 미래
+                                                    전장은 지상에서 클라우드로 이동했습니다. 세계 평화와 더 나은 내일...</h6>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 10월 14일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">입추 귀국 친척 방문 여행 시작: 뮌헨－방콕－상하이－허페이－베이징－방콕－뮌헨
+                                                </h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 09월 24일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「교통 동향 및 경제 작업반」 제38차 회의 참석
+                                                </h5>
+                                                <p>주제: Working Party on Transport Trends and Economics<br>장소:
+                                                    스위스 제네바 유엔 팔레 데 나시옹 / 주최: UNECE
+                                                </p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 08월 23일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「잘츠부르크 글로벌 퓨처 포럼」 참석
+                                                </h5>
+                                                <p>주제: 잘츠부르크 글로벌 미래 포럼: 오늘의 미래 지도 작성<br>장소:
+                                                    오스트리아 잘츠부르크 / 주최: Salzburg Global
+                                                </p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 07월 27일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">“달마이어 렌탁 2025” 경마대회 관람</h5>
+                                                <p>주제: Großer Dallmayr-Preis<br>장소: 독일 뮌헨 / 주최: 달마이어</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 06월 27일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2025년 「유럽 자동화」 산업 전시회 참가</h5>
+                                                <p>주제: Automatica 2025<br>장소: 독일 뮌헨 / 주최: Messe München</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 05월 08일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2025년 「유럽 스마트 에너지」 산업 전시회 참가</h5>
+                                                <p>주제: The smarter E Europe 2025<br>장소: 독일 뮌헨 / 주최: Messe München</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/jp.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">2025년 04월 24일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2025년 「오사카·간사이 엑스포」 Osaka Expo 2025 방문</h5>
+                                                <p>주제: 생명이 빛나는 미래 사회의 디자인<br>장소: 일본 오사카 / 주최: 오사카·간사이 엑스포</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 04월 20일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">부활절 동아시아 여행 시작:
+                                                    상하이-충칭-청두-오사카-도쿄-타이베이-홍콩-선전-난징</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 04월 03일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「유엔 유럽경제위원회 교통부문」 작업 그룹 회의 참가</h5>
+                                                <p>주제: Development of a compendium of best practices<br>장소: UN Geneva &
+                                                    Online / 주최: UNECE e-Mobility Task Force
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 04월 01일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2025년 「하노버 산업 박람회」 참가</h5>
+                                                <p>주제: Shaping the future with technology<br>장소: 독일 하노버 / 주최: Hannover
+                                                    Messe</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 03월 24일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「유엔 유럽경제위원회 지속 가능한 에너지 부문」 세미나 참가</h5>
+                                                <p>주제: 수소 에너지 시장의 지속 가능한 성장 촉진<br>장소: UN Geneva & Online / 주최: UNECE
+                                                    Sustainable Energy</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 02월 15일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「뮌헨 안전 보장 회의」 교향악단 공연에 참석</h5>
+                                                <p>주제: 평화와 조화에서 멀어지다<br>장소: 레지던츠 뮌헨 / 주최: 뮌헨 안전 보장 회의 (MSC)</p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 01월 28일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「뮌헨 중국 춘절 파티」에 참가</h5>
+                                                <p>주제: 뮌헨의 봄 /
+                                                    장소: 뮌헨 구국회의사당
+                                                </p>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 01월 16일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「외교 정책」 저널 부편집장 카메론 아바디의 뮌헨에서의 강연에 참석</h5>
+                                                <p>주제: 기후 운동가들: 왜 우리의 환경 정책은 효과가 없는가<br>
+                                                    장소: 아메리카하우스 뮌헨
+                                                </p>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/cz.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2025년 01월 01일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">「베이징-프라하」 비행기에서 새해를 기념!</h5>
+                                                <p></p>
+
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2024 | 용의 해 <img src="./images/12-dragon.png"
+                                                        alt="flag"
+                                                        style="height: 47px; position: relative; top: -8px;" /></h3>
+                                                <h6>이 해에 중국은 첫 번째 <a
+                                                        href="https://climatecooperation.cn/climate/china-releases-its-first-energy-law/"
+                                                        target="_blank">에너지법</a>을 공식적으로 통과시켰습니다. <a
+                                                        href="https://www.pwc.com/gx/en/services/tax/esg-tax/cbam-supply-chain-imperatives.html"
+                                                        target="_blank">EU CBAM
+                                                        탄소 관세</a>는 세계 산업의 탈탄소화를 촉진했습니다. <a
+                                                        href="https://www.imperial.ac.uk/news/242258/breakthrough-fusion-experiment-generates-excess-energy/"
+                                                        target="_blank">제어 핵융합</a>은 처음으로 순에너지 이익을 달성했으며, <a
+                                                        href="https://commonslibrary.parliament.uk/what-is-the-global-south/"
+                                                        target="_blank">글로벌 사우스 국가들</a>은 <a
+                                                        href="https://responsiblestatecraft.org/dedollarization-china-russia/"
+                                                        target="_blank">미국 달러의 석유 패권</a>에
+                                                    도전했습니다——<a
+                                                        href="https://www.unep.org/topics/climate-action/climate-finance"
+                                                        target="_blank">기후 금융</a>과 기술 혁명은 인류
+                                                    문명의 기초 코드를 다시 쓰고 있습니다...</h6>
+                                            </div>
+                                        </li>
+
+
+                                        <li class="timeline-item">
+                                            <!-- <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024年12月22日</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">受邀回国参加广东省科技厅“百名海外博士博后南粤行”参访活动</h5>
+                                                <p></p>
+                                                <div class="image-gallery"
+                                                    style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; z-index: 199;">
+                                                    <figure style="margin: 0;">
+                                                        <img src="./images/news/IMG_9449.jpeg" alt="图片1"
+                                                            style="max-height: 130px; width: auto; cursor: pointer;"
+                                                            onclick="openLightbox(0)">
+                                                    </figure>
+                                                    <figure style="margin: 0;">
+                                                        <img src="./images/news/IMG_9481.jpeg" alt="图片2"
+                                                            style="max-height: 130px; width: auto; cursor: pointer;"
+                                                            onclick="openLightbox(1)">
+                                                    </figure>
+                                                </div>
+                                            </div> -->
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 12월 04일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">잘츠부르크 - 한국고등교육재단(KFAS) 공동 주최 세미나 시작</h5>
+                                                <p>주제: KFAS-SALZBURG Global Leadership Initiative - 기술 연결<br>장소: Schloss
+                                                    Leopoldskron / 주최: 잘츠부르크 글로벌 세미나</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 10월 20일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">제20회 잘츠부르크 유럽 정상 회담 참석: 개혁 없이는 미래가 없다</h5>
+                                                <p>주제: 20th Salzburg Europe Summit EU: No Future without Reforms<br>장소:
+                                                    잘츠부르크 시청 / 주최: Institut der Regionen
+                                                    Europas (IRE)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 09월 23일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2024 중관춘 과학 도시 해외 소개 회의(뮌헨 특별 세션) 참석</h5>
+                                                <p>장소: 뮌헨 어반 콜랩 / 주최: 중관춘 과학 도시</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 09월 07일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">중국으로 귀국하여 2024 우후 저공 경제 발전 대회 참석</h5>
+                                                <p>장소: 우후 이거 국제 박람회 센터 / 주최: 우후 시 정부</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 08월 14일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">아델 뮌헨 콘서트 관람!</h5>
+                                                <p>장소: 메세 슈타트 뮌헨 | 주최: Adele in Munich</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 6월 11일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2024 UN 본 기후 변화 회의 참석</h5>
+                                                <p>주제: 2024 Bonn Climate Change Conference<br>장소: UN Bonn Campus | 주최:
+                                                    UN Framework Convention on Climate Change
+                                                    (UNFCCC)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 06월 08일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">영국과 아일랜드 순회 여행 시작: 잉글랜드 - 웨일즈 - 스코틀랜드 - 북아일랜드
+                                                    - 아일랜드</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 05월 29일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">UN 유럽 경제 위원회 E-Mobility Task Force 참석</h5>
+                                                <p>장소: 제네바 UN 본부 / 주최: UN 유럽 경제 위원회 (UNECE)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 05월 02일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Aspiring Leader로서 제53회 스위스 샌갤런 국제 경제 포럼 참석
+                                                </h5>
+                                                <p>주제: 53rd St. Gallen Symposium - Confronting Scarcity<br>장소: 샌갤런 대학 /
+                                                    주최: 샌갤런 포럼</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 04월 22일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2024 하노버 산업 박람회 참석</h5>
+                                                <p>주제: Energizing a Sustainable Industry <br>장소: 하노버 전시 센터 / 주최: 하노버 메세
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 04월 17일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">스위스 PSI 연구소에서 제40회 스위스 전기화학 심포지엄 참석</h5>
+                                                <p>주제: Critical Raw Materials for the Energy Transition<br>장소: 아라우 문화 회의
+                                                    센터 / 주최: 제40회 스위스 전기화학 심포지엄 / PSI</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2024년 03월 07일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">UN 유럽 경제 위원회 기후 변화 및 내륙 교통 전문가 그룹 회의에서 발표
+                                                </h5>
+                                                <p>주제: Group of Experts on Assessment of Climate Change Impacts and
+                                                    Adaptation for Inland Transport<br>장소: 제네바
+                                                    UN 본부 / 주최: UN 유럽 경제 위원회 (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2023 | 토끼의 해 <img
+                                                        src="./images/12-rabbit.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -5px;" /></h3>
+                                                <h6>이 해에는 <a href="https://unfccc.int/cop28/5-key-takeaways">UAE
+                                                        COP28</a>이 처음으로 "<a
+                                                        href="https://www.brookings.edu/articles/why-are-fossil-fuels-so-hard-to-quit/">화석
+                                                        연료의 단계적 폐지</a>"를 결정했고, <a
+                                                        href="https://www.iea.org/reports/global-ev-outlook-2024/trends-in-electric-cars">중국의
+                                                        전기차 수출</a>이 세계 1위를 차지했으며,
+                                                    <a
+                                                        href="https://www.offshore-energy.biz/worlds-longest-and-deepest-e2-4-billion-subsea-green-electricity-interconnector-given-a-go-at-mediterranean-energy-map-metamorphosis/">유라시아
+                                                        해저 전력망 프로젝트</a>가 시작되었습니다——기존 에너지와 신에너지의 전환점이 <a
+                                                        href="https://www.nature.com/articles/d41586-024-03408-z">AI 계산
+                                                        능력의 폭발적 성장</a>과 충돌했습니다...
+                                                </h6>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 12월 05일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">옥스포드 에너지 연구소의 수소 에너지 세미나 참석</h5>
+                                                <p>주제: 수소 경제를 위한 환경 만들기: 정책과 규제<br>장소: 옥스포드 대학교 세인트 휴즈 칼리지 / 주최: 옥스포드
+                                                    에너지 연구소</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 10월 06일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">빈 국제 기후 및 에너지 포럼 참석</h5>
+                                                <p>주제: International Vienna Energy and Climate Forum<br>장소: 호프부르크 빈 /
+                                                    주최: 유엔 산업 개발 기구 (UNIDO)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 02월 21일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">독일 헤르초크슈탄트 산 정상 등정 (해발 1731미터)</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/lu.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 07월 29일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">룩셈부르크 글로벌 테크 컨퍼런스 참석: 비즈니스 혁신이 미치는 영향</h5>
+                                                <p>주제: Global Tech Conference: Where Business Innovation Makes a
+                                                    Difference<br>장소: LuxExpo / 주최: ICT Spring</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 06월 11일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">2023년 UN 본 기후 변화 회의 참석</h5>
+                                                <p>주제: 2023 Bonn Climate Change Conference<br>장소: UN 본 캠퍼스 | 주최: UN 기후
+                                                    변화 협약 (UNFCCC)</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 05월 21일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">뮌헨 공과대학 주최 OpenAI CEO Sam Altman과의 면담 참석</h5>
+                                                <p>장소: TUM AudiMax / 주최: TUM Speaker Series</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 05월 04일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">학술 심사위원으로 제52회 스위스 샌갤런 국제 경제 포럼 참석</h5>
+                                                <p>주제: 52nd St. Gallen Symposium - A New Generational Contract<br>장소:
+                                                    샌갤런 대학 / 주최: 샌갤런 포럼</p>
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">2023년 01월 11일</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">뮌헨 안전 회의 의장 Christoph Heusgen의 세션 참석</h5>
+                                                <p>장소: TUM Think Tank / 주최: 뮌헨 정치학 연구소</p>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 ml-auto">
+                        &nbsp;
+                        <div class="section-title">
+                            <h2>여행 발자취</h2>
+                            <!-- <small><a href="zhouqibiao.html" target="_blank">【주기표】</a></small> -->
+                            <p class="d-sm-none"></p>
+                            <img src="images/visited_map.gif" alt="flag">
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">獨</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2021년-<span class="web_update_year"></span>년</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">독일, 스위스, 스페인, 이탈리아, 슬로베니아, 크로아티아, 보스니아-헤르체고비나, 세르비아, 캐나다, 영국,
+                                        아일랜드, 지브롤터, 그리스,
+                                        일본, 중국 본토, 홍콩, 대만</span>
+                                    <span class="date-read">독일에서 여유로운 엔지니어</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">瑞</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2016년-2021년</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">스위스, 독일, 프랑스, 이탈리아, 아이슬란드, 노르웨이, 스웨덴, 핀란드, 덴마크, 네덜란드, 폴란드,
+                                        에스토니아, 리히텐슈타인, 러시아, 미국,
+                                        캐나다, 터키, 태국, 중국</span>
+                                    <span class="date-read">스위스에서 유학 중인 미묘한 박사 과정 학생</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">獨</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2015년-2016년</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">독일, 오스트리아, 이탈리아, 프랑스, 스위스, 체코, 헝가리, 중국</span>
+                                    <span class="date-read">독일 유학 중인 불안한 석사 과정 학생</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">佛</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2014년-2015년</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">프랑스, 스페인, 벨기에, 네덜란드, 룩셈부르크</span>
+                                    <span class="date-read">프랑스에서 유학 중인 호기심 많은 석사 과정 학생</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">中</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2009년-2014년</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">베이징, 상하이, 저장, 장쑤, 허난, 안후이, 윈난, 랴오닝, 지린, 헤이룽장, 산시, 후난, 산동,
+                                        대만</span>
+                                    <span class="date-read">베이징에서 신입생 학부생</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 放大图片的 Lightbox -->
+        <div id="lightbox" class="lightbox"
+            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); align-items: center; justify-content: center; z-index: 199;">
+            <div class="lightbox-content" style="text-align: center; position: relative;">
+                <img id="lightbox-image" src="" alt="放大图" style="max-width: 90%; max-height: 90%; margin: auto;">
+                <!-- 显眼的退出按钮 -->
+                <button onclick="closeLightbox()"
+                    style="position: absolute; top: 0px; right: -20px; font-size: 60px; color: white; background: transparent; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+                    ×
+                </button>
+            </div>
+        </div>
+
+        <!---
+    <div class="site-section subscribe bg-light">
+      <div class="container">
+        <form action="#" class="row align-items-center">
+          <div class="col-md-5 mr-auto">
+            <h2>Newsletter Subcribe</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+          </div>
+          <div class="col-md-6 ml-auto">
+            <div class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    --->
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                        style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          top: 0;
+                          left: 50%;
+                          width: 100vw;
+                          transform: translateX(-50%);
+                        "
+                      /> -->
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img src="./images/wflags/eu.png" style="
+                                                                                                                    height: 0.9em;
+                                                                                                                    vertical-align: -6%;
+                                                                                                                    display: inline-block;
+                                                                                                                    margin-right: 0em;
+                                                                                                                  " />
+                            연락하기</h2>
+                        <p>
+                            이메일 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                            링크드인 |
+                            <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+                            인스타그램 |
+                            <a href="https://www.instagram.com/helios.hsu/"
+                                target="_blank">instagram.com/helios.hsu</a><br /><br />
+                            <span class="currentDateInLang" language="korean"></span><br />
+                            <strong><a href="//24timezones.com/Zurich/time" style="text-decoration: none"
+                                    class="clock24"
+                                    id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                    title="timezone - Zurich" target="_blank" rel="nofollow">유럽 ​​시간
+                                    [CET]</a></strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+                    <!-- 第二栏 -->
+
+
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start -->
+                        <a id="weather" target="_blank" href="https://www.booked.net/weather/beijing-18391">
+                            <img src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" />
+                        </a>
+                        <!-- weather widget end -->
+
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                                style="
+                                                                                                                                        height: 0.9em;
+                                                                                                                                        vertical-align: -6%;
+                                                                                                                                        display: inline-block;
+                                                                                                                                        margin-right: 0em;
+                                                                                                                                      " /> 운명이 우리를 만났어요
+
+                        </h2>
+                        <p>
+                            사진 |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                            글쓰기 |
+                            <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
+                            학술 |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+                            <a class="jieqi-24"
+                                language="korean"></a> - <a class="currentZodiacInLang" language="korean"></a> <br>
+                            <strong>
+                                <a href="//24timezones.com/%E6%9D%B1%E4%BA%AC%E9%83%BD/%E6%99%82%E9%96%93"
+                                    style="text-decoration: none" class="clock24"
+                                    id="tz24-1737245838-c1248-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImphIn0="
+                                    title="東京都 時間" target="_blank" rel="nofollow">서울 시간 [KST]</a>
+                            </strong>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+     <!-- 第三栏 -->
+<div class="col-md-5">
+    <br />
+    <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+
+      <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
+         style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+        <img src="images/default-map.png" alt="Visitor Map"
+             class="fallback-img">
+      </a>
+
+    </div>
+
+    <style>
+      /* 默认电脑端偏移 */
+      #clustrmap-container {
+        transform: translateX(15px) !important;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* 默认图片样式：PC/iPad 保持最大 470px */
+      .fallback-img {
+        width: 100%;
+        max-width: 470px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 移动端特殊处理：让图片铺满屏幕宽度 */
+      @media (max-width: 480px) {
+        .fallback-img {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        #clustrmap-container {
+          transform: translateX(0) !important; /* 移动端不再横向偏移 */
+        }
+      }
+
+      @media (max-width: 768px) {
+        #clustrmap-container {
+          transform: translateX(0px) !important;
+        }
+      }
+    </style>
+
+    <script>
+      (function () {
+        // 判断是否是移动端或 iPad
+        var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+        if (!isMobile) {
+          // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.id = "clustrmaps";
+          script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+          script.onload = function () {
+            var fallback = document.getElementById("clustrmap-fallback-link");
+            if (fallback) fallback.style.display = "none";
+          };
+
+          document.getElementById("clustrmap-container").appendChild(script);
+        } else {
+          console.log("📱 Mobile device detected, showing static fallback image.");
+        }
+      })();
+    </script>
+  </div>
+                </form>
+            </div>
+
+            <!-- <div class="container">
+                        <form action="#" class="row align-items-center">
+                          <div class="col-md-5 mr-auto"></div>
+                          <div class="col-md-6 ml-auto"></div>
+                        </form>
+                      </div>
+                      <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          width: 150vw;
+                          transform: translateX(-50%);
+                        " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+                      style="
+                        height: 1px;
+                        border-width: 0;
+                        color: gray;
+                        background-color: gray;
+                      "
+                    /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag" src="./images/wflags/un.png" alt="국기" style="
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
+                                <text><span class="location">친구</span>에서 오신 친구를 환영합니다! 비록 <span class="distance-info"> ∞
+                                        km</span> 떨어져 있어도, 우리는 항상 연결되어 있습니다
+                                </text>
+                                <img src="./images/wflags/de.png" style="
+                                        height: 0.9em;
+                                        vertical-align: -6%;
+                                        display: inline-block;
+                                        margin-right: 0em;
+                                      " />
+                                <br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                저작권 &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | 徐泓 (서홍) | 업데이트: <span class="web_update_year"></span>.<span
+                                    class="web_update_month"></span> |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                                        display: inline-block;
+                                        width: 94%;
+                                        height: 95%;
+                                        overflow: hidden;
+                                        position: relative;
+                                      ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                                          width: auto;
+                                          height: auto;
+                                          object-fit: fill;
+                                          object-position: top right;
+                                          transform: translateX(3.5%) translateY(30%);
+                                        " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- .site-wrap -->
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+
+
+        <script src="js/aos.js"></script>
+
+        <script src="js/jquery.sticky.js"></script>
+
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_kr.js" type="module"></script>
+        <script type="text/javascript" src="update_info_script.js"></script>
+        <script src="js/24jieqi.js"></script>
+        <script>
+            // 打开Lightbox，展示点击的图片
+            function openLightbox(index) {
+                const images = document.querySelectorAll('.image-gallery img');
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImage = document.getElementById('lightbox-image');
+
+                lightboxImage.src = images[index].src;  // 设置Lightbox图片来源
+                lightbox.style.display = 'flex';  // 显示Lightbox
+            }
+
+            // 关闭Lightbox
+            function closeLightbox() {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.style.display = 'none';  // 隐藏Lightbox
+            }
+        </script>
+
+
+        <script>
+            // 增强版国家代码映射表（可扩展）
+            const COUNTRY_MAP = {
+                // 欧洲国家
+                'al': { name: '알바니아', color: '#E41E1E' },
+                'ad': { name: '안도라', color: '#FF0000' },
+                'at': { name: '오스트리아', color: '#ED2939' },
+                'by': { name: '벨라루스', color: '#D22730' },
+                'be': { name: '벨기에', color: '#000000' },
+                'ba': { name: '보스니아 헤르체고비나', color: '#002395' },
+                'bg': { name: '불가리아', color: '#00966E' },
+                'hr': { name: '크로아티아', color: '#FF0000' },
+                'cy': { name: '키프로스', color: '#0033A0' },
+                'cz': { name: '체코', color: '#D7141A' },
+                'dk': { name: '덴마크', color: '#C60C30' },
+                'ee': { name: '에스토니아', color: '#4891D9' },
+                'fi': { name: '핀란드', color: '#003580' },
+                'fr': { name: '프랑스', color: '#0055A4' },
+                'de': { name: '독일', color: '#000000' },
+                'gr': { name: '그리스', color: '#0D5EAF' },
+                'hu': { name: '헝가리', color: '#436F4D' },
+                'is': { name: '아이슬란드', color: '#003897' },
+                'ie': { name: '아일랜드', color: '#009A44' },
+                'it': { name: '이탈리아', color: '#009246' },
+                'lv': { name: '라트비아', color: '#9E3039' },
+                'li': { name: '리히텐슈타인', color: '#002B7F' },
+                'lt': { name: '리투아니아', color: '#006A44' },
+                'lu': { name: '룩셈부르크', color: '#00A1DE' },
+                'mt': { name: '몰타', color: '#CF142B' },
+                'md': { name: '몰도바', color: '#0033A0' },
+                'mc': { name: '모나코', color: '#CE1126' },
+                'me': { name: '몬테네그로', color: '#C40308' },
+                'nl': { name: '네덜란드', color: '#AE1C28' },
+                'mk': { name: '북마케도니아', color: '#D20000' },
+                'no': { name: '노르웨이', color: '#EF2B2D' },
+                'pl': { name: '폴란드', color: '#DC143C' },
+                'pt': { name: '포르투갈', color: '#006600' },
+                'ro': { name: '루마니아', color: '#002B7F' },
+                'ru': { name: '러시아', color: '#D52B1E' },
+                'sm': { name: '산마리노', color: '#008C45' },
+                'rs': { name: '세르비아', color: '#0C4076' },
+                'sk': { name: '슬로바키아', color: '#EE1C25' },
+                'si': { name: '슬로베니아', color: '#005AA6' },
+                'es': { name: '스페인', color: '#AA151B' },
+                'se': { name: '스웨덴', color: '#005AA6' },
+                'ch': { name: '스위스', color: '#D52B1E' },
+                'ua': { name: '우크라이나', color: '#0057B7' },
+                'gb': { name: '영국', color: '#012169' },
+
+                // 亚洲主要国家
+                'cn': { name: '중국', color: '#EE1C25' },
+                'in': { name: '인도', color: '#FF9933' },
+                'jp': { name: '일본', color: '#BC002D' },
+                'kr': { name: '대한민국', color: '#CD2E3A' },
+                'sg': { name: '싱가포르', color: '#EF3340' },
+                'th': { name: '태국', color: '#A51931' },
+                'id': { name: '인도네시아', color: '#CE1126' },
+                'sa': { name: '사우디아라비아', color: '#006C35' },
+                'tr': { name: '터키', color: '#E30A17' },
+
+                // 美洲主要国家
+                'us': { name: '미국', color: '#3C3B6E' },
+                'ca': { name: '캐나다', color: '#FF0000' },
+                'br': { name: '브라질', color: '#009C3B' },
+                'ar': { name: '아르헨티나', color: '#75AADB' },
+                'mx': { name: '멕시코', color: '#006341' },
+
+                // 非洲主要国家
+                'za': { name: '남아프리카공화국', color: '#009639' },
+                'eg': { name: '이집트', color: '#CE1126' },
+                'ng': { name: '나이지리아', color: '#008751' },
+                'ke': { name: '케냐', color: '#000000' },
+
+                // 大洋洲
+                'au': { name: '호주', color: '#00008B' },
+                'nz': { name: '뉴질랜드', color: '#00247D' },
+
+                // 国际组织
+                'eu': { name: '유럽연합', color: '#003399' },
+                'un': { name: '유엔', color: '#4B92C3' },
+                'asean': { name: '동남아시아국가연합', color: '#004B87' }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const selector = document.getElementById('event-selector');
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // 标准化当前日期
+
+                // 1. 初始化处理时间线结构
+                const timeline = document.querySelector('.timeline');
+                const allItems = Array.from(timeline.children);
+
+                // 构建年份分组结构
+                const yearGroups = [];
+                let currentYearGroup = null;
+
+                // 2. 处理所有元素并过滤未来事件
+                allItems.forEach(element => {
+                    if (element.classList.contains('period')) {
+                        // 处理年份标题
+                        currentYearGroup = {
+                            node: element,
+                            events: [],
+                            hasValidEvents: false,
+                            year: element.querySelector('.timeline-title').textContent.match(/\d{4}/)?.[0]
+                        };
+                        yearGroups.push(currentYearGroup);
+                    } else if (currentYearGroup && element.classList.contains('timeline-item')) {
+                        // 处理事件项
+                        const dateSpan = element.querySelector('.timeline-info span');
+                        let isValid = false;
+
+
+                        if (dateSpan) {
+                            // 匹配并提取日期中的年、月、日
+                            const dateMatch = dateSpan.textContent.trim().match(/(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일/);
+                            if (dateMatch) {
+                                // 提取年、月、日
+                                let year = parseInt(dateMatch[1], 10);
+                                let month = parseInt(dateMatch[2], 10);
+                                let day = parseInt(dateMatch[3], 10);
+
+                                // 自动补全月和日为两位数格式
+                                const paddedMonth = month.toString().padStart(2, '0');
+                                const paddedDay = day.toString().padStart(2, '0');
+
+                                // 验证日期是否有效
+                                const eventDate = new Date(year, month - 1, day); // 月份从0开始
+                                if (
+                                    eventDate.getFullYear() === year &&
+                                    eventDate.getMonth() === month - 1 &&
+                                    eventDate.getDate() === day
+                                ) {
+                                    // 重置事件日期时间并比较
+                                    eventDate.setHours(0, 0, 0, 0);
+                                    const now = new Date();
+                                    now.setHours(0, 0, 0, 0);
+                                    isValid = eventDate <= now;
+
+                                    // 打印补全后的日期（可选调试）
+                                    console.log(`Validated date: ${year}년 ${paddedMonth}월 ${paddedDay}일`);
+                                } else {
+                                    console.error('Invalid date:', year, paddedMonth, paddedDay);
+                                    isValid = false;
+                                }
+                            }
+                        }
+
+                        // 初始显示设置
+                        element.style.display = isValid ? '' : 'none';
+
+                        // 记录有效事件
+                        if (isValid) {
+                            currentYearGroup.hasValidEvents = true;
+                            currentYearGroup.events.push(element);
+                        }
+                    }
+                });
+
+                // 3. 初始化隐藏无有效事件的年份
+                yearGroups.forEach(group => {
+                    group.node.style.display = group.hasValidEvents ? '' : 'none';
+                });
+
+                // 4. 构建国家统计数据
+                const flagCounter = yearGroups.reduce((acc, group) => {
+                    group.events.forEach(item => {
+                        const flagImg = item.querySelector('.timeline-info img');
+                        if (flagImg) {
+                            const codeMatch = flagImg.src.match(/wflags\/(\w+)\.png/);
+                            if (codeMatch) {
+                                const code = codeMatch[1];
+                                acc[code] = (acc[code] || 0) + 1;
+                            }
+                        }
+                    });
+                    return acc;
+                }, {});
+
+                // 5. 动态生成选择器选项
+                selector.innerHTML = [
+                    '<option value="default" selected>국가 선택</option>',
+                    ...Object.entries(flagCounter)
+                        .sort((a, b) => b[1] - a[1] || COUNTRY_MAP[a[0]]?.name?.localeCompare(COUNTRY_MAP[b[0]]?.name))
+                        .map(([code, count]) => `
+                        <option value="${code}"
+                                style="color: ${COUNTRY_MAP[code]?.color || '#333'};
+                                       font-weight: 500">
+                          [${count}] ${COUNTRY_MAP[code]?.name || code.toUpperCase()}
+                        </option>
+                      `)
+                ].join('');
+
+                // 6. 筛选功能实现
+                selector.onchange = function () {
+                    const selectedCode = this.value;
+
+                    // 处理事件显示
+                    yearGroups.forEach(group => {
+                        let hasVisible = false;
+
+                        group.events.forEach(item => {
+                            // 判断国家匹配
+                            const flagImg = item.querySelector('.timeline-info img');
+                            const itemCode = flagImg?.src.match(/wflags\/(\w+)\.png/)?.[1];
+                            const matchCountry = selectedCode === 'default' || itemCode === selectedCode;
+
+                            item.style.display = matchCountry ? '' : 'none';
+                            if (matchCountry) hasVisible = true;
+                        });
+
+                        // 处理年份标题显示
+                        const shouldShowYear = hasVisible && group.hasValidEvents;
+                        group.node.style.display = shouldShowYear ? '' : 'none';
+                    });
+                };
+            });
+        </script>
+
+    </div>
+    </div>
+</body>
+
+</html>

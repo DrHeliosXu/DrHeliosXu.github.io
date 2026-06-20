@@ -1,0 +1,15 @@
+<section id="home-hero-section" class="video-hero" data-video-hero>
+  <video id="home-hero-video" class="video-hero__media" autoplay muted playsinline preload="metadata" poster="{{asset:hero.poster.src}}">
+    {{heroVideoSources}}
+  </video>
+  <div id="home-hero-overlay" class="video-hero__overlay"></div>
+  <div id="home-hero-copy" class="video-hero__copy">
+    <h1 id="home-hero-title" class="video-hero__title">{{t:home.hero.title}}</h1>
+    <span class="video-hero__divider" aria-hidden="true"></span>
+    <p id="home-hero-subtitle" class="video-hero__subtitle">{{t:home.hero.subtitle}}</p>
+    <div id="home-hero-actions" class="video-hero__actions">
+      <a class="video-hero__button" href="{{researchUrl}}">{{t:home.hero.primaryAction}}</a>
+      <a class="video-hero__button video-hero__button--secondary" href="{{contactUrl}}">{{t:home.hero.secondaryAction}}</a>
+    </div>
+  </div>
+</section>

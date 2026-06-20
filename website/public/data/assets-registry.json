@@ -1,0 +1,61 @@
+{
+  "logo": {
+    "current": {
+      "src": "/assets/logos/logo-full-cn.png",
+      "altKey": "assets.logo.mainAlt"
+    },
+    "mark": {
+      "src": "/assets/logos/logo-only.png",
+      "altKey": "assets.logo.markAlt"
+    },
+    "byLanguage": {
+      "cn": "/assets/logos/logo-full-cn.png",
+      "en": "/assets/logos/logo-full-en.png",
+      "de": "/assets/logos/logo-full-de.png",
+      "fr": "/assets/logos/logo-full-fr.png",
+      "it": "/assets/logos/logo-full.png",
+      "es": "/assets/logos/logo-full-es.png",
+      "ja": "/assets/logos/logo-full-jp.png",
+      "ko": "/assets/logos/logo-full-kr.png",
+      "ru": "/assets/logos/logo-full-ru.png",
+      "ar": "/assets/logos/logo-full-ar.png",
+      "th": "/assets/logos/logo-full-th.png"
+    }
+  },
+  "hero": {
+    "poster": {
+      "src": "/assets/images/big_img_0.png",
+      "altKey": "assets.hero.posterAlt"
+    },
+    "backgroundVideo": {
+      "src": "/assets/videos/hero_video/hero_video.mp4",
+      "poster": "/assets/images/big_img_0.png"
+    }
+  },
+  "research": {
+    "renewableEnergy": {
+      "src": "/assets/images/img_h_31.jpg",
+      "altKey": "assets.research.renewableEnergyAlt"
+    },
+    "energyPolicy": {
+      "src": "/assets/images/img_h_26.jpg",
+      "altKey": "assets.research.energyPolicyAlt"
+    },
+    "materials": {
+      "src": "/assets/images/img_h_27.jpg",
+      "altKey": "assets.research.materialsAlt"
+    }
+  },
+  "profile": {
+    "main": {
+      "src": "/assets/images/bio_img_3.jpg",
+      "altKey": "assets.profile.mainAlt"
+    }
+  },
+  "footer": {
+    "map": {
+      "src": "/assets/images/default-map-transparent.png",
+      "altKey": "assets.footer.mapAlt"
+    }
+  }
+}

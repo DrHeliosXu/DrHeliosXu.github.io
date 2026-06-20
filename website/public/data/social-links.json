@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "id": "email",
+      "labelKey": "footer.email",
+      "href": "mailto:h.xu@tum.de",
+      "value": "h.xu [at] tum.de"
+    },
+    {
+      "id": "linkedin",
+      "labelKey": "footer.linkedin",
+      "href": "https://linkedin.com/in/xuhong",
+      "value": "linkedin.com/in/xuhong"
+    },
+    {
+      "id": "scholar",
+      "labelKey": "footer.scholar",
+      "href": "https://scholar.google.com/citations?user=UNchM2kAAAAJ",
+      "value": "scholar.google.com"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "sortRules": {
+    "groups": [
+      {
+        "id": "eastAsian",
+        "label": "非拉丁文字语言优先",
+        "order": ["cn", "ja", "ko", "th", "vi"]
+      },
+      {
+        "id": "latin",
+        "label": "拉丁字母语言按语言本名字母顺序排列",
+        "sortBy": "nativeName"
+      },
+      {
+        "id": "complex",
+        "label": "复杂书写系统语言最后显示",
+        "sortBy": "nativeName"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "code": "cn",
+      "locale": "zh-CN",
+      "nativeName": "中文",
+      "label": "简体中文",
+      "dir": "ltr",
+      "sortGroup": "eastAsian",
+      "sortOrder": 1,
+      "defaultFlag": "CN",
+      "flagAsset": "/assets/flags/cn.svg",
+      "usedCountries": ["CN", "HK", "MO", "TW", "SG", "MY"],
+      "variants": [
+        {
+          "id": "simplified",
+          "label": "简体中文",
+          "query": "",
+          "converter": "/assets/js/vendor/bookmarklet_cn.js"
+        },
+        {
+          "id": "traditional",
+          "label": "繁体中文",
+          "query": "variant=traditional",
+          "converter": "/assets/js/vendor/bookmarklet_tw.js"
+        }
+      ]
+    },
+    {
+      "code": "ja",
+      "locale": "ja",
+      "nativeName": "日本語",
+      "label": "日本語",
+      "dir": "ltr",
+      "sortGroup": "eastAsian",
+      "sortOrder": 2,
+      "defaultFlag": "JP",
+      "flagAsset": "/assets/flags/jp.svg",
+      "usedCountries": ["JP"]
+    },
+    {
+      "code": "ko",
+      "locale": "ko",
+      "nativeName": "한국어",
+      "label": "한국어",
+      "dir": "ltr",
+      "sortGroup": "eastAsian",
+      "sortOrder": 3,
+      "defaultFlag": "KR",
+      "flagAsset": "/assets/flags/kr.svg",
+      "usedCountries": ["KR", "KP"]
+    },
+    {
+      "code": "th",
+      "locale": "th",
+      "nativeName": "ไทย",
+      "label": "ไทย",
+      "dir": "ltr",
+      "sortGroup": "eastAsian",
+      "sortOrder": 4,
+      "defaultFlag": "TH",
+      "flagAsset": "/assets/flags/th.svg",
+      "usedCountries": ["TH"]
+    },
+    {
+      "code": "de",
+      "locale": "de",
+      "nativeName": "Deutsch",
+      "label": "Deutsch",
+      "dir": "ltr",
+      "sortGroup": "latin",
+      "defaultFlag": "DE",
+      "flagAsset": "/assets/flags/de.svg",
+      "usedCountries": ["DE", "AT", "CH", "LI", "LU", "BE"]
+    },
+    {
+      "code": "en",
+      "locale": "en",
+      "nativeName": "English",
+      "label": "English",
+      "dir": "ltr",
+      "sortGroup": "latin",
+      "defaultFlag": "GB",
+      "flagAsset": "/assets/flags/gb.svg",
+      "usedCountries": ["GB", "US", "AU", "CA", "NZ", "IE", "SG", "IN", "ZA", "PH"]
+    },
+    {
+      "code": "es",
+      "locale": "es",
+      "nativeName": "Español",
+      "label": "Español",
+      "dir": "ltr",
+      "sortGroup": "latin",
+      "defaultFlag": "ES",
+      "flagAsset": "/assets/flags/es.svg",
+      "usedCountries": ["ES", "MX", "AR", "CO", "CL", "PE", "VE", "UY", "PY", "BO", "EC", "CR", "CU", "DO", "GT", "HN", "NI", "PA", "SV", "PR"]
+    },
+    {
+      "code": "fr",
+      "locale": "fr",
+      "nativeName": "Français",
+      "label": "Français",
+      "dir": "ltr",
+      "sortGroup": "latin",
+      "defaultFlag": "FR",
+      "flagAsset": "/assets/flags/fr.svg",
+      "usedCountries": ["FR", "BE", "CH", "CA", "LU", "MC"]
+    },
+    {
+      "code": "it",
+      "locale": "it",
+      "nativeName": "Italiano",
+      "label": "Italiano",
+      "dir": "ltr",
+      "sortGroup": "latin",
+      "defaultFlag": "IT",
+      "flagAsset": "/assets/flags/it.svg",
+      "usedCountries": ["IT", "CH", "SM", "VA"]
+    },
+    {
+      "code": "ru",
+      "locale": "ru",
+      "nativeName": "Русский",
+      "label": "Русский",
+      "dir": "ltr",
+      "sortGroup": "complex",
+      "defaultFlag": "RU",
+      "flagAsset": "/assets/flags/ru.svg",
+      "usedCountries": ["RU", "BY", "KZ", "KG"]
+    },
+    {
+      "code": "ar",
+      "locale": "ar",
+      "nativeName": "العربية",
+      "label": "اللغة العربية",
+      "dir": "rtl",
+      "sortGroup": "complex",
+      "defaultFlag": "ARAB_LEAGUE",
+      "flagAsset": "/assets/flags/Arab_League.svg",
+      "usedCountries": ["EG", "SA", "AE", "JO", "MA", "DZ", "TN", "IQ", "KW", "QA", "BH", "OM", "YE", "SY", "LB", "PS", "SD", "LY", "MR", "SO", "DJ", "KM"],
+      "singleFlagOnly": true,
+      "replaceDefaultFlagWithVisitorCountry": true
+    }
+  ]
+}

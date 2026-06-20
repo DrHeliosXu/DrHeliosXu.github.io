@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Хонг Сюй :: Доктор наук :: Инженер</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/timeline-simple.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tahoma', 'Noto Sans', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+    </style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!-- block save as ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="ru.html" class="site-logo">
+                            <img src="images/logo-full-ru.png" alt="Image" class="site-logo" style="height:80px;">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+                                    <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                                        <a href="https://www.linkedin.com/in/xuhong/"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-linkedin"></span>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-google"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                                            class="social-icon d-inline-block p-3">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" style="
+                                                      width: auto;
+                                                      height: 25px;
+                                                      margin-left: 5px;
+                                                      border-radius: 0;
+                                                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                                    "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="cn-news.html">中文</option>
+                                            <option value="jp-news.html">日本語</option>
+                                            <option value="kr-news.html">한국어</option>
+                                            <option value="th-news.html">ไทย</option>
+                                            <option value="de-news.html">Deutsch</option>
+                                            <option value="en-news.html">English</option>
+                                            <option value="es-news.html">Español</option>
+                                            <option value="fr-news.html">Français</option>
+                                            <option value="it-news.html">Italiano</option>
+                                            <option value="ru-news.html" selected>Русский</option>
+                                            <option value="ar-news.html">اللغة العربية</option>
+                                        </select>
+                                        <select id="content-list" name="content-list" style="
+                                                                              width: auto;height: 25px;
+                                                                              margin-left: 5px;
+                                                                              border-radius: 0;
+                                                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                              text-align: center; /* 新增 */
+                                                                              text-align-last: center; /* 确保选中的选项居中 */
+                                                                              "
+                                            onchange="window.location.href=this.options[this.selectedIndex].value">
+                                            <option value="ru.html">Главная</option>
+                                            <option value="ru-research.html">Исследования</option>
+                                            <option value="ru-news.html" selected>Новости</option>
+                                            <option value="ru-projects.html">Проекты</option>
+                                            <option value="ru-about.html">Обо мне</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right " role="navigation">
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                                    style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                                    <li>
+                                        <a href="ru.html" class="nav-link text-left">Главная</a>
+                                    </li>
+                                    <li>
+                                        <a href="ru-research.html"
+                                            class="nav-link text-left">&nbsp;&nbsp;&nbsp;Исследования</a>
+                                    </li>
+                                    <li>
+                                        <a href="ru-news.html" class="nav-link text-left">&nbsp;&nbsp;&nbsp;Новости</a>
+                                    </li>
+                                    <li>
+                                        <a href="ru-projects.html" class="nav-link text-left">Проекты</a>
+                                    </li>
+                                    <!-- <li>
+                                    <a href="en-activities.html" class="nav-link text-left">Действия</a>
+                                    </li> -->
+                                    <li>
+                                        <a href="ru-about.html" class="nav-link text-left">Обо мне</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span style="display: flex; align-items: center">
+
+                                <!-- 选择语言的下拉框 -->
+                                <select id="languages-2" name="languages" style="
+                                              width: auto;
+                                              height: 25px;
+                                              margin-left: 5px;
+                                              border-radius: 0;
+                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                          text-align: center; /* 新增 */
+                                                          text-align-last: center; /* 确保选中的选项居中 */
+                                            " onchange="window.location.href=this.options[this.selectedIndex].value">
+                                    <option value="cn-news.html">中文</option>
+                                    <option value="jp-news.html">日本語</option>
+                                    <option value="kr-news.html">한국어</option>
+                                    <option value="th-news.html">ไทย</option>
+                                    <option value="de-news.html">Deutsch</option>
+                                    <option value="en-news.html">English</option>
+                                    <option value="es-news.html">Español</option>
+                                    <option value="fr-news.html">Français</option>
+                                    <option value="it-news.html">Italiano</option>
+                                    <option value="ru-news.html" selected>Русский</option>
+                                    <option value="ar-news.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+        </div>
+        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">Меню</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="ru.html">Hong Xu, <small>PhD</small></a><br />
+                    </li>
+                    <li>
+                        <a href="ru-research.html">Исследования ➔</a>
+                    </li>
+                    <li>
+                        <a href="ru-news.html">Новости ➔</a>
+                    </li>
+                    <li>
+                        <a href="ru-projects.html">Проекты ➔</a>
+                    </li>
+                    <li>
+                        <a href="ru-about.html">Обо мне ➔</a>
+                    </li>
+                    <!-- <li>
+                            <a href="https://xgraphy.eu.org" target="_blank">Фотография ➔</a>
+                        </li>
+                        <li>
+                            <a href="phd-horizon.html">Горизонт ➔</a>
+                        </li>
+                        <li>
+                            <a href="once-upon-a-phd.html">Однажды о PhD ➔</a>
+                        </li> -->
+                </ul>
+            </nav>
+        </a>
+        <!------>
+        <!------>
+        <!-- 简化版导航栏内容 -->
+        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+
+                <img src="images/logo-full-ru-long.png" alt="Image" class="site-logo"
+                    style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+                <div></div>
+
+                <div style="display: flex; align-items: center;">
+                    <a class="flag d-inline-block d-lg-none">
+                        </a>
+                    <select id="languages-3" name="languages" style="
+                                                     width: auto;
+                                                      height: 25px;
+                              margin-left: 5px;
+                              border-radius: 0;
+                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                              text-align: center; /* 新增 */
+                              text-align-last: center; /* 确保选中的选项居中 */
+                              " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="cn-news.html">中文</option>
+                        <option value="jp-news.html">日本語</option>
+                        <option value="kr-news.html">한국어</option>
+                        <option value="th-news.html">ไทย</option>
+                        <option value="de-news.html">Deutsch</option>
+                        <option value="en-news.html">English</option>
+                        <option value="es-news.html">Español</option>
+                        <option value="fr-news.html">Français</option>
+                        <option value="it-news.html">Italiano</option>
+                        <option value="ru-news.html" selected>Русский</option>
+                        <option value="ar-news.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list-2" name="content-list" style="
+                          width: auto;height: 25px;
+                          margin-left: 5px;
+                          border-radius: 0;
+                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                          text-align: center; /* 新增 */
+                          text-align-last: center; /* 确保选中的选项居中 */
+                          " onchange="window.location.href=this.options[this.selectedIndex].value">
+                        <option value="ru.html">Главная</option>
+                        <option value="ru-research.html">Исследования</option>
+                        <option value="ru-news.html" selected>Новости</option>
+                        <option value="ru-projects.html">Проекты</option>
+                        <option value="ru-about.html">Обо мне</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!------>
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&ensp;</p>
+            <p class="d-sm-block d-none">&ensp;</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 single-content">
+                        <p class="mb-5 d-sm-block d-none">
+                            &nbsp;
+                            <div class="mb-5 d-sm-block d-none" style="position: relative; display: inline-block; margin-top: -45px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2.jpg" alt="Image" class="img-fluid">
+
+                                <!-- 火焰容器 -->
+                                <div id="flame-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text"
+                                     style="position: absolute; bottom: 5%; right: 2%; color: white;
+                                            font-size: 1rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                   Великая китайская стена<br>Новости Сигнальной Башни
+
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                  { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                  { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                  { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "41.8%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "53.8%", top: "62%", width: 12, scale: 1.7 },
+                                  { left: "81%", top: "9.5%", width: 57, scale: 1.0 }
+                                ];
+                                const container = document.getElementById('flame-container');
+                                const flameElements = [];
+                                const beaconText = document.getElementById('beacon-text');
+                                // 初始化火焰元素
+                                flames.forEach((f) => {
+                                  const flame = document.createElement('img');
+                                  flame.src = "images/fire-large.gif";
+                                  flame.classList.add('flame');
+                                  flame.style.left = f.left;
+                                  flame.style.top = f.top;
+                                  flame.style.width = f.width + "px";
+                                  flame.style.transform = `scale(${f.scale})`;
+                                  container.appendChild(flame);
+                                  flameElements.push(flame);
+                                });
+                                function animateFlamesLoop() {
+                                  // 1. 全部熄灭
+                                  flameElements.forEach(f => f.style.opacity = 0);
+                                  beaconText.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements.forEach((flame, index) => {
+                                    setTimeout(() => {
+                                      flame.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime = flameElements.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 1;
+                                  }, totalAppearTime);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText.style.opacity = 0;
+                                    flameElements.slice().reverse().forEach((flame, index) => {
+                                      setTimeout(() => {
+                                        flame.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime = totalAppearTime + 3000 + flameElements.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop, totalCycleTime);
+                                }
+                                animateFlamesLoop();
+                              </script>
+                        </p>
+
+                        <p class="mb-5 d-sm-none" style="margin-top: -20px;">
+                            &nbsp;
+                            <div class="mb-5 d-sm-none" style="position: relative; display: inline-block; margin-top: -60px; text-align: right; width: 100%;">
+                                <img src="images/banner_img_2_mobi.jpg" alt="Image" class="img-fluid">
+
+                                <!-- 火焰容器 -->
+                                <div id="flame-container-2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events:none;"></div>
+
+                                <!-- 右下角文字 -->
+                                <div id="beacon-text-2"
+                                     style="position: absolute; bottom: 5%; right: 4%; color: white;
+                                            font-size: 0.9rem;  opacity: 0;
+                                            transition: opacity 0.8s ease-in-out;">
+                                   Великая китайская стена<br>Новости Сигнальной Башни
+                                </div>
+                            </div>
+                            <style>
+                                .flame {
+                                  position: absolute;
+                                  opacity: 0;
+                                  transform-origin: center bottom;
+                                  transition: opacity 0.6s ease-in-out;
+                                }
+                              </style>
+
+                              <script>
+                                // 配置火焰位置、宽度、缩放
+                                const flames2 = [
+                                //   { left: "18%",  top: "36%", width: 8, scale: 1.0 },
+                                //   { left: "23%", top: "39%", width: 6, scale: 1.0 },
+                                //   { left: "25.5%", top: "39%", width: 9, scale: 1 },
+                                //   { left: "26.5%", top: "46%", width: 7, scale: 1 },
+                                //   { left: "33.5%", top: "53%",  width: 8, scale: 1 },
+                                //   { left: "36%", top: "53%", width: 12, scale: 1.0 },
+                                //   { left: "25.5%", top: "49%", width: 11, scale: 0.8 },
+                                //   { left: "29%", top: "54%", width: 10, scale: 1.1 },
+                                //   { left: "32.1%", top: "59%", width: 10, scale: 1.7 },
+                                  { left: "5%", top: "58%", width: 12, scale: 1.7 },
+                                  { left: "24%", top: "63%", width: 10, scale: 1.7 },
+                                  { left: "69%", top: "10.5%", width: 48, scale: 1.0 }
+                                ];
+
+                                const container2 = document.getElementById('flame-container-2');
+                                const flameElements2 = [];
+                                const beaconText2 = document.getElementById('beacon-text-2');
+
+                                // 初始化火焰元素
+                                flames2.forEach((f) => {
+                                  const flame2 = document.createElement('img');
+                                  flame2.src = "images/fire-large.gif";
+                                  flame2.classList.add('flame');
+                                  flame2.style.left = f.left;
+                                  flame2.style.top = f.top;
+                                  flame2.style.width = f.width + "px";
+                                  flame2.style.transform = `scale(${f.scale})`;
+                                  container2.appendChild(flame2);
+                                  flameElements2.push(flame2);
+                                });
+                                function animateFlamesLoop2() {
+                                  // 1. 全部熄灭
+                                  flameElements2.forEach(f => f.style.opacity = 0);
+                                  beaconText2.style.opacity = 0;
+                                  // 2. 依次点亮
+                                  flameElements2.forEach((flame2, index) => {
+                                    setTimeout(() => {
+                                      flame2.style.opacity = 1;
+                                    }, index * 1000);
+                                  });
+                                  // 3. 显示文字
+                                  const totalAppearTime2 = flameElements2.length * 1000;
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 1;
+                                  }, totalAppearTime2);
+                                  // 4. 隐藏文字并依次熄灭火焰
+                                  setTimeout(() => {
+                                    beaconText2.style.opacity = 0;
+                                    flameElements2.slice().reverse().forEach((flame2, index) => {
+                                      setTimeout(() => {
+                                        flame2.style.opacity = 0;
+                                      }, index * 1000);
+                                    });
+                                  }, totalAppearTime2 + 3000);
+                                  // 5. 下一轮循环
+                                  const totalCycleTime2 = totalAppearTime2 + 3000 + flameElements2.length * 1000 + 1000;
+                                  setTimeout(animateFlamesLoop2, totalCycleTime2);
+                                }
+                                animateFlamesLoop2();
+                              </script>
+                        </p>
+
+                        <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+                            Новости в обзоре
+                            <select id="event-selector" name="event-selector"
+                                style="
+                                                                                                                          width: 120px;
+                                                                                                                          height: 25px;
+                                                                                                                          margin-left: 5px;
+                                                                                                                          border-radius: 0;
+                                                                                                                          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                          text-align: center;
+                                                                                                                          text-align-last: center;">
+                                <option value="default" selected>Выбор страны</option>
+                            </select>
+                        </h1>
+
+                        <style>
+                            @media (max-width: 767px) {
+                              h1.mb-4[style*="display: flex"] {
+                                margin-top: -30px !important;
+                              }
+                            }
+                            @media (min-width: 768px) {
+                              h1.mb-4[style*="display: flex"] {
+                                margin-top: 0px !important;
+                              }
+                            }
+                            </style>
+
+                        <div class="container-fluid">
+                            <div class="row example-basic">
+                                <div class="col-xs-10 col-xs-offset-1 col-sm-offset-1">
+                                    <ul class="timeline">
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <hr>
+                                            <div class="timeline-content">
+                                                <h3 class="timeline-title">2025 / Год змеи <img
+                                                        src="./images/12-snake.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -3px;" /></h3>
+                                                <h6>• В этом году <a
+                                                        href="https://www.pillsburylaw.com/en/services/regulatory/trump-resource-center.html"
+                                                        target="_blank">Трамп 2.0</a> реформировал технологические,
+                                                    энергетические и <a
+                                                        href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/"
+                                                        target="_blank">тарифные
+                                                        системы</a> США, в то время как <a
+                                                        href="https://www.worldoil.com/news/2024/10/7/saudi-arabia-to-invest-10-billion-in-green-hydrogen-production/"
+                                                        target="_blank">суверенные фонды Ближнего Востока</a>
+                                                    осуществили масштабные инвестиции в коридор <a
+                                                        href="https://www.spglobal.com/commodity-insights/en/news-research/blog/energy-transition/011325-middle-east-eyes-global-role-in-green-hydrogen-trade"
+                                                        target="_blank">зеленого водорода</a>. Войны в области <a
+                                                        href="https://irregularwarfarecenter.org/publications/insights/the-emerging-potential-for-quantum-computing-in-irregular-warfare/"
+                                                        target="_blank">квантовых вычислений</a> и <a
+                                                        href="https://www2.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html"
+                                                        target="_blank">высококачественных чипов</a> между США, Китаем и
+                                                    Европой усилились, а поле битвы за <a
+                                                        href="https://www.cep.eu/eu-topics/details/eu-energy-sovereignty-cepadhoc.html"
+                                                        target="_blank">энергетический
+                                                        суверенитет</a> переместилось с земли в облако. Мир во всем мире
+                                                    и лучшее будущее...</h6>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">27 июля 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Посещение скачек «Dallmayr Renntag 2025»</h5>
+                                                <p>Тема: Großer Dallmayr-Preis<br>Место: Мюнхен, Германия / Организатор:
+                                                    Dallmayr</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">27 июня 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в выставке «Европейская
+                                                    автоматизация» 2025 года</h5>
+                                                <p>Тема: Automatica 2025<br>Место: Мюнхен, Германия / Организатор: Messe
+                                                    München
+                                                </p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">8 мая 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в выставке «Европейская умная
+                                                    энергия» 2025 года</h5>
+                                                <p>Тема: The smarter E Europe 2025<br>Место: Мюнхен, Германия /
+                                                    Организатор: Messe München
+                                                </p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/jp.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">20 апреля 2025 г.</span>
+
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Начало восточноазиатского путешествия на
+                                                    Пасху: Шанхай - Чунцин - Чэнду - Осака -
+                                                    Токио - Тайбэй - Гонконг - Шэньчжэнь - Нанкин
+                                                </h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+
+
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">3 апреля 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в рабочей группе «Транспортный отдел
+                                                    Европейской экономической комиссии ООН»
+                                                </h5>
+                                                <p>Тема: Разработка сборника лучших практик<br>Место: ООН, Женева и
+                                                    онлайн / Организатор: UNECE e-Mobility Task
+                                                    Force</p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">1 апреля 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в выставке «Ганноверская промышленная
+                                                    выставка» 2025 года</h5>
+                                                <p>Тема: Формирование будущего с технологиями<br>Место: Ганновер,
+                                                    Германия / Организатор: Hannover Messe</p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">24 марта 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в семинаре «Отдел устойчивой
+                                                    энергетики Европейской экономической комиссии
+                                                    ООН»</h5>
+                                                <p>Тема: Способствование устойчивому росту рынка водородной
+                                                    энергии<br>Место: ООН, Женева и онлайн /
+                                                    Организатор: UNECE Sustainable Energy</p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">28 января 2025 года</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в "Гала-концерте китайского Нового
+                                                    года" в Мюнхене</h5>
+                                                <p>Тема: Весна в Мюнхене /
+                                                    Место: Старое здание Баварского парламента в Мюнхене
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">15 февраля 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в симфоническом концерте «Мюнхенская
+                                                    конференция по безопасности»</h5>
+                                                <p>Тема: Далеко от мира и гармонии<br>Место: Residenz München /
+                                                    Организатор: Munich Security Conference (MSC)
+                                                </p>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">16 января 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в лекции заместителя главного
+                                                    редактора журнала «Foreign Policy» Камерона
+                                                    Абади в Мюнхене</h5>
+                                                <p>Тема: Климатические радикалы: почему наша экополитика не работает<br>
+                                                    Место: Amerikahaus München
+                                                </p>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+
+                                            <div class="timeline-info">
+
+                                                <img src="images/wflags/cz.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px; ">1 января 2025 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Новогодняя ночь на рейсе «Пекин-Прага»!
+                                                    Счастливого Нового года!</h5>
+                                                <p></p>
+
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2024 / Год Дракона <img
+                                                        src="./images/12-dragon.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -8px;" /></h3>
+                                                <h6>• В этом году Китай официально принял свой первый <a
+                                                        href="https://climatecooperation.cn/climate/china-releases-its-first-energy-law/"
+                                                        target="_blank">Закон об
+                                                        энергетике</a>, а <a
+                                                        href="https://www.pwc.com/gx/en/services/tax/esg-tax/cbam-supply-chain-imperatives.html"
+                                                        target="_blank">углеродные тарифы CBAM ЕС</a> стимулировали
+                                                    глобальную декарбонизацию промышленности. <a
+                                                        href="https://www.imperial.ac.uk/news/242258/breakthrough-fusion-experiment-generates-excess-energy/"
+                                                        target="_blank">Управляемый термоядерный синтез</a> впервые
+                                                    достиг чистой энергетической выгоды, а <a
+                                                        href="https://commonslibrary.parliament.uk/what-is-the-global-south/"
+                                                        target="_blank">страны Глобального Юга</a>
+                                                    бросили вызов <a
+                                                        href="https://responsiblestatecraft.org/dedollarization-china-russia/"
+                                                        target="_blank">нефтяной
+                                                        гегемонии доллара США</a>——<a
+                                                        href="https://www.unep.org/topics/climate-action/climate-finance"
+                                                        target="_blank">климатическое финансирование</a> и
+                                                    технологическая революция переписывают основные коды
+                                                    цивилизации...</h6>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">4 декабря 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Запуск совместной инициативы Salzburg-KFAS
+                                                </h5>
+                                                <p>Тема: Инициатива глобального лидерства KFAS-SALZBURG - Связь
+                                                    технологий<br>Место: Замок Леопольдскрон /
+                                                    Организатор: Salzburg Global Seminar</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">20 октября 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в 20-м Европейском саммите в
+                                                    Зальцбурге</h5>
+                                                <p>Тема: 20-й Европейский саммит в Зальцбурге. ЕС: Нет будущего без
+                                                    реформ<br>Место: Городской совет Зальцбурга
+                                                    / Организатор: Институт европейских регионов (IRE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">23 сентября 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в продвижении научного парка
+                                                    Zhongguancun 2024</h5>
+                                                <p>Место: Munich Urban Colab / Организатор: Научный парк Zhongguancun
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/cn.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">7 сентября 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в конференции по развитию экономики
+                                                    низкой высоты в Вуху 2024</h5>
+                                                <p>Место: Международный выставочный центр Вуху / Организатор:
+                                                    Муниципальное правительство Вуху</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">14 августа 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Посещение концерта Адель в Мюнхене!</h5>
+                                                <p>Место: Messe Stadt München / Организатор: Adele в Мюнхене</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">11 июня 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в конференции ООН по изменению
+                                                    климата в Бонне 2024</h5>
+                                                <p>Тема: Конференция ООН по изменению климата 2024<br>Место: Кампус ООН
+                                                    в Бонне / Организатор: Рамочная
+                                                    конвенция ООН по изменению климата (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">8 июня 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Начало тура по Великобритании и Ирландии:
+                                                    Англия-Уэльс-Шотландия-Северная
+                                                    Ирландия-Ирландия</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">29 мая 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Присоединение к рабочей группе по
+                                                    электромобильности UNECE</h5>
+                                                <p>Место: Palais des Nations, Женева / Организатор: Экономическая
+                                                    комиссия ООН для Европы (UNECE)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">2 мая 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в 53-м Симпозиуме в Сент-Галлене в
+                                                    качестве будущего лидера</h5>
+                                                <p>Тема: 53-й Симпозиум Сент-Галлена - Конфронтация с
+                                                    дефицитом<br>Место: Университет Сент-Галлена /
+                                                    Организатор: Симпозиум Сент-Галлена</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">22 апреля 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в промышленной выставке Hannover
+                                                    Messe 2024</h5>
+                                                <p>Тема: Энергия для устойчивой промышленности<br>Место: Выставочный
+                                                    центр Ганновера / Организатор: Hannover
+                                                    Messe</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">17 апреля 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Приглашение на 40-й Швейцарский симпозиум по
+                                                    электрохимии PSI</h5>
+                                                <p>Тема: Критические сырьевые материалы для энергетического
+                                                    перехода<br>Место: Kultur & Kongresshaus Aarau /
+                                                    Организатор: 40-й Швейцарский симпозиум по электрохимии / PSI</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">7 марта 2024 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Выступление в экспертной группе UNECE по
+                                                    изменению климата и внутреннему транспорту
+                                                </h5>
+                                                <p>Тема: Экспертная группа по оценке воздействия изменения климата и
+                                                    адаптации для внутреннего
+                                                    транспорта<br>Место: Palais des Nations, Женева / Организатор:
+                                                    Экономическая комиссия ООН для Европы (UNECE)
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item period">
+                                            <div class="timeline-info"></div>
+                                            <!-- <div class="timeline-marker"></div> -->
+                                            <div class="timeline-content">
+                                                <hr>
+                                                <h3 class="timeline-title">2023 / Год Кролика <img
+                                                        src="./images/12-rabbit.png" alt="flag"
+                                                        style="height: 47px; position: relative; top: -5px;" /></h3>
+                                                <h6>• В этом году <a
+                                                        href="https://unfccc.int/cop28/5-key-takeaways">COP28
+                                                        в ОАЭ</a> впервые приняла решение "<a
+                                                        href="https://www.brookings.edu/articles/why-are-fossil-fuels-so-hard-to-quit/">отказаться
+                                                        от ископаемого
+                                                        топлива</a>", в то время как <a
+                                                        href="https://www.iea.org/reports/global-ev-outlook-2024/trends-in-electric-cars">экспорт
+                                                        электромобилей
+                                                        Китая</a> занял первое место в мире, а <a
+                                                        href="https://www.offshore-energy.biz/worlds-longest-and-deepest-e2-4-billion-subsea-green-electricity-interconnector-given-a-go-at-mediterranean-energy-map-metamorphosis/">проект
+                                                        Евразийской подводной электросети</a> был запущен——точка
+                                                    энергетического перехода между старой и новой энергией
+                                                    столкнулась с взрывным ростом <a
+                                                        href="https://www.nature.com/articles/d41586-024-03408-z">вычислительной
+                                                        мощности
+                                                        ИИ</a>...</h6>
+
+                                            </div>
+                                        </li>
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/gb.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">5 декабря 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в семинаре по водородной энергетике в
+                                                    Оксфордском институте энергетических
+                                                    исследований</h5>
+                                                <p>Тема: Создание условий для водородной экономики: Политики и
+                                                    регулирование<br>Место: St. Hugh's College,
+                                                    Оксфордский университет / Организатор: Оксфордский институт
+                                                    энергетических исследований</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/at.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">6 октября 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в Венском международном
+                                                    энергетическом и климатическом форуме</h5>
+                                                <p>Тема: Венский международный энергетический и климатический
+                                                    форум<br>Место: Hofburg, Вена / Организатор:
+                                                    Организация Объединенных Наций по промышленному развитию (UNIDO)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">21 августа 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Подъем на вершину Herzogstand в Германии
+                                                    (1731 м над уровнем моря)</h5>
+                                                <p></p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/lu.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">29 июля 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в Global Tech Conference в
+                                                    Люксембурге</h5>
+                                                <p>Тема: Global Tech Conference: Где бизнес- инновации имеют
+                                                    значение<br>Место: LuxExpo / Организатор: ICT
+                                                    Spring</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/un.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">11 июня 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в 2023 году на конференции ООН по
+                                                    климату в Бонне</h5>
+                                                <p>Тема: Боннская климатическая конференция 2023<br>Место: Кампус ООН в
+                                                    Бонне / Организатор: Рамочная конвенция
+                                                    ООН по изменению климата (UNFCCC)</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">21 мая 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Посещение речи генерального директора OpenAI
+                                                    Сэма Альтмана в Техническом университете
+                                                    Мюнхена</h5>
+                                                <p>Место: TUM AudiMax / Организатор: TUM Speaker Series</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/ch.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">4 мая 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в качестве научного рецензента на
+                                                    52-м Симпозиуме в Сент-Галлене</h5>
+                                                <p>Тема: 52-й Симпозиум в Сент-Галлене - Новый договор
+                                                    поколений<br>Место: Университет Сент-Галлена /
+                                                    Организатор: Симпозиум в Сент-Галлене</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="timeline-item">
+                                            <div class="timeline-info">
+                                                <img src="images/wflags/de.png" alt="flag"
+                                                    style="height: 17px; margin-left: -43px; position: relative; top: 1.5px; z-index: 99;" />
+                                                <span style="margin-left: 15px;">11 января 2023 г.</span>
+                                            </div>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <h5 class="timeline-title">Участие в семинаре Кристофа Хойсгена,
+                                                    председателя Мюнхенской конференции по
+                                                    безопасности</h5>
+                                                <p>Место: TUM Think Tank / Организатор: Высшая школа политических наук
+                                                    Мюнхена</p>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 ml-auto">
+                        <br>
+                        <div class="section-title">
+                            <h2>История путешествий</h2>
+                            <!-- <small><a href="periodic.html"
+                                    target="_blank">[Периодический]</a></small> -->
+                            <p class="d-sm-none"></p>
+                            <img src="images/visited_map.gif" alt="flag">
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2021-<span class="web_update_year"></span></a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Германия, Швейцария, Испания, Италия, Словения, Хорватия,
+                                        Босния и
+                                        Герцеговина, Сербия, Канада, Великобритания, Ирландия, Гибралтар, Греция,
+                                        Япония, Mатериковый Китай, Гонконг, Тайвань, Таиланд</span>
+                                    <span class="date-read">Инженер по НИОКР</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">CH</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2016-2021</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Швейцария, Германия, Франция, Италия, Исландия, Норвегия,
+                                        Швеция, Финляндия,
+                                        Дания, Нидерланды, Польша, Эстония, Лихтенштейн, Россия, США, Канада, Турция,
+                                        Таиланд, Китай</span>
+                                    <span class="date-read">Аспирант</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start">DE</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2015-2016</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Германия, Австрия, Италия, Франция, Швейцария, Чехия, Венгрия,
+                                        Китай</span>
+                                    <span class="date-read">Студент магистратуры</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">FR</div>
+                            <div class="trend-contents">
+                                <h2><a href="" target="_blank">2014-2015</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Франция, Испания, Бельгия, Нидерланды, Люксембург</span>
+                                    <span class="date-read">Студент магистратуры</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start">CN</div>
+                            <div class="trend-contents">
+                                <h2><a href="#">2009–2014</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">Пекин, Шанхай, Хэнань, Аньхой, Юньнань, Ляонин, Цзилинь,
+                                        Хэйлунцзян, Шэньси,
+                                        Хунань, Чжэцзян, Цзянсу, Шандун, Тайвань</span>
+                                    <span class="date-read">Студент бакалавриата</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                style="
+                  height: 1px;
+                  background-color: gray;
+                  border: none;
+                  margin: 0;
+                  position: absolute;
+                  top: 0;
+                  left: 50%;
+                  width: 100vw;
+                  transform: translateX(-50%);
+                "
+              /> -->
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img src="./images/wflags/eu.png"
+                                style="
+                                                                                                                                height: 0.9em;
+                                                                                                                                vertical-align: -6%;
+                                                                                                                                display: inline-block;
+                                                                                                                                margin-right: 0em;
+                                                                                                                              " /> Связаться со мной
+                        </h2>
+                        <p>
+                            Э-почта | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+                            Линкедин |
+                            <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+                            Инстаграм |
+                            <a href="https://www.instagram.com/helios.hsu/"
+                                target="_blank">instagram.com/helios.hsu</a><br /><br />
+                            <span class="currentDateInLang" language="russian"></span><br />
+                            <a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+                                id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                                title="timezone - Zurich" target="_blank" rel="nofollow">Время в Мюнхене
+                                [CET]</a>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                        border: none;
+                        border-top: 1px solid #c7c7c7;
+                        margin: 0px 0;
+                      " />
+                    </div>
+
+                    <!-- 第二栏 -->
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start --><a id="weather" target="_blank"
+                            href="https://www.booked.net/weather/beijing-18391"><img
+                                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" /></a><!-- weather widget end -->
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+                            style="width: 55px; height: 60px" /><br /><br />
+                        <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                                style="
+                                                                                                                        height: 0.9em;
+                                                                                                                        vertical-align: -6%;
+                                                                                                                        display: inline-block;
+                                                                                                                        margin-right: 0em;
+                                                                                                                      " />
+                            Судьба нас свела</h2>
+                        <p>
+                            Фотография |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+                            Письмо |
+                            <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
+                            Ученый |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+
+                            <a class="jieqi-24"
+                                language="russian"></a> - <span class="currentZodiacInLang" language="russian"></span> <br>
+                            <a href="//24timezones.com/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+                                style="text-decoration: none" class="clock24"
+                                id="tz24-1737245506-c1166-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6InJ1In0="
+                                title="время Москва" target="_blank" rel="nofollow">Время в Москве [MSK]</a>
+                            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                        border: none;
+                        border-top: 1px solid #c7c7c7;
+                        margin: 0px 0;
+                      " />
+                    </div>
+
+  <!-- 第三栏 -->
+<div class="col-md-5">
+    <br />
+    <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+
+      <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
+         style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+        <img src="images/default-map.png" alt="Visitor Map"
+             class="fallback-img">
+      </a>
+
+    </div>
+
+    <style>
+      /* 默认电脑端偏移 */
+      #clustrmap-container {
+        transform: translateX(15px) !important;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* 默认图片样式：PC/iPad 保持最大 470px */
+      .fallback-img {
+        width: 100%;
+        max-width: 470px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 移动端特殊处理：让图片铺满屏幕宽度 */
+      @media (max-width: 480px) {
+        .fallback-img {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        #clustrmap-container {
+          transform: translateX(0) !important; /* 移动端不再横向偏移 */
+        }
+      }
+
+      @media (max-width: 768px) {
+        #clustrmap-container {
+          transform: translateX(0px) !important;
+        }
+      }
+    </style>
+
+    <script>
+      (function () {
+        // 判断是否是移动端或 iPad
+        var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+        if (!isMobile) {
+          // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.id = "clustrmaps";
+          script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+          script.onload = function () {
+            var fallback = document.getElementById("clustrmap-fallback-link");
+            if (fallback) fallback.style.display = "none";
+          };
+
+          document.getElementById("clustrmap-container").appendChild(script);
+        } else {
+          console.log("📱 Mobile device detected, showing static fallback image.");
+        }
+      })();
+    </script>
+  </div>
+                </form>
+            </div>
+            <br />
+
+            <!-- <div class="container">
+                <form action="#" class="row align-items-center">
+                  <div class="col-md-5 mr-auto"></div>
+                  <div class="col-md-6 ml-auto"></div>
+                </form>
+              </div>
+              <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                  height: 1px;
+                  background-color: gray;
+                  border: none;
+                  margin: 0;
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  width: 150vw;
+                  transform: translateX(-50%);
+                " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+              style="
+                height: 1px;
+                border-width: 0;
+                color: gray;
+                background-color: gray;
+              "
+            /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
+                            height: 0.9em;
+                            vertical-align: -6%;
+                            display: inline-block;
+                            margin-right: 0em;
+                          " />
+                                <text>Приветствую вас, друзья с
+                                    <span class="location">Земли</span>! За пределами
+                                    <span class="distance-info"> ∞ км</span> расстояния мы всегда связаны</text>
+                                <img src="./images/wflags/de.png" style="
+                            height: 0.9em;
+                            vertical-align: -6%;
+                            display: inline-block;
+                            margin-right: 0em;
+                          " />
+                                <br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Авторские права &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | Hong Xu | Обновлено: <span class="web_update_month"></span>. <span
+                                    class="web_update_year"></span> г. |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <!-- <a href="https://info.flagcounter.com/D897"
+                          ><img
+                            src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                            border="0"
+                        /></a> -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                            display: inline-block;
+                            width: 94%;
+                            height: 95%;
+                            overflow: hidden;
+                            position: relative;
+                          ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                              width: auto;
+                              height: auto;
+                              object-fit: fill;
+                              object-position: top right;
+                              transform: translateX(3.5%) translateY(30%);
+                            " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .site-wrap -->
+
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+
+
+        <script src="js/aos.js"></script>
+
+        <script src="js/jquery.sticky.js"></script>
+
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_ru.js" type="module"></script>
+        <script type="text/javascript" src="update_info_script.js"></script>
+        <script src="js/24jieqi.js"></script>
+
+
+        <script>
+            // 增强版国家代码映射表（可扩展）
+            // Enhanced country code mapping (transliterated to English)
+            const COUNTRY_MAP = {
+                // Европейские страны
+                'al': { name: 'Албания', color: '#E41E1E' },
+                'ad': { name: 'Андорра', color: '#FF0000' },
+                'at': { name: 'Австрия', color: '#ED2939' },
+                'by': { name: 'Беларусь', color: '#D22730' },
+                'be': { name: 'Бельгия', color: '#000000' },
+                'ba': { name: 'Босния и Герцеговина', color: '#002395' },
+                'bg': { name: 'Болгария', color: '#00966E' },
+                'hr': { name: 'Хорватия', color: '#FF0000' },
+                'cy': { name: 'Кипр', color: '#0033A0' },
+                'cz': { name: 'Чехия', color: '#D7141A' },
+                'dk': { name: 'Дания', color: '#C60C30' },
+                'ee': { name: 'Эстония', color: '#4891D9' },
+                'fi': { name: 'Финляндия', color: '#003580' },
+                'fr': { name: 'Франция', color: '#0055A4' },
+                'de': { name: 'Германия', color: '#000000' },
+                'gr': { name: 'Греция', color: '#0D5EAF' },
+                'hu': { name: 'Венгрия', color: '#436F4D' },
+                'is': { name: 'Исландия', color: '#003897' },
+                'ie': { name: 'Ирландия', color: '#009A44' },
+                'it': { name: 'Италия', color: '#009246' },
+                'lv': { name: 'Латвия', color: '#9E3039' },
+                'li': { name: 'Лихтенштейн', color: '#002B7F' },
+                'lt': { name: 'Литва', color: '#006A44' },
+                'lu': { name: 'Люксембург', color: '#00A1DE' },
+                'mt': { name: 'Мальта', color: '#CF142B' },
+                'md': { name: 'Молдова', color: '#0033A0' },
+                'mc': { name: 'Монако', color: '#CE1126' },
+                'me': { name: 'Черногория', color: '#C40308' },
+                'nl': { name: 'Нидерланды', color: '#AE1C28' },
+                'mk': { name: 'Северная Македония', color: '#D20000' },
+                'no': { name: 'Норвегия', color: '#EF2B2D' },
+                'pl': { name: 'Польша', color: '#DC143C' },
+                'pt': { name: 'Португалия', color: '#006600' },
+                'ro': { name: 'Румыния', color: '#002B7F' },
+                'ru': { name: 'Россия', color: '#D52B1E' },
+                'sm': { name: 'Сан-Марино', color: '#008C45' },
+                'rs': { name: 'Сербия', color: '#0C4076' },
+                'sk': { name: 'Словакия', color: '#EE1C25' },
+                'si': { name: 'Словения', color: '#005AA6' },
+                'es': { name: 'Испания', color: '#AA151B' },
+                'se': { name: 'Швеция', color: '#005AA6' },
+                'ch': { name: 'Швейцария', color: '#D52B1E' },
+                'ua': { name: 'Украина', color: '#0057B7' },
+                'gb': { name: 'Великобритания', color: '#012169' },
+
+                // Основные азиатские страны
+                'cn': { name: 'Китай', color: '#EE1C25' },
+                'in': { name: 'Индия', color: '#FF9933' },
+                'jp': { name: 'Япония', color: '#BC002D' },
+                'kr': { name: 'Южная Корея', color: '#CD2E3A' },
+                'sg': { name: 'Сингапур', color: '#EF3340' },
+                'th': { name: 'Таиланд', color: '#A51931' },
+                'id': { name: 'Индонезия', color: '#CE1126' },
+                'sa': { name: 'Саудовская Аравия', color: '#006C35' },
+                'tr': { name: 'Турция', color: '#E30A17' },
+
+                // Основные американские страны
+                'us': { name: 'США', color: '#3C3B6E' },
+                'ca': { name: 'Канада', color: '#FF0000' },
+                'br': { name: 'Бразилия', color: '#009C3B' },
+                'ar': { name: 'Аргентина', color: '#75AADB' },
+                'mx': { name: 'Мексика', color: '#006341' },
+
+                // Основные африканские страны
+                'za': { name: 'Южноафриканская Республика', color: '#009639' },
+                'eg': { name: 'Египет', color: '#CE1126' },
+                'ng': { name: 'Нигерия', color: '#008751' },
+                'ke': { name: 'Кения', color: '#000000' },
+
+                // Океания
+                'au': { name: 'Австралия', color: '#00008B' },
+                'nz': { name: 'Новая Зеландия', color: '#00247D' },
+
+                // Международные организации
+                'eu': { name: 'ЕС', color: '#003399' },
+                'un': { name: 'ООН', color: '#4B92C3' },
+                'asean': { name: 'АСЕАН', color: '#004B87' }
+            };
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const selector = document.getElementById('event-selector');
+                const now = new Date();
+                now.setHours(0, 0, 0, 0); // 标准化当前日期
+
+                // 1. 初始化处理时间线结构
+                const timeline = document.querySelector('.timeline');
+                const allItems = Array.from(timeline.children);
+
+                // 构建年份分组结构
+                const yearGroups = [];
+                let currentYearGroup = null;
+
+                // 2. 处理所有元素并过滤未来事件
+                allItems.forEach(element => {
+                    if (element.classList.contains('period')) {
+                        // 处理年份标题
+                        currentYearGroup = {
+                            node: element,
+                            events: [],
+                            hasValidEvents: false,
+                            year: element.querySelector('.timeline-title').textContent.match(/\d{4}/)?.[0]
+                        };
+                        yearGroups.push(currentYearGroup);
+                    } else if (currentYearGroup && element.classList.contains('timeline-item')) {
+                        // 处理事件项
+                        const dateSpan = element.querySelector('.timeline-info span');
+                        let isValid = false;
+
+                        // 日期验证逻辑
+                        if (dateSpan) {
+                            const dateText = dateSpan.textContent.trim();
+                            const monthMap = {
+                                января: 1,
+                                февраля: 2,
+                                марта: 3,
+                                апреля: 4,
+                                мая: 5,
+                                июня: 6,
+                                июля: 7,
+                                августа: 8,
+                                сентября: 9,
+                                октября: 10,
+                                ноября: 11,
+                                декабря: 12
+                            };
+
+                            // 匹配俄语日期格式：11 января 2023 г.
+                            const dateMatch = dateText.match(/(\d{1,2})\s*(\p{L}+)\s*(\d{4})\s*г/u);
+                            console.log("检查日期文本: ", dateText);
+
+                            const cleanedDateText = dateText.replace(/\s+/g, ' ').trim();
+                            console.log("清理后的日期文本:", cleanedDateText);
+
+                            if (dateMatch) {
+                                console.log("匹配成功：", dateMatch);
+                            } else {
+                                console.log("没有匹配到日期：", cleanedDateText);
+                            }
+
+                            if (dateMatch && monthMap[dateMatch[2]]) {
+                                const eventDate = new Date(
+                                    parseInt(dateMatch[3]),        // 年
+                                    monthMap[dateMatch[2]] - 1,    // 月（JavaScript月份是从0开始的）
+                                    parseInt(dateMatch[1])         // 日
+                                );
+                                eventDate.setHours(0, 0, 0, 0);  // 标准化时间
+                                isValid = eventDate <= now;      // 检查是否是过去的日期
+                            }
+                        }
+
+                        // 初始显示设置
+                        element.style.display = isValid ? '' : 'none';
+
+                        // 记录有效事件
+                        if (isValid) {
+                            currentYearGroup.hasValidEvents = true;
+                            currentYearGroup.events.push(element);
+                        }
+                    }
+                });
+
+                // 3. 初始化隐藏无有效事件的年份
+                yearGroups.forEach(group => {
+                    group.node.style.display = group.hasValidEvents ? '' : 'none';
+                });
+
+                // 4. 构建国家统计数据
+                const flagCounter = yearGroups.reduce((acc, group) => {
+                    group.events.forEach(item => {
+                        const flagImg = item.querySelector('.timeline-info img');
+                        if (flagImg) {
+                            const codeMatch = flagImg.src.match(/wflags\/(\w+)\.png/);
+                            if (codeMatch) {
+                                const code = codeMatch[1];
+                                acc[code] = (acc[code] || 0) + 1;
+                            }
+                        }
+                    });
+                    return acc;
+                }, {});
+
+                // 5. 动态生成选择器选项
+                selector.innerHTML = [
+                    '<option value="default" selected>Выбор страны</option>',
+                    ...Object.entries(flagCounter)
+                        .sort((a, b) => b[1] - a[1] || COUNTRY_MAP[a[0]]?.name?.localeCompare(COUNTRY_MAP[b[0]]?.name))
+                        .map(([code, count]) => `
+                    <option value="${code}"
+                            style="color: ${COUNTRY_MAP[code]?.color || '#333'};
+                                   font-weight: 500">
+                      [${count}] ${COUNTRY_MAP[code]?.name || code.toUpperCase()}
+                    </option>
+                  `)
+                ].join('');
+
+                // 6. 筛选功能实现
+                selector.onchange = function () {
+                    const selectedCode = this.value;
+
+                    // 处理事件显示
+                    yearGroups.forEach(group => {
+                        let hasVisible = false;
+
+                        group.events.forEach(item => {
+                            // 判断国家匹配
+                            const flagImg = item.querySelector('.timeline-info img');
+                            const itemCode = flagImg?.src.match(/wflags\/(\w+)\.png/)?.[1];
+                            const matchCountry = selectedCode === 'default' || itemCode === selectedCode;
+
+                            item.style.display = matchCountry ? '' : 'none';
+                            if (matchCountry) hasVisible = true;
+                        });
+
+                        // 处理年份标题显示
+                        const shouldShowYear = hasVisible && group.hasValidEvents;
+                        group.node.style.display = shouldShowYear ? '' : 'none';
+                    });
+                };
+            });
+        </script>
+
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "id": "news-kfas",
+      "date": "2024-10-01",
+      "locationKey": "locations.salzburg",
+      "titleKey": "news.items.kfas.title",
+      "summaryKey": "news.items.kfas.summary"
+    },
+    {
+      "id": "news-unece",
+      "date": "2024-03-01",
+      "locationKey": "locations.geneva",
+      "titleKey": "news.items.unece.title",
+      "summaryKey": "news.items.unece.summary"
+    },
+    {
+      "id": "news-hsg",
+      "date": "2024-02-01",
+      "locationKey": "locations.stGallen",
+      "titleKey": "news.items.hsg.title",
+      "summaryKey": "news.items.hsg.summary"
+    }
+  ]
+}

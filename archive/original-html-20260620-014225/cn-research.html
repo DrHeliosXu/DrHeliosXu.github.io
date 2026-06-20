@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <title>徐泓 | 新能源博士 | 工程师</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/mobilenav.css">
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cn-common.css">
+    <script src="js/chinese_lunar_calendar.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            /* 全局字体 */
+            font-size: 16px;
+            color: #373737;
+            line-height: 1.6;
+        }
+
+
+        select {
+            width: 150px;
+            /* 设置宽度 */
+            height: 15px;
+            /* 设置高度 */
+            border-radius: 0 !important;
+            /* 去除圆角 */
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+            /* 设置阴影 */
+            border: 1px solid #ccc;
+            /* 边框颜色 */
+            padding: 2px 2px;
+            /* 内边距，提升可点击区域 */
+            background-color: #fff;
+            /* 背景色 */
+            font-size: 14px;
+            /* 字体大小 */
+            font-family: Arial, sans-serif;
+            /* 字体字形，使用无衬线字体 */
+        }
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <!-- block save as
+  ================================================== -->
+    <script type="text/javascript">
+        window.onload = function () {
+            document.onkeydown = function () {
+                var e = window.event || arguments[0];
+                //屏蔽F12
+                if (e.keyCode == 123) {
+
+                    return false;
+                    //屏蔽Ctrl+Shift+I
+                } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+                    return false;
+                    //屏蔽Shift+F10
+                } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+                    return false;
+                }
+            };
+            //屏蔽右键单击
+            document.oncontextmenu = function () {
+
+                return false;
+            }
+        }
+    </script>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+
+
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6 d-flex">
+                        <a href="cn.html" class="site-logo">
+                            <img src="images/logo-full-cn.png" alt="Image" class="site-logo cn-logo-main">
+                        </a>
+
+                        <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                            <!---<span class="icon-menu h3"></span>--->
+                        </a>
+
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-end">
+                        <div class="top-social d-flex align-items-center">
+                            <div class="social-icons-container">
+                                <div class="ml-md-auto top-social d-lg-inline-block">
+
+                                    <div class="text-right cn-social-links">
+                                        <a href="https://www.linkedin.com/in/xuhong/"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-linkedin"></span>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                                            class="social-icon d-inline-block p-3" target="_blank">
+                                            <span class="icon-google"></span>
+                                        </a>
+                                        <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                                            class="social-icon d-inline-block p-3">
+                                            <span class="icon-instagram"></span>
+                                        </a>
+                                    </div>
+                                    <!-- <a href="your-wechat-link" target="_blank" class="social-icon d-inline-block p-3">
+                                        <span class="icon-wechat"></span></a> -->
+
+                                    <a class="flag d-lg-none">
+                                        </a>
+                                    <div class="ml-auto d-inline-block d-lg-none">
+                                        <select id="languages" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+                                            <option value="cn-research.html" selected>简体中文</option>
+                                            <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
+                                            </option>
+                                            <option value="jp-research.html">日本語</option>
+                                            <option value="kr-research.html">한국어</option>
+                                            <option value="th-research.html">ไทย</option>
+                                            <option value="de-research.html">Deutsch</option>
+                                            <option value="en-research.html">English</option>
+                                            <option value="es-research.html">Español</option>
+                                            <option value="fr-research.html">Français</option>
+                                            <option value="it-research.html">Italiano</option>
+                                            <option value="ru-research.html">Русский</option>
+                                            <option value="ar-research.html">اللغة العربية</option>
+                                        </select>
+                                        <select id="content-list-2" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
+                                            <option value="cn.html">主页</option>
+                                            <option value="cn-research.html" selected>研究</option>
+                                            <option value="cn-news.html">新闻</option>
+                                            <option value="cn-projects.html">项目</option>
+                                            <option value="cn-about.html">关于</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none text-right">
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="site-navbar cn-main-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+                role="banner">
+
+                <div class="container">
+                    <div class="d-flex align-items-center">
+
+                        <div class="mr-auto">
+                            <nav class="site-navigation position-relative text-right" role="navigation">
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo cn-scroll-logo" />
+                                <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
+                                    <li class="active">
+                                        <a href="cn.html" class="nav-link text-left">主 页&nbsp;&nbsp;</a>
+                                    </li>
+                                    <li>
+                                        <a href="cn-research.html" class="nav-link text-left">研 究</a>
+                                    </li>
+                                    <li>
+                                        <a href="cn-news.html" class="nav-link text-left">新 闻</a>
+                                    </li>
+                                    <li>
+                                        <a href="cn-projects.html" class="nav-link text-left">项 目</a>
+                                    </li>
+                                    <li>
+                                        <a href="cn-about.html" class="nav-link text-left">关 于</a>
+                                    </li>
+                                    <!-- <li class="festival-item">
+                                        <a href="#" target="_blank" class="dynamic-greeting nav-link text-left">
+                                        </a>
+                                    </li> -->
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- 语言选择框 -->
+                        <div class="ml-auto">
+                            <span class="cn-desktop-language">
+<!-- 选择语言的下拉框 -->
+                                <select id="languages-2" name="languages" onchange="window.location.href=this.options[this.selectedIndex].value" class="cn-nav-select cn-nav-select-inline">
+                                    <option value="cn-research.html" selected>简体中文</option>
+                                    <option value="javascript:runFanTiJavaScript();">繁体中文</option>
+                                    <option value="jp-research.html">日本語</option>
+                                    <option value="kr-research.html">한국어</option>
+                                    <option value="th-research.html">ไทย</option>
+                                    <option value="de-research.html">Deutsch</option>
+                                    <option value="en-research.html">English</option>
+                                    <option value="es-research.html">Español</option>
+                                    <option value="fr-research.html">Français</option>
+                                    <option value="it-research.html">Italiano</option>
+                                    <option value="ru-research.html">Русский</option>
+                                    <option value="ar-research.html">اللغة العربية</option>
+                                </select>
+                            </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="d-block d-sm-none cn-mobile-divider">
+
+        <!---Mobile MENU Bar--->
+        <a class="d-inline-block d-sm-none ">
+            <button id="burger" class="open-main-nav">
+                <span class="burger"></span>
+                <span class="burger-text">目 录</span>
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li>
+                        <a href="cn.html">徐 泓 <small>博士</small> </a><br>
+                    </li>
+                    <li>
+                        <a href="cn-research.html">研究 ➔</a>
+                    </li>
+                    <li>
+                        <a href="cn-news.html">新闻 ➔</a>
+                    </li>
+                    <li>
+                        <a href="cn-projects.html">项目 ➔</a>
+                    </li>
+                    <li>
+                        <a href="cn-about.html">关于 ➔</a>
+                    </li>
+                </ul>
+            </nav>
+        </a>
+
+        <!------>
+        <!-- 简化版导航栏内容 -->
+        <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+            <div class="cn-mobile-navbar-inner">
+
+                <a href="cn-research.html" class="cn-mobile-logo-link">
+                    <img src="images/logo-full-cn-long.png" alt="Image" class="site-logo cn-mobile-logo" />
+                </a>
+
+                <div></div>
+
+                <div class="cn-mobile-controls">
+                    <a class="flag d-inline-block d-lg-none">
+                        </a>
+                    <select id="languages-3" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+                        <option value="cn-research.html" selected>简体中文</option>
+                        <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
+                        </option>
+                        <option value="jp-research.html">日本語</option>
+                        <option value="kr-research.html">한국어</option>
+                        <option value="th-research.html">ไทย</option>
+                        <option value="de-research.html">Deutsch</option>
+                        <option value="en-research.html">English</option>
+                        <option value="es-research.html">Español</option>
+                        <option value="fr-research.html">Français</option>
+                        <option value="it-research.html">Italiano</option>
+                        <option value="ru-researchhtml">Русский</option>
+                        <option value="ar-research.html">اللغة العربية</option>
+                    </select>
+                    <select id="content-list" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
+                        <option value="cn.html">主页</option>
+                        <option value="cn-research.html" selected>研究</option>
+                        <option value="cn-news.html">新闻</option>
+                        <option value="cn-projects.html">项目</option>
+                        <option value="cn-about.html">关于</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!------>
+
+
+
+
+        <div class="site-section">
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <p class="d-sm-block d-none">&nbsp;</p>
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-8 single-content">
+
+                        <p class="mb-5 d-sm-block d-none">
+                            &nbsp;
+                            <img src="images/banner_img_1_cn.png" alt="Image" class="img-fluid">
+                          </p>
+                          <p class="mb-5 d-sm-none" style="margin-top: -20px;">
+                            &nbsp;
+                            <img src="images/banner_img_1_cn_mobi.png" alt="Image" class="img-fluid">
+                          </p>
+
+
+                        <h1 class="mb-4">
+                            研究概览
+                        </h1>
+                        <h5 style="text-align: center;">面向电网的氢-电协同低碳能源系统</h5>
+                        <hr>
+                        <img src="images/research_overview.png" alt="Research Overview"
+                            style="display: block; width: 98%; height: auto;">
+                        <hr>
+
+                        <br><br>
+
+
+                        <h1 class="mb-4">
+                            出版物
+                        </h1>
+                        <hr>
+                        <h4 class="mb-4">
+                            政策研究
+                        </h4>
+
+                        <ul class="square">
+                            <li><strong>能源经济 / 政策 / 战略: </strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                <strong>H. Xu*</strong> [Author] etc.
+                                Uncertain Futures and Connections Reimagined - Connecting Technologies: Ch.4 Policy for
+                                Tackling Inequalities [R] <br>
+                                译文: 不确定的未来与重新构想的连接 - 技术链接: 解决不平等问题的政策<br>
+                                出版方: <text style="color:rgb(9, 148, 46)">[萨尔茨堡国际]</text>
+                                <br>
+                                2025 | <em><strong>Thought Piece & Working Report</strong></em> [<a
+                                    href="https://www.salzburgglobal.org/fileadmin/user_upload/online_reports/KFAS/2024/SalzburgGlobal_report_KFAS_2024pdf.pdf"
+                                    target="_blank">PDF</a>] [<a
+                                    href="https://reports.salzburgglobal.org/connecting-technologies#tackle-inequalities"
+                                    target="_blank">章节</a>]<text style="color:rgb(6, 35, 91)"></text><text
+                                    style="color:rgb(19, 142, 10)"></text>
+                            </li>
+                            <!--
+                            <li>
+                                <strong>H. Xu*</strong> [Contributor] etc.
+                                Group of Experts on Assessment of Climate Change Impacts and Adaptation for
+                                Inland Transport (26th session) [R] <br>
+                                译文: 第26届内陆运输气候变化影响及适应评估专家组会议报告<br>
+                                出版方: <text style="color:rgb(38, 159, 216)">[联合国欧洲经济委员会]</text>
+                                <br>
+                                2024 | <em><strong>Group of Experts Report</strong></em> [<a
+                                    href="https://unece.org/sites/default/files/2024-12/ECE-TRANS-WP5-GE3-54e.pdf"
+                                    target="_blank">PDF</a>] <text style="color:rgb(6, 35, 91)"></text><text
+                                    style="color:rgb(19, 142, 10)"></text>
+                            </li> -->
+                            <li>
+                                <strong>H. Xu*</strong> [Author].
+                                Hydrogen Development in China and the EU: A Recommended Tian Ji's Horse Racing Strategy
+                                [W] <br>
+                                译文: 展望中欧氢能发展-田忌赛马策略的启示<br>
+                                投稿录用: <text style="color:rgb(36, 82, 197)">[国际可再生能源署] [IRENA International Energy
+                                    Workshop]</text>
+                                <br>
+                                2024 | <em><strong>Policy Research Working Paper</strong></em> [<a
+                                    href="https://arxiv.org/pdf/2408.08874" target="_blank">PDF</a>] <text
+                                    style="color:rgb(6, 35, 91)"></text><text style="color:rgb(19, 142, 10)"></text>
+                            </li>
+                        </ol>
+
+                        <hr>
+                        <h4 class="mb-4">
+                            科学研究
+                        </h4>
+
+                        <ul class="square">
+
+                            <li><strong>新能源科技 / 电化学技术: </strong><br>
+                        </ul>
+                        <ol>
+
+                            <li>
+                                F. Mack, S. N. Artigas, <strong>H. Xu*</strong> [FDB]<br>
+                                Pressure and Impedance Based in Situ Diagnostic Methods for Water Management in Proton Exchange Membrane Fuel Cells Applications [J] <br>
+                                译文: 基于压降和阻抗的原位诊断方法在质子交换膜燃料电池水管理中的应用<br>
+                                合作: <text style="color:rgb(37, 84, 238)">[德国科德宝集团]</text>  <br>
+                                2024 | <em><strong>ECS Meeting Abstracts</strong></em> [<a href="https://ecs.confex.com/ecs/244/meetingapp.cgi/Paper/175630" target="_blank">WEB</a>]
+                                <text style="color:rgb(0, 103, 159)"></text> <text style="color:red"></text>
+                            </li>
+
+                            <li>
+                                S. N. Artigas, <strong>H. Xu*</strong> [FDB], F. Mack<br>
+                                Use of distribution of relaxation times analysis as an in-situ diagnostic tool for water
+                                management in PEM
+                                fuel cells applications [J] <br>
+                                译文: 原位质子交换膜燃料电池诊断工具: 弛豫时间分布在水管理中的应用<br>
+                                合作: <text style="color:rgb(37, 84, 238)">[德国科德宝集团]</text> | 被引: <text
+                                    style="color:rgb(133, 36, 197)">[清华大学]</text> <br>
+                                2024 | <em><strong>J. Power Sources</strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378775324001307"
+                                    target="_blank">PDF</a>]
+                                <text style="color:rgb(0, 103, 159)"></text> <text style="color:red"></text>
+                            </li>
+
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt, F. N. Büchi,
+                                J.
+                                Eller<br>
+                                Effects of gas diffusion layer substrates on PEFC water management: Part II. In situ
+                                liquid
+                                water
+                                desaturation via evaporation [J] <br>
+                                译文: 气体扩散层基材对质子交换膜燃料电池水管理的影响II: 原位液态水蒸发研究<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> | 被引: <text
+                                    style="color:rgb(250, 49, 14)">[丰田汽车]</text> <text
+                                    style="color:rgb(141, 20, 20)">[德国博世公司]</text><br>
+                                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac94a2"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                S. van Rooij, M. Magnini, A. Mularczyk, <strong>H. Xu*</strong> [PSI], F. N. Büchi
+                                [PSI],
+                                Prof.
+                                S. Haussener
+                                [EPFL]<br>
+                                Conductive heat transfer in partially saturated gas diffusion layers with evaporative
+                                cooling
+                                [J] <br>
+                                译文: 自蒸发冷却设计的燃料电池部分饱和气体扩散层中的传导传热研究<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> <text
+                                    style="color:rgb(250, 49, 14)">[洛桑联邦理工]</text> <br>
+                                2022 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac4e5c"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], S. Nagashima [Toyota], H. Nguyen, K. Kishita, F. Marone,
+                                F.
+                                N.
+                                Büchi, J.
+                                Eller [PSI]<br>
+                                Temperature dependent water transport mechanism in PEFC gas diffusion layers revealed by
+                                subsecond operando
+                                X-ray tomographic microscopy. [J] <br>
+                                译文: 亚秒级原位X射线断层摄影技术揭示质子交换膜燃料电池气体扩散层中的温度依赖性水传输机制研究<br>
+                                合作: <text style="color:rgb(250, 49, 14)">[丰田汽车]</text> | 被引: <text
+                                    style="color:rgb(141, 20, 20)">[德国博世公司]</text> <text
+                                    style="color:rgb(133, 36, 197)">[清华大学]</text> <text
+                                    style="color:rgb(36, 95, 197)">[多伦多大学]</text><br>
+                                2021 | <em><strong>J. Power Sources </strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/pii/S0378775321000422"
+                                    target="_blank">PDF</a>]
+
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi,
+                                J.
+                                Eller
+                                [PSI]<br>
+                                Effects of gas diffusion layer substrates on PEFC water management: Part I. Operando
+                                liquid
+                                water saturation
+                                and gas diffusion properties [J] <br>
+                                译文: 气体扩散层基材对质子交换膜燃料电池水管理的影响I: 原位液态水饱和度和气体扩散特性研究<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text>| 被引: <text
+                                    style="color:rgb(74, 7, 241)">[德国宇航中心]</text> <text
+                                    style="color:rgb(250, 49, 14)">[丰田汽车]</text> <text
+                                    style="color:rgb(133, 36, 197)">[清华大学]</text><br>
+                                2021 | <em><strong>J. Electrochem. Soc.</strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/1945-7111/ac1035"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+
+                            <li>
+                                C. Csoklich, <strong>H. Xu*</strong> [PSI], F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi
+                                [PSI]<br>
+                                Laser Structured Gas Diffusion Layers for Improved Water Transport and Fuel Cell
+                                Performance
+                                [J]
+                                <br>
+                                译文: 用于改善水传输和燃料电池性能的激光结构化气体扩散层 <br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> | 被引: <text
+                                    style="color:rgb(74, 7, 241)">[东京工业大学]</text> <text
+                                    style="color:rgb(248, 114, 5)">[香港科技大学]</text> <text
+                                    style="color:rgb(133, 36, 197)">[清华大学]</text><br>
+                                2021 | <em><strong>ACS Appl. Energy Mater. </strong></em> [<a
+                                    href="https://pubs.acs.org/doi/full/10.1021/acsaem.1c02454" target="_blank">PDF</a>]
+                            </li>
+
+
+                            <li>
+                                Y. Nagai [Toyota], J. Eller, T. Hatanaka, S. Yamaguchi, S. Kato, F. Marone, <strong>H.
+                                    Xu*</strong> [PSI],
+                                F. N. Büchi. <br>
+                                Improving water management in fuel cells through microporous layer modifications: Fast
+                                operando
+                                tomographic
+                                imaging of liquid water. [J] <br>
+                                译文: 通过微孔层改性改善燃料电池中的水管理: 液态水的快速原位X射线断层摄影成像<br>
+                                合作: <text style="color:rgb(250, 49, 14)">[丰田汽车]</text> | 被引: <text
+                                    style="color:rgb(241, 26, 7)">[麻省理工学院]</text> <text
+                                    style="color:rgb(74, 7, 241)">[德国宇航中心]</text> <text
+                                    style="color:rgb(7, 38, 241)">[国家电投]</text><br>
+                                2019 | <em><strong>J. Power Sources </strong></em> [<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0378775319307943"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>AI / 计算机视觉 / 四维成像:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], A. Hendriksend, F. N. Büchi, J. Eller, Prof.
+                                M.
+                                Stampanoni [ETH],
+                                F. Marone [SLS]<br>
+                                Deep learning based classification of dynamic processes in time-resolved XTM [J] <br>
+                                译文: 基于深度学习的时间分辨X射线断层摄影技术动态过程分类 <br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> <text
+                                    style="color:rgb(191, 9, 228)">[CWI阿姆斯特丹]</text> | 被引: <text
+                                    style="color:rgb(236, 52, 36)">[斯坦福大学]</text> <text
+                                    style="color:rgb(12, 26, 230)">[亚琛工业大学]</text> <br>
+                                2021 | <em><strong>Scientific Reports </strong></em> [<a
+                                    href="https://www.nature.com/articles/s41598-021-03546-8" target="_blank">PDF</a>]
+                            </li>
+                            <li>
+                                M. Bührer, <strong>H. Xu*</strong> [PSI], J. Eller, Prof. J. Sijbers, Prof. M.
+                                Stampanoni
+                                [ETH],
+                                F. Marone
+                                [SLS]<br>
+                                Unveiling water dynamics in fuel cells from time-resolved tomographic microscopy data
+                                [J]
+                                <br>
+                                译文: 使用时间分辨X射线断层摄影数据揭示燃料电池中的水动力学<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> <text
+                                    style="color:rgb(104, 9, 228)">[安特卫普大学]</text> | 被引: <text
+                                    style="color:rgb(248, 101, 15)">[东京大学]</text> <text
+                                    style="color:rgb(12, 117, 230)">[多伦多大学]</text> <br>
+                                2021 | <em><strong>Scientific Reports</strong></em> [<a
+                                    href="https://www.nature.com/articles/s41598-020-73036-w" target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi,
+                                J.
+                                Eller
+                                [ETH]<br>
+                                Optimal image denoising for operando XTM of liquid water in PEFC gas diffusion layers.
+                                [J]
+                                <br>
+                                译文: 燃料电池气体扩散层中液态水原位X射线断层摄影图像的最佳去噪研究<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> | 引用: <text
+                                    style="color:rgb(74, 7, 241)">[中科院大连化物所]</text> <text
+                                    style="color:rgb(250, 49, 14)">[多伦多大学]</text> <text
+                                    style="color:rgb(133, 36, 197)">[伦敦大学学院]</text> <br>
+                                2020 | <em><strong>J. Electrochem. Soc. </strong></em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/422241"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], F. Marone, S. Nagashima, H. Nguyen, K. Kishita, F. N.
+                                Büchi,
+                                J.
+                                Eller<br>
+                                <strong>(Invited)</strong> Exploring sub-second and sub-micron XTM imaging of liquid
+                                water
+                                in
+                                PEFC GDLs.[J]
+                                <br>
+                                译文: (受邀论文) 探索燃料电池气体扩散层中液态水的亚秒和亚微米级X射线断层摄影成像技术<br />
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> <text
+                                    style="color:rgb(250, 49, 14)">[丰田汽车]</text> | 被引: <text
+                                    style="color:rgb(14, 97, 250)">[欧洲同步辐射]</text> <text
+                                    style="color:rgb(250, 49, 14)">[美国国家燃料电池中心]</text> | <text
+                                    style="color:rgb(14, 97, 250)">[ECS会议旅行奖]</text><br />
+                                2019 | <em><strong>ECS Transactions </strong></em> [<a
+                                    href="https://iopscience.iop.org/article/10.1149/09208.0011ecst"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+
+                            <li>
+                                <strong>H. Xu*</strong> [PSI], M. Bührer, F. Marone, Prof. T. J. Schmidt [ETH], F. N.
+                                Büchi,
+                                J.
+                                Eller
+                                [PSI]<br>
+                                Fighting the noise: towards the limits of subsecond X-ray tomographic microscopy of
+                                PEFC.
+                                [J]
+                                <br>
+                                译文: 对抗图像噪点: 迈向燃料电池亚秒级X射线断层摄影技术的极限<br>
+                                合作: <text style="color:rgb(8, 114, 31)">[瑞士光源/PSI]</text> | 被引: <text
+                                    style="color:rgb(74, 7, 241)">[美国阿贡国家实验室]</text> <text
+                                    style="color:rgb(250, 49, 14)">[丰田汽车]</text> | <text
+                                    style="color:rgb(8, 114, 31)">[瑞士光源]</text> | <text
+                                    style="color:rgb(14, 97, 250)">[ModVal最佳展报奖]</text><br>
+                                2017 | <em><strong>ECS Transactions </strong></em><strong></strong></em> [<a
+                                    href="https://www.research-collection.ethz.ch/handle/20.500.11850/224830"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>材料科学 / 化学工程:</strong><br>
+                        </ul>
+
+                        <ol>
+
+
+                            <li>
+                                Prof. H. Zhang, R. Wu, <strong>H. Xu*</strong> [BJTU], F. Li, S. Wang, J. Wang [BJUT],
+                                T.
+                                Zhang
+                                <br>
+                                A simple spray reaction synthesis and characterization of hierarchically porous SnO2
+                                microspheres for an
+                                enhanced dye sensitized solar cell. [J] <br>
+                                译文: 用于增强染料敏化太阳能电池的分级多孔二氧化锡微球的简单雾化反应合成和表征<br>
+                                2017 | <em><strong>RSC Advances</strong></em> [<a
+                                    href="https://pubs.rsc.org/en/content/articlelanding/2017/ra/c6ra27235e#!divAbstract"
+                                    target="_blank">PDF
+                                    </Link></a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+
+
+                            <li>
+                                张辉教授 [BJTU], <strong>徐泓*</strong> [BJTU], 万金秀, 颜鲁婷教授, 戴春爱<br>
+                                Preparations of new porous oxides spherical powders by spray reaction technique. [J]<br>
+                                新型多孔氧化物球形粉末的雾化反应法制备 [J] <br>
+                                2012 | <em>《真空与低温》</em> [<a
+                                    href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFD2012&filename=ZKDW201203005&uniplatform=NZKPT&v=n8kUCXQ29XK8uOcXQdI-5jgJqVfzr5uxF9oPXi_7Jb8CNlMTVCM7mmeU-Xw7WoTH"
+                                    target="_blank">链接</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+
+                            <li>
+                                祁晓月, <strong>徐泓*</strong> [BJTU], 周兴振 <br>
+                                Degradation of highly active cypermethrin via ultrasonic irradiation combined with
+                                photocatalysis by
+                                TiO2<br>
+                                超声波-二氧化钛光催化耦合法降解高效氯氰菊酯 [J] <br>
+                                2012 | <em>《化学研究》</em></em> [<a
+                                    href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HXYA201203011&dbname=cjfdtotal&dbcode=CJFD&v=MTUxNDFnOC96aFlVN3pzT1QzaVFyUmN6RnJDVVI3aWVadVJ0RmkzaFVidk1MVFhTYjdHNEg5UE1ySTlFWllSNkQ="
+                                    target="_blank">链接</a>] <text style="color:rgb(14, 144, 250)">[BJTU]</text>
+                            </li>
+                        </ol>
+
+                        &nbsp;
+                        <hr>
+                        <h4>技术专利</h4>
+                        <ul class="square">
+                            <li><strong>欧盟专利:</strong><br></li>
+                        </ul>
+                        <ol>
+                            <li>
+                                <strong>欧洲专利局 (EPO) 2件专利审核中</strong><br />
+                                发明人: <strong>H. Xu</strong>, <br />
+                                2025 | 欧盟专利（未公开）
+                            </li>
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>中国专利:</strong><br></li>
+                        </ul>
+                        <ol>
+                            <li>
+                                <strong>环形气液界面跳汰磁选装置 [P]</strong><br />
+                                发明人: 富鸣教授, 张辉教授, <strong>徐泓</strong>[BJTU], 颜鲁婷教授<br />
+                                2013 | 中国发明专利号: CN102441489B, 生效日期: 2013.10.11. [<a
+                                    href="https://patents.google.com/patent/CN102441489B/en" target="_blank">专利文件</a>]
+                            </li>
+
+                            <li>
+                                <strong>可连续运行的气液界面跳汰磁选可控环形装置 [P]</strong><br />
+                                发明人: 张辉教授, <strong>徐泓</strong>[BJTU], 富鸣教授, 颜鲁婷教授<br />
+                                2013 | 中国发明专利号: CN102441490A, 生效日期: 2013.11.01. [<a
+                                    href="https://patents.google.com/patent/CN102441490A/en" target="_blank">专利文件</a>]
+                            </li>
+
+                            <li>
+                                <strong>超声 - 光催化氧化耦合果蔬清洗装置 [P]</strong><br />
+                                发明人: 周兴振, <strong>徐泓</strong>[BJTU], 江红教授, 祁晓月<br />
+                                2012 | 中国实用新型专利号: CN202311136U, 生效日期: 2012.05.09. [<a
+                                    href="https://patents.google.com/patent/CN202311136U/en" target="_blank">专利文件</a>]
+                            </li>
+                        </ol>
+
+                        &nbsp;
+                        <hr>
+
+                        <h4 class="mb-4">
+                            技术报告
+                        </h4>
+                        <ol>
+                            <li>
+                                <strong>H.Xu</strong> [PSI], J. Eller<br>
+                                燃料电池温度依赖性水传输机制 [R]<br>
+                                2021 | 年度报告 & 科学亮点，<text style="color:rgb(99, 99, 99)">[保罗谢尔研究院]</text>，瑞士菲利根 [<a
+                                    href="https://www.psi.ch/en/media/74242/download?attachment"
+                                    target="_blank">PDF</a>]
+                            </li>
+
+                            <li>
+                                <strong>H.Xu</strong> [TUM]，B. Vinçon-Leite 博士，Y. Luo<br>
+                                中国天津于桥水库蓝藻动态建模 [R]<br>
+                                2016 | 培训报告，<text style="color:rgb(37, 142, 140)">[巴黎高科路桥学院]</text> &
+                                <text style="color:rgb(30, 45, 73)">[巴黎综合理工学院]</text>，法国巴黎
+                            </li>
+
+                            <li>
+                                <strong>H.Xu</strong> [UR1]，W. Lu 博士，A. Madsen 博士，S. Di Matteo 教授<br>
+                                欧洲自由电子激光装置分束与延迟线测试台设计与搭建 [R]<br>
+                                2015 | 实习报告，<text style="color:rgb(67, 25, 237)">[欧洲自由电子激光]</text>，
+                                德国汉堡
+                                [<a href="https://arxiv.org/abs/2408.01472" target="_blank">PDF</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h4 class="mb-4">
+                            行研报告
+                        </h4>
+                        <ul class="square">
+                            <li><strong>行业宏观研究 (大中华区):</strong><br>
+                                2022 | <strong>新能源行业</strong>: 双碳政策下的中国新能源行业创业驱动力 <br>
+                                2020 | <strong>新材料行业</strong>: 半导体材料系列之四：5G拉动光通信产业链，磷化铟材料蓄势待发<br>
+                                <hr>
+                            <li><strong>一级市场研究 (A至D轮融资公司):</strong><br>
+                                2021 | <strong>驭势科技</strong>: 科技先锋系列报告之驭势科技: 多场景自动驾驶解决方案提供商<br>
+                                2021 | <strong>芯驰科技</strong>: 科技先锋系列报告之芯驰科技: 智能汽车自主IP芯片提供商<br>
+                                2021 | <strong>西安奕斯伟</strong>: 西安奕斯伟研究分析报告<br>
+                                <hr>
+                            <li><strong>二级市场研究 (A股&美股上市公司):</strong><br>
+                                2021 | <strong>沪硅产业</strong> (688126.SH): 大硅片先锋引领芯片国产替代 (首次覆盖报告) <br>
+                                2021 | <strong>CREE</strong> (NASDAQ:CREE): 科技先锋系列报告之CREE: 全球功率/射频器件及LED提供商 (美股)<br>
+                                2021 | <strong>经纬恒润</strong> (688326.SH): 科技先锋系列报告之经纬恒润: 汽车电子科技系统服务商<br>
+                                2020 | <strong>天科合达</strong> (870013.OC): 国内领先的SiC晶片生产商<br>
+                                2020 | <strong>立昂微</strong> (605358.SH): 国产替代市场广阔，大硅片产业化在即<br>
+                                2020 | <strong>国瓷材料</strong> (300285.SZ): 义齿用陶瓷材料行业，氧化锆材料势头向好<br>
+                        </ul>
+                        &nbsp;
+                        <hr>
+                        <h1 class="mb-4">
+                            数据集
+                        </h1>
+                        <ol>
+                            <li>
+                                <span>TomoBank：燃料电池X射线成像数据集</span><br>
+                                M. Bührer，<strong>H. Xu*</strong> [PSI]，F. Marone<br>
+                                2019 | 美国能源部 - 阿贡国家实验室 © 版权所有. 版本 f4253f55
+                                [<a href="https://tomobank.readthedocs.io/en/latest/source/data/docs.data.dynamic.html#fuel-cell-data"
+                                    target="_blank">链接</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+
+
+                        <h1 class="mb-4">
+                            助教课程
+                        </h1>
+                        <ol>
+                            <li>
+                                <strong>《可再生能源技术II - 能量存储和能源转换》</strong><br />
+                                苏黎世联邦理工大学, 硕士课程 (529-0191-01L )<br />
+                                2017-2019 | 春季学期 [<a
+                                    href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2018S&ansicht=ALLE&lerneinheitId=120719&lang=en"
+                                    target="_blank">课程链接</a>]
+                            </li>
+                        </ol>
+                        &nbsp;
+                        <hr>
+                        <h1 class="mb-4">
+                            学术会议
+                        </h1>
+                        <ul class="square">
+                            <li><strong>能源与气候 / 低碳交通 / 政策与经济:</strong><br>
+                        </ul>
+
+                        <ol>
+                            <li>
+                                <strong>H. Xu</strong>, 链接科技与社会: 不确定的未来, 重新构想的连接 <br>
+                                Connecting Technologies: Uncertain Futures, Connections Reimagined<br>
+                                <em>2024 | 韩国高等教育财团 - 萨尔茨堡全球研讨会</em>, 萨尔茨堡, 奥地利. <strong>[成员]</strong> [<a
+                                    href="https://www.salzburgglobal.org/" target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 联合国气候变化框架公约科学和技术咨询附属机构第六十届会议 <br>
+                                Sixtieth session of the Subsidiary Body for Scientific and Technological Advice<br>
+                                <em>2024 | 联合国波恩气候变化大会</em>, 波恩, 德国. <strong>[演讲]</strong> [<a
+                                    href="https://unfccc.int/sb58" target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 中国电信 - 低空经济新型基础设施建设与发展报告会 <br>
+                                China Telecom - Construction and Development of New Low-altitude Economic
+                                Infrastructure<br>
+                                <em>2024 | 低空经济发展大会</em>, 芜湖, 中国. <strong>[参会]</strong> [<a
+                                    href="https://gxj.wuhu.gov.cn/xwzx/gzdt/8641460.html" target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 联合国欧洲经济委员会电动交通非正式工作小组首次会议<br>
+                                First session of the UNECE Informal Task Force on E-mobility<br>
+                                <em>2024 | 联合国欧洲经济委员会 - 内陆交通 & 可持续能源组</em>, 日内瓦, 瑞士. <strong>[成员]</strong> [<a href=""
+                                    target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 国际能源研讨会: 对于长期能源转型的创新见解<br>
+                                IRENA-IEW Workshop: Innovative insights on long-term energy transitions<br>
+                                <em>2024 | 国际可再生能源署</em>, 波恩, 德国. <strong>[论文录取]</strong> [<a href=""
+                                    target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 牛津能源研究所氢能研讨会: 为氢经济创造政策和法规环境<br>
+                                Creating the environment for a hydrogen economy: policies and regulations<br>
+                                <em>2024 | 牛津大学圣凯瑟琳学院</em>, 牛津郡, 英国. <strong>[演讲]</strong> [<a href=""
+                                    target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 直面稀缺性: 走向长期匮乏的时代 <br>
+                                Confronting Scarcity: Towards a Time of Protracted Scarcity<br>
+                                <em>2024 | 第53届圣加仑研讨会</em>, 圣加仑, 瑞士. <strong>[学术评审]</strong> [<a
+                                    href="https://symposium.org/" target="_blank">链接</a>]
+                            </li>
+
+                            <li>
+                                <strong>H. Xu</strong>, 气候适应背景下能源与交通之间的相互依存关系<br>
+                                Interdependencies between energy and transport in the context of climate adaptation<br>
+                                <em>2024 | 联合国欧洲经济委员会-内陆运输气候变化影响评估及适应专家组会议</em>, 日内瓦, 瑞士. <strong>[演讲者]</strong> [<a
+                                    href="" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 中国能源转型和技术创新 (分会场) <br>
+                                Chinese Energy Transition and Technology Innovation<br>
+                                <em>2023 | 联合国波恩气候变化大会</em>, 波恩, 德国. <strong>[主持人/演讲者]</strong> [<a
+                                    href="https://unfccc.int/sb58" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 全球科技大会：商业创新如何产生影响<br>
+                                Global Tech Conference: Where Business Innovation Makes a Difference<br>
+                                <em>2023 | 信息通信技术(ICT)春季会议</em>, 卢森堡. <strong>[参会]</strong> [<a
+                                    href="https://www.ictspring.com/" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 重修契约：重新定义世代契约责任<br>
+                                A New Generational Contract: Redefining What We Owe Each Other<br>
+                                <em>2023 | 第52届圣加仑研讨会</em>, 圣加仑, 瑞士. <strong>[学术评审]</strong> [<a
+                                    href="https://symposium.org/" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 创新与创业：公共科学对企业研发的影响<br>
+                                Innovation & Entrepreneurship: The Effect of Public Science on Corporate R&D<br>
+                                <em>2023 | 马克斯·普朗克创新与竞争研究所</em>, 慕尼黑, 德国. <strong>[参会]</strong> [<a href="#"
+                                    target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong>, 2022年转型交通：以气候为中心的流动性，以实现可持续复苏<br>
+                                Transforming Transportation 2022: Climate-centered Mobility for a Sustainable
+                                Recovery<br>
+                                <em>2022 | 交通转型论坛</em>, 在线，美国. <strong>[参会]</strong> [<a
+                                    href="https://www.transformingtransportation.org/" target="_blank">链接</a>]
+                            </li>
+
+                        </ol>
+
+                        <ul class="square">
+                            <hr>
+                            <li><strong>电化学 / 物理学 / 材料科学:</strong><br>
+                        </ul>
+
+                        <ol>
+
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Influence of Pore Size Distribution on Operando GDL Liquid Saturation.<br>
+                                2019 | <em>第236届电化学学会会议 (ECS)</em>, 亚特兰大, 美国. <strong>[演讲]</strong> [<a
+                                    href="http://ma.ecsdl.org/content/MA2019-02/32/1409.short" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br>
+                                Advancements in 10Hz operando X-ray Tomographic Imaging of Water in GDLs of PEFC. <br>
+                                2018 | <em>第8届燃料电池基础研究与前沿发展国际会议 (FDFC)</em>, 南特, 法国. <strong>[演讲]</strong> [<a href=""
+                                    target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br>
+                                Studies of Water Distribution in the Gas Diffusion Layer of PEFCs using X-ray
+                                Tomographic
+                                Microscopy <br>
+                                2018 | <em>第69届国际电化学学会年度会议 (ISE)</em>, 博洛尼亚, 意大利. <strong>[展报]</strong> [<a
+                                    href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F N. Büchi, J. Eller
+                                <br>
+                                Water Distribution in the Gas Diffusion Layer of PEFCs: X-ray Tomographic Microscopy
+                                Studies
+                                <br>
+                                2018 | <em>第15届燃料电池建模与实验验证研讨会 (ModVal)</em>, 阿劳, 瑞士. <strong>[最佳展报奖]</strong> [<a
+                                    href="https://unknown/files/ModVal2018_Hong_Xu_final.pdf" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Quantification of Feature Detectability for Subsecond X-ray Tomographic Microscopy of
+                                PEFC.
+                                <br>
+                                2017 | <em>第6届欧洲有机薄膜燃料电池及电解池论坛 (EFCF)</em>, 卢塞恩, 瑞士. <strong>[演讲]</strong> [<a href=""
+                                    target="_blank">链接
+                                    </Link></a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [PSI], M. Bührer, F. Marone, T. J. Schmidt, F. N. Büchi, J. Eller
+                                <br>
+                                Contrast-to-Noise Ratio Evaluation for X-ray Computed Tomographic Imaging of Water in
+                                Polymer
+                                Electrolyte
+                                Fuel Cells <br>
+                                2017 | <em>第14届燃料电池建模与实验验证研讨会 (ModVal)</em>, 卡尔斯鲁厄, 德国. <strong>[展报] </strong>[<a
+                                    href="https://unknown/files/ModVal2017_Hong_Xu_Final.pdf" target="_blank">链接</Link>
+                                </a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br>
+                                Nanoparticles Embeded Thermoresponsive Diblock Copolymers for Magnetic Sensor
+                                Application.
+                                <br>
+                                2016 | <em>2016年欧盟伊拉斯谟MaMaSELF项目年度会议</em>, 瑞吉山, 瑞士. <strong>[演讲]</strong> [<a href=""
+                                    target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [TUM], E. Metwalli, P. Müller-Buschbaum <br>
+                                Magnetic properties and structure of thermoresponsive
+                                polystyrene-block-poly(N-isopropylacrylamide)/iron
+                                oxide nanocomposite thin films. <br>
+                                2016 | <em>第80届德国物理学会年会及DPG春季会议 (DPG)</em>, 雷根斯堡, 德国. <strong>[展报] </strong> [<a
+                                    href="https://unknown/files/Poster_DPG2016_Hong Xu.pdf" target="_blank">链接</a>]
+                            </li>
+                            <li>
+                                <strong>H. Xu</strong> [BJTU], Prof. H. Zhang, R. Wu <br>
+                                Mesoporous SnO2 Microspheres: Synthesis, Characterization, and Application in Enhanced
+                                Dye-sensitized Solar
+                                Cells and Lithium Batteries. <br>
+                                2013 | <em>2013年清华大学能源粒子前沿研讨会</em>, 北京, 中国. <strong>[展报]</strong> [<a
+                                    href="https://unknown/files/2013_Bachelor_Thesis_Poster.pdf" target="_blank">链接</a>]
+                            </li>
+                        </ol>
+
+                    </div>
+
+
+                    <div class="col-lg-3 ml-auto">
+                        &nbsp;
+                        <div class="section-title">
+
+                            <h2>研究兴趣</h2>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-sun"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">可再生能源</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">氢能源 / 燃料电池 / 电解池 / 太阳能电池 / 锂离子电池</span>
+                                    <span class="date-read">2013-至今</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-file-alt"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">能源经济政策</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">中国 / 欧盟 / 氢能战略 / 能源转型</span>
+                                    <span class="date-read">2023-至今</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-bus"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">低碳智慧交通</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">零碳交通 / 效能提升 / 无人驾驶</span>
+                                    <span class="date-read">2021-至今</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-tools"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">功能材料</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">半导体材料 / 碳材料 / 晶体材料 / 功能聚合物材料</span>
+                                    <span class="date-read">2013-2016</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex">
+                            <div class="number align-self-start"><i class="fas fa-radiation"></i> </div>
+                            <div class="trend-contents">
+                                <h2><a href="#">X射线成像</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">X射线断层扫描(CT) / 小角度X射线散射(SAXS) / X射线吸收光谱</span>
+                                    <span class="date-read">2016-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trend-entry d-flex pl-0">
+                            <div class="number align-self-start"><i class="fas fa-eye"></i></div>
+                            <div class="trend-contents">
+                                <h2><a href="#">计算机视觉</a></h2>
+                                <div class="post-meta">
+                                    <span class="d-block">图像分割 / 3D可视化 / 图像去噪 / 卷积神经网络</span>
+                                    <span class="date-read">2017-2021</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="">&nbsp;</p>
+        <div class="site-section subscribe bg-light" style="position: relative">
+            <!-- 上方 hr -->
+            <!-- <hr
+                        style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          top: 0;
+                          left: 50%;
+                          width: 100vw;
+                          transform: translateX(-50%);
+                        "
+                      /> -->
+            <h2>&nbsp;&nbsp;</h2>
+            <div class="container">
+                <form action="#" class="row align-items-start">
+                    <!-- 第一栏 -->
+                    <div class="col-md-4">
+                        <img src="images/logo.png" alt="Image" class="site-logo cn-footer-logo" />
+                        <br> <br>
+                        <h2><img src="./images/wflags/eu.png" class="cn-footer-flag" /> 联系我</h2>
+                        <p>
+                            邮件 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a> <br>
+                            领英 |
+                            <a href="https://www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
+                            知乎 |
+                            <a href="https://www.zhihu.com/people/dr.of.nothing"
+                                target="_blank">zhihu.com/people/dr.of.nothing</a> <br>
+                            <br>
+                            <span id="currentDate"></span> - <span id="currentWeekday"></span><br>
+                            <span style="color: #ed7d31;">西欧时间 [CET]</span> - <span class="digitalTime" timezone="Europe/Zurich" locale="zh-CN"></span>
+
+
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+
+                    <!-- 第二栏 -->
+
+
+                    <div class="col-md-3">
+                        <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+                        <!-- weather widget start --><a id="weather" target="_blank"
+                            href="https://www.booked.net/weather/beijing-18391"><img
+                                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                                alt="booked.net" /></a><!-- weather widget end -->
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo cn-footer-logo" /> <br>
+                        <br>
+                        <h2><img class="country-flag cn-footer-flag" src="./images/wflags/un.png" alt="国旗" /> 世界之大,
+                            为何我们相遇</h2>
+                        <p>
+                            摄影 |
+                            <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a> <br>
+                            写作 |
+                            <a href="https://site.in.construction/" target="_blank">site.in.construction</a> <br>
+                            学术 |
+                            <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a> <br> <br>
+                            <a class="nongli"></a> - <a class="jieqi-24" language="chinese"></a> <a
+                                class="currentZodiacInLang" language="chinese"></a><br>
+                                <span style="color: #ed7d31;">北京时间 [CST]</span> - <span class="digitalTime" timezone="Asia/Shanghai" locale="zh-CN"></span>
+
+
+                        <h2>&nbsp;&nbsp;</h2>
+                        </p>
+                    </div>
+
+                    <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+                        <hr style="
+                                border: none;
+                                border-top: 1px solid #c7c7c7;
+                                margin: 0px 0;
+                              " />
+                    </div>
+                    <!-- 第三栏 -->
+
+      <!-- 第三栏 -->
+<div class="col-md-5">
+    <br />
+    <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+
+      <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
+         style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+        <img src="images/default-map.png" alt="Visitor Map"
+             class="fallback-img">
+      </a>
+
+    </div>
+
+    <style>
+      /* 默认电脑端偏移 */
+      #clustrmap-container {
+        transform: translateX(15px) !important;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* 默认图片样式：PC/iPad 保持最大 470px */
+      .fallback-img {
+        width: 100%;
+        max-width: 470px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* 移动端特殊处理：让图片铺满屏幕宽度 */
+      @media (max-width: 480px) {
+        .fallback-img {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+        #clustrmap-container {
+          transform: translateX(0) !important; /* 移动端不再横向偏移 */
+        }
+      }
+
+      @media (max-width: 768px) {
+        #clustrmap-container {
+          transform: translateX(0px) !important;
+        }
+      }
+    </style>
+
+    <script>
+      (function () {
+        // 判断是否是移动端或 iPad
+        var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+        if (!isMobile) {
+          // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.id = "clustrmaps";
+          script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+          script.onload = function () {
+            var fallback = document.getElementById("clustrmap-fallback-link");
+            if (fallback) fallback.style.display = "none";
+          };
+
+          document.getElementById("clustrmap-container").appendChild(script);
+        } else {
+          console.log("📱 Mobile device detected, showing static fallback image.");
+        }
+      })();
+    </script>
+  </div>
+
+                </form>
+            </div>
+
+            <!-- <div class="container">
+                        <form action="#" class="row align-items-center">
+                          <div class="col-md-5 mr-auto"></div>
+                          <div class="col-md-6 ml-auto"></div>
+                        </form>
+                      </div>
+                      <h2>&nbsp;&nbsp;</h2> -->
+            <!-- 下方 hr -->
+            <hr style="
+                          height: 1px;
+                          background-color: gray;
+                          border: none;
+                          margin: 0;
+                          position: absolute;
+                          bottom: 0;
+                          left: 50%;
+                          width: 150vw;
+                          transform: translateX(-50%);
+                        " />
+        </div>
+
+        <!-- .site-wrap -->
+        <!-- <hr
+                      style="
+                        height: 1px;
+                        border-width: 0;
+                        color: gray;
+                        background-color: gray;
+                      "
+                    /> -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright">
+                            <p>
+                                <img class="country-flag cn-footer-flag" src="./images/wflags/un.png" alt="国旗" />
+                                <text><span class="province-slogan"></span>欢迎来自<span class="location">地球</span>的朋友!
+                                    跨越地表
+                                    <span class="distance-info"> ∞ 公里</span>, 过去未来共斟酌!</text>
+                                <img src="./images/wflags/de.png" class="cn-footer-flag" />
+                                <br>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                版权 &copy; 2017 -
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                | 徐泓 | 更新: <span class="web_update_year"></span>.<span class="web_update_month"></span>
+                                |
+                                <a href="https://colorlib.com" target="_blank">Colorlib</a> <br>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                <a href="https://info.flagcounter.com/D897" style="
+                                    display: inline-block;
+                                    width: 94%;
+                                    height: 95%;
+                                    overflow: hidden;
+                                    position: relative;
+                                  ">
+                                    <img src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                        border="0" style="
+                                      width: auto;
+                                      height: auto;
+                                      object-fit: fill;
+                                      object-position: top right;
+                                      transform: translateX(3.5%) translateY(30%);
+                                    " />
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .site-wrap -->
+
+        <!-- loader -->
+        <div id="loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                    stroke="#ff5e15" />
+            </svg>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <!--  -->
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js" defer></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+
+
+        <script src="js/aos.js"></script>
+
+        <script src="js/jquery.sticky.js"></script>
+
+        <script src="js/mobilenav.js"></script>
+
+        <script src="js/main.js"></script>
+        <script src="js/user_ip_cn.js" type="module"></script>
+        <script src="js/cn_fanti_translate.js" defer></script>
+        <script type="text/javascript" src="update_info_script.js"></script>
+        <script src="js/24jieqi.js" defer></script>
+        <script src="js/nongli.js" defer></script>
+    </div>
+    </div>
+</body>
+
+</html>

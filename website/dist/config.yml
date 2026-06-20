@@ -1,0 +1,8 @@
+languageSwitcher:
+  configPath: /data/language-selection.json
+  flagBasePath: /assets/flags
+  visitorCountryCacheKey: drhelios.visitorCountry
+  visitorCountryCacheMinutes: 10
+  ipCountryServices:
+    - https://ipapi.co/json/
+    - https://ipwho.is/

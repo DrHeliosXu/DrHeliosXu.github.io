@@ -1,0 +1,16 @@
+{
+  "name": "dr-helios-xu-static-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "node scripts/validate-i18n.js && node scripts/validate-assets.js && node scripts/build-pages.js",
+    "fetch:visitors": "node scripts/fetch-visitor-stats.js",
+    "validate:i18n": "node scripts/validate-i18n.js",
+    "validate:assets": "node scripts/validate-assets.js"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

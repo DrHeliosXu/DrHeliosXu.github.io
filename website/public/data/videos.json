@@ -1,0 +1,40 @@
+{
+  "heroVideos": [
+    {
+      "id": "renewable-energy-researcher",
+      "src": "/assets/videos/hero_video/hero_video.mp4",
+      "type": "video/mp4",
+      "titleKey": "home.hero.slides.renewable.title",
+      "subtitleKey": "home.hero.slides.renewable.subtitle",
+      "durationSeconds": 5
+    },
+    {
+      "id": "system-engineer",
+      "src": "/assets/videos/hero_video/hero_video_2.mp4",
+      "type": "video/mp4",
+      "titleKey": "home.hero.slides.system.title",
+      "subtitleKey": "home.hero.slides.system.subtitle",
+      "durationSeconds": 5
+    },
+    {
+      "id": "policy-analyst",
+      "src": "/assets/videos/hero_video/hero_video_3.mp4",
+      "type": "video/mp4",
+      "titleKey": "home.hero.slides.policy.title",
+      "subtitleKey": "home.hero.slides.policy.subtitle",
+      "durationSeconds": 5
+    }
+  ],
+  "videos": [
+    {
+      "id": "un-climate",
+      "src": "/assets/videos/hero_video/hero_video_3.mp4",
+      "titleKey": "video.items.unClimate.title"
+    },
+    {
+      "id": "lab-research",
+      "src": "/assets/videos/hero_video/hero_video.mp4",
+      "titleKey": "video.items.labResearch.title"
+    }
+  ]
+}

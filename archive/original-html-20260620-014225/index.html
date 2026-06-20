@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Dr. Hong Xu | Clean Energy</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+</head>
+
+<body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+      // ========== 1. 设备与浏览器信息收集 ==========
+      function getDeviceType() {
+        const ua = navigator.userAgent;
+        if (/Mobi|Android|iPhone|iPad|iPod|Phone/i.test(ua)) return 'mobile';
+        if (/Tablet|iPad/i.test(ua)) return 'tablet';
+        return 'desktop';
+      }
+      const deviceInfo = {
+        screen: {
+          width: window.screen.width,
+          height: window.screen.height,
+          availWidth: window.screen.availWidth,
+          availHeight: window.screen.availHeight,
+        },
+        viewport: {
+          innerWidth: window.innerWidth,
+          innerHeight: window.innerHeight,
+        },
+        colorDepth: window.screen.colorDepth,
+        pixelDepth: window.screen.pixelDepth,
+        deviceType: getDeviceType(),
+      };
+      // ========== 2. 浏览器和操作系统信息 ==========
+      const browserInfo = {
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        hardwareConcurrency: navigator.hardwareConcurrency,
+        maxTouchPoints: navigator.maxTouchPoints,
+        cookieEnabled: navigator.cookieEnabled,
+        onLine: navigator.onLine,
+      };
+      // ========== 3. 用户语言信息 ==========
+      const languageInfo = {
+        language: navigator.language,
+        languages: navigator.languages,
+        timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        timeZoneOffset: new Date().getTimezoneOffset(),
+      };
+      // ========== 4. 网络和连接信息 ==========
+      let networkInfo = {};
+      if (navigator.connection) {
+        networkInfo = {
+          effectiveType: navigator.connection.effectiveType,
+          downlink: navigator.connection.downlink,
+          rtt: navigator.connection.rtt,
+          saveData: navigator.connection.saveData,
+        };
+      }
+      // ========== 5. 性能信息 ==========
+      let performanceInfo = {};
+      if (window.performance && performance.timing) {
+        const t = performance.timing;
+        performanceInfo = {
+          memory: window.performance.memory ? {
+            jsHeapSizeLimit: window.performance.memory.jsHeapSizeLimit,
+            totalJSHeapSize: window.performance.memory.totalJSHeapSize,
+            usedJSHeapSize: window.performance.memory.usedJSHeapSize,
+          } : null,
+          navigationStart: t.navigationStart,
+          domContentLoaded: t.domContentLoadedEventEnd - t.navigationStart,
+          loadEvent: t.loadEventEnd - t.navigationStart,
+          cache: {
+            redirectCount: performance.navigation ? performance.navigation.redirectCount : null,
+            type: performance.navigation ? performance.navigation.type : null,
+          }
+        };
+      }
+      // ========== 6. 汇总并写入缓存 ==========
+      const collectedInfo = {
+        deviceInfo,
+        browserInfo,
+        languageInfo,
+        networkInfo,
+        performanceInfo,
+        timestamp: Date.now(),
+      };
+      try {
+        localStorage.setItem('user_device_info', JSON.stringify(collectedInfo));
+        sessionStorage.setItem('user_device_info', JSON.stringify(collectedInfo));
+      } catch (e) {
+        // 缓存失败
+      }
+      // ========== 7. 异步获取地理位置信息 ==========
+      async function fetchGeoInfoAndStore() {
+        try {
+          let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+          let data = await response.json();
+          const geoInfo = {
+            ip: data.ip,
+            city: data.city,
+            region: data.region,
+            country: data.country,
+            timezone: data.timezone,
+            org: data.org,
+            postal: data.postal,
+            loc: data.loc,
+          };
+          // 追加写入缓存
+          let info = {};
+          try {
+            info = JSON.parse(localStorage.getItem('user_device_info')) || {};
+          } catch {}
+          info.geoInfo = geoInfo;
+          info.geoTimestamp = Date.now();
+          try {
+            localStorage.setItem('user_device_info', JSON.stringify(info));
+            sessionStorage.setItem('user_device_info', JSON.stringify(info));
+          } catch {}
+        } catch {}
+      }
+      fetchGeoInfoAndStore();
+
+      // 优先使用缓存的地理位置信息
+      let geoData = null;
+      try {
+        // 尝试从缓存获取地理位置信息
+        const cachedInfo = JSON.parse(localStorage.getItem('user_device_info'));
+        if (cachedInfo && cachedInfo.geoInfo && cachedInfo.geoTimestamp &&
+            (Date.now() - cachedInfo.geoTimestamp < 3600 * 1000)) {
+          geoData = cachedInfo.geoInfo;
+          console.log("使用缓存的地理位置信息:", geoData);
+        }
+      } catch (e) {
+        console.log("缓存读取失败，将重新获取地理位置信息");
+      }
+
+      // 如果缓存无效，重新获取地理位置信息
+      if (!geoData) {
+        try {
+          let response = await fetch("https://ipinfo.io/json?token=228a7bb192c4fc");
+          geoData = await response.json();
+          console.log("重新获取的地理位置信息:", geoData);
+        } catch (e) {
+          console.error("GeoIP 检测失败：", e);
+          // 如果 GeoIP 检测失败，默认跳转英文页
+          window.location.href = "en.html";
+          return;
+        }
+      }
+
+      // 定义需要跳转到英文页的国家
+      const engCountries = {
+        "DE": false, // 德国
+        "ES": false  // 西班牙
+        // 以后需要新增，直接在这里加，例如 "FR": true
+      };
+
+      if (geoData.country && engCountries[geoData.country.toUpperCase()]) {
+        window.location.href = "en.html";
+        return;
+      }
+
+      // 语言逻辑 - 优先使用缓存的语言信息
+      let userLang = null;
+      try {
+        // 尝试从缓存获取语言信息
+        const cachedInfo = JSON.parse(localStorage.getItem('user_device_info'));
+        if (cachedInfo && cachedInfo.languageInfo && cachedInfo.languageInfo.language) {
+          userLang = cachedInfo.languageInfo.language;
+          console.log("使用缓存的语言信息:", userLang);
+        }
+      } catch (e) {
+        console.log("缓存语言信息读取失败，使用浏览器语言");
+      }
+
+      // 如果缓存无效，使用浏览器语言
+      if (!userLang) {
+        userLang = navigator.language || navigator.userLanguage;
+        console.log("使用浏览器语言信息:", userLang);
+      }
+
+      var languageMap = {
+        'ar': 'ar.html',
+        'en': 'en.html',
+        'de': 'de.html',
+        'fr': 'fr.html',
+        'es': 'es.html',
+        'it': 'it.html',
+        'ru': 'ru.html',
+        'zh': 'cn.html',
+        'ja': 'jp.html',
+        'ko': 'kr.html',
+        'th': 'th.html',
+        'bo': 'cn.html' // 藏语暂无独立页面，使用中文页兜底
+      };
+
+      var shortLang = userLang.substring(0, 2);
+      if (languageMap[shortLang]) {
+        window.location.href = languageMap[shortLang];
+      } else {
+        window.location.href = "en.html";
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

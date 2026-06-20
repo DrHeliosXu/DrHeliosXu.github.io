@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "id": "renewable-energy",
+      "imageKey": "research.renewableEnergy",
+      "period": "2012-present",
+      "titleKey": "projects.renewableEnergy.title",
+      "summaryKey": "projects.renewableEnergy.summary"
+    },
+    {
+      "id": "energy-policy",
+      "imageKey": "research.energyPolicy",
+      "period": "2023-present",
+      "titleKey": "projects.energyPolicy.title",
+      "summaryKey": "projects.energyPolicy.summary"
+    },
+    {
+      "id": "materials",
+      "imageKey": "research.materials",
+      "period": "2013-present",
+      "titleKey": "projects.materials.title",
+      "summaryKey": "projects.materials.summary"
+    }
+  ]
+}

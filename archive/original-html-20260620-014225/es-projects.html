@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hong Xu :: PhD :: Ingeniero</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mobilenav.css">
+  <link rel="stylesheet" href="css/project2.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Tahoma', 'Noto Sans', sans-serif;
+      /* 全局字体 */
+      font-size: 16px;
+      color: #373737;
+      line-height: 1.6;
+    }
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <!-- block save as ================================================== -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.onkeydown = function () {
+        var e = window.event || arguments[0];
+        //屏蔽F12
+        if (e.keyCode == 123) {
+
+          return false;
+          //屏蔽Ctrl+Shift+I
+        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
+
+          return false;
+          //屏蔽Shift+F10
+        } else if ((e.shiftKey) && (e.keyCode == 121)) {
+
+          return false;
+        }
+      };
+      //屏蔽右键单击
+      document.oncontextmenu = function () {
+
+        return false;
+      }
+    }
+  </script>
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6 d-flex">
+            <a href="es.html" class="site-logo">
+              <img src="images/logo-full-es.png" alt="Image" class="site-logo" style="height:80px;">
+            </a>
+
+            <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+              <!---<span class="icon-menu h3"></span>--->
+            </a>
+
+          </div>
+          <div class="col-12 col-lg-6 d-flex justify-content-end">
+            <div class="top-social d-flex align-items-center">
+              <div class="social-icons-container">
+                <div class="ml-md-auto top-social d-lg-inline-block">
+                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                    <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
+                      target="_blank">
+                      <span class="icon-linkedin"></span>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=UNchM2kAAAAJ&hl=en&oi=ao"
+                      class="social-icon d-inline-block p-3" target="_blank">
+                      <span class="icon-google"></span>
+                    </a>
+                    <a href="https://www.instagram.com/helios.hsu/" target="_blank"
+                      class="social-icon d-inline-block p-3">
+                      <span class="icon-instagram"></span>
+                    </a>
+                  </div>
+
+                  <div class="ml-auto d-inline-block d-lg-none">
+                    <select id="languages" name="languages" style="
+                                               width: auto;
+                                              height: 25px;
+                                              margin-left: 5px;
+                                              border-radius: 0;
+                                              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                                            " onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <!-- <option value="cn-projects.html">中文</option>
+                      <option value="jp-projects.html">日本語</option>
+                      <option value="kr-projects.html">한국어</option>
+                      <option value="th-projects.html">ไทย</option> -->
+                      <option value="de-projects.html">Deutsch</option>
+                      <option value="en-projects.html">English</option>
+                      <option value="es-projects.html" selected>Español</option>
+                      <option value="fr-projects.html">Français</option>
+                      <option value="it-projects.html">Italiano</option>
+                      <!-- <option value="ru-projects.html">Русский</option>
+                      <option value="ar-projects.html">اللغة العربية</option> -->
+                    </select>
+                    <select id="content-list-2" name="content-list"
+                      style="
+                                                                                                                                            width: auto;
+                                                                                                                                            height: 25px;
+                                                                                                                                            margin-left: 5px;
+                                                                                                                                            border-radius: 0;
+                                                                                                                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                                                                                                                            text-align: center; /* 新增 */
+                                                                                                                                            text-align-last: center; /* 确保选中的选项居中 */
+                                                                                                                                            "
+                      onchange="window.location.href=this.options[this.selectedIndex].value">
+                      <option value="es.html">Inicio</option>
+                      <option value="es-research.html">Investigación</option>
+                      <option value="es-news.html">Noticias</option>
+                      <option value="es-projects.html" selected>Proyectos</option>
+                      <option value="es-about.html">Sobre mí</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-block d-lg-none text-right">
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+        role="banner">
+
+        <div class="container">
+
+          <div class="d-flex align-items-center">
+
+            <div class="mr-auto">
+              <nav class="site-navigation position-relative text-right " role="navigation">
+                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
+                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
+                  <li>
+                    <a href="es.html" class="nav-link text-left">Inicio</a>
+                  </li>
+                  <li clase="activa">
+                    <a href="es-research.html" class="nav-link text-left">Investigación</a>
+                  </li>
+                  <li>
+                    <a href="es-news.html" class="nav-link text-left">Noticias</a>
+                  </li>
+                  <li>
+                    <a href="es-projects.html" class="nav-link text-left">Proyectos</a>
+                  </li>
+                  <!-- <li>
+                                     <a href="es-actividades.html" class="nav-link text-left">Actividades</a>
+                                     </li> -->
+                  <li>
+                    <a href="es-about.html" class="nav-link text-left">Sobre mí</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- 语言选择框 -->
+            <div class="ml-auto">
+              <span style="display: flex; align-items: center">
+
+                <!-- 选择语言的下拉框 -->
+                <select id="languages-3" name="languages" style="
+                                                   width: auto;
+                                                  height: 25px;
+                                                  margin-left: 5px;
+                                                  border-radius: 0;
+                                                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                                                "
+                  onchange="window.location.href=this.options[this.selectedIndex].value">
+                  <!-- <option value="cn-projects.html">中文</option>
+                                            <option value="jp-projects.html">日本語</option>
+                                            <option value="kr-projects.html">한국어</option>
+                                            <option value="th-projects.html">ไทย</option> -->
+                  <option value="de-projects.html">Deutsch</option>
+                  <option value="en-projects.html">English</option>
+                  <option value="es-projects.html" selected>Español</option>
+                  <option value="fr-projects.html">Français</option>
+                  <option value="it-projects.html">Italiano</option>
+                  <!-- <option value="ru-projects.html">Русский</option>
+                                            <option value="ar-projects.html">اللغة العربية</option> -->
+                </select>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---<p class="d-sm-none d-block">&nbsp;</p>--->
+    </div>
+    <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+
+    <!---Mobile MENU Bar--->
+    <a class="d-inline-block d-sm-none ">
+      <button id="burger" class="open-main-nav">
+        <span class="burger"></span>
+        <span class="burger-text">Menú</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li>
+            <a href="es.html">Hong Xu, <small>PhD</small></a>
+            <br />
+          </li>
+          <li>
+            <a href="es-research.html">Investigación ➔</a>
+          </li>
+          <li>
+            <a href="es-news.html">Noticias ➔</a>
+          </li>
+          <li>
+            <a href="es-projects.html">Proyectos ➔</a>
+          </li>
+          <li>
+            <a href="es-about.html">Sobre mí ➔</a>
+          </li>
+
+          <!-- <li>
+                                    <a href="https://xgraphy.eu.org" target="_blank">Photography ➔</a>
+                                </li>
+                                <li>
+                                    <a href="phd-horizon.html">Horizon ➔</a>
+                                </li>
+                                <li>
+                                    <a href="once-upon-a-phd.html">Once-Upon-A-PhD ➔</a>
+                                </li> -->
+        </ul>
+      </nav>
+    </a>
+    <!------>
+    <!-- 简化版导航栏内容 -->
+    <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+
+        <img src="images/logo-full-es-long.png" alt="Image" class="site-logo"
+          style="width: auto; height: 55px; position: absolute; top: 11px; left: 15px;" />
+
+        <div></div>
+
+        <div style="display: flex; align-items: center;">
+          <a class="flag d-inline-block d-lg-none">
+            </a>
+          <select id="languages-2" name="languages" style="
+                                               width: auto;
+                                              height: 25px;
+                      margin-left: 5px;
+                      border-radius: 0;
+                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                      text-align: center; /* 新增 */
+                      text-align-last: center; /* 确保选中的选项居中 */
+                      " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <!-- <option value="cn-projects.html">中文</option>
+                                            <option value="jp-projects.html">日本語</option>
+                                            <option value="kr-projects.html">한국어</option>
+                                            <option value="th-projects.html">ไทย</option> -->
+            <option value="de-projects.html">Deutsch</option>
+            <option value="en-projects.html">English</option>
+            <option value="es-projects.html" selected>Español</option>
+            <option value="fr-projects.html">Français</option>
+            <option value="it-projects.html">Italiano</option>
+            <!-- <option value="ru-projects.html">Русский</option>
+                                            <option value="ar-projects.html">اللغة العربية</option> -->
+          </select>
+          <select id="content-list" name="content-list" style="
+                   width: auto;height: 25px;
+                  margin-left: 5px;
+                  border-radius: 0;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  text-align: center; /* 新增 */
+                  text-align-last: center; /* 确保选中的选项居中 */
+                  " onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="es.html">Inicio</option>
+            <option value="es-research.html">Investigación</option>
+            <option value="es-news.html">Noticias</option>
+            <option value="es-projects.html" selected>Proyectos</option>
+            <option value="es-about.html">Sobre mí</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!------>
+
+
+
+    <div class="site-section">
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <br>
+      <p class="d-sm-block d-none">&nbsp;</p>
+      <div class="container">
+        <h1>Proyectos destacados</h1>
+        &nbsp;
+        <div class="band">
+          <div class="item-1">
+            <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/487441" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_35.png);"></div>
+              <article>
+                <h1>Imágenes CT de rayos X operando en subsegundos del agua líquida en pilas de hidrógeno
+                  <hr>
+                </h1>
+                <p><small>Las pilas de combustible de electrolito polimérico (PEFC) están ganando cada vez más atención
+                    como
+                    candidatas clave para resolver la crisis de la energía limpia debido a su alta eficiencia
+                    energética
+                    y productos respetuosos con el medio ambiente.</small><br>
+                  <small>Imagen: Capturada en la Swiss Light Source (2019)</small>
+                </p>
+                <span>Proyecto PhD SNF en<br> Paul Scherrer Institute</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-2">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0378775321000422" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_15.jpg);"></div>
+              <article>
+                <h1>Comportamiento del transporte de agua en las capas de difusión de gas PEFC en operando
+                  <hr>
+                </h1>
+                <p><small>Los niveles crecientes de saturación líquida en los GDL a menudo conducen a una insuficiencia
+                    de la
+                    entrega de gas, lo que provoca una caída en el rendimiento de la pila. Se necesita una
+                    comprensión más
+                    profunda de los factores subyacentes de los GDL y su influencia en la gestión del agua.</small><br>
+                  <small>Imagen: H.Xu et al. J. Power Sources (2021)</small>
+                </p>
+                <span>Co-proyecto con<br> Toyota Motor Europe</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-3">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_22.jpg);"></div>
+              <article>
+                <h1>Optimización de la gestión del agua mediante la purga de gas in situ de los PEFC
+                  <hr>
+                </h1>
+                <p><small>En un escenario de arranque a temperatura inferior a cero, el exceso de agua líquida provoca
+                    la
+                    formación de
+                    hielo y la expansión del volumen en todos los componentes críticos, causando daños graves,
+                    lo que resulta
+                    en pérdidas de rendimiento y durabilidad. Para evitar estos efectos, una de las prácticas
+                    comunes es la
+                    purga de gas seco después de detener la pila.</small><br>
+                  <small>Imagen: H.Xu, Tesis de PhD, ETH Zurich (2021)</small>
+                </p>
+                <span>Co-proyecto con<br> Swiss Light Source</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-4">
+            <a href="https://arxiv.org/abs/2007.10111" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_19.jpg);"></div>
+              <article>
+                <h1>Copoliémero/Óxido metálico termo-reactivo para aplicación de sensor magnético
+                  <hr>
+                </h1>
+                <p><small>Los compuestos de polímeros-óxidos metálicos nanostructurados son un área de investigación
+                    actual
+                    de gran
+                    importancia debido a sus aplicaciones avanzadas en sensores, óptica, catalizadores y liberación
+                    de
+                    medicamentos.</small><br>
+                  <small>Imagen: H.Xu, Tesis de Maestría, TU München (2016)</small>
+                </p>
+                <span>Proyecto de Maestría en<br> Tech. Univ. of Munich</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-5">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_23.jpg);"></div>
+              <article>
+                <h1>Aplicación de materiales mesoporosos SnO2 en pilas solares sensibilizadas por colorante y baterías
+                  de
+                  litio
+                  <hr>
+                </h1>
+                <p><small>La eficiencia de conversión fotoeléctrica de las pilas solares sensibilizadas por colorante se
+                    ha mejorado
+                    añadiendo una capa de dispersión de óxido de estaño mesoporoso al fotoánodo de dióxido de
+                    titanio.</small><br>
+                  <small>Imagen: H.Xu, Tesis de Licenciatura, Beijing Jiaotong Univ. (2016)</small>
+                </p>
+                <span>Proyecto de Licenciatura en<br> Beijing Transport Univ.</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-6">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_24.jpg);"></div>
+              <article>
+                <h1>Diseño y construcción del banco de pruebas para split y delay line en el European XFEL
+                  <hr>
+                </h1>
+                <p><small>Hoy en día, la forma de estudiar este tipo de dinámicas rápidas fuera del equilibrio es la
+                    experiencia
+                    X-ray
+                    ultra-rápida – X-ray probe, para la cual el split y delay line (SDL) es indispensable.</small><br>
+                  <small>Imagen: H.Xu, Informe de prácticas, European XFEL GmbH (2015)</small>
+                </p>
+                <span>Proyecto de prácticas en<br> European XFEL GmbH</span>
+              </article>
+            </a>
+          </div>
+          <div class="item-7">
+            <a href="#" class="card">
+              <div class="thumb" style="background-image: url(images/img_h_25.jpg);"></div>
+              <article>
+                <h1>Modelado de la dinámica de cianobacterias para el embalse YuQiao en Tianjin, China
+                  <hr>
+                </h1>
+                <p><small>Siendo el único embalse de Tianjin, la tercera ciudad más grande de China, el embalse Yuqiao
+                    ha
+                    servido como
+                    la principal fuente de agua potable para más de cuatro millones de residentes de Tianjin. Sin
+                    embargo,
+                    sufre de
+                    contaminación del agua causada por epidemias estacionales de cianobacterias.</small><br>
+                  <small>Imagen: H.Xu, Informe de prácticas, École des Ponts ParisTech (2015)</small>
+                </p>
+                <span>Proyecto de prácticas en<br> École des Ponts ParisTech</span>
+              </article>
+            </a>
+          </div>
+        </div>
+        <!-- parcial -->
+      </div>
+    </div>
+
+    <p class="">&nbsp;</p>
+    <div class="site-section subscribe bg-light" style="position: relative">
+      <!-- 上方 hr -->
+      <!-- <hr
+                    style="
+                      height: 1px;
+                      background-color: gray;
+                      border: none;
+                      margin: 0;
+                      position: absolute;
+                      top: 0;
+                      left: 50%;
+                      width: 100vw;
+                      transform: translateX(-50%);
+                    "
+                  /> -->
+      <h2>&nbsp;&nbsp;</h2>
+      <div class="container">
+        <form action="#" class="row align-items-start">
+          <!-- 第一栏 -->
+          <div class="col-md-4">
+            <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+            <h2><img src="./images/wflags/eu.png" style="
+                                                                                                          height: 0.9em;
+                                                                                                          vertical-align: -6%;
+                                                                                                          display: inline-block;
+                                                                                                          margin-right: 0em;
+                                                                                                        " /> Contáctame
+            </h2>
+            <p>
+              Email | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
+              LinkedIn |
+              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+              Instagram |
+              <a href="https://www.instagram.com/helios.hsu/" target="_blank">instagram.com/helios.hsu</a><br /><br />
+              <span class="currentDateInLang" language="spanish"></span><br />
+
+              <text><a href="//24timezones.com/Zurich/time" style="text-decoration: none" class="clock24"
+                  id="tz24-1658714807-c1268-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                  title="timezone - Zurich" target="_blank" rel="nofollow">Hora de Madrid
+                  [CET]</a></text>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                            border: none;
+                            border-top: 1px solid #c7c7c7;
+                            margin: 0px 0;
+                          " />
+          </div>
+
+          <!-- 第二栏 -->
+          <div class="col-md-3">
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            <!-- weather widget start --><a id="weather" target="_blank"
+              href="https://www.booked.net/weather/beijing-18391"><img
+                src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
+                alt="booked.net" /></a><!-- weather widget end -->
+            <img src="images/logo-nulll.png" alt="Image" class="site-logo"
+              style="width: 55px; height: 60px" /><br /><br />
+            <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗"
+                style="
+                                                                                                                                                                              height: 0.9em;
+                                                                                                                                                                              vertical-align: -6%;
+                                                                                                                                                                              display: inline-block;
+                                                                                                                                                                              margin-right: 0em;
+                                                                                                                                                                            " /> El
+              destino
+              nos unió</h2>
+            <p>
+              Fotografía |
+              <a href="https://xgraphy.eu.org" target="_blank">xgraphy.eu.org</a><br />
+              Escribir |
+              <a href="https://site.inconstruction.io/" target="_blank">site.inconstruction.io</a><br />
+              Erudito |
+              <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a><br /><br />
+              <a class="jieqi-24"
+                language="spanish"></a> - <span class="currentZodiacInLang" language="spanish"></span><br>
+              <text><a href="//24timezones.com/Beijing/time" style="text-decoration: none" class="clock24"
+                  id="tz24-1658714942-c133-eyJob3VydHlwZSI6IjEyIiwic2hvd2RhdGUiOiIwIiwic2hvd3NlY29uZHMiOiIxIiwic2hvd3RpbWV6b25lIjoiMCIsInR5cGUiOiJkIiwibGFuZyI6ImVuIn0="
+                  title="Time - Beijing" target="_blank" rel="nofollow">Hora de Pekín
+                  [CST]</a></text>
+              <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
+
+            </p>
+          </div>
+
+          <div class="d-inline-block d-sm-none" style="width: 100%; margin: 0 3%">
+            <hr style="
+                            border: none;
+                            border-top: 1px solid #c7c7c7;
+                            margin: 0px 0;
+                          " />
+          </div>
+
+
+       <!-- 第三栏 -->
+<div class="col-md-5">
+  <br />
+  <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
+
+    <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
+       style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
+      <img src="images/default-map.png" alt="Visitor Map"
+           class="fallback-img">
+    </a>
+
+  </div>
+
+  <style>
+    /* 默认电脑端偏移 */
+    #clustrmap-container {
+      transform: translateX(15px) !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* 默认图片样式：PC/iPad 保持最大 470px */
+    .fallback-img {
+      width: 100%;
+      max-width: 470px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* 移动端特殊处理：让图片铺满屏幕宽度 */
+    @media (max-width: 480px) {
+      .fallback-img {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      #clustrmap-container {
+        transform: translateX(0) !important; /* 移动端不再横向偏移 */
+      }
+    }
+
+    @media (max-width: 768px) {
+      #clustrmap-container {
+        transform: translateX(0px) !important;
+      }
+    }
+  </style>
+
+  <script>
+    (function () {
+      // 判断是否是移动端或 iPad
+      var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.id = "clustrmaps";
+        script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
+
+        script.onload = function () {
+          var fallback = document.getElementById("clustrmap-fallback-link");
+          if (fallback) fallback.style.display = "none";
+        };
+
+        document.getElementById("clustrmap-container").appendChild(script);
+      } else {
+        console.log("📱 Mobile device detected, showing static fallback image.");
+      }
+    })();
+  </script>
+</div>
+        </form>
+      </div>
+      <br />
+
+      <!-- <div class="container">
+                    <form action="#" class="row align-items-center">
+                      <div class="col-md-5 mr-auto"></div>
+                      <div class="col-md-6 ml-auto"></div>
+                    </form>
+                  </div>
+                  <h2>&nbsp;&nbsp;</h2> -->
+      <!-- 下方 hr -->
+      <hr style="
+                      height: 1px;
+                      background-color: gray;
+                      border: none;
+                      margin: 0;
+                      position: absolute;
+                      bottom: 0;
+                      left: 50%;
+                      width: 150vw;
+                      transform: translateX(-50%);
+                    " />
+    </div>
+
+    <!-- .site-wrap -->
+    <!-- <hr
+                  style="
+                    height: 1px;
+                    border-width: 0;
+                    color: gray;
+                    background-color: gray;
+                  "
+                /> -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="copyright">
+              <p>
+                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
+                                height: 0.9em;
+                                vertical-align: -6%;
+                                display: inline-block;
+                                margin-right: 0em;
+                              " />
+                <text>¡Bienvenidos amigos de
+                  <span class="location">la tierra</span>! A través de
+                  <span class="distance-info"> ∞ km</span>, siempre estamos conectados</text>
+                <img src="./images/wflags/de.png" style="
+                                height: 0.9em;
+                                vertical-align: -6%;
+                                display: inline-block;
+                                margin-right: 0em;
+                              " />
+                <br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Derechos de autor &copy; 2017 -
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                | Hong Xu | Actualizado: <span class="web_update_month"></span>. <span class="web_update_year"></span> |
+                <a href="https://colorlib.com" target="_blank">Colorlib</a><br />
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <!-- <a href="https://info.flagcounter.com/D897"
+                              ><img
+                                src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                                border="0"
+                            /></a> -->
+                <a href="https://info.flagcounter.com/D897" style="
+                                display: inline-block;
+                                width: 94%;
+                                height: 95%;
+                                overflow: hidden;
+                                position: relative;
+                              ">
+                  <img
+                    src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
+                    border="0" style="
+                                  width: auto;
+                                  height: auto;
+                                  object-fit: fill;
+                                  object-position: top right;
+                                  transform: translateX(3.5%) translateY(30%);
+                                " />
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- .site-wrap -->
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#ff5e15" />
+      </svg>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+
+
+    <script src="js/aos.js"></script>
+
+    <script src="js/jquery.sticky.js"></script>
+
+    <script src="js/mobilenav.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/user_ip_es.js" type="module"></script>
+    <script type="text/javascript" src="update_info_script.js"></script>
+    <script src="js/24jieqi.js"></script>
+
+  </div>
+  </div>
+</body>
+
+</html>

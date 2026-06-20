@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{meta.language}}" dir="{{meta.direction}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{meta.siteTitle}}</title>
+  <meta name="description" content="{{meta.siteDescription}}">
+  <link rel="stylesheet" href="{{assetBase}}/css/variables.css">
+  <link rel="stylesheet" href="{{assetBase}}/css/global.css">
+  <link rel="stylesheet" href="{{assetBase}}/css/layout.css">
+  <link rel="stylesheet" href="{{assetBase}}/css/components.css">
+  <link rel="stylesheet" href="{{assetBase}}/css/pages.css">
+  <link rel="stylesheet" href="{{assetBase}}/css/responsive.css">
+</head>
+<body class="site-page site-page--{{pageId}}" data-language="{{language}}" data-page="{{pageId}}">
+  {{component:header}}
+  <main id="{{pageId}}-page-main" class="site-main">
+    {{pageContent}}
+  </main>
+  {{component:footer}}
+  <script type="module" src="{{assetBase}}/js/main.js"></script>
+</body>
+</html>

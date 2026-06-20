@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "language": "ar",
+    "direction": "rtl",
+    "siteTitle": "هونغ شو | باحث الطاقة المتجددة",
+    "siteDescription": "徐泓的个人学术网站，聚焦氢能、燃料电池、能源转型与气候政策。"
+  },
+  "navigation": {
+    "ariaLabel": "主导航",
+    "home": "الرئيسية",
+    "about": "نبذة",
+    "research": "البحث",
+    "projects": "المشاريع",
+    "news": "الأخبار",
+    "video": "فيديو"
+  },
+  "language": {
+    "label": "语言",
+    "simplifiedChinese": "简体中文",
+    "traditionalChinese": "繁体中文"
+  },
+  "home": {
+    "hero": {
+      "title": "能源研究员",
+      "subtitle": "新能源 · 新材料 · 碳中和",
+      "description": "聚焦氢能、燃料电池、能源转型与气候政策。",
+      "primaryAction": "研发成果",
+      "secondaryAction": "联系方式",
+      "slides": {
+        "renewable": {
+          "title": "能源研究员",
+          "subtitle": "新能源 · 新材料 · 碳中和"
+        },
+        "system": {
+          "title": "系统工程师",
+          "subtitle": "燃料电池 · 动力系统 · 运行策略"
+        },
+        "policy": {
+          "title": "政策分析师",
+          "subtitle": "能源转型 · 气候战略 · 关键矿物"
+        }
+      }
+    },
+    "metrics": {
+      "ariaLabel": "Research statistics",
+      "papers": "papers",
+      "citations": "citations",
+      "patents": "patents",
+      "reviews": "peer reviews",
+      "students": "students mentored",
+      "grants": "research grants",
+      "thesisDownloads": "PhD thesis downloads",
+      "countriesVisited": "countries visited"
+    },
+    "sections": {
+      "researchTitle": "Research Areas",
+      "newsTitle": "News",
+      "publicationsTitle": "Selected Publications",
+      "patentsTitle": "National Patents"
+    },
+    "research": {
+      "title": "可再生能源 & 可持续发展",
+      "summary": "从钻木取火到新能源汽车，能源革命一直是推动人类生产力飞速发展的关键动力。随着化石能源短缺及环境负面影响，可再生能源被视为应对全球气候变化挑战的核心解决方案。"
+    }
+  },
+  "about": {
+    "title": "简介",
+    "body": [
+      "从钻木取火到电动汽车，能源定义文明进步的基石。徐泓博士致力于能源与交通领域效能提升与碳中和。",
+      "他的研究涵盖太阳能电池、锂电池、电解槽以及氢燃料电池，并连接科学、产业与政策。"
+    ]
+  },
+  "research": {
+    "title": "研究概览",
+    "subtitle": "面向电网的氢-电协同低碳能源系统",
+    "body": [
+      "研究聚焦清洁能源供给、氢储能、燃料电池发电和系统运行策略。"
+    ]
+  },
+  "projects": {
+    "title": "项目",
+    "renewableEnergy": {
+      "title": "新能源技术",
+      "summary": "氢能、燃料电池、电解池、太阳能电池与锂电池。"
+    },
+    "energyPolicy": {
+      "title": "能源经济与政策",
+      "summary": "中国、欧盟、氢能战略与能源转型。"
+    },
+    "materials": {
+      "title": "新材料研发",
+      "summary": "半导体、碳材料与高分子材料。"
+    }
+  },
+  "news": {
+    "title": "新闻动态",
+    "items": {
+      "kfas": {
+        "title": "参加萨尔茨堡-KFAS全球研讨会",
+        "summary": "围绕能源转型与全球合作进行交流。"
+      },
+      "unece": {
+        "title": "担任联合国欧洲经济委员会专家组成员",
+        "summary": "参与交通、气候与能源政策讨论。"
+      },
+      "hsg": {
+        "title": "任职瑞士圣加仑经济论坛学术评审",
+        "summary": "参与青年领袖与全球议题评审。"
+      }
+    }
+  },
+  "patents": {
+    "title": "专利",
+    "linkLabel": "查看专利"
+  },
+  "papers": {
+    "title": "代表论文",
+    "linkLabel": "查看论文"
+  },
+  "video": {
+    "title": "视频",
+    "items": {
+      "unClimate": {
+        "title": "联合国气候变化大会"
+      },
+      "labResearch": {
+        "title": "实验室能源研究"
+      }
+    }
+  },
+  "footer": {
+    "contactTitle": "Contact",
+    "visitorTitle": "Why we meet in this wide world",
+    "welcomeMessage": "Welcome, visitor from {{country}}",
+    "copyright": "© {{year}} Hong Xu. All rights reserved.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "scholar": "Scholar"
+  },
+  "locations": {
+    "salzburg": "萨尔茨堡，奥地利",
+    "geneva": "日内瓦，瑞士",
+    "stGallen": "圣加仑，瑞士"
+  },
+  "assets": {
+    "logo": {
+      "mainAlt": "徐泓个人网站标志",
+      "markAlt": "徐泓标志"
+    },
+    "hero": {
+      "posterAlt": "能源研究视频封面"
+    },
+    "research": {
+      "renewableEnergyAlt": "可再生能源示意图",
+      "energyPolicyAlt": "能源政策活动图片",
+      "materialsAlt": "新材料图片"
+    },
+    "profile": {
+      "mainAlt": "徐泓个人肖像"
+    },
+    "footer": {
+      "mapAlt": "全球访客地图"
+    }
+  }
+}
