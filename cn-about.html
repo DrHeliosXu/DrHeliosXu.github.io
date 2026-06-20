@@ -6,53 +6,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/cn-common.css">
 
   <link rel="stylesheet" href="css/mobilenav.css">
 
   <link rel="stylesheet" href="css/about_style.css">
   <script src="js/chinese_lunar_calendar.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
-  <link href="https://cdn.jsdelivr.net/gh/ruedap/braille-font/css/braille.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css'>
-  <link rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css'>
-  <link rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
-  <link rel="stylesheet" href="./css/style_podcast.css">
-
-  <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/book.css" />
-  <script src="js/modernizr.custom.js"></script> -->
-
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ar,es,jv,ko,pa,pt,ru,zh-CN,th,hi', // Add 'th' and 'hi' for Thai and Hindi
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+  <link rel="preload" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="./css/style_podcast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css">
+    <link rel="stylesheet" href="./css/style_podcast.css">
+  </noscript>
 
   <style>
     body {
@@ -86,9 +73,22 @@
       /* 字体字形，使用无衬线字体 */
     }
 
-    #blind-content {
-      font-family: 'Braille Regular', sans-serif;
-      font-size: 1.5em;
+    @media (max-width: 575.98px) {
+      .about-hero-media {
+        margin-top: -30px;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .cn-about-hero-section .desktop-section-spacer {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .about-hero-media {
+        aspect-ratio: 480 / 202;
+      }
     }
 
 
@@ -398,7 +398,7 @@
         <div class="row align-items-center">
           <div class="col-12 col-lg-6 d-flex">
             <a href="cn.html" class="site-logo">
-              <img src="images/logo-full-cn.png" alt="Image" class="site-logo" style="height:80px;">
+              <img src="images/logo-full-cn.png" alt="Image" class="site-logo cn-logo-main">
             </a>
 
             <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
@@ -410,7 +410,7 @@
               <div class="social-icons-container">
                 <div class="ml-md-auto top-social d-lg-inline-block">
 
-                  <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                  <div class="text-right cn-social-links">
                     <a href="https://www.linkedin.com/in/xuhong/" class="social-icon d-inline-block p-3"
                       target="_blank">
                       <span class="icon-linkedin"></span>
@@ -424,24 +424,12 @@
                       <span class="icon-instagram"></span>
                     </a>
                   </div>
-                  <!--
-                  <a href="your-wechat-link" target="_blank" class="social-icon d-inline-block p-3">
-                    <span class="icon-wechat"></span></a> -->
                   <a class="flag d-lg-none">
-                    <img src="images/flag_cn.png" alt="flag"
-                      style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                  </a>
+                    </a>
                   <div class="ml-auto d-inline-block d-lg-none">
-                    <select id="languages" name="languages" style="
-                                                                                width: auto;height: 25px;
-                                                                                margin-left: 5px;
-                                                                                border-radius: 0;
-                                                                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                                                                text-align: center; /* 新增 */
-                                                                                text-align-last: center; /* 确保选中的选项居中 */
-                                                                                " onchange="handleChange(this)">
-                      <option value="cn-about.html" selected>中文简体</option>
-                      <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
+                    <select id="languages" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+                      <option value="cn-about.html" selected>简体中文</option>
+                      <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
                       </option>
                       <option value="jp-about.html">日本語</option>
                       <option value="kr-about.html">한국어</option>
@@ -454,15 +442,7 @@
                       <option value="ru-about.html">Русский</option>
                       <option value="ar-about.html">اللغة العربية</option>
                     </select>
-                    <select id="content-list-2" name="content-list" style="
-                    width: auto;
-                    height: 25px;
-                    margin-left: 5px;
-                    border-radius: 0;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                    text-align: center; /* 新增 */
-                    text-align-last: center; /* 确保选中的选项居中 */
-                    " onchange="handleChange(this)">
+                    <select id="content-list-2" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
                       <option value="cn.html">主页</option>
                       <option value="cn-research.html">研究</option>
                       <option value="cn-news.html">新闻</option>
@@ -483,15 +463,14 @@
 
 
 
-      <div class="site-navbar py-2 js-sticky-header site-navbar-target pl-0 pb-2 d-none d-sm-block" role="banner">
+      <div class="site-navbar cn-main-navbar py-2 js-sticky-header site-navbar-target pl-0 pb-2 d-none d-sm-block" role="banner">
 
         <div class="container">
           <div class="d-flex align-items-center">
 
             <div class="mr-auto">
               <nav class="site-navigation position-relative text-right" role="navigation">
-                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
-                  style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo cn-scroll-logo" />
                 <ul class="site-menu main-menu js-clone-nav mr-auto pl-0 pb-2 d-none d-sm-block">
                   <li class="active">
                     <a href="cn.html" class="nav-link text-left">主 页&nbsp;&nbsp;</a>
@@ -508,34 +487,17 @@
                   <li>
                     <a href="cn-about.html" class="nav-link text-left">关 于</a>
                   </li>
-                  <!-- <li class="festival-item">
-                    <a href="#" target="_blank" class="dynamic-greeting nav-link text-left">
-                    </a>
-                  </li> -->
-                </ul>
+                  </ul>
               </nav>
             </div>
 
             <!-- 语言选择框 -->
             <div class="ml-auto">
-              <span style="display: flex; align-items: center; font-family: verdana; font-size: 14px;">
-                <!-- 简体字和国旗 -->
-                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
-                  class="d-inline-block" id="switch-cn" style="margin-right: 5px;">
-                  <img src="images/flag_cn.png" alt="flag"
-                    style="height:15px; margin-right:2px; position:relative; top:-1px;">简
-                </a> /
-                <!-- 繁体字和国旗 -->
-                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
-                  class="d-inline-block" id="switch-tw" style="margin-left: 5px; margin-right: 5px;">
-                  <img src="images/flag_hk.png" alt="flag"
-                    style="height:15px; margin-right:5px;position:relative; top:-1px;"><img src="images/flag_mc.png"
-                    alt="flag" style="height:15px; margin-right:2px;position:relative; top:-1px;">繁
-                </a>
-                <!-- 选择语言的下拉框 -->
-                <select id="languages-2" name="languages" style="width: auto;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); text-align: center; /* 新增 */
-                    text-align-last: center; /* 确保选中的选项居中 */" onchange="handleLanguageChange(this)">
-                  <option value="cn-about.html" selected>中文</option>
+              <span class="cn-desktop-language">
+<!-- 选择语言的下拉框 -->
+                <select id="languages-2" name="languages" onchange="handleLanguageChange(this)" class="cn-nav-select cn-nav-select-inline">
+                  <option value="cn-about.html" selected>简体中文</option>
+                                    <option value="javascript:runFanTiJavaScript();">繁体中文</option>
                   <option value="jp-about.html">日本語</option>
                   <option value="kr-about.html">한국어</option>
                   <option value="th-about.html">ไทย</option>
@@ -556,7 +518,7 @@
         </div>
       </div>
     </div>
-    <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+    <hr class="d-block d-sm-none cn-mobile-divider">
 
 
 
@@ -591,29 +553,20 @@
     <!-- 简化版导航栏内容 -->
     <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
 
-      <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="cn-mobile-navbar-inner">
 
-        <a href="cn-about.html" style="display: block; position: absolute; top: 11px; left: 15px;">
-          <img src="images/logo-full-cn-long.png" alt="Image" class="site-logo" style="width: auto; height: 55px;" />
+        <a href="cn-about.html" class="cn-mobile-logo-link">
+          <img src="images/logo-full-cn-long.png" alt="Image" class="site-logo cn-mobile-logo" />
         </a>
 
         <div></div>
 
-        <div style="display: flex; align-items: center;">
+        <div class="cn-mobile-controls">
           <a class="flag d-inline-block d-lg-none">
-            <img src="images/flag_cn.png" alt="flag"
-              style="height:15px; margin-right:2px; position:relative; top:-1px;">
-          </a>
-          <select id="languages-3" name="languages" style="
-                      width: auto;height: 25px;
-                      margin-left: 5px;
-                      border-radius: 0;
-                      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                      text-align: center; /* 新增 */
-                      text-align-last: center; /* 确保选中的选项居中 */
-                      " onchange="handleChange(this)">
-            <option value="cn-about.html" selected>中文简体</option>
-            <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
+            </a>
+          <select id="languages-3" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+            <option value="cn-about.html" selected>简体中文</option>
+            <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
             </option>
             <option value="jp-about.html">日本語</option>
             <option value="kr-about.html">한국어</option>
@@ -626,14 +579,7 @@
             <option value="ru-about.html">Русский</option>
             <option value="ar-about.html">اللغة العربية</option>
           </select>
-          <select id="content-list" name="content-list" style="
-                  width: auto;height: 25px;
-                  margin-left: 5px;
-                  border-radius: 0;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                  text-align: center; /* 新增 */
-                  text-align-last: center; /* 确保选中的选项居中 */
-                  " onchange="handleChange(this)">
+          <select id="content-list" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
             <option value="cn.html">主页</option>
             <option value="cn-research.html">研究</option>
             <option value="cn-news.html">新闻</option>
@@ -645,23 +591,27 @@
     </div>
     <!------>
 
-    <div class="site-section">
-      <p class="d-sm-block d-none">&nbsp;</p>
-      <p class="d-sm-block d-none">&nbsp;</p>
+    <div class="site-section cn-about-hero-section">
+      <p class="desktop-section-spacer d-sm-block d-none">&nbsp;</p>
+      <p class="desktop-section-spacer d-sm-block d-none">&nbsp;</p>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 single-content">
             <p class="mb-5">
-              <div class="d-none d-sm-block" style="position: relative; display: inline-block;">
+              <div class="about-hero-media" style="position: relative; display: inline-block;">
                 <div style="position: relative; text-align: center;">
-                <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
-                  style="position: relative; top: -15px;" />
+                <picture>
+                  <source media="(max-width: 575.98px)" srcset="images/banner_img_mobi_3_opt.gif">
+                  <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid" fetchpriority="high"
+                    decoding="async" style="position: relative; top: -15px;" />
+                </picture>
                   <div style="
                       position: absolute;
                       bottom: 13%;  /* 用百分比，而不是 em/px */
-                      right: 11%;   /* 文字随图片比例缩放 */
+                      right: 8%;   /* 文字随图片比例缩放 */
                       color: rgba(238, 245, 255, 0.922);
                       font-size: clamp(12px, 1.1vw, 17px);   /* 相对屏幕宽度，保证自适应 */
+                      font-weight: normal;
                               ">
                 <span class="skew-text" style="display: inline-block; transform: skew(-4deg) rotate(-4.5deg);">
                   「 科学无国界 」
@@ -669,25 +619,7 @@
                 </div>
               </div>
               </div>
-              <div class="d-block d-sm-none" style="position: relative; display: inline-block;margin-top: -30px;">
-                <div style="position: relative; text-align: center;">
-                <img src="images/banner_img_mobi_3.gif" alt="Image" class="img-fluid"
-                  style="position: relative; top: -15px;" />
-                  <div style="
-                      position: absolute;
-                      bottom: 13%;  /* 用百分比，而不是 em/px */
-                      right: 19%;   /* 文字随图片比例缩放 */
-                      color: rgba(238, 245, 255, 0.922);
-                      font-size: clamp(4px, 4vw, 15px);   /* 相对屏幕宽度，保证自适应 */
-                      font-weight: normal;
-                              ">
-                  <span class="skew-text" style="display: inline-block; transform: skew(-4deg) rotate(-4.5deg);">
-                    「 科学无国界 」
-                  </span>
-                </div>
-              </div>
-              </div>
-            </p>    
+            </p>
 
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               <text id="jianjie" style="font-size: 1em;">简 介</text>
@@ -750,14 +682,14 @@
               </p>
 
 
-              <p id="canton-content" lass="column story-content" align="justify" style="display: none;">
+              <p id="canton-content" class="column story-content" align="justify" style="display: none;">
                 由鑽木取火到電動車，能源就係文明進步嘅基石。秉承「<strong>創先-創新–創效</strong>」理念，徐泓博士專注喺<strong>能源同交通</strong>範疇，致力於<strong>提升效能</strong>同<strong>推動碳中和</strong>。佢嘅科研涉及太陽能電池、鋰電池、电解槽同氫燃料電池。讀書嗰陣，佢同跨國企業同中歐學術機構有合作，發表<strong>論文<span class="no_of_papers"></span>篇以上</strong>（被引<span class="google_scholar_citation"></span>次以上），仲申請咗<strong><span class="no_of_patents_sum"></span>項專利</strong>（其中三項已經授權）。靠住<strong><a href="https://psi.ch" target="_blank">瑞士光源</a></strong>同<strong><a href="https://www.tytlabs.co.jp/" target="_blank">豐田中央研究院</a></strong>嘅合作，開發咗燃料電池健康診斷嘅超快（0.1秒）高分辨（0.4微米）X光CT技術，成果獲<strong><a href="https://psi.ch" target="_blank">瑞士保羅謝爾研究院</a></strong>推薦做科研亮點，之後仲得到<strong>美國電化學學會</strong>邀請同資助去亞特蘭大發表報告。除咗科研，佢亦曾經喺<strong><a href="https://unfccc.int/" target="_blank">聯合國波恩氣候變化大會</a></strong>主持「<strong>中國能源轉型</strong>同技術創新」專場，多次參與<strong><a href="https://unece.org/" target="_blank">聯合國歐洲經濟委員會</a></strong><strong>交通與氣候專家組</strong>同<strong>氫能工作小組</strong>嘅討論。佢仲係十幾本能源同交通領域高影響期刊嘅<strong>審稿人</strong>，亦做過<strong><a href="https://symposium.org/" target="_blank">瑞士聖加侖國際經濟論壇</a></strong>學術評審、<strong><a href="https://tum.de" target="_blank">慕尼黑工業大學</a></strong>校友導師、<strong><a href="https://oxfordenergy.org" target="_blank">牛津能源研究所</a></strong>訪問研究員，亦係<strong><a href="https://salzburgglobal.org" target="_blank">奧地利薩爾茨堡國際</a></strong>學者。
                 <br><br>
-                
+
                 佢喺2021年初攞到<strong><a href="https://ethz.ch/en.html" target="_blank">蘇黎世聯邦理工大學</a></strong>新能源博士學位（有瑞士科學基金資助），碩士就喺<strong><a href="https://tum.de" target="_blank">慕尼黑工業大學</a></strong>讀（攞過歐盟EM獎學金），本科係<strong><a href="https://bjtu.edu.cn" target="_blank">北京交通大學</a></strong>（攞創新獎學金）。讀書嗰幾年，佢都專注搞<strong>新能源</strong>同<strong>新材料</strong>研發，仲去過<strong><a href="https://xfel.eu" target="_blank">歐盟自由電子激光器</a></strong>、<strong><a href="https://ecoledesponts.fr/en" target="_blank">巴黎理工學院</a></strong>、<strong><a href="https://lmu.de" target="_blank">慕尼黑大學</a></strong>實習，之後又同<strong>豐田汽車</strong>、<strong>英飛凌半導體</strong>、<strong>科德寶動力</strong>做深入合作。佢仲負責過兩年<strong>瑞士-日本校企技術轉移</strong>項目，亦參與<strong>中法合作框架</strong>底下嘅技術培訓計劃。科研以外，佢攞到<strong><a href="https://cdi.eu" target="_blank">法國工程師學院</a></strong>MBA全額獎學金，亦攞過桑坦德銀行獎學金去<strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></strong>讀「綠色轉型」企管課程。喺產業方面，佢曾經喺一間頭部證券研究所（A股/美股）寫過深度報告，亦喺雙幣基金（種子輪➔A輪）做新能源投資實務。
               </p>
 
-              <p id="huoxing-content" lass="column story-content" align="justify" style="display: none;">
+              <p id="huoxing-content" class="column story-content" align="justify" style="display: none;">
                 朩湔，俆博仕茬歐洲笁鄴鎅泹姙噺能羱憅劦係統抟傢笁珵溮，臸劦纡實哯能羱玙茭嗵領域效卛諟圱玙湠狆啝。糼渎敩莅剘簡玙跨國佱鄴彶狆瓯敩朮僟媾匼莋潑錶囵妏15悇萹，並镬嘚3頙抟悡涭權。嶒茬聅匼國菠慁氣糇變囮汏浍炷歭“狆國能羱啭侀玙技朮創噺”炷趧汾浍，哆佽傪玙聅匼國瓯詶經哜逶園浍関纡茭嗵玙氣糇抟傢蒩浍议姒彶氢能笁莋尒蒩浍议討囵，積极倡导聅匼國妸歭續潑蹍朩摽
                 (SDGs) 苐7頙 (凊洁能羱), 苐9頙 (浐鄴創噺), 姒彶苐13頙 (氣糇垳憅)。哃溡彵還泹姙10悇夲能羱玙茭嗵領域滈吲剘刋哋谉鎬亾,
                 瑞仕聖咖仑國漈囵墵哋敩朮评谉。嶒镬嘚奧哋悡蕯尒垐堡國漈妍討浍膂垳奨、羙國電囮敩敩浍囵妏撽埥彶膂垳奨、瓯擝吚菈凘謨奨敩唫、“狣戰柸”創鄴洤國恫奨等。
@@ -768,13 +700,13 @@
               </p>
 
 
-              <p id="oldchinese-content" lass="column story-content" align="justify" style="display: none;">
+              <p id="oldchinese-content" class="column story-content" align="justify" style="display: none;">
                 自鑽木生火，迄於電車驅行，能源者，文明進步之基石也。秉“<strong>創先-創新–創效</strong>”之旨，徐博專心於<strong>能源與交通</strong>之域，務於<strong>效能增進</strong>及<strong>碳中和</strong>，所研涵太陽能電池、鋰電池、电解槽及氫燃料電池。攻學期間，與跨國企業及中歐學術機構交游合作，發表<strong>論文十五餘篇</strong>，申專利五項（三已授權）。憑<strong><a href="https://psi.ch" target="_blank">瑞士光明之源</a></strong>與<strong><a href="https://www.tytlabs.co.jp/" target="_blank">豐田中樞術研之所</a></strong>共研燃料電池健康診斷之超速高分倫琴射線斷層攝影術，其功績獲瑞士聯邦<strong><a href="https://psi.ch" target="_blank">保羅謝爾研習院</a></strong>推舉，並蒙<strong>美國電化學學會</strong>邀與資助，赴亞特蘭大會報。又曾於<strong><a href="https://unfccc.int/" target="_blank">聯合國波恩氣候變化大會</a></strong>主持“<strong>中國能源轉型</strong>與技術創新”分會，多次參與<strong><a href="https://unece.org/" target="_blank">聯合國歐洲經濟委員會</a></strong><strong>交通與氣候專家組</strong>及<strong>氫能工作小組</strong>議論。兼為十餘能源與交通高引期刊之<strong>審稿人</strong>，曾任瑞士<strong><a href="https://symposium.org/" target="_blank">聖加倫國際經濟論壇</a></strong>學術評審、<strong><a href="https://tum.de" target="_blank">德意志慕尼黑工業學府</a></strong>校友導師、<strong><a href="https://oxfordenergy.org" target="_blank">英吉利牛津能源研究所</a></strong>訪研，以及<strong><a href="https://salzburgglobal.org" target="_blank">奧地利薩爾茨堡國際</a></strong>學者也。
                 <br><br>
                 新冠元年春，歲在辛丑，徐君榮膺<strong><a href="https://ethz.ch/en.html" target="_blank">蘇黎世聯邦理工大學校</a></strong>新能源博士之位，資助自瑞士科學基金。碩業於<strong><a href="https://tum.de" target="_blank">德意志慕尼黑工業學府</a></strong>，蒙歐盟伊拉斯謨獎學金；本科於<strong><a href="https://bjtu.edu.cn" target="_blank">北京交通大學</a></strong>，得創新獎學金。自本碩博之際，專心於<strong>新能源</strong>及<strong>新材料</strong>研發。曾於<strong><a href="https://xfel.eu" target="_blank">歐羅巴自由電子激光器所</a></strong>、<strong><a href="https://ecoledesponts.fr/en" target="_blank">法蘭西巴黎理工學院</a></strong>、<strong><a href="https://lmu.de" target="_blank">德意志慕尼黑大學校</a></strong>實習，亦與<strong>豐田汽車</strong>、<strong>英飛凌半導體</strong>、<strong>科德寶動力</strong>等跨國企業深研合作，曾掌二年瑞士-日本<strong>校企技術轉移</strong>專案，並主持中法合作框架下技術培訓之事。科研之暇，獲<strong><a href="https://cdi.eu" target="_blank">法蘭西工程師學院</a></strong>MBA全額錄取，蒙桑坦德銀行獎學金，赴<strong><a href="https://www.jbs.cam.ac.uk/" target="_blank">劍橋大學商學院</a></strong>修“綠色轉型”企管課程；又於頂尖證券研究所撰個股深度報，並於雙幣基金從事新能源賽道風險投資實務也。
               </p>
 
-              <p id="korean-content" lass="column story-content" align="justify"
+              <p id="korean-content" class="column story-content" align="justify"
                 style="display: none;line-height: 2.8;">
 
               나무를 마찰하여 불을 피우던 시절부터 전기<ruby>車<rt>차</rt></ruby>에 이르기까지, 에너지는 <ruby>文明<rt>문명</rt></ruby>의 <ruby>進步<rt>진보</rt></ruby>를 <ruby>定義<rt>정의</rt></ruby>하는 <ruby>基盤<rt>기반</rt></ruby>입니다. ‘<ruby>創先<rt>창선</rt></ruby>-<ruby>創新<rt>창신</rt></ruby>–<ruby>創效<rt>창효</rt></ruby>’의 <ruby>理念<rt>이념</rt></ruby>을 바탕으로, <ruby>徐泓<rt>서홍</rt></ruby> (32세) <ruby>博士<rt>박사</rt></ruby>는 에너지 및 <ruby>交通<rt>교통</rt></ruby> <ruby>分野<rt>분야</rt></ruby>에서 <ruby>效率<rt>효율</rt></ruby> 향상과 <ruby>탄素<rt>탄소</rt></ruby> <ruby>中立<rt>중립</rt></ruby> 달성에 힘쓰고 있으며, <ruby>研究<rt>연구</rt></ruby> <ruby>分野<rt>분야</rt></ruby>는 <ruby>太陽電池<rt>태양전지</rt></ruby>, 리튬<ruby>電池<rt>전지</rt></ruby>, <ruby>電解槽<rt>전해조</rt></ruby>, <ruby>水素燃料電池<rt>수소연료전지</rt></ruby>를 포함합니다. <ruby>學位<rt>학위</rt></ruby> 과정 동안 다國籍 <ruby>企業<rt>기업</rt></ruby> 및 <ruby>中歐<rt>중유럽</rt></ruby> <ruby>學術<rt>학술</rt></ruby> <ruby>機關<rt>기관</rt></ruby>과 협력하여 <ruby>論文<rt>논문</rt></ruby> 15편 이상(引用 430회 이상)을 <ruby>發表<rt>발표</rt></ruby>하고, 5件의 <ruby>特許<rt>특허</rt></ruby>를 <ruby>出願<rt>출원</rt></ruby>(그중 3件은 <ruby>登錄<rt>등록</rt></ruby> 完了)하였습니다. 스위스 <ruby>光源<rt>광원</rt></ruby>과 토요타 <ruby>中央硏究所<rt>중앙연구소</rt></ruby>와의 <ruby>共同<rt>공동</rt></ruby> <ruby>研究<rt>연구</rt></ruby>를 통해 <ruby>開發<rt>개발</rt></ruby>된 <ruby>燃料電池<rt>연료전지</rt></ruby> <ruby>健康<rt>건강</rt></ruby> <ruby>診斷<rt>진단</rt></ruby>용 <ruby>超高速<rt>초고속</rt></ruby>(0.1秒) <ruby>高解像度<rt>고해상도</rt></ruby>(0.4µm) X線 CT <ruby>技術<rt>기술</rt></ruby>은, 스위스 <ruby>聯邦<rt>연방</rt></ruby> 파울 쉐러 <ruby>硏究所<rt>연구소</rt></ruby>에서 <ruby>科學的<rt>과학적</rt></ruby> 하이라이트로 <ruby>推薦<rt>추천</rt></ruby>되었으며, 美國 <ruby>電化學<rt>전기화학</rt></ruby> <ruby>學會<rt>학회</rt></ruby> <ruby>論文<rt>논문</rt></ruby> 招請을 받아 애틀랜타 <ruby>學會<rt>학회</rt></ruby> <ruby>發表<rt>발표</rt></ruby>에 <ruby>資金<rt>자금</rt></ruby> <ruby>支援<rt>지원</rt></ruby>을 받았습니다. 또한, <ruby>聯合國<rt>유엔</rt></ruby> 본 <ruby>氣候變化<rt>기후변화</rt></ruby> <ruby>會議<rt>회의</rt></ruby>에서는 ‘<ruby>中國<rt>중국</rt></ruby> 에너지 <ruby>轉換<rt>전환</rt></ruby>과 <ruby>技術<rt>기술</rt></ruby> <ruby>創新<rt>창신</rt></ruby>’ 主題 세션을 <ruby>主催<rt>주최</rt></ruby>하였고, <ruby>聯合國<rt>유엔</rt></ruby> <ruby>歐洲經濟委員會<rt>유럽경제위원회</rt></ruby>의 <ruby>交通<rt>교통</rt></ruby> 및 <ruby>氣候<rt>기후</rt></ruby> <ruby>專家<rt>전문가</rt></ruby> 그룹 <ruby>會議<rt>회의</rt></ruby>와 <ruby>水素<rt>수소</rt></ruby> 에너지 <ruby>工作<rt>작업</rt></ruby> 그룹 <ruby>會議<rt>회의</rt></ruby>에도 여러 차례 <ruby>參與<rt>참여</rt></ruby>했습니다. 또한, 에너지 및 <ruby>交通<rt>교통</rt></ruby> <ruby>分野<rt>분야</rt></ruby>의 <ruby>高引用<rt>고인용</rt></ruby> <ruby>學術誌<rt>학술지</rt></ruby> 10편 이상에서 <ruby>審査委員<rt>심사위원</rt></ruby>을 맡았고, 스위스 <ruby>聖加倫<rt>생갈렌</rt></ruby> <ruby>國際經濟<rt>국제경제</rt></ruby>포럼 <ruby>學術<rt>학술</rt></ruby>評價者, 德國 <ruby>慕尼黑<rt>뮌헨</rt></ruby> <ruby>工科大學<rt>공과대학</rt></ruby> 同門 <ruby>導師<rt>멘토</rt></ruby>, 英國 <ruby>牛津<rt>옥스포드</rt></ruby> 에너지 <ruby>硏究所<rt>연구소</rt></ruby> 訪問 <ruby>研究員<rt>연구원</rt></ruby>, 및 奧地利 <ruby>薩爾茨부르크<rt>잘츠부르크</rt></ruby> <ruby>國際<rt>국제</rt></ruby> <ruby>學者<rt>학자</rt></ruby>로 活動했습니다.
@@ -836,7 +768,6 @@
                 نەتىجىدە <span class="no_of_papers"></span> نەشر ۋە <span class="no_of_patents_sum"></span> ماتېرىيال ۋە
                 ئېنېرگىيە
                 ساھەلىرىدە پەيت قىلغان پاتېنتلار
-                <!-- at the <a href="https://www.epo.org/en" target="_blank">EPO</a> and <a href="https://english.cnipa.gov.cn/" target="_blank">CNIPA</a> -->.
                 مۇھەندىسىلىك پائالىيەتلىرىدىن باشقا، ئۇ ناملىق تەپسىلىي ئوي پائالىيەت گۇرۇپپىلىرى، خۇسۇسىيەتەن St.
                 Gallen Symposium،
                 Salzburg Global ۋە Oxford Institute for Energy Studies بىلەن ئالاقىدە بولۇپ، ياۋروپا ۋە ئاسىيادا پاك
@@ -870,7 +801,6 @@
                 TOYOTA Motor ۋە Freudenberg e-Power بىلەن ئۇزاق مۇددەتلىك ھەمكارلىققا ئېرىشتى. كەسىپلەر ئاراسى
                 مۇتەخەسسىسلىكنى
                 يەڭگىلەش مەقسەت بىلەن، ئۇ
-                <!--earned an MBA fellowship at the <a href="https://cdi.eu/mba/mba-for-engineers-and-scientists.html" target="_blank">Collège des Ingénieurs</a>, and -->
                 <a href="https://www.jbs.cam.ac.uk/" target="_blank">Cambridge Judge Business School</a> دىڭ ئىجرا
                 پروگراممىسىنى
                 Santander Bank شەكىلدە ئۆگىنىپ، CITIC Securities ۋە جۇڭگودىكى ئىلگىرىكى Y Combinator دىن ئەمەلىي تەجرىبە
@@ -949,7 +879,6 @@
                   class="no_of_papers"></span>
                 kev luam tawm thiab <span class="no_of_patents_sum"></span>
                 cov ntawv patent uas tau thov hauv kev kawm txog khoom thiab zog
-                <!-- at the <a href="https://www.epo.org/en" target="_blank">EPO</a> and <a href="https://english.cnipa.gov.cn/" target="_blank">CNIPA</a> -->.
                 Nrog rau nws txoj kev ua haujlwm engineering, nws tau koom tes nrog cov tswv yim muaj koob npe, tshwj
                 xeeb yog St.
                 Gallen Symposium, Salzburg Global, thiab Oxford Institute for Energy Studies, nrog kev tsom xam txog kev
@@ -980,7 +909,6 @@
                 hydrogen thiab fuel cell tsheb, tshwj xeeb yog TOYOTA Motor thiab Freudenberg e-Power. Raws li kev xav
                 txog kev paub
                 thoob ntiaj teb, nws
-                <!--earned an MBA fellowship at the <a href="https://cdi.eu/mba/mba-for-engineers-and-scientists.html" target="_blank">Collège des Ingénieurs</a>, and -->
                 tau koom nrog qhov executive program ntawm <a href="https://www.jbs.cam.ac.uk/"
                   target="_blank">Cambridge Judge Business
                   School</a> nrog Santander Bank scholarship, thiab tau txais kev paub tiag tiag ntawm CITIC Securities
@@ -1111,13 +1039,13 @@
             <!-- Preview Images for the Videos with Titles -->
             <div class="preview-container">
               <div class="preview-item">
-                <img class="preview-image" src="video/Preview_UN_Bonn_2024_CN_Subtitle_13MB.png"
+                <img decoding="async" loading="lazy" class="preview-image" src="video/Preview_UN_Bonn_2024_CN_Subtitle_13MB.png" width="731" height="414"
                   data-video="video/UN_Bonn_2023_CN_Subtitle_10MB.mp4"
                   data-subtitle="video/UN_Bonn_2023_CN_Subtitle_10MB-en.vtt" alt="Preview 1">
                 <div class="image-title"></div>
               </div>
               <div class="preview-item">
-                <img class="preview-image" src="video/Preview_Graduation_Ceremony_25MB.png"
+                <img decoding="async" loading="lazy" class="preview-image" src="video/Preview_Graduation_Ceremony_25MB.png" width="733" height="414"
                   data-video="video/Graduation_Ceremony_25MB_NoSubtComp.mp4"
                   data-subtitle="video/Graduation_Ceremony_25MB-cn.vtt" alt="Preview 2">
                 <div class="image-title"></div>
@@ -1135,183 +1063,6 @@
                 <div class="subtitle-display"></div>
               </div>
             </div>
-
-
-            <!-- <h1 class="mb-4">
-              荐 书
-            </h1>
-            <hr>
-            <br>
-
-            <div class="component">
-
-              <ul class="align">
-                <li>
-                  <figure class='book'>
-
-                    <ul class='hardcover_front'>
-                      <li>
-                        <div class="coverDesign yellow">
-                          <span class="ribbon">写作中</span>
-                          <h1>欧洲</h1>
-                          <p>反对欧洲</p>
-                        </div>
-                      </li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='page'>
-                      <li></li>
-                      <li>
-                        <a class="btn-book" href="#">下载</a>
-                      </li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='hardcover_back'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <ul class='book_spine'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <figcaption>
-                      <h5>欧洲反对欧洲</h5>
-                      <span>Helios Xu</span>
-                      <p>一部解剖欧洲理想与现实裂痕的冷静之书，在文明自我怀疑的回声中，寻找人类命运共同体路径</p>
-                    </figcaption>
-                  </figure>
-
-                </li>
-
-                <hr class="d-block d-sm-none"
-                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
-
-                <li>
-                  <figure class='book'>
-
-                    <ul class='hardcover_front'>
-                      <li>
-                        <div class="coverDesign grey">
-                          <span class="ribbon">写作中</span>
-                          <img src="images/10_years_in_Europe.png" alt="" width="100%" height="100%">
-                        </div>
-                      </li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='page'>
-                      <li></li>
-                      <li>
-                        <a class="btn-book" href="#">下载</a>
-                      </li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='hardcover_back'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <ul class='book_spine'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <figcaption>
-                      <h5>留欧十年: 博士变形计</h5>
-                      <span>Helios Xu</span>
-                      <p>十年流变，学术与人生相互雕刻。这是跨文化生存手册，也是异国重塑自我真实记录</p>
-                    </figcaption>
-
-                  </figure>
-                </li>
-
-                <hr class="d-block d-sm-none"
-                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
-
-                <li>
-                  <figure class='book'>
-
-                    <ul class='hardcover_front'>
-                      <li>
-                        <div class="coverDesign grey">
-                          <img src="images/finite_and_infinite_games.jpg" alt="" width="100%" height="100%">
-                        </div>
-                      </li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='page'>
-                      <li></li>
-                      <li>
-                        <a class="btn-book" href="#">下载</a>
-                      </li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='hardcover_back'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <ul class='book_spine'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <figcaption>
-                      <h5>有限与无限的游戏</h5>
-                      <span>[美] 詹姆斯·卡斯</span>
-                      <p>一个哲学家眼中的竞技世界：世界上至少有两种游戏，没有人可以独自玩游戏</p>
-                    </figcaption>
-                  </figure>
-                </li>
-
-                <hr class="d-block d-sm-none"
-                  style="width: 90%; height: 1px; margin: 1rem auto; margin-left:-2px;  border: none; background-color: #eaeaea;">
-
-                <li>
-                  <figure class='book'>
-
-                    <ul class='hardcover_front'>
-                      <li>
-                        <img src="images/the_world_of_yesterday.jpg" alt="" width="100%" height="100%">
-                      </li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='page'>
-                      <li></li>
-                      <li>
-                        <a class="btn-book" href="#">下载</a>
-                      </li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-
-                    <ul class='hardcover_back'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <ul class='book_spine'>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <figcaption>
-                      <h5>昨日的世界</h5>
-                      <span>[奥] 斯蒂芬·茨威格</span>
-                      <p>一战前夜到二战危局：一个19世纪末生于维也纳年轻欧洲学生回忆</p>
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-
-            </div> -->
 
 
             <br>
@@ -1337,12 +1088,12 @@
                   <div id="en-subtitles" class="subtitle-track">en</div>
                 </div>
                 <div class="podcast__meta">
-                  <audio controls width="100%">
-                    <source src="video/Xu_Expertise_Interview.wav">
+                  <audio controls preload="none" width="100%">
+                    <source src="video/Xu_Expertise_Interview.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                   </audio>
                   <a href="#" class="artwork">
-                    <img src="images/podcast.jpg" alt="">
+                    <img decoding="async" loading="lazy" src="images/podcast.jpg" width="640" height="640" alt="">
                   </a>
                 </div>
               </div>
@@ -1364,19 +1115,8 @@
               <h2>相关链接</h2>
             </div>
 
-            <!-- <div class="trend-entry d-flex">
-              <div class="number align-self-start"><img src="images/logo_cdi.png" alt="Logo" style="filter: grayscale(100%) opacity(90%);"></div>
-              <div class="trend-contents">
-                <h2><a href="https://cdi.eu/fellows.html" target="_blank">法国工程师学院 <i class="fas fa-external-link-alt"
-                      style="font-size: 0.8em;"></i></a></h2>
-                <div class="post-meta">
-                  <span class="d-block">MBA咨询顾问</span>
-                </div>
-              </div>
-            </div> -->
-
             <div class="trend-entry d-flex">
-              <div class="number align-self-start"><img src="images/logo_oies.png" alt="Logo" style="filter: grayscale(100%) opacity(40%);"> </div>
+              <div class="number align-self-start"><img decoding="async" loading="lazy" src="images/logo_oies.png" alt="Logo" style="filter: grayscale(100%) opacity(40%);"> </div>
               <div class="trend-contents">
                 <h2><a href="https://www.oxfordenergy.org/authors/hong-xu/" target="_ blank">牛津能源研究院 <i
                       class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
@@ -1387,7 +1127,7 @@
             </div>
 
             <div class="trend-entry d-flex">
-              <div class="number align-self-start"><img src="images/logo_salzburg.png" alt="Logo" style="filter: grayscale(100%) opacity(90%);"></div>
+              <div class="number align-self-start"><img decoding="async" loading="lazy" src="images/logo_salzburg.png" alt="Logo" style="filter: grayscale(100%) opacity(90%);"></div>
               <div class="trend-contents">
                 <h2><a href="https://www.salzburgglobal.org/people?userID=55428" target="_ blank">萨尔茨堡国际 <i
                       class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
@@ -1398,7 +1138,7 @@
             </div>
 
             <div class="trend-entry d-flex">
-              <div class="number align-self-start"><img src="images/logo_stgallen.png" alt="Logo" style="filter: grayscale(100%) opacity(40%);"> </div>
+              <div class="number align-self-start"><img decoding="async" loading="lazy" src="images/logo_stgallen.png" alt="Logo" style="filter: grayscale(100%) opacity(40%);"> </div>
               <div class="trend-contents">
                 <h2><a href="https://symposium.org/aspiring-leaders/" target="_ blank">圣加仑论坛 <i
                       class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
@@ -1407,29 +1147,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- <div class="trend-entry d-flex">
-              <div class="number align-self-start"><img src="images/logo_snsf.png" alt="Logo" style="filter: grayscale(100%) opacity(60%);"></i> </div>
-              <div class="trend-contents">
-                <h2><a href="https://data.snf.ch/grants/person/695765" target="_ blank">瑞士自然科学基金 <i
-                      class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
-                <div class="post-meta">
-                  <span class="d-block">博士研究员</span>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- <div class="trend-entry d-flex">
-              <div class="number align-self-start"><i class="fas fa-hand-sparkles"></i> </div>
-              <div class="trend-contents">
-                <h2><a
-                    href="https://www.psi.ch/en/lec/scientific-highlights/temperature-dependent-water-transport-mechanism"
-                    target="_ blank">瑞士保罗谢尔研究院 <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></a></h2>
-                <div class="post-meta">
-                  <span class="d-block">研究亮点报道</span>
-                </div>
-              </div>
-            </div> -->
 
             &nbsp;
             <div class="section-title">
@@ -1496,26 +1213,13 @@
     <p class="">&nbsp;</p>
     <div class="site-section subscribe bg-light" style="position: relative">
       <!-- 上方 hr -->
-      <!-- <hr
-                        style="
-                          height: 1px;
-                          background-color: gray;
-                          border: none;
-                          margin: 0;
-                          position: absolute;
-                          top: 0;
-                          left: 50%;
-                          width: 100vw;
-                          transform: translateX(-50%);
-                        "
-                      /> -->
       <h2>&nbsp;&nbsp;</h2>
       <div class="container">
         <form action="#" class="row align-items-start">
           <!-- 第一栏 -->
           <div class="col-md-4">
-            <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /> <br> <br>
-            <h2><img src="./images/wflags/eu.png" style="
+            <img decoding="async" loading="lazy" src="images/logo.png" alt="Image" class="site-logo cn-footer-logo" /> <br> <br>
+            <h2><img decoding="async" loading="lazy" src="./images/wflags/eu.png" style="
                                                                 height: 0.9em;
                                                                 vertical-align: -6%;
                                                                 display: inline-block;
@@ -1524,7 +1228,7 @@
             <p>
               邮件 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a> <br>
               领英 |
-              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
+              <a href="https://www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
               知乎 |
               <a href="https://www.zhihu.com/people/dr.of.nothing" target="_blank">zhihu.com/people/dr.of.nothing</a>
               <br>
@@ -1553,12 +1257,12 @@
             <h2 class="d-block d-lg-none">&nbsp;&nbsp;</h2>
 
             <!-- weather widget start --><a id="weather" target="_blank"
-              href="https://www.booked.net/weather/beijing-18391"><img
+              href="https://www.booked.net/weather/beijing-18391"><img decoding="async" loading="lazy"
                 src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
                 alt="booked.net" /></a><!-- weather widget end -->
-            <img src="images/logo-nulll.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /> <br>
+            <img decoding="async" loading="lazy" src="images/logo-nulll.png" alt="Image" class="site-logo cn-footer-logo" /> <br>
             <br>
-            <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗" style="
+            <h2><img decoding="async" loading="lazy" class="country-flag " src="./images/wflags/un.png" alt="国旗" style="
                                                                                                             height: 0.9em;
                                                                                                             vertical-align: -6%;
                                                                                                             display: inline-block;
@@ -1589,16 +1293,16 @@
                               " />
           </div>
           <!-- 第三栏 -->
-  
+
       <!-- 第三栏 -->
 <div class="col-md-5">
   <br />
   <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
 
     <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
        style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
-      <img src="images/default-map.png" alt="Visitor Map"
+      <img decoding="async" loading="lazy" src="images/default-map.png" alt="Visitor Map"
            class="fallback-img">
     </a>
 
@@ -1636,6 +1340,7 @@
         transform: translateX(0px) !important;
       }
     }
+
   </style>
 
   <script>
@@ -1666,13 +1371,6 @@
         </form>
       </div>
 
-      <!-- <div class="container">
-                        <form action="#" class="row align-items-center">
-                          <div class="col-md-5 mr-auto"></div>
-                          <div class="col-md-6 ml-auto"></div>
-                        </form>
-                      </div>
-                      <h2>&nbsp;&nbsp;</h2> -->
       <!-- 下方 hr -->
       <hr style="
                           height: 1px;
@@ -1688,21 +1386,13 @@
     </div>
 
     <!-- .site-wrap -->
-    <!-- <hr
-                      style="
-                        height: 1px;
-                        border-width: 0;
-                        color: gray;
-                        background-color: gray;
-                      "
-                    /> -->
     <div class="footer">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="copyright">
               <p>
-                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
+                <img decoding="async" loading="lazy" class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
                                     height: 0.9em;
                                     vertical-align: -6%;
                                     display: inline-block;
@@ -1711,12 +1401,7 @@
                 <text><span class="province-slogan"></span>欢迎来自<span class="location">地球</span>的朋友!
                   跨越地表
                   <span class="distance-info"> ∞ 公里</span>, 过去未来共斟酌!</text>
-                <img src="./images/wflags/de.png" style="
-                                    height: 0.9em;
-                                    vertical-align: -6%;
-                                    display: inline-block;
-                                    margin-right: 0em;
-                                  " />
+                <img decoding="async" loading="lazy" src="./images/wflags/de.png" class="cn-footer-flag" />
                 <br>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 版权 &copy; 2017 -
@@ -1733,7 +1418,7 @@
                                     overflow: hidden;
                                     position: relative;
                                   ">
-                  <img
+                  <img decoding="async" loading="lazy"
                     src="https://s01.flagcounter.com/count/D897/bg_FFFFFF/txt_404040/border_FFFFFF/columns_8/maxflags_16/viewers_3/labels_0/pageviews_1/flags_0/percent_0/"
                     border="0" style="
                                       width: auto;
@@ -1765,11 +1450,6 @@
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <!--  -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <!--  -->
-    <!-- <script src="js/jquery.easing.1.3.js"></script> -->
     <script src="js/aos.js"></script>
     <!--  -->
     <script src="js/jquery.sticky.js"></script>
@@ -1889,11 +1569,12 @@
           if (selectedLanguage === "korean" && element.tagName.toLowerCase() === "rt") {
             element.style.fontSize = "0.8em";
           }
-          elif (selectedLanguage === "mongoltraditional") 
-          directionSelector.disabled = false;
-          directionSelector.value = "vertical-layout";
-          // 在这里可以强制应用竖排布局
-          document.getElementById('story-container').classList.add('vertical-layout');
+          else if (selectedLanguage === "mongoltraditional") {
+            const directionSelector = document.getElementById('character-direction-selector');
+            directionSelector.disabled = false;
+            directionSelector.value = "vertical-layout";
+            document.getElementById('story-container').classList.add('vertical-layout');
+          }
         });
       }
 
@@ -2206,16 +1887,16 @@
     </script>
 
     <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
-    <script
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
+    <script defer
       src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
+    <script defer src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vtt.js@0.14.1/dist/vtt.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/vtt.js@0.14.1/dist/vtt.min.js"></script>
 
-    <script src="./js/script_podcast.js"></script>
-    
+    <script defer src="./js/script_podcast.js"></script>
+
   </div>
 </body>
 

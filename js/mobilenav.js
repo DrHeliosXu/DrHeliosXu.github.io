@@ -1,47 +1,16 @@
-let burger = document.getElementById('burger'),
-	 nav    = document.getElementById('main-nav'),
-	 slowmo = document.getElementById('slowmo');
+document.addEventListener('DOMContentLoaded', function () {
+  var burger = document.getElementById('burger');
+  var mainNav = document.getElementById('main-nav');
 
-burger.addEventListener('click', function(e){
-	this.classList.toggle('is-open');
-	nav.classList.toggle('is-open');
-});
+  if (!burger || !mainNav) return;
 
-slowmo.addEventListener('click', function(e){
-	this.classList.toggle('is-slowmo');
-});
+  burger.setAttribute('aria-controls', 'main-nav');
+  burger.setAttribute('aria-expanded', 'false');
 
-/* Onload demo - dirty timeout */
-let clickEvent = new Event('click');
-
-window.addEventListener('load', function(e) {
-	slowmo.dispatchEvent(clickEvent);
-	burger.dispatchEvent(clickEvent);
-	
-	setTimeout(function(){
-		burger.dispatchEvent(clickEvent);
-		
-		setTimeout(function(){
-			slowmo.dispatchEvent(clickEvent);
-		}, 3500);
-	}, 5500);
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-	const burger = document.getElementById("burger");
-	const mainNav = document.getElementById("main-nav");
-
-	if (burger) {
-		burger.addEventListener("click", () => {
-		  document.getElementById("main-nav").classList.toggle("open");
-		});
-	  }
-	  
-	if (burger && mainNav) {
-	  burger.addEventListener("click", () => {
-		burger.classList.toggle("is-open");
-		mainNav.classList.toggle("is-open");
-	  });
-	}
+  burger.addEventListener('click', function (event) {
+    event.preventDefault();
+    var isOpen = burger.classList.toggle('is-open');
+    mainNav.classList.toggle('is-open', isOpen);
+    burger.setAttribute('aria-expanded', String(isOpen));
   });
+});

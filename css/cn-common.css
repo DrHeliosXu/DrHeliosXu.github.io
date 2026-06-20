@@ -1,0 +1,113 @@
+/* 中文页面公共导航、Logo、移动菜单和页脚样式 */
+.cn-logo-main {
+  width: auto;
+  height: 80px;
+}
+
+.cn-social-links {
+  margin-top: -40px;
+  margin-right: -10px;
+}
+
+.cn-lang-flag {
+  height: 15px;
+  margin-right: 2px;
+  position: relative;
+  top: -1px;
+}
+
+.cn-lang-flag-spaced {
+  height: 15px;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
+}
+
+.cn-nav-select {
+  width: auto;
+  height: 25px;
+  margin-left: 5px;
+  border-radius: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-align-last: center;
+}
+
+.cn-nav-select-inline {
+  font-size: 14px;
+  color: inherit;
+}
+
+.cn-desktop-language {
+  display: flex;
+  align-items: center;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+}
+
+.cn-switch-cn {
+  margin-right: 5px;
+}
+
+.cn-switch-tw {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.cn-scroll-logo {
+  width: auto;
+  height: 65px;
+  position: absolute;
+  top: 11px;
+  left: -83px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.cn-main-navbar {
+  border-top: 1px solid #102955;
+  border-bottom: 1px solid #102955;
+}
+
+.cn-mobile-divider {
+  height: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+.cn-mobile-logo-link {
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+.cn-mobile-logo {
+  width: auto;
+  height: 55px;
+}
+
+.cn-mobile-navbar-inner,
+.cn-mobile-controls {
+  display: flex;
+  align-items: center;
+}
+
+.cn-mobile-navbar-inner {
+  justify-content: space-between;
+}
+
+.cn-footer-logo {
+  width: 55px;
+  height: 60px;
+}
+
+.cn-footer-flag {
+  height: 0.9em;
+  width: auto;
+  vertical-align: -6%;
+  display: inline-block;
+  margin-right: 0;
+}

@@ -2028,6 +2028,145 @@ iframe {
   font-size: 0.9rem;
 }
 
+.cn-aurora-footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(124, 191, 255, 0.28), transparent 30%),
+    radial-gradient(circle at 72% 26%, rgba(55, 225, 188, 0.2), transparent 32%),
+    linear-gradient(135deg, rgba(237, 125, 49, 0.16), transparent 28%),
+    #061a3d !important;
+  color: rgba(232, 241, 255, 0.86);
+}
+
+.cn-aurora-footer::before,
+.cn-aurora-footer::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.cn-aurora-footer::before {
+  inset: -30% -10% auto -8%;
+  height: 76%;
+  background:
+    linear-gradient(105deg, transparent 9%, rgba(124, 191, 255, 0.22) 28%, rgba(65, 221, 194, 0.18) 48%, transparent 72%),
+    linear-gradient(72deg, transparent 18%, rgba(237, 125, 49, 0.14) 40%, transparent 62%);
+  filter: blur(24px);
+  opacity: 0.9;
+  transform: translate3d(-8%, 0, 0) skewY(-6deg) scaleX(1.08);
+  animation: aurora-drift 18s ease-in-out infinite alternate;
+  will-change: opacity, transform, filter;
+}
+
+.cn-aurora-footer::after {
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 110%, rgba(124, 191, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 64% 22%, rgba(255, 255, 255, 0.18), transparent 9%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 36%);
+  opacity: 0.72;
+  animation: aurora-burst 9s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+.cn-aurora-footer .container,
+.cn-aurora-footer form {
+  position: relative;
+  z-index: 1;
+}
+
+.cn-aurora-footer form h2,
+.cn-aurora-footer form p,
+.cn-aurora-footer text {
+  color: #fff;
+}
+
+.cn-aurora-footer a,
+.cn-aurora-footer .digitalTime,
+.cn-aurora-footer .nongli,
+.cn-aurora-footer .jieqi-24,
+.cn-aurora-footer .currentZodiacInLang {
+  color: #fff !important;
+}
+
+.cn-aurora-footer a:hover,
+.cn-aurora-footer a:focus {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.cn-aurora-footer [style*="#ed7d31"],
+.cn-aurora-footer [style*="ed7d31"] {
+  color: #fff !important;
+}
+
+.cn-aurora-footer img.site-logo {
+  filter: brightness(0) invert(1) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.25));
+}
+
+.cn-aurora-footer #weather img {
+  mix-blend-mode: normal;
+  opacity: 0.92;
+  filter: grayscale(1) brightness(0) invert(1);
+}
+
+.cn-aurora-footer .fallback-img,
+.cn-aurora-footer #clustrmaps {
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  filter: saturate(1.05) brightness(1.08);
+}
+
+.cn-aurora-footer hr {
+  border-top-color: rgba(124, 191, 255, 0.32) !important;
+}
+
+.cn-aurora-footer > hr {
+  background-color: rgba(124, 191, 255, 0.35) !important;
+}
+
+@keyframes aurora-drift {
+  0% {
+    filter: blur(24px);
+    opacity: 0.72;
+    transform: translate3d(-10%, -4%, 0) skewY(-7deg) scaleX(1.04);
+  }
+  45% {
+    filter: blur(30px);
+    opacity: 0.95;
+    transform: translate3d(3%, 5%, 0) skewY(-2deg) scaleX(1.16);
+  }
+  100% {
+    filter: blur(26px);
+    opacity: 0.82;
+    transform: translate3d(12%, -2%, 0) skewY(-9deg) scaleX(1.08);
+  }
+}
+
+@keyframes aurora-burst {
+  0%,
+  58%,
+  100% {
+    opacity: 0.38;
+    transform: scale(1);
+  }
+  66% {
+    opacity: 0.96;
+    transform: scale(1.06);
+  }
+  72% {
+    opacity: 0.5;
+    transform: scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cn-aurora-footer::before,
+  .cn-aurora-footer::after {
+    animation: none;
+  }
+}
+
 .search-form .form-control {
   margin-right: 10px;
   height: 50px;
@@ -2181,6 +2320,27 @@ select {
   height: 25px;
   border-radius: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-language-flags {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.desktop-language-flag {
+  width: 24px;
+  height: 15px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.desktop-language-flag[src*="Arab_League"] {
+  width: auto;
+  max-width: 28px;
+  object-fit: contain;
 }
 
 @media (max-width: 991px) {

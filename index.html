@@ -138,7 +138,7 @@
       try {
         // 尝试从缓存获取地理位置信息
         const cachedInfo = JSON.parse(localStorage.getItem('user_device_info'));
-        if (cachedInfo && cachedInfo.geoInfo && cachedInfo.geoTimestamp && 
+        if (cachedInfo && cachedInfo.geoInfo && cachedInfo.geoTimestamp &&
             (Date.now() - cachedInfo.geoTimestamp < 3600 * 1000)) {
           geoData = cachedInfo.geoInfo;
           console.log("使用缓存的地理位置信息:", geoData);
@@ -155,21 +155,21 @@
           console.log("重新获取的地理位置信息:", geoData);
         } catch (e) {
           console.error("GeoIP 检测失败：", e);
-          // 如果 GeoIP 检测失败，默认跳转 eng.html
-          window.location.href = "eng.html";
+          // 如果 GeoIP 检测失败，默认跳转英文页
+          window.location.href = "en.html";
           return;
         }
       }
 
-      // 定义需要跳转到 eng.html 的国家
+      // 定义需要跳转到英文页的国家
       const engCountries = {
-        "DE": true, // 德国
-        "ES": true  // 西班牙
+        "DE": false, // 德国
+        "ES": false  // 西班牙
         // 以后需要新增，直接在这里加，例如 "FR": true
       };
 
       if (geoData.country && engCountries[geoData.country.toUpperCase()]) {
-        window.location.href = "eng.html";
+        window.location.href = "en.html";
         return;
       }
 
@@ -204,7 +204,7 @@
         'ja': 'jp.html',
         'ko': 'kr.html',
         'th': 'th.html',
-        'bo': 'tb.html' // 藏语
+        'bo': 'cn.html' // 藏语暂无独立页面，使用中文页兜底
       };
 
       var shortLang = userLang.substring(0, 2);

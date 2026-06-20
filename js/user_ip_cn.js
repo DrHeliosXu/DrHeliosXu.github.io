@@ -63,8 +63,13 @@ const yourLocation = {
  * @returns {Promise<Array>} 国家数据数组
  */
 async function fetchCountries() {
-    const response = await fetch("/js/countries.json");
-    return response.json();
+    try {
+        const response = await fetch("js/countries.json");
+        return response.json();
+    } catch (error) {
+        console.warn('国家数据加载失败，使用 IP 返回信息兜底:', error);
+        return [];
+    }
 }
 
 /**
@@ -72,8 +77,13 @@ async function fetchCountries() {
  * @returns {Promise<Array>} 城市映射数据
  */
 async function fetchCityMap() {
-    const response = await fetch('/js/city_name.json');
-    return response.json();
+    try {
+        const response = await fetch('js/city_name.json');
+        return response.json();
+    } catch (error) {
+        console.warn('城市映射加载失败，使用 IP 返回信息兜底:', error);
+        return [{}];
+    }
 }
 
 /**
@@ -85,7 +95,7 @@ async function fetchCityMap() {
  */
 function getCountryNameByCode(countries, code, language = "english") {
     const country = countries.find((country) => country.abbr === code);
-    return country ? country[language] || country.english : "地球";
+    return country ? country[language] || country.english : code || "地球";
 }
 
 /**
@@ -95,12 +105,18 @@ function getCountryNameByCode(countries, code, language = "english") {
  */
 function updateLocationAndFlag(name, code) {
     const locationElements = document.querySelectorAll('.location');
-    const flagElements = document.querySelectorAll('.country-flag');
+    const flagElements = document.querySelectorAll('[data-ip-flag], .country-flag');
+    const normalizedCode = (code || 'un').toLowerCase();
 
     locationElements.forEach(location => location.textContent = name);
     flagElements.forEach(flag => {
-        flag.src = `./images/wflags/${code}.png`;
+        flag.src = `./images/wflags/${normalizedCode}.png`;
         flag.alt = name;
+        flag.onerror = function () {
+            this.onerror = null;
+            this.src = './images/wflags/un.png';
+            this.alt = '地球';
+        };
     });
 }
 
@@ -234,7 +250,7 @@ async function displayCountryInfoAndDistance() {
         ]);
         
         const cityMap = cityMapList[0]; // 假设 city_name.json 是 [{...}] 结构
-        const countryCode = geoData.country.toLowerCase();
+        const countryCode = (geoData.country || 'UN').toLowerCase();
         let displayName = "";
 
         // 优先匹配城市中文名
@@ -259,6 +275,10 @@ async function displayCountryInfoAndDistance() {
                     displayName = cnProvincesMap[geoData.region].name;
                 }
             }
+        }
+
+        if (!displayName || displayName === countryCode.toUpperCase()) {
+            displayName = geoData.city || geoData.region || displayName || "地球";
         }
 
         // 更新显示
@@ -918,5 +938,3 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.error('系统初始化失败:', error);
     }
 });
-
-

@@ -1,8 +1,10 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide',
- 	once: true
- });
+if (window.AOS) {
+	AOS.init({
+		duration: 800,
+		easing: 'slide',
+		once: true
+	});
+}
 
 jQuery(document).ready(function($) {
 
@@ -136,6 +138,9 @@ jQuery(document).ready(function($) {
 
 	
 	var siteCarousel = function () {
+		if ( typeof $.fn.owlCarousel !== 'function' ) {
+			return;
+		}
 
 		if ( $('.hero-slide').length > 0 ) {
 			$('.hero-slide').owlCarousel({
@@ -241,21 +246,27 @@ jQuery(document).ready(function($) {
 			});
 		}
 
-		$('.slide-one-item').owlCarousel({
-			center: false,
-			items: 1,
-			loop: true,
-			stagePadding: 0,
-			margin: 0,
-			autoplay: true,
-			pauseOnHover: false,
-			nav: true,
-			navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
-		});
+		if ( $('.slide-one-item').length > 0 ) {
+			$('.slide-one-item').owlCarousel({
+				center: false,
+				items: 1,
+				loop: true,
+				stagePadding: 0,
+				margin: 0,
+				autoplay: true,
+				pauseOnHover: false,
+				nav: true,
+				navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+			});
+		}
 	};
 	siteCarousel();
 
 	var siteStellar = function() {
+		if ( typeof $.fn.stellar !== 'function' ) {
+			return;
+		}
+
 		$(window).stellar({
 	    responsive: false,
 	    parallaxBackgrounds: true,
@@ -268,6 +279,9 @@ jQuery(document).ready(function($) {
 	siteStellar();
 
 	var siteCountDown = function() {
+		if ( $('#date-countdown').length === 0 || typeof $.fn.countdown !== 'function' ) {
+			return;
+		}
 
 		$('#date-countdown').countdown('2020/10/10', function(event) {
 		  var $this = $(this).html(event.strftime(''
@@ -541,12 +555,15 @@ ru: { names: ['Козерог ♑︎', 'Водолей ♒︎', 'Рыбы ♓︎
 
 document.addEventListener('scroll', function () {
     const simplifiedNavbar = document.getElementById('simplifiedNavbar');
+    if (!simplifiedNavbar) return;
     const scrollThreshold = 100; // 滚动的触发距离
 
     if (window.scrollY > scrollThreshold) {
         simplifiedNavbar.classList.add('active'); // 添加显示的类
+        document.body.classList.add('mobile-nav-active');
     } else {
         simplifiedNavbar.classList.remove('active'); // 移除显示的类
+        document.body.classList.remove('mobile-nav-active');
     }
 });
 
@@ -624,3 +641,383 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
   });
 
+(function () {
+	const officialLanguages = ['cn', 'en', 'es', 'fr', 'ru', 'ar'];
+	const supportedExtraLanguages = ['de', 'it', 'jp', 'kr', 'th'];
+	const supportedLanguages = officialLanguages.concat(supportedExtraLanguages);
+
+	const languageMeta = {
+		cn: { label: '中文', sourceFlag: 'cn', countries: ['cn', 'hk', 'mo', 'tw'] },
+		en: { label: 'English', sourceFlag: 'gb', countries: ['gb', 'us', 'ca', 'au', 'nz', 'ie', 'za', 'in', 'sg', 'hk'] },
+		es: { label: 'Español', sourceFlag: 'es', countries: ['es', 'mx', 'ar', 'bo', 'cl', 'co', 'cr', 'cu', 'do', 'ec', 'gt', 'hn', 'ni', 'pa', 'pe', 'py', 'sv', 'uy', 've'] },
+		fr: { label: 'Français', sourceFlag: 'fr', countries: ['fr', 'be', 'mc', 'ca'] },
+		ru: { label: 'Русский', sourceFlag: 'ru', countries: ['ru', 'by', 'kz', 'kg', 'tj'] },
+		ar: { label: 'اللغة العربية', sourceFlag: 'Arab_League', countries: ['dz', 'bh', 'km', 'dj', 'eg', 'iq', 'jo', 'kw', 'lb', 'ly', 'mr', 'ma', 'om', 'ps', 'qa', 'sa', 'so', 'sd', 'sy', 'tn', 'ae', 'ye'] },
+		de: { label: 'Deutsch', sourceFlag: 'de', countries: ['de', 'at', 'ch', 'li', 'lu'] },
+		it: { label: 'Italiano', sourceFlag: 'it', countries: ['it', 'ch', 'sm', 'va'] },
+		jp: { label: '日本語', sourceFlag: 'jp', countries: ['jp'] },
+		kr: { label: '한국어', sourceFlag: 'kr', countries: ['kr'] },
+		th: { label: 'ไทย', sourceFlag: 'th', countries: ['th'] }
+	};
+
+	const countryLanguageAdditions = {
+		ch: ['de', 'fr', 'it'],
+		lu: ['de', 'fr'],
+		sg: ['en', 'cn'],
+		hk: ['cn', 'en']
+	};
+
+	const languageSortGroups = {
+		eastAsia: ['cn', 'jp', 'kr', 'th'],
+		western: ['de', 'en', 'es', 'fr', 'it', 'ru'],
+		last: ['ar']
+	};
+
+	const chineseVariantValues = {
+		simplified: 'javascript:runJianTiJavaScript();',
+		traditional: 'javascript:runFanTiJavaScript();'
+	};
+
+	const pageParts = function () {
+		const fileName = (window.location.pathname.split('/').pop() || 'en.html').replace(/\.html$/i, '');
+		if (fileName === 'zh') {
+			return { language: 'cn', suffix: '' };
+		}
+		const match = fileName.match(/^([a-z]{2})(-.+)?$/i);
+		if (!match || !supportedLanguages.includes(match[1])) {
+			return { language: 'en', suffix: '' };
+		}
+		return { language: match[1], suffix: match[2] || '' };
+	};
+
+	const desiredLanguagesFor = function (language, currentLanguage, extraLanguages) {
+		let languages = officialLanguages.includes(language) ? officialLanguages.slice() : officialLanguages.slice().concat(language);
+		if (supportedLanguages.includes(currentLanguage) && !languages.includes(currentLanguage)) {
+			languages.push(currentLanguage);
+		}
+		(extraLanguages || []).forEach(function (extraLanguage) {
+			if (supportedLanguages.includes(extraLanguage) && !languages.includes(extraLanguage)) {
+				languages.push(extraLanguage);
+			}
+		});
+		languages = languages.filter(function (item, index) {
+			return supportedLanguages.includes(item) && languages.indexOf(item) === index;
+		});
+
+		const eastAsianLanguages = languageSortGroups.eastAsia.filter(function (item) {
+			return languages.includes(item);
+		});
+		const lastLanguages = languageSortGroups.last.filter(function (item) {
+			return languages.includes(item);
+		});
+		const westernLanguages = languageSortGroups.western.filter(function (item) {
+			return languages.includes(item);
+		});
+		const otherLanguages = languages
+			.filter(function (item) {
+				return !eastAsianLanguages.includes(item) && !westernLanguages.includes(item) && !lastLanguages.includes(item);
+			});
+
+		return eastAsianLanguages.concat(westernLanguages, otherLanguages, lastLanguages);
+	};
+
+	const browserLanguage = function () {
+		const browserLanguages = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || 'en'];
+		for (const browserLocale of browserLanguages) {
+			const locale = String(browserLocale || '').toLowerCase();
+			if (locale.indexOf('zh') === 0) return 'cn';
+			if (locale.indexOf('ja') === 0) return 'jp';
+			if (locale.indexOf('ko') === 0) return 'kr';
+			if (locale.indexOf('th') === 0) return 'th';
+			if (locale.indexOf('de') === 0) return 'de';
+			if (locale.indexOf('it') === 0) return 'it';
+			if (locale.indexOf('es') === 0) return 'es';
+			if (locale.indexOf('fr') === 0) return 'fr';
+			if (locale.indexOf('ru') === 0) return 'ru';
+			if (locale.indexOf('ar') === 0) return 'ar';
+			if (locale.indexOf('en') === 0) return 'en';
+		}
+		return 'en';
+	};
+
+	const languagesFromCountry = function (countryCode) {
+		const code = String(countryCode || '').toLowerCase();
+		if (!code) return [];
+		const languages = [];
+		supportedLanguages.forEach(function (language) {
+			if (languageMeta[language].countries.includes(code)) {
+				languages.push(language);
+			}
+		});
+		(countryLanguageAdditions[code] || []).forEach(function (language) {
+			if (!languages.includes(language)) languages.push(language);
+		});
+		return languages;
+	};
+
+	const buildPageUrl = function (language, suffix) {
+		return `${language}${suffix || ''}.html`;
+	};
+
+	const isLanguageNavigationSelect = function (select) {
+		if (!select || select.name !== 'languages') return false;
+		return Array.from(select.options).some(function (option) {
+			return /\.html(?:$|[#?])/.test(option.value) || option.value.indexOf('runFanTiJavaScript') !== -1;
+		});
+	};
+
+	const getLanguageSelects = function () {
+		return Array.from(document.querySelectorAll('select[name="languages"]')).filter(isLanguageNavigationSelect);
+	};
+
+	const sameLanguageList = function (left, right) {
+		const leftList = left || [];
+		const rightList = right || [];
+		if (leftList.length !== rightList.length) return false;
+		return leftList.every(function (item, index) {
+			return item === rightList[index];
+		});
+	};
+
+	const flagPath = function (flagCode) {
+		if (flagCode === 'Arab_League') return './images/wflags_svg/Arab_League.svg';
+		return `./images/wflags_svg/${flagCode}.svg`;
+	};
+
+	const setFlagImage = function (img, flagCode, label) {
+		img.src = flagPath(flagCode);
+		img.alt = label || flagCode;
+		img.className = 'desktop-language-flag';
+		img.style.display = 'inline-block';
+		img.onerror = function () {
+			img.style.display = 'none';
+		};
+	};
+
+	const ensureFlagContainer = function (select) {
+		const parent = select.parentElement;
+		if (!parent) return null;
+		const group = select.closest('span, .ml-auto, .language-selector') || parent;
+
+		let container = parent.querySelector('[data-dynamic-language-flags]');
+		if (!container) {
+			container = document.createElement('span');
+			container.setAttribute('data-dynamic-language-flags', 'true');
+			container.className = 'desktop-language-flags';
+			parent.insertBefore(container, select);
+		}
+
+		Array.from(group.childNodes).forEach(function (node) {
+			if (node === container || node === select) return;
+			if (node.nodeType === Node.ELEMENT_NODE && node.querySelector && node.querySelector('img')) {
+				node.style.display = 'none';
+			}
+			if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === '/') {
+				node.textContent = '';
+			}
+		});
+
+		group.querySelectorAll('.cn-switch-cn, .cn-switch-tw').forEach(function (switchLink) {
+			switchLink.style.display = 'none';
+		});
+
+		group.querySelectorAll('img[src*="wflags_svg"], img[id="language-flag"]').forEach(function (img) {
+			if (container.contains(img)) return;
+			const wrapper = img.closest('a, span');
+			if (wrapper && wrapper !== group && !wrapper.contains(select)) {
+				wrapper.style.display = 'none';
+			} else {
+				img.style.display = 'none';
+			}
+		});
+
+		return container;
+	};
+
+	const currentChineseVariant = function () {
+		try {
+			return localStorage.getItem('langMode') === '繁体' ? 'traditional' : 'simplified';
+		} catch (error) {
+			return 'simplified';
+		}
+	};
+
+	const setChineseVariant = function (variant) {
+		try {
+			localStorage.setItem('langMode', variant === 'traditional' ? '繁体' : '简体');
+		} catch (error) {}
+
+		if (variant === 'traditional' && typeof window.runFanTiJavaScript === 'function') {
+			window.runFanTiJavaScript();
+		}
+		if (variant === 'simplified' && typeof window.runJianTiJavaScript === 'function') {
+			window.runJianTiJavaScript();
+		}
+		if (typeof window.updateSelectBox === 'function') window.updateSelectBox();
+		if (typeof window.updateLogo === 'function') window.updateLogo();
+	};
+
+	const addChineseVariantOptions = function (select, currentLanguage, suffix) {
+		const simplifiedOption = document.createElement('option');
+		simplifiedOption.value = buildPageUrl('cn', suffix);
+		simplifiedOption.textContent = '简体中文';
+		if (currentLanguage === 'cn' && currentChineseVariant() === 'simplified') simplifiedOption.selected = true;
+		select.appendChild(simplifiedOption);
+
+		const traditionalOption = document.createElement('option');
+		traditionalOption.value = chineseVariantValues.traditional;
+		traditionalOption.textContent = '繁体中文';
+		if (currentLanguage === 'cn' && currentChineseVariant() === 'traditional') traditionalOption.selected = true;
+		select.appendChild(traditionalOption);
+	};
+
+	const renderLanguageOptions = function (select, menuLanguage, currentLanguage, suffix, extraLanguages) {
+		const visibleLanguages = desiredLanguagesFor(menuLanguage, currentLanguage, extraLanguages);
+		select.onchange = null;
+		select.removeAttribute('onchange');
+		select.innerHTML = '';
+		visibleLanguages.forEach(function (itemLanguage) {
+			if (itemLanguage === 'cn' && currentLanguage === 'cn') {
+				addChineseVariantOptions(select, currentLanguage, suffix);
+				return;
+			}
+			const option = document.createElement('option');
+			option.value = buildPageUrl(itemLanguage, suffix);
+			option.textContent = languageMeta[itemLanguage].label;
+			if (itemLanguage === currentLanguage) option.selected = true;
+			select.appendChild(option);
+		});
+		select.addEventListener('change', function () {
+			try {
+				sessionStorage.setItem('manual_language_choice', '1');
+			} catch (error) {}
+			const selectedValue = select.options[select.selectedIndex].value;
+			if (selectedValue === chineseVariantValues.traditional) {
+				setChineseVariant('traditional');
+				return;
+			}
+			if (currentLanguage === 'cn' && selectedValue === buildPageUrl('cn', suffix)) {
+				setChineseVariant('simplified');
+				return;
+			}
+			window.location.href = selectedValue;
+		});
+		if (typeof adjustWidth === 'function') adjustWidth(select);
+	};
+
+	const renderLanguageFlags = function (language) {
+		const meta = languageMeta[language] || languageMeta.en;
+
+		getLanguageSelects().forEach(function (select) {
+			const container = ensureFlagContainer(select);
+			if (!container) return;
+			container.innerHTML = '';
+			const img = document.createElement('img');
+			setFlagImage(img, meta.sourceFlag, meta.label);
+			container.appendChild(img);
+		});
+	};
+
+	const readCachedGeo = function () {
+		try {
+			const cache = JSON.parse(localStorage.getItem('user_device_info'));
+			if (cache && cache.geoInfo && cache.geoTimestamp && Date.now() - cache.geoTimestamp < 3600 * 1000) {
+				return cache.geoInfo;
+			}
+		} catch (error) {}
+		return null;
+	};
+
+	const fetchGeo = async function () {
+		const cached = readCachedGeo();
+		if (cached) return cached;
+		const response = await fetch('https://ipinfo.io/json?token=228a7bb192c4fc');
+		const data = await response.json();
+		try {
+			const cache = JSON.parse(localStorage.getItem('user_device_info')) || {};
+			cache.geoInfo = data;
+			cache.geoTimestamp = Date.now();
+			localStorage.setItem('user_device_info', JSON.stringify(cache));
+		} catch (error) {}
+		return data;
+	};
+
+	const maybeRedirectToBrowserLanguage = function (language, suffix) {
+		const targetUrl = buildPageUrl(language, suffix);
+		const currentFile = window.location.pathname.split('/').pop() || '';
+		let manualChoice = false;
+		try {
+			manualChoice = sessionStorage.getItem('manual_language_choice') === '1';
+		} catch (error) {}
+		if (manualChoice || currentFile === targetUrl) return false;
+
+		const redirectKey = `browser_language_redirect:${suffix || 'home'}`;
+		try {
+			if (sessionStorage.getItem(redirectKey) === language) return false;
+			sessionStorage.setItem(redirectKey, language);
+		} catch (error) {}
+
+		window.location.replace(targetUrl);
+		return true;
+	};
+
+	const applyLanguageNav = function (menuLanguage, currentLanguage, suffix, extraLanguages) {
+		const selects = getLanguageSelects();
+		if (!selects.length) return;
+		const normalizedExtraLanguages = (extraLanguages || []).filter(function (language, index, list) {
+			return supportedLanguages.includes(language) && list.indexOf(language) === index;
+		});
+		const navSignature = [menuLanguage, currentLanguage, suffix || '', normalizedExtraLanguages.join(',')].join('|');
+		if (applyLanguageNav.lastSignature === navSignature) return;
+		applyLanguageNav.lastSignature = navSignature;
+
+		selects.forEach(function (select) {
+			renderLanguageOptions(select, menuLanguage, currentLanguage, suffix, normalizedExtraLanguages);
+		});
+		renderLanguageFlags(currentLanguage);
+	};
+
+	const initLanguageNav = function () {
+		const selects = getLanguageSelects();
+		if (!selects.length) return;
+
+		const parts = pageParts();
+		const preferredLanguage = browserLanguage();
+		const cachedGeo = readCachedGeo();
+		let currentCountryLanguages = languagesFromCountry(cachedGeo && cachedGeo.country);
+		applyLanguageNav(preferredLanguage, parts.language, parts.suffix, currentCountryLanguages);
+
+		fetchGeo()
+			.then(function (geo) {
+				const countryLanguages = languagesFromCountry(geo && geo.country);
+				if (!sameLanguageList(countryLanguages, currentCountryLanguages)) {
+					currentCountryLanguages = countryLanguages;
+					applyLanguageNav(preferredLanguage, parts.language, parts.suffix, countryLanguages);
+				}
+				maybeRedirectToBrowserLanguage(preferredLanguage, parts.suffix);
+			})
+			.catch(function () {
+				applyLanguageNav(preferredLanguage, parts.language, parts.suffix, currentCountryLanguages);
+				maybeRedirectToBrowserLanguage(preferredLanguage, parts.suffix);
+			});
+
+		let scrollTimer = null;
+		window.addEventListener('scroll', function () {
+			if (scrollTimer) window.clearTimeout(scrollTimer);
+			scrollTimer = window.setTimeout(function () {
+				const cachedGeo = readCachedGeo();
+				const countryLanguages = languagesFromCountry(cachedGeo && cachedGeo.country);
+				if (!sameLanguageList(countryLanguages, currentCountryLanguages)) {
+					currentCountryLanguages = countryLanguages;
+					applyLanguageNav(preferredLanguage, parts.language, parts.suffix, countryLanguages);
+				}
+			}, 120);
+		}, { passive: true });
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initLanguageNav);
+	} else {
+		initLanguageNav();
+	}
+})();

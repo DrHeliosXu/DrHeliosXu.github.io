@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="css/mobilenav.css">
     <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cn-common.css">
     <script src="js/chinese_lunar_calendar.min.js"></script>
 
     <style>
@@ -102,7 +103,7 @@
                 <div class="row align-items-center">
                     <div class="col-12 col-lg-6 d-flex">
                         <a href="cn.html" class="site-logo">
-                            <img src="images/logo-full-cn.png" alt="Image" class="site-logo" style="height:80px;">
+                            <img src="images/logo-full-cn.png" alt="Image" class="site-logo cn-logo-main">
                         </a>
 
                         <a href="#" class="ml-auto d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
@@ -115,7 +116,7 @@
                             <div class="social-icons-container">
                                 <div class="ml-md-auto top-social d-lg-inline-block">
 
-                                    <div class="text-right" style="margin-top: -40px; margin-right: -10px;">
+                                    <div class="text-right cn-social-links">
                                         <a href="https://www.linkedin.com/in/xuhong/"
                                             class="social-icon d-inline-block p-3" target="_blank">
                                             <span class="icon-linkedin"></span>
@@ -133,20 +134,11 @@
                                         <span class="icon-wechat"></span></a> -->
 
                                     <a class="flag d-lg-none">
-                                        <img src="images/flag_cn.png" alt="flag"
-                                            style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                                    </a>
+                                        </a>
                                     <div class="ml-auto d-inline-block d-lg-none">
-                                        <select id="languages" name="languages" style="
-                                            width: auto;height: 25px;
-                                            margin-left: 5px;
-                                            border-radius: 0;
-                                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                            text-align: center; /* 新增 */
-                                            text-align-last: center; /* 确保选中的选项居中 */
-                                            " onchange="handleChange(this)">
-                                            <option value="cn-research.html" selected>中文简体</option>
-                                            <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
+                                        <select id="languages" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+                                            <option value="cn-research.html" selected>简体中文</option>
+                                            <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
                                             </option>
                                             <option value="jp-research.html">日本語</option>
                                             <option value="kr-research.html">한국어</option>
@@ -159,15 +151,7 @@
                                             <option value="ru-research.html">Русский</option>
                                             <option value="ar-research.html">اللغة العربية</option>
                                         </select>
-                                        <select id="content-list-2" name="content-list" style="
-                                        width: auto;
-                                        height: 25px;
-                                        margin-left: 5px;
-                                        border-radius: 0;
-                                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                                        text-align: center; /* 新增 */
-                                        text-align-last: center; /* 确保选中的选项居中 */
-                                        " onchange="handleChange(this)">
+                                        <select id="content-list-2" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
                                             <option value="cn.html">主页</option>
                                             <option value="cn-research.html" selected>研究</option>
                                             <option value="cn-news.html">新闻</option>
@@ -188,7 +172,7 @@
 
 
 
-            <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
+            <div class="site-navbar cn-main-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 pb-2 d-none d-sm-block"
                 role="banner">
 
                 <div class="container">
@@ -196,8 +180,7 @@
 
                         <div class="mr-auto">
                             <nav class="site-navigation position-relative text-right" role="navigation">
-                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo"
-                                    style="width: auto; height: 65px; position: absolute; top: 11px; left: -83px; visibility: hidden; opacity: 0; transition: visibility 0s, opacity 0.3s linear;" />
+                                <img id="scroll-logo" src="images/logo-only.png" alt="Image" class="site-logo cn-scroll-logo" />
                                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 pb-2 d-none d-sm-block">
                                     <li class="active">
                                         <a href="cn.html" class="nav-link text-left">主 页&nbsp;&nbsp;</a>
@@ -224,25 +207,11 @@
 
                         <!-- 语言选择框 -->
                         <div class="ml-auto">
-                            <span style="display: flex; align-items: center; font-family: verdana; font-size: 14px;">
-                                <!-- 简体字和国旗 -->
-                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);})();'
-                                    class="d-inline-block" id="switch-cn" style="margin-right: 5px;">
-                                    <img src="images/flag_cn.png" alt="flag"
-                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">简
-                                </a> /
-                                <!-- 繁体字和国旗 -->
-                                <a href='javascript:(function(){var s=document.getElementById("tongwenlet_tw");if(s!=null){document.body.removeChild(s);}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="js/bookmarklet_tw.js";s.id="tongwenlet_tw";document.body.appendChild(s);})();'
-                                    class="d-inline-block" id="switch-tw" style="margin-left: 5px; margin-right: 5px;">
-                                    <img src="images/flag_hk.png" alt="flag"
-                                        style="height:15px; margin-right:5px;position:relative; top:-1px;"><img
-                                        src="images/flag_mc.png" alt="flag"
-                                        style="height:15px; margin-right:2px;position:relative; top:-1px;">繁
-                                </a>
-                                <!-- 选择语言的下拉框 -->
-                                <select id="languages-2" name="languages" style="width: auto;height: 25px; margin-left: 5px; font-size: 14px; color: inherit; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                     text-align: center; /* 新增 */
-                    text-align-last: center;" onchange="window.location.href=this.options[this.selectedIndex].value">
-                                    <option value="cn-research.html" selected>中文</option>
+                            <span class="cn-desktop-language">
+<!-- 选择语言的下拉框 -->
+                                <select id="languages-2" name="languages" onchange="window.location.href=this.options[this.selectedIndex].value" class="cn-nav-select cn-nav-select-inline">
+                                    <option value="cn-research.html" selected>简体中文</option>
+                                    <option value="javascript:runFanTiJavaScript();">繁体中文</option>
                                     <option value="jp-research.html">日本語</option>
                                     <option value="kr-research.html">한국어</option>
                                     <option value="th-research.html">ไทย</option>
@@ -261,7 +230,7 @@
                 </div>
             </div>
         </div>
-        <hr class="d-block d-sm-none " style="height:1px;border-width:0;color:gray;background-color:gray">
+        <hr class="d-block d-sm-none cn-mobile-divider">
 
         <!---Mobile MENU Bar--->
         <a class="d-inline-block d-sm-none ">
@@ -295,30 +264,20 @@
         <!-- 简化版导航栏内容 -->
         <div class="simplified-navbar d-sm-none" id="simplifiedNavbar">
 
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="cn-mobile-navbar-inner">
 
-                <a href="cn-research.html" style="display: block; position: absolute; top: 11px; left: 15px;">
-                    <img src="images/logo-full-cn-long.png" alt="Image" class="site-logo"
-                        style="width: auto; height: 55px;" />
+                <a href="cn-research.html" class="cn-mobile-logo-link">
+                    <img src="images/logo-full-cn-long.png" alt="Image" class="site-logo cn-mobile-logo" />
                 </a>
 
                 <div></div>
 
-                <div style="display: flex; align-items: center;">
+                <div class="cn-mobile-controls">
                     <a class="flag d-inline-block d-lg-none">
-                        <img src="images/flag_cn.png" alt="flag"
-                            style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                    </a>
-                    <select id="languages-3" name="languages" style="
-                        width: auto;height: 25px;
-                        margin-left: 5px;
-                        border-radius: 0;
-                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                        text-align: center; /* 新增 */
-                        text-align-last: center; /* 确保选中的选项居中 */
-                        " onchange="handleChange(this)">
-                        <option value="cn-research.html" selected>中文简体</option>
-                        <option value="javascript:runFanTiJavaScript();" id="fanti-option">中文繁体
+                        </a>
+                    <select id="languages-3" name="languages" onchange="handleChange(this)" class="cn-nav-select">
+                        <option value="cn-research.html" selected>简体中文</option>
+                        <option value="javascript:runFanTiJavaScript();" id="fanti-option">繁体中文
                         </option>
                         <option value="jp-research.html">日本語</option>
                         <option value="kr-research.html">한국어</option>
@@ -331,14 +290,7 @@
                         <option value="ru-researchhtml">Русский</option>
                         <option value="ar-research.html">اللغة العربية</option>
                     </select>
-                    <select id="content-list" name="content-list" style="
-                    width: auto;height: 25px;
-                    margin-left: 5px;
-                    border-radius: 0;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                    text-align: center; /* 新增 */
-                    text-align-last: center; /* 确保选中的选项居中 */
-                    " onchange="handleChange(this)">
+                    <select id="content-list" name="content-list" onchange="handleChange(this)" class="cn-nav-select">
                         <option value="cn.html">主页</option>
                         <option value="cn-research.html" selected>研究</option>
                         <option value="cn-news.html">新闻</option>
@@ -377,7 +329,7 @@
                         </h1>
                         <h5 style="text-align: center;">面向电网的氢-电协同低碳能源系统</h5>
                         <hr>
-                        <img src="/images/research_overview.png" alt="Research Overview"
+                        <img src="images/research_overview.png" alt="Research Overview"
                             style="display: block; width: 98%; height: auto;">
                         <hr>
 
@@ -411,7 +363,7 @@
                                     target="_blank">章节</a>]<text style="color:rgb(6, 35, 91)"></text><text
                                     style="color:rgb(19, 142, 10)"></text>
                             </li>
-                            <!-- 
+                            <!--
                             <li>
                                 <strong>H. Xu*</strong> [Contributor] etc.
                                 Group of Experts on Assessment of Climate Change Impacts and Adaptation for
@@ -1149,18 +1101,13 @@
                 <form action="#" class="row align-items-start">
                     <!-- 第一栏 -->
                     <div class="col-md-4">
-                        <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" />
+                        <img src="images/logo.png" alt="Image" class="site-logo cn-footer-logo" />
                         <br> <br>
-                        <h2><img src="./images/wflags/eu.png" style="
-                                                                height: 0.9em;
-                                                                vertical-align: -6%;
-                                                                display: inline-block;
-                                                                margin-right: 0em;
-                                                              " /> 联系我</h2>
+                        <h2><img src="./images/wflags/eu.png" class="cn-footer-flag" /> 联系我</h2>
                         <p>
                             邮件 | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a> <br>
                             领英 |
-                            <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
+                            <a href="https://www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a> <br>
                             知乎 |
                             <a href="https://www.zhihu.com/people/dr.of.nothing"
                                 target="_blank">zhihu.com/people/dr.of.nothing</a> <br>
@@ -1192,15 +1139,9 @@
                             href="https://www.booked.net/weather/beijing-18391"><img
                                 src="https://w.bookcdn.com/weather/picture/5_18391_1_1_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=60060"
                                 alt="booked.net" /></a><!-- weather widget end -->
-                        <img src="images/logo-nulll.png" alt="Image" class="site-logo"
-                            style="width: 55px; height: 60px" /> <br>
+                        <img src="images/logo-nulll.png" alt="Image" class="site-logo cn-footer-logo" /> <br>
                         <br>
-                        <h2><img class="country-flag " src="./images/wflags/un.png" alt="国旗" style="
-                                                                                                            height: 0.9em;
-                                                                                                            vertical-align: -6%;
-                                                                                                            display: inline-block;
-                                                                                                            margin-right: 0em;
-                                                                                                          " /> 世界之大,
+                        <h2><img class="country-flag cn-footer-flag" src="./images/wflags/un.png" alt="国旗" /> 世界之大,
                             为何我们相遇</h2>
                         <p>
                             摄影 |
@@ -1226,21 +1167,21 @@
                               " />
                     </div>
                     <!-- 第三栏 -->
-   
+
       <!-- 第三栏 -->
 <div class="col-md-5">
     <br />
     <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
-  
+
       <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
          style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
         <img src="images/default-map.png" alt="Visitor Map"
              class="fallback-img">
       </a>
-  
+
     </div>
-  
+
     <style>
       /* 默认电脑端偏移 */
       #clustrmap-container {
@@ -1248,7 +1189,7 @@
         position: relative;
         z-index: 10;
       }
-  
+
       /* 默认图片样式：PC/iPad 保持最大 470px */
       .fallback-img {
         width: 100%;
@@ -1256,7 +1197,7 @@
         display: block;
         margin: 0 auto;
       }
-  
+
       /* 移动端特殊处理：让图片铺满屏幕宽度 */
       @media (max-width: 480px) {
         .fallback-img {
@@ -1267,31 +1208,31 @@
           transform: translateX(0) !important; /* 移动端不再横向偏移 */
         }
       }
-  
+
       @media (max-width: 768px) {
         #clustrmap-container {
           transform: translateX(0px) !important;
         }
       }
     </style>
-  
+
     <script>
       (function () {
         // 判断是否是移动端或 iPad
         var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-  
+
         if (!isMobile) {
           // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
           var script = document.createElement("script");
           script.type = "text/javascript";
           script.id = "clustrmaps";
           script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
-  
+
           script.onload = function () {
             var fallback = document.getElementById("clustrmap-fallback-link");
             if (fallback) fallback.style.display = "none";
           };
-  
+
           document.getElementById("clustrmap-container").appendChild(script);
         } else {
           console.log("📱 Mobile device detected, showing static fallback image.");
@@ -1339,21 +1280,11 @@
                     <div class="col-12">
                         <div class="copyright">
                             <p>
-                                <img class="country-flag" src="./images/wflags/un.png" alt="国旗" style="
-                                    height: 0.9em;
-                                    vertical-align: -6%;
-                                    display: inline-block;
-                                    margin-right: 0em;
-                                  " />
+                                <img class="country-flag cn-footer-flag" src="./images/wflags/un.png" alt="国旗" />
                                 <text><span class="province-slogan"></span>欢迎来自<span class="location">地球</span>的朋友!
                                     跨越地表
                                     <span class="distance-info"> ∞ 公里</span>, 过去未来共斟酌!</text>
-                                <img src="./images/wflags/de.png" style="
-                                    height: 0.9em;
-                                    vertical-align: -6%;
-                                    display: inline-block;
-                                    margin-right: 0em;
-                                  " />
+                                <img src="./images/wflags/de.png" class="cn-footer-flag" />
                                 <br>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 版权 &copy; 2017 -
@@ -1401,17 +1332,17 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.1.min.js"></script>
         <!--  -->
-        
+
         <script src="js/bootstrap.min.js"></script>
         <script src="js/owl.carousel.min.js" defer></script>
         <script src="js/jquery.stellar.min.js"></script>
         <script src="js/jquery.countdown.min.js"></script>
-        
-        
+
+
         <script src="js/aos.js"></script>
-        
+
         <script src="js/jquery.sticky.js"></script>
-        
+
         <script src="js/mobilenav.js"></script>
 
         <script src="js/main.js"></script>

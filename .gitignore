@@ -1,0 +1,8 @@
+.DS_Store
+_site/
+node_modules/
+.playwright-cli/
+*.log
+*.tmp
+~$*.pptx
+~$*.xlsx

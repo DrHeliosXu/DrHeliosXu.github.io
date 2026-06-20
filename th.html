@@ -9,17 +9,11 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-  <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
-  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
   <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
-  <!-- <link rel="stylesheet" href="css/aos.css"> -->
-  <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="css/mobilenav.css" />
   <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/video-hero.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
 
   <style>
@@ -33,7 +27,7 @@
   </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
   <div class="site-wrap">
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -74,10 +68,6 @@
                       <span class="icon-instagram"></span>
                     </a>
                   </div>
-
-                  <img src="images/flag_th.png" class="flag d-inline-block d-lg-none" alt="flag"
-                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
-
 
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
@@ -169,15 +159,8 @@
             <!-- 语言选择框 -->
             <div class="ml-auto">
               <span style="display: flex; align-items: center">
-                <!-- 简体字和国旗 -->
-                <a href="" class="d-inline-block" style="margin-right: 5px">
-                  <img src="images/flag_th.png" alt="flag" style="
-                        height: 15px;
-                        margin-right: 2px;
-                        position: relative;
-                        top: -1px;
-                      " />
-                </a>
+                                <a href="" class="d-inline-block" style="margin-right: 5px">
+                  </a>
                 <!-- 选择语言的下拉框 -->
                 <select id="languages-3" name="languages" style="
                       width: auto;height: 25px;
@@ -213,691 +196,70 @@
           background-color: gray;
         " />
 
-    <div class="site-section py-0">
-      <div class="owl-carousel hero-slide owl-style">
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_0.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_0_sdg13_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_0_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    สภาพภูมิอากาศ
-                  </p>
+            <div class="site-section py-0 video-hero-section">
+            <div class="video-hero">
+                <video id="hero-video" class="video-hero__media" autoplay muted playsinline preload="metadata" poster="images/big_img_0.png">
+                    <source src="video/hero_video/hero_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="hero-video-copy" class="video-hero__copy is-active">
+                    <h1 class="video-hero__title">Renewable Energy Researcher</h1>
+                    <span class="video-hero__divider" aria-hidden="true"></span>
+                    <p class="video-hero__subtitle">Clean energy and materials</p>
+                    <div class="video-hero__actions">
+                        <a class="video-hero__button video-hero__button--primary" href="cn-research.html">研发成果</a>
+                        <a class="video-hero__button video-hero__button--secondary" href="mailto:h.xu@tum.de">联系方式</a>
+                    </div>
                 </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    การกระทำ
-                  </p>
-                </div>
-                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 13: การดำเนินการด้านสภาพภูมิอากาศ - ลงมือทำตอนนี้เพื่ออนาคตที่ยั่งยืน</a>
-                </h2>
-                <p class="mb-3">
-                  - สุนทรพจน์ที่การประชุมการเปลี่ยนแปลงสภาพภูมิอากาศของสหประชาชาติที่เมืองบอนน์
-                  เรียกร้องให้มีการดำเนินการเร่งด่วนเพื่อบรรเทาผลกระทบจากสภาพภูมิอากาศ
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">บอนน์, เยอรมนี</a></span>
-                  <span class="date-read">2021</span>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_1.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_1_sdg7_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_1_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    พลังงาน
-                  </p>
+        <section class="hero-stats" aria-label="Research statistics">
+            <div class="hero-stats__inner">
+                <div class="hero-stat" data-stat-key="papers">
+                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_papers"></span>
+                    <span class="hero-stat__label">篇论文</span>
                 </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    สะอาด
-                  </p>
+                <div class="hero-stat" data-stat-key="citations">
+                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
+                    <span class="hero-stat__number google_scholar_citation"></span>
+                    <span class="hero-stat__label">次引用</span>
                 </div>
-                <img src="images/flags/cn.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 7: พลังงานสะอาดและราคาไม่แพง - การขับเคลื่อนอนาคตอย่างยั่งยืน</a>
-                </h2>
-                <p class="mb-3">
-                  - นำเสนอแผนธุรกิจเกี่ยวกับเซลล์แสงอาทิตย์ที่ยืดหยุ่นในการแข่งขัน Teco Green Tech Innovation
-                  ในเมืองไทเป
-                  โดยมุ่งเน้นไปที่โซลูชันพลังงานสะอาดที่เป็นนวัตกรรม
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">ไทเป, จีน</a></span>
-                  <span class="date-read">2012</span>
+                <div class="hero-stat" data-stat-key="patents">
+                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_patents_sum"></span>
+                    <span class="hero-stat__label">项专利</span>
                 </div>
-              </div>
+                <div class="hero-stat" data-stat-key="reviews">
+                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_reviews"></span>
+                    <span class="hero-stat__label">次审稿</span>
+                </div>
+                <div class="hero-stat" data-stat-key="students">
+                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
+                    <span class="hero-stat__number student_guidance_count"></span>
+                    <span class="hero-stat__label">位指导学生</span>
+                </div>
+                <div class="hero-stat" data-stat-key="grants">
+                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_grants"></span>
+                    <span class="hero-stat__label">项科研资助</span>
+                </div>
+                <div class="hero-stat" data-stat-key="downloads">
+                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
+                    <span class="hero-stat__number phd_thesis_downloads"></span>
+                    <span class="hero-stat__label">次博士论文下载</span>
+                </div>
+                <div class="hero-stat" data-stat-key="countries">
+                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
+                    <span class="hero-stat__number visited_countries"></span>
+                    <span class="hero-stat__label">个国家旅行</span>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_3.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_3_sdg8_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_3_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    การเติบโต
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    ทางเศรษฐกิจ
-                  </p>
-                </div>
-                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 8: การเติบโตทางเศรษฐกิจและงานที่มีเกียรติ -
-                    การสร้างความเจริญรุ่งเรืองและการรับประกันศักดิ์ศรี</a>
-                </h2>
-                <p class="mb-3">
-                  - ดำรงตำแหน่งสมาชิกกลุ่มผู้เชี่ยวชาญสำหรับคณะกรรมาธิการเศรษฐกิจแห่งสหประชาชาติสำหรับยุโรปในกรุงเจนีวา
-                  โดยมีส่วนร่วมในการกำหนดนโยบายการเติบโตทางเศรษฐกิจที่ยั่งยืนและงานที่มีเกียรติ
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">เจนีวา, สวิตเซอร์แลนด์</a></span>
-                  <span class="date-read">2021</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_2.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_2_sdg9_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_2_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    นวัตกรรม
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    อุตสาหกรรม
-                  </p>
-                </div>
-                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 9: อุตสาหกรรม, นวัตกรรม, โครงสร้างพื้นฐาน -
-                    การสร้างนวัตกรรมเพื่อความก้าวหน้าที่ยั่งยืน</a>
-                </h2>
-                <p class="mb-3">
-                  - ดำเนินการทดลองซิงโครตรอนที่ Swiss Light Source
-                  โดยสนับสนุนการพัฒนานวัตกรรมเซลล์เชื้อเพลิงผ่านโครงสร้างพื้นฐานการวิจัยที่ทันสมัย
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Villigen PSI, สวิตเซอร์แลนด์</a></span>
-                  <span class="date-read">2019</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_4.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_4_sdg11_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_4_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 55px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    เมือง
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 55px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    ที่ยั่งยืน
-                  </p>
-                </div>
-                <img src="images/flags/de.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 11: เมืองและชุมชนที่ยั่งยืน - การสร้างเมืองและการอนุรักษ์วัฒนธรรม</a>
-                </h2>
-                <p class="mb-3">
-                  - เข้าร่วมงาน Oktoberfest ที่มีอายุหลายร้อยปีในเมืองมิวนิคโดยสวมชุดประจำชาติ Trachten
-                  เพื่อเฉลิมฉลองความยั่งยืนทางวัฒนธรรมในชุมชน
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">มิวนิค, เยอรมนี</a></span>
-                  <span class="date-read">2023</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_5.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_5_sdg14_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_5_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    ชีวิต
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    ใต้ทะเล
-                  </p>
-                </div>
-                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 14: ชีวิตใต้ท้องทะเล - ปกป้องมหาสมุทร และรักษาชีวิต</a>
-                </h2>
-                <p class="mb-3">
-                  - ส่งเสริมการอนุรักษ์ชีวิตทะเลในการนำเสนอในงานประชุม UNFCCC Ocean and Climate Change Dialogue
-                  โดยส่งเสริมความยั่งยืนของมหาสมุทรทั่วโลก
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">บอนน์, เยอรมนี</a></span>
-                  <span class="date-read">2021</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                            background-image: url('images/big_img_6.png');
-                            position: relative;
-                            background-size: cover;
-                            height: 400px;
-                          ">
-                <!-- Logo Image -->
-                <img src="images/big_img_6_sdg16_solid.png" alt="Logo" style="
-                              position: absolute;
-                              top: 20px;
-                              left: 20px;
-                              height: auto;
-                              max-height: 35%;
-                              width: auto;
-                              opacity: 1;
-                            " />
-                <!-- Person Image -->
-                <img src="images/big_img_6_Trans.png" alt="Person" style="
-                              position: absolute;
-                              top: 0;
-                              left: 0;
-                              height: 100%;
-                              width: 100%;
-                              object-fit: cover;
-                              opacity: 1;
-                            " />
-
-                <!-- Text Box -->
-                <div style="
-                              position: absolute;
-                              top: 28px;
-                              left: 59px;
-                              max-height: 35%;
-                              overflow: hidden;
-                            ">
-                  <p style="
-                                margin: 0;
-                                font-size: 14px;
-                                color: #ffffff;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                              ">
-                    สันติภาพ
-                  </p>
-                </div>
-                <div style="
-                              position: absolute;
-                              top: 43px;
-                              left: 59px;
-                              max-height: 35%;
-                              overflow: hidden;
-                            ">
-                  <p style="
-                                margin: 0;
-                                font-size: 14px;
-                                color: #ffffff;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                              ">
-                    และความยุติธรรม
-                  </p>
-                </div>
-                <img src="images/flags/de.png" alt="Person" style="
-                              position: absolute;
-                              bottom: 15px;
-                              right: 15px;
-                              height: auto;
-                              max-height: 5%;
-                              width: auto;
-                              opacity: 1;
-                            " />
-              </div>
-              <div class="contents">
-                <span class="caption">เป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติ</span>
-                <h2>
-                  <a href="#">SDG 16: สันติภาพ, ความยุติธรรม และสถาบันที่เข้มแข็ง - ศาลระหว่างประเทศ</a>
-                </h2>
-                <p class="mb-3">
-                  - เข้าร่วมใน Salzburg Corner ที่การประชุม Munich Security Conference (MSC) ที่จัดขึ้นที่ Amerikahaus
-                  Munich โดยมีการอภิปรายในหัวข้อ: “Trump 2.0 – เราจะไปจากตรงนี้อย่างไร?”
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">มิวนิค, เยอรมนี</a></span>
-                  <span class="date-read">2025</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
+        </section>
 
     <!---Mobile MENU Bar--->
-    <a class="d-inline-block d-sm-none">
+    <div class="d-inline-block d-sm-none">
       <button id="burger" class="open-main-nav">
         <span class="burger"></span>
         <span class="burger-text">เมนู</span>
@@ -932,7 +294,7 @@
                     </li> -->
         </ul>
       </nav>
-    </a>
+    </div>
     <!------>
 
     <!------>
@@ -948,9 +310,7 @@
 
         <div style="display: flex; align-items: center;">
           <a class="flag d-inline-block d-lg-none">
-            <img src="images/flag_th.png" alt="flag"
-              style="height:15px; margin-right:2px; position:relative; top:-1px;">
-          </a>
+            </a>
           <select id="languages-2" name="languages" style="
                                               width: auto;
                                               height: 25px;
@@ -1244,7 +604,7 @@
             WORK EXPERIENCE<br>
             Development Engineer, Freudenberg Group, DE | 2021-Now <br>
             Doctoral Researcher, Paul Scherrer Institute, CH | 2016-21 <br>
-            
+
             <p class="mb-3"></p>
             PRACTICAL EXPERIENCE<br>
             Equity Research Intern, CITIC Securities, CN | 2020<br>
@@ -1538,7 +898,7 @@
   <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
 
     <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
        style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
       <img src="images/default-map.png" alt="Visitor Map"
            class="fallback-img">
@@ -1709,26 +1069,24 @@
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  
-  
+
+
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
-  
-  
+
+
   <script src="js/aos.js"></script>
-  
+
   <script src="js/jquery.sticky.js"></script>
-  
+
   <script src="js/mobilenav.js"></script>
 
   <script src="js/main.js"></script>
+            <script src="js/video_hero.js"></script>
   <script src="js/user_ip_th.js" type="module"></script>
   <script type="text/javascript" src="update_info_script.js"></script>
-  <script type="module" src="js/festival.js" defer></script>
   <script src="js/24jieqi.js" defer></script>
-  <!---<script src="js/calendar_week.js"></script>--->
 
   <script>
 

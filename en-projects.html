@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/mobilenav.css">
   <link rel="stylesheet" href="css/project2.css">
   <link rel="stylesheet" href="css/style.css">
@@ -104,10 +103,6 @@
                     </a>
                   </div>
 
-                  <img src="images/flag_uk.png" class="flag d-inline-block d-lg-none" alt="flag"
-                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
-
-
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
                                    width:auto;
@@ -120,7 +115,7 @@
                                   " onchange="window.location.href=this.options[this.selectedIndex].value">
                       <!-- <option value="cn-projects.html">中文</option>
                       <option value="jp-projects.html">日本語</option>
-                      <option value="kr-projects.html">한국어</option> 
+                      <option value="kr-projects.html">한국어</option>
                       <option value="th-projects.html">ไทย</option>-->
                       <option value="de-projects.html">Deutsch</option>
                       <option value="en-projects.html" selected>English</option>
@@ -200,23 +195,14 @@
             <!-- 语言选择框 -->
             <div class="ml-auto">
               <span style="display: flex; align-items: center;">
-                <!-- 简体字和国旗 -->
-                <a href='' class="d-inline-block" style="margin-right: 5px;">
-                  <img 
-                  style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:0px;" 
-                  alt="flag" 
-                  src="./images/wflags_svg/gb.svg"><img id="language-flag" 
-                style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:5px;" 
-                alt="flag" 
-                src="./images/wflags_svg/un.svg">
-                </a>
+
                 <!-- 选择语言的下拉框 -->
                 <select id="languages-2" name="languages" style="width: 85px; height: 25px; margin-left: 5px; border-radius: 0; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                                                text-align: center; /* 新增 */
                                                 text-align-last: center; /* 确保选中的选项居中 */"
                   onchange="window.location.href=this.options[this.selectedIndex].value">
                   <!-- <option value="cn-projects.html">中文</option>
                                             <option value="jp-projects.html">日本語</option>
-                                            <option value="kr-projects.html">한국어</option> 
+                                            <option value="kr-projects.html">한국어</option>
                                             <option value="th-projects.html">ไทย</option>-->
                   <option value="de-projects.html">Deutsch</option>
                   <option value="en-projects.html" selected>English</option>
@@ -276,9 +262,7 @@
 
         <div style="display: flex; align-items: center;">
           <a class="flag d-inline-block d-lg-none">
-            <img src="images/flag_uk.png" alt="flag"
-              style="height:15px; margin-right:2px; position:relative; top:-1px;">
-          </a>
+            </a>
           <select id="languages-3" name="languages" style="
                                              width:auto;
                                               height: 25px;
@@ -290,7 +274,7 @@
                       " onchange="window.location.href=this.options[this.selectedIndex].value">
             <!-- <option value="cn-projects.html">中文</option>
                                             <option value="jp-projects.html">日本語</option>
-                                            <option value="kr-projects.html">한국어</option> 
+                                            <option value="kr-projects.html">한국어</option>
                                             <option value="th-projects.html">ไทย</option>-->
             <option value="de-projects.html">Deutsch</option>
             <option value="en-projects.html" selected>English</option>
@@ -559,7 +543,7 @@
   <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
 
     <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
        style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
       <img src="images/default-map.png" alt="Visitor Map"
            class="fallback-img">
@@ -748,7 +732,6 @@
     <script src="js/main.js"></script>
     <script src="js/user_ip_en.js" type="module"></script>
     <script type="text/javascript" src="update_info_script.js"></script>
-    <script src="js/festival.js"></script>
     <script src="js/24jieqi.js"></script>
   </div>
   </div>

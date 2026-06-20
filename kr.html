@@ -9,17 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/mobilenav.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/video-hero.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <style>
         body {
@@ -33,7 +26,7 @@
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
     <div class="site-wrap">
         <div class="header-top">
             <div class="container">
@@ -65,9 +58,6 @@
                                             <span class="icon-instagram"></span>
                                         </a>
                                     </div>
-
-                                    <img src="images/flag_kr.png" class="flag d-inline-block d-lg-none" alt="flag"
-                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
 
                                     <div class="ml-auto d-inline-block d-lg-none">
                                         <select id="languages" name="languages" style="
@@ -148,13 +138,7 @@
 
                                 <!-- 国旗 -->
                                 <a href='' class="d-inline-block" style="margin-left: 5px; margin-right: 5px">
-                                    <img src="images/flag_kr.png" alt="flag" style="
-                        height: 15px;
-                        margin-right: 2px;
-                        position: relative;
-                        top: -1px;
-                      " />
-                                </a>
+                                    </a>
                                 <!-- 选择语言的下拉框 -->
                                 <select id="languages-2" name="languages" style="
                       width: auto;height: 25px;
@@ -192,7 +176,7 @@
         " />
 
         <!---Mobile MENU Bar --->
-        <a class="d-inline-block d-sm-none">
+        <div class="d-inline-block d-sm-none">
             <button id="burger" class="open-main-nav">
                 <span class="burger"></span>
                 <span class="burger-text">목 차</span>
@@ -217,7 +201,7 @@
                     </li>
                 </ul>
             </nav>
-        </a>
+        </div>
         <!------>
 
         <!-- 简化版导航栏内容 -->
@@ -232,9 +216,7 @@
 
                 <div style="display: flex; align-items: center;">
                     <a class="flag d-inline-block d-lg-none">
-                        <img src="images/flag_kr.png" alt="flag"
-                            style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                    </a>
+                        </a>
                     <select id="languages-3" name="languages" style="
                         height: 25px;
                         margin-left: 5px;
@@ -274,690 +256,68 @@
         </div>
         <!------>
 
-        <div class="site-section py-0">
-            <div class="owl-carousel hero-slide owl-style">
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_0.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_0_sdg13_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_0_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        기후
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        행동
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 13: 기후 변화 대응</a><br /></h2>
-                                <h3>기후 변화와 그 부정적 영향에 대응하기 위한 긴급 조치 실행</h3>
-                                <p class="mb-3">
-                                    - 유엔 본 기후 변화 회의에서 현장 연설을 통해 기후 영향 완화를 위한 긴급 행동을 촉구
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">본, 독일</a></span>
-                                    <span class="date-read">2021</span>
-
-
-                                </div>
-                            </div>
-                        </div>
+                <div class="site-section py-0 video-hero-section">
+            <div class="video-hero">
+                <video id="hero-video" class="video-hero__media" autoplay muted playsinline preload="metadata" poster="images/big_img_0.png">
+                    <source src="video/hero_video/hero_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="hero-video-copy" class="video-hero__copy is-active">
+                    <h1 class="video-hero__title">Renewable Energy Researcher</h1>
+                    <span class="video-hero__divider" aria-hidden="true"></span>
+                    <p class="video-hero__subtitle">Clean energy and materials</p>
+                    <div class="video-hero__actions">
+                        <a class="video-hero__button video-hero__button--primary" href="cn-research.html">研发成果</a>
+                        <a class="video-hero__button video-hero__button--secondary" href="mailto:h.xu@tum.de">联系方式</a>
                     </div>
                 </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_1.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_1_sdg7_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_1_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        깨끗한
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        에너지
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/cn.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 7: 저렴하고 청정한 에너지</a><br /></h2>
-                                <h3>
-                                    모두가 감당할 수 있고, 신뢰할 수 있으며, 지속 가능하고 현대적인 에너지를 이용할 수 있도록 보장
-                                </h3>
-                                <p class="mb-3">
-                                    - 타이베이에서 열린 동원 과학 창의 대회에서 유연한 태양광 전지 사업 계획을 발표하며, 혁신적인 청정 에너지 솔루션에 집중
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">타이베이, 중국</a></span>
-                                    <span class="date-read">2012</span>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_3.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_3_sdg8_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_3_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        경제
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        성장
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 8: 경제 성장 및 양질의 일자리</a><br /></h2>
-                                <h3>포용적이고 지속 가능한 경제 성장을 촉진하고, 포괄적이며 생산적인 고용 달성</h3>
-                                <p class="mb-3">
-                                    - 제네바 유엔 유럽경제위원회 전문가 그룹 구성원으로서 지속 가능한 경제 성장과 양질의 일자리 정책에 기여
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">제네바, 스위스</a></span>
-                                    <span class="date-read">2021</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_2.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_2_sdg9_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_2_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        산업
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        혁신
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 9: 산업 혁신 및 인프라</a><br /></h2>
-                                <h3>
-                                    회복력 있는 인프라를 구축하고, 포용적이며 지속 가능한 산업을 촉진하며, 혁신을 가속화
-                                </h3>
-                                <p class="mb-3">
-                                    - 스위스 광원에서 동기 방사 실험을 수행하여 연료전지 진단 기술 혁신을 추진하고, 대형 연구 시설을 통해 첨단 기술 돌파를 촉진
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">필리겐, 스위스</a></span>
-                                    <span class="date-read">2019</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_4.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_4_sdg11_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_4_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        지속 가능한
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        도시 공동체
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/de.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 11: 지속 가능한 도시와 공동체</a><br /></h2>
-                                <h3>도시와 인간 거주지가 포용적이고 안전하며 회복력 있고 지속 가능하도록 촉진</h3>
-                                <p class="mb-3">
-                                    - 전통 바이에른 의상을 입고 100년 역사를 가진 뮌헨 옥토버페스트에 참가하여 문화적 지속 가능성과 지역사회 발전을 축하
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">뮌헨, 독일</a></span>
-                                    <span class="date-read">2023</span>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_5.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_5_sdg14_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_5_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        대양
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        생물
-                                    </p>
-                                </div>
-                                <!-- Flag Image -->
-                                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 14: 해양 생물</a><br /></h2>
-                                <h3>해양 및 해양 자원을 보존하고 지속 가능하게 활용하여 지속 가능한 발전 보장</h3>
-                                <p class="mb-3">
-                                    - 유엔 기후 변화 협약 해양 및 기후 변화 대화 회의 기록 전시판 앞에서 해양 생물 보호와 글로벌 해양 지속 가능성 촉진을 촉구
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">본, 독일</a></span>
-                                    <span class="date-read">2021</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                                    background-image: url('images/big_img_6.png');
-                                    position: relative;
-                                    background-size: cover;
-                                    height: 400px;
-                                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_6_sdg16_solid.png" alt="Logo" style="
-                                      position: absolute;
-                                      top: 20px;
-                                      left: 20px;
-                                      height: auto;
-                                      max-height: 35%;
-                                      width: auto;
-                                      opacity: 1;
-                                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_6_Trans.png" alt="Person" style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      height: 100%;
-                                      width: 100%;
-                                      object-fit: cover;
-                                      opacity: 1;
-                                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                                      position: absolute;
-                                      top: 28px;
-                                      left: 59px;
-                                      max-height: 35%;
-                                      overflow: hidden;
-                                    ">
-                                    <p style="
-                                        margin: 0;
-                                        font-size: 14px;
-                                        color: #ffffff;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                      ">
-                                        평화와
-                                    </p>
-                                </div>
-                                <div style="
-                                      position: absolute;
-                                      top: 43px;
-                                      left: 59px;
-                                      max-height: 35%;
-                                      overflow: hidden;
-                                    ">
-                                    <p style="
-                                        margin: 0;
-                                        font-size: 14px;
-                                        color: #ffffff;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                      ">
-                                        정의
-                                    </p>
-                                </div>
-                                <img src="images/flags/de.png" alt="Person" style="
-                                      position: absolute;
-                                      bottom: 15px;
-                                      right: 15px;
-                                      height: auto;
-                                      max-height: 5%;
-                                      width: auto;
-                                      opacity: 1;
-                                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">지속 가능한 개발 목표 2030</span>
-                                <h2><a href="#">SDG 16: 평화와 정의</a><br /></h2>
-                                <h3>평화, 정의 및 포괄적인 지속 가능한 사회 구축과 책임 있는 국제 사법 체계 수립
-                                </h3>
-                                <p class="mb-3">
-                                    - 뮌헨 안보 회의(MSC)에서 열린 잘츠부르크 코너에 참여하여 "트럼프 2.0 시대"에 대한 세계의 방향 논의
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">뮌헨, 독일</a></span>
-                                    <span class="date-read">2025</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
 
+        <section class="hero-stats" aria-label="Research statistics">
+            <div class="hero-stats__inner">
+                <div class="hero-stat" data-stat-key="papers">
+                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_papers"></span>
+                    <span class="hero-stat__label">篇论文</span>
+                </div>
+                <div class="hero-stat" data-stat-key="citations">
+                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
+                    <span class="hero-stat__number google_scholar_citation"></span>
+                    <span class="hero-stat__label">次引用</span>
+                </div>
+                <div class="hero-stat" data-stat-key="patents">
+                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_patents_sum"></span>
+                    <span class="hero-stat__label">项专利</span>
+                </div>
+                <div class="hero-stat" data-stat-key="reviews">
+                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_reviews"></span>
+                    <span class="hero-stat__label">次审稿</span>
+                </div>
+                <div class="hero-stat" data-stat-key="students">
+                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
+                    <span class="hero-stat__number student_guidance_count"></span>
+                    <span class="hero-stat__label">位指导学生</span>
+                </div>
+                <div class="hero-stat" data-stat-key="grants">
+                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_grants"></span>
+                    <span class="hero-stat__label">项科研资助</span>
+                </div>
+                <div class="hero-stat" data-stat-key="downloads">
+                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
+                    <span class="hero-stat__number phd_thesis_downloads"></span>
+                    <span class="hero-stat__label">次博士论文下载</span>
+                </div>
+                <div class="hero-stat" data-stat-key="countries">
+                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
+                    <span class="hero-stat__number visited_countries"></span>
+                    <span class="hero-stat__label">个国家旅行</span>
+                </div>
+            </div>
+        </section>
         <div class="site-section">
             <div class="container">
                 <hr />
@@ -1517,16 +877,16 @@
 <div class="col-md-5">
     <br />
     <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
-  
+
       <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
          style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
         <img src="images/default-map.png" alt="Visitor Map"
              class="fallback-img">
       </a>
-  
+
     </div>
-  
+
     <style>
       /* 默认电脑端偏移 */
       #clustrmap-container {
@@ -1534,7 +894,7 @@
         position: relative;
         z-index: 10;
       }
-  
+
       /* 默认图片样式：PC/iPad 保持最大 470px */
       .fallback-img {
         width: 100%;
@@ -1542,7 +902,7 @@
         display: block;
         margin: 0 auto;
       }
-  
+
       /* 移动端特殊处理：让图片铺满屏幕宽度 */
       @media (max-width: 480px) {
         .fallback-img {
@@ -1553,31 +913,31 @@
           transform: translateX(0) !important; /* 移动端不再横向偏移 */
         }
       }
-  
+
       @media (max-width: 768px) {
         #clustrmap-container {
           transform: translateX(0px) !important;
         }
       }
     </style>
-  
+
     <script>
       (function () {
         // 判断是否是移动端或 iPad
         var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-  
+
         if (!isMobile) {
           // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
           var script = document.createElement("script");
           script.type = "text/javascript";
           script.id = "clustrmaps";
           script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
-  
+
           script.onload = function () {
             var fallback = document.getElementById("clustrmap-fallback-link");
             if (fallback) fallback.style.display = "none";
           };
-  
+
           document.getElementById("clustrmap-container").appendChild(script);
         } else {
           console.log("📱 Mobile device detected, showing static fallback image.");
@@ -1686,21 +1046,21 @@
 
             <script src="js/jquery-3.3.1.min.js"></script>
             <script src="js/jquery-migrate-3.0.1.min.js"></script>
-            
-            
+
+
             <script src="js/bootstrap.min.js"></script>
-            <script src="js/owl.carousel.min.js"></script>
             <script src="js/jquery.stellar.min.js"></script>
             <script src="js/jquery.countdown.min.js"></script>
-            
-            
+
+
             <script src="js/aos.js"></script>
-            
+
             <script src="js/jquery.sticky.js"></script>
-            
+
             <script src="js/mobilenav.js"></script>
 
             <script src="js/main.js"></script>
+            <script src="js/video_hero.js"></script>
             <script src="js/user_ip_kr.js" type="module"></script>
             <script type="text/javascript" src="update_info_script.js"></script>
             <script src="js/24jieqi.js" defer></script>

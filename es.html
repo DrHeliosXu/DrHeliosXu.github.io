@@ -9,17 +9,11 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-    <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
     <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
-    <!-- <link rel="stylesheet" href="css/aos.css"> -->
-    <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="css/mobilenav.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/video-hero.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
     <style>
         body {
@@ -32,7 +26,7 @@
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
     <div class="site-wrap">
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
@@ -75,9 +69,6 @@
                                         </a>
                                     </div>
 
-                                    <img src="images/flag_es.png" class="flag d-inline-block d-lg-none" alt="flag"
-                                        style="height:15px; margin-right:2px; position:relative; top:-1px;">
-
                                     <div class="ml-auto d-inline-block d-lg-none">
                                         <select id="languages" name="languages" style="
                           width: auto;
@@ -87,18 +78,18 @@
                           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                  text-align: center; /* 新增 */
                   text-align-last: center; /* 确保选中的选项居中 */
                         " onchange="window.location.href=this.options[this.selectedIndex].value">
-                                            <!-- <option value="cn.html">中文</option>
+                                            <option value="cn.html">中文</option>
                                             <option value="jp.html">日本語</option>
-                                            <option value="kr.html">한국어</option> 
-                                            <option value="th.html">ไทย</option>-->
+                                            <option value="kr.html">한국어</option>
+                                            <option value="th.html">ไทย</option>
                                             <option value="de.html">Deutsch</option>
                                             <option value="en.html">English</option>
                                             <option value="es.html" selected>Español</option>
                                             <option value="fr.html">Français</option>
                                             <option value="it.html">Italiano</option>
-                                            <!-- <option value="ru.html">Русский</option>
-                                            <option value="ar.html">اللغة العربية</option> -->
-                                        </select>
+                                            <option value="ru.html">Русский</option>
+                                            <option value="ar.html">اللغة العربية</option>
+                                          </select>
                                         <select id="content-list-2" name="content-list" style="
                                                                                 width: auto;
                                                                                 height: 25px;
@@ -159,16 +150,7 @@
                         <!-- 语言选择框 -->
                         <div class="ml-auto">
                             <span style="display: flex; align-items: center">
-                                <!-- 简体字和国旗 -->
-                                <a href="" class="d-inline-block" style="margin-right: 5px">
-                                    <img 
-                                    style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:0px;" 
-                                    alt="flag" 
-                                    src="./images/wflags_svg/es.svg"><img id="language-flag" 
-                                  style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:5px;" 
-                                  alt="flag" 
-                                  src="./images/wflags_svg/un.svg">
-                                </a>
+
                                 <!-- 选择语言的下拉框 -->
                                 <select id="languages-2" name="languages" style="
                       width: 85px;
@@ -178,18 +160,18 @@
                       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);                  text-align: center; /* 新增 */
                   text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
-                                    <!-- <option value="cn.html">中文</option>
+                                    <option value="cn.html">中文</option>
                                     <option value="jp.html">日本語</option>
-                                    <option value="kr.html">한국어</option> 
-                                    <option value="th.html">ไทย</option>-->
+                                    <option value="kr.html">한국어</option>
+                                    <option value="th.html">ไทย</option>
                                     <option value="de.html">Deutsch</option>
                                     <option value="en.html">English</option>
                                     <option value="es.html" selected>Español</option>
                                     <option value="fr.html">Français</option>
                                     <option value="it.html">Italiano</option>
-                                    <!-- <option value="ru.html">Русский</option>
-                                    <option value="ar.html">اللغة العربية</option> -->
-                                </select>
+                                    <option value="ru.html">Русский</option>
+                                    <option value="ar.html">اللغة العربية</option>
+                                  </select>
                             </span>
                         </div>
                     </div>
@@ -203,714 +185,26 @@
           background-color: gray;
         " />
 
-        <div class="site-section py-0">
-            <div class="owl-carousel hero-slide owl-style">
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_0.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_0_sdg13_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_0_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        Acción
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        climática
-                                    </p>
-                                </div>
-                                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 13: Acción por el clima - Actuar ahora para un futuro
-                                        sostenible</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Discurso en vivo en la Conferencia de las Naciones Unidas sobre el cambio
-                                    climático
-                                    en Bonn, haciendo un llamado a
-                                    acciones urgentes para mitigar los impactos climáticos
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Bonn, Alemania</a></span>
-                                    <!-- <span class="date-read">2021</span> -->
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="site-section py-0 video-hero-section">
+            <div class="video-hero">
+                <video id="hero-video" class="video-hero__media" autoplay muted playsinline preload="metadata" poster="images/big_img_0.png">
+                    <source src="video/hero_video/hero_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="hero-video-copy" class="video-hero__copy is-active">
+                    <h1 class="video-hero__title">Renewable Energy Researcher</h1>
+                    <span class="video-hero__divider" aria-hidden="true"></span>
+                    <p class="video-hero__subtitle">Clean energy and materials</p>
+                    <div class="video-hero__actions">
+                        <a class="video-hero__button video-hero__button--primary" href="cn-research.html">研发成果</a>
+                        <a class="video-hero__button video-hero__button--secondary" href="mailto:h.xu@tum.de">联系方式</a>
                     </div>
                 </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_1.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_1_sdg7_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_1_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        Energía
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        limpia
-                                    </p>
-                                </div>
-                                <img src="images/flags/cn.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 7: Energía asequible y no contaminante - Alimentar el futuro de
-                                        manera
-                                        sostenible</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Presentación de un plan de negocios sobre células solares flexibles en el Concurso
-                                    de Innovación en Tecnología Verde Teco en Taipei, centrado en soluciones energéticas
-                                    limpias innovadoras
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Taipei, China</a></span>
-                                    <!-- <span class="date-read">2012</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_3.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_3_sdg8_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_3_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        Crecimiento
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        económico
-                                    </p>
-                                </div>
-                                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 8: Crecimiento económico y trabajo decente - Construir la
-                                        prosperidad, garantizar la
-                                        dignidad</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Sirvió como Miembro del Grupo de Expertos para la Comisión Económica de las
-                                    Naciones Unidas para
-                                    Europa en Ginebra, contribuyendo a las políticas de crecimiento económico sostenible
-                                    y de
-                                    trabajo decente
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Ginebra, Suiza</a></span>
-                                    <!-- <span class="date-read">2021</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_2.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_2_sdg9_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_2_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        Innovación
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        industrial
-                                    </p>
-                                </div>
-                                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 9: Industria, Innovación, Infraestructura - Innovar para un progreso
-                                        sostenible</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Realización de experimentos con rayos síncrotron en la Swiss Light Source,
-                                    impulsando
-                                    la innovación en
-                                    pilas de combustible mediante infraestructuras de investigación de vanguardia
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Villigen PSI, Suiza</a></span>
-                                    <!-- <span class="date-read">2019</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_4.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_4_sdg11_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_4_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 59px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        Ciudades
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 59px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        sostenibles
-                                    </p>
-                                </div>
-                                <img src="images/flags/de.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 11: Ciudades y comunidades sostenibles - Construir ciudades,
-                                        preservar la cultura</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Participó en el centenario de la Oktoberfest de Múnich vistiendo Trachten
-                                    tradicionales, celebrando la
-                                    sostenibilidad cultural dentro de la comunidad
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Múnich, Alemania</a></span>
-                                    <!-- <span class="date-read">2023</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                    background-image: url('images/big_img_5.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_5_sdg14_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_5_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        La vida bajo
-                                    </p>
-                                </div>
-                                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                                    <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                                        el agua
-                                    </p>
-                                </div>
-                                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 14: La vida submarina - Proteger los océanos, preservar la vida</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Abogó por la conservación de la vida marina durante una presentación en panel en
-                                    el
-                                    Diálogo sobre Océanos y
-                                    Cambio Climático de la CMNUCC, promoviendo la sostenibilidad global de los océanos
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Bonn, Alemania</a></span>
-                                    <!-- <span class="date-read">2021</span> -->
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="site-section">
-                    <p class="d-sm-block d-none">&nbsp;</p>
-                    <br class="d-sm-block d-none" />
-                    <div class="container">
-                        <div class="half-post-entry d-block d-lg-flex bg-light">
-                            <div class="img-bg" style="
-                                    background-image: url('images/big_img_6.png');
-                                    position: relative;
-                                    background-size: cover;
-                                    height: 400px;
-                                  ">
-                                <!-- Logo Image -->
-                                <img src="images/big_img_6_sdg16_solid.png" alt="Logo" style="
-                                      position: absolute;
-                                      top: 20px;
-                                      left: 20px;
-                                      height: auto;
-                                      max-height: 35%;
-                                      width: auto;
-                                      opacity: 1;
-                                    " />
-                                <!-- Person Image -->
-                                <img src="images/big_img_6_Trans.png" alt="Person" style="
-                                      position: absolute;
-                                      top: 0;
-                                      left: 0;
-                                      height: 100%;
-                                      width: 100%;
-                                      object-fit: cover;
-                                      opacity: 1;
-                                    " />
-
-                                <!-- Text Box -->
-                                <div style="
-                                      position: absolute;
-                                      top: 28px;
-                                      left: 59px;
-                                      max-height: 35%;
-                                      overflow: hidden;
-                                    ">
-                                    <p style="
-                                        margin: 0;
-                                        font-size: 14px;
-                                        color: #ffffff;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                      ">
-                                        Paz Y
-                                    </p>
-                                </div>
-                                <div style="
-                                      position: absolute;
-                                      top: 43px;
-                                      left: 59px;
-                                      max-height: 35%;
-                                      overflow: hidden;
-                                    ">
-                                    <p style="
-                                        margin: 0;
-                                        font-size: 14px;
-                                        color: #ffffff;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                      ">
-                                        Justicia
-                                    </p>
-                                </div>
-                                <img src="images/flags/de.png" alt="Person" style="
-                                      position: absolute;
-                                      bottom: 15px;
-                                      right: 15px;
-                                      height: auto;
-                                      max-height: 5%;
-                                      width: auto;
-                                      opacity: 1;
-                                    " />
-                            </div>
-                            <div class="contents">
-                                <span class="caption">Objetivos de Desarrollo Sostenible de la ONU</span>
-                                <h2>
-                                    <a href="#">ODS 16: Paz, Justicia e Instituciones Sólidas - Judicatura
-                                        Internacional</a>
-                                </h2>
-                                <p class="mb-3">
-                                    - Participó en el Salzburg Corner en la Conferencia de Seguridad de Múnich (MSC)
-                                    celebrada en el Amerikahaus de Múnich,
-                                    participando en discusiones sobre el tema: “Trump 2.0 - ¿Hacia dónde vamos desde
-                                    aquí?”
-                                </p>
-
-                                <div class="post-meta">
-                                    <span class="d-block"><a href="#"></a><a href="#">Múnich, Alemania</a></span>
-                                    <!-- <span class="date-read">2025</span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
             </div>
         </div>
 
         <!---Mobile MENU Bar--->
-        <a class="d-inline-block d-sm-none">
+        <div class="d-inline-block d-sm-none">
             <button id="burger" class="open-main-nav">
                 <span class="burger"></span>
                 <span class="burger-text">Menú</span>
@@ -946,7 +240,7 @@
                     </li> -->
                 </ul>
             </nav>
-        </a>
+        </div>
         <!------>
 
         <!------>
@@ -962,9 +256,7 @@
 
                 <div style="display: flex; align-items: center;">
                     <a class="flag d-inline-block d-lg-none">
-                        <img src="images/flag_es.png" alt="flag"
-                            style="height:15px; margin-right:2px; position:relative; top:-1px;">
-                    </a>
+                        </a>
                     <select id="languages-3" name="languages" style="
                                                 width: auto;
                                                 height: 25px;
@@ -974,18 +266,18 @@
                         text-align: center; /* 新增 */
                         text-align-last: center; /* 确保选中的选项居中 */
                         " onchange="window.location.href=this.options[this.selectedIndex].value">
-                        <!-- <option value="cn.html">中文</option>
+                        <option value="cn.html">中文</option>
                         <option value="jp.html">日本語</option>
                         <option value="kr.html">한국어</option>
-                        <option value="th.html">ไทย</option> -->
+                        <option value="th.html">ไทย</option>
                         <option value="de.html">Deutsch</option>
                         <option value="en.html">English</option>
                         <option value="es.html" selected>Español</option>
                         <option value="fr.html">Français</option>
                         <option value="it.html">Italiano</option>
-                        <!-- <option value="ru.html">Русский</option>
-                        <option value="ar.html">اللغة العربية</option> -->
-                    </select>
+                        <option value="ru.html">Русский</option>
+                        <option value="ar.html">اللغة العربية</option>
+                      </select>
                     <select id="content-list" name="content-list" style="
                      width: auto;
                      height: 25px;
@@ -1276,6 +568,50 @@
         </div>
 
 
+        <section class="hero-stats" aria-label="Research statistics">
+            <div class="hero-stats__inner">
+                <div class="hero-stat" data-stat-key="papers">
+                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_papers"></span>
+                    <span class="hero-stat__label">篇论文</span>
+                </div>
+                <div class="hero-stat" data-stat-key="citations">
+                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
+                    <span class="hero-stat__number google_scholar_citation"></span>
+                    <span class="hero-stat__label">次引用</span>
+                </div>
+                <div class="hero-stat" data-stat-key="patents">
+                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_patents_sum"></span>
+                    <span class="hero-stat__label">项专利</span>
+                </div>
+                <div class="hero-stat" data-stat-key="reviews">
+                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_reviews"></span>
+                    <span class="hero-stat__label">次审稿</span>
+                </div>
+                <div class="hero-stat" data-stat-key="students">
+                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
+                    <span class="hero-stat__number student_guidance_count"></span>
+                    <span class="hero-stat__label">位指导学生</span>
+                </div>
+                <div class="hero-stat" data-stat-key="grants">
+                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_grants"></span>
+                    <span class="hero-stat__label">项科研资助</span>
+                </div>
+                <div class="hero-stat" data-stat-key="downloads">
+                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
+                    <span class="hero-stat__number phd_thesis_downloads"></span>
+                    <span class="hero-stat__label">次博士论文下载</span>
+                </div>
+                <div class="hero-stat" data-stat-key="countries">
+                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
+                    <span class="hero-stat__number visited_countries"></span>
+                    <span class="hero-stat__label">个国家旅行</span>
+                </div>
+            </div>
+        </section>
         <div class="site-section">
             <div class="container">
                 <hr />
@@ -1566,16 +902,16 @@
 <div class="col-md-5">
     <br />
     <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
-  
+
       <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+      <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
          style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
         <img src="images/default-map.png" alt="Visitor Map"
              class="fallback-img">
       </a>
-  
+
     </div>
-  
+
     <style>
       /* 默认电脑端偏移 */
       #clustrmap-container {
@@ -1583,7 +919,7 @@
         position: relative;
         z-index: 10;
       }
-  
+
       /* 默认图片样式：PC/iPad 保持最大 470px */
       .fallback-img {
         width: 100%;
@@ -1591,7 +927,7 @@
         display: block;
         margin: 0 auto;
       }
-  
+
       /* 移动端特殊处理：让图片铺满屏幕宽度 */
       @media (max-width: 480px) {
         .fallback-img {
@@ -1602,31 +938,31 @@
           transform: translateX(0) !important; /* 移动端不再横向偏移 */
         }
       }
-  
+
       @media (max-width: 768px) {
         #clustrmap-container {
           transform: translateX(0px) !important;
         }
       }
     </style>
-  
+
     <script>
       (function () {
         // 判断是否是移动端或 iPad
         var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-  
+
         if (!isMobile) {
           // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
           var script = document.createElement("script");
           script.type = "text/javascript";
           script.id = "clustrmaps";
           script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
-  
+
           script.onload = function () {
             var fallback = document.getElementById("clustrmap-fallback-link");
             if (fallback) fallback.style.display = "none";
           };
-  
+
           document.getElementById("clustrmap-container").appendChild(script);
         } else {
           console.log("📱 Mobile device detected, showing static fallback image.");
@@ -1740,21 +1076,21 @@
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        
-        
+
+
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
         <script src="js/jquery.stellar.min.js"></script>
         <script src="js/jquery.countdown.min.js"></script>
-        
-        
+
+
         <script src="js/aos.js"></script>
-        
+
         <script src="js/jquery.sticky.js"></script>
-        
+
         <script src="js/mobilenav.js"></script>
 
         <script src="js/main.js"></script>
+            <script src="js/video_hero.js"></script>
         <script src="js/user_ip_es.js" type="module"></script>
         <script type="text/javascript" src="update_info_script.js"></script>
         <script src="js/24jieqi.js" defer></script>

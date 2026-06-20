@@ -9,17 +9,11 @@
   <link rel="stylesheet" href="fonts/icomoon/style.css" />
 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-  <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
-  <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
   <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
-  <!-- <link rel="stylesheet" href="css/aos.css"> -->
-  <!-- <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="css/mobilenav.css" />
   <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/video-hero.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
 
   <style>
@@ -33,7 +27,7 @@
   </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
   <div class="site-wrap">
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -75,10 +69,6 @@
                     </a>
                   </div>
 
-                  <img src="images/flag_uk.png" class="flag d-inline-block d-lg-none" alt="flag"
-                    style="height:15px; margin-right:2px; position:relative; top:-1px;">
-
-
                   <div class="ml-auto d-inline-block d-lg-none">
                     <select id="languages" name="languages" style="
                          width: auto;
@@ -89,17 +79,17 @@
                           text-align: center; /* 新增 */
                           text-align-last: center; /* 确保选中的选项居中 */
                         " onchange="window.location.href=this.options[this.selectedIndex].value">
-                      <!-- <option value="cn.html">中文</option>
+                      <option value="cn.html">中文</option>
                       <option value="jp.html">日本語</option>
                       <option value="kr.html">한국어</option>
-                      <option value="th.html">ไทย</option> -->
+                      <option value="th.html">ไทย</option>
                       <option value="de.html">Deutsch</option>
                       <option value="en.html" selected>English</option>
                       <option value="es.html">Español</option>
                       <option value="fr.html">Français</option>
                       <option value="it.html">Italiano</option>
-                      <!-- <option value="ru.html">Русский</option>
-                      <option value="ar.html">اللغة العربية</option> -->
+                      <option value="ru.html">Русский</option>
+                      <option value="ar.html">اللغة العربية</option>
                     </select>
                     <select id="content-list-2" name="content-list" style="
                                                 width: auto;height: 25px;
@@ -169,16 +159,7 @@
             <!-- 语言选择框 -->
             <div class="ml-auto">
               <span style="display: flex; align-items: center">
-                <!-- 简体字和国旗 -->
-                <a href="" class="d-inline-block" style="margin-right: 5px">
-                  <img 
-                  style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:0px;" 
-                  alt="flag" 
-                  src="./images/wflags_svg/gb.svg"><img id="language-flag" 
-                style="height:15px; width:24px; display:inline-block; position:relative; top:-2px; object-fit: cover; left:5px;" 
-                alt="flag" 
-                src="./images/wflags_svg/un.svg">
-                </a>
+
                 <!-- 选择语言的下拉框 -->
                 <select id="languages-3" name="languages" style="
                       width: auto;height: 25px;
@@ -188,17 +169,17 @@
                       text-align: center; /* 新增 */
                       text-align-last: center; /* 确保选中的选项居中 */
                     " onchange="window.location.href=this.options[this.selectedIndex].value">
-                  <!-- <option value="cn.html">中文</option>
+                  <option value="cn.html">中文</option>
                   <option value="jp.html">日本語</option>
                   <option value="kr.html">한국어</option>
-                  <option value="th.html">ไทย</option> -->
+                  <option value="th.html">ไทย</option>
                   <option value="de.html">Deutsch</option>
                   <option value="en.html" selected>English</option>
                   <option value="es.html">Español</option>
                   <option value="fr.html">Français</option>
                   <option value="it.html">Italiano</option>
-                  <!-- <option value="ru.html">Русский</option>
-                  <option value="ar.html">اللغة العربية</option> -->
+                  <option value="ru.html">Русский</option>
+                  <option value="ar.html">اللغة العربية</option>
                 </select>
               </span>
             </div>
@@ -213,689 +194,70 @@
           background-color: gray;
         " />
 
-    <div class="site-section py-0">
-      <div class="owl-carousel hero-slide owl-style">
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_0.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_0_sdg13_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_0_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Climate
-                  </p>
+            <div class="site-section py-0 video-hero-section">
+            <div class="video-hero">
+                <video id="hero-video" class="video-hero__media" autoplay muted playsinline preload="metadata" poster="images/big_img_0.png">
+                    <source src="video/hero_video/hero_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="hero-video-copy" class="video-hero__copy is-active">
+                    <h1 class="video-hero__title">Renewable Energy Researcher</h1>
+                    <span class="video-hero__divider" aria-hidden="true"></span>
+                    <p class="video-hero__subtitle">Clean energy and materials</p>
+                    <div class="video-hero__actions">
+                        <a class="video-hero__button video-hero__button--primary" href="cn-research.html">研发成果</a>
+                        <a class="video-hero__button video-hero__button--secondary" href="mailto:h.xu@tum.de">联系方式</a>
+                    </div>
                 </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Action
-                  </p>
-                </div>
-                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 13: Climate Action - Act Now for a Sustainable Tomorrow</a>
-                </h2>
-                <p class="mb-3">
-                  - Live speech at the UN Climate Change Conference in Bonn, calling for urgent actions to mitigate
-                  climate impacts
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Bonn, Germany</a></span>
-                  <!-- <span class="date-read">2021</span> -->
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_1.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_1_sdg7_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_1_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Clean
-                  </p>
+        <section class="hero-stats" aria-label="Research statistics">
+            <div class="hero-stats__inner">
+                <div class="hero-stat" data-stat-key="papers">
+                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_papers"></span>
+                    <span class="hero-stat__label">篇论文</span>
                 </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Energy
-                  </p>
+                <div class="hero-stat" data-stat-key="citations">
+                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
+                    <span class="hero-stat__number google_scholar_citation"></span>
+                    <span class="hero-stat__label">次引用</span>
                 </div>
-                <img src="images/flags/cn.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 7: Clean and Affordable Energy - Powering the Future, Sustainably</a>
-                </h2>
-                <p class="mb-3">
-                  - Presented a business plan on flexible solar cells at the Teco Green Tech Innovation Contest in
-                  Taipei City, focusing on innovative clean energy solutions
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Taipei, China</a></span>
-                  <!-- <span class="date-read">2012</span> -->
+                <div class="hero-stat" data-stat-key="patents">
+                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_patents_sum"></span>
+                    <span class="hero-stat__label">项专利</span>
                 </div>
-              </div>
+                <div class="hero-stat" data-stat-key="reviews">
+                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_reviews"></span>
+                    <span class="hero-stat__label">次审稿</span>
+                </div>
+                <div class="hero-stat" data-stat-key="students">
+                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
+                    <span class="hero-stat__number student_guidance_count"></span>
+                    <span class="hero-stat__label">位指导学生</span>
+                </div>
+                <div class="hero-stat" data-stat-key="grants">
+                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_grants"></span>
+                    <span class="hero-stat__label">项科研资助</span>
+                </div>
+                <div class="hero-stat" data-stat-key="downloads">
+                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
+                    <span class="hero-stat__number phd_thesis_downloads"></span>
+                    <span class="hero-stat__label">次博士论文下载</span>
+                </div>
+                <div class="hero-stat" data-stat-key="countries">
+                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
+                    <span class="hero-stat__number visited_countries"></span>
+                    <span class="hero-stat__label">个国家旅行</span>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_3.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_3_sdg8_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_3_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Economic
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Growth
-                  </p>
-                </div>
-                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 8: Economic Growth and Decent Work - Building Prosperity, Ensuring Dignity</a>
-                </h2>
-                <p class="mb-3">
-                  - Served as a Member of the Group of Experts for the UN Economic Commission for Europe in Geneva,
-                  contributing to sustainable economic growth and decent work policies
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Geneva, Switzerland</a></span>
-                  <!-- <span class="date-read">2021</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_2.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_2_sdg9_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_2_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 26px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Industry
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 41px;
-                      left: 53px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Innovation
-                  </p>
-                </div>
-                <img src="images/flags/ch.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 9: Industry, Innovation, Infrastructure - Innovating for Sustainable Progress</a>
-                </h2>
-                <p class="mb-3">
-                  - Conducted synchrotron experiments at the Swiss Light Source, advancing fuel cell innovation through
-                  cutting-edge research infrastructure
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Villigen PSI, Switzerland</a></span>
-                  <!-- <span class="date-read">2019</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_4.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_4_sdg11_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_4_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 55px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Sustainable
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 55px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Cities
-                  </p>
-                </div>
-                <img src="images/flags/de.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 11: Sustainable Cities and Communities - Building Cities, Preserving Culture</a>
-                </h2>
-                <p class="mb-3">
-                  - Participated in Munich’s century-old Oktoberfest wearing traditional Trachten, celebrating cultural
-                  sustainability within the community
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Munich, Germany</a></span>
-                  <!-- <span class="date-read">2023</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                    background-image: url('images/big_img_5.png');
-                    position: relative;
-                    background-size: cover;
-                    height: 400px;
-                  ">
-                <!-- Logo Image -->
-                <img src="images/big_img_5_sdg14_solid.png" alt="Logo" style="
-                      position: absolute;
-                      top: 20px;
-                      left: 20px;
-                      height: auto;
-                      max-height: 35%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-                <!-- Person Image -->
-                <img src="images/big_img_5_Trans.png" alt="Person" style="
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
-                      opacity: 1;
-                    " />
-
-                <!-- Text Box -->
-                <div style="
-                      position: absolute;
-                      top: 28px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Life Below
-                  </p>
-                </div>
-                <div style="
-                      position: absolute;
-                      top: 43px;
-                      left: 62px;
-                      max-height: 35%;
-                      overflow: hidden;
-                    ">
-                  <p style="
-                        margin: 0;
-                        font-size: 14px;
-                        color: #ffffff;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                      ">
-                    Water
-                  </p>
-                </div>
-                <img src="images/flags/un.png" alt="Person" style="
-                      position: absolute;
-                      bottom: 15px;
-                      right: 15px;
-                      height: auto;
-                      max-height: 5%;
-                      width: auto;
-                      opacity: 1;
-                    " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 14: Life Below Water - Protect the Ocean, Sustain Life</a>
-                </h2>
-                <p class="mb-3">
-                  - Advocated for marine life conservation during a panel presentation at the UNFCCC Ocean and Climate
-                  Change Dialogue, promoting global ocean sustainability
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Bonn, Germany</a></span>
-                  <!-- <span class="date-read">2021</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="site-section">
-          <p class="d-sm-block d-none">&nbsp;</p>
-          <br class="d-sm-block d-none" />
-          <div class="container">
-            <div class="half-post-entry d-block d-lg-flex bg-light">
-              <div class="img-bg" style="
-                            background-image: url('images/big_img_6.png');
-                            position: relative;
-                            background-size: cover;
-                            height: 400px;
-                          ">
-                <!-- Logo Image -->
-                <img src="images/big_img_6_sdg16_solid.png" alt="Logo" style="
-                              position: absolute;
-                              top: 20px;
-                              left: 20px;
-                              height: auto;
-                              max-height: 35%;
-                              width: auto;
-                              opacity: 1;
-                            " />
-                <!-- Person Image -->
-                <img src="images/big_img_6_Trans.png" alt="Person" style="
-                              position: absolute;
-                              top: 0;
-                              left: 0;
-                              height: 100%;
-                              width: 100%;
-                              object-fit: cover;
-                              opacity: 1;
-                            " />
-
-                <!-- Text Box -->
-                <div style="
-                              position: absolute;
-                              top: 28px;
-                              left: 59px;
-                              max-height: 35%;
-                              overflow: hidden;
-                            ">
-                  <p style="
-                                margin: 0;
-                                font-size: 14px;
-                                color: #ffffff;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                              ">
-                    Peace And
-                  </p>
-                </div>
-                <div style="
-                              position: absolute;
-                              top: 43px;
-                              left: 59px;
-                              max-height: 35%;
-                              overflow: hidden;
-                            ">
-                  <p style="
-                                margin: 0;
-                                font-size: 14px;
-                                color: #ffffff;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                              ">
-                    Justice
-                  </p>
-                </div>
-                <img src="images/flags/de.png" alt="Person" style="
-                              position: absolute;
-                              bottom: 15px;
-                              right: 15px;
-                              height: auto;
-                              max-height: 5%;
-                              width: auto;
-                              opacity: 1;
-                            " />
-              </div>
-              <div class="contents">
-                <span class="caption">UN Sustainable Development Goals</span>
-                <h2>
-                  <a href="#">SDG 16: Peace, Justice and Strong Institutions - International Judiciary</a>
-                </h2>
-                <p class="mb-3">
-                  - Participated in the Salzburg Corner at the Munich Security Conference (MSC) held at Amerikahaus
-                  Munich, engaging in
-                  discussions on the topic: “Trump 2.0 – Where Do We Go from Here?”
-                </p>
-
-                <div class="post-meta">
-                  <span class="d-block"><a href="#"></a><a href="#">Munich, Germany</a></span>
-                  <!-- <span class="date-read">2025</span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-    </div>
+        </section>
 
     <!---Mobile MENU Bar--->
-    <a class="d-inline-block d-sm-none">
+    <div class="d-inline-block d-sm-none">
       <button id="burger" class="open-main-nav">
         <span class="burger"></span>
         <span class="burger-text">Menu</span>
@@ -929,7 +291,7 @@
                     </li> -->
         </ul>
       </nav>
-    </a>
+    </div>
     <!------>
 
     <!------>
@@ -945,9 +307,7 @@
 
         <div style="display: flex; align-items: center;">
           <a class="flag d-inline-block d-lg-none">
-            <img src="images/flag_uk.png" alt="flag"
-              style="height:15px; margin-right:2px; position:relative; top:-1px;">
-          </a>
+            </a>
           <select id="languages-2" name="languages" style="
                                               width: auto;
                                               height: 25px;
@@ -957,17 +317,17 @@
                       text-align: center; /* 新增 */
                       text-align-last: center; /* 确保选中的选项居中 */
                       " onchange="window.location.href=this.options[this.selectedIndex].value">
-            <!-- <option value="cn.html">中文</option>
+            <option value="cn.html">中文</option>
             <option value="jp.html">日本語</option>
             <option value="kr.html">한국어</option>
-            <option value="th.html">ไทย</option> -->
+            <option value="th.html">ไทย</option>
             <option value="de.html">Deutsch</option>
             <option value="en.html" selected>English</option>
             <option value="es.html">Español</option>
             <option value="fr.html">Français</option>
             <option value="it.html">Italiano</option>
-            <!-- <option value="ru.html">Русский</option>
-            <option value="ar.html">اللغة العربية</option> -->
+            <option value="ru.html">Русский</option>
+            <option value="ar.html">اللغة العربية</option>
           </select>
           <select id="content-list" name="content-list" style="
                   width: auto;height: 25px;
@@ -1232,7 +592,7 @@
             WORK EXPERIENCE<br>
             Development Engineer, Freudenberg Group, DE | 2021-Now <br>
             Doctoral Researcher, Paul Scherrer Institute, CH | 2016-21 <br>
-            
+
             <p class="mb-3"></p>
             PRACTICAL EXPERIENCE<br>
             Equity Research Intern, CITIC Securities, CN | 2020<br>
@@ -1529,7 +889,7 @@
   <div id="clustrmap-container" style="width:100%; text-align:center; position:relative; transform:translateX(15px);">
 
     <!-- 默认占位图片（移动端和脚本加载失败时显示） -->
-    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link" 
+    <a href="https://clustrmaps.com/site/1c1oj" target="_blank" id="clustrmap-fallback-link"
        style="display:block; top:0; left:0; width:100%; max-width:470px; z-index:0;">
       <img src="images/default-map.png" alt="Visitor Map"
            class="fallback-img">
@@ -1707,24 +1067,22 @@
   <!--  -->
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  
+
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/jquery.countdown.min.js"></script>
-  
-  
+
+
   <script src="js/aos.js"></script>
-  
+
   <script src="js/jquery.sticky.js"></script>
   <script src="js/mobilenav.js"></script>
 
   <script src="js/main.js"></script>
+            <script src="js/video_hero.js"></script>
   <script src="js/user_ip_en.js" type="module"></script>
   <script type="text/javascript" src="update_info_script.js"></script>
-  <script type="module" src="js/festival.js" defer></script>
   <script src="js/24jieqi.js" defer ></script>
-  <!---<script src="js/calendar_week.js"></script>--->
 
   <script>
 
