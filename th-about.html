@@ -111,6 +111,7 @@
     }
   </style>
 
+  <script defer src="js/responsive_media_loader.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -371,7 +372,7 @@
             <p class="mb-5">
               <div class="d-none d-sm-block" style="position: relative; display: inline-block;">
                 <div style="position: relative; text-align: center;">
-                <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
+                <img data-desktop-src="images/banner_img_3.jpg" alt="Image" class="img-fluid"
                   style="position: relative; top: -15px;" />
                   <div style="
                       position: absolute;
@@ -388,7 +389,7 @@
               </div>
               <div class="d-block d-sm-none" style="position: relative; display: inline-block;margin-top: -30px;">
                 <div style="position: relative; text-align: center;">
-                <img src="images/banner_img_mobi_3.gif" alt="Image" class="img-fluid"
+                <img data-mobile-src="images/banner_img_mobi_3.gif" alt="Image" class="img-fluid"
                   style="position: relative; top: -15px;" />
                   <div style="
                       position: absolute;
@@ -1136,7 +1137,7 @@
                   <div id="en-subtitles" class="subtitle-track">en</div>
                 </div>
                 <div class="podcast__meta">
-                  <audio controls width="100%">
+                  <audio controls preload="none" width="100%">
                     <source src="video/Xu_Expertise_Interview.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                   </audio>

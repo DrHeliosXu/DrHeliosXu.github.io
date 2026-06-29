@@ -1,8 +1,8 @@
 "use strict";
 
 const options = {
-  defaultSpeed: '1.00',
-  speeds: ['1.25','1.50', '2.00', '0.75'],
+  defaultSpeed: "1.00",
+  speeds: ["1.25", "1.50", "2.00", "0.75"],
   loop: true,
   skipBackInterval: 15,
   jumpForwardInterval: 15,
@@ -15,75 +15,97 @@ const options = {
     "changespeed",
     "volume",
     "jumpforward",
-  ]
+  ],
+};
+
+const audioPlayer = document.querySelector(".podcast-container audio");
+const cnSubtitle = document.getElementById("cn-subtitles");
+const enSubtitle = document.getElementById("en-subtitles");
+const lang_1 = (cnSubtitle && cnSubtitle.textContent ? cnSubtitle.textContent : "cn").trim();
+const lang_2 = (enSubtitle && enSubtitle.textContent ? enSubtitle.textContent : "en").trim();
+
+let cnCues = [];
+let enCues = [];
+
+if (cnSubtitle) cnSubtitle.textContent = " ";
+if (enSubtitle) enSubtitle.textContent = " ";
+
+if (audioPlayer) {
+  audioPlayer.preload = "metadata";
+  audioPlayer.load();
 }
 
-new MediaElementPlayer(
-  document.querySelector("audio"),
-  options
- );
+initMediaElementPlayer();
+initSubtitlesWhenReady();
 
-// Separate the audio controls so I can style them better.
-(() => {
-	const elementTop = document.createElement('div');
-  const elementBottom = document.createElement('div');
-	elementTop.classList.add('mejs-prepended-buttons');
-  elementBottom.classList.add('mejs-appended-buttons');
+function initMediaElementPlayer() {
+  if (!audioPlayer || typeof MediaElementPlayer !== "function") return;
 
-	const controls = document.querySelector('.mejs__controls');
-	controls.prepend(elementTop);
+  try {
+    new MediaElementPlayer(audioPlayer, options);
+    window.setTimeout(reflowMediaElementControls, 0);
+  } catch (error) {
+    console.warn("播放器增强初始化失败，保留原生 audio 控件:", error);
+  }
+}
+
+function reflowMediaElementControls() {
+  const controls = document.querySelector(".mejs__controls");
+  if (!controls || controls.dataset.reflowed === "true") return;
+
+  controls.dataset.reflowed = "true";
+  const elementTop = document.createElement("div");
+  const elementBottom = document.createElement("div");
+  elementTop.classList.add("mejs-prepended-buttons");
+  elementBottom.classList.add("mejs-appended-buttons");
+
+  controls.prepend(elementTop);
   controls.append(elementBottom);
-  
-	const controlsChildren = Array.from(controls.childNodes).filter(v => v.className.startsWith("mejs_"));
 
-  controlsChildren.slice(0, 3).forEach(elem => {
-     elementTop.append(elem)
+  const controlsChildren = Array.from(controls.childNodes).filter((node) => {
+    return node.className && String(node.className).startsWith("mejs_");
   });
-  
-  controlsChildren.slice(3, controlsChildren.length).forEach(elem => {
-    elementBottom.append(elem)
-  })
-})()
 
+  controlsChildren.slice(0, 3).forEach((element) => elementTop.append(element));
+  controlsChildren.slice(3).forEach((element) => elementBottom.append(element));
+}
 
-// 加载并解析VTT文件// 加载并解析VTT文件// 加载并解析VTT文件// 加载并解析VTT文件// 加载并解析VTT文件// 加载并解析VTT文件// 加载并解析VTT文件
+function initSubtitlesWhenReady() {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSubtitles);
+  } else {
+    initSubtitles();
+  }
+}
 
-
-let cnCues = []; // 中文字幕数组
-let enCues = []; // 英文字幕数组
-const audioPlayer = document.querySelector('audio');
-const cnSubtitle = document.getElementById('cn-subtitles');
-const enSubtitle = document.getElementById('en-subtitles');
-
-// 加载并解析VTT文件
 async function loadSubtitles(lang) {
   try {
     const response = await fetch(`video/Xu-Expertise-Interview-${lang}.vtt`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const vttText = await response.text();
     return parseVtt(vttText);
   } catch (error) {
-    console.error('字幕加载失败:', error);
+    console.error("字幕加载失败:", error);
     return [];
   }
 }
 
-// VTT解析函数
 function parseVtt(text) {
-  const lines = text.split('\n').filter(line => line.trim() !== '');
+  const lines = text.split("\n").filter((line) => line.trim() !== "");
   const cues = [];
   let currentCue = null;
 
   lines.forEach((line, index) => {
-    if (line.startsWith('WEBVTT')) return;
+    if (line.startsWith("WEBVTT")) return;
 
-    if (/^\d{2}:\d{2}:\d{2}.\d{3}/.test(line)) {
-      const [start, end] = line.split(' --> ').map(t => t.replace(',', '.'));
-      currentCue = { start: parseTime(start), end: parseTime(end), text: '' };
+    if (/^\d{2}:\d{2}:\d{2}[.,]\d{3}/.test(line)) {
+      const [start, end] = line.split(" --> ").map((time) => time.replace(",", "."));
+      currentCue = { start: parseTime(start), end: parseTime(end), text: "" };
     } else if (currentCue) {
-      currentCue.text += (currentCue.text ? ' ' : '') + line;
-      currentCue.text = currentCue.text.replace(/\d{1,4}$/, '').trim();
+      currentCue.text += (currentCue.text ? " " : "") + line;
+      currentCue.text = currentCue.text.replace(/\d{1,4}$/, "").trim();
 
-      if (index === lines.length - 1 || /^\d{2}:\d{2}:\d{2}.\d{3}/.test(lines[index + 1])) {
+      if (index === lines.length - 1 || /^\d{2}:\d{2}:\d{2}[.,]\d{3}/.test(lines[index + 1])) {
         cues.push(currentCue);
         currentCue = null;
       }
@@ -93,29 +115,24 @@ function parseVtt(text) {
   return cues;
 }
 
-// 时间字符串转秒数
 function parseTime(timeStr) {
-  const [h, m, s] = timeStr.split(':').map(Number);
-  return h * 3600 + m * 60 + s;
+  const [hours, minutes, seconds] = timeStr.split(":").map(Number);
+  return hours * 3600 + minutes * 60 + seconds;
 }
-
-// 初始化字幕
-// 获取 <div> 元素中的内容
-const lang_1 = document.getElementById('cn-subtitles').textContent.trim();
-const lang_2 = document.getElementById('en-subtitles').textContent.trim();
-// 输出到控制台（可选）
-console.log('Language 1:', lang_1);
-console.log('Language 2:', lang_2);
 
 async function initSubtitles() {
+  if (!audioPlayer) return;
+
   cnCues = await loadSubtitles(lang_1);
   enCues = await loadSubtitles(lang_2);
-  updateSubtitles(audioPlayer.currentTime);
+  updateSubtitles(audioPlayer.currentTime || 0);
+  bindAudioEvents();
 }
 
-// 二分查找当前字幕
 function findActiveCue(cues, currentTime) {
-  let low = 0, high = cues.length - 1;
+  let low = 0;
+  let high = cues.length - 1;
+
   while (low <= high) {
     const mid = Math.floor((low + high) / 2);
     if (currentTime < cues[mid].start) {
@@ -126,47 +143,31 @@ function findActiveCue(cues, currentTime) {
       return cues[mid];
     }
   }
+
   return null;
 }
 
-// 更新字幕
 function updateSubtitles(currentTime) {
   const activeCn = findActiveCue(cnCues, currentTime);
-  cnSubtitle.textContent = activeCn ? activeCn.text : ' ';
-
   const activeEn = findActiveCue(enCues, currentTime);
-  enSubtitle.textContent = activeEn ? activeEn.text : ' ';
+
+  if (cnSubtitle) cnSubtitle.textContent = activeCn ? activeCn.text : " ";
+  if (enSubtitle) enSubtitle.textContent = activeEn ? activeEn.text : " ";
 }
 
-// 绑定播放器事件
-audioPlayer.addEventListener('timeupdate', () => {
-  if (!audioPlayer.seeking) {
+function bindAudioEvents() {
+  if (audioPlayer.dataset.subtitleEventsBound === "true") return;
+  audioPlayer.dataset.subtitleEventsBound = "true";
+
+  audioPlayer.addEventListener("loadedmetadata", () => {
+    updateSubtitles(audioPlayer.currentTime || 0);
+  });
+
+  audioPlayer.addEventListener("timeupdate", () => {
+    if (!audioPlayer.seeking) updateSubtitles(audioPlayer.currentTime);
+  });
+
+  audioPlayer.addEventListener("seeked", () => {
     updateSubtitles(audioPlayer.currentTime);
-  }
-});
-
-// 修复进度条拖动问题
-let isSeeking = false;
-
-// 开始拖动
-audioPlayer.addEventListener('seeking', () => {
-  isSeeking = true;
-});
-
-// 拖动结束
-audioPlayer.addEventListener('seeked', () => {
-  isSeeking = false;
-  updateSubtitles(audioPlayer.currentTime); // 拖动结束后更新字幕
-});
-
-// 确保播放状态不会干扰拖动
-audioPlayer.addEventListener('play', () => {
-  isSeeking = false;
-});
-
-audioPlayer.addEventListener('pause', () => {
-  isSeeking = false;
-});
-
-// 加载字幕
-document.addEventListener('DOMContentLoaded', initSubtitles);
+  });
+}

@@ -907,13 +907,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const renderLanguageFlags = function (language) {
 		const meta = languageMeta[language] || languageMeta.en;
+		const sourceFlag = language === 'cn' && currentChineseVariant() === 'traditional' ? 'hk' : meta.sourceFlag;
+		const flagLabel = language === 'cn' && currentChineseVariant() === 'traditional' ? '繁体中文' : meta.label;
 
 		getLanguageSelects().forEach(function (select) {
 			const container = ensureFlagContainer(select);
 			if (!container) return;
 			container.innerHTML = '';
 			const img = document.createElement('img');
-			setFlagImage(img, meta.sourceFlag, meta.label);
+			setFlagImage(img, sourceFlag, flagLabel);
 			container.appendChild(img);
 		});
 	};

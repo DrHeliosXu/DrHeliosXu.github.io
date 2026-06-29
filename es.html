@@ -24,6 +24,7 @@
             line-height: 1.6;
         }
     </style>
+  <script defer src="js/responsive_media_loader.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
@@ -203,6 +204,50 @@
             </div>
         </div>
 
+        <section class="hero-stats" aria-label="Research statistics">
+            <div class="hero-stats__inner">
+                <div class="hero-stat" data-stat-key="papers">
+                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_papers"></span>
+                    <span class="hero-stat__label">篇论文</span>
+                </div>
+                <div class="hero-stat" data-stat-key="citations">
+                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
+                    <span class="hero-stat__number google_scholar_citation"></span>
+                    <span class="hero-stat__label">次引用</span>
+                </div>
+                <div class="hero-stat" data-stat-key="patents">
+                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_patents_sum"></span>
+                    <span class="hero-stat__label">项专利</span>
+                </div>
+                <div class="hero-stat" data-stat-key="reviews">
+                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_reviews"></span>
+                    <span class="hero-stat__label">次审稿</span>
+                </div>
+                <div class="hero-stat" data-stat-key="students">
+                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
+                    <span class="hero-stat__number student_guidance_count"></span>
+                    <span class="hero-stat__label">位指导学生</span>
+                </div>
+                <div class="hero-stat" data-stat-key="grants">
+                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
+                    <span class="hero-stat__number no_of_grants"></span>
+                    <span class="hero-stat__label">项科研资助</span>
+                </div>
+                <div class="hero-stat" data-stat-key="downloads">
+                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
+                    <span class="hero-stat__number phd_thesis_downloads"></span>
+                    <span class="hero-stat__label">次博士论文下载</span>
+                </div>
+                <div class="hero-stat" data-stat-key="countries">
+                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
+                    <span class="hero-stat__number visited_countries"></span>
+                    <span class="hero-stat__label">个国家旅行</span>
+                </div>
+            </div>
+        </section>
         <!---Mobile MENU Bar--->
         <div class="d-inline-block d-sm-none">
             <button id="burger" class="open-main-nav">
@@ -568,50 +613,6 @@
         </div>
 
 
-        <section class="hero-stats" aria-label="Research statistics">
-            <div class="hero-stats__inner">
-                <div class="hero-stat" data-stat-key="papers">
-                    <span class="hero-stat__icon icon-file-text-o" aria-hidden="true"></span>
-                    <span class="hero-stat__number no_of_papers"></span>
-                    <span class="hero-stat__label">篇论文</span>
-                </div>
-                <div class="hero-stat" data-stat-key="citations">
-                    <span class="hero-stat__icon icon-quote-right" aria-hidden="true"></span>
-                    <span class="hero-stat__number google_scholar_citation"></span>
-                    <span class="hero-stat__label">次引用</span>
-                </div>
-                <div class="hero-stat" data-stat-key="patents">
-                    <span class="hero-stat__icon icon-legal" aria-hidden="true"></span>
-                    <span class="hero-stat__number no_of_patents_sum"></span>
-                    <span class="hero-stat__label">项专利</span>
-                </div>
-                <div class="hero-stat" data-stat-key="reviews">
-                    <span class="hero-stat__icon icon-edit" aria-hidden="true"></span>
-                    <span class="hero-stat__number no_of_reviews"></span>
-                    <span class="hero-stat__label">次审稿</span>
-                </div>
-                <div class="hero-stat" data-stat-key="students">
-                    <span class="hero-stat__icon icon-graduation-cap" aria-hidden="true"></span>
-                    <span class="hero-stat__number student_guidance_count"></span>
-                    <span class="hero-stat__label">位指导学生</span>
-                </div>
-                <div class="hero-stat" data-stat-key="grants">
-                    <span class="hero-stat__icon icon-money" aria-hidden="true"></span>
-                    <span class="hero-stat__number no_of_grants"></span>
-                    <span class="hero-stat__label">项科研资助</span>
-                </div>
-                <div class="hero-stat" data-stat-key="downloads">
-                    <span class="hero-stat__icon icon-download" aria-hidden="true"></span>
-                    <span class="hero-stat__number phd_thesis_downloads"></span>
-                    <span class="hero-stat__label">次博士论文下载</span>
-                </div>
-                <div class="hero-stat" data-stat-key="countries">
-                    <span class="hero-stat__icon icon-globe" aria-hidden="true"></span>
-                    <span class="hero-stat__number visited_countries"></span>
-                    <span class="hero-stat__label">个国家旅行</span>
-                </div>
-            </div>
-        </section>
         <div class="site-section">
             <div class="container">
                 <hr />

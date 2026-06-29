@@ -130,7 +130,7 @@ function updateSelectBox() {
 function updateLogo() {
     const logoImage = document.querySelector('.site-logo img');
     const logoLink = document.querySelector('.site-logo');
-    const flagImage = document.querySelector('[data-dynamic-language-flags] img, .flag img');
+    const flagImages = document.querySelectorAll('[data-dynamic-language-flags] img, .flag img');
     if (!logoImage || !logoLink) {
         console.error('未找到 logo 元素，检查 HTML 配置');
         return;
@@ -139,11 +139,17 @@ function updateLogo() {
     if (currentLanguage === '繁体') {
         logoImage.src = 'images/logo-full-tw.png';
         logoLink.href = 'cn.html';
-        if (flagImage) flagImage.src = 'images/wflags_svg/hk.svg';
+        flagImages.forEach(function(flagImage) {
+            flagImage.src = 'images/wflags_svg/hk.svg';
+            flagImage.alt = '繁体中文';
+        });
     } else if (currentLanguage === '简体') {
         logoImage.src = 'images/logo-full-cn.png';
         logoLink.href = 'cn.html';
-        if (flagImage) flagImage.src = 'images/wflags_svg/cn.svg';
+        flagImages.forEach(function(flagImage) {
+            flagImage.src = 'images/wflags_svg/cn.svg';
+            flagImage.alt = '简体中文';
+        });
     }
 }
 

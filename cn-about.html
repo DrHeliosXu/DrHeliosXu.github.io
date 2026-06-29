@@ -26,12 +26,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 
 
-  <link rel="preload" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="./css/style_podcast.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
@@ -76,12 +70,6 @@
     @media (max-width: 575.98px) {
       .about-hero-media {
         margin-top: -30px;
-      }
-    }
-
-    @media (min-width: 576px) {
-      .cn-about-hero-section .desktop-section-spacer {
-        display: none !important;
       }
     }
 
@@ -376,6 +364,7 @@
     }
   </style>
 
+  <script defer src="js/responsive_media_loader.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -600,11 +589,9 @@
             <p class="mb-5">
               <div class="about-hero-media" style="position: relative; display: inline-block;">
                 <div style="position: relative; text-align: center;">
-                <picture>
-                  <source media="(max-width: 575.98px)" srcset="images/banner_img_mobi_3_opt.gif">
-                  <img src="images/banner_img_3.jpg" alt="Image" class="img-fluid" fetchpriority="high"
-                    decoding="async" style="position: relative; top: -15px;" />
-                </picture>
+                <img data-desktop-src="images/banner_img_3.jpg" data-mobile-src="images/banner_img_mobi_3_opt.gif"
+                  alt="Image" class="img-fluid" fetchpriority="high" decoding="async"
+                  style="position: relative; top: -15px;" />
                   <div style="
                       position: absolute;
                       bottom: 13%;  /* 用百分比，而不是 em/px */
@@ -1343,29 +1330,7 @@
 
   </style>
 
-  <script>
-    (function () {
-      // 判断是否是移动端或 iPad
-      var isMobile = /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-
-      if (!isMobile) {
-        // ✅ 只在 PC 和 iPad 加载 Clustrmaps 脚本
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.id = "clustrmaps";
-        script.src = "//cdn.clustrmaps.com/map_v2.js?cl=cdcdcd&w=470&t=n&d=gc2-AlxTT663gKH7alVmw473v-UaHg1VjiT7VOUhfhs&co=f8f9fa&ct=ffffff&cmo=0312c8&cmn=f35b12";
-
-        script.onload = function () {
-          var fallback = document.getElementById("clustrmap-fallback-link");
-          if (fallback) fallback.style.display = "none";
-        };
-
-        document.getElementById("clustrmap-container").appendChild(script);
-      } else {
-        console.log("📱 Mobile device detected, showing static fallback image.");
-      }
-    })();
-  </script>
+  <script defer src="js/clustrmaps_lazy_loader.js"></script>
 </div>
 
         </form>
@@ -1886,16 +1851,7 @@
       }
     </script>
 
-    <!-- partial -->
-    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
-    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
-    <script defer
-      src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
-    <script defer src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/vtt.js@0.14.1/dist/vtt.min.js"></script>
-
-    <script defer src="./js/script_podcast.js"></script>
+    <script defer src="./js/podcast_lazy_loader.js"></script>
 
   </div>
 </body>

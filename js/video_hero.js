@@ -325,14 +325,50 @@
     const language = getLanguage();
     let current = 0;
     let slideTimer = null;
+    let playAttemptId = 0;
 
     updateActions(copy, language);
     updateStatLabels(language);
+
+    const prepareAutoplay = function () {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.setAttribute('muted', '');
+      video.setAttribute('autoplay', '');
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+      video.setAttribute('preload', 'auto');
+      video.removeAttribute('controls');
+    };
 
     const clearSlideTimer = function () {
       if (!slideTimer) return;
       window.clearTimeout(slideTimer);
       slideTimer = null;
+    };
+
+    const requestPlayback = function () {
+      if (!video || document.hidden) return;
+      prepareAutoplay();
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(function () {
+          // 移动端省电模式或浏览器策略可能仍会拦截自动播放。
+          // 后续 canplay / visibilitychange / 首次触摸会再次尝试。
+        });
+      }
+    };
+
+    const retryPlayback = function () {
+      const attemptId = ++playAttemptId;
+      requestPlayback();
+      [120, 420, 900].forEach(function (delay) {
+        window.setTimeout(function () {
+          if (attemptId === playAttemptId && video.paused) requestPlayback();
+        }, delay);
+      });
     };
 
     const advanceSlide = function () {
@@ -344,23 +380,39 @@
     const playCurrent = function () {
       const slide = slides[current];
       clearSlideTimer();
+      prepareAutoplay();
       video.src = slide.src;
       video.style.setProperty('--mobile-video-position', slide.mobilePosition || '50% center');
       updateCopy(copy, slide, language);
       video.load();
-      const playPromise = video.play();
-      if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch(function () {});
-      }
+      retryPlayback();
       slideTimer = window.setTimeout(advanceSlide, HERO_VIDEO_DURATION_MS);
     };
+
+    video.addEventListener('loadedmetadata', requestPlayback);
+    video.addEventListener('canplay', requestPlayback);
 
     video.addEventListener('ended', advanceSlide);
 
     video.addEventListener('error', advanceSlide);
 
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden && video.paused) retryPlayback();
+    });
+
+    window.addEventListener('pageshow', function () {
+      if (video.paused) retryPlayback();
+    });
+
+    ['touchstart', 'pointerdown'].forEach(function (eventName) {
+      window.addEventListener(eventName, function () {
+        if (video.paused) requestPlayback();
+      }, { once: true, passive: true });
+    });
+
     updateNavState();
     window.addEventListener('scroll', updateNavState, { passive: true });
+    prepareAutoplay();
     playCurrent();
   };
 
