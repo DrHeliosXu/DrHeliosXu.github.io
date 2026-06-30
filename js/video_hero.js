@@ -345,10 +345,17 @@
       targetVideo.defaultMuted = true;
       targetVideo.autoplay = true;
       targetVideo.playsInline = true;
+      targetVideo.controls = false;
+      targetVideo.disablePictureInPicture = true;
       targetVideo.setAttribute('muted', '');
       targetVideo.setAttribute('autoplay', '');
       targetVideo.setAttribute('playsinline', '');
       targetVideo.setAttribute('webkit-playsinline', '');
+      targetVideo.setAttribute('x5-playsinline', '');
+      targetVideo.setAttribute('x5-video-player-type', 'h5');
+      targetVideo.setAttribute('x5-video-player-fullscreen', 'false');
+      targetVideo.setAttribute('disablepictureinpicture', '');
+      targetVideo.setAttribute('controlslist', 'nodownload noplaybackrate noremoteplayback');
       targetVideo.setAttribute('preload', 'auto');
       targetVideo.removeAttribute('controls');
     };
@@ -368,9 +375,10 @@
         return playPromise.catch(function () {
           // 移动端省电模式或浏览器策略可能仍会拦截自动播放。
           // 后续 canplay / visibilitychange / 首次触摸会再次尝试。
+          return false;
         });
       }
-      return Promise.resolve();
+      return Promise.resolve(true);
     };
 
     const retryPlayback = function () {
@@ -413,15 +421,18 @@
     };
 
     const waitForPaintedFrame = function (targetVideo) {
-      return requestPlayback(targetVideo).then(function () {
+      return requestPlayback(targetVideo).then(function (didStart) {
+        if (didStart === false) return Promise.reject();
+
         if (targetVideo.readyState >= 3 && !targetVideo.paused && targetVideo.currentTime > 0.04) {
           return;
         }
 
-        return new Promise(function (resolve) {
+        return new Promise(function (resolve, reject) {
           let resolved = false;
           const finish = function () {
             if (resolved) return;
+            if (targetVideo.paused) return;
             resolved = true;
             targetVideo.removeEventListener('playing', finish);
             targetVideo.removeEventListener('timeupdate', finish);
@@ -437,7 +448,18 @@
             targetVideo.requestVideoFrameCallback(finish);
           }
 
-          window.setTimeout(finish, 1200);
+          window.setTimeout(function () {
+            if (resolved) return;
+            if (!targetVideo.paused && targetVideo.readyState >= 2) {
+              finish();
+              return;
+            }
+            resolved = true;
+            targetVideo.removeEventListener('playing', finish);
+            targetVideo.removeEventListener('timeupdate', finish);
+            targetVideo.removeEventListener('loadeddata', finish);
+            reject();
+          }, 1200);
         });
       });
     };
@@ -493,7 +515,9 @@
         preloadNextVideo();
         slideTimer = window.setTimeout(advanceSlide, HERO_VIDEO_DURATION_MS);
       }).catch(function () {
-        // 后续切换已经接管当前播放流程。
+        if (currentTransitionId !== transitionId) return;
+        retryPlayback();
+        slideTimer = window.setTimeout(playCurrent, 1200);
       });
     };
 

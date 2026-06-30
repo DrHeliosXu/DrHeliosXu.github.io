@@ -189,6 +189,7 @@
   object-position: center center;
   opacity: 0;
   transition: none;
+  pointer-events: none;
 }
 
 .video-hero__media.is-active {

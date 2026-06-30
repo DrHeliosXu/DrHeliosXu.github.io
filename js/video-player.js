@@ -176,7 +176,16 @@ previewImages.forEach(image => {
     
     videoSource.src = videoUrl; // Set the video source based on clicked image
     modal.style.display = 'flex'; // Show the modal
+    modalVideo.setAttribute('playsinline', '');
+    modalVideo.setAttribute('webkit-playsinline', '');
     modalVideo.load(); // Reload the video in the modal
+    const playPromise = modalVideo.play(); // Start immediately while the click gesture is still active.
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(function () {
+        // Mobile browsers can still block playback in low-power mode or strict media settings.
+        // In that case the native play button remains available.
+      });
+    }
     
     // Style the subtitle display
     styleSubtitleDisplay();
@@ -198,8 +207,6 @@ previewImages.forEach(image => {
       subtitleDisplay.style.display = 'none';
       modalVideo.ontimeupdate = null;
     }
-    
-    modalVideo.play(); // Start playing the video
   });
 });
 
