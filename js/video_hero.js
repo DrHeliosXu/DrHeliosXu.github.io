@@ -326,21 +326,31 @@
     let current = 0;
     let slideTimer = null;
     let playAttemptId = 0;
+    let transitionId = 0;
+    let activeVideo = video;
+    let standbyVideo = video.cloneNode(false);
+    let hasStarted = false;
+
+    standbyVideo.removeAttribute('id');
+    standbyVideo.setAttribute('aria-hidden', 'true');
+    standbyVideo.classList.remove('is-active');
+    video.classList.add('is-active');
+    video.parentNode.insertBefore(standbyVideo, video.nextSibling);
 
     updateActions(copy, language);
     updateStatLabels(language);
 
-    const prepareAutoplay = function () {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      video.setAttribute('muted', '');
-      video.setAttribute('autoplay', '');
-      video.setAttribute('playsinline', '');
-      video.setAttribute('webkit-playsinline', '');
-      video.setAttribute('preload', 'auto');
-      video.removeAttribute('controls');
+    const prepareAutoplay = function (targetVideo) {
+      targetVideo.muted = true;
+      targetVideo.defaultMuted = true;
+      targetVideo.autoplay = true;
+      targetVideo.playsInline = true;
+      targetVideo.setAttribute('muted', '');
+      targetVideo.setAttribute('autoplay', '');
+      targetVideo.setAttribute('playsinline', '');
+      targetVideo.setAttribute('webkit-playsinline', '');
+      targetVideo.setAttribute('preload', 'auto');
+      targetVideo.removeAttribute('controls');
     };
 
     const clearSlideTimer = function () {
@@ -349,16 +359,18 @@
       slideTimer = null;
     };
 
-    const requestPlayback = function () {
-      if (!video || document.hidden) return;
-      prepareAutoplay();
-      const playPromise = video.play();
+    const requestPlayback = function (targetVideo) {
+      const player = targetVideo || activeVideo;
+      if (!player || document.hidden) return Promise.resolve();
+      prepareAutoplay(player);
+      const playPromise = player.play();
       if (playPromise && typeof playPromise.catch === 'function') {
-        playPromise.catch(function () {
+        return playPromise.catch(function () {
           // 移动端省电模式或浏览器策略可能仍会拦截自动播放。
           // 后续 canplay / visibilitychange / 首次触摸会再次尝试。
         });
       }
+      return Promise.resolve();
     };
 
     const retryPlayback = function () {
@@ -366,9 +378,94 @@
       requestPlayback();
       [120, 420, 900].forEach(function (delay) {
         window.setTimeout(function () {
-          if (attemptId === playAttemptId && video.paused) requestPlayback();
+          if (attemptId === playAttemptId && activeVideo.paused) requestPlayback(activeVideo);
         }, delay);
       });
+    };
+
+    const setVideoSource = function (targetVideo, slide) {
+      prepareAutoplay(targetVideo);
+      targetVideo.style.setProperty('--mobile-video-position', slide.mobilePosition || '50% center');
+      targetVideo.setAttribute('data-slide-src', slide.src);
+      if (targetVideo.getAttribute('src') !== slide.src) {
+        targetVideo.src = slide.src;
+        targetVideo.load();
+      }
+    };
+
+    const waitForVideoReady = function (targetVideo) {
+      if (targetVideo.readyState >= 3) return Promise.resolve();
+
+      return new Promise(function (resolve) {
+        let resolved = false;
+        const finish = function () {
+          if (resolved) return;
+          resolved = true;
+          targetVideo.removeEventListener('canplay', finish);
+          targetVideo.removeEventListener('loadeddata', finish);
+          resolve();
+        };
+
+        targetVideo.addEventListener('canplay', finish, { once: true });
+        targetVideo.addEventListener('loadeddata', finish, { once: true });
+        window.setTimeout(finish, 900);
+      });
+    };
+
+    const waitForPaintedFrame = function (targetVideo) {
+      return requestPlayback(targetVideo).then(function () {
+        if (targetVideo.readyState >= 3 && !targetVideo.paused && targetVideo.currentTime > 0.04) {
+          return;
+        }
+
+        return new Promise(function (resolve) {
+          let resolved = false;
+          const finish = function () {
+            if (resolved) return;
+            resolved = true;
+            targetVideo.removeEventListener('playing', finish);
+            targetVideo.removeEventListener('timeupdate', finish);
+            targetVideo.removeEventListener('loadeddata', finish);
+            resolve();
+          };
+
+          targetVideo.addEventListener('playing', finish, { once: true });
+          targetVideo.addEventListener('timeupdate', finish, { once: true });
+          targetVideo.addEventListener('loadeddata', finish, { once: true });
+
+          if (typeof targetVideo.requestVideoFrameCallback === 'function') {
+            targetVideo.requestVideoFrameCallback(finish);
+          }
+
+          window.setTimeout(finish, 800);
+        });
+      });
+    };
+
+    const preloadNextVideo = function () {
+      const nextSlide = slides[(current + 1) % slides.length];
+      setVideoSource(standbyVideo, nextSlide);
+    };
+
+    const swapVideos = function (nextVideo) {
+      const previousVideo = activeVideo;
+      activeVideo = nextVideo;
+      standbyVideo = previousVideo;
+
+      activeVideo.style.zIndex = '1';
+      standbyVideo.style.zIndex = '0';
+      activeVideo.classList.add('is-active');
+
+      window.setTimeout(function () {
+        if (standbyVideo !== activeVideo) {
+          standbyVideo.classList.remove('is-active');
+          standbyVideo.pause();
+          standbyVideo.currentTime = 0;
+          activeVideo.style.zIndex = '';
+          standbyVideo.style.zIndex = '';
+          preloadNextVideo();
+        }
+      }, 460);
     };
 
     const advanceSlide = function () {
@@ -379,40 +476,57 @@
 
     const playCurrent = function () {
       const slide = slides[current];
+      const currentTransitionId = ++transitionId;
       clearSlideTimer();
-      prepareAutoplay();
-      video.src = slide.src;
-      video.style.setProperty('--mobile-video-position', slide.mobilePosition || '50% center');
-      updateCopy(copy, slide, language);
-      video.load();
-      retryPlayback();
-      slideTimer = window.setTimeout(advanceSlide, HERO_VIDEO_DURATION_MS);
+      const nextVideo = hasStarted ? standbyVideo : activeVideo;
+      hasStarted = true;
+
+      setVideoSource(nextVideo, slide);
+      waitForVideoReady(nextVideo).then(function () {
+        if (currentTransitionId !== transitionId) return Promise.reject();
+        return waitForPaintedFrame(nextVideo);
+      }).then(function () {
+        if (currentTransitionId !== transitionId) return;
+        updateCopy(copy, slide, language);
+        if (nextVideo !== activeVideo) swapVideos(nextVideo);
+        retryPlayback();
+        preloadNextVideo();
+        slideTimer = window.setTimeout(advanceSlide, HERO_VIDEO_DURATION_MS);
+      }).catch(function () {
+        // 后续切换已经接管当前播放流程。
+      });
     };
 
-    video.addEventListener('loadedmetadata', requestPlayback);
-    video.addEventListener('canplay', requestPlayback);
+    [video, standbyVideo].forEach(function (player) {
+      player.addEventListener('loadedmetadata', function () {
+        if (player === activeVideo) requestPlayback(player);
+      });
+      player.addEventListener('canplay', function () {
+        if (player === activeVideo) requestPlayback(player);
+      });
+      player.addEventListener('ended', advanceSlide);
+      player.addEventListener('error', advanceSlide);
+    });
 
-    video.addEventListener('ended', advanceSlide);
-
-    video.addEventListener('error', advanceSlide);
 
     document.addEventListener('visibilitychange', function () {
-      if (!document.hidden && video.paused) retryPlayback();
+      if (!document.hidden && activeVideo.paused) retryPlayback();
     });
 
     window.addEventListener('pageshow', function () {
-      if (video.paused) retryPlayback();
+      if (activeVideo.paused) retryPlayback();
     });
 
     ['touchstart', 'pointerdown'].forEach(function (eventName) {
       window.addEventListener(eventName, function () {
-        if (video.paused) requestPlayback();
+        if (activeVideo.paused) requestPlayback(activeVideo);
       }, { once: true, passive: true });
     });
 
     updateNavState();
     window.addEventListener('scroll', updateNavState, { passive: true });
-    prepareAutoplay();
+    prepareAutoplay(video);
+    prepareAutoplay(standbyVideo);
     playCurrent();
   };
 
