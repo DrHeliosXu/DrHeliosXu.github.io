@@ -154,7 +154,7 @@
   width: 100%;
   height: 100vh;
   height: 100svh;
-  background: #000;
+  background: #000 url("../images/big_img_0.png") center center / cover no-repeat;
 }
 
 .video-hero::after {
@@ -192,7 +192,7 @@
   pointer-events: none;
 }
 
-.video-hero__media.is-active {
+.video-hero__media.is-active.is-playing {
   opacity: 1;
 }
 

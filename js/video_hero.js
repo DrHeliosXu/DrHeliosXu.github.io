@@ -372,12 +372,16 @@
       prepareAutoplay(player);
       const playPromise = player.play();
       if (playPromise && typeof playPromise.catch === 'function') {
-        return playPromise.catch(function () {
+        return playPromise.then(function () {
+          player.classList.add('is-playing');
+          return true;
+        }).catch(function () {
           // 移动端省电模式或浏览器策略可能仍会拦截自动播放。
           // 后续 canplay / visibilitychange / 首次触摸会再次尝试。
           return false;
         });
       }
+      player.classList.add('is-playing');
       return Promise.resolve(true);
     };
 
@@ -481,6 +485,7 @@
       window.requestAnimationFrame(function () {
         if (standbyVideo !== activeVideo) {
           standbyVideo.classList.remove('is-active');
+          standbyVideo.classList.remove('is-playing');
           standbyVideo.pause();
           standbyVideo.currentTime = 0;
           activeVideo.style.zIndex = '';
@@ -503,13 +508,13 @@
       const nextVideo = hasStarted ? standbyVideo : activeVideo;
       hasStarted = true;
 
+      updateCopy(copy, slide, language);
       setVideoSource(nextVideo, slide);
       waitForVideoReady(nextVideo).then(function () {
         if (currentTransitionId !== transitionId) return Promise.reject();
         return waitForPaintedFrame(nextVideo);
       }).then(function () {
         if (currentTransitionId !== transitionId) return;
-        updateCopy(copy, slide, language);
         if (nextVideo !== activeVideo) swapVideos(nextVideo);
         retryPlayback();
         preloadNextVideo();
@@ -522,6 +527,9 @@
     };
 
     [video, standbyVideo].forEach(function (player) {
+      player.addEventListener('playing', function () {
+        player.classList.add('is-playing');
+      });
       player.addEventListener('loadedmetadata', function () {
         if (player === activeVideo) requestPlayback(player);
       });
