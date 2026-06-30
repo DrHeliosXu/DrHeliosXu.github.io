@@ -510,6 +510,7 @@
 
       updateCopy(copy, slide, language);
       setVideoSource(nextVideo, slide);
+      requestPlayback(nextVideo);
       waitForVideoReady(nextVideo).then(function () {
         if (currentTransitionId !== transitionId) return Promise.reject();
         return waitForPaintedFrame(nextVideo);

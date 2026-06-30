@@ -192,8 +192,16 @@
   pointer-events: none;
 }
 
-.video-hero__media.is-active.is-playing {
+.video-hero__media.is-active {
   opacity: 1;
+}
+
+.video-hero__media::-webkit-media-controls,
+.video-hero__media::-webkit-media-controls-panel,
+.video-hero__media::-webkit-media-controls-play-button,
+.video-hero__media::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 
 .video-hero__copy {
