@@ -437,7 +437,7 @@
             targetVideo.requestVideoFrameCallback(finish);
           }
 
-          window.setTimeout(finish, 800);
+          window.setTimeout(finish, 1200);
         });
       });
     };
@@ -456,7 +456,7 @@
       standbyVideo.style.zIndex = '0';
       activeVideo.classList.add('is-active');
 
-      window.setTimeout(function () {
+      window.requestAnimationFrame(function () {
         if (standbyVideo !== activeVideo) {
           standbyVideo.classList.remove('is-active');
           standbyVideo.pause();
@@ -465,7 +465,7 @@
           standbyVideo.style.zIndex = '';
           preloadNextVideo();
         }
-      }, 460);
+      });
     };
 
     const advanceSlide = function () {

@@ -188,8 +188,7 @@
   object-fit: cover;
   object-position: center center;
   opacity: 0;
-  transition: opacity 420ms ease;
-  will-change: opacity;
+  transition: none;
 }
 
 .video-hero__media.is-active {
