@@ -66,10 +66,9 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     return R * c; // Distance in km
 }
 
-const yourLocation = {
-    lat: 48.1487175, // Munich latitude
-    lon: 11.5658895, // Munich longitude
-};
+const yourLocation = window.siteInfoData && window.siteInfoData.home_location
+    ? { lat: window.siteInfoData.home_location.latitude, lon: window.siteInfoData.home_location.longitude }
+    : { lat: 50.117, lon: 8.683 };
 
 async function displayCountryInfoAndDistance() {
     // 判断是否为强制刷新（hard reload）

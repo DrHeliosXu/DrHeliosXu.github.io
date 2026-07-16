@@ -51,10 +51,9 @@ const cnProvincesMap = {
 /**
  * 我的位置坐标（慕尼黑）
  */
-const yourLocation = {
-    lat: 48.1487175, // Munich latitude
-    lon: 11.5658895, // Munich longitude
-};
+const yourLocation = window.siteInfoData && window.siteInfoData.home_location
+    ? { lat: window.siteInfoData.home_location.latitude, lon: window.siteInfoData.home_location.longitude }
+    : { lat: 50.117, lon: 8.683 };
   
 // ==================== 工具函数 ====================
 

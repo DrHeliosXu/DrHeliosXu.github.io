@@ -5,6 +5,232 @@ const videoSource = document.getElementById('videoSource');
 const closeModal = document.getElementById('closeModal');
 const previewImages = document.querySelectorAll('.preview-image');
 const subtitleDisplay = document.querySelector('.subtitle-display');
+let currentSubtitles = [];
+let customPlayer = null;
+
+function formatVideoTime(seconds) {
+  if (!Number.isFinite(seconds)) return '0:00';
+  const safeSeconds = Math.max(0, Math.floor(seconds));
+  const minutes = Math.floor(safeSeconds / 60);
+  const secs = safeSeconds % 60;
+  return `${minutes}:${String(secs).padStart(2, '0')}`;
+}
+
+function ensureCustomVideoPlayer() {
+  if (customPlayer || !modalVideo) return customPlayer;
+
+  modalVideo.removeAttribute('controls');
+  modalVideo.classList.add('hx-video-player__media');
+
+  const frame = document.createElement('div');
+  frame.className = 'hx-video-player';
+  modalVideo.parentNode.insertBefore(frame, modalVideo);
+  frame.appendChild(modalVideo);
+
+  const controls = document.createElement('div');
+  controls.className = 'hx-video-player__controls';
+  controls.innerHTML = `
+    <button type="button" class="hx-video-player__button hx-video-player__play" aria-label="播放">▶</button>
+    <div class="hx-video-player__progress" role="slider" tabindex="0" aria-label="视频进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="hx-video-player__progress-track">
+        <div class="hx-video-player__progress-fill"></div>
+        <span class="hx-video-player__progress-handle"></span>
+      </div>
+    </div>
+    <span class="hx-video-player__time">0:00 / 0:00</span>
+    <button type="button" class="hx-video-player__button hx-video-player__mute" aria-label="静音">🔊</button>
+    <button type="button" class="hx-video-player__button hx-video-player__fullscreen" aria-label="全屏">⛶</button>
+  `;
+  frame.appendChild(controls);
+
+  customPlayer = {
+    frame,
+    controls,
+    playButton: controls.querySelector('.hx-video-player__play'),
+    muteButton: controls.querySelector('.hx-video-player__mute'),
+    fullscreenButton: controls.querySelector('.hx-video-player__fullscreen'),
+    progress: controls.querySelector('.hx-video-player__progress'),
+    fill: controls.querySelector('.hx-video-player__progress-fill'),
+    handle: controls.querySelector('.hx-video-player__progress-handle'),
+    time: controls.querySelector('.hx-video-player__time'),
+    isSeeking: false
+  };
+
+  bindCustomVideoPlayer();
+  return customPlayer;
+}
+
+function seekVideoFromClientX(clientX) {
+  const player = ensureCustomVideoPlayer();
+  const duration = modalVideo.duration;
+  if (player) player.progress.dataset.lastSeekX = String(clientX);
+  if (!player || !Number.isFinite(duration) || duration <= 0 || !Number.isFinite(clientX)) return;
+
+  const rect = player.progress.getBoundingClientRect();
+  const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+  player.progress.dataset.lastSeekRatio = String(ratio);
+  modalVideo.currentTime = ratio * duration;
+  updateCustomVideoPlayer();
+  showSubtitle(currentSubtitles, modalVideo.currentTime || 0);
+}
+
+function getSeekClientX(event) {
+  if (event.touches && event.touches.length) return event.touches[0].clientX;
+  if (event.changedTouches && event.changedTouches.length) return event.changedTouches[0].clientX;
+  if (Number.isFinite(event.clientX) && event.clientX > 0) return event.clientX;
+  if (Number.isFinite(event.pageX) && event.pageX > 0) return event.pageX - window.scrollX;
+  if (Number.isFinite(event.offsetX) && event.target && event.target.getBoundingClientRect) {
+    return event.target.getBoundingClientRect().left + event.offsetX;
+  }
+  return null;
+}
+
+function updateCustomVideoPlayer() {
+  const player = ensureCustomVideoPlayer();
+  if (!player) return;
+
+  const duration = modalVideo.duration;
+  const currentTime = modalVideo.currentTime || 0;
+  const ratio = Number.isFinite(duration) && duration > 0 ? Math.max(0, Math.min(1, currentTime / duration)) : 0;
+
+  player.fill.style.width = `${ratio * 100}%`;
+  player.handle.style.left = `${ratio * 100}%`;
+  player.time.textContent = `${formatVideoTime(currentTime)} / ${formatVideoTime(duration)}`;
+  player.playButton.textContent = modalVideo.paused ? '▶' : 'Ⅱ';
+  player.playButton.setAttribute('aria-label', modalVideo.paused ? '播放' : '暂停');
+  player.muteButton.textContent = modalVideo.muted || modalVideo.volume === 0 ? '🔇' : '🔊';
+  player.muteButton.setAttribute('aria-label', modalVideo.muted || modalVideo.volume === 0 ? '取消静音' : '静音');
+  player.progress.setAttribute('aria-valuenow', String(Math.round(ratio * 100)));
+}
+
+function bindCustomVideoPlayer() {
+  const player = customPlayer;
+  if (!player || player.controls.dataset.bound === 'true') return;
+  player.controls.dataset.bound = 'true';
+
+  player.playButton.addEventListener('click', () => {
+    if (modalVideo.paused) {
+      modalVideo.play().catch(() => {});
+    } else {
+      modalVideo.pause();
+    }
+  });
+
+  player.muteButton.addEventListener('click', () => {
+    modalVideo.muted = !modalVideo.muted;
+    updateCustomVideoPlayer();
+  });
+
+  player.fullscreenButton.addEventListener('click', () => {
+    const target = player.frame;
+    if (document.fullscreenElement) {
+      document.exitFullscreen?.();
+    } else {
+      target.requestFullscreen?.();
+    }
+  });
+
+  player.progress.addEventListener('pointerdown', (event) => {
+    player.isSeeking = true;
+    player.progress.setPointerCapture?.(event.pointerId);
+    seekVideoFromClientX(event.clientX);
+    event.preventDefault();
+  });
+
+  player.progress.addEventListener('pointermove', (event) => {
+    if (!player.isSeeking) return;
+    seekVideoFromClientX(event.clientX);
+    event.preventDefault();
+  });
+
+  function stopSeeking(event) {
+    if (!player.isSeeking) return;
+    player.isSeeking = false;
+    if (event && Number.isFinite(event.clientX)) seekVideoFromClientX(event.clientX);
+  }
+
+  player.progress.addEventListener('pointerup', stopSeeking);
+  player.progress.addEventListener('pointercancel', stopSeeking);
+
+  function seekFromProgressEvent(event) {
+    const target = event.target;
+    if (!target || !target.closest || !target.closest('.hx-video-player__progress')) return;
+    const clientX = getSeekClientX(event);
+    seekVideoFromClientX(clientX);
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  player.frame.addEventListener('click', seekFromProgressEvent, true);
+  player.controls.addEventListener('click', seekFromProgressEvent, true);
+  player.progress.addEventListener('click', seekFromProgressEvent, true);
+
+  player.progress.addEventListener('mousedown', (event) => {
+    player.isSeeking = true;
+    seekVideoFromClientX(getSeekClientX(event));
+    event.preventDefault();
+  });
+
+  player.controls.addEventListener('mousedown', (event) => {
+    const target = event.target;
+    if (!target || !target.closest || !target.closest('.hx-video-player__progress')) return;
+    player.isSeeking = true;
+    seekVideoFromClientX(getSeekClientX(event));
+    event.preventDefault();
+    event.stopPropagation();
+  }, true);
+
+  document.addEventListener('mousemove', (event) => {
+    if (!player.isSeeking) return;
+    seekVideoFromClientX(getSeekClientX(event));
+  });
+
+  document.addEventListener('mouseup', (event) => {
+    if (!player.isSeeking) return;
+    player.isSeeking = false;
+    seekVideoFromClientX(getSeekClientX(event));
+  });
+
+  player.progress.addEventListener('touchstart', (event) => {
+    player.isSeeking = true;
+    seekVideoFromClientX(getSeekClientX(event));
+    event.preventDefault();
+  }, { passive: false });
+
+  player.progress.addEventListener('touchmove', (event) => {
+    if (!player.isSeeking) return;
+    seekVideoFromClientX(getSeekClientX(event));
+    event.preventDefault();
+  }, { passive: false });
+
+  player.progress.addEventListener('touchend', (event) => {
+    if (!player.isSeeking) return;
+    player.isSeeking = false;
+    seekVideoFromClientX(getSeekClientX(event));
+    event.preventDefault();
+  }, { passive: false });
+
+  player.progress.addEventListener('keydown', (event) => {
+    const duration = modalVideo.duration;
+    if (!Number.isFinite(duration) || duration <= 0) return;
+    const step = event.shiftKey ? 30 : 5;
+    if (event.key === 'ArrowLeft') {
+      modalVideo.currentTime = Math.max(0, (modalVideo.currentTime || 0) - step);
+      event.preventDefault();
+    } else if (event.key === 'ArrowRight') {
+      modalVideo.currentTime = Math.min(duration, (modalVideo.currentTime || 0) + step);
+      event.preventDefault();
+    } else {
+      return;
+    }
+    updateCustomVideoPlayer();
+    showSubtitle(currentSubtitles, modalVideo.currentTime || 0);
+  });
+
+  ['loadedmetadata', 'durationchange', 'timeupdate', 'play', 'pause', 'volumechange', 'seeked'].forEach((eventName) => {
+    modalVideo.addEventListener(eventName, updateCustomVideoPlayer);
+  });
+}
 
 // Parse VTT file and return an array of subtitle entries
 async function parseVTT(subtitleUrl) {
@@ -143,27 +369,26 @@ function showSubtitle(subtitles, currentTime) {
 
 // Style the subtitle display to appear below the video
 function styleSubtitleDisplay() {
-    
-  const video = document.getElementById('modalVideo');
+  modalVideo.style.pointerEvents = 'auto';
 
-  // Position the subtitle display below the video with padding
-  // Style the subtitle display to appear below the video (inside the same container)
-  subtitleDisplay.style.position = 'absolute';
-  subtitleDisplay.style.bottom = (-115) + 'px'; // 10px below the video
-  subtitleDisplay.style.left = '0';
+  subtitleDisplay.style.position = 'relative';
+  subtitleDisplay.style.bottom = 'auto';
+  subtitleDisplay.style.left = 'auto';
   subtitleDisplay.style.width = '100%';
   subtitleDisplay.style.minHeight = '40px';
   subtitleDisplay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
   subtitleDisplay.style.color = 'white';
   subtitleDisplay.style.textAlign = 'center';
-  subtitleDisplay.style.padding = '5px';
+  subtitleDisplay.style.marginTop = '8px';
+  subtitleDisplay.style.padding = '0 5px';
   subtitleDisplay.style.fontSize = '15px';
-  subtitleDisplay.style.zIndex = '1001';
+  subtitleDisplay.style.zIndex = '1';
   subtitleDisplay.style.textShadow = '1px 1px 1px rgba(0, 0, 0, 0)';
   subtitleDisplay.style.border = 'none';
   subtitleDisplay.style.boxShadow = 'none';
   subtitleDisplay.style.height = 'auto';
   subtitleDisplay.style.display = 'block';
+  subtitleDisplay.style.pointerEvents = 'none';
   subtitleDisplay.textContent = '\u00A0';
   subtitleDisplay.style.visibility = 'hidden';
 }
@@ -176,6 +401,7 @@ previewImages.forEach(image => {
     
     videoSource.src = videoUrl; // Set the video source based on clicked image
     modal.style.display = 'flex'; // Show the modal
+    ensureCustomVideoPlayer();
     modalVideo.setAttribute('playsinline', '');
     modalVideo.setAttribute('webkit-playsinline', '');
     modalVideo.load(); // Reload the video in the modal
@@ -195,17 +421,20 @@ previewImages.forEach(image => {
     if (subtitleUrl) {
       console.log("Loading subtitles from:", subtitleUrl);
       subtitles = await parseVTT(subtitleUrl);
+      currentSubtitles = subtitles;
       console.log("Loaded subtitles:", subtitles.length);
       
       // Set up subtitle tracking
       modalVideo.ontimeupdate = () => {
         showSubtitle(subtitles, modalVideo.currentTime);
+        updateCustomVideoPlayer();
       };
     } else {
       console.log("No subtitle URL provided for this video");
       // No subtitles for this video - hide subtitle area
       subtitleDisplay.style.display = 'none';
       modalVideo.ontimeupdate = null;
+      currentSubtitles = [];
     }
   });
 });
@@ -238,6 +467,8 @@ closeModal.addEventListener('click', function () {
   // Clear subtitle display
   subtitleDisplay.textContent = '';
   subtitleDisplay.style.display = 'none';
+  currentSubtitles = [];
+  updateCustomVideoPlayer();
   
   // Remove timeupdate event handler
   modalVideo.ontimeupdate = null;
@@ -253,6 +484,8 @@ window.addEventListener('click', function (event) {
     // Clear subtitle display
     subtitleDisplay.textContent = '';
     subtitleDisplay.style.display = 'none';
+    currentSubtitles = [];
+    updateCustomVideoPlayer();
     
     // Remove timeupdate event handler
     modalVideo.ontimeupdate = null;

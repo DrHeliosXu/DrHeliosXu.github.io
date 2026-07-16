@@ -4,7 +4,7 @@
 const data = {
     "age": new Date().getFullYear() - 1993,
     "web_update_year": 2026,
-    "web_update_month": "01",
+    "web_update_month": "07",
     "web_update_day": 1,
     "born_year": 1993,
     "year_of_experience": 8,
@@ -26,6 +26,27 @@ const data = {
     "linkedin_followers": 1900,
     "xiaohongshu_followers": 3200,
     "visited_countries": 41,
+    "home_location": {
+        "name": "Frankfurt am Main",
+        "country": "DE",
+        "latitude": 50.117,
+        "longitude": 8.683,
+        "timeZone": "Europe/Berlin",
+        "localizedNames": {
+            "cn": "法兰克福",
+            "en": "Frankfurt",
+            "de": "Frankfurt",
+            "fr": "Francfort",
+            "it": "Francoforte",
+            "es": "Fráncfort",
+            "jp": "フランクフルト",
+            "kr": "프랑크푸르트",
+            "th": "แฟรงก์เฟิร์ต",
+            "vi": "Frankfurt",
+            "ru": "Франкфурт",
+            "ar": "فرانكفورت"
+        }
+    },
 
   };
 

@@ -2343,6 +2343,44 @@ select {
   object-fit: contain;
 }
 
+/* 瑞士国旗为正方形，不能被通用旗帜尺寸拉伸为长方形。 */
+.desktop-language-flag[src*="/ch.svg"] {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+/* 页脚原生时钟：地点突出显示，时间由浏览器 IANA 时区数据库计算。 */
+.footer-time {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.footer-time-place {
+  color: #ed7d31;
+}
+
+.footer-time-clock {
+  flex: 0 0 auto;
+}
+
+.footer-time-details {
+  white-space: pre;
+}
+
+@media (max-width: 1024px) {
+  .footer-time { gap: 0; }
+}
+
+@media (max-width: 600px) {
+  .footer-time .footer-time-offset {
+    display: none;
+  }
+}
+
 @media (max-width: 991px) {
   .language-selector {
     order: -1;
@@ -2435,31 +2473,178 @@ select {
 
     .modal-content {
       position: relative;
-      width: 80%;
-      max-width: 800px;
-      background: #000;
+      width: min(80vw, 900px);
+      max-width: calc(100vw - 32px);
+      background: transparent;
+      border: 0;
       border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+      padding: 0;
+      box-shadow: none;
     }
 
     .modal-content video {
+      display: block;
       width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      pointer-events: auto;
+    }
+
+    .hx-video-player {
+      position: relative;
+      width: 100%;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .hx-video-player__media {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      background: #000;
+    }
+
+    .hx-video-player__controls {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: auto minmax(90px, 1fr) auto auto auto;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px 10px;
+      color: #fff;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.42), transparent);
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+
+    .hx-video-player__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.16);
+      font-size: 14px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 0.18s ease;
+    }
+
+    .hx-video-player__button:hover,
+    .hx-video-player__button:focus-visible {
+      background: rgba(237, 125, 49, 0.9);
+      outline: none;
+    }
+
+    .hx-video-player__progress {
+      position: relative;
+      height: 22px;
+      cursor: pointer;
+      touch-action: none;
+    }
+
+    .hx-video-player__progress:focus-visible {
+      outline: 2px solid rgba(237, 125, 49, 0.95);
+      outline-offset: 4px;
+    }
+
+    .hx-video-player__progress-track {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.36);
+      transform: translateY(-50%);
+    }
+
+    .hx-video-player__progress-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: #ed7d31;
+    }
+
+    .hx-video-player__progress-handle {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+      transform: translate(-50%, -50%);
+    }
+
+    .hx-video-player__time {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+      line-height: 1;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hx-video-player:fullscreen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    .hx-video-player:fullscreen .hx-video-player__media {
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+
+    .modal-content .subtitle-display {
+      pointer-events: none !important;
     }
 
     .close {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: -28px;
+      right: -8px;
       color: white;
       font-size: 30px;
       cursor: pointer;
+      z-index: 2;
     }
 
     /* Mobile styles for making each image take full width */
     @media (max-width: 768px) {
+      .hx-video-player__controls {
+        grid-template-columns: auto minmax(80px, 1fr) auto auto;
+        gap: 8px;
+        padding: 10px;
+      }
+
+      .hx-video-player__fullscreen {
+        display: none;
+      }
+
+      .hx-video-player__time {
+        font-size: 11px;
+      }
+
       .preview-item {
         width: 100%;
         /* Make each preview item take the full width */

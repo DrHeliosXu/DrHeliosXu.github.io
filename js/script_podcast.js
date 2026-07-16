@@ -21,8 +21,8 @@ const options = {
 const audioPlayer = document.querySelector(".podcast-container audio");
 const cnSubtitle = document.getElementById("cn-subtitles");
 const enSubtitle = document.getElementById("en-subtitles");
-const lang_1 = (cnSubtitle && cnSubtitle.textContent ? cnSubtitle.textContent : "cn").trim();
-const lang_2 = (enSubtitle && enSubtitle.textContent ? enSubtitle.textContent : "en").trim();
+const lang_1 = (cnSubtitle?.dataset.language || cnSubtitle?.textContent || "cn").trim();
+const lang_2 = (enSubtitle?.dataset.language || enSubtitle?.textContent || "en").trim();
 
 let cnCues = [];
 let enCues = [];
@@ -44,6 +44,7 @@ function initMediaElementPlayer() {
   try {
     new MediaElementPlayer(audioPlayer, options);
     window.setTimeout(reflowMediaElementControls, 0);
+    window.setTimeout(bindPodcastSeekRail, 0);
   } catch (error) {
     console.warn("播放器增强初始化失败，保留原生 audio 控件:", error);
   }
@@ -68,6 +69,131 @@ function reflowMediaElementControls() {
 
   controlsChildren.slice(0, 3).forEach((element) => elementTop.append(element));
   controlsChildren.slice(3).forEach((element) => elementBottom.append(element));
+}
+
+function bindPodcastSeekRail() {
+  if (!audioPlayer) return;
+  const rail = document.querySelector(".podcast-container .mejs__time-total");
+  if (!rail || rail.dataset.seekBound === "true") return;
+
+  rail.dataset.seekBound = "true";
+  createPodcastNativeSeekOverlay(rail);
+  let isSeeking = false;
+
+  function seekToClientX(clientX) {
+    if (!Number.isFinite(clientX)) return;
+    const duration = audioPlayer.duration;
+    if (!Number.isFinite(duration) || duration <= 0) return;
+
+    const rect = rail.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    audioPlayer.currentTime = ratio * duration;
+    audioPlayer.dataset.lastManualSeek = String(audioPlayer.currentTime);
+    updateSubtitles(audioPlayer.currentTime);
+    audioPlayer.dispatchEvent(new Event("timeupdate"));
+  }
+
+  function getEventClientX(event) {
+    if (event.touches && event.touches.length) return event.touches[0].clientX;
+    if (event.changedTouches && event.changedTouches.length) return event.changedTouches[0].clientX;
+    if (Number.isFinite(event.clientX) && event.clientX > 0) return event.clientX;
+    if (Number.isFinite(event.pageX) && event.pageX > 0) return event.pageX - window.scrollX;
+    if (Number.isFinite(event.offsetX)) {
+      return rail.getBoundingClientRect().left + event.offsetX;
+    }
+    return null;
+  }
+
+  function startSeeking(event) {
+    const clientX = getEventClientX(event);
+    isSeeking = true;
+    rail.setPointerCapture?.(event.pointerId);
+    seekToClientX(clientX);
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function moveSeeking(event) {
+    if (!isSeeking) return;
+    const clientX = getEventClientX(event);
+    seekToClientX(clientX);
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  function stopSeeking(event) {
+    if (!isSeeking) return;
+    isSeeking = false;
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
+
+  function clickSeeking(event) {
+    const clientX = getEventClientX(event);
+    seekToClientX(clientX);
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  rail.addEventListener("pointerdown", startSeeking, true);
+  rail.addEventListener("pointermove", moveSeeking, true);
+  rail.addEventListener("pointerup", stopSeeking, true);
+  rail.addEventListener("pointercancel", stopSeeking, true);
+  rail.addEventListener("mousedown", startSeeking, true);
+  rail.addEventListener("mousemove", moveSeeking, true);
+  rail.addEventListener("mouseup", stopSeeking, true);
+  rail.addEventListener("touchstart", startSeeking, { capture: true, passive: false });
+  rail.addEventListener("touchmove", moveSeeking, { capture: true, passive: false });
+  rail.addEventListener("touchend", stopSeeking, { capture: true, passive: false });
+  rail.addEventListener("click", clickSeeking, true);
+}
+
+function createPodcastNativeSeekOverlay(rail) {
+  const timeRail = document.querySelector(".podcast-container .mejs__time-rail");
+  if (!timeRail || timeRail.querySelector(".podcast-native-seek")) return;
+
+  const seekInput = document.createElement("input");
+  seekInput.type = "range";
+  seekInput.className = "podcast-native-seek";
+  seekInput.min = "0";
+  seekInput.max = "1000";
+  seekInput.step = "1";
+  seekInput.value = "0";
+  const podcastProgressLabel = document.documentElement.lang === "vi"
+    ? "Tiến trình podcast"
+    : "Podcast progress";
+  seekInput.setAttribute("aria-label", podcastProgressLabel);
+  timeRail.appendChild(seekInput);
+
+  function setAudioFromInput() {
+    const duration = audioPlayer.duration;
+    if (!Number.isFinite(duration) || duration <= 0) return;
+    audioPlayer.currentTime = (Number(seekInput.value) / 1000) * duration;
+    audioPlayer.dataset.lastManualSeek = String(audioPlayer.currentTime);
+    updateSubtitles(audioPlayer.currentTime);
+    audioPlayer.dispatchEvent(new Event("timeupdate"));
+  }
+
+  function updateInputFromAudio() {
+    const duration = audioPlayer.duration;
+    if (!Number.isFinite(duration) || duration <= 0) {
+      seekInput.value = "0";
+      seekInput.disabled = true;
+      return;
+    }
+    seekInput.disabled = false;
+    seekInput.value = String(Math.round(((audioPlayer.currentTime || 0) / duration) * 1000));
+  }
+
+  seekInput.addEventListener("input", setAudioFromInput);
+  seekInput.addEventListener("change", setAudioFromInput);
+  audioPlayer.addEventListener("loadedmetadata", updateInputFromAudio);
+  audioPlayer.addEventListener("durationchange", updateInputFromAudio);
+  audioPlayer.addEventListener("timeupdate", updateInputFromAudio);
+  audioPlayer.addEventListener("seeked", updateInputFromAudio);
+  updateInputFromAudio();
 }
 
 function initSubtitlesWhenReady() {

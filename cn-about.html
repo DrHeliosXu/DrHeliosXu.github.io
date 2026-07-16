@@ -13,7 +13,7 @@
 
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260715-footer-clock-single-node">
   <link rel="stylesheet" href="css/cn-common.css">
 
   <link rel="stylesheet" href="css/mobilenav.css">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css">
-    <link rel="stylesheet" href="./css/style_podcast.css">
+    <link rel="stylesheet" href="./css/style_podcast.css?v=20260630-custom-html-video-player4">
   </noscript>
 
   <style>
@@ -239,17 +239,29 @@
 
   <style>
     /* 默认样式（电脑端） */
-    .adjustable-select {
+    .reader-controls {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .reader-controls .adjustable-select {
       width: 100px;
       height: 25px;
-      margin-left: 5px;
+      margin: 0;
+      padding: 0 6px;
       font-size: 14px;
+      line-height: 25px;
       border-radius: 0;
+      border: 1px solid #ccc;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
       text-align-last: center;
-      position: relative;
-      top: 0px;
+      position: static;
+      vertical-align: middle;
     }
 
 
@@ -260,35 +272,43 @@
     #character-direction-selector {
       width: 88px;
       height: 25px;
-      margin-left: 5px;
+      margin: 0;
+      padding: 0 6px;
       border-radius: 0;
+      border: 1px solid #ccc;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
       text-align-last: center;
     }
 
-    .adjustable-button {
+    .reader-controls .adjustable-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
       height: 25px;
-      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1;
       border-radius: 0;
       border: 1px solid #ccc;
-      position: relative;
-      top: 1px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      color: #111;
+      position: static;
+      vertical-align: middle;
     }
 
     /* 手机端样式 */
     @media (max-width: 768px) {
-      .adjustable-select {
-        top: 9px;
+      .reader-controls {
+        flex-wrap: wrap;
+        gap: 6px;
       }
 
       #character-direction-selector {
-        top: -1px;
         width: 93px;
-      }
-
-      .adjustable-button {
-        top: 0px;
       }
 
       #huanhang {
@@ -611,7 +631,7 @@
             <h1 class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
               <text id="jianjie" style="font-size: 1em;">简 介</text>
 
-              <div style="font-size: 1em;">
+              <div class="reader-controls" style="font-size: 1em;">
                 <!-- 语言选择 -->
                 <select id="languages-4" name="languages" class="adjustable-select" onchange="changeLanguage()">
                   <option value="chinese" selected>民族语言</option>
@@ -906,7 +926,7 @@
               </p>
 
 
-              <p id="mongoltraditional-content" align="justify" style="font-size: 14px; display: none;">
+              <p id="mongoltraditional-content" class="column story-content mongol-text" align="justify" style="font-size: 14px; display: none;">
                 Оᠳᠣᠣᠭᠢᠶᠨ ᠪᠠᠶᠳᠯᠠᠠᠷ᠂ ᠳᠣᠺᠲᠣᠷ сюᠶ хᠣᠨᠭ гᠧᠷᠮᠠᠨ ᠳᠠᠬь ᠠᠵ ᠦᠶᠯᠳᠸᠡᠷᠢᠶᠨ ᠰᠠᠯᠪᠠᠷᠲ ᠱᠢᠨᠡ ᠡᠷᠴᠢᠮ ᠬᠦᠴᠨᠢᠶ ᠬᠥᠳᠥᠯᠭᠦᠦᠷᠢᠶᠨ
                 ᠰᠢᠰᠲᠧᠮᠢᠶᠨ ᠮᠡᠷᠭᠡᠵᠢᠯᠲᠡᠨ ᠢᠨᠵᠧᠨᠧᠷᠡᠡᠷ ᠠᠵᠢᠯᠯᠠᠵ᠂ ᠡᠷᠴᠢᠮ ᠬᠦᠴ ᠪᠠ ᠲᠡᠡᠸᠡᠷ ᠰᠠᠯᠪᠠᠷыᠨ ᠦᠷ ᠠᠱᠢᠭᠲᠠᠶ ᠪᠠᠶᠳᠯыᠭ ᠳᠡᠡᠱᠯᠦᠦᠯᠡᠬ
                 ᠪᠣᠯᠣᠨ ᠨяᠮᠺᠠᠠᠷ ᠦᠶᠯ ᠠᠵᠢᠯᠯᠠᠭᠠᠠ яᠸᠤᠤᠯᠵ ᠪᠠᠶᠨᠠ. Сᠤᠳᠠᠯᠭᠠᠠᠨы ᠦᠧᠳᠡᠡ ᠣᠯᠣᠨ ᠤᠯᠰыᠨ ᠺᠣᠮᠫᠠᠨᠢᠤᠳ ᠪᠣᠯᠣᠨ ᠲᠥᠸ еᠸᠷᠣᠫыᠨ
@@ -1221,7 +1241,7 @@
               <br>
               <br>
               <span id="currentDate"></span> - <span id="currentWeekday"></span><br>
-              <span style="color: #ed7d31;">西欧时间 [CET]</span> - <span class="digitalTime" timezone="Europe/Zurich" locale="zh-CN"></span>
+              <span class="footer-time" data-footer-time="owner" aria-live="off"></span>
 
 
             <h2>&nbsp;&nbsp;</h2>
@@ -1265,7 +1285,7 @@
               <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a> <br> <br>
               <a class="nongli"></a> - <a class="jieqi-24" language="chinese"></a> <a class="currentZodiacInLang"
                 language="chinese"></a><br>
-                <span style="color: #ed7d31;">北京时间 [CST]</span> - <span class="digitalTime" timezone="Asia/Shanghai" locale="zh-CN"></span>
+                <span class="footer-time" data-footer-time="visitor" aria-live="off"></span>
 
 
             <h2>&nbsp;&nbsp;</h2>
@@ -1421,15 +1441,32 @@
     <!--  -->
     <script src="js/mobilenav.js"></script>
 
-    <script src="js/main.js"></script>
-    <script src="js/user_ip_cn.js" type="module"></script>
+    <script src="js/main.js?v=20260715-footer-clock-single-node"></script>
     <script src="js/cn_fanti_translate.js"></script>
-    <script type="text/javascript" src="update_info_script.js"></script>
+    <script type="text/javascript" src="update_info_script.js?v=20260715-frankfurt-am-main"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/nongli.js"></script>
-    <script src="js/video-player.js"></script>
+    <script src="js/video-player.js?v=20260630-custom-html-video-player4"></script>
 
     <script>
+      function applyStoryLayout(layout, selectedLanguage) {
+        const storyContainer = document.getElementById('story-container');
+        if (!storyContainer) return;
+
+        const normalizedLayout = layout === 'vertical-layout' ? 'vertical-layout' : 'horizontal-layout';
+        storyContainer.classList.remove('horizontal-layout', 'vertical-layout');
+        storyContainer.classList.add(normalizedLayout);
+
+        document.querySelectorAll('#story-container [id$="-content"]').forEach(content => {
+          content.classList.remove('horizontal-layout', 'vertical-layout');
+        });
+
+        const activeContent = document.getElementById(`${selectedLanguage}-content`);
+        if (activeContent) {
+          activeContent.classList.add(normalizedLayout);
+        }
+      }
+
       function changeLanguage() {
 
         const selectedLanguage = document.getElementById('languages-4').value;
@@ -1483,12 +1520,13 @@
         } else if (selectedLanguage === "mongoltraditional") {
           directionSelector.disabled = false;
           directionSelector.value = "vertical-layout";
-          // 在这里可以强制应用竖排布局
-          document.getElementById('story-container').classList.add('vertical-layout');
+          applyStoryLayout("vertical-layout", selectedLanguage);
         } else {
           directionSelector.value = "horizontal-layout";
-          document.getElementById('story-container').classList.add('horizontal-layout');
+          applyStoryLayout("horizontal-layout", selectedLanguage);
         }
+
+        applyStoryLayout(directionSelector.value, selectedLanguage);
 
         // 重置字体选择器为默认选项
         fontSelector.value = "default";
@@ -1514,10 +1552,10 @@
         canton: "14px",
         oldchinese: "14px",
         korean: "14px",
-        mongoltraditional: "10.5px",
+        mongoltraditional: "15px",
         yi: "22px",
         hmong: "14px",
-        tibetan: "13px",
+        tibetan: "16px",
         uyghur: "16px"
       };
 
@@ -1788,11 +1826,10 @@
       function changeTextLayout() {
         const select = document.getElementById('character-direction-selector');
         const layout = select.value;
-        const storyContainer = document.getElementById('story-container');
+        const selectedLanguage = document.getElementById('languages-4').value;
 
-        // 切换布局类名
-        storyContainer.classList.remove('horizontal-layout', 'vertical-layout');
-        storyContainer.classList.add(layout);
+        // 同步容器和当前显示文本的布局类名
+        applyStoryLayout(layout, selectedLanguage);
 
         // 切换字体大小（如果需要的话）
         changeFontSize(1);
@@ -1851,7 +1888,7 @@
       }
     </script>
 
-    <script defer src="./js/podcast_lazy_loader.js"></script>
+    <script defer src="./js/podcast_lazy_loader.js?v=20260630-custom-html-video-player4"></script>
 
   </div>
 </body>

@@ -35,6 +35,11 @@
       system: ['Systems Engineer', 'Fuel Cells • Power Systems • Operating Strategies'],
       policy: ['Policy Analyst', 'Energy Transition • Climate Strategy • Critical Minerals'],
     },
+    vi: {
+      renewable: ['Nhà nghiên cứu năng lượng', 'Năng lượng tái tạo • Vật liệu mới • Trung hòa carbon'],
+      system: ['Kỹ sư hệ thống', 'Pin nhiên liệu • Hệ thống điện • Chiến lược vận hành'],
+      policy: ['Chuyên gia phân tích chính sách', 'Chuyển dịch năng lượng • Chiến lược khí hậu • Khoáng sản thiết yếu'],
+    },
     de: {
       renewable: ['Energiewendeforscher', 'Neue Energie • Neue Materialien • Klimaneutralität'],
       system: ['Systemingenieur', 'Brennstoffzellen • Antriebssysteme • Betriebsstrategien'],
@@ -97,6 +102,11 @@
       research: 'View Research',
       contact: 'Contact Me',
       researchHref: 'en-research.html',
+    },
+    vi: {
+      research: 'Xem nghiên cứu',
+      contact: 'Liên hệ',
+      researchHref: 'vi-research.html',
     },
     de: {
       research: 'Forschung ansehen',
@@ -175,6 +185,16 @@
       grants: 'research grants',
       downloads: 'PhD thesis downloads',
       countries: 'countries visited',
+    },
+    vi: {
+      papers: 'bài báo',
+      citations: 'lượt trích dẫn',
+      patents: 'bằng sáng chế',
+      reviews: 'lần phản biện',
+      students: 'sinh viên hướng dẫn',
+      grants: 'khoản tài trợ nghiên cứu',
+      downloads: 'lượt tải luận án tiến sĩ',
+      countries: 'quốc gia đã đến',
     },
     de: {
       papers: 'Publikationen',

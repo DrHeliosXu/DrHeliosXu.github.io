@@ -110,6 +110,8 @@ function runJianTiJavaScript() {
 // 更新选框显示状态
 function updateSelectBox() {
     document.querySelectorAll('select[name="languages"]').forEach(function(selectBox) {
+        if (selectBox.id === 'languages-4') return;
+
         if (currentLanguage === '繁体') {
             selectBox.value = 'javascript:runFanTiJavaScript();';
         } else if (currentLanguage === '简体') {
@@ -138,14 +140,20 @@ function updateLogo() {
 
     if (currentLanguage === '繁体') {
         logoImage.src = 'images/logo-full-tw.png';
-        logoLink.href = 'cn.html';
+        logoLink.href = 'index.html';
+    } else if (currentLanguage === '简体') {
+        logoImage.src = 'images/logo-full-cn.png';
+        logoLink.href = 'index.html';
+    }
+
+    if (typeof window.updateChineseLanguageFlags === 'function') {
+        window.updateChineseLanguageFlags();
+    } else if (currentLanguage === '繁体') {
         flagImages.forEach(function(flagImage) {
             flagImage.src = 'images/wflags_svg/hk.svg';
             flagImage.alt = '繁体中文';
         });
     } else if (currentLanguage === '简体') {
-        logoImage.src = 'images/logo-full-cn.png';
-        logoLink.href = 'cn.html';
         flagImages.forEach(function(flagImage) {
             flagImage.src = 'images/wflags_svg/cn.svg';
             flagImage.alt = '简体中文';

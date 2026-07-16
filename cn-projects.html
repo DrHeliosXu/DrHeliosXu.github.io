@@ -19,7 +19,7 @@
 
   <link rel="stylesheet" href="css/mobilenav.css">
   <link rel="stylesheet" href="css/project2.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260715-footer-clock-single-node">
   <link rel="stylesheet" href="css/cn-common.css">
   <script src="js/chinese_lunar_calendar.min.js"></script>
 
@@ -605,7 +605,7 @@
               <br>
               <br>
               <span id="currentDate"></span> - <span id="currentWeekday"></span><br>
-              <span style="color: #ed7d31;">西欧时间 [CET]</span> - <span class="digitalTime" timezone="Europe/Zurich" locale="zh-CN"></span>
+              <span class="footer-time" data-footer-time="owner" aria-live="off"></span>
 
 
             <h2>&nbsp;&nbsp;</h2>
@@ -644,7 +644,7 @@
               <a href="https://scholar.h-xu.com" target="_blank">scholar.h-xu.com</a> <br> <br>
               <a class="nongli"></a> - <a class="jieqi-24" language="chinese"></a> <a class="currentZodiacInLang"
                 language="chinese"></a><br>
-                <span style="color: #ed7d31;">北京时间 [CST]</span> - <span class="digitalTime" timezone="Asia/Shanghai" locale="zh-CN"></span>
+                <span class="footer-time" data-footer-time="visitor" aria-live="off"></span>
 
 
             <h2>&nbsp;&nbsp;</h2>
@@ -836,223 +836,159 @@
 
     <script src="js/mobilenav.js"></script>
 
-    <script src="js/main.js"></script>
-    <script src="js/user_ip_cn.js" type="module"></script>
+    <script src="js/main.js?v=20260715-footer-clock-single-node"></script>
     <script src="js/cn_fanti_translate.js"></script>
-    <script type="text/javascript" src="update_info_script.js"></script>
+    <script type="text/javascript" src="update_info_script.js?v=20260715-frankfurt-am-main"></script>
     <script src="js/24jieqi.js" defer></script>
     <script src="js/nongli.js" defer></script>
 
 
     <script>
       (function(){
-        function fillSelect(sel, dataMap) {
-          // 按数量从多到少排序
-          const sortedEntries = Array.from(dataMap.entries()).sort((a, b) => b[1] - a[1]);
+        function resizeSelect(select) {
+          const selectedOption = select.options[select.selectedIndex];
+          if (!selectedOption) return;
 
-          // 创建临时元素来测量文本宽度
-          const tempDiv = document.createElement('div');
-          tempDiv.style.position = 'absolute';
-          tempDiv.style.visibility = 'hidden';
-          tempDiv.style.whiteSpace = 'nowrap';
-          tempDiv.style.fontSize = '14px';
-          tempDiv.style.fontFamily = 'Arial, sans-serif';
-          document.body.appendChild(tempDiv);
-
-          // 只测量默认选项的宽度作为初始宽度
-          const defaultOption = sel.querySelector('option[value=""]');
-          let initialWidth = 100; // 默认最小宽度
-          if(defaultOption) {
-            tempDiv.textContent = defaultOption.textContent;
-            initialWidth = tempDiv.offsetWidth + 30; // 默认选项宽度 + 内边距
-          }
-
-          // 添加所有选项
-          sortedEntries.forEach(([val, count]) => {
-            const opt = document.createElement('option');
-            opt.value = val;
-            opt.textContent = `[${count}] ${val}`;
-            sel.appendChild(opt);
-          });
-
-          // 清理临时元素
-          document.body.removeChild(tempDiv);
-
-          // 设置初始宽度（只基于默认选项）
-          const minWidth = 100; // 最小宽度
-          const maxAllowedWidth = 350; // 最大宽度
-          const newWidth = Math.min(Math.max(initialWidth, minWidth), maxAllowedWidth);
-          sel.style.width = newWidth + 'px';
-
-          // 调试信息
-          console.log('Select ID:', sel.id, 'Default text:', defaultOption?.textContent, 'Initial width:', newWidth);
+          const measure = document.createElement('span');
+          measure.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font:14px Arial,sans-serif;';
+          measure.textContent = selectedOption.textContent;
+          document.body.appendChild(measure);
+          select.style.width = Math.min(Math.max(measure.offsetWidth + 30, 110), 350) + 'px';
+          measure.remove();
         }
-        // 保存所有原始项目
-        let allItems = [];
+
+        function fillSelect(select, dataMap, selectedValue) {
+          const placeholder = select.dataset.placeholder || select.options[0].textContent;
+          select.dataset.placeholder = placeholder;
+          select.replaceChildren(new Option(placeholder, ''));
+
+          Array.from(dataMap.entries())
+            .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'zh-Hans-CN'))
+            .forEach(([value, count]) => {
+              select.add(new Option(`[${count}] ${value}`, value));
+            });
+
+          // 保留当前筛选值；若与另一条件无交集，则显示为 0 项，避免用户无故丢失已选条件。
+          if (selectedValue && !dataMap.has(selectedValue)) {
+            select.add(new Option(`[0] ${selectedValue}`, selectedValue));
+          }
+          select.value = selectedValue || '';
+          resizeSelect(select);
+        }
+        function normalizeFilterValue(value) {
+          return String(value || '').replace(/\s+/g, '').trim();
+        }
+
+        function getProjectCountry(article) {
+          const span = article.querySelector('span');
+          if (!span) return '';
+
+          const locationLine = span.innerHTML
+            .split(/<br\s*\/?>/i)
+            .find(part => part.includes('‧') || part.includes('・'));
+          if (!locationLine) return '';
+
+          const countryMatch = locationLine.match(/([^‧・<]+?)[‧・]/);
+          return countryMatch ? countryMatch[1].trim() : '';
+        }
+
+        function getProjectRecords() {
+          return Array.from(document.querySelectorAll('.band article')).map(article => ({
+            article,
+            topics: (article.dataset.projectTopics || article.getAttribute('topic') || '')
+              .split(/[;；]/)
+              .map(value => value.trim())
+              .filter(Boolean),
+            country: article.dataset.projectCountry || getProjectCountry(article)
+          }));
+        }
+
+        function matchesTopic(record, topic) {
+          return !topic || record.topics.some(value =>
+            normalizeFilterValue(value) === normalizeFilterValue(topic)
+          );
+        }
+
+        function matchesCountry(record, country) {
+          return !country || normalizeFilterValue(record.country) === normalizeFilterValue(country);
+        }
+
+        function createCountMap(records, field) {
+          const counts = new Map();
+          records.forEach(record => {
+            const values = field === 'topics' ? record.topics : [record.country];
+            values.filter(Boolean).forEach(value => counts.set(value, (counts.get(value) || 0) + 1));
+          });
+          return counts;
+        }
+
+        function updateLinkedFilters() {
+          const topicSelect = document.getElementById('filter-topic');
+          const countrySelect = document.getElementById('filter-country');
+          const selectedTopic = topicSelect.value;
+          const selectedCountry = countrySelect.value;
+          const records = getProjectRecords();
+
+          fillSelect(
+            topicSelect,
+            createCountMap(records.filter(record => matchesCountry(record, selectedCountry)), 'topics'),
+            selectedTopic
+          );
+          fillSelect(
+            countrySelect,
+            createCountMap(records.filter(record => matchesTopic(record, selectedTopic)), 'country'),
+            selectedCountry
+          );
+        }
 
         function filterProjects() {
           const topic = document.getElementById('filter-topic').value;
-          const org = null; // 机构筛选已禁用
           const country = document.getElementById('filter-country').value;
           const band = document.querySelector('.band');
+          const allItems = Array.from(band.children);
 
+          let visibleIndex = 0;
+          allItems.forEach(item => {
+            const article = item.querySelector('article');
+            if (!article) return;
 
-          // 如果是第一次运行，保存所有原始项目
-          if(allItems.length === 0) {
-            allItems = Array.from(band.children).map(item => ({
-              element: item.cloneNode(true),
-              article: item.querySelector('article')
-            }));
-          }
+            const record = {
+              topics: (article.dataset.projectTopics || article.getAttribute('topic') || article.dataset.topic || '')
+                .split(/[;；]/)
+                .map(value => value.trim())
+                .filter(Boolean),
+              country: article.dataset.projectCountry || getProjectCountry(article)
+            };
+            const isVisible = matchesTopic(record, topic) && matchesCountry(record, country);
 
-          // 清空容器
-          band.innerHTML = '';
+            item.style.display = isVisible ? '' : 'none';
+            item.classList.remove('item-1', 'item-2');
 
-          // 筛选符合条件的项目
-          const filteredItems = allItems.filter(item => {
-            const article = item.article;
-            let show = true;
-
-            // 主题筛选
-            if(topic) {
-              const topicAttr = article.getAttribute('topic') || '';
-              show = show && topicAttr.split(/[;；]/).map(s=>s.trim()).includes(topic);
+            if (isVisible) {
+              item.classList.add(visibleIndex === 0 ? 'item-1' : 'item-2');
+              visibleIndex += 1;
             }
-
-            // 机构和国家筛选
-            if(org || country) {
-              const span = article.querySelector('span');
-              if(span) {
-                // 获取span的HTML内容，然后按<br>分割
-                const htmlContent = span.innerHTML;
-                const parts = htmlContent.split(/<br\s*\/?>/i);
-                let foundOrg = '', foundCountry = '';
-
-                // 找到包含间隔符的部分
-                for(const part of parts) {
-                  if(part.includes('‧') || part.includes('・')) {
-                    // 机构：‧或・后的所有内容（包括空格和括号）
-                    const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
-                    if(orgMatch) foundOrg = orgMatch[1].trim();
-                    // 国家：‧或・前的内容
-                    const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
-                    if(countryMatch) {
-                      const country = countryMatch[1].trim();
-                    // 只保留真正的国家名（2-10个字符或"线上"）
-                    if(country && (country.length <= 10 || country === '线上')) {
-                      foundCountry = country;
-                    }
-                    }
-                    break;
-                  }
-                }
-
-                if(org && foundOrg.toLowerCase() !== org.toLowerCase()) show = false;
-                if(country && foundCountry !== country) show = false;
-              } else {
-                if(org || country) show = false;
-              }
-            }
-
-            return show;
-          });
-
-          // 重新插入并重新分配class
-          filteredItems.forEach((item, index) => {
-            const newItem = item.element.cloneNode(true);
-            // 移除所有 item-x class
-            newItem.className = newItem.className.replace(/\bitem-\d+\b/g, '').trim();
-            // 重新分配
-            if(index === 0) {
-              newItem.classList.add('item-1'); // 第一个是大卡片
-            } else {
-              newItem.classList.add('item-2'); // 其余都是小卡片
-            }
-            band.appendChild(newItem);
           });
         }
         window.addEventListener('DOMContentLoaded', function() {
           const articles = document.querySelectorAll('.band article');
-          const topicMap = new Map();
-          const orgMap = new Map();
-          const countryMap = new Map();
-
           articles.forEach(article => {
-            // 主题提取
             const topicAttr = article.getAttribute('topic') || '';
-            topicAttr.split(/[;；]/).map(s=>s.trim()).filter(Boolean).forEach(t=>{
-              topicMap.set(t, (topicMap.get(t) || 0) + 1);
-            });
-
-            // 机构和国家提取（直接解析HTML结构）
-            const span = article.querySelector('span');
-            if(span) {
-              // 获取span的HTML内容，然后按<br>分割
-              const htmlContent = span.innerHTML;
-              const parts = htmlContent.split(/<br\s*\/?>/i);
-
-              // 找到包含间隔符的部分
-              for(const part of parts) {
-                if(part.includes('‧') || part.includes('・')) {
-                  // 机构：‧或・后的所有内容（包括空格和括号）
-                  const orgMatch = part.match(/[‧・]([^‧・<]+?)(?:<|$)/);
-                  if(orgMatch) {
-                    const org = orgMatch[1].trim();
-                    orgMap.set(org, (orgMap.get(org) || 0) + 1);
-                  }
-                  // 国家：‧或・前的内容
-                  const countryMatch = part.match(/([^‧・<]+?)[‧・]/);
-                  if(countryMatch) {
-                    const country = countryMatch[1].trim();
-                    // 只保留真正的国家名（2-10个字符或"线上"）
-                    if(country && (country.length <= 10 || country === '线上')) {
-                      countryMap.set(country, (countryMap.get(country) || 0) + 1);
-                    }
-                  }
-                  break;
-                }
-              }
-            }
+            article.dataset.projectTopics = topicAttr;
+            article.dataset.projectCountry = getProjectCountry(article);
           });
 
-          // 分别设置每个select的宽度
-          fillSelect(document.getElementById('filter-topic'), topicMap);
-          // fillSelect(document.getElementById('filter-org'), orgMap); // 机构筛选已禁用
-          fillSelect(document.getElementById('filter-country'), countryMap);
+          const topicSelect = document.getElementById('filter-topic');
+          const countrySelect = document.getElementById('filter-country');
+          updateLinkedFilters();
+          filterProjects();
 
-          // 添加选择后动态调整宽度的功能
-          function adjustSelectWidth(select) {
-            const selectedText = select.options[select.selectedIndex].textContent;
-            const tempDiv = document.createElement('div');
-            tempDiv.style.position = 'absolute';
-            tempDiv.style.visibility = 'hidden';
-            tempDiv.style.whiteSpace = 'nowrap';
-            tempDiv.style.fontSize = '14px';
-            tempDiv.style.fontFamily = 'Arial, sans-serif';
-            tempDiv.textContent = selectedText;
-            document.body.appendChild(tempDiv);
-
-            const textWidth = tempDiv.offsetWidth;
-            const minWidth = 110;
-            const maxAllowedWidth = 350;
-            const newWidth = Math.min(Math.max(textWidth + 30, minWidth), maxAllowedWidth);
-            select.style.width = newWidth + 'px';
-
-            document.body.removeChild(tempDiv);
-          }
-
-          document.getElementById('filter-topic').onchange = function() {
-            adjustSelectWidth(this);
-            filterProjects();
-          };
-          // document.getElementById('filter-org').onchange = function() { // 机构筛选已禁用
-          //   adjustSelectWidth(this);
-          //   filterProjects();
-          // };
-          document.getElementById('filter-country').onchange = function() {
-            adjustSelectWidth(this);
-            filterProjects();
-          };
+          [topicSelect, countrySelect].forEach(select => {
+            select.addEventListener('change', function() {
+              updateLinkedFilters();
+              filterProjects();
+            });
+          });
         });
       })();
       </script>

@@ -83,6 +83,15 @@ tibetan: [
     "เหมายัน 𑫏"          // 冬至
   ],
 
+  vietnamese: [
+    "Tiểu hàn ✶", "Đại hàn ✷", "Lập xuân ✿", "Vũ thủy ⛆",
+    "Kinh trập ຊ", "Xuân phân ◐", "Thanh minh ⚘", "Cốc vũ ⛆",
+    "Lập hạ ☉", "Tiểu mãn 𖢺", "Mang chủng 𖧷", "Hạ chí ✧",
+    "Tiểu thử ✼", "Đại thử ✼", "Lập thu 🝮", "Xử thử ෆ",
+    "Bạch lộ 𑃢", "Thu phân ◑", "Hàn lộ ୭", "Sương giáng ত",
+    "Lập đông ꉙ", "Tiểu tuyết ❅", "Đại tuyết ❅", "Đông chí 𑫏"
+  ],
+
   english: [
     "Severe cold ✶",       // 小寒
     "Deep Freeze ✷",      // 大寒

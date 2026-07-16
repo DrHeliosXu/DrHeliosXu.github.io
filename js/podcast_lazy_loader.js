@@ -7,14 +7,14 @@ const podcastAssets = {
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css",
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css",
-    "./css/style_podcast.css"
+    "./css/style_podcast.css?v=20260630-custom-html-video-player4"
   ],
   scripts: [
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js",
     "https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js",
     "https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js",
-    "./js/script_podcast.js"
+    "./js/script_podcast.js?v=20260630-custom-html-video-player4"
   ]
 };
 
