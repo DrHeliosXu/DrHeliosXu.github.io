@@ -1,19 +1,20 @@
 (function () {
   const HERO_VIDEO_DURATION_MS = 5000;
+  const HERO_VIDEO_VERSION = '?v=20260718-30fps';
 
   const slides = [
     {
-      src: 'video/hero_video/hero_video.mp4',
+      src: 'video/hero_video/hero_video.mp4' + HERO_VIDEO_VERSION,
       titleKey: 'renewable',
       mobilePosition: '66.666% center',
     },
     {
-      src: 'video/hero_video/hero_video_2.mp4',
+      src: 'video/hero_video/hero_video_2.mp4' + HERO_VIDEO_VERSION,
       titleKey: 'system',
       mobilePosition: '75% center',
     },
     {
-      src: 'video/hero_video/hero_video_3.mp4',
+      src: 'video/hero_video/hero_video_3.mp4' + HERO_VIDEO_VERSION,
       titleKey: 'policy',
       mobilePosition: '50% center',
     },
@@ -350,6 +351,10 @@
     let activeVideo = video;
     let standbyVideo = video.cloneNode(false);
     let hasStarted = false;
+    const useVisiblePlayback = Boolean(
+      navigator.maxTouchPoints > 0 &&
+      window.matchMedia && window.matchMedia('(pointer: coarse)').matches
+    );
 
     standbyVideo.removeAttribute('id');
     standbyVideo.setAttribute('aria-hidden', 'true');
@@ -408,7 +413,7 @@
     const retryPlayback = function () {
       const attemptId = ++playAttemptId;
       requestPlayback();
-      [120, 420, 900].forEach(function (delay) {
+      [120, 420, 900, 1600, 2800].forEach(function (delay) {
         window.setTimeout(function () {
           if (attemptId === playAttemptId && activeVideo.paused) requestPlayback(activeVideo);
         }, delay);
@@ -425,22 +430,24 @@
       }
     };
 
-    const waitForVideoReady = function (targetVideo) {
-      if (targetVideo.readyState >= 3) return Promise.resolve();
+    const waitForVideoReady = function (targetVideo, requireFrame) {
+      if (targetVideo.readyState >= 2) return Promise.resolve(true);
 
       return new Promise(function (resolve) {
         let resolved = false;
-        const finish = function () {
+        const onCanPlay = function () { finish(true); };
+        const onLoadedData = function () { finish(true); };
+        const finish = function (isReady) {
           if (resolved) return;
           resolved = true;
-          targetVideo.removeEventListener('canplay', finish);
-          targetVideo.removeEventListener('loadeddata', finish);
-          resolve();
+          targetVideo.removeEventListener('canplay', onCanPlay);
+          targetVideo.removeEventListener('loadeddata', onLoadedData);
+          resolve(isReady);
         };
 
-        targetVideo.addEventListener('canplay', finish, { once: true });
-        targetVideo.addEventListener('loadeddata', finish, { once: true });
-        window.setTimeout(finish, 900);
+        targetVideo.addEventListener('canplay', onCanPlay, { once: true });
+        targetVideo.addEventListener('loadeddata', onLoadedData, { once: true });
+        window.setTimeout(function () { finish(!requireFrame); }, requireFrame ? 2200 : 900);
       });
     };
 
@@ -530,9 +537,17 @@
 
       updateCopy(copy, slide, language);
       setVideoSource(nextVideo, slide);
-      requestPlayback(nextVideo);
-      waitForVideoReady(nextVideo).then(function () {
+      if (nextVideo === activeVideo) requestPlayback(nextVideo);
+      waitForVideoReady(nextVideo, useVisiblePlayback).then(function (isReady) {
         if (currentTransitionId !== transitionId) return Promise.reject();
+
+        // iOS/iPadOS 可能延迟或拒绝播放不可见的视频元素。
+        // 触控设备先等待首帧解码，切为可见元素后再开始播放。
+        if (useVisiblePlayback && nextVideo !== activeVideo) {
+          if (!isReady) return Promise.reject();
+          swapVideos(nextVideo);
+        }
+
         return waitForPaintedFrame(nextVideo);
       }).then(function () {
         if (currentTransitionId !== transitionId) return;
@@ -569,6 +584,10 @@
     window.addEventListener('pageshow', function () {
       if (activeVideo.paused) retryPlayback();
     });
+
+    window.addEventListener('load', function () {
+      if (activeVideo.paused) retryPlayback();
+    }, { once: true });
 
     ['touchstart', 'pointerdown'].forEach(function (eventName) {
       window.addEventListener(eventName, function () {
