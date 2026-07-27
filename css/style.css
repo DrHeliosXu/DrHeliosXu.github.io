@@ -74,6 +74,44 @@ font-family: 'Nanum Gothic', sans-serif;
   left: -5px;
 }
 
+/* 共享页脚天气：替代第三方超宽图片，避免响应式缩放后成为不可读的横条。 */
+#weather.footer-weather {
+  position: absolute;
+  top: -8px;
+  left: -18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  min-height: 84px;
+  margin: 0;
+  color: #343434;
+  text-decoration: none;
+  line-height: 1;
+}
+
+#weather.footer-weather:hover,
+#weather.footer-weather:focus {
+  color: #ed7d31;
+  text-decoration: none;
+}
+
+.footer-weather__icon {
+  display: block;
+  flex: 0 0 84px;
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+
+.footer-weather__temperature {
+  color: #343434;
+  font-size: 28px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
 .wrap3 {
   overflow: auto;
 }

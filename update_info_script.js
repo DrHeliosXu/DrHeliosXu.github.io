@@ -47,10 +47,99 @@ const data = {
             "ar": "فرانكفورت"
         }
     },
+    // 使用所在地坐标请求实时天气，并在浏览器本地缓存 20 分钟。
+    "weather_api_enabled": true,
 
   };
 
 window.siteInfoData = data;
+
+// 页脚天气不再依赖第三方图片横幅。使用所在地坐标请求轻量数据，并短暂缓存以避免每页重复请求。
+function initFooterWeather() {
+    const widgets = Array.from(document.querySelectorAll('#weather'));
+    if (!widgets.length) return;
+
+    const location = data.home_location;
+    const cacheKey = 'footer_weather_' + location.latitude + '_' + location.longitude;
+    const cacheDuration = 20 * 60 * 1000;
+    const weatherIconDirectory = 'images/amcharts_weather_icons_1.0.0/animated/';
+
+    // Open-Meteo WMO 代码映射到项目中已下载的动画天气 SVG。
+    function iconForWeatherCode(code, isDay) {
+        const daytime = Number(isDay) !== 0;
+        if (code === 0) return daytime ? 'day.svg' : 'night.svg';
+        if (code === 1) return daytime ? 'cloudy-day-1.svg' : 'cloudy-night-1.svg';
+        if (code === 2) return daytime ? 'cloudy-day-2.svg' : 'cloudy-night-2.svg';
+        if ([3, 45, 48].includes(code)) return 'cloudy.svg';
+        if ([51, 53, 55, 56, 57].includes(code)) return 'rainy-1.svg';
+        if ([61, 63, 66, 80].includes(code)) return 'rainy-3.svg';
+        if ([65, 67, 81, 82].includes(code)) return 'rainy-5.svg';
+        if ([71, 73, 77, 85].includes(code)) return 'snowy-3.svg';
+        if ([75, 86].includes(code)) return 'snowy-5.svg';
+        if ([95, 96, 99].includes(code)) return 'thunder.svg';
+        return daytime ? 'day.svg' : 'night.svg';
+    }
+
+    function renderWeather(weather) {
+        const temperature = Number(weather && weather.temperature);
+        const label = Number.isFinite(temperature) ? Math.round(temperature) + '°C' : '--°C';
+        const icon = weatherIconDirectory + iconForWeatherCode(Number(weather && weather.weatherCode), weather && weather.isDay);
+        widgets.forEach(function (widget) {
+            widget.className = 'footer-weather';
+            widget.href = 'https://open-meteo.com/';
+            widget.setAttribute('aria-label', 'Frankfurt weather');
+            widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true"><span class="footer-weather__temperature">' + label + '</span>';
+        });
+    }
+
+    function readCachedWeather() {
+        try {
+            const cached = JSON.parse(localStorage.getItem(cacheKey));
+            if (cached && Date.now() - cached.timestamp < cacheDuration) return cached;
+        } catch (error) {}
+        return null;
+    }
+
+    const cachedWeather = readCachedWeather();
+    renderWeather(cachedWeather);
+
+    const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    const timeout = controller ? window.setTimeout(function () { controller.abort(); }, 5000) : null;
+    if (data.weather_api_enabled !== true) return;
+
+    const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + encodeURIComponent(location.latitude)
+        + '&longitude=' + encodeURIComponent(location.longitude)
+        + '&current=temperature_2m,weather_code,is_day&timezone=' + encodeURIComponent(location.timeZone);
+
+    fetch(url, controller ? { signal: controller.signal } : undefined)
+        .then(function (response) {
+            if (!response.ok) throw new Error('Weather request failed');
+            return response.json();
+        })
+        .then(function (response) {
+            const current = response.current || {};
+            const weather = {
+                temperature: current.temperature_2m,
+                weatherCode: current.weather_code,
+                isDay: current.is_day,
+                timestamp: Date.now()
+            };
+            localStorage.setItem(cacheKey, JSON.stringify(weather));
+            renderWeather(weather);
+        })
+        .catch(function () {
+            // 网络不可用时保留缓存或占位温度，不影响页脚其他内容。
+        })
+        .finally(function () {
+            if (timeout) window.clearTimeout(timeout);
+        });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooterWeather, { once: true });
+} else {
+    initFooterWeather();
+}
 
 
 
