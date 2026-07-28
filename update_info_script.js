@@ -19,7 +19,7 @@ const data = {
     "patent_citation": 18,
     "no_of_grants": 6,
     "no_of_books": 0,
-    "student_guidance_count": 3,
+    "student_guidance_count": 4,
     "phd_thesis_views": 2200,
     "phd_thesis_downloads": 660,
     "zhihu_followers": 13891,
