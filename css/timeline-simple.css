@@ -283,3 +283,76 @@ body {
   .marker-outline .timeline-item:hover .timeline-marker:before {
     background: #183D7C;
   }
+/* 新闻页国家筛选统一使用黑色文字，不使用国旗配色干扰可读性。 */
+#event-selector,
+#event-selector option {
+  color: #000 !important;
+}
+
+/* 新闻国旗覆盖对应的时间线节点，不占用日期文字的布局空间。 */
+.timeline-item:not(.period) .timeline-info .timeline-flag,
+.timeline-item:not(.period) .timeline-info > img {
+  display: block;
+  height: 17px;
+  left: -5px !important;
+  margin: 0 !important;
+  position: absolute !important;
+  right: auto !important;
+  top: 3px !important;
+  z-index: 99;
+}
+
+.timeline-item:not(.period) .timeline-info span {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 阿拉伯语新闻时间线镜像到右侧，国旗与节点保持同一条视觉轴。 */
+.timeline--rtl {
+  direction: rtl;
+}
+
+.timeline--rtl .timeline-item {
+  padding-left: 0;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.timeline--rtl .timeline-marker {
+  left: auto;
+  right: 0;
+}
+
+.timeline--rtl .timeline-marker:before {
+  left: auto;
+  right: 0;
+}
+
+.timeline--rtl .timeline-marker:after {
+  left: auto;
+  right: 6px;
+}
+
+.timeline--rtl .timeline-info {
+  direction: rtl;
+  text-align: right;
+}
+
+.timeline--rtl .timeline-info .timeline-flag,
+.timeline--rtl .timeline-info > img {
+  display: block;
+  height: 17px;
+  left: auto !important;
+  margin: 0 !important;
+  position: absolute !important;
+  right: -5px !important;
+  top: 3px !important;
+}
+
+.timeline--rtl .timeline-info span {
+  margin: 0 !important;
+}
+
+.timeline--rtl .period {
+  padding-right: 0;
+}
