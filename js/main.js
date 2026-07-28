@@ -623,6 +623,61 @@ jQuery(document).ready(function($) {
 		}
 	};
 
+	// 页脚地点温度：按经纬度缓存 20 分钟，时钟仍由 IANA 时区独立计算。
+	const footerTemperatureCacheDuration = 20 * 60 * 1000;
+	const footerTemperatureRequests = {};
+	const footerTemperatureKey = function (latitude, longitude) {
+		return 'footer_temperature_' + Number(latitude).toFixed(3) + '_' + Number(longitude).toFixed(3);
+	};
+	const cachedFooterTemperature = function (latitude, longitude) {
+		if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
+		try {
+			const coordinates = Number(latitude).toFixed(3) + '_' + Number(longitude).toFixed(3);
+			const cacheKeys = [footerTemperatureKey(latitude, longitude), 'footer_weather_' + coordinates];
+			for (const key of cacheKeys) {
+				const cached = JSON.parse(localStorage.getItem(key));
+				if (cached && Number.isFinite(Number(cached.temperature)) && Date.now() - cached.timestamp < footerTemperatureCacheDuration) {
+					return Number(cached.temperature);
+				}
+			}
+		} catch (error) {}
+		return null;
+	};
+	const loadFooterTemperature = function (latitude, longitude) {
+		if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return Promise.resolve(null);
+		const cached = cachedFooterTemperature(latitude, longitude);
+		if (cached !== null) return Promise.resolve(cached);
+		const key = footerTemperatureKey(latitude, longitude);
+		if (footerTemperatureRequests[key]) return footerTemperatureRequests[key];
+
+		const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+		const timeout = controller ? window.setTimeout(function () { controller.abort(); }, 5000) : null;
+		const endpoint = 'https://api.open-meteo.com/v1/forecast?latitude=' + encodeURIComponent(latitude)
+			+ '&longitude=' + encodeURIComponent(longitude) + '&current=temperature_2m';
+		footerTemperatureRequests[key] = fetch(endpoint, controller ? { signal: controller.signal } : undefined)
+			.then(function (response) {
+				if (!response.ok) throw new Error('Weather request failed');
+				return response.json();
+			})
+			.then(function (response) {
+				const temperature = Number(response && response.current && response.current.temperature_2m);
+				if (!Number.isFinite(temperature)) return null;
+				try {
+					localStorage.setItem(key, JSON.stringify({ temperature: temperature, timestamp: Date.now() }));
+				} catch (error) {}
+				return temperature;
+			})
+			.catch(function () { return null; })
+			.finally(function () {
+				if (timeout) window.clearTimeout(timeout);
+				delete footerTemperatureRequests[key];
+			});
+		return footerTemperatureRequests[key];
+	};
+	const formatFooterTemperature = function (temperature) {
+		return Number.isFinite(temperature) ? Math.round(temperature) + '°C' : '--°C';
+	};
+
 	const updateCalendarDate = function () {
 		const locale = pageLocaleMap[currentLanguage()] || 'en';
 		const now = new Date();
@@ -716,7 +771,7 @@ jQuery(document).ready(function($) {
 		element.replaceChildren();
 		addFooterTimePart(element, 'footer-time-place', details.place);
 		// 其余内容保持在同一个 flex 子项中，避免浏览器吞掉相邻子项边界的空格。
-		addFooterTimePart(element, 'footer-time-details', ' [' + getUtcOffset(details.timeZone) + '] - ' + formatTime(details.timeZone, language));
+		addFooterTimePart(element, 'footer-time-details', ' [' + formatFooterTemperature(details.temperature) + '] - ' + formatTime(details.timeZone, language));
 	};
 
 	const updateFooterClocks = function (geo) {
@@ -730,9 +785,27 @@ jQuery(document).ready(function($) {
 		const visitorTimeZone = ipTimeZone || browserTimeZone || homeTimeZone;
 		const ownerPlace = configuredHome.localizedNames && configuredHome.localizedNames[language] || configuredHome.name || 'Frankfurt';
 		const visitorPlace = visitorPlaceName(geo || {}, language).place;
+		const ownerLatitude = Number(configuredHome.latitude);
+		const ownerLongitude = Number(configuredHome.longitude);
+		const visitorCoordinates = String(geo && geo.loc || '').split(',').map(Number);
+		const visitorLatitude = visitorCoordinates[0];
+		const visitorLongitude = visitorCoordinates[1];
+		const ownerTemperature = cachedFooterTemperature(ownerLatitude, ownerLongitude);
+		const visitorTemperature = cachedFooterTemperature(visitorLatitude, visitorLongitude);
 		const elements = footerTimeElements();
-		if (elements[0]) renderFooterTime(elements[0], { place: ownerPlace, timeZone: homeTimeZone }, language);
-		if (elements[1]) renderFooterTime(elements[1], { place: visitorPlace, timeZone: visitorTimeZone }, language);
+		if (elements[0]) renderFooterTime(elements[0], { place: ownerPlace, timeZone: homeTimeZone, temperature: ownerTemperature }, language);
+		if (elements[1]) renderFooterTime(elements[1], { place: visitorPlace, timeZone: visitorTimeZone, temperature: visitorTemperature }, language);
+
+		if (ownerTemperature === null && Number.isFinite(ownerLatitude) && Number.isFinite(ownerLongitude)) {
+			loadFooterTemperature(ownerLatitude, ownerLongitude).then(function (temperature) {
+				if (temperature !== null) updateFooterClocks(activeVisitorGeo);
+			});
+		}
+		if (visitorTemperature === null && Number.isFinite(visitorLatitude) && Number.isFinite(visitorLongitude)) {
+			loadFooterTemperature(visitorLatitude, visitorLongitude).then(function (temperature) {
+				if (temperature !== null) updateFooterClocks(activeVisitorGeo);
+			});
+		}
 	};
 
 	const updateVisitorFooter = function (geo) {

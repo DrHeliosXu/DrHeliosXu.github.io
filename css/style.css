@@ -77,13 +77,13 @@ font-family: 'Nanum Gothic', sans-serif;
 /* 共享页脚天气：替代第三方超宽图片，避免响应式缩放后成为不可读的横条。 */
 #weather.footer-weather {
   position: absolute;
-  top: -8px;
-  left: -18px;
+  top: -34px;
+  left: -23px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 4px;
-  min-height: 84px;
+  gap: 0;
+  min-height: 126px;
   margin: 0;
   color: #343434;
   text-decoration: none;
@@ -98,9 +98,9 @@ font-family: 'Nanum Gothic', sans-serif;
 
 .footer-weather__icon {
   display: block;
-  flex: 0 0 84px;
-  width: 84px;
-  height: 84px;
+  flex: 0 0 126px;
+  width: 126px;
+  height: 126px;
   object-fit: contain;
 }
 

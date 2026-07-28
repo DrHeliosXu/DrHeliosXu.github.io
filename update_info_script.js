@@ -81,14 +81,12 @@ function initFooterWeather() {
     }
 
     function renderWeather(weather) {
-        const temperature = Number(weather && weather.temperature);
-        const label = Number.isFinite(temperature) ? Math.round(temperature) + '°C' : '--°C';
         const icon = weatherIconDirectory + iconForWeatherCode(Number(weather && weather.weatherCode), weather && weather.isDay);
         widgets.forEach(function (widget) {
             widget.className = 'footer-weather';
             widget.href = 'https://open-meteo.com/';
             widget.setAttribute('aria-label', 'Frankfurt weather');
-            widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true"><span class="footer-weather__temperature">' + label + '</span>';
+            widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true">';
         });
     }
 
