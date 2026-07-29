@@ -11,13 +11,13 @@
     de: { months: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'], year: 'short', stacked: true },
     fr: { months: ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'], year: 'short', stacked: true },
     it: { months: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'], year: 'short', stacked: true },
-    es: { months: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'], year: 'short', stacked: true },
+    es: { months: ['ene.', 'feb.', 'mar.', 'abr.', 'may.', 'jun.', 'jul.', 'ago.', 'sep.', 'oct.', 'nov.', 'dic.'], year: 'short', stacked: true, monthFontSize: 22 },
     jp: { months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'], year: 'full' },
     kr: { months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'], year: 'full' },
     th: { months: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'], year: 'short', reverse: true, stacked: true },
-    ru: { months: ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК'], year: 'short', stacked: true, monthFontSize: 20 },
+    ru: { months: ['ЯНВ', 'ФЕВ', 'МАР', 'АПР', 'МАЙ', 'ИЮН', 'ИЮЛ', 'АВГ', 'СЕН', 'ОКТ', 'НОЯ', 'ДЕК'], year: 'short', stacked: true, monthFontSize: 21, topOffset: 3 },
     ar: { months: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'], year: 'full', stacked: true },
-    vi: { months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], year: 'short', stacked: true }
+    vi: { months: ['Thg\u00a01', 'Thg\u00a02', 'Thg\u00a03', 'Thg\u00a04', 'Thg\u00a05', 'Thg\u00a06', 'Thg\u00a07', 'Thg\u00a08', 'Thg\u00a09', 'Thg\u00a010', 'Thg\u00a011', 'Thg\u00a012'], year: 'short', stacked: true, monthFontSize: 16 }
   };
 
   if (!locale) return;
@@ -37,7 +37,8 @@
       month: format.months[value.getUTCMonth()],
       year: format.year === 'full' ? fullYear : fullYear.slice(-2),
       reverse: Boolean(format.reverse),
-      stacked: Boolean(format.stacked)
+      stacked: Boolean(format.stacked),
+      topOffset: format.topOffset
     };
   }
 
@@ -58,10 +59,11 @@
     const number = createElement('div', 'number align-self-start');
     number.style.cssText = 'text-align: left; padding-right: 0;';
     const dateSmall = createElement('small');
-    dateSmall.style.cssText = 'vertical-align: top; display: inline-block; position: relative; top: -1px;';
+    // 日期列与新闻标题首行共用统一的顶部基线，避免不同字体的字形高度造成上浮。
+    dateSmall.style.cssText = `vertical-align: top; display: inline-block; position: relative; top: ${date.topOffset ?? 3}px;`;
     const month = createElement('span', '', date.month);
     month.style.cssText = date.stacked
-      ? `display: block; font-size: ${date.monthFontSize || 24}px; line-height: 0.95;`
+      ? `display: block; font-size: ${date.monthFontSize || 24}px; line-height: 0.95; white-space: nowrap;`
       : 'font-size: 0.9em; margin-right: 2px;';
     const year = createElement('span', '', date.year);
     year.style.cssText = date.stacked
