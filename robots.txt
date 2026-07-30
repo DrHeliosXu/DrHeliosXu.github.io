@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Do not expose development, generated, or archived copies to search engines.
+Disallow: /archive/
+Disallow: /output/
+Disallow: /website/
+
+Sitemap: https://dr.h-xu.com/sitemap.xml
