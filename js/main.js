@@ -832,8 +832,19 @@ jQuery(document).ready(function($) {
 	const updateVisitorFooter = function (geo) {
 		const countryCode = String(geo && geo.country || '').trim().toLowerCase();
 		if (!countryCode) return;
+		// 将同一份 IP 定位数据提供给页脚天气模块，避免用本站所在地天气替代访客天气。
+		window.siteVisitorGeo = Object.assign({}, geo);
 		const language = currentLanguage();
 		const name = countryName(countryCode.toUpperCase(), language);
+		document.querySelectorAll('.footer-visitor-flag').forEach(function (flag) {
+			flag.src = `./images/wflags/${countryCode}.png`;
+			flag.alt = name;
+			flag.onerror = function () {
+				this.onerror = null;
+				this.src = './images/wflags/de.png';
+				this.alt = 'Germany';
+			};
+		});
 		let distance = null;
 		const coordinates = String(geo.loc || '').split(',').map(Number);
 		if (coordinates.length === 2 && coordinates.every(Number.isFinite)) {
@@ -846,24 +857,10 @@ jQuery(document).ready(function($) {
 		document.querySelectorAll('.location').forEach(function (location) {
 			location.textContent = name;
 		});
-		const footerFlagSelector = [
-			'.site-section.subscribe [data-ip-flag]',
-			'.site-section.subscribe .country-flag',
-			'.subscribe [data-ip-flag]',
-			'.subscribe .country-flag',
-			'.copyright [data-ip-flag]',
-			'.copyright .country-flag'
-		].join(', ');
-		document.querySelectorAll(footerFlagSelector).forEach(function (flag) {
-			// 页脚使用波浪旗 PNG；语言菜单继续由下方语言选择器使用平面 SVG。
-			flag.src = './images/wflags/' + countryCode + '.png';
-			flag.alt = name + '国旗';
-			flag.onerror = function () {
-				flag.onerror = null;
-				flag.src = './images/wflags/un.png';
-			};
-		});
 		document.querySelectorAll('.copyright').forEach(function (footer) {
+			footer.querySelectorAll('[data-ip-flag], .country-flag, img[src*="images/wflags/"]').forEach(function (flag) {
+				flag.remove();
+			});
 			const location = footer.querySelector('.location');
 			if (!location) return;
 			const distanceElement = footer.querySelector('.distance-info');
@@ -874,11 +871,17 @@ jQuery(document).ready(function($) {
 			}
 		});
 		updateFooterClocks(geo);
+		document.dispatchEvent(new CustomEvent('site:visitor-geo', {
+			detail: { geo: window.siteVisitorGeo }
+		}));
 	};
 
 	let activeVisitorGeo = {};
 	// 不等待图片、视频等资源完成，避免旧的静态时钟标签在页脚短暂闪现。
 	document.addEventListener('DOMContentLoaded', function () {
+		document.querySelectorAll('.copyright [data-ip-flag], .copyright .country-flag, .copyright img[src*="images/wflags/"]').forEach(function (flag) {
+			flag.remove();
+		});
 		updateCalendarDate();
 		updateFooterClocks(activeVisitorGeo);
 		window.setInterval(function () { updateFooterClocks(activeVisitorGeo); }, 1000);

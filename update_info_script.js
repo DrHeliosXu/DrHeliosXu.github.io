@@ -56,12 +56,11 @@ window.siteInfoData = data;
 
 // 页脚天气不再依赖第三方图片横幅。使用所在地坐标请求轻量数据，并短暂缓存以避免每页重复请求。
 function initFooterWeather() {
-    const widgets = Array.from(document.querySelectorAll('#weather'));
-    const locationIcons = Array.from(document.querySelectorAll('.footer-location-weather__icon'));
-    if (!widgets.length && !locationIcons.length) return;
+    const visitorWidgets = Array.from(document.querySelectorAll('#weather'));
+    const ownerIcons = Array.from(document.querySelectorAll('.footer-location-weather__icon'));
+    if (!visitorWidgets.length && !ownerIcons.length) return;
 
     const location = data.home_location;
-    const cacheKey = 'footer_weather_' + location.latitude + '_' + location.longitude;
     const cacheDuration = 20 * 60 * 1000;
     const weatherIconDirectory = 'images/amcharts_weather_icons_1.0.0/animated/';
 
@@ -70,7 +69,7 @@ function initFooterWeather() {
         const countryCode = String(location.country || '').trim().toLowerCase();
         if (!countryCode) return;
 
-        locationIcons.forEach(function (locationIcon) {
+        ownerIcons.forEach(function (locationIcon) {
             const column = locationIcon.closest('.col-md-4');
             const flag = column && column.querySelector('h2 img[src*="wflags/"]:not([data-ip-flag])');
             if (!flag) return;
@@ -96,61 +95,108 @@ function initFooterWeather() {
         return daytime ? 'day.svg' : 'night.svg';
     }
 
-    function renderWeather(weather) {
-        const icon = weatherIconDirectory + iconForWeatherCode(Number(weather && weather.weatherCode), weather && weather.isDay);
-        widgets.forEach(function (widget) {
-            widget.className = 'footer-weather';
-            widget.href = 'https://open-meteo.com/';
-            widget.setAttribute('aria-label', 'Frankfurt weather');
-            widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true">';
-        });
-        locationIcons.forEach(function (locationIcon) {
+    function cacheKeyFor(latitude, longitude) {
+        return 'footer_weather_' + latitude + '_' + longitude;
+    }
+
+    function iconFor(weather) {
+        return weatherIconDirectory + iconForWeatherCode(Number(weather && weather.weatherCode), weather && weather.isDay);
+    }
+
+    function renderOwnerWeather(weather) {
+        const icon = iconFor(weather);
+        ownerIcons.forEach(function (locationIcon) {
             locationIcon.src = icon;
         });
     }
 
-    function readCachedWeather() {
+    function renderVisitorWeather(weather) {
+        const icon = iconFor(weather);
+        visitorWidgets.forEach(function (widget) {
+            widget.className = 'footer-weather';
+            widget.href = 'https://open-meteo.com/';
+            widget.setAttribute('aria-label', 'Local weather');
+            widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true">';
+        });
+    }
+
+    function readCachedWeather(latitude, longitude) {
         try {
-            const cached = JSON.parse(localStorage.getItem(cacheKey));
+            const cached = JSON.parse(localStorage.getItem(cacheKeyFor(latitude, longitude)));
             if (cached && Date.now() - cached.timestamp < cacheDuration) return cached;
         } catch (error) {}
         return null;
     }
 
-    const cachedWeather = readCachedWeather();
+    function requestWeather(latitude, longitude, timeZone) {
+        const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+        const timeout = controller ? window.setTimeout(function () { controller.abort(); }, 5000) : null;
+        const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + encodeURIComponent(latitude)
+            + '&longitude=' + encodeURIComponent(longitude)
+            + '&current=temperature_2m,weather_code,is_day&timezone=' + encodeURIComponent(timeZone || 'auto');
+
+        return fetch(url, controller ? { signal: controller.signal } : undefined)
+            .then(function (response) {
+                if (!response.ok) throw new Error('Weather request failed');
+                return response.json();
+            })
+            .then(function (response) {
+                const current = response.current || {};
+                const weather = {
+                    temperature: current.temperature_2m,
+                    weatherCode: current.weather_code,
+                    isDay: current.is_day,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem(cacheKeyFor(latitude, longitude), JSON.stringify(weather));
+                return weather;
+            })
+            .finally(function () {
+                if (timeout) window.clearTimeout(timeout);
+            });
+    }
+
+    function loadOwnerWeather() {
+        const cachedWeather = readCachedWeather(location.latitude, location.longitude);
+        renderOwnerWeather(cachedWeather);
+        if (data.weather_api_enabled !== true) return;
+
+        requestWeather(location.latitude, location.longitude, location.timeZone)
+            .then(renderOwnerWeather)
+            .catch(function () {
+                // 网络不可用时保留缓存或占位图标，不影响页脚其他内容。
+            });
+    }
+
+    let visitorWeatherKey = '';
+    function loadVisitorWeather(geo) {
+        const coordinates = String(geo && geo.loc || '').split(',').map(Number);
+        const latitude = coordinates[0];
+        const longitude = coordinates[1];
+        if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return;
+
+        const timeZone = String(geo.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone || 'auto');
+        const requestKey = latitude + '_' + longitude + '_' + timeZone;
+        if (requestKey === visitorWeatherKey) return;
+        visitorWeatherKey = requestKey;
+
+        const cachedWeather = readCachedWeather(latitude, longitude);
+        renderVisitorWeather(cachedWeather);
+        if (data.weather_api_enabled !== true) return;
+
+        requestWeather(latitude, longitude, timeZone)
+            .then(renderVisitorWeather)
+            .catch(function () {
+                // 网络不可用时保留缓存或占位图标，不影响页脚其他内容。
+            });
+    }
+
     renderHomeCountryFlags();
-    renderWeather(cachedWeather);
-
-    const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-    const timeout = controller ? window.setTimeout(function () { controller.abort(); }, 5000) : null;
-    if (data.weather_api_enabled !== true) return;
-
-    const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + encodeURIComponent(location.latitude)
-        + '&longitude=' + encodeURIComponent(location.longitude)
-        + '&current=temperature_2m,weather_code,is_day&timezone=' + encodeURIComponent(location.timeZone);
-
-    fetch(url, controller ? { signal: controller.signal } : undefined)
-        .then(function (response) {
-            if (!response.ok) throw new Error('Weather request failed');
-            return response.json();
-        })
-        .then(function (response) {
-            const current = response.current || {};
-            const weather = {
-                temperature: current.temperature_2m,
-                weatherCode: current.weather_code,
-                isDay: current.is_day,
-                timestamp: Date.now()
-            };
-            localStorage.setItem(cacheKey, JSON.stringify(weather));
-            renderWeather(weather);
-        })
-        .catch(function () {
-            // 网络不可用时保留缓存或占位温度，不影响页脚其他内容。
-        })
-        .finally(function () {
-            if (timeout) window.clearTimeout(timeout);
-        });
+    loadOwnerWeather();
+    document.addEventListener('site:visitor-geo', function (event) {
+        loadVisitorWeather(event.detail && event.detail.geo);
+    });
+    loadVisitorWeather(window.siteVisitorGeo);
 }
 
 if (document.readyState === 'loading') {
