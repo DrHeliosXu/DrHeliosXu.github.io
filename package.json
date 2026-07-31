@@ -1,0 +1,14 @@
+{
+  "name": "dr-h-xu-static-site",
+  "private": true,
+  "scripts": {
+    "maintain": "node scripts/maintain-pages.js && node scripts/generate-seo-tags.js",
+    "validate:news": "node scripts/validate-news.js",
+    "validate:site": "node scripts/validate-site.js",
+    "validate": "npm run validate:news && npm run validate:site",
+    "test:smoke": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}

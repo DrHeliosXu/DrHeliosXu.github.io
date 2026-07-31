@@ -77,7 +77,7 @@ font-family: 'Nanum Gothic', sans-serif;
 /* 共享页脚天气：替代第三方超宽图片，避免响应式缩放后成为不可读的横条。 */
 #weather.footer-weather {
   position: absolute;
-  top: -34px;
+  top: -24px;
   left: -23px;
   display: inline-flex;
   align-items: center;
@@ -99,6 +99,26 @@ font-family: 'Nanum Gothic', sans-serif;
 .footer-weather__icon {
   display: block;
   flex: 0 0 126px;
+  width: 126px;
+  height: 126px;
+  object-fit: contain;
+}
+
+/* 左侧联系栏复用所在地天气图标，固定占位以保持原有文字垂直位置。 */
+.footer-location-weather {
+  display: inline-block;
+  position: relative;
+  width: 55px;
+  height: 60px;
+  vertical-align: top;
+}
+
+.footer-location-weather__icon {
+  position: absolute;
+  top: -24px;
+  left: -34px;
+  display: block;
+  max-width: none !important;
   width: 126px;
   height: 126px;
   object-fit: contain;

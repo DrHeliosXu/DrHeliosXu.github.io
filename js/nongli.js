@@ -34,19 +34,19 @@ function updateLunarDate() {
   const solarMonth = today.getMonth() + 1;
   const solarDay = today.getDate();
 
-  console.log("Solar Date:", `${solarYear}-${solarMonth}-${solarDay}`); // 打印阳历日期，检查是否正确
+  window.siteDebug("Solar Date:", `${solarYear}-${solarMonth}-${solarDay}`); // 打印阳历日期，检查是否正确
 
   // 调用 getLunar 方法
   const lunarDate = window.chinese_lunar_calendar.getLunar(solarYear, solarMonth, solarDay);
 
-  console.log("Lunar Date Object:", lunarDate); // 打印农历数据对象，查看结构
+  window.siteDebug("Lunar Date Object:", lunarDate); // 打印农历数据对象，查看结构
 
   if (lunarDate) {
     const lunarYear = lunarDate.lunarYear; // 农历年份
     const lunarMonth = lunarDate.lunarMonth; // 农历月份
     const lunarDay = lunarDate.lunarDate; // 农历日期
 
-    console.log(`Lunar Year: ${lunarYear}, Lunar Month: ${lunarMonth}, Lunar Day: ${lunarDay}`); // 打印农历信息
+    window.siteDebug(`Lunar Year: ${lunarYear}, Lunar Month: ${lunarMonth}, Lunar Day: ${lunarDay}`); // 打印农历信息
 
     // 获取干支年份
     const lunarYearString = getLunarYearString(solarYear);

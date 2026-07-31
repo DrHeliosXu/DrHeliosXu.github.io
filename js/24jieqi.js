@@ -362,7 +362,7 @@ function getjq(yyyy, mm, dd) {
             dd = 31;
         }
     }
-    console.log("Calculated Solar Term Index:", solarTerms);
+    window.siteDebug("Calculated Solar Term Index:", solarTerms);
     return solarTerms;
 }
 

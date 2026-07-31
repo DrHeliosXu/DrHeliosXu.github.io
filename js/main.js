@@ -502,6 +502,15 @@ jQuery(document).ready(function($) {
 		ru: 'км',
 		ar: 'كم'
 	};
+	const distanceMeterUnitMap = {
+		cn: '米',
+		jp: 'm',
+		kr: 'm',
+		th: 'เมตร',
+		vi: 'm',
+		ru: 'м',
+		ar: 'م'
+	};
 
 	const currentLanguage = function () {
 		const page = window.location.pathname.split('/').pop() || '';
@@ -576,7 +585,19 @@ jQuery(document).ready(function($) {
 		const longitudeDelta = radians(longitude - homeLocation.longitude);
 		const value = Math.sin(latitudeDelta / 2) ** 2
 			+ Math.cos(radians(homeLocation.latitude)) * Math.cos(radians(latitude)) * Math.sin(longitudeDelta / 2) ** 2;
-		return Math.round(earthRadiusKm * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value)));
+		return earthRadiusKm * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+	};
+
+	const formatDistance = function (distance, language) {
+		const locale = pageLocaleMap[language] || 'en';
+		if (distance > 0 && distance < 1) {
+			const meters = Math.round(distance * 1000);
+			const unit = distanceMeterUnitMap[language] || 'm';
+			return ' ' + new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(meters) + unit;
+		}
+
+		const unit = distanceUnitMap[language] || 'km';
+		return ' ' + new Intl.NumberFormat(locale, { maximumFractionDigits: 0 }).format(distance) + ' ' + unit;
 	};
 
 	const getHomeLocation = function () {
@@ -847,8 +868,7 @@ jQuery(document).ready(function($) {
 			if (!location) return;
 			const distanceElement = footer.querySelector('.distance-info');
 			if (distanceElement && distance !== null) {
-				const unit = distanceUnitMap[language] || 'km';
-				distanceElement.textContent = ' ' + new Intl.NumberFormat(pageLocaleMap[language] || 'en').format(distance) + ' ' + unit;
+				distanceElement.textContent = formatDistance(distance, language);
 			} else if (distanceElement) {
 				distanceElement.textContent = ' —';
 			}
@@ -1048,7 +1068,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	window.addEventListener('scroll', function() {
-	  console.log('Scroll position:', window.scrollY); // 调试输出
+	  window.siteDebug('Scroll position:', window.scrollY); // 调试输出
 	  if (window.scrollY > 250) { // 设置滚动距离为100px
 		logo.style.visibility = 'visible'; // 使用 visibility 属性
 		logo.style.opacity = '1'; // 确保 logo 可见

@@ -57,12 +57,28 @@ window.siteInfoData = data;
 // 页脚天气不再依赖第三方图片横幅。使用所在地坐标请求轻量数据，并短暂缓存以避免每页重复请求。
 function initFooterWeather() {
     const widgets = Array.from(document.querySelectorAll('#weather'));
-    if (!widgets.length) return;
+    const locationIcons = Array.from(document.querySelectorAll('.footer-location-weather__icon'));
+    if (!widgets.length && !locationIcons.length) return;
 
     const location = data.home_location;
     const cacheKey = 'footer_weather_' + location.latitude + '_' + location.longitude;
     const cacheDuration = 20 * 60 * 1000;
     const weatherIconDirectory = 'images/amcharts_weather_icons_1.0.0/animated/';
+
+    // 左侧联系栏的旗帜始终表示本站所在地，而非页面语言或访客 IP。
+    function renderHomeCountryFlags() {
+        const countryCode = String(location.country || '').trim().toLowerCase();
+        if (!countryCode) return;
+
+        locationIcons.forEach(function (locationIcon) {
+            const column = locationIcon.closest('.col-md-4');
+            const flag = column && column.querySelector('h2 img[src*="wflags/"]:not([data-ip-flag])');
+            if (!flag) return;
+            flag.src = './images/wflags/' + countryCode + '.png';
+            flag.alt = location.country;
+            flag.setAttribute('data-home-country-flag', '');
+        });
+    }
 
     // Open-Meteo WMO 代码映射到项目中已下载的动画天气 SVG。
     function iconForWeatherCode(code, isDay) {
@@ -88,6 +104,9 @@ function initFooterWeather() {
             widget.setAttribute('aria-label', 'Frankfurt weather');
             widget.innerHTML = '<img class="footer-weather__icon" src="' + icon + '" alt="" aria-hidden="true">';
         });
+        locationIcons.forEach(function (locationIcon) {
+            locationIcon.src = icon;
+        });
     }
 
     function readCachedWeather() {
@@ -99,6 +118,7 @@ function initFooterWeather() {
     }
 
     const cachedWeather = readCachedWeather();
+    renderHomeCountryFlags();
     renderWeather(cachedWeather);
 
     const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;

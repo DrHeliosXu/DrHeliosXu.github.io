@@ -189,6 +189,9 @@
       if (!rendered.groups.length) throw new Error('没有可显示的新闻数据。');
       timeline.replaceChildren(rendered.fragment);
       populateSelector(selector, rendered.groups, data);
+      document.dispatchEvent(new CustomEvent('site:news-rendered', {
+        detail: { target: timeline, source: 'news-timeline' }
+      }));
     } catch (error) {
       console.warn('新闻数据加载失败，保留页面内置内容。', error);
       selector.querySelectorAll('option').forEach((option) => { option.style.color = '#000'; });

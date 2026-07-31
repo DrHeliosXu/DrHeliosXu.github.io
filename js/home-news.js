@@ -124,6 +124,9 @@
       const fragment = document.createDocumentFragment();
       events.forEach((event) => fragment.append(renderEvent(event)));
       section.insertBefore(fragment, moreLink || null);
+      document.dispatchEvent(new CustomEvent('site:news-rendered', {
+        detail: { target: section, source: 'home-news' }
+      }));
     } catch (error) {
       console.warn('首页新闻未更新，保留页面内置新闻。', error);
     }

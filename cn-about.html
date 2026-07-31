@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 
 <head>
+  <script src="js/site-debug.js"></script>
   <title>徐泓 | 新能源博士 | 工程师</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,13 +28,12 @@
 
 
   <noscript>
-    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css">
-    <link rel="stylesheet" href="./css/style_podcast.css?v=20260630-custom-html-video-player4">
-  </noscript>
+
+
+
+
+
+</noscript>
 
   <style>
     body {
@@ -385,6 +385,24 @@
   </style>
 
   <script defer src="js/responsive_media_loader.js"></script>
+
+  <!-- seo:managed:start -->
+  <meta name="description" content="徐泓的个人简介、教育经历、学术活动与联系方式。">
+  <link rel="canonical" href="https://dr.h-xu.com/cn-about.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://dr.h-xu.com/cn-about.html">
+  <link rel="alternate" hreflang="en" href="https://dr.h-xu.com/en-about.html">
+  <link rel="alternate" hreflang="de" href="https://dr.h-xu.com/de-about.html">
+  <link rel="alternate" hreflang="es" href="https://dr.h-xu.com/es-about.html">
+  <link rel="alternate" hreflang="fr" href="https://dr.h-xu.com/fr-about.html">
+  <link rel="alternate" hreflang="it" href="https://dr.h-xu.com/it-about.html">
+  <link rel="alternate" hreflang="ja" href="https://dr.h-xu.com/jp-about.html">
+  <link rel="alternate" hreflang="ko" href="https://dr.h-xu.com/kr-about.html">
+  <link rel="alternate" hreflang="ru" href="https://dr.h-xu.com/ru-about.html">
+  <link rel="alternate" hreflang="th" href="https://dr.h-xu.com/th-about.html">
+  <link rel="alternate" hreflang="ar" href="https://dr.h-xu.com/ar-about.html">
+  <link rel="alternate" hreflang="vi" href="https://dr.h-xu.com/vi-about.html">
+  <link rel="alternate" hreflang="x-default" href="https://dr.h-xu.com/en-about.html">
+  <!-- seo:managed:end -->
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1225,7 +1243,7 @@
         <form action="#" class="row align-items-start">
           <!-- 第一栏 -->
           <div class="col-md-4">
-            <img decoding="async" loading="lazy" src="images/logo.png" alt="Image" class="site-logo cn-footer-logo" /> <br> <br>
+            <span class="footer-location-weather" aria-hidden="true"><img class="footer-location-weather__icon" src="images/amcharts_weather_icons_1.0.0/animated/cloudy.svg" alt=""></span> <br> <br>
             <h2><img decoding="async" loading="lazy" src="./images/wflags/eu.png" style="
                                                                 height: 0.9em;
                                                                 vertical-align: -6%;
@@ -1441,9 +1459,9 @@
     <!--  -->
     <script src="js/mobilenav.js"></script>
 
-    <script src="js/main.js?v=20260728-footer-temperature-v2"></script>
-    <script src="js/cn_fanti_translate.js"></script>
-    <script type="text/javascript" src="update_info_script.js?v=20260728-animated-weather-icon-only"></script>
+    <script src="js/main.js?v=20260731-distance-meters"></script>
+    <script src="js/cn_fanti_translate.js?v=20260731-traditional-news"></script>
+    <script type="text/javascript" src="update_info_script.js?v=20260731-home-country-flag"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/nongli.js"></script>
     <script src="js/video-player.js?v=20260630-custom-html-video-player4"></script>
@@ -1767,7 +1785,7 @@
 
       // 简体转换逻辑
       function convertToSimplified() {
-        console.log("转换为简体字");
+        window.siteDebug("转换为简体字");
         var script = document.createElement("script");
         script.src = "js/bookmarklet_cn.js"; // 简体转换脚本
         document.body.appendChild(script);
@@ -1775,7 +1793,7 @@
 
       // 繁体转换逻辑
       function convertToTraditional() {
-        console.log("转换为繁体字");
+        window.siteDebug("转换为繁体字");
         var script = document.createElement("script");
         script.src = "js/bookmarklet_tw.js"; // 繁体转换脚本
         document.body.appendChild(script);

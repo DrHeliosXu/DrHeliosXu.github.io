@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 
 <head>
+  <script src="js/site-debug.js"></script>
     <title>徐泓 | 新能源博士 | 工程师</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
     <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <script src="js/chinese_lunar_calendar.min.js"></script>
+<script src="js/chinese_lunar_calendar.min.js"></script>
 
     <link rel="stylesheet" href="css/mobilenav.css">
     <link rel="stylesheet" href="css/style.css?v=20260715-footer-clock-single-node">
@@ -59,6 +56,24 @@
         }
     </style>
   <script defer src="js/responsive_media_loader.js"></script>
+
+  <!-- seo:managed:start -->
+  <meta name="description" content="徐泓的学术活动、演讲、会议与新闻动态。">
+  <link rel="canonical" href="https://dr.h-xu.com/cn-news.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://dr.h-xu.com/cn-news.html">
+  <link rel="alternate" hreflang="en" href="https://dr.h-xu.com/en-news.html">
+  <link rel="alternate" hreflang="de" href="https://dr.h-xu.com/de-news.html">
+  <link rel="alternate" hreflang="es" href="https://dr.h-xu.com/es-news.html">
+  <link rel="alternate" hreflang="fr" href="https://dr.h-xu.com/fr-news.html">
+  <link rel="alternate" hreflang="it" href="https://dr.h-xu.com/it-news.html">
+  <link rel="alternate" hreflang="ja" href="https://dr.h-xu.com/jp-news.html">
+  <link rel="alternate" hreflang="ko" href="https://dr.h-xu.com/kr-news.html">
+  <link rel="alternate" hreflang="ru" href="https://dr.h-xu.com/ru-news.html">
+  <link rel="alternate" hreflang="th" href="https://dr.h-xu.com/th-news.html">
+  <link rel="alternate" hreflang="ar" href="https://dr.h-xu.com/ar-news.html">
+  <link rel="alternate" hreflang="vi" href="https://dr.h-xu.com/vi-news.html">
+  <link rel="alternate" hreflang="x-default" href="https://dr.h-xu.com/en-news.html">
+  <!-- seo:managed:end -->
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -989,7 +1004,7 @@
                             <h2>旅行足迹</h2>
                             <!-- <small><a href="zhouqibiao.html" target="_blank">【周期表】</a></small> -->
                             <p class="d-sm-none"></p>
-                            <img src="images/visited_map.gif" alt="flag">
+                            <img src="images/visited_map.optimized.webp" alt="flag">
                         </div>
                         <div class="trend-entry d-flex">
                             <div class="number align-self-start">德</div>
@@ -1110,7 +1125,7 @@
                 <form action="#" class="row align-items-start">
                     <!-- 第一栏 -->
                     <div class="col-md-4">
-                        <img src="images/logo.png" alt="Image" class="site-logo cn-footer-logo" />
+                        <span class="footer-location-weather" aria-hidden="true"><img class="footer-location-weather__icon" src="images/amcharts_weather_icons_1.0.0/animated/cloudy.svg" alt=""></span>
                         <br> <br>
                         <h2><img src="./images/wflags/eu.png" class="cn-footer-flag" /> 联系我</h2>
                         <p>
@@ -1243,7 +1258,7 @@
 
           document.getElementById("clustrmap-container").appendChild(script);
         } else {
-          console.log("📱 Mobile device detected, showing static fallback image.");
+          window.siteDebug("📱 Mobile device detected, showing static fallback image.");
         }
       })();
     </script>
@@ -1352,13 +1367,13 @@
         <!--  -->
         <script src="js/mobilenav.js"></script>
 
-        <script src="js/main.js?v=20260728-footer-temperature-v2"></script>
-        <script src="js/cn_fanti_translate.js"></script>
-        <script type="text/javascript" src="update_info_script.js?v=20260728-animated-weather-icon-only"></script>
+        <script src="js/main.js?v=20260731-distance-meters"></script>
+        <script src="js/cn_fanti_translate.js?v=20260731-traditional-news"></script>
+        <script type="text/javascript" src="update_info_script.js?v=20260731-home-country-flag"></script>
 
         <script src="js/24jieqi.js"></script>
         <script src="js/nongli.js"></script>
-        <script src="js/news-renderer.js?v=20260729-selector-short-labels" defer data-news-locale="cn"></script>
+        <script src="js/news-renderer.js?v=20260731-traditional-news" defer data-news-locale="cn"></script>
         <script>
           if (!window.__cnNewsFetchRenderer) {
             // 打开Lightbox，展示点击的图片

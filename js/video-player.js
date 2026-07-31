@@ -274,7 +274,7 @@ async function parseVTT(subtitleUrl) {
         }
       }
 
-      console.log(`Parsed ${subtitles.length} subtitles in non-VTT format`);
+      window.siteDebug(`Parsed ${subtitles.length} subtitles in non-VTT format`);
       return subtitles;
     }
 
@@ -304,7 +304,7 @@ async function parseVTT(subtitleUrl) {
       }
     }
 
-    console.log(`Parsed ${subtitles.length} subtitles in VTT format`);
+    window.siteDebug(`Parsed ${subtitles.length} subtitles in VTT format`);
     return subtitles;
   } catch (error) {
     console.error('Error parsing subtitle file:', error);
@@ -419,10 +419,10 @@ previewImages.forEach(image => {
     // If there's a subtitle file, parse it
     let subtitles = [];
     if (subtitleUrl) {
-      console.log("Loading subtitles from:", subtitleUrl);
+      window.siteDebug("Loading subtitles from:", subtitleUrl);
       subtitles = await parseVTT(subtitleUrl);
       currentSubtitles = subtitles;
-      console.log("Loaded subtitles:", subtitles.length);
+      window.siteDebug("Loaded subtitles:", subtitles.length);
       
       // Set up subtitle tracking
       modalVideo.ontimeupdate = () => {
@@ -430,7 +430,7 @@ previewImages.forEach(image => {
         updateCustomVideoPlayer();
       };
     } else {
-      console.log("No subtitle URL provided for this video");
+      window.siteDebug("No subtitle URL provided for this video");
       // No subtitles for this video - hide subtitle area
       subtitleDisplay.style.display = 'none';
       modalVideo.ontimeupdate = null;

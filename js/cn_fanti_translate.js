@@ -20,6 +20,12 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// 新闻由异步数据渲染，首次转换完成后才插入的内容需要再次转换。
+document.addEventListener('site:news-rendered', function () {
+    if (currentLanguage !== '繁体') return;
+    window.setTimeout(runFanTiJavaScript, 0);
+});
+
 // 初始化语言状态
 function initializeLanguage() {
     // 优先读取 localStorage
@@ -69,7 +75,7 @@ function handleChange(select) {
 
 // 繁体中文切换函数
 function runFanTiJavaScript() {
-    console.log('切换到繁体中文...');
+    window.siteDebug('切换到繁体中文...');
     currentLanguage = '繁体';
     localStorage.setItem('langMode', currentLanguage);
     const scriptId = 'tongwenlet_tw';
@@ -89,7 +95,7 @@ function runFanTiJavaScript() {
 
 // 简体中文切换函数
 function runJianTiJavaScript() {
-    console.log('切换到簡體中文...');
+    window.siteDebug('切换到簡體中文...');
     currentLanguage = '简体';
     localStorage.setItem('langMode', currentLanguage);
     const scriptId = 'tongwenlet_cn';

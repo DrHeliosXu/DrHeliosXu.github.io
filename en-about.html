@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="js/site-debug.js"></script>
   <title>Hong Xu :: PhD :: Engineer</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1,
@@ -11,12 +12,7 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/owl.carousel.min.css" />
-
-
-
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
-
-  <link rel="stylesheet" href="css/mobilenav.css" />
+<link rel="stylesheet" href="css/mobilenav.css" />
   <link rel="stylesheet" href="css/style.css?v=20260715-footer-clock-single-node" />
   <link rel="stylesheet" href="css/about_style.css" />
 
@@ -25,16 +21,11 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chinese-calendar@latest/index.min.js"></script>
 
-  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelementplayer.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/speed/speed.min.css'>
-  <link rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.css'>
-  <link rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css'>
-  <link rel="stylesheet" href="./css/style_podcast.css?v=20260630-custom-html-video-player4">
 
-  <link rel="stylesheet" type="text/css" href="css/book.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="css/book.css" />
   <script src="js/modernizr.custom.js"></script>
 
 
@@ -72,6 +63,24 @@
 
 
   <script defer src="js/responsive_media_loader.js"></script>
+
+  <!-- seo:managed:start -->
+  <meta name="description" content="Biography, education, academic activities and contact details for Dr. Hong Xu.">
+  <link rel="canonical" href="https://dr.h-xu.com/en-about.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://dr.h-xu.com/cn-about.html">
+  <link rel="alternate" hreflang="en" href="https://dr.h-xu.com/en-about.html">
+  <link rel="alternate" hreflang="de" href="https://dr.h-xu.com/de-about.html">
+  <link rel="alternate" hreflang="es" href="https://dr.h-xu.com/es-about.html">
+  <link rel="alternate" hreflang="fr" href="https://dr.h-xu.com/fr-about.html">
+  <link rel="alternate" hreflang="it" href="https://dr.h-xu.com/it-about.html">
+  <link rel="alternate" hreflang="ja" href="https://dr.h-xu.com/jp-about.html">
+  <link rel="alternate" hreflang="ko" href="https://dr.h-xu.com/kr-about.html">
+  <link rel="alternate" hreflang="ru" href="https://dr.h-xu.com/ru-about.html">
+  <link rel="alternate" hreflang="th" href="https://dr.h-xu.com/th-about.html">
+  <link rel="alternate" hreflang="ar" href="https://dr.h-xu.com/ar-about.html">
+  <link rel="alternate" hreflang="vi" href="https://dr.h-xu.com/vi-about.html">
+  <link rel="alternate" hreflang="x-default" href="https://dr.h-xu.com/en-about.html">
+  <!-- seo:managed:end -->
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -1057,14 +1066,14 @@ Heart want help global energy change, he join Salzburg Global and St. Gallen Sym
         <form action="#" class="row align-items-start">
           <!-- 第一栏 -->
           <div class="col-md-4">
-            <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+            <span class="footer-location-weather" aria-hidden="true"><img class="footer-location-weather__icon" src="images/amcharts_weather_icons_1.0.0/animated/cloudy.svg" alt=""></span><br /><br />
             <h2><img src="./images/wflags/eu.png" style=" height: 0.9em;
             vertical-align: -6%; display: inline-block; margin-right: 0em; " />
               Contact Me</h2>
             <p>
               Email | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at]
                 tum.de</a><br /> LinkedIn |
-              <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br /> Instagram |
+              <a href="https://www.linkedin.com/in/xuhong/" target="_blank">linkedin.com/in/xuhong</a><br /> Instagram |
               <a href="https://www.instagram.com/helios.hsu/" target="_blank">instagram.com/helios.hsu</a><br /><br />
               <span class="currentDateInLang" language="english"></span><br />
               <text><span class="footer-time" data-footer-time="owner" aria-live="off"></span></text>
@@ -1181,7 +1190,7 @@ Heart want help global energy change, he join Salzburg Global and St. Gallen Sym
 
         document.getElementById("clustrmap-container").appendChild(script);
       } else {
-        console.log("📱 Mobile device detected, showing static fallback image.");
+        window.siteDebug("📱 Mobile device detected, showing static fallback image.");
       }
     })();
   </script>
@@ -1286,8 +1295,8 @@ Heart want help global energy change, he join Salzburg Global and St. Gallen Sym
 
     <script src="js/mobilenav.js"></script>
 
-    <script src="js/main.js?v=20260728-footer-temperature-v2"></script>
-    <script type="text/javascript" src="update_info_script.js?v=20260728-animated-weather-icon-only"></script>
+    <script src="js/main.js?v=20260731-distance-meters"></script>
+    <script type="text/javascript" src="update_info_script.js?v=20260731-home-country-flag"></script>
     <script src="js/24jieqi.js"></script>
     <script src="js/video-player.js?v=20260630-custom-html-video-player4"></script>
     <script>
@@ -1307,15 +1316,12 @@ Heart want help global energy change, he join Salzburg Global and St. Gallen Sym
     </script>
 
     <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.6/mediaelement-and-player.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/skip-back/skip-back.min.js'></script>
-    <script
-      src='https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/gh/ivorpad/mediaelement-changespeed/changespeed.js'></script>
-    <script src="./js/script_podcast.js?v=20260630-custom-html-video-player4"></script>
 
 
-  </div>
+
+
+</div>
+  <script defer src="./js/podcast_lazy_loader.js?v=20260731-lazy"></script>
 </body>
 
 </html>

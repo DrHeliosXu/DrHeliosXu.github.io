@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
+  <script src="js/site-debug.js"></script>
   <title>หง ซู :: ปริญญาเอก :: วิศวกร</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,7 +11,8 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-  <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
+  <!--
+-->
   <link rel="stylesheet" href="css/mobilenav.css" />
   <link rel="stylesheet" href="css/style.css?v=20260715-footer-clock-single-node" />
     <link rel="stylesheet" href="css/video-hero.css?v=20260719-copy-bottom-anchor" />
@@ -26,6 +28,24 @@
     }
   </style>
   <script defer src="js/responsive_media_loader.js"></script>
+
+  <!-- seo:managed:start -->
+  <meta name="description" content="เว็บไซต์วิชาการของ ดร. Hong Xu ด้านพลังงานหมุนเวียน ไฮโดรเจน เซลล์เชื้อเพลิง ระบบพลังงาน และนโยบายพลังงาน">
+  <link rel="canonical" href="https://dr.h-xu.com/th.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://dr.h-xu.com/cn.html">
+  <link rel="alternate" hreflang="en" href="https://dr.h-xu.com/en.html">
+  <link rel="alternate" hreflang="de" href="https://dr.h-xu.com/de.html">
+  <link rel="alternate" hreflang="es" href="https://dr.h-xu.com/es.html">
+  <link rel="alternate" hreflang="fr" href="https://dr.h-xu.com/fr.html">
+  <link rel="alternate" hreflang="it" href="https://dr.h-xu.com/it.html">
+  <link rel="alternate" hreflang="ja" href="https://dr.h-xu.com/jp.html">
+  <link rel="alternate" hreflang="ko" href="https://dr.h-xu.com/kr.html">
+  <link rel="alternate" hreflang="ru" href="https://dr.h-xu.com/ru.html">
+  <link rel="alternate" hreflang="th" href="https://dr.h-xu.com/th.html">
+  <link rel="alternate" hreflang="ar" href="https://dr.h-xu.com/ar.html">
+  <link rel="alternate" hreflang="vi" href="https://dr.h-xu.com/vi.html">
+  <link rel="alternate" hreflang="x-default" href="https://dr.h-xu.com/en.html">
+  <!-- seo:managed:end -->
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" class="video-hero-page">
@@ -819,7 +839,7 @@
       <form action="#" class="row align-items-start">
         <!-- 第一栏 -->
         <div class="col-md-4">
-          <img src="images/logo.png" alt="Image" class="site-logo" style="width: 55px; height: 60px" /><br /><br />
+          <span class="footer-location-weather" aria-hidden="true"><img class="footer-location-weather__icon" src="images/amcharts_weather_icons_1.0.0/animated/cloudy.svg" alt=""></span><br /><br />
           <h2><img src="./images/wflags/eu.png" style="
                                                                           height: 0.9em;
                                                                           vertical-align: -6%;
@@ -829,7 +849,7 @@
           <p>
             อีเมล | <a href="mailto:h.xu@tum.de" target="_blank">h.xu [at] tum.de</a><br />
             ลิงค์อิน |
-            <a href="www.linkedin.com/in/xuhong" target="_blank">linkedin.com/in/xuhong</a><br />
+            <a href="https://www.linkedin.com/in/xuhong/" target="_blank">linkedin.com/in/xuhong</a><br />
             อินสตาแกรม |
             <a href="https://www.instagram.com/helios.hsu/" target="_blank">instagram.com/helios.hsu</a><br /><br />
             <span class="currentDateInLang" language="thai_gregorian"></span><br />
@@ -956,7 +976,7 @@
 
         document.getElementById("clustrmap-container").appendChild(script);
       } else {
-        console.log("📱 Mobile device detected, showing static fallback image.");
+        window.siteDebug("📱 Mobile device detected, showing static fallback image.");
       }
     })();
   </script>
@@ -1079,16 +1099,16 @@
 
   <script src="js/mobilenav.js"></script>
 
-  <script src="js/main.js?v=20260728-footer-temperature-v2"></script>
+  <script src="js/main.js?v=20260731-distance-meters"></script>
             <script src="js/video_hero.js?v=20260718-mobile-visible-playback"></script>
-  <script type="text/javascript" src="update_info_script.js?v=20260728-animated-weather-icon-only"></script>
+  <script type="text/javascript" src="update_info_script.js?v=20260731-home-country-flag"></script>
   <script src="js/24jieqi.js" defer></script>
 
   <script>
 
   </script>
 
-  <script src="js/home-news.js?v=20260729-news-date-baseline" defer data-home-news-locale="th"></script>
+  <script src="js/home-news.js?v=20260731-traditional-news" defer data-home-news-locale="th"></script>
 </body>
 
 </html>
