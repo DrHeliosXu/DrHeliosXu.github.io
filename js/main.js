@@ -735,15 +735,24 @@ jQuery(document).ready(function($) {
 	};
 
 	let cityNameDictionary = null;
+	let regionNameDictionary = null;
 	const loadCityNameDictionary = function () {
-		if (cityNameDictionary) return Promise.resolve(cityNameDictionary);
-		return fetch('js/city_name.json?v=20260715-i18n-complete')
-			.then(function (response) { return response.ok ? response.json() : {}; })
-			.then(function (items) {
-				cityNameDictionary = Array.isArray(items) ? (items[0] || {}) : (items || {});
+		if (cityNameDictionary && regionNameDictionary) return Promise.resolve(cityNameDictionary);
+		return Promise.all([
+			fetch('js/city_name.json?v=20260715-i18n-complete').then(function (response) { return response.ok ? response.json() : {}; }),
+			fetch('js/region_name.json?v=20260731-regions-complete').then(function (response) { return response.ok ? response.json() : {}; })
+		])
+			.then(function (responses) {
+				const cities = responses[0];
+				cityNameDictionary = Array.isArray(cities) ? (cities[0] || {}) : (cities || {});
+				regionNameDictionary = responses[1] || {};
 				return cityNameDictionary;
 			})
-			.catch(function () { cityNameDictionary = {}; return cityNameDictionary; });
+			.catch(function () {
+				cityNameDictionary = cityNameDictionary || {};
+				regionNameDictionary = regionNameDictionary || {};
+				return cityNameDictionary;
+			});
 	};
 
 	const chineseRegions = {
@@ -756,6 +765,15 @@ jQuery(document).ready(function($) {
 		'tibet': '西藏', 'hong kong': '香港', 'macao': '澳门', 'taiwan': '台湾'
 	};
 
+	const dictionaryLanguageKeys = function (language) {
+		if (language === 'cn') {
+			return localStorage.getItem('langMode') === '繁体'
+				? ['ZH-TW', 'ZH-CN']
+				: ['ZH-CN', 'ZH-TW'];
+		}
+		return { jp: ['JA'], kr: ['KO'], en: ['EN'], de: ['DE'], fr: ['FR'], it: ['IT'], es: ['ES'], ru: ['RU'], ar: ['AR'], th: ['TH'], vi: ['VI'] }[language] || [];
+	};
+
 	const localisedDictionaryCity = function (city, language) {
 		if (!cityNameDictionary) return '';
 		const matchedKey = Object.keys(cityNameDictionary).find(function (key) {
@@ -763,21 +781,56 @@ jQuery(document).ready(function($) {
 		});
 		if (!matchedKey) return '';
 		const names = cityNameDictionary[matchedKey] || {};
-		const keys = { cn: ['ZH-CN', 'ZH-TW'], jp: ['JA'], kr: ['KO'], en: ['EN'], de: ['DE'], fr: ['FR'], it: ['IT'], es: ['ES'], ru: ['RU'], ar: ['AR'], th: ['TH'], vi: ['VI'] }[language] || [];
-		return keys.map(function (key) { return names[key]; }).find(Boolean) || '';
+		return dictionaryLanguageKeys(language).map(function (key) { return names[key]; }).find(Boolean) || '';
 	};
+
+	const localisedDictionaryRegion = function (countryCode, region, language) {
+		if (!regionNameDictionary || !countryCode || !region) return '';
+		const regions = regionNameDictionary[String(countryCode).toUpperCase()] || {};
+		const normalizedRegion = normalizePlaceName(region);
+		const matchedKey = Object.keys(regions).find(function (key) {
+			const entry = regions[key] || {};
+			return normalizePlaceName(key) === normalizedRegion
+				|| (entry.aliases || []).some(function (alias) { return normalizePlaceName(alias) === normalizedRegion; });
+		});
+		if (!matchedKey) return '';
+		const names = regions[matchedKey] || {};
+		return dictionaryLanguageKeys(language).map(function (key) { return names[key]; }).find(Boolean) || '';
+	};
+
+	const regionalFallbackCountries = new Set(['US', 'CN', 'RU', 'DE', 'CA', 'JP', 'AU']);
+	const localizedFallbackLanguages = new Set(['cn', 'jp', 'kr', 'th', 'ru']);
 
 	const visitorPlaceName = function (geo, language) {
 		const countryCode = String(geo.country || '').toUpperCase();
 		const dictionaryName = localisedDictionaryCity(geo.city, language);
-		if (dictionaryName) return { place: dictionaryName };
-		// 词典缺少翻译时保留 IP 服务返回的英文城市名，不再退化为“当地”。
-		if (geo.city) return { place: geo.city };
-		if (language === 'cn' && countryCode === 'CN') {
-			const region = chineseRegions[normalizePlaceName(geo.region)];
-			if (region) return { place: region };
+		if (dictionaryName) return { place: dictionaryName, level: 'city' };
+
+		// 中、日、韩、泰、俄页面不混入未翻译的外文城市名。
+		// 对跨地域的大国，先显示已本地化的州、省、邦或都道府县短名。
+		if (localizedFallbackLanguages.has(language)) {
+			if (regionalFallbackCountries.has(countryCode)) {
+				const dictionaryRegion = localisedDictionaryRegion(countryCode, geo.region, language);
+				if (dictionaryRegion) return { place: dictionaryRegion, level: 'region' };
+				if (language === 'cn' && countryCode === 'CN') {
+					const chineseRegion = chineseRegions[normalizePlaceName(geo.region)];
+					if (chineseRegion) return { place: chineseRegion, level: 'region' };
+				}
+			}
+			return {
+				place: countryCode ? countryName(countryCode, language) : ({ cn: '当地', jp: '現地', kr: '현지', th: 'ท้องถิ่น', ru: 'Местное' }[language] || 'Local'),
+				level: countryCode ? 'country' : 'fallback',
+				isFallback: true
+			};
 		}
-		return { place: countryCode ? countryName(countryCode, language) : ({ cn: '当地', en: 'Local' }[language] || 'Local'), isFallback: true };
+
+		// 其他语言维持既有策略，词典缺失时仍显示 IP 服务返回的城市原名。
+		if (geo.city) return { place: geo.city, level: 'city' };
+		return {
+			place: countryCode ? countryName(countryCode, language) : ({ cn: '当地', en: 'Local' }[language] || 'Local'),
+			level: countryCode ? 'country' : 'fallback',
+			isFallback: true
+		};
 	};
 
 	const addFooterTimePart = function (parent, className, text) {
@@ -804,8 +857,15 @@ jQuery(document).ready(function($) {
 		// 访客地点来自 IP，因此时钟也优先使用同一条 IP 数据的 IANA 时区。
 		// 浏览器时区仅在 IP 服务没有返回时作为兜底。
 		const visitorTimeZone = ipTimeZone || browserTimeZone || homeTimeZone;
-		const ownerPlace = configuredHome.localizedNames && configuredHome.localizedNames[language] || configuredHome.name || 'Frankfurt';
-		const visitorPlace = visitorPlaceName(geo || {}, language).place;
+		const visitorLocation = visitorPlaceName(geo || {}, language);
+		// 右侧只在无法取得城市或行政区名称、退回到国家时，左侧才同步显示本站所在国家。
+		// 其他情况下左侧保留 update_info 中配置的城市名称。
+		const ownerCountry = String(configuredHome.country || defaultHomeLocation.country || '').toUpperCase();
+		const ownerCity = configuredHome.localizedNames && configuredHome.localizedNames[language] || configuredHome.name || 'Frankfurt';
+		const ownerPlace = visitorLocation.level === 'country' && ownerCountry
+			? countryName(ownerCountry, language)
+			: ownerCity;
+		const visitorPlace = visitorLocation.place;
 		const ownerLatitude = Number(configuredHome.latitude);
 		const ownerLongitude = Number(configuredHome.longitude);
 		const visitorCoordinates = String(geo && geo.loc || '').split(',').map(Number);
@@ -887,9 +947,8 @@ jQuery(document).ready(function($) {
 		window.setInterval(function () { updateFooterClocks(activeVisitorGeo); }, 1000);
 		getGeo().then(function (geo) {
 			activeVisitorGeo = geo;
-			updateVisitorFooter(geo);
-			// 城市词典是可选的增强数据；加载完成后以本地化城市名刷新一次。
-			loadCityNameDictionary().then(function () { updateFooterClocks(activeVisitorGeo); });
+			// 先读取地点词典，避免页脚短暂显示未翻译的城市名称后再跳变。
+			loadCityNameDictionary().then(function () { updateVisitorFooter(activeVisitorGeo); });
 		}).catch(function () {});
 	});
 })();

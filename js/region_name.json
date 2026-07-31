@@ -1,0 +1,4772 @@
+{
+  "CN": {
+    "Anhui": {
+      "aliases": [
+        "AH"
+      ],
+      "ZH-CN": "安徽",
+      "ZH-TW": "安徽",
+      "EN": "Anhui",
+      "DE": "Anhui",
+      "FR": "Anhui",
+      "IT": "Anhui",
+      "ES": "Anhui",
+      "JA": "安徽省",
+      "KO": "안후이 성",
+      "TH": "มณฑลอานฮุย",
+      "VI": "An Huy",
+      "RU": "Аньхой",
+      "AR": "آنهوي"
+    },
+    "Beijing": {
+      "aliases": [
+        "BJ",
+        "Peking"
+      ],
+      "ZH-CN": "北京",
+      "ZH-TW": "北京",
+      "EN": "Beijing",
+      "DE": "Peking",
+      "FR": "Pékin",
+      "IT": "Pechino",
+      "ES": "Pekín",
+      "JA": "北京市",
+      "KO": "베이징",
+      "TH": "ปักกิ่ง",
+      "VI": "Bắc Kinh",
+      "RU": "Пекин",
+      "AR": "بكين"
+    },
+    "Chongqing": {
+      "aliases": [
+        "CQ"
+      ],
+      "ZH-CN": "重庆",
+      "ZH-TW": "重慶",
+      "EN": "Chongqing",
+      "DE": "Chongqing",
+      "FR": "Chongqing",
+      "IT": "Chongqing",
+      "ES": "Chongqing",
+      "JA": "重慶市",
+      "KO": "충칭",
+      "TH": "ฉงชิ่ง",
+      "VI": "Trùng Khánh",
+      "RU": "Чунцин",
+      "AR": "تشونغتشينغ"
+    },
+    "Fujian": {
+      "aliases": [
+        "FJ"
+      ],
+      "ZH-CN": "福建",
+      "ZH-TW": "福建",
+      "EN": "Fujian",
+      "DE": "Fujian",
+      "FR": "Fujian",
+      "IT": "Fujian",
+      "ES": "Fujian",
+      "JA": "福建省",
+      "KO": "푸젠 성",
+      "TH": "มณฑลฝูเจี้ยน",
+      "VI": "Phúc Kiến",
+      "RU": "Фуцзянь",
+      "AR": "فوجيان"
+    },
+    "Guangdong": {
+      "aliases": [
+        "GD"
+      ],
+      "ZH-CN": "广东",
+      "ZH-TW": "廣東",
+      "EN": "Guangdong",
+      "DE": "Guangdong",
+      "FR": "Guangdong",
+      "IT": "Guangdong",
+      "ES": "Cantón",
+      "JA": "広東省",
+      "KO": "광둥 성",
+      "TH": "มณฑลกวางตุ้ง",
+      "VI": "Quảng Đông",
+      "RU": "Гуандун",
+      "AR": "غوانغدونغ"
+    },
+    "Gansu": {
+      "aliases": [
+        "GS"
+      ],
+      "ZH-CN": "甘肃",
+      "ZH-TW": "甘肅",
+      "EN": "Gansu",
+      "DE": "Gansu",
+      "FR": "Gansu",
+      "IT": "Gansu",
+      "ES": "Gansu",
+      "JA": "甘粛省",
+      "KO": "간쑤 성",
+      "TH": "มณฑลกานซู่",
+      "VI": "Cam Túc",
+      "RU": "Ганьсу",
+      "AR": "قانسو"
+    },
+    "Guangxi": {
+      "aliases": [
+        "GX"
+      ],
+      "ZH-CN": "广西",
+      "ZH-TW": "廣西",
+      "EN": "Guangxi",
+      "DE": "Guangxi",
+      "FR": "Guangxi",
+      "IT": "Guangxi",
+      "ES": "Guangxi",
+      "JA": "広西",
+      "KO": "광시",
+      "TH": "กว่างซีจ้วง",
+      "VI": "Quảng Tây",
+      "RU": "Гуанси",
+      "AR": "قوانغشي"
+    },
+    "Guizhou": {
+      "aliases": [
+        "GZ"
+      ],
+      "ZH-CN": "贵",
+      "ZH-TW": "貴",
+      "EN": "Guizhou",
+      "DE": "Guizhou",
+      "FR": "Guizhou",
+      "IT": "Guizhou",
+      "ES": "Guizhou",
+      "JA": "貴州省",
+      "KO": "구이저우 성",
+      "TH": "มณฑลกุ้ยโจว",
+      "VI": "Quý Châu",
+      "RU": "Гуйчжоу",
+      "AR": "قويتشو"
+    },
+    "Henan": {
+      "aliases": [
+        "HA"
+      ],
+      "ZH-CN": "河南",
+      "ZH-TW": "河南",
+      "EN": "Henan",
+      "DE": "Henan",
+      "FR": "Henan",
+      "IT": "Henan",
+      "ES": "Henan",
+      "JA": "河南省",
+      "KO": "허난 성",
+      "TH": "มณฑลเหอหนาน",
+      "VI": "Hà Nam",
+      "RU": "Хэнань",
+      "AR": "خنان"
+    },
+    "Hubei": {
+      "aliases": [
+        "HB"
+      ],
+      "ZH-CN": "湖北",
+      "ZH-TW": "湖北",
+      "EN": "Hubei",
+      "DE": "Hubei",
+      "FR": "Hubei",
+      "IT": "Hubei",
+      "ES": "Hubei",
+      "JA": "湖北省",
+      "KO": "후베이 성",
+      "TH": "มณฑลหูเป่ย์",
+      "VI": "Hồ Bắc",
+      "RU": "Хубэй",
+      "AR": "خوبي"
+    },
+    "Hebei": {
+      "aliases": [
+        "HE"
+      ],
+      "ZH-CN": "河北",
+      "ZH-TW": "河北",
+      "EN": "Hebei",
+      "DE": "Hebei",
+      "FR": "Hebei",
+      "IT": "Hebei",
+      "ES": "Hebei",
+      "JA": "河北省",
+      "KO": "허베이 성",
+      "TH": "มณฑลเหอเป่ย์",
+      "VI": "Hà Bắc",
+      "RU": "Хэбэй",
+      "AR": "خبي"
+    },
+    "Hainan": {
+      "aliases": [
+        "HI"
+      ],
+      "ZH-CN": "海南",
+      "ZH-TW": "海南",
+      "EN": "Hainan",
+      "DE": "Hainan",
+      "FR": "Hainan",
+      "IT": "Hainan",
+      "ES": "Hainan",
+      "JA": "海南省",
+      "KO": "하이난 성",
+      "TH": "มณฑลไหหลำ",
+      "VI": "Hải Nam",
+      "RU": "Хайнань",
+      "AR": "هاينان"
+    },
+    "Hong Kong": {
+      "aliases": [
+        "HK",
+        "Hongkong"
+      ],
+      "ZH-CN": "香港",
+      "ZH-TW": "香港",
+      "EN": "Hong Kong",
+      "DE": "Hongkong",
+      "FR": "Hong Kong",
+      "IT": "Hong Kong",
+      "ES": "Hong Kong",
+      "JA": "香港",
+      "KO": "홍콩",
+      "TH": "เขตบริหารพิเศษฮ่องกง",
+      "VI": "Hồng Kông",
+      "RU": "Гонконг",
+      "AR": "هونغ كونغ"
+    },
+    "Heilongjiang": {
+      "aliases": [
+        "HL"
+      ],
+      "ZH-CN": "黑龙江",
+      "ZH-TW": "黑龍江",
+      "EN": "Heilongjiang",
+      "DE": "Heilongjiang",
+      "FR": "Heilongjiang",
+      "IT": "Heilongjiang",
+      "ES": "Heilongjiang",
+      "JA": "黒竜江省",
+      "KO": "헤이룽장 성",
+      "TH": "มณฑลเฮย์หลงเจียง",
+      "VI": "Hắc Long Giang",
+      "RU": "Хэйлунцзян",
+      "AR": "هيلونغجيانغ"
+    },
+    "Hunan": {
+      "aliases": [
+        "HN"
+      ],
+      "ZH-CN": "湖南",
+      "ZH-TW": "湖南",
+      "EN": "Hunan",
+      "DE": "Hunan",
+      "FR": "Hunan",
+      "IT": "Hunan",
+      "ES": "Hunan",
+      "JA": "湖南省",
+      "KO": "후난 성",
+      "TH": "มณฑลหูหนาน",
+      "VI": "Hồ Nam",
+      "RU": "Хунань",
+      "AR": "خونان"
+    },
+    "Jilin": {
+      "aliases": [
+        "JL"
+      ],
+      "ZH-CN": "吉林",
+      "ZH-TW": "吉林",
+      "EN": "Jilin",
+      "DE": "Jilin",
+      "FR": "Jilin",
+      "IT": "Jilin",
+      "ES": "Jilin",
+      "JA": "吉林省",
+      "KO": "지린 성",
+      "TH": "มณฑลจี๋หลิน",
+      "VI": "Cát Lâm",
+      "RU": "Гирин",
+      "AR": "جيلين"
+    },
+    "Jiangsu": {
+      "aliases": [
+        "JS"
+      ],
+      "ZH-CN": "江苏",
+      "ZH-TW": "江蘇",
+      "EN": "Jiangsu",
+      "DE": "Jiangsu",
+      "FR": "Jiangsu",
+      "IT": "Jiangsu",
+      "ES": "Jiangsu",
+      "JA": "江蘇省",
+      "KO": "장쑤 성",
+      "TH": "มณฑลเจียงซู",
+      "VI": "Giang Tô",
+      "RU": "Цзянсу",
+      "AR": "جيانغسو"
+    },
+    "Jiangxi": {
+      "aliases": [
+        "JX"
+      ],
+      "ZH-CN": "江西",
+      "ZH-TW": "江西",
+      "EN": "Jiangxi",
+      "DE": "Jiangxi",
+      "FR": "Jiangxi",
+      "IT": "Jiangxi",
+      "ES": "Jiangxi",
+      "JA": "江西省",
+      "KO": "장시 성",
+      "TH": "มณฑลเจียงซี",
+      "VI": "Giang Tây",
+      "RU": "Цзянси",
+      "AR": "جيانغشي"
+    },
+    "Liaoning": {
+      "aliases": [
+        "LN"
+      ],
+      "ZH-CN": "辽宁",
+      "ZH-TW": "遼寧",
+      "EN": "Liaoning",
+      "DE": "Liaoning",
+      "FR": "Liaoning",
+      "IT": "Liaoning",
+      "ES": "Liaoning",
+      "JA": "遼寧省",
+      "KO": "랴오닝 성",
+      "TH": "มณฑลเหลียวหนิง",
+      "VI": "Liêu Ninh",
+      "RU": "Ляонин",
+      "AR": "لياونينغ"
+    },
+    "Macau": {
+      "aliases": [
+        "MO"
+      ],
+      "ZH-CN": "澳門",
+      "ZH-TW": "澳門",
+      "EN": "Macau",
+      "DE": "Macau",
+      "FR": "Macao",
+      "IT": "Macao",
+      "ES": "Macao",
+      "JA": "マカオ",
+      "KO": "마카오",
+      "TH": "มาเก๊า",
+      "VI": "Ma Cao",
+      "RU": "Макао",
+      "AR": "ماكاو"
+    },
+    "Inner Mongolia": {
+      "aliases": [
+        "NM",
+        "Innere Mongolei"
+      ],
+      "ZH-CN": "内蒙古",
+      "ZH-TW": "內蒙古",
+      "EN": "Inner Mongolia",
+      "DE": "Innere Mongolei",
+      "FR": "Mongolie-Intérieure",
+      "IT": "Mongolia Interna",
+      "ES": "Mongolia Interior",
+      "JA": "内モンゴル",
+      "KO": "내몽골",
+      "TH": "มองโกเลียใน",
+      "VI": "Nội Mông",
+      "RU": "Внутренняя Монголия",
+      "AR": "منغوليا الداخلية"
+    },
+    "Ningxia": {
+      "aliases": [
+        "NX"
+      ],
+      "ZH-CN": "宁夏",
+      "ZH-TW": "寧夏",
+      "EN": "Ningxia",
+      "DE": "Ningxia",
+      "FR": "Níngxià",
+      "IT": "Ningsia",
+      "ES": "Ningxia",
+      "JA": "寧夏",
+      "KO": "닝샤",
+      "TH": "หนิงเซี่ยหุย",
+      "VI": "Ninh Hạ",
+      "RU": "Нинся",
+      "AR": "نينغشيا"
+    },
+    "Qinghai": {
+      "aliases": [
+        "QH"
+      ],
+      "ZH-CN": "青海",
+      "ZH-TW": "青海",
+      "EN": "Qinghai",
+      "DE": "Qinghai",
+      "FR": "Qinghai",
+      "IT": "Qinghai",
+      "ES": "Qinghai",
+      "JA": "青海省",
+      "KO": "칭하이 성",
+      "TH": "มณฑลชิงไห่",
+      "VI": "Thanh Hải",
+      "RU": "Цинхай",
+      "AR": "تشينغهاي"
+    },
+    "Sichuan": {
+      "aliases": [
+        "SC"
+      ],
+      "ZH-CN": "四川",
+      "ZH-TW": "四川",
+      "EN": "Sichuan",
+      "DE": "Sichuan",
+      "FR": "Sichuan",
+      "IT": "Sichuan",
+      "ES": "Sichuan",
+      "JA": "四川省",
+      "KO": "쓰촨 성",
+      "TH": "มณฑลเสฉวน",
+      "VI": "Tứ Xuyên",
+      "RU": "Сычуань",
+      "AR": "سيتشوان"
+    },
+    "Shandong": {
+      "aliases": [
+        "SD"
+      ],
+      "ZH-CN": "山东",
+      "ZH-TW": "山東",
+      "EN": "Shandong",
+      "DE": "Shandong",
+      "FR": "Shandong",
+      "IT": "Shandong",
+      "ES": "Shandong",
+      "JA": "山東省",
+      "KO": "산둥 성",
+      "TH": "มณฑลซานตง",
+      "VI": "Sơn Đông",
+      "RU": "Шаньдун",
+      "AR": "شاندونغ"
+    },
+    "Shanghai": {
+      "aliases": [
+        "SH"
+      ],
+      "ZH-CN": "上海",
+      "ZH-TW": "上海",
+      "EN": "Shanghai",
+      "DE": "Shanghai",
+      "FR": "Shanghai",
+      "IT": "Shanghai",
+      "ES": "Shanghái",
+      "JA": "上海市",
+      "KO": "상하이",
+      "TH": "เซี่ยงไฮ้",
+      "VI": "Thượng Hải",
+      "RU": "Шанхай",
+      "AR": "شانغهاي"
+    },
+    "Shaanxi": {
+      "aliases": [
+        "SN"
+      ],
+      "ZH-CN": "陕西",
+      "ZH-TW": "陝西",
+      "EN": "Shaanxi",
+      "DE": "Shaanxi",
+      "FR": "Shaanxi",
+      "IT": "Shaanxi",
+      "ES": "Shaanxi",
+      "JA": "陝西省",
+      "KO": "산시 성²",
+      "TH": "มณฑลส่านซี",
+      "VI": "Thiểm Tây",
+      "RU": "Шэньси",
+      "AR": "شنشي"
+    },
+    "Shanxi": {
+      "aliases": [
+        "SX"
+      ],
+      "ZH-CN": "山西",
+      "ZH-TW": "山西",
+      "EN": "Shanxi",
+      "DE": "Shanxi",
+      "FR": "Shanxi",
+      "IT": "Shanxi",
+      "ES": "Shanxi",
+      "JA": "山西省",
+      "KO": "산시 성",
+      "TH": "มณฑลซานซี",
+      "VI": "Sơn Tây",
+      "RU": "Шаньси",
+      "AR": "شانسي"
+    },
+    "Tianjin": {
+      "aliases": [
+        "TJ"
+      ],
+      "ZH-CN": "天津",
+      "ZH-TW": "天津",
+      "EN": "Tianjin",
+      "DE": "Tianjin",
+      "FR": "Tianjin",
+      "IT": "Tientsin",
+      "ES": "Tianjin",
+      "JA": "天津市",
+      "KO": "톈진",
+      "TH": "เทียนจิน",
+      "VI": "Thiên Tân",
+      "RU": "Тяньцзинь",
+      "AR": "تيانجين"
+    },
+    "Taiwan": {
+      "aliases": [
+        "TW",
+        "Provinz Taiwan"
+      ],
+      "ZH-CN": "台湾 (中华人民)",
+      "ZH-TW": "台灣 (中華人民)",
+      "EN": "Taiwan",
+      "DE": "Provinz Taiwan",
+      "FR": "Taiwan",
+      "IT": "Taiwan (Repubblica Popolare Cinese)",
+      "ES": "Taiwán",
+      "JA": "台湾省",
+      "KO": "타이완성",
+      "TH": "มณฑลไต้หวัน",
+      "VI": "Đài Loan",
+      "RU": "Тайвань",
+      "AR": "تايوان، جمهورية الصين الشعبية"
+    },
+    "Xinjiang": {
+      "aliases": [
+        "XJ"
+      ],
+      "ZH-CN": "新疆",
+      "ZH-TW": "新疆",
+      "EN": "Xinjiang",
+      "DE": "Xinjiang",
+      "FR": "Xinjiang",
+      "IT": "Sinkiang",
+      "ES": "Sinkiang",
+      "JA": "新疆ウイグル",
+      "KO": "신장 위구르",
+      "TH": "ซินเจียงอุยกูร์",
+      "VI": "Tân Cương",
+      "RU": "Синьцзян",
+      "AR": "سنجان"
+    },
+    "Tibet": {
+      "aliases": [
+        "XZ",
+        "Autonomes Gebiet Tibet"
+      ],
+      "ZH-CN": "西藏",
+      "ZH-TW": "西藏",
+      "EN": "Tibet",
+      "DE": "Autonomes Gebiet Tibet",
+      "FR": "Région autonome du Tibet",
+      "IT": "autonoma del Tibet",
+      "ES": "Tíbet",
+      "JA": "チベット",
+      "KO": "티베트",
+      "TH": "ทิเบต",
+      "VI": "Khu tự trị Tây Tạng",
+      "RU": "Тибетский",
+      "AR": "منطقة التبت ذاتية الحكم"
+    },
+    "Yunnan": {
+      "aliases": [
+        "YN"
+      ],
+      "ZH-CN": "云南",
+      "ZH-TW": "雲南",
+      "EN": "Yunnan",
+      "DE": "Yunnan",
+      "FR": "Yunnan",
+      "IT": "Yunnan",
+      "ES": "Yunnan",
+      "JA": "雲南省",
+      "KO": "윈난 성",
+      "TH": "มณฑลยูนนาน",
+      "VI": "Vân Nam",
+      "RU": "Юньнань",
+      "AR": "يونان"
+    },
+    "Zhejiang": {
+      "aliases": [
+        "ZJ"
+      ],
+      "ZH-CN": "浙江",
+      "ZH-TW": "浙江",
+      "EN": "Zhejiang",
+      "DE": "Zhejiang",
+      "FR": "Zhejiang",
+      "IT": "Zhejiang",
+      "ES": "Zhejiang",
+      "JA": "浙江省",
+      "KO": "저장 성",
+      "TH": "มณฑลเจ้อเจียง",
+      "VI": "Chiết Giang",
+      "RU": "Чжэцзян",
+      "AR": "تشيجيانغ"
+    }
+  },
+  "DE": {
+    "Brandenburg": {
+      "aliases": [
+        "BB"
+      ],
+      "ZH-CN": "勃兰登堡",
+      "ZH-TW": "勃蘭登堡",
+      "EN": "Brandenburg",
+      "DE": "Brandenburg",
+      "FR": "Brandebourg",
+      "IT": "Brandeburgo",
+      "ES": "Brandeburgo",
+      "JA": "ブランデンブルク",
+      "KO": "브란덴부르크",
+      "TH": "บรันเดินบวร์ค",
+      "VI": "Brandenburg",
+      "RU": "Бранденбург",
+      "AR": "براندنبورغ"
+    },
+    "Berlin": {
+      "aliases": [
+        "BE"
+      ],
+      "ZH-CN": "柏林",
+      "ZH-TW": "柏林",
+      "EN": "Berlin",
+      "DE": "Berlin",
+      "FR": "Berlin",
+      "IT": "Berlino",
+      "ES": "Berlín",
+      "JA": "ベルリン",
+      "KO": "베를린",
+      "TH": "เบอร์ลิน",
+      "VI": "Berlin",
+      "RU": "Берлин",
+      "AR": "برلين"
+    },
+    "Baden-Württemberg": {
+      "aliases": [
+        "BW"
+      ],
+      "ZH-CN": "巴登－符腾堡",
+      "ZH-TW": "巴登－符騰堡",
+      "EN": "Baden-Württemberg",
+      "DE": "Baden-Württemberg",
+      "FR": "Bade-Wurtemberg",
+      "IT": "Baden-Württemberg",
+      "ES": "Baden-Wurtemberg",
+      "JA": "Baden-Württemberg",
+      "KO": "바덴뷔르템베르크",
+      "TH": "บาเดิน-เวือร์ทเทิมแบร์ค",
+      "VI": "Baden-Württemberg",
+      "RU": "Баден-Вюртемберг",
+      "AR": "بادن-فورتمبيرغ"
+    },
+    "Bavaria": {
+      "aliases": [
+        "BY",
+        "Bayern"
+      ],
+      "ZH-CN": "巴伐利亚",
+      "ZH-TW": "巴伐利亞",
+      "EN": "Bavaria",
+      "DE": "Bayern",
+      "FR": "Bavière",
+      "IT": "Baviera",
+      "ES": "Baviera",
+      "JA": "バイエルン",
+      "KO": "바이에른",
+      "TH": "บาวาเรีย",
+      "VI": "Bayern",
+      "RU": "Бавария",
+      "AR": "بافاريا"
+    },
+    "Bremen": {
+      "aliases": [
+        "HB"
+      ],
+      "ZH-CN": "不來梅",
+      "ZH-TW": "不來梅",
+      "EN": "Bremen",
+      "DE": "Bremen",
+      "FR": "Brême",
+      "IT": "Brema",
+      "ES": "Bremen",
+      "JA": "ブレーメン",
+      "KO": "브레멘",
+      "TH": "เบรเมิน",
+      "VI": "Bremen",
+      "RU": "Бремен",
+      "AR": "بريمن"
+    },
+    "Hesse": {
+      "aliases": [
+        "HE",
+        "Hessen"
+      ],
+      "ZH-CN": "黑森",
+      "ZH-TW": "黑森",
+      "EN": "Hesse",
+      "DE": "Hessen",
+      "FR": "Hesse",
+      "IT": "Assia",
+      "ES": "Hasse",
+      "JA": "ヘッセン",
+      "KO": "헤센",
+      "TH": "เฮ็สเซิน",
+      "VI": "Hessen",
+      "RU": "Гессен",
+      "AR": "هسن"
+    },
+    "Hamburg": {
+      "aliases": [
+        "HH"
+      ],
+      "ZH-CN": "汉堡",
+      "ZH-TW": "漢堡",
+      "EN": "Hamburg",
+      "DE": "Hamburg",
+      "FR": "Hambourg",
+      "IT": "Amburgo",
+      "ES": "Hamburgo",
+      "JA": "ハンブルク",
+      "KO": "함부르크",
+      "TH": "ฮัมบวร์ค",
+      "VI": "Hamburg",
+      "RU": "Гамбург",
+      "AR": "هامبورغ"
+    },
+    "Mecklenburg-Vorpommern": {
+      "aliases": [
+        "MV"
+      ],
+      "ZH-CN": "梅克伦堡－前波美拉尼亚",
+      "ZH-TW": "梅克倫堡－前波美拉尼亞",
+      "EN": "Mecklenburg-Vorpommern",
+      "DE": "Mecklenburg-Vorpommern",
+      "FR": "Mecklembourg-Poméranie-Occidentale",
+      "IT": "Meclemburgo-Pomerania Anteriore",
+      "ES": "Mecklemburgo-Pomerania Occidental",
+      "JA": "Mecklenburg-Vorpommern",
+      "KO": "메클렌부르크포어포메른",
+      "TH": "เมคเลินบวร์ค-ฟอร์พ็อมเมิร์น",
+      "VI": "Mecklenburg-Vorpommern",
+      "RU": "Мекленбург-Передняя Померания",
+      "AR": "مكلنبورغ فوربومرن"
+    },
+    "Lower Saxony": {
+      "aliases": [
+        "NI",
+        "Niedersachsen"
+      ],
+      "ZH-CN": "下萨克森",
+      "ZH-TW": "下薩克森",
+      "EN": "Lower Saxony",
+      "DE": "Niedersachsen",
+      "FR": "Basse-Saxe",
+      "IT": "Bassa Sassonia",
+      "ES": "Baja Sajonia",
+      "JA": "ニーダーザクセン",
+      "KO": "니더작센",
+      "TH": "โลว์เออร์แซกโซนี",
+      "VI": "Niedersachsen",
+      "RU": "Нижняя Саксония",
+      "AR": "سكسونيا السفلى"
+    },
+    "North Rhine-Westphalia": {
+      "aliases": [
+        "NW",
+        "Nordrhein-Westfalen"
+      ],
+      "ZH-CN": "北莱茵－威斯特法伦",
+      "ZH-TW": "北萊茵－威斯特法倫",
+      "EN": "North Rhine-Westphalia",
+      "DE": "Nordrhein-Westfalen",
+      "FR": "Rhénanie-du-Nord-Westphalie",
+      "IT": "Renania Settentrionale-Vestfalia",
+      "ES": "Renania del Norte-Westfalia",
+      "JA": "North Rhine-Westphalia",
+      "KO": "노르트라인베스트팔렌",
+      "TH": "นอร์ทไรน์-เว็สท์ฟาเลิน",
+      "VI": "Nordrhein-Westfalen",
+      "RU": "Северный Рейн-Вестфалия",
+      "AR": "شمال الراين-وستفاليا"
+    },
+    "Rhineland-Palatinate": {
+      "aliases": [
+        "RP",
+        "Rheinland-Pfalz"
+      ],
+      "ZH-CN": "莱茵兰－普法尔茨",
+      "ZH-TW": "萊茵蘭－普法爾茨",
+      "EN": "Rhineland-Palatinate",
+      "DE": "Rheinland-Pfalz",
+      "FR": "Rhénanie-Palatinat",
+      "IT": "Renania-Palatinato",
+      "ES": "Renania-Palatinado",
+      "JA": "Rhineland-Palatinate",
+      "KO": "라인란트팔츠",
+      "TH": "ไรน์ลันท์-ฟัลทซ์",
+      "VI": "Rheinland-Pfalz",
+      "RU": "Рейнланд-Пфальц",
+      "AR": "راينلند بالاتينات"
+    },
+    "Schleswig-Holstein": {
+      "aliases": [
+        "SH"
+      ],
+      "ZH-CN": "石勒苏益格-荷尔斯泰因",
+      "ZH-TW": "石勒蘇益格-荷爾斯泰因",
+      "EN": "Schleswig-Holstein",
+      "DE": "Schleswig-Holstein",
+      "FR": "Schleswig-Holstein",
+      "IT": "Schleswig-Holstein",
+      "ES": "Schleswig-Holstein",
+      "JA": "Schleswig-Holstein",
+      "KO": "슐레스비히홀슈타인",
+      "TH": "ชเลสวิช-ฮ็อลชไตน์",
+      "VI": "Schleswig-Holstein",
+      "RU": "Шлезвиг-Гольштейн",
+      "AR": "شليسفيغ هولشتاين"
+    },
+    "Saarland": {
+      "aliases": [
+        "SL"
+      ],
+      "ZH-CN": "萨尔",
+      "ZH-TW": "薩爾",
+      "EN": "Saarland",
+      "DE": "Saarland",
+      "FR": "Sarre",
+      "IT": "Saarland",
+      "ES": "Sarre",
+      "JA": "ザールラント",
+      "KO": "자를란트",
+      "TH": "ซาร์ลันท์",
+      "VI": "Saarland",
+      "RU": "Саар",
+      "AR": "سارلاند"
+    },
+    "Saxony": {
+      "aliases": [
+        "SN",
+        "Sachsen"
+      ],
+      "ZH-CN": "萨克森自由",
+      "ZH-TW": "薩克森自由",
+      "EN": "Saxony",
+      "DE": "Sachsen",
+      "FR": "Saxe",
+      "IT": "Sassonia",
+      "ES": "Sajonia",
+      "JA": "ザクセン",
+      "KO": "작센",
+      "TH": "ซัคเซิน",
+      "VI": "Sachsen",
+      "RU": "Саксония",
+      "AR": "ساكسونيا"
+    },
+    "Saxony-Anhalt": {
+      "aliases": [
+        "ST",
+        "Sachsen-Anhalt"
+      ],
+      "ZH-CN": "萨克森－安哈尔特",
+      "ZH-TW": "薩克森－安哈爾特",
+      "EN": "Saxony-Anhalt",
+      "DE": "Sachsen-Anhalt",
+      "FR": "Saxe-Anhalt",
+      "IT": "Sassonia-Anhalt",
+      "ES": "Sajonia-Anhalt",
+      "JA": "Saxony-Anhalt",
+      "KO": "작센안할트",
+      "TH": "แซกโซนี-อันฮัลต์",
+      "VI": "Sachsen-Anhalt",
+      "RU": "Саксония-Анхальт",
+      "AR": "ساكسونيا أنهالت"
+    },
+    "Thuringia": {
+      "aliases": [
+        "TH",
+        "Thüringen"
+      ],
+      "ZH-CN": "图林根",
+      "ZH-TW": "圖林根",
+      "EN": "Thuringia",
+      "DE": "Thüringen",
+      "FR": "Thuringe",
+      "IT": "Turingia",
+      "ES": "Turingia",
+      "JA": "テューリンゲン",
+      "KO": "튀링겐",
+      "TH": "ทือริงเงิน",
+      "VI": "Thüringen",
+      "RU": "Тюрингия",
+      "AR": "تورينغن"
+    }
+  },
+  "JP": {
+    "Hokkaidō": {
+      "aliases": [
+        "01",
+        "Hokkaido"
+      ],
+      "ZH-CN": "北海道",
+      "ZH-TW": "北海道",
+      "EN": "Hokkaidō",
+      "DE": "Hokkaido",
+      "FR": "Hokkaidō",
+      "IT": "Hokkaidō",
+      "ES": "Hokkaidō",
+      "JA": "北海",
+      "KO": "홋카이",
+      "TH": "เกาะฮอกไกโด",
+      "VI": "Hokkaidō",
+      "RU": "Хоккайдо",
+      "AR": "هوكايدو"
+    },
+    "Aomori": {
+      "aliases": [
+        "02"
+      ],
+      "ZH-CN": "青森",
+      "ZH-TW": "青森",
+      "EN": "Aomori",
+      "DE": "Aomori",
+      "FR": "d’Aomori",
+      "IT": "Aomori",
+      "ES": "Aomori",
+      "JA": "青森",
+      "KO": "아오모리",
+      "TH": "อะโอะโมะริ",
+      "VI": "Aomori",
+      "RU": "Аомори",
+      "AR": "آوموري"
+    },
+    "Iwate": {
+      "aliases": [
+        "03"
+      ],
+      "ZH-CN": "岩手",
+      "ZH-TW": "岩手",
+      "EN": "Iwate",
+      "DE": "Iwate",
+      "FR": "d’Iwate",
+      "IT": "Iwate",
+      "ES": "Iwate",
+      "JA": "岩手",
+      "KO": "이와테",
+      "TH": "อิวะเตะ",
+      "VI": "Iwate",
+      "RU": "Иватэ",
+      "AR": "إيواته"
+    },
+    "Miyagi": {
+      "aliases": [
+        "04"
+      ],
+      "ZH-CN": "宮城",
+      "ZH-TW": "宮城",
+      "EN": "Miyagi",
+      "DE": "Miyagi",
+      "FR": "Miyagi",
+      "IT": "Miyagi",
+      "ES": "Miyagi",
+      "JA": "宮城",
+      "KO": "미야기",
+      "TH": "มิยะงิ",
+      "VI": "Miyagi",
+      "RU": "Мияги",
+      "AR": "مياغي"
+    },
+    "Akita": {
+      "aliases": [
+        "05"
+      ],
+      "ZH-CN": "秋田",
+      "ZH-TW": "秋田",
+      "EN": "Akita",
+      "DE": "Akita",
+      "FR": "d’Akita",
+      "IT": "Akita",
+      "ES": "Akita",
+      "JA": "秋田",
+      "KO": "아키타",
+      "TH": "อะกิตะ",
+      "VI": "Akita",
+      "RU": "Акита",
+      "AR": "أكيتا"
+    },
+    "Yamagata": {
+      "aliases": [
+        "06"
+      ],
+      "ZH-CN": "山形",
+      "ZH-TW": "山形",
+      "EN": "Yamagata",
+      "DE": "Yamagata",
+      "FR": "Yamagata",
+      "IT": "Yamagata",
+      "ES": "Yamagata",
+      "JA": "山形",
+      "KO": "야마가타",
+      "TH": "ยะมะงะตะ",
+      "VI": "Yamagata",
+      "RU": "Ямагата",
+      "AR": "ياماغاتا"
+    },
+    "Fukushima": {
+      "aliases": [
+        "07"
+      ],
+      "ZH-CN": "福岛",
+      "ZH-TW": "福島",
+      "EN": "Fukushima",
+      "DE": "Fukushima",
+      "FR": "Fukushima",
+      "IT": "Fukushima",
+      "ES": "Fukushima",
+      "JA": "福島",
+      "KO": "후쿠시마",
+      "TH": "ฟุกุชิมะ",
+      "VI": "Fukushima",
+      "RU": "Фукусима",
+      "AR": "فوكوشيما"
+    },
+    "Ibaraki": {
+      "aliases": [
+        "08"
+      ],
+      "ZH-CN": "茨城",
+      "ZH-TW": "茨城",
+      "EN": "Ibaraki",
+      "DE": "Ibaraki",
+      "FR": "d’Ibaraki",
+      "IT": "Ibaraki",
+      "ES": "Ibaraki",
+      "JA": "茨城",
+      "KO": "이바라키",
+      "TH": "อิบะระกิ",
+      "VI": "Ibaraki",
+      "RU": "Ибараки",
+      "AR": "إيباراكي"
+    },
+    "Tochigi": {
+      "aliases": [
+        "09"
+      ],
+      "ZH-CN": "栃木",
+      "ZH-TW": "栃木",
+      "EN": "Tochigi",
+      "DE": "Tochigi",
+      "FR": "Tochigi",
+      "IT": "Tochigi",
+      "ES": "Tochigi",
+      "JA": "栃木",
+      "KO": "도치기",
+      "TH": "โทะชิงิ",
+      "VI": "Tochigi",
+      "RU": "Тотиги",
+      "AR": "توتشيغي"
+    },
+    "Gunma": {
+      "aliases": [
+        "10"
+      ],
+      "ZH-CN": "群馬",
+      "ZH-TW": "群馬",
+      "EN": "Gunma",
+      "DE": "Gunma",
+      "FR": "Gunma",
+      "IT": "Gunma",
+      "ES": "Gunma",
+      "JA": "群馬",
+      "KO": "군마",
+      "TH": "กุมมะ",
+      "VI": "Gunma",
+      "RU": "Гумма",
+      "AR": "غونما"
+    },
+    "Saitama": {
+      "aliases": [
+        "11"
+      ],
+      "ZH-CN": "埼玉",
+      "ZH-TW": "埼玉",
+      "EN": "Saitama",
+      "DE": "Saitama",
+      "FR": "Saitama",
+      "IT": "Saitama",
+      "ES": "Saitama",
+      "JA": "埼玉",
+      "KO": "사이타마",
+      "TH": "ไซตะมะ",
+      "VI": "Saitama",
+      "RU": "Сайтама",
+      "AR": "سايتاما"
+    },
+    "Chiba": {
+      "aliases": [
+        "12"
+      ],
+      "ZH-CN": "千葉",
+      "ZH-TW": "千葉",
+      "EN": "Chiba",
+      "DE": "Chiba",
+      "FR": "Chiba",
+      "IT": "Chiba",
+      "ES": "Chiba",
+      "JA": "千葉",
+      "KO": "지바",
+      "TH": "ชิบะ",
+      "VI": "Chiba",
+      "RU": "Тиба",
+      "AR": "تشيبا"
+    },
+    "Tokyo": {
+      "aliases": [
+        "13",
+        "Tokio"
+      ],
+      "ZH-CN": "東京都",
+      "ZH-TW": "東京都",
+      "EN": "Tokyo",
+      "DE": "Tokio",
+      "FR": "Tokyo",
+      "IT": "Tokyo",
+      "ES": "Tokio",
+      "JA": "東京",
+      "KO": "도쿄",
+      "TH": "โตเกียว",
+      "VI": "Tokyo",
+      "RU": "Токио",
+      "AR": "طوكيو"
+    },
+    "Kanagawa": {
+      "aliases": [
+        "14"
+      ],
+      "ZH-CN": "神奈川",
+      "ZH-TW": "神奈川",
+      "EN": "Kanagawa",
+      "DE": "Kanagawa",
+      "FR": "Kanagawa",
+      "IT": "Kanagawa",
+      "ES": "Kanagawa",
+      "JA": "神奈川",
+      "KO": "가나가와",
+      "TH": "คะนะงะวะ",
+      "VI": "Kanagawa",
+      "RU": "Канагава",
+      "AR": "كاناغاوا"
+    },
+    "Niigata": {
+      "aliases": [
+        "15"
+      ],
+      "ZH-CN": "新潟",
+      "ZH-TW": "新潟",
+      "EN": "Niigata",
+      "DE": "Niigata",
+      "FR": "Niigata",
+      "IT": "Niigata",
+      "ES": "Niigata",
+      "JA": "新潟",
+      "KO": "니가타",
+      "TH": "นีงะตะ",
+      "VI": "Niigata",
+      "RU": "Ниигата",
+      "AR": "نييغاتا"
+    },
+    "Toyama": {
+      "aliases": [
+        "16"
+      ],
+      "ZH-CN": "富山",
+      "ZH-TW": "富山",
+      "EN": "Toyama",
+      "DE": "Toyama",
+      "FR": "Toyama",
+      "IT": "Toyama",
+      "ES": "Toyama",
+      "JA": "富山",
+      "KO": "도야마",
+      "TH": "โทะยะมะ",
+      "VI": "Toyama",
+      "RU": "Тояма",
+      "AR": "توياما"
+    },
+    "Ishikawa": {
+      "aliases": [
+        "17"
+      ],
+      "ZH-CN": "石川",
+      "ZH-TW": "石川",
+      "EN": "Ishikawa",
+      "DE": "Ishikawa",
+      "FR": "d’Ishikawa",
+      "IT": "Ishikawa",
+      "ES": "Ishikawa",
+      "JA": "石川",
+      "KO": "이시카와",
+      "TH": "อิชิกะวะ",
+      "VI": "Ishikawa",
+      "RU": "Исикава",
+      "AR": "إيشيكاوا"
+    },
+    "Fukui": {
+      "aliases": [
+        "18"
+      ],
+      "ZH-CN": "福井",
+      "ZH-TW": "福井",
+      "EN": "Fukui",
+      "DE": "Fukui",
+      "FR": "Fukui",
+      "IT": "Fukui",
+      "ES": "Fukui",
+      "JA": "福井",
+      "KO": "후쿠이",
+      "TH": "ฟุกุอิ",
+      "VI": "Fukui",
+      "RU": "Фукуи",
+      "AR": "فوكوي"
+    },
+    "Yamanashi": {
+      "aliases": [
+        "19"
+      ],
+      "ZH-CN": "山梨",
+      "ZH-TW": "山梨",
+      "EN": "Yamanashi",
+      "DE": "Yamanashi",
+      "FR": "Yamanashi",
+      "IT": "Yamanashi",
+      "ES": "Yamanashi",
+      "JA": "山梨",
+      "KO": "야마나시",
+      "TH": "ยะมะนะชิ",
+      "VI": "Yamanashi",
+      "RU": "Яманаси",
+      "AR": "ياماناشي"
+    },
+    "Nagano": {
+      "aliases": [
+        "20"
+      ],
+      "ZH-CN": "长野",
+      "ZH-TW": "長野",
+      "EN": "Nagano",
+      "DE": "Nagano",
+      "FR": "Nagano",
+      "IT": "Nagano",
+      "ES": "Nagano",
+      "JA": "長野",
+      "KO": "나가노",
+      "TH": "นะงะโนะ",
+      "VI": "Nagano",
+      "RU": "Нагано",
+      "AR": "ناغانو"
+    },
+    "Gifu": {
+      "aliases": [
+        "21"
+      ],
+      "ZH-CN": "岐阜",
+      "ZH-TW": "岐阜",
+      "EN": "Gifu",
+      "DE": "Gifu",
+      "FR": "Gifu",
+      "IT": "Gifu",
+      "ES": "Gifu",
+      "JA": "岐阜",
+      "KO": "기후",
+      "TH": "กิฟุ",
+      "VI": "Gifu",
+      "RU": "Гифу",
+      "AR": "غيفو"
+    },
+    "Shizuoka": {
+      "aliases": [
+        "22"
+      ],
+      "ZH-CN": "靜岡",
+      "ZH-TW": "靜岡",
+      "EN": "Shizuoka",
+      "DE": "Shizuoka",
+      "FR": "Shizuoka",
+      "IT": "Shizuoka",
+      "ES": "Shizuoka",
+      "JA": "静岡",
+      "KO": "시즈오카",
+      "TH": "ชิซุโอะกะ",
+      "VI": "Shizuoka",
+      "RU": "Сидзуока",
+      "AR": "شيزوكا"
+    },
+    "Aichi": {
+      "aliases": [
+        "23"
+      ],
+      "ZH-CN": "愛知",
+      "ZH-TW": "愛知",
+      "EN": "Aichi",
+      "DE": "Aichi",
+      "FR": "d’Aichi",
+      "IT": "Aichi",
+      "ES": "Aichi",
+      "JA": "愛知",
+      "KO": "아이치",
+      "TH": "ไอชิ",
+      "VI": "Aichi",
+      "RU": "Айти",
+      "AR": "آيتشي"
+    },
+    "Mie": {
+      "aliases": [
+        "24"
+      ],
+      "ZH-CN": "三重",
+      "ZH-TW": "三重",
+      "EN": "Mie",
+      "DE": "Mie",
+      "FR": "Mie",
+      "IT": "Mie",
+      "ES": "Mie",
+      "JA": "三重",
+      "KO": "미에",
+      "TH": "มิเอะ",
+      "VI": "Mie",
+      "RU": "Миэ",
+      "AR": "ميه"
+    },
+    "Shiga": {
+      "aliases": [
+        "25"
+      ],
+      "ZH-CN": "滋贺",
+      "ZH-TW": "滋賀",
+      "EN": "Shiga",
+      "DE": "Shiga",
+      "FR": "Shiga",
+      "IT": "Shiga",
+      "ES": "Shiga",
+      "JA": "滋賀",
+      "KO": "시가",
+      "TH": "ชิงะ",
+      "VI": "Shiga",
+      "RU": "Сига",
+      "AR": "شيغا"
+    },
+    "Kyōto": {
+      "aliases": [
+        "26"
+      ],
+      "ZH-CN": "京都府",
+      "ZH-TW": "京都府",
+      "EN": "Kyōto",
+      "DE": "Kyōto",
+      "FR": "Kyoto",
+      "IT": "Kyoto",
+      "ES": "Kioto",
+      "JA": "京都",
+      "KO": "교토 부",
+      "TH": "เคียวโตะ",
+      "VI": "Kyōto",
+      "RU": "Киото",
+      "AR": "كيوتو"
+    },
+    "Ōsaka": {
+      "aliases": [
+        "27",
+        "Osaka"
+      ],
+      "ZH-CN": "大阪府",
+      "ZH-TW": "大阪府",
+      "EN": "Ōsaka",
+      "DE": "Osaka",
+      "FR": "d’Osaka",
+      "IT": "Osaka",
+      "ES": "Osaka",
+      "JA": "大阪",
+      "KO": "오사카 부",
+      "TH": "โอซะกะ",
+      "VI": "Ōsaka",
+      "RU": "Осака",
+      "AR": "أوساكا"
+    },
+    "Hyōgo": {
+      "aliases": [
+        "28"
+      ],
+      "ZH-CN": "兵库",
+      "ZH-TW": "兵庫",
+      "EN": "Hyōgo",
+      "DE": "Hyōgo",
+      "FR": "Hyōgo",
+      "IT": "Hyōgo",
+      "ES": "Hyōgo",
+      "JA": "兵庫",
+      "KO": "효고",
+      "TH": "เฮียวโงะ",
+      "VI": "Hyōgo",
+      "RU": "Хёго",
+      "AR": "هيوغو"
+    },
+    "Nara": {
+      "aliases": [
+        "29"
+      ],
+      "ZH-CN": "奈良",
+      "ZH-TW": "奈良",
+      "EN": "Nara",
+      "DE": "Nara",
+      "FR": "Nara",
+      "IT": "Nara",
+      "ES": "Nara",
+      "JA": "奈良",
+      "KO": "나라",
+      "TH": "นะระ",
+      "VI": "Nara",
+      "RU": "Нара",
+      "AR": "نارا"
+    },
+    "Wakayama": {
+      "aliases": [
+        "30"
+      ],
+      "ZH-CN": "和歌山",
+      "ZH-TW": "和歌山",
+      "EN": "Wakayama",
+      "DE": "Wakayama",
+      "FR": "Wakayama",
+      "IT": "Wakayama",
+      "ES": "Wakayama",
+      "JA": "和歌山",
+      "KO": "와카야마",
+      "TH": "วะกะยะมะ",
+      "VI": "Wakayama",
+      "RU": "Вакаяма",
+      "AR": "واكاياما"
+    },
+    "Tottori": {
+      "aliases": [
+        "31"
+      ],
+      "ZH-CN": "鳥取",
+      "ZH-TW": "鳥取",
+      "EN": "Tottori",
+      "DE": "Tottori",
+      "FR": "Tottori",
+      "IT": "Tottori",
+      "ES": "Tottori",
+      "JA": "鳥取",
+      "KO": "돗토리",
+      "TH": "ทตโตะริ",
+      "VI": "Tottori",
+      "RU": "Тоттори",
+      "AR": "توتوري"
+    },
+    "Shimane": {
+      "aliases": [
+        "32"
+      ],
+      "ZH-CN": "岛根",
+      "ZH-TW": "島根",
+      "EN": "Shimane",
+      "DE": "Shimane",
+      "FR": "Shimane",
+      "IT": "Shimane",
+      "ES": "Shimane",
+      "JA": "島根",
+      "KO": "시마네",
+      "TH": "ชิมะเนะ",
+      "VI": "Shimane",
+      "RU": "Симане",
+      "AR": "شيمانه"
+    },
+    "Okayama": {
+      "aliases": [
+        "33"
+      ],
+      "ZH-CN": "岡山",
+      "ZH-TW": "岡山",
+      "EN": "Okayama",
+      "DE": "Okayama",
+      "FR": "d’Okayama",
+      "IT": "Okayama",
+      "ES": "Okayama",
+      "JA": "岡山",
+      "KO": "오카야마",
+      "TH": "โอะกะยะมะ",
+      "VI": "Okayama",
+      "RU": "Окаяма",
+      "AR": "أوكاياما"
+    },
+    "Hiroshima": {
+      "aliases": [
+        "34"
+      ],
+      "ZH-CN": "广岛",
+      "ZH-TW": "廣島",
+      "EN": "Hiroshima",
+      "DE": "Hiroshima",
+      "FR": "Hiroshima",
+      "IT": "Hiroshima",
+      "ES": "Hiroshima",
+      "JA": "広島",
+      "KO": "히로시마",
+      "TH": "ฮิโระชิมะ",
+      "VI": "Hiroshima",
+      "RU": "Хиросима",
+      "AR": "هيروشيما"
+    },
+    "Yamaguchi": {
+      "aliases": [
+        "35"
+      ],
+      "ZH-CN": "山口",
+      "ZH-TW": "山口",
+      "EN": "Yamaguchi",
+      "DE": "Yamaguchi",
+      "FR": "Yamaguchi",
+      "IT": "Yamaguchi",
+      "ES": "Yamaguchi",
+      "JA": "山口",
+      "KO": "야마구치",
+      "TH": "ยะมะงุชิ",
+      "VI": "Yamaguchi",
+      "RU": "Ямагути",
+      "AR": "ياماغوتشي"
+    },
+    "Tokushima": {
+      "aliases": [
+        "36"
+      ],
+      "ZH-CN": "德岛",
+      "ZH-TW": "德島",
+      "EN": "Tokushima",
+      "DE": "Tokushima",
+      "FR": "Tokushima",
+      "IT": "Tokushima",
+      "ES": "Tokushima",
+      "JA": "徳島",
+      "KO": "도쿠시마",
+      "TH": "โทะกุชิมะ",
+      "VI": "Tokushima",
+      "RU": "Токусима",
+      "AR": "توكوشيما"
+    },
+    "Kagawa": {
+      "aliases": [
+        "37"
+      ],
+      "ZH-CN": "香川",
+      "ZH-TW": "香川",
+      "EN": "Kagawa",
+      "DE": "Kagawa",
+      "FR": "Kagawa",
+      "IT": "Kagawa",
+      "ES": "Kagawa",
+      "JA": "香川",
+      "KO": "가가와",
+      "TH": "คะงะวะ",
+      "VI": "Kagawa",
+      "RU": "Кагава",
+      "AR": "كاغاوا"
+    },
+    "Ehime": {
+      "aliases": [
+        "38"
+      ],
+      "ZH-CN": "爱媛",
+      "ZH-TW": "愛媛",
+      "EN": "Ehime",
+      "DE": "Ehime",
+      "FR": "d’Ehime",
+      "IT": "Ehime",
+      "ES": "Ehime",
+      "JA": "愛媛",
+      "KO": "에히메",
+      "TH": "เอะฮิเมะ",
+      "VI": "Ehime",
+      "RU": "Эхиме",
+      "AR": "إهيمه"
+    },
+    "Kōchi": {
+      "aliases": [
+        "39"
+      ],
+      "ZH-CN": "高知",
+      "ZH-TW": "高知",
+      "EN": "Kōchi",
+      "DE": "Kōchi",
+      "FR": "Kōchi",
+      "IT": "Kōchi",
+      "ES": "Kōchi",
+      "JA": "高知",
+      "KO": "고치",
+      "TH": "โคชิ",
+      "VI": "Kōchi",
+      "RU": "Коти",
+      "AR": "كوتشي"
+    },
+    "Fukuoka": {
+      "aliases": [
+        "40"
+      ],
+      "ZH-CN": "福冈",
+      "ZH-TW": "福岡",
+      "EN": "Fukuoka",
+      "DE": "Fukuoka",
+      "FR": "Fukuoka",
+      "IT": "Fukuoka",
+      "ES": "Fukuoka",
+      "JA": "福岡",
+      "KO": "후쿠오카",
+      "TH": "ฟุกุโอะกะ",
+      "VI": "Fukuoka",
+      "RU": "Фукуока",
+      "AR": "فوكوكا"
+    },
+    "Saga": {
+      "aliases": [
+        "41"
+      ],
+      "ZH-CN": "佐贺",
+      "ZH-TW": "佐賀",
+      "EN": "Saga",
+      "DE": "Saga",
+      "FR": "Saga",
+      "IT": "Saga",
+      "ES": "Saga",
+      "JA": "佐賀",
+      "KO": "사가",
+      "TH": "ซะงะ",
+      "VI": "Saga",
+      "RU": "Сага",
+      "AR": "ساغا"
+    },
+    "Nagasaki": {
+      "aliases": [
+        "42"
+      ],
+      "ZH-CN": "长崎",
+      "ZH-TW": "長崎",
+      "EN": "Nagasaki",
+      "DE": "Nagasaki",
+      "FR": "Nagasaki",
+      "IT": "Nagasaki",
+      "ES": "Nagasaki",
+      "JA": "長崎",
+      "KO": "나가사키",
+      "TH": "นะงะซะกิ",
+      "VI": "Nagasaki",
+      "RU": "Нагасаки",
+      "AR": "ناغاساكي"
+    },
+    "Kumamoto": {
+      "aliases": [
+        "43"
+      ],
+      "ZH-CN": "熊本",
+      "ZH-TW": "熊本",
+      "EN": "Kumamoto",
+      "DE": "Kumamoto",
+      "FR": "Kumamoto",
+      "IT": "Kumamoto",
+      "ES": "Kumamoto",
+      "JA": "熊本",
+      "KO": "구마모토",
+      "TH": "คุมะโมะโตะ",
+      "VI": "Kumamoto",
+      "RU": "Кумамото",
+      "AR": "كوماموتو"
+    },
+    "Ōita": {
+      "aliases": [
+        "44"
+      ],
+      "ZH-CN": "大分",
+      "ZH-TW": "大分",
+      "EN": "Ōita",
+      "DE": "Ōita",
+      "FR": "d’Ōita",
+      "IT": "Ōita",
+      "ES": "Ōita",
+      "JA": "大分",
+      "KO": "오이타",
+      "TH": "โออิตะ",
+      "VI": "Ōita",
+      "RU": "Оита",
+      "AR": "أويتا"
+    },
+    "Miyazaki": {
+      "aliases": [
+        "45"
+      ],
+      "ZH-CN": "宮崎",
+      "ZH-TW": "宮崎",
+      "EN": "Miyazaki",
+      "DE": "Miyazaki",
+      "FR": "Miyazaki",
+      "IT": "Miyazaki",
+      "ES": "Miyazaki",
+      "JA": "宮崎",
+      "KO": "미야자키",
+      "TH": "มิยะซะกิ",
+      "VI": "Miyazaki",
+      "RU": "Миядзаки",
+      "AR": "ميازاكي"
+    },
+    "Kagoshima": {
+      "aliases": [
+        "46"
+      ],
+      "ZH-CN": "鹿儿岛",
+      "ZH-TW": "鹿兒島",
+      "EN": "Kagoshima",
+      "DE": "Kagoshima",
+      "FR": "Kagoshima",
+      "IT": "Kagoshima",
+      "ES": "Kagoshima",
+      "JA": "鹿児島",
+      "KO": "가고시마",
+      "TH": "คะโงะชิมะ",
+      "VI": "Kagoshima",
+      "RU": "Кагосима",
+      "AR": "كاغوشيما"
+    },
+    "Okinawa": {
+      "aliases": [
+        "47"
+      ],
+      "ZH-CN": "沖繩",
+      "ZH-TW": "沖繩",
+      "EN": "Okinawa",
+      "DE": "Okinawa",
+      "FR": "d’Okinawa",
+      "IT": "Okinawa",
+      "ES": "Okinawa",
+      "JA": "沖縄",
+      "KO": "오키나와",
+      "TH": "โอะกินะวะ",
+      "VI": "Okinawa",
+      "RU": "Окинава",
+      "AR": "أوكيناوا"
+    }
+  },
+  "US": {
+    "Alaska": {
+      "aliases": [
+        "AK"
+      ],
+      "ZH-CN": "阿拉斯加",
+      "ZH-TW": "阿拉斯加",
+      "EN": "Alaska",
+      "DE": "Alaska",
+      "FR": "Alaska",
+      "IT": "Alaska",
+      "ES": "Alaska",
+      "JA": "アラスカ",
+      "KO": "알래스카",
+      "TH": "อะแลสกา",
+      "VI": "Alaska",
+      "RU": "Аляска",
+      "AR": "ألاسكا"
+    },
+    "Alabama": {
+      "aliases": [
+        "AL"
+      ],
+      "ZH-CN": "亚拉巴马",
+      "ZH-TW": "亞拉巴馬",
+      "EN": "Alabama",
+      "DE": "Alabama",
+      "FR": "Alabama",
+      "IT": "Alabama",
+      "ES": "Alabama",
+      "JA": "アラバマ",
+      "KO": "앨라배마",
+      "TH": "แอละแบมา",
+      "VI": "Alabama",
+      "RU": "Алабама",
+      "AR": "ألاباما"
+    },
+    "Arkansas": {
+      "aliases": [
+        "AR"
+      ],
+      "ZH-CN": "阿肯色",
+      "ZH-TW": "阿肯色",
+      "EN": "Arkansas",
+      "DE": "Arkansas",
+      "FR": "Arkansas",
+      "IT": "Arkansas",
+      "ES": "Arkansas",
+      "JA": "アーカンソー",
+      "KO": "아칸소",
+      "TH": "อาร์คันซอ",
+      "VI": "Arkansas",
+      "RU": "Арканзас",
+      "AR": "أركنساس"
+    },
+    "USAS": {
+      "aliases": [
+        "AS"
+      ],
+      "ZH-CN": "USAS",
+      "ZH-TW": "USAS",
+      "EN": "USAS",
+      "DE": "USAS",
+      "FR": "USAS",
+      "IT": "USAS",
+      "ES": "USAS",
+      "JA": "USAS",
+      "KO": "USAS",
+      "TH": "USAS",
+      "VI": "USAS",
+      "RU": "USAS",
+      "AR": "USAS"
+    },
+    "Arizona": {
+      "aliases": [
+        "AZ"
+      ],
+      "ZH-CN": "亞利桑那",
+      "ZH-TW": "亞利桑那",
+      "EN": "Arizona",
+      "DE": "Arizona",
+      "FR": "Arizona",
+      "IT": "Arizona",
+      "ES": "Arizona",
+      "JA": "アリゾナ",
+      "KO": "애리조나",
+      "TH": "แอริโซนา",
+      "VI": "Arizona",
+      "RU": "Аризона",
+      "AR": "أريزونا"
+    },
+    "California": {
+      "aliases": [
+        "CA",
+        "Kalifornien"
+      ],
+      "ZH-CN": "加利福尼亚",
+      "ZH-TW": "加利福尼亞",
+      "EN": "California",
+      "DE": "Kalifornien",
+      "FR": "Californie",
+      "IT": "California",
+      "ES": "California",
+      "JA": "カリフォルニア",
+      "KO": "캘리포니아",
+      "TH": "แคลิฟอร์เนีย",
+      "VI": "California",
+      "RU": "Калифорния",
+      "AR": "كاليفورنيا"
+    },
+    "Colorado": {
+      "aliases": [
+        "CO"
+      ],
+      "ZH-CN": "科羅拉多",
+      "ZH-TW": "科羅拉多",
+      "EN": "Colorado",
+      "DE": "Colorado",
+      "FR": "Colorado",
+      "IT": "Colorado",
+      "ES": "Colorado",
+      "JA": "コロラド",
+      "KO": "콜로라도",
+      "TH": "โคโลราโด",
+      "VI": "Colorado",
+      "RU": "Колорадо",
+      "AR": "كولورادو"
+    },
+    "Connecticut": {
+      "aliases": [
+        "CT"
+      ],
+      "ZH-CN": "康乃狄克",
+      "ZH-TW": "康乃狄克",
+      "EN": "Connecticut",
+      "DE": "Connecticut",
+      "FR": "Connecticut",
+      "IT": "Connecticut",
+      "ES": "Connecticut",
+      "JA": "コネチカット",
+      "KO": "코네티컷",
+      "TH": "คอนเนตทิคัต",
+      "VI": "Connecticut",
+      "RU": "Коннектикут",
+      "AR": "كونيتيكت"
+    },
+    "Washington DC": {
+      "aliases": [
+        "DC",
+        "Washington, D.C."
+      ],
+      "ZH-CN": "華盛頓哥倫比亞特區",
+      "ZH-TW": "華盛頓哥倫比亞特區",
+      "EN": "Washington DC",
+      "DE": "Washington, D.C.",
+      "FR": "Washington",
+      "IT": "Washington",
+      "ES": "Washington D. C.",
+      "JA": "コロンビア特別区",
+      "KO": "Washington DC",
+      "TH": "วอชิงตัน ดี.ซี.",
+      "VI": "Washington",
+      "RU": "Вашингтон",
+      "AR": "واشنطن العاصمة"
+    },
+    "Delaware": {
+      "aliases": [
+        "DE"
+      ],
+      "ZH-CN": "特拉华",
+      "ZH-TW": "特拉華",
+      "EN": "Delaware",
+      "DE": "Delaware",
+      "FR": "Delaware",
+      "IT": "Delaware",
+      "ES": "Delaware",
+      "JA": "デラウェア",
+      "KO": "델라웨어",
+      "TH": "เดลาแวร์",
+      "VI": "Delaware",
+      "RU": "Делавэр",
+      "AR": "ديلاوير"
+    },
+    "Florida": {
+      "aliases": [
+        "FL"
+      ],
+      "ZH-CN": "佛罗里达",
+      "ZH-TW": "佛羅裡達",
+      "EN": "Florida",
+      "DE": "Florida",
+      "FR": "Floride",
+      "IT": "Florida",
+      "ES": "Florida",
+      "JA": "フロリダ",
+      "KO": "플로리다",
+      "TH": "ฟลอริดา",
+      "VI": "Florida",
+      "RU": "Флорида",
+      "AR": "فلوريدا"
+    },
+    "Georgia": {
+      "aliases": [
+        "GA"
+      ],
+      "ZH-CN": "喬治亞",
+      "ZH-TW": "喬治亞",
+      "EN": "Georgia",
+      "DE": "Georgia",
+      "FR": "Géorgie",
+      "IT": "Georgia",
+      "ES": "Georgia",
+      "JA": "ジョージア",
+      "KO": "조지아",
+      "TH": "จอร์เจีย",
+      "VI": "Georgia",
+      "RU": "Джорджия",
+      "AR": "جورجيا"
+    },
+    "USGU": {
+      "aliases": [
+        "GU"
+      ],
+      "ZH-CN": "USGU",
+      "ZH-TW": "USGU",
+      "EN": "USGU",
+      "DE": "USGU",
+      "FR": "USGU",
+      "IT": "USGU",
+      "ES": "USGU",
+      "JA": "USGU",
+      "KO": "USGU",
+      "TH": "USGU",
+      "VI": "USGU",
+      "RU": "USGU",
+      "AR": "USGU"
+    },
+    "Hawaii": {
+      "aliases": [
+        "HI"
+      ],
+      "ZH-CN": "夏威夷",
+      "ZH-TW": "夏威夷",
+      "EN": "Hawaii",
+      "DE": "Hawaii",
+      "FR": "Hawaï",
+      "IT": "Hawaii",
+      "ES": "Hawái",
+      "JA": "ハワイ",
+      "KO": "하와이",
+      "TH": "ฮาวาย",
+      "VI": "Hawaii",
+      "RU": "Гавайи",
+      "AR": "هاواي"
+    },
+    "Iowa": {
+      "aliases": [
+        "IA"
+      ],
+      "ZH-CN": "艾奥瓦",
+      "ZH-TW": "艾奧瓦",
+      "EN": "Iowa",
+      "DE": "Iowa",
+      "FR": "Iowa",
+      "IT": "Iowa",
+      "ES": "Iowa",
+      "JA": "アイオワ",
+      "KO": "아이오와",
+      "TH": "ไอโอวา",
+      "VI": "Iowa",
+      "RU": "Айова",
+      "AR": "آيوا"
+    },
+    "Idaho": {
+      "aliases": [
+        "ID"
+      ],
+      "ZH-CN": "爱达荷",
+      "ZH-TW": "愛達荷",
+      "EN": "Idaho",
+      "DE": "Idaho",
+      "FR": "Idaho",
+      "IT": "Idaho",
+      "ES": "Idaho",
+      "JA": "アイダホ",
+      "KO": "아이다호",
+      "TH": "ไอดาโฮ",
+      "VI": "Idaho",
+      "RU": "Айдахо",
+      "AR": "أيداهو"
+    },
+    "Illinois": {
+      "aliases": [
+        "IL"
+      ],
+      "ZH-CN": "伊利诺伊",
+      "ZH-TW": "伊利諾伊",
+      "EN": "Illinois",
+      "DE": "Illinois",
+      "FR": "Illinois",
+      "IT": "Illinois",
+      "ES": "Illinois",
+      "JA": "イリノイ",
+      "KO": "일리노이",
+      "TH": "อิลลินอยส์",
+      "VI": "Illinois",
+      "RU": "Иллинойс",
+      "AR": "إلينوي"
+    },
+    "Indiana": {
+      "aliases": [
+        "IN"
+      ],
+      "ZH-CN": "印第安纳",
+      "ZH-TW": "印第安納",
+      "EN": "Indiana",
+      "DE": "Indiana",
+      "FR": "Indiana",
+      "IT": "Indiana",
+      "ES": "Indiana",
+      "JA": "インディアナ",
+      "KO": "인디애나",
+      "TH": "อินดีแอนา",
+      "VI": "Indiana",
+      "RU": "Индиана",
+      "AR": "إنديانا"
+    },
+    "Kansas": {
+      "aliases": [
+        "KS"
+      ],
+      "ZH-CN": "堪薩斯",
+      "ZH-TW": "堪薩斯",
+      "EN": "Kansas",
+      "DE": "Kansas",
+      "FR": "Kansas",
+      "IT": "Kansas",
+      "ES": "Kansas",
+      "JA": "カンザス",
+      "KO": "캔자스",
+      "TH": "แคนซัส",
+      "VI": "Kansas",
+      "RU": "Канзас",
+      "AR": "كانساس"
+    },
+    "Kentucky": {
+      "aliases": [
+        "KY"
+      ],
+      "ZH-CN": "肯塔基",
+      "ZH-TW": "肯塔基",
+      "EN": "Kentucky",
+      "DE": "Kentucky",
+      "FR": "Kentucky",
+      "IT": "Kentucky",
+      "ES": "Kentucky",
+      "JA": "ケンタッキー",
+      "KO": "켄터키",
+      "TH": "เคนทักกี",
+      "VI": "Kentucky",
+      "RU": "Кентукки",
+      "AR": "كنتاكي"
+    },
+    "Louisiana": {
+      "aliases": [
+        "LA"
+      ],
+      "ZH-CN": "路易斯安那",
+      "ZH-TW": "路易斯安那",
+      "EN": "Louisiana",
+      "DE": "Louisiana",
+      "FR": "Louisiane",
+      "IT": "Louisiana",
+      "ES": "Luisiana",
+      "JA": "ルイジアナ",
+      "KO": "루이지애나",
+      "TH": "ลุยเซียนา",
+      "VI": "Louisiana",
+      "RU": "Луизиана",
+      "AR": "لويزيانا"
+    },
+    "Massachusetts": {
+      "aliases": [
+        "MA"
+      ],
+      "ZH-CN": "麻薩諸塞",
+      "ZH-TW": "麻薩諸塞",
+      "EN": "Massachusetts",
+      "DE": "Massachusetts",
+      "FR": "Massachusetts",
+      "IT": "Massachusetts",
+      "ES": "Massachusetts",
+      "JA": "マサチューセッツ",
+      "KO": "매사추세츠",
+      "TH": "แมสซาชูเซตส์",
+      "VI": "Massachusetts",
+      "RU": "Массачусетс",
+      "AR": "ماساتشوستس"
+    },
+    "Maryland": {
+      "aliases": [
+        "MD"
+      ],
+      "ZH-CN": "马里兰",
+      "ZH-TW": "馬裡蘭",
+      "EN": "Maryland",
+      "DE": "Maryland",
+      "FR": "Maryland",
+      "IT": "Maryland",
+      "ES": "Maryland",
+      "JA": "メリーランド",
+      "KO": "메릴랜드",
+      "TH": "แมริแลนด์",
+      "VI": "Maryland",
+      "RU": "Мэриленд",
+      "AR": "ماريلند"
+    },
+    "Maine": {
+      "aliases": [
+        "ME"
+      ],
+      "ZH-CN": "缅因",
+      "ZH-TW": "緬因",
+      "EN": "Maine",
+      "DE": "Maine",
+      "FR": "Maine",
+      "IT": "Maine",
+      "ES": "Maine",
+      "JA": "メイン",
+      "KO": "메인",
+      "TH": "เมน",
+      "VI": "Maine",
+      "RU": "Мэн",
+      "AR": "مين"
+    },
+    "Michigan": {
+      "aliases": [
+        "MI"
+      ],
+      "ZH-CN": "密歇根",
+      "ZH-TW": "密歇根",
+      "EN": "Michigan",
+      "DE": "Michigan",
+      "FR": "Michigan",
+      "IT": "Michigan",
+      "ES": "Míchigan",
+      "JA": "ミシガン",
+      "KO": "미시간",
+      "TH": "มิชิแกน",
+      "VI": "Michigan",
+      "RU": "Мичиган",
+      "AR": "ميشيغان"
+    },
+    "Minnesota": {
+      "aliases": [
+        "MN"
+      ],
+      "ZH-CN": "明尼蘇達",
+      "ZH-TW": "明尼蘇達",
+      "EN": "Minnesota",
+      "DE": "Minnesota",
+      "FR": "Minnesota",
+      "IT": "Minnesota",
+      "ES": "Minnesota",
+      "JA": "ミネソタ",
+      "KO": "미네소타",
+      "TH": "มินนิโซตา",
+      "VI": "Minnesota",
+      "RU": "Миннесота",
+      "AR": "مينيسوتا"
+    },
+    "Missouri": {
+      "aliases": [
+        "MO"
+      ],
+      "ZH-CN": "密蘇里",
+      "ZH-TW": "密蘇裡",
+      "EN": "Missouri",
+      "DE": "Missouri",
+      "FR": "Missouri",
+      "IT": "Missouri",
+      "ES": "Misuri",
+      "JA": "ミズーリ",
+      "KO": "미주리",
+      "TH": "มิสซูรี",
+      "VI": "Missouri",
+      "RU": "Миссури",
+      "AR": "ميزوري"
+    },
+    "USMP": {
+      "aliases": [
+        "MP"
+      ],
+      "ZH-CN": "USMP",
+      "ZH-TW": "USMP",
+      "EN": "USMP",
+      "DE": "USMP",
+      "FR": "USMP",
+      "IT": "USMP",
+      "ES": "USMP",
+      "JA": "USMP",
+      "KO": "USMP",
+      "TH": "USMP",
+      "VI": "USMP",
+      "RU": "USMP",
+      "AR": "USMP"
+    },
+    "Mississippi": {
+      "aliases": [
+        "MS"
+      ],
+      "ZH-CN": "密西西比",
+      "ZH-TW": "密西西比",
+      "EN": "Mississippi",
+      "DE": "Mississippi",
+      "FR": "Mississippi",
+      "IT": "Mississippi",
+      "ES": "Misisipi",
+      "JA": "ミシシッピ",
+      "KO": "미시시피",
+      "TH": "มิสซิสซิปปี",
+      "VI": "Mississippi",
+      "RU": "Миссисипи",
+      "AR": "مسيسيبي"
+    },
+    "Montana": {
+      "aliases": [
+        "MT"
+      ],
+      "ZH-CN": "蒙大拿",
+      "ZH-TW": "蒙大拿",
+      "EN": "Montana",
+      "DE": "Montana",
+      "FR": "Montana",
+      "IT": "Montana",
+      "ES": "Montana",
+      "JA": "モンタナ",
+      "KO": "몬태나",
+      "TH": "มอนแทนา",
+      "VI": "Montana",
+      "RU": "Монтана",
+      "AR": "مونتانا"
+    },
+    "North Carolina": {
+      "aliases": [
+        "NC"
+      ],
+      "ZH-CN": "北卡罗来纳",
+      "ZH-TW": "北卡羅來納",
+      "EN": "North Carolina",
+      "DE": "North Carolina",
+      "FR": "Caroline du Nord",
+      "IT": "Carolina del Nord",
+      "ES": "Carolina del Norte",
+      "JA": "ノースカロライナ",
+      "KO": "노스캐롤라이나",
+      "TH": "นอร์ทแคโรไลนา",
+      "VI": "Bắc Carolina",
+      "RU": "Северная Каролина",
+      "AR": "كارولاينا الشمالية"
+    },
+    "North Dakota": {
+      "aliases": [
+        "ND"
+      ],
+      "ZH-CN": "北达科他",
+      "ZH-TW": "北達科他",
+      "EN": "North Dakota",
+      "DE": "North Dakota",
+      "FR": "Dakota du Nord",
+      "IT": "Dakota del Nord",
+      "ES": "Dakota del Norte",
+      "JA": "ノースダコタ",
+      "KO": "노스다코타",
+      "TH": "นอร์ทดาโคตา",
+      "VI": "Bắc Dakota",
+      "RU": "Северная Дакота",
+      "AR": "داكوتا الشمالية"
+    },
+    "Nebraska": {
+      "aliases": [
+        "NE"
+      ],
+      "ZH-CN": "內布拉斯加",
+      "ZH-TW": "內布拉斯加",
+      "EN": "Nebraska",
+      "DE": "Nebraska",
+      "FR": "Nebraska",
+      "IT": "Nebraska",
+      "ES": "Nebraska",
+      "JA": "ネブラスカ",
+      "KO": "네브래스카",
+      "TH": "เนแบรสกา",
+      "VI": "Nebraska",
+      "RU": "Небраска",
+      "AR": "نبراسكا"
+    },
+    "New Hampshire": {
+      "aliases": [
+        "NH"
+      ],
+      "ZH-CN": "新罕布什尔",
+      "ZH-TW": "新罕布什爾",
+      "EN": "New Hampshire",
+      "DE": "New Hampshire",
+      "FR": "New Hampshire",
+      "IT": "New Hampshire",
+      "ES": "Nuevo Hampshire",
+      "JA": "ニューハンプシャー",
+      "KO": "뉴햄프셔",
+      "TH": "นิวแฮมป์เชียร์",
+      "VI": "New Hampshire",
+      "RU": "Нью-Гэмпшир",
+      "AR": "نيوهامشير"
+    },
+    "New Jersey": {
+      "aliases": [
+        "NJ"
+      ],
+      "ZH-CN": "新泽西",
+      "ZH-TW": "新澤西",
+      "EN": "New Jersey",
+      "DE": "New Jersey",
+      "FR": "New Jersey",
+      "IT": "New Jersey",
+      "ES": "Nueva Jersey",
+      "JA": "ニュージャージー",
+      "KO": "뉴저지",
+      "TH": "นิวเจอร์ซีย์",
+      "VI": "New Jersey",
+      "RU": "Нью-Джерси",
+      "AR": "نيوجيرسي"
+    },
+    "New Mexico": {
+      "aliases": [
+        "NM"
+      ],
+      "ZH-CN": "新墨西哥",
+      "ZH-TW": "新墨西哥",
+      "EN": "New Mexico",
+      "DE": "New Mexico",
+      "FR": "Nouveau-Mexique",
+      "IT": "Nuovo Messico",
+      "ES": "Nuevo México",
+      "JA": "ニューメキシコ",
+      "KO": "뉴멕시코",
+      "TH": "นิวเม็กซิโก",
+      "VI": "New Mexico",
+      "RU": "Нью-Мексико",
+      "AR": "نيومكسيكو"
+    },
+    "Nevada": {
+      "aliases": [
+        "NV"
+      ],
+      "ZH-CN": "内华达",
+      "ZH-TW": "內華達",
+      "EN": "Nevada",
+      "DE": "Nevada",
+      "FR": "Nevada",
+      "IT": "Nevada",
+      "ES": "Nevada",
+      "JA": "ネバダ",
+      "KO": "네바다",
+      "TH": "เนวาดา",
+      "VI": "Nevada",
+      "RU": "Невада",
+      "AR": "نيفادا"
+    },
+    "New York": {
+      "aliases": [
+        "NY"
+      ],
+      "ZH-CN": "纽约",
+      "ZH-TW": "紐約",
+      "EN": "New York",
+      "DE": "New York",
+      "FR": "New York",
+      "IT": "New York",
+      "ES": "Nueva York",
+      "JA": "ニューヨーク",
+      "KO": "뉴욕",
+      "TH": "นิวยอร์ก",
+      "VI": "Tiểu bang New York",
+      "RU": "Нью-Йорк",
+      "AR": "نيويورك"
+    },
+    "Ohio": {
+      "aliases": [
+        "OH"
+      ],
+      "ZH-CN": "俄亥俄",
+      "ZH-TW": "俄亥俄",
+      "EN": "Ohio",
+      "DE": "Ohio",
+      "FR": "Ohio",
+      "IT": "Ohio",
+      "ES": "Ohio",
+      "JA": "オハイオ",
+      "KO": "오하이오",
+      "TH": "โอไฮโอ",
+      "VI": "Ohio",
+      "RU": "Огайо",
+      "AR": "أوهايو"
+    },
+    "Oklahoma": {
+      "aliases": [
+        "OK"
+      ],
+      "ZH-CN": "奧克拉荷馬",
+      "ZH-TW": "奧克拉荷馬",
+      "EN": "Oklahoma",
+      "DE": "Oklahoma",
+      "FR": "Oklahoma",
+      "IT": "Oklahoma",
+      "ES": "Oklahoma",
+      "JA": "オクラホマ",
+      "KO": "오클라호마",
+      "TH": "โอคลาโฮมา",
+      "VI": "Oklahoma",
+      "RU": "Оклахома",
+      "AR": "أوكلاهوما"
+    },
+    "Oregon": {
+      "aliases": [
+        "OR"
+      ],
+      "ZH-CN": "俄勒冈",
+      "ZH-TW": "俄勒岡",
+      "EN": "Oregon",
+      "DE": "Oregon",
+      "FR": "Oregon",
+      "IT": "Oregon",
+      "ES": "Oregón",
+      "JA": "オレゴン",
+      "KO": "오리건",
+      "TH": "ออริกอน",
+      "VI": "Oregon",
+      "RU": "Орегон",
+      "AR": "أوريغون"
+    },
+    "Pennsylvania": {
+      "aliases": [
+        "PA"
+      ],
+      "ZH-CN": "宾夕法尼亚",
+      "ZH-TW": "賓夕法尼亞",
+      "EN": "Pennsylvania",
+      "DE": "Pennsylvania",
+      "FR": "Pennsylvanie",
+      "IT": "Pennsylvania",
+      "ES": "Pensilvania",
+      "JA": "ペンシルベニア",
+      "KO": "펜실베이니아",
+      "TH": "เพนซิลเวเนีย",
+      "VI": "Pennsylvania",
+      "RU": "Пенсильвания",
+      "AR": "بنسيلفانيا"
+    },
+    "USPR": {
+      "aliases": [
+        "PR"
+      ],
+      "ZH-CN": "USPR",
+      "ZH-TW": "USPR",
+      "EN": "USPR",
+      "DE": "USPR",
+      "FR": "USPR",
+      "IT": "USPR",
+      "ES": "USPR",
+      "JA": "USPR",
+      "KO": "USPR",
+      "TH": "USPR",
+      "VI": "USPR",
+      "RU": "USPR",
+      "AR": "USPR"
+    },
+    "Rhode Island": {
+      "aliases": [
+        "RI"
+      ],
+      "ZH-CN": "羅德島",
+      "ZH-TW": "羅德島",
+      "EN": "Rhode Island",
+      "DE": "Rhode Island",
+      "FR": "Rhode Island",
+      "IT": "Rhode Island",
+      "ES": "Rhode Island",
+      "JA": "ロードアイランド",
+      "KO": "로드아일랜드",
+      "TH": "โรดไอแลนด์",
+      "VI": "Rhode Island",
+      "RU": "Род-Айленд",
+      "AR": "رود آيلاند"
+    },
+    "South Carolina": {
+      "aliases": [
+        "SC"
+      ],
+      "ZH-CN": "南卡罗来纳",
+      "ZH-TW": "南卡羅來納",
+      "EN": "South Carolina",
+      "DE": "South Carolina",
+      "FR": "Caroline du Sud",
+      "IT": "Carolina del Sud",
+      "ES": "Carolina del Sur",
+      "JA": "サウスカロライナ",
+      "KO": "사우스캐롤라이나",
+      "TH": "เซาท์แคโรไลนา",
+      "VI": "Nam Carolina",
+      "RU": "Южная Каролина",
+      "AR": "كارولاينا الجنوبية"
+    },
+    "South Dakota": {
+      "aliases": [
+        "SD"
+      ],
+      "ZH-CN": "南达科他",
+      "ZH-TW": "南達科他",
+      "EN": "South Dakota",
+      "DE": "South Dakota",
+      "FR": "Dakota du Sud",
+      "IT": "Dakota del Sud",
+      "ES": "Dakota del Sur",
+      "JA": "サウスダコタ",
+      "KO": "사우스다코타",
+      "TH": "เซาท์ดาโคตา",
+      "VI": "Nam Dakota",
+      "RU": "Южная Дакота",
+      "AR": "داكوتا الجنوبية"
+    },
+    "Tennessee": {
+      "aliases": [
+        "TN"
+      ],
+      "ZH-CN": "田纳西",
+      "ZH-TW": "田納西",
+      "EN": "Tennessee",
+      "DE": "Tennessee",
+      "FR": "Tennessee",
+      "IT": "Tennessee",
+      "ES": "Tennessee",
+      "JA": "テネシー",
+      "KO": "테네시",
+      "TH": "เทนเนสซี",
+      "VI": "Tennessee",
+      "RU": "Теннесси",
+      "AR": "تينيسي"
+    },
+    "Texas": {
+      "aliases": [
+        "TX"
+      ],
+      "ZH-CN": "得克萨斯",
+      "ZH-TW": "得克薩斯",
+      "EN": "Texas",
+      "DE": "Texas",
+      "FR": "Texas",
+      "IT": "Texas",
+      "ES": "Texas",
+      "JA": "テキサス",
+      "KO": "텍사스",
+      "TH": "เทกซัส",
+      "VI": "Texas",
+      "RU": "Техас",
+      "AR": "تكساس"
+    },
+    "USUM": {
+      "aliases": [
+        "UM"
+      ],
+      "ZH-CN": "USUM",
+      "ZH-TW": "USUM",
+      "EN": "USUM",
+      "DE": "USUM",
+      "FR": "USUM",
+      "IT": "USUM",
+      "ES": "USUM",
+      "JA": "USUM",
+      "KO": "USUM",
+      "TH": "USUM",
+      "VI": "USUM",
+      "RU": "USUM",
+      "AR": "USUM"
+    },
+    "Utah": {
+      "aliases": [
+        "UT"
+      ],
+      "ZH-CN": "犹他",
+      "ZH-TW": "猶他",
+      "EN": "Utah",
+      "DE": "Utah",
+      "FR": "Utah",
+      "IT": "Utah",
+      "ES": "Utah",
+      "JA": "ユタ",
+      "KO": "유타",
+      "TH": "ยูทาห์",
+      "VI": "Utah",
+      "RU": "Юта",
+      "AR": "يوتا"
+    },
+    "Virginia": {
+      "aliases": [
+        "VA"
+      ],
+      "ZH-CN": "弗吉尼亚",
+      "ZH-TW": "弗吉尼亞",
+      "EN": "Virginia",
+      "DE": "Virginia",
+      "FR": "Virginie",
+      "IT": "Virginia",
+      "ES": "Virginia",
+      "JA": "バージニア",
+      "KO": "버지니아",
+      "TH": "เวอร์จิเนีย",
+      "VI": "Virginia",
+      "RU": "Виргиния",
+      "AR": "فرجينيا"
+    },
+    "USVI": {
+      "aliases": [
+        "VI"
+      ],
+      "ZH-CN": "USVI",
+      "ZH-TW": "USVI",
+      "EN": "USVI",
+      "DE": "USVI",
+      "FR": "USVI",
+      "IT": "USVI",
+      "ES": "USVI",
+      "JA": "USVI",
+      "KO": "USVI",
+      "TH": "USVI",
+      "VI": "USVI",
+      "RU": "USVI",
+      "AR": "USVI"
+    },
+    "Vermont": {
+      "aliases": [
+        "VT"
+      ],
+      "ZH-CN": "佛蒙特",
+      "ZH-TW": "佛蒙特",
+      "EN": "Vermont",
+      "DE": "Vermont",
+      "FR": "Vermont",
+      "IT": "Vermont",
+      "ES": "Vermont",
+      "JA": "バーモント",
+      "KO": "버몬트",
+      "TH": "เวอร์มอนต์",
+      "VI": "Vermont",
+      "RU": "Вермонт",
+      "AR": "فيرمونت"
+    },
+    "Washington": {
+      "aliases": [
+        "WA"
+      ],
+      "ZH-CN": "华盛顿",
+      "ZH-TW": "華盛頓",
+      "EN": "Washington",
+      "DE": "Washington",
+      "FR": "Washington",
+      "IT": "Washington²",
+      "ES": "Washington",
+      "JA": "ワシントン",
+      "KO": "워싱턴",
+      "TH": "วอชิงตัน",
+      "VI": "Washington²",
+      "RU": "Вашингтон²",
+      "AR": "واشنطن"
+    },
+    "Wisconsin": {
+      "aliases": [
+        "WI"
+      ],
+      "ZH-CN": "威斯康辛",
+      "ZH-TW": "威斯康辛",
+      "EN": "Wisconsin",
+      "DE": "Wisconsin",
+      "FR": "Wisconsin",
+      "IT": "Wisconsin",
+      "ES": "Wisconsin",
+      "JA": "ウィスコンシン",
+      "KO": "위스콘신",
+      "TH": "วิสคอนซิน",
+      "VI": "Wisconsin",
+      "RU": "Висконсин",
+      "AR": "ويسكونسن"
+    },
+    "West Virginia": {
+      "aliases": [
+        "WV"
+      ],
+      "ZH-CN": "西維吉尼亞",
+      "ZH-TW": "西維吉尼亞",
+      "EN": "West Virginia",
+      "DE": "West Virginia",
+      "FR": "Virginie-Occidentale",
+      "IT": "Virginia Occidentale",
+      "ES": "Virginia Occidental",
+      "JA": "ウェストバージニア",
+      "KO": "웨스트버지니아",
+      "TH": "เวสต์เวอร์จิเนีย",
+      "VI": "Tây Virginia",
+      "RU": "Западная Виргиния",
+      "AR": "فيرجينيا الغربية"
+    },
+    "Wyoming": {
+      "aliases": [
+        "WY"
+      ],
+      "ZH-CN": "怀俄明",
+      "ZH-TW": "懷俄明",
+      "EN": "Wyoming",
+      "DE": "Wyoming",
+      "FR": "Wyoming",
+      "IT": "Wyoming",
+      "ES": "Wyoming",
+      "JA": "ワイオミング",
+      "KO": "와이오밍",
+      "TH": "ไวโอมิง",
+      "VI": "Wyoming",
+      "RU": "Вайоминг",
+      "AR": "وايومنغ"
+    }
+  },
+  "CA": {
+    "Alberta": {
+      "aliases": [
+        "AB"
+      ],
+      "ZH-CN": "艾伯塔",
+      "ZH-TW": "艾伯塔",
+      "EN": "Alberta",
+      "DE": "Alberta",
+      "FR": "Alberta",
+      "IT": "Alberta",
+      "ES": "Alberta",
+      "JA": "アルバータ",
+      "KO": "앨버타",
+      "TH": "แอลเบอร์ตา",
+      "VI": "Alberta",
+      "RU": "Альберта",
+      "AR": "ألبرتا"
+    },
+    "British Columbia": {
+      "aliases": [
+        "BC"
+      ],
+      "ZH-CN": "不列颠哥伦比亚",
+      "ZH-TW": "不列顛哥倫比亞",
+      "EN": "British Columbia",
+      "DE": "British Columbia",
+      "FR": "Colombie-Britannique",
+      "IT": "Columbia Britannica",
+      "ES": "Columbia Británica",
+      "JA": "ブリティッシュコロンビア",
+      "KO": "브리티시컬럼비아",
+      "TH": "บริติชโคลัมเบีย",
+      "VI": "British Columbia",
+      "RU": "Британская Колумбия",
+      "AR": "كولومبيا البريطانية"
+    },
+    "Manitoba": {
+      "aliases": [
+        "MB"
+      ],
+      "ZH-CN": "曼尼托巴",
+      "ZH-TW": "曼尼托巴",
+      "EN": "Manitoba",
+      "DE": "Manitoba",
+      "FR": "Manitoba",
+      "IT": "Manitoba",
+      "ES": "Manitoba",
+      "JA": "マニトバ",
+      "KO": "매니토바",
+      "TH": "แมนิโทบา",
+      "VI": "Manitoba",
+      "RU": "Манитоба",
+      "AR": "مانيتوبا"
+    },
+    "New Brunswick": {
+      "aliases": [
+        "NB"
+      ],
+      "ZH-CN": "新不倫瑞克",
+      "ZH-TW": "新不倫瑞克",
+      "EN": "New Brunswick",
+      "DE": "New Brunswick",
+      "FR": "Nouveau-Brunswick",
+      "IT": "Nuovo Brunswick",
+      "ES": "Nuevo Brunswick",
+      "JA": "ニューブランズウィック",
+      "KO": "뉴브런즈윅",
+      "TH": "นิวบรันสวิก",
+      "VI": "New Brunswick",
+      "RU": "Нью-Брансуик",
+      "AR": "نيو برونزويك"
+    },
+    "Newfoundland and Labrador": {
+      "aliases": [
+        "NL",
+        "Neufundland und Labrador"
+      ],
+      "ZH-CN": "紐芬蘭與拉布拉多",
+      "ZH-TW": "紐芬蘭與拉布拉多",
+      "EN": "Newfoundland and Labrador",
+      "DE": "Neufundland und Labrador",
+      "FR": "Terre-Neuve-et-Labrador",
+      "IT": "Terranova e Labrador",
+      "ES": "Terranova y Labrador",
+      "JA": "ニューファンドランド・ラブラドール",
+      "KO": "뉴펀들랜드 래브라도",
+      "TH": "นิวฟันด์แลนด์และแลบราดอร์",
+      "VI": "Newfoundland và Labrador",
+      "RU": "Ньюфаундленд и Лабрадор",
+      "AR": "نيوفاوندلاند واللابرادور"
+    },
+    "Nova Scotia": {
+      "aliases": [
+        "NS"
+      ],
+      "ZH-CN": "新斯科舍",
+      "ZH-TW": "新斯科舍",
+      "EN": "Nova Scotia",
+      "DE": "Nova Scotia",
+      "FR": "Nouvelle-Écosse",
+      "IT": "Nuova Scozia",
+      "ES": "Nueva Escocia",
+      "JA": "ノバスコシア",
+      "KO": "노바스코샤",
+      "TH": "โนวาสโกเชีย",
+      "VI": "Nova Scotia",
+      "RU": "Новая Шотландия",
+      "AR": "نوفا سكوشا"
+    },
+    "Northwest Territories": {
+      "aliases": [
+        "NT",
+        "Nordwest-Territorien"
+      ],
+      "ZH-CN": "西北地区",
+      "ZH-TW": "西北地區",
+      "EN": "Northwest Territories",
+      "DE": "Nordwest-Territorien",
+      "FR": "Territoires du Nord-Ouest",
+      "IT": "Territori del Nord-Ovest",
+      "ES": "Territorios del Noroeste",
+      "JA": "ノースウエスト準",
+      "KO": "노스웨스트 준",
+      "TH": "นอร์ทเวสต์เทร์ริทอรีส์",
+      "VI": "Các Lãnh thổ Tây Bắc",
+      "RU": "Северо-Западные территории",
+      "AR": "الأقاليم الشمالية الغربية"
+    },
+    "Nunavut": {
+      "aliases": [
+        "NU"
+      ],
+      "ZH-CN": "努納武特",
+      "ZH-TW": "努納武特",
+      "EN": "Nunavut",
+      "DE": "Nunavut",
+      "FR": "Nunavut",
+      "IT": "Nunavut",
+      "ES": "Nunavut",
+      "JA": "ヌナブト準",
+      "KO": "누나부트 준",
+      "TH": "นูนาวุต",
+      "VI": "Nunavut",
+      "RU": "Нунавут",
+      "AR": "نونافوت"
+    },
+    "Ontario": {
+      "aliases": [
+        "ON"
+      ],
+      "ZH-CN": "安大略",
+      "ZH-TW": "安大略",
+      "EN": "Ontario",
+      "DE": "Ontario",
+      "FR": "Ontario",
+      "IT": "Ontario",
+      "ES": "Ontario",
+      "JA": "オンタリオ",
+      "KO": "온타리오",
+      "TH": "ออนแทรีโอ",
+      "VI": "Ontario",
+      "RU": "Онтарио",
+      "AR": "أونتاريو"
+    },
+    "Prince Edward Island": {
+      "aliases": [
+        "PE"
+      ],
+      "ZH-CN": "愛德華王子島",
+      "ZH-TW": "愛德華王子島",
+      "EN": "Prince Edward Island",
+      "DE": "Prince Edward Island",
+      "FR": "Île-du-Prince-Édouard",
+      "IT": "Isola del Principe Edoardo",
+      "ES": "Isla del Príncipe Eduardo",
+      "JA": "プリンスエドワードアイランド",
+      "KO": "프린스에드워드아일랜드",
+      "TH": "พรินซ์เอ็ดเวิร์ดไอแลนด์",
+      "VI": "Đảo Hoàng tử Edward",
+      "RU": "Остров Принца Эдуарда",
+      "AR": "جزيرة الأمير إدوارد"
+    },
+    "Quebec": {
+      "aliases": [
+        "QC",
+        "Québec"
+      ],
+      "ZH-CN": "魁北克",
+      "ZH-TW": "魁北克",
+      "EN": "Quebec",
+      "DE": "Québec",
+      "FR": "Québec",
+      "IT": "Québec",
+      "ES": "Quebec",
+      "JA": "ケベック",
+      "KO": "퀘벡",
+      "TH": "ควิเบก",
+      "VI": "Québec",
+      "RU": "Квебек",
+      "AR": "كيبك"
+    },
+    "Saskatchewan": {
+      "aliases": [
+        "SK"
+      ],
+      "ZH-CN": "薩斯喀徹溫",
+      "ZH-TW": "薩斯喀徹溫",
+      "EN": "Saskatchewan",
+      "DE": "Saskatchewan",
+      "FR": "Saskatchewan",
+      "IT": "Saskatchewan",
+      "ES": "Saskatchewan",
+      "JA": "サスカチュワン",
+      "KO": "서스캐처원",
+      "TH": "ซัสแคตเชวัน",
+      "VI": "Saskatchewan",
+      "RU": "Саскачеван",
+      "AR": "ساسكاتشوان"
+    },
+    "Yukon": {
+      "aliases": [
+        "YT"
+      ],
+      "ZH-CN": "育空",
+      "ZH-TW": "育空",
+      "EN": "Yukon",
+      "DE": "Yukon",
+      "FR": "Yukon",
+      "IT": "Yukon",
+      "ES": "Yukón",
+      "JA": "ユーコン準",
+      "KO": "유콘 준",
+      "TH": "ยูคอน",
+      "VI": "Yukon",
+      "RU": "Юкон",
+      "AR": "يوكون"
+    }
+  },
+  "AU": {
+    "Australian Capital Territory": {
+      "aliases": [
+        "ACT",
+        "Australian Capital"
+      ],
+      "ZH-CN": "澳大利亞首都特區",
+      "ZH-TW": "澳大利亞首都特區",
+      "EN": "Australian Capital",
+      "DE": "Australian Capital Territory",
+      "FR": "la capitale australienne",
+      "IT": "Capitale Australiana",
+      "ES": "la Capital Australiana",
+      "JA": "オーストラリア首都特別地域",
+      "KO": "오스트레일리아 수도 준",
+      "TH": "ออสเตรเลียนแคพิทอลเทร์ริทอรี",
+      "VI": "Thủ đô Úc",
+      "RU": "Австралийская столичная территория",
+      "AR": "العاصمة الأسترالية"
+    },
+    "New South Wales": {
+      "aliases": [
+        "NSW"
+      ],
+      "ZH-CN": "新南威爾士",
+      "ZH-TW": "新南威爾士",
+      "EN": "New South Wales",
+      "DE": "New South Wales",
+      "FR": "Nouvelle-Galles du Sud",
+      "IT": "Nuovo Galles del Sud",
+      "ES": "Nueva Gales del Sur",
+      "JA": "ニューサウスウェールズ",
+      "KO": "뉴사우스웨일스",
+      "TH": "นิวเซาท์เวลส์",
+      "VI": "New South Wales",
+      "RU": "Новый Южный Уэльс",
+      "AR": "نيوساوث ويلز"
+    },
+    "Northern Territory": {
+      "aliases": [
+        "NT",
+        "Northern"
+      ],
+      "ZH-CN": "北領地",
+      "ZH-TW": "北領地",
+      "EN": "Northern",
+      "DE": "Northern Territory",
+      "FR": "Nord",
+      "IT": "Nord",
+      "ES": "Norte",
+      "JA": "ノーザンテリトリー",
+      "KO": "노던 준",
+      "TH": "นอร์เทิร์นเทร์ริทอรี",
+      "VI": "Bắc Úc",
+      "RU": "Северная территория",
+      "AR": "شمالي"
+    },
+    "Queensland": {
+      "aliases": [
+        "QLD"
+      ],
+      "ZH-CN": "昆士蘭",
+      "ZH-TW": "昆士蘭",
+      "EN": "Queensland",
+      "DE": "Queensland",
+      "FR": "Queensland",
+      "IT": "Queensland",
+      "ES": "Queensland",
+      "JA": "クイーンズランド",
+      "KO": "퀸즐랜드",
+      "TH": "ควีนส์แลนด์",
+      "VI": "Queensland",
+      "RU": "Квинсленд",
+      "AR": "كوينزلاند"
+    },
+    "South Australia": {
+      "aliases": [
+        "SA"
+      ],
+      "ZH-CN": "南澳大利亚",
+      "ZH-TW": "南澳大利亞",
+      "EN": "South Australia",
+      "DE": "South Australia",
+      "FR": "Australie-Méridionale",
+      "IT": "Australia Meridionale",
+      "ES": "Australia Meridional",
+      "JA": "南オーストラリア",
+      "KO": "사우스오스트레일리아",
+      "TH": "เซาท์ออสเตรเลีย",
+      "VI": "Nam Úc",
+      "RU": "Южная Австралия",
+      "AR": "جنوب أستراليا"
+    },
+    "Tasmania": {
+      "aliases": [
+        "TAS",
+        "Tasmanien"
+      ],
+      "ZH-CN": "塔斯馬尼亞",
+      "ZH-TW": "塔斯馬尼亞",
+      "EN": "Tasmania",
+      "DE": "Tasmanien",
+      "FR": "Tasmanie",
+      "IT": "Tasmania",
+      "ES": "Tasmania",
+      "JA": "タスマニア",
+      "KO": "태즈메이니아",
+      "TH": "แทสเมเนีย",
+      "VI": "Tasmania",
+      "RU": "Тасмания",
+      "AR": "تسمانيا"
+    },
+    "Victoria": {
+      "aliases": [
+        "VIC"
+      ],
+      "ZH-CN": "維多利亞",
+      "ZH-TW": "維多利亞",
+      "EN": "Victoria",
+      "DE": "Victoria",
+      "FR": "Victoria",
+      "IT": "Victoria",
+      "ES": "Victoria",
+      "JA": "ビクトリア",
+      "KO": "빅토리아",
+      "TH": "วิกตอเรีย",
+      "VI": "Victoria",
+      "RU": "Виктория",
+      "AR": "فيكتوريا"
+    },
+    "Western Australia": {
+      "aliases": [
+        "WA"
+      ],
+      "ZH-CN": "西澳大利亚",
+      "ZH-TW": "西澳大利亞",
+      "EN": "Western Australia",
+      "DE": "Western Australia",
+      "FR": "Australie-Occidentale",
+      "IT": "Australia Occidentale",
+      "ES": "Australia Occidental",
+      "JA": "西オーストラリア",
+      "KO": "웨스턴오스트레일리아",
+      "TH": "เวสเทิร์นออสเตรเลีย",
+      "VI": "Tây Úc",
+      "RU": "Западная Австралия",
+      "AR": "أستراليا الغربية"
+    }
+  },
+  "RU": {
+    "Adygea": {
+      "aliases": [
+        "AD",
+        "Adygeja"
+      ],
+      "ZH-CN": "阿迪格",
+      "ZH-TW": "阿迪格",
+      "EN": "Adygea",
+      "DE": "Adygeja",
+      "FR": "Adyguée",
+      "IT": "Adighezia",
+      "ES": "Adigueya",
+      "JA": "アディゲ",
+      "KO": "아디게야",
+      "TH": "อะดีเกยา",
+      "VI": "Adygea",
+      "RU": "Адыгея",
+      "AR": "أديغيا"
+    },
+    "Altai": {
+      "aliases": [
+        "AL"
+      ],
+      "ZH-CN": "阿尔泰",
+      "ZH-TW": "阿爾泰",
+      "EN": "Altai",
+      "DE": "Altai",
+      "FR": "l’Altaï",
+      "IT": "dell’Altaj",
+      "ES": "Altái",
+      "JA": "アルタイ",
+      "KO": "알타이",
+      "TH": "อัลไต",
+      "VI": "Altai",
+      "RU": "Алтай",
+      "AR": "ألطاي"
+    },
+    "Altai Krai": {
+      "aliases": [
+        "ALT",
+        "Altai",
+        "Region Altai"
+      ],
+      "ZH-CN": "阿尔泰",
+      "ZH-TW": "阿爾泰",
+      "EN": "Altai",
+      "DE": "Region Altai",
+      "FR": "kraï de l’Altaï",
+      "IT": "dell’Altaj",
+      "ES": "Krai de Altái",
+      "JA": "アルタイ地方",
+      "KO": "알타이 지방",
+      "TH": "อัลไตไคร",
+      "VI": "Altai",
+      "RU": "Алтайский",
+      "AR": "ألطاي كراي"
+    },
+    "Amur": {
+      "aliases": [
+        "AMU",
+        "Oblast Amur"
+      ],
+      "ZH-CN": "阿穆尔",
+      "ZH-TW": "阿穆爾",
+      "EN": "Amur",
+      "DE": "Oblast Amur",
+      "FR": "Oblast d’Amour",
+      "IT": "Oblast’ dell’Amur",
+      "ES": "Amur",
+      "JA": "アムール",
+      "KO": "아무르",
+      "TH": "แคว้นปกครองอามูร์",
+      "VI": "Amur",
+      "RU": "Амурская",
+      "AR": "أمور أوبلاست"
+    },
+    "Arkhangelsk": {
+      "aliases": [
+        "ARK",
+        "Oblast Archangelsk"
+      ],
+      "ZH-CN": "阿尔汉格尔斯克",
+      "ZH-TW": "阿爾漢格爾斯克",
+      "EN": "Arkhangelsk",
+      "DE": "Oblast Archangelsk",
+      "FR": "Oblast d’Arkhangelsk",
+      "IT": "Oblast’ di Arcangelo",
+      "ES": "Óblast de Arjánguelsk",
+      "JA": "アルハンゲリスク",
+      "KO": "아르한겔스크",
+      "TH": "อาร์คันเกลสค์",
+      "VI": "Arkhangelsk",
+      "RU": "Архангельская",
+      "AR": "أرخانجيلسك أوبلاست"
+    },
+    "Astrakhan": {
+      "aliases": [
+        "AST",
+        "Oblast Astrachan"
+      ],
+      "ZH-CN": "阿斯特拉罕",
+      "ZH-TW": "阿斯特拉罕",
+      "EN": "Astrakhan",
+      "DE": "Oblast Astrachan",
+      "FR": "Oblast d’Astrakhan",
+      "IT": "Oblast’ di Astrachan’",
+      "ES": "Astracán",
+      "JA": "アストラハン",
+      "KO": "아스트라한",
+      "TH": "แอสทรัคฮาน โอแบลส",
+      "VI": "Astrakhan",
+      "RU": "Астраханская",
+      "AR": "أوبلاست أستراخان"
+    },
+    "Bashkortostan": {
+      "aliases": [
+        "BA",
+        "Baschkortostan"
+      ],
+      "ZH-CN": "巴什科尔托斯坦",
+      "ZH-TW": "巴什科爾托斯坦",
+      "EN": "Bashkortostan",
+      "DE": "Baschkortostan",
+      "FR": "Bachkirie",
+      "IT": "Baschiria",
+      "ES": "Bashkortostán",
+      "JA": "バシコルトスタン",
+      "KO": "바시키르",
+      "TH": "บัชคอร์โตสถาน",
+      "VI": "Bashkortostan",
+      "RU": "Башкортостан",
+      "AR": "باشكورستان"
+    },
+    "Belgorod": {
+      "aliases": [
+        "BEL",
+        "Oblast Belgorod"
+      ],
+      "ZH-CN": "别尔哥罗德",
+      "ZH-TW": "別爾哥羅德",
+      "EN": "Belgorod",
+      "DE": "Oblast Belgorod",
+      "FR": "oblast de Belgorod",
+      "IT": "Oblast’ di Belgorod",
+      "ES": "Óblast de Bélgorod",
+      "JA": "ベルゴロド",
+      "KO": "벨고로드",
+      "TH": "แคว้นเบลโกรอด",
+      "VI": "Belgorod",
+      "RU": "Белгородская",
+      "AR": "أوبلاست بيلغورود"
+    },
+    "Bryansk": {
+      "aliases": [
+        "BRY",
+        "Oblast Brjansk"
+      ],
+      "ZH-CN": "布良斯克",
+      "ZH-TW": "布良斯克",
+      "EN": "Bryansk",
+      "DE": "Oblast Brjansk",
+      "FR": "Oblast de Briansk",
+      "IT": "Oblast’ di Brjansk",
+      "ES": "Óblast de Briansk",
+      "JA": "ブリャンスク",
+      "KO": "브랸스크",
+      "TH": "แคว้นบรีอันสค์",
+      "VI": "Bryansk",
+      "RU": "Брянская",
+      "AR": "بريانسك أوبلاست"
+    },
+    "Buryat": {
+      "aliases": [
+        "BU",
+        "Burjatien"
+      ],
+      "ZH-CN": "布里亞特共和國",
+      "ZH-TW": "布裡亞特",
+      "EN": "Buryat",
+      "DE": "Burjatien",
+      "FR": "Bouriatie",
+      "IT": "Buriazia",
+      "ES": "Buriatia",
+      "JA": "ブリヤート",
+      "KO": "부랴트",
+      "TH": "บูเรียตียา",
+      "VI": "Buryatia",
+      "RU": "Бурятия",
+      "AR": "بورياتيا"
+    },
+    "Chechen": {
+      "aliases": [
+        "CE",
+        "Tschetschenien"
+      ],
+      "ZH-CN": "车臣",
+      "ZH-TW": "車臣",
+      "EN": "Chechen",
+      "DE": "Tschetschenien",
+      "FR": "Tchétchénie",
+      "IT": "Cecenia",
+      "ES": "Chechenia",
+      "JA": "チェチェン",
+      "KO": "체첸",
+      "TH": "เชเชน",
+      "VI": "Chechnya",
+      "RU": "Чечня",
+      "AR": "الشيشان"
+    },
+    "Chelyabinsk": {
+      "aliases": [
+        "CHE",
+        "Oblast Tscheljabinsk"
+      ],
+      "ZH-CN": "车里雅宾斯克",
+      "ZH-TW": "車裡雅賓斯克",
+      "EN": "Chelyabinsk",
+      "DE": "Oblast Tscheljabinsk",
+      "FR": "Oblast de Tcheliabinsk",
+      "IT": "Oblast’ di Čeljabinsk",
+      "ES": "Cheliábinsk",
+      "JA": "チェリャビンスク",
+      "KO": "첼랴빈스크",
+      "TH": "แคว้นเชเลียบินสค์",
+      "VI": "Chelyabinsk",
+      "RU": "Челябинская",
+      "AR": "أوبلاست تشيليابنسك"
+    },
+    "Chukotka Okrug": {
+      "aliases": [
+        "CHU",
+        "Autonomer Kreis der Tschuktschen"
+      ],
+      "ZH-CN": "楚科奇",
+      "ZH-TW": "楚科奇",
+      "EN": "Chukotka Okrug",
+      "DE": "Autonomer Kreis der Tschuktschen",
+      "FR": "Tchoukotka",
+      "IT": "Circondario autonomo della Čukotka",
+      "ES": "Chukotka",
+      "JA": "チュクチ自治管区",
+      "KO": "축치",
+      "TH": "ชูคอตคา",
+      "VI": "Khu tự trị Chukotka",
+      "RU": "Чукотский",
+      "AR": "أوكروغ تشوكوتكا الذاتية"
+    },
+    "Chuvash": {
+      "aliases": [
+        "CU",
+        "Tschuwaschien"
+      ],
+      "ZH-CN": "楚瓦什",
+      "ZH-TW": "楚瓦什",
+      "EN": "Chuvash",
+      "DE": "Tschuwaschien",
+      "FR": "Tchouvachie",
+      "IT": "Ciuvascia",
+      "ES": "Chuvasia",
+      "JA": "チュヴァシ",
+      "KO": "추바시",
+      "TH": "ชูวัช",
+      "VI": "Chuvashia",
+      "RU": "Чувашия",
+      "AR": "تشوفاشيا"
+    },
+    "Dagestan": {
+      "aliases": [
+        "DA"
+      ],
+      "ZH-CN": "达吉斯坦",
+      "ZH-TW": "達吉斯坦",
+      "EN": "Dagestan",
+      "DE": "Dagestan",
+      "FR": "Daghestan",
+      "IT": "Daghestan",
+      "ES": "Daguestán",
+      "JA": "ダゲスタン",
+      "KO": "다게스탄",
+      "TH": "เมืองจวนพิล",
+      "VI": "Dagestan",
+      "RU": "Дагестан",
+      "AR": "داغستان"
+    },
+    "Ingushetia": {
+      "aliases": [
+        "IN",
+        "Inguschetien"
+      ],
+      "ZH-CN": "印古什",
+      "ZH-TW": "印古什",
+      "EN": "Ingushetia",
+      "DE": "Inguschetien",
+      "FR": "Ingouchie",
+      "IT": "Inguscezia",
+      "ES": "Ingusetia",
+      "JA": "イングーシ",
+      "KO": "인구시",
+      "TH": "อิงกูเชเตีย",
+      "VI": "Ingushetiya",
+      "RU": "Ингушетия",
+      "AR": "إنغوشيتيا"
+    },
+    "Irkutsk": {
+      "aliases": [
+        "IRK",
+        "Oblast Irkutsk"
+      ],
+      "ZH-CN": "伊尔库茨克",
+      "ZH-TW": "伊爾庫茨克",
+      "EN": "Irkutsk",
+      "DE": "Oblast Irkutsk",
+      "FR": "Oblast d’Irkoutsk",
+      "IT": "Oblast’ di Irkutsk",
+      "ES": "Irkutsk",
+      "JA": "イルクーツク",
+      "KO": "이르쿠츠크",
+      "TH": "แคว้นอีร์คุตสค์",
+      "VI": "Irkutsk",
+      "RU": "Иркутская",
+      "AR": "إركوتسك أوبلاست"
+    },
+    "Ivanovo": {
+      "aliases": [
+        "IVA",
+        "Oblast Iwanowo"
+      ],
+      "ZH-CN": "伊万诺沃",
+      "ZH-TW": "伊萬諾沃",
+      "EN": "Ivanovo",
+      "DE": "Oblast Iwanowo",
+      "FR": "Oblast d’Ivanovo",
+      "IT": "Oblast’ di Ivanovo",
+      "ES": "Óblast de Ivánovo",
+      "JA": "イヴァノヴォ",
+      "KO": "이바노보",
+      "TH": "แคว้นอีวาโนโว",
+      "VI": "Ivanovo",
+      "RU": "Ивановская",
+      "AR": "إيفانوفو أوبلاست"
+    },
+    "Kamchatka Krai": {
+      "aliases": [
+        "KAM",
+        "Kamchatka",
+        "Region Kamtschatka"
+      ],
+      "ZH-CN": "堪察加邊疆區",
+      "ZH-TW": "堪察加",
+      "EN": "Kamchatka",
+      "DE": "Region Kamtschatka",
+      "FR": "Kraï du Kamtchatka",
+      "IT": "Kamčatka",
+      "ES": "Kamchatka",
+      "JA": "カムチャツカ地方",
+      "KO": "캄차카 지방",
+      "TH": "ดินแดนคัมชัตคา",
+      "VI": "Kamchatka",
+      "RU": "Камчатский",
+      "AR": "كراي كامشاتكا"
+    },
+    "Kabardino-Balkar": {
+      "aliases": [
+        "KB",
+        "Kabardino-Balkarien"
+      ],
+      "ZH-CN": "卡巴爾達-巴爾卡爾共和國",
+      "ZH-TW": "卡巴爾達-巴爾卡爾",
+      "EN": "Kabardino-Balkar",
+      "DE": "Kabardino-Balkarien",
+      "FR": "Kabardino-Balkarie",
+      "IT": "Cabardino-Balcaria",
+      "ES": "Kabardia-Balkaria",
+      "JA": "カバルダ・バルカル",
+      "KO": "카바르디노발카르",
+      "TH": "คาบาดิโน-บอลเกอร์",
+      "VI": "Kabardino-Balkaria",
+      "RU": "Кабардино-Балкария",
+      "AR": "قبردينو - بلقاريا"
+    },
+    "Karachay-Cherkess": {
+      "aliases": [
+        "KC",
+        "Karatschai-Tscherkessien"
+      ],
+      "ZH-CN": "卡拉恰伊-切尔克斯",
+      "ZH-TW": "卡拉恰伊-切爾克斯",
+      "EN": "Karachay-Cherkess",
+      "DE": "Karatschai-Tscherkessien",
+      "FR": "Karatchaïévo-Tcherkessie",
+      "IT": "Karačaj-Circassia",
+      "ES": "Karacháyevo-Cherkesia",
+      "JA": "カラチャイ・チェルケス",
+      "KO": "카라차예보체르케스카야",
+      "TH": "การาชาย-ชาร์คเคส",
+      "VI": "Karachay-Cherkessia",
+      "RU": "Карачаево-Черкесия",
+      "AR": "قراتشاي - تشيركيسيا"
+    },
+    "Krasnodar Krai": {
+      "aliases": [
+        "KDA",
+        "Krasnodar",
+        "Region Krasnodar"
+      ],
+      "ZH-CN": "克拉斯诺达尔",
+      "ZH-TW": "克拉斯諾達爾",
+      "EN": "Krasnodar",
+      "DE": "Region Krasnodar",
+      "FR": "Kraï de Krasnodar",
+      "IT": "Krasnodar",
+      "ES": "Krai de Krasnodar",
+      "JA": "クラスノダール地方",
+      "KO": "크라스노다르 지방",
+      "TH": "คราสโนดา ไคร",
+      "VI": "Krasnodar",
+      "RU": "Краснодарский",
+      "AR": "كراسنودار كراي"
+    },
+    "Kemerovo": {
+      "aliases": [
+        "KEM",
+        "Oblast Kemerowo"
+      ],
+      "ZH-CN": "科麦罗沃",
+      "ZH-TW": "科麥羅沃",
+      "EN": "Kemerovo",
+      "DE": "Oblast Kemerowo",
+      "FR": "oblast de Kemerovo",
+      "IT": "Oblast’ di Kemerovo",
+      "ES": "Kémerovo",
+      "JA": "ケメロヴォ",
+      "KO": "케메로보",
+      "TH": "มณฑลเคเมโรโว",
+      "VI": "Kemerovo",
+      "RU": "Кемеровская",
+      "AR": "كيميروفو أوبلاست"
+    },
+    "Kaliningrad": {
+      "aliases": [
+        "KGD",
+        "Oblast Kaliningrad"
+      ],
+      "ZH-CN": "加里宁格勒",
+      "ZH-TW": "加裡寧格勒",
+      "EN": "Kaliningrad",
+      "DE": "Oblast Kaliningrad",
+      "FR": "Oblast de Kaliningrad",
+      "IT": "oblast’ di Kaliningrad",
+      "ES": "Óblast de Kaliningrado",
+      "JA": "カリーニングラード",
+      "KO": "칼리닌그라드",
+      "TH": "คาลินินกราดโอบลาสต์",
+      "VI": "Kaliningrad",
+      "RU": "Калининградская",
+      "AR": "أوبلاست كالينينغرادسكايا"
+    },
+    "Kurgan": {
+      "aliases": [
+        "KGN",
+        "Oblast Kurgan"
+      ],
+      "ZH-CN": "库尔干",
+      "ZH-TW": "庫爾干",
+      "EN": "Kurgan",
+      "DE": "Oblast Kurgan",
+      "FR": "Oblast de Kourgan",
+      "IT": "Oblast’ di Kurgan",
+      "ES": "Kurgán",
+      "JA": "クルガン",
+      "KO": "쿠르간",
+      "TH": "คูแกน อบลาส",
+      "VI": "Kurgan",
+      "RU": "Курганская",
+      "AR": "أوبلاست كورغان"
+    },
+    "Khabarovsk Krai": {
+      "aliases": [
+        "KHA",
+        "Khabarovsk",
+        "Region Chabarowsk"
+      ],
+      "ZH-CN": "哈巴罗夫斯克",
+      "ZH-TW": "哈巴羅夫斯克",
+      "EN": "Khabarovsk",
+      "DE": "Region Chabarowsk",
+      "FR": "Kraï de Khabarovsk",
+      "IT": "Chabarovsk",
+      "ES": "Jabárovsk",
+      "JA": "ハバロフスク地方",
+      "KO": "하바롭스크 지방",
+      "TH": "เขตบาซาราเบอัสกา",
+      "VI": "Khabarovsk",
+      "RU": "Хабаровский",
+      "AR": "خاباروفسك كراي"
+    },
+    "Khanty-Mansi": {
+      "aliases": [
+        "KHM",
+        "Autonomer Kreis der Chanten und Mansen/Jugra"
+      ],
+      "ZH-CN": "汉特-曼西",
+      "ZH-TW": "漢特-曼西",
+      "EN": "Khanty-Mansi",
+      "DE": "Autonomer Kreis der Chanten und Mansen/Jugra",
+      "FR": "Khantys-Mansis",
+      "IT": "Circondario autonomo degli Chanty-Mansi-Jugra",
+      "ES": "Janti-Mansi",
+      "JA": "ハンティ・マンシ自治管区・ユグラ",
+      "KO": "한티만시",
+      "TH": "ฮันตี-มันซี",
+      "VI": "Khantia-Mansia",
+      "RU": "Ханты-Мансийский автономный округ — Югра",
+      "AR": "أوكروغ خانتي-مانسي ذاتية الحكم"
+    },
+    "Kirov": {
+      "aliases": [
+        "KIR",
+        "Oblast Kirow"
+      ],
+      "ZH-CN": "基洛夫",
+      "ZH-TW": "基洛夫",
+      "EN": "Kirov",
+      "DE": "Oblast Kirow",
+      "FR": "Oblast de Kirov",
+      "IT": "Oblast’ di Kirov",
+      "ES": "Kírov",
+      "JA": "キーロフ",
+      "KO": "키로프",
+      "TH": "แคว้นปกครองคิโรฟ",
+      "VI": "Kirov",
+      "RU": "Кировская",
+      "AR": "أوبلاست كيروف"
+    },
+    "Khakassia": {
+      "aliases": [
+        "KK",
+        "Chakassien"
+      ],
+      "ZH-CN": "哈卡斯",
+      "ZH-TW": "哈卡斯",
+      "EN": "Khakassia",
+      "DE": "Chakassien",
+      "FR": "Khakassie",
+      "IT": "Chakassia",
+      "ES": "Jakasia",
+      "JA": "ハカス",
+      "KO": "하카스",
+      "TH": "เมืองคาคาซเซีย",
+      "VI": "Khakassia",
+      "RU": "Хакасия",
+      "AR": "خقاسيا"
+    },
+    "Kalmykia": {
+      "aliases": [
+        "KL",
+        "Kalmückien"
+      ],
+      "ZH-CN": "卡尔梅克",
+      "ZH-TW": "卡爾梅克",
+      "EN": "Kalmykia",
+      "DE": "Kalmückien",
+      "FR": "Kalmoukie",
+      "IT": "Calmucchia",
+      "ES": "Kalmukia",
+      "JA": "カルムイク",
+      "KO": "칼미크",
+      "TH": "คัลมืยคียา",
+      "VI": "Kalmykia",
+      "RU": "Калмыкия",
+      "AR": "كالميكيا"
+    },
+    "Kaluga": {
+      "aliases": [
+        "KLU",
+        "Oblast Kaluga"
+      ],
+      "ZH-CN": "卡卢加",
+      "ZH-TW": "卡盧加",
+      "EN": "Kaluga",
+      "DE": "Oblast Kaluga",
+      "FR": "Oblast de Kalouga",
+      "IT": "Oblast’ di Kaluga",
+      "ES": "Kaluga",
+      "JA": "カルーガ",
+      "KO": "칼루가",
+      "TH": "เขตคาลูกา",
+      "VI": "Kaluga",
+      "RU": "Калужская",
+      "AR": "كالوغا أوبلاست"
+    },
+    "Komi": {
+      "aliases": [
+        "KO"
+      ],
+      "ZH-CN": "科米",
+      "ZH-TW": "科米",
+      "EN": "Komi",
+      "DE": "Komi",
+      "FR": "Komis",
+      "IT": "dei Komi",
+      "ES": "Komi",
+      "JA": "コミ",
+      "KO": "코미",
+      "TH": "โคมิ",
+      "VI": "Komi",
+      "RU": "Коми",
+      "AR": "كومي"
+    },
+    "Kostroma": {
+      "aliases": [
+        "KOS",
+        "Oblast Kostroma"
+      ],
+      "ZH-CN": "科斯特罗马",
+      "ZH-TW": "科斯特羅馬",
+      "EN": "Kostroma",
+      "DE": "Oblast Kostroma",
+      "FR": "Oblast de Kostroma",
+      "IT": "Oblast’ di Kostroma",
+      "ES": "Óblast de Kostromá",
+      "JA": "コストロマ",
+      "KO": "코스트로마",
+      "TH": "โคลโตรมา โอแบลส",
+      "VI": "Kostroma",
+      "RU": "Костромская",
+      "AR": "كوستروما أوبلاست"
+    },
+    "Karelia": {
+      "aliases": [
+        "KR",
+        "Karelien"
+      ],
+      "ZH-CN": "卡累利阿",
+      "ZH-TW": "卡累利阿",
+      "EN": "Karelia",
+      "DE": "Karelien",
+      "FR": "Carélie",
+      "IT": "Carelia",
+      "ES": "Carelia",
+      "JA": "カレリア",
+      "KO": "카렐리야",
+      "TH": "คาเรเลีย",
+      "VI": "Kareliya",
+      "RU": "Карелия",
+      "AR": "كاريليا"
+    },
+    "Kursk": {
+      "aliases": [
+        "KRS",
+        "Oblast Kursk"
+      ],
+      "ZH-CN": "库尔斯克",
+      "ZH-TW": "庫爾斯克",
+      "EN": "Kursk",
+      "DE": "Oblast Kursk",
+      "FR": "Oblast de Koursk",
+      "IT": "Oblast’ di Kursk",
+      "ES": "óblast de Kursk",
+      "JA": "クルスク",
+      "KO": "쿠르스크",
+      "TH": "เคิกส์ โอแบลส",
+      "VI": "Kursk",
+      "RU": "Курская",
+      "AR": "كورسك أوبلاست"
+    },
+    "Krasnoyarsk Krai": {
+      "aliases": [
+        "KYA",
+        "Krasnoyarsk",
+        "Region Krasnojarsk"
+      ],
+      "ZH-CN": "克拉斯諾亞爾斯克邊疆區",
+      "ZH-TW": "克拉斯諾亞爾斯克",
+      "EN": "Krasnoyarsk",
+      "DE": "Region Krasnojarsk",
+      "FR": "Kraï de Krasnoïarsk",
+      "IT": "Krasnojarsk",
+      "ES": "Krasnoyarsk",
+      "JA": "クラスノヤルスク地方",
+      "KO": "크라스노야르스크 지방",
+      "TH": "ดินแดนครัสโนยาสค์",
+      "VI": "Krasnoyarsk",
+      "RU": "Красноярский",
+      "AR": "كراسنويارسك كراي"
+    },
+    "Leningrad": {
+      "aliases": [
+        "LEN",
+        "Oblast Leningrad"
+      ],
+      "ZH-CN": "列宁格勒",
+      "ZH-TW": "列寧格勒",
+      "EN": "Leningrad",
+      "DE": "Oblast Leningrad",
+      "FR": "Oblast de Léningrad",
+      "IT": "Oblast’ di Leningrado",
+      "ES": "Óblast de Leningrado",
+      "JA": "レニングラード",
+      "KO": "레닌그라드",
+      "TH": "แคว้นเลนินกราด",
+      "VI": "Leningrad",
+      "RU": "Ленинградская",
+      "AR": "لينينغراد أوبلاست"
+    },
+    "Lipetsk": {
+      "aliases": [
+        "LIP",
+        "Oblast Lipezk"
+      ],
+      "ZH-CN": "利佩茨克",
+      "ZH-TW": "利佩茨克",
+      "EN": "Lipetsk",
+      "DE": "Oblast Lipezk",
+      "FR": "oblast de Lipetsk",
+      "IT": "Oblast’ di Lipeck",
+      "ES": "Óblast de Lípetsk",
+      "JA": "リペツク",
+      "KO": "리페츠크",
+      "TH": "เมืองลีเปตสค์",
+      "VI": "Lipetsk",
+      "RU": "Липецкая",
+      "AR": "ليبيتسك أوبلاست"
+    },
+    "Magadan": {
+      "aliases": [
+        "MAG",
+        "Oblast Magadan"
+      ],
+      "ZH-CN": "马加丹",
+      "ZH-TW": "馬加丹",
+      "EN": "Magadan",
+      "DE": "Oblast Magadan",
+      "FR": "Oblast de Magadan",
+      "IT": "Oblast’ di Magadan",
+      "ES": "Magadán",
+      "JA": "マガダン",
+      "KO": "마가단",
+      "TH": "เขตมากาดาน",
+      "VI": "Magadan",
+      "RU": "Магаданская",
+      "AR": "ماغادان أوبلاست"
+    },
+    "Mari El": {
+      "aliases": [
+        "ME"
+      ],
+      "ZH-CN": "马里埃尔",
+      "ZH-TW": "馬裡埃爾",
+      "EN": "Mari El",
+      "DE": "Mari El",
+      "FR": "Maris",
+      "IT": "dei Mari",
+      "ES": "Mari-El",
+      "JA": "マリ・エル",
+      "KO": "마리옐",
+      "TH": "มาริ เอล",
+      "VI": "Mari El",
+      "RU": "Марий Эл",
+      "AR": "ماري إل"
+    },
+    "Mordovia": {
+      "aliases": [
+        "MO",
+        "Mordwinien"
+      ],
+      "ZH-CN": "莫尔多瓦",
+      "ZH-TW": "莫爾多瓦",
+      "EN": "Mordovia",
+      "DE": "Mordwinien",
+      "FR": "Mordovie",
+      "IT": "Mordovia",
+      "ES": "Mordovia",
+      "JA": "モルドヴィア",
+      "KO": "모르도바",
+      "TH": "มอร์โดวิยา",
+      "VI": "Mordovia",
+      "RU": "Мордовия",
+      "AR": "موردوفيا"
+    },
+    "Moscow Province": {
+      "aliases": [
+        "MOS",
+        "Moscow",
+        "Oblast Moskau"
+      ],
+      "ZH-CN": "莫斯科",
+      "ZH-TW": "莫斯科",
+      "EN": "Moscow",
+      "DE": "Oblast Moskau",
+      "FR": "oblast de Moscou",
+      "IT": "Oblast’ di Mosca",
+      "ES": "Óblast de Moscú",
+      "JA": "モスクワ",
+      "KO": "모스크바",
+      "TH": "เขตดิอัวร์เบล",
+      "VI": "Moskva",
+      "RU": "Московская",
+      "AR": "محافظة موسكو"
+    },
+    "Moscow": {
+      "aliases": [
+        "MOW",
+        "Moskau"
+      ],
+      "ZH-CN": "莫斯科",
+      "ZH-TW": "莫斯科",
+      "EN": "Moscow",
+      "DE": "Moskau",
+      "FR": "Moscou",
+      "IT": "Mosca",
+      "ES": "Moscú",
+      "JA": "モスクワ",
+      "KO": "모스크바",
+      "TH": "มอสโก",
+      "VI": "Moskva²",
+      "RU": "Москва",
+      "AR": "موسكو"
+    },
+    "Murmansk": {
+      "aliases": [
+        "MUR",
+        "Oblast Murmansk"
+      ],
+      "ZH-CN": "摩爾曼斯克",
+      "ZH-TW": "摩爾曼斯克",
+      "EN": "Murmansk",
+      "DE": "Oblast Murmansk",
+      "FR": "Oblast de Mourmansk",
+      "IT": "Oblast’ di Murmansk",
+      "ES": "Óblast de Múrmansk",
+      "JA": "ムルマンスク",
+      "KO": "무르만스크",
+      "TH": "เมอร์แมนสกายา",
+      "VI": "Murmansk",
+      "RU": "Мурманская",
+      "AR": "مورمانسك أوبلاست"
+    },
+    "Nenets": {
+      "aliases": [
+        "NEN",
+        "Autonomer Kreis der Nenzen"
+      ],
+      "ZH-CN": "涅涅茨",
+      "ZH-TW": "涅涅茨",
+      "EN": "Nenets",
+      "DE": "Autonomer Kreis der Nenzen",
+      "FR": "Nénétsie",
+      "IT": "Circondario autonomo dei Nenec",
+      "ES": "Nenetsia",
+      "JA": "ネネツ自治管区",
+      "KO": "네네츠",
+      "TH": "เนเน็ท ออโตโนมัส โอครัค",
+      "VI": "Nenetsia",
+      "RU": "Ненецкий",
+      "AR": "أوكروغ نينيتس الذاتية"
+    },
+    "Novgorod": {
+      "aliases": [
+        "NGR",
+        "Oblast Nowgorod"
+      ],
+      "ZH-CN": "諾夫哥羅德",
+      "ZH-TW": "諾夫哥羅德",
+      "EN": "Novgorod",
+      "DE": "Oblast Nowgorod",
+      "FR": "oblast de Novgorod",
+      "IT": "Oblast’ di Novgorod",
+      "ES": "Óblast de Nóvgorod",
+      "JA": "ノヴゴロド",
+      "KO": "노브고로드",
+      "TH": "นอวกอรอด โอแบลส",
+      "VI": "Novgorod",
+      "RU": "Новгородская",
+      "AR": "نوفغورود أوبلاست"
+    },
+    "Nizhny Novgorod": {
+      "aliases": [
+        "NIZ",
+        "Oblast Nischni Nowgorod"
+      ],
+      "ZH-CN": "下诺夫哥罗德",
+      "ZH-TW": "下諾夫哥羅德",
+      "EN": "Nizhny Novgorod",
+      "DE": "Oblast Nischni Nowgorod",
+      "FR": "oblast de Nijni Novgorod",
+      "IT": "Oblast’ di Nižnij Novgorod",
+      "ES": "Óblast de Nizhni Nóvgorod",
+      "JA": "ニジニ・ノヴゴロド",
+      "KO": "니즈니노브고로드",
+      "TH": "นิจนีนอฟโกรอด",
+      "VI": "Nizhny Novgorod",
+      "RU": "Нижегородская",
+      "AR": "نيجني نوفغورود أوبلاست"
+    },
+    "Novosibirsk": {
+      "aliases": [
+        "NVS",
+        "Oblast Nowosibirsk"
+      ],
+      "ZH-CN": "新西伯利亚",
+      "ZH-TW": "新西伯利亞",
+      "EN": "Novosibirsk",
+      "DE": "Oblast Nowosibirsk",
+      "FR": "Oblast de Novossibirsk",
+      "IT": "Oblast’ di Novosibirsk",
+      "ES": "Novosibirsk",
+      "JA": "ノヴォシビルスク",
+      "KO": "노보시비르스크",
+      "TH": "แคว้นโนโวซีบีสค์",
+      "VI": "Novosibirsk",
+      "RU": "Новосибирская",
+      "AR": "نوفوسيبيرسك أوبلاست"
+    },
+    "Omsk": {
+      "aliases": [
+        "OMS",
+        "Oblast Omsk"
+      ],
+      "ZH-CN": "鄂木斯克",
+      "ZH-TW": "鄂木斯克",
+      "EN": "Omsk",
+      "DE": "Oblast Omsk",
+      "FR": "Oblast d’Omsk",
+      "IT": "Oblast’ di Omsk",
+      "ES": "Omsk",
+      "JA": "オムスク",
+      "KO": "옴스크",
+      "TH": "มณฑลโอมสค์",
+      "VI": "Omsk",
+      "RU": "Омская",
+      "AR": "أوبلاست أومسك"
+    },
+    "Orenburg": {
+      "aliases": [
+        "ORE",
+        "Oblast Orenburg"
+      ],
+      "ZH-CN": "奧倫堡",
+      "ZH-TW": "奧倫堡",
+      "EN": "Orenburg",
+      "DE": "Oblast Orenburg",
+      "FR": "Oblast d’Orenbourg",
+      "IT": "Oblast’ di Orenburg",
+      "ES": "Óblast de Oremburgo",
+      "JA": "オレンブルク",
+      "KO": "오렌부르크",
+      "TH": "โอเรนบุร์ก",
+      "VI": "Orenburg",
+      "RU": "Оренбургская",
+      "AR": "أورنبرغ أوبلاست"
+    },
+    "Oryol": {
+      "aliases": [
+        "ORL",
+        "Oblast Orjol"
+      ],
+      "ZH-CN": "奥廖尔",
+      "ZH-TW": "奧廖爾",
+      "EN": "Oryol",
+      "DE": "Oblast Orjol",
+      "FR": "Oblast d’Orel",
+      "IT": "Oblast’ di Orël",
+      "ES": "Oriol",
+      "JA": "オリョール",
+      "KO": "오룔",
+      "TH": "ออยอล โอแบลส",
+      "VI": "Oryol",
+      "RU": "Орловская",
+      "AR": "أوريول أوبلاست"
+    },
+    "Perm Krai": {
+      "aliases": [
+        "PER",
+        "Perm",
+        "Region Perm"
+      ],
+      "ZH-CN": "彼爾姆邊疆區",
+      "ZH-TW": "彼爾姆",
+      "EN": "Perm",
+      "DE": "Region Perm",
+      "FR": "Kraï de Perm",
+      "IT": "Perm’",
+      "ES": "Perm",
+      "JA": "ペルミ地方",
+      "KO": "페름 지방",
+      "TH": "เพิร์ม ไกร",
+      "VI": "Perm",
+      "RU": "Пермский",
+      "AR": "بيرم كراي"
+    },
+    "Penza": {
+      "aliases": [
+        "PNZ",
+        "Oblast Pensa"
+      ],
+      "ZH-CN": "奔萨",
+      "ZH-TW": "奔薩",
+      "EN": "Penza",
+      "DE": "Oblast Pensa",
+      "FR": "oblast de Penza",
+      "IT": "Oblast’ di Penza",
+      "ES": "Óblast de Penza",
+      "JA": "ペンザ",
+      "KO": "펜자",
+      "TH": "เพนซา",
+      "VI": "Penza",
+      "RU": "Пензенская",
+      "AR": "بانزا أوبلاست"
+    },
+    "Primorsky Krai": {
+      "aliases": [
+        "PRI",
+        "Primorsky",
+        "Primorje"
+      ],
+      "ZH-CN": "滨海",
+      "ZH-TW": "濱海",
+      "EN": "Primorsky",
+      "DE": "Primorje",
+      "FR": "Kraï du Primorie",
+      "IT": "Litorale",
+      "ES": "Primorie",
+      "JA": "沿海地方",
+      "KO": "프리모르스키 지방",
+      "TH": "เขตการปกครองปริมอร์สกี",
+      "VI": "Primorsky",
+      "RU": "Приморский",
+      "AR": "بريمورسكي كراي"
+    },
+    "Pskov": {
+      "aliases": [
+        "PSK",
+        "Oblast Pskow"
+      ],
+      "ZH-CN": "普斯科夫",
+      "ZH-TW": "普斯科夫",
+      "EN": "Pskov",
+      "DE": "Oblast Pskow",
+      "FR": "Oblast de Pskov",
+      "IT": "Oblast’ di Pskov",
+      "ES": "Óblast de Pskov",
+      "JA": "プスコフ",
+      "KO": "프스코프",
+      "TH": "ไซโคฟ โอเบลส",
+      "VI": "Pskov",
+      "RU": "Псковская",
+      "AR": "بسكوف أوبلاست"
+    },
+    "Rostov": {
+      "aliases": [
+        "ROS",
+        "Oblast Rostow"
+      ],
+      "ZH-CN": "罗斯托夫",
+      "ZH-TW": "羅斯托夫",
+      "EN": "Rostov",
+      "DE": "Oblast Rostow",
+      "FR": "Oblast de Rostov",
+      "IT": "Oblast’ di Rostov",
+      "ES": "Rostov",
+      "JA": "ロストフ",
+      "KO": "로스토프",
+      "TH": "มณฑลราสทอฟ",
+      "VI": "Rostov",
+      "RU": "Ростовская",
+      "AR": "روستوف أوبلاست"
+    },
+    "Ryazan": {
+      "aliases": [
+        "RYA",
+        "Oblast Rjasan"
+      ],
+      "ZH-CN": "梁赞",
+      "ZH-TW": "梁贊",
+      "EN": "Ryazan",
+      "DE": "Oblast Rjasan",
+      "FR": "Oblast de Riazan",
+      "IT": "Oblast’ di Rjazan’",
+      "ES": "Óblast de Riazán",
+      "JA": "リャザン",
+      "KO": "랴잔",
+      "TH": "มาซันดะรอน",
+      "VI": "Ryazan",
+      "RU": "Рязанская",
+      "AR": "ريازان أوبلاست"
+    },
+    "Sakha": {
+      "aliases": [
+        "SA",
+        "Sacha"
+      ],
+      "ZH-CN": "萨哈",
+      "ZH-TW": "薩哈",
+      "EN": "Sakha",
+      "DE": "Sacha",
+      "FR": "Sakha",
+      "IT": "Sacha-Jacuzia",
+      "ES": "Sajá",
+      "JA": "サハ",
+      "KO": "사하",
+      "TH": "ซาฮา",
+      "VI": "Sakha",
+      "RU": "Якутия",
+      "AR": "ياقوتيا"
+    },
+    "Sakhalin": {
+      "aliases": [
+        "SAK",
+        "Oblast Sachalin"
+      ],
+      "ZH-CN": "萨哈林",
+      "ZH-TW": "薩哈林",
+      "EN": "Sakhalin",
+      "DE": "Oblast Sachalin",
+      "FR": "oblast de Sakhaline",
+      "IT": "Oblast’ di Sachalin",
+      "ES": "Sajalín",
+      "JA": "サハリン",
+      "KO": "사할린",
+      "TH": "ซาคาลิน",
+      "VI": "Sakhalin",
+      "RU": "Сахалинская",
+      "AR": "ساخالين أوبلاست"
+    },
+    "Samara": {
+      "aliases": [
+        "SAM",
+        "Oblast Samara"
+      ],
+      "ZH-CN": "萨马拉",
+      "ZH-TW": "薩馬拉",
+      "EN": "Samara",
+      "DE": "Oblast Samara",
+      "FR": "Oblast de Samara",
+      "IT": "Oblast’ di Samara",
+      "ES": "Óblast de Samara",
+      "JA": "サマラ",
+      "KO": "사마라",
+      "TH": "เมืองซามารา",
+      "VI": "Samara",
+      "RU": "Самарская",
+      "AR": "سمارا أوبلاست"
+    },
+    "Saratov": {
+      "aliases": [
+        "SAR",
+        "Oblast Saratow"
+      ],
+      "ZH-CN": "萨拉托夫",
+      "ZH-TW": "薩拉托夫",
+      "EN": "Saratov",
+      "DE": "Oblast Saratow",
+      "FR": "Oblast de Saratov",
+      "IT": "Oblast’ di Saratov",
+      "ES": "Óblast de Sarátov",
+      "JA": "サラトフ",
+      "KO": "사라토프",
+      "TH": "แคว้นปกครองซาลาตอฟ",
+      "VI": "Saratov",
+      "RU": "Саратовская",
+      "AR": "ساراتوف أوبلاست"
+    },
+    "North Ossetia-Alania": {
+      "aliases": [
+        "SE",
+        "Nordossetien-Alanien"
+      ],
+      "ZH-CN": "北奥塞梯-阿兰",
+      "ZH-TW": "北奧塞梯-阿蘭",
+      "EN": "North Ossetia-Alania",
+      "DE": "Nordossetien-Alanien",
+      "FR": "Ossétie-du-Nord-Alanie",
+      "IT": "Ossezia Settentrionale-Alania",
+      "ES": "Osetia del Norte - Alania",
+      "JA": "北オセチア",
+      "KO": "세베로오세티야",
+      "TH": "โอเซเทีย อลาเนีย เหนือ",
+      "VI": "Bắc Osetiya-Alaniya",
+      "RU": "Северная Осетия-Алания",
+      "AR": "أوسيتيا الشمالية-ألانيا"
+    },
+    "Smolensk": {
+      "aliases": [
+        "SMO",
+        "Oblast Smolensk"
+      ],
+      "ZH-CN": "斯摩棱斯克",
+      "ZH-TW": "斯摩棱斯克",
+      "EN": "Smolensk",
+      "DE": "Oblast Smolensk",
+      "FR": "Oblast de Smolensk",
+      "IT": "Oblast’ di Smolensk",
+      "ES": "Smolensk",
+      "JA": "スモレンスク",
+      "KO": "스몰렌스크",
+      "TH": "มณฑลสมอเลนสค์",
+      "VI": "Smolensk",
+      "RU": "Смоленская",
+      "AR": "أوبلاست سمولينسك"
+    },
+    "Saint Petersburg": {
+      "aliases": [
+        "SPE",
+        "Sankt Petersburg"
+      ],
+      "ZH-CN": "圣彼得堡",
+      "ZH-TW": "聖彼得堡",
+      "EN": "Saint Petersburg",
+      "DE": "Sankt Petersburg",
+      "FR": "Saint-Pétersbourg",
+      "IT": "San Pietroburgo",
+      "ES": "San Petersburgo",
+      "JA": "サンクトペテルブルク",
+      "KO": "상트페테르부르크",
+      "TH": "เซนต์ปีเตอร์สเบิร์ก",
+      "VI": "Sankt-Peterburg",
+      "RU": "Санкт-Петербург",
+      "AR": "سانت بطرسبرغ"
+    },
+    "Stavropol Krai": {
+      "aliases": [
+        "STA",
+        "Stavropol",
+        "Region Stawropol"
+      ],
+      "ZH-CN": "斯塔夫罗波尔",
+      "ZH-TW": "斯塔夫羅波爾",
+      "EN": "Stavropol",
+      "DE": "Region Stawropol",
+      "FR": "Kraï de Stavropol",
+      "IT": "Stavropol’",
+      "ES": "Stávropol",
+      "JA": "スタヴロポリ地方",
+      "KO": "스타브로폴 지방",
+      "TH": "เขตสตัฟโรปอล",
+      "VI": "Stavropol",
+      "RU": "Ставропольский",
+      "AR": "ستافروبول كراي"
+    },
+    "Sverdlovsk": {
+      "aliases": [
+        "SVE",
+        "Oblast Swerdlowsk"
+      ],
+      "ZH-CN": "斯維爾德洛夫斯克",
+      "ZH-TW": "斯維爾德洛夫斯克",
+      "EN": "Sverdlovsk",
+      "DE": "Oblast Swerdlowsk",
+      "FR": "Oblast de Sverdlovsk",
+      "IT": "Oblast’ di Sverdlovsk",
+      "ES": "Sverdlovsk",
+      "JA": "スヴェルドロフスク",
+      "KO": "스베르들롭스크",
+      "TH": "สเวอรลอฟ โอแบลส",
+      "VI": "Sverdlovsk",
+      "RU": "Свердловская",
+      "AR": "أوبلاست سفردلوفسك"
+    },
+    "Tatarstan": {
+      "aliases": [
+        "TA"
+      ],
+      "ZH-CN": "鞑靼斯坦",
+      "ZH-TW": "韃靼斯坦",
+      "EN": "Tatarstan",
+      "DE": "Tatarstan",
+      "FR": "Tatarstan",
+      "IT": "Tatarstan",
+      "ES": "Tartaristán",
+      "JA": "タタールスタン",
+      "KO": "타타르",
+      "TH": "ตาตาร์สถาน",
+      "VI": "Tatarstan",
+      "RU": "Татарстан",
+      "AR": "تتارستان"
+    },
+    "Tambov": {
+      "aliases": [
+        "TAM",
+        "Oblast Tambow"
+      ],
+      "ZH-CN": "坦波夫",
+      "ZH-TW": "坦波夫",
+      "EN": "Tambov",
+      "DE": "Oblast Tambow",
+      "FR": "oblast de Tambov",
+      "IT": "Oblast’ di Tambov",
+      "ES": "Tambov",
+      "JA": "タンボフ",
+      "KO": "탐보프",
+      "TH": "ทัมโบว โอแบลส",
+      "VI": "Tambov",
+      "RU": "Тамбовская",
+      "AR": "تامبوف أوبلاست"
+    },
+    "Tomsk": {
+      "aliases": [
+        "TOM",
+        "Oblast Tomsk"
+      ],
+      "ZH-CN": "托木斯克",
+      "ZH-TW": "托木斯克",
+      "EN": "Tomsk",
+      "DE": "Oblast Tomsk",
+      "FR": "Oblast de Tomsk",
+      "IT": "Oblast’ di Tomsk",
+      "ES": "Tomsk",
+      "JA": "トムスク",
+      "KO": "톰스크",
+      "TH": "ทอมส์ค โอแบลส",
+      "VI": "Tomsk",
+      "RU": "Томская",
+      "AR": "تومسك أوبلاست"
+    },
+    "Tula": {
+      "aliases": [
+        "TUL",
+        "Oblast Tula"
+      ],
+      "ZH-CN": "图拉",
+      "ZH-TW": "圖拉",
+      "EN": "Tula",
+      "DE": "Oblast Tula",
+      "FR": "Oblast de Toula",
+      "IT": "Oblast’ di Tula",
+      "ES": "Óblast de Tula",
+      "JA": "トゥーラ",
+      "KO": "툴라",
+      "TH": "มณฑลตูลา",
+      "VI": "Tula",
+      "RU": "Тульская",
+      "AR": "تولا أوبلاست"
+    },
+    "Tver": {
+      "aliases": [
+        "TVE",
+        "Oblast Twer"
+      ],
+      "ZH-CN": "特维尔",
+      "ZH-TW": "特維爾",
+      "EN": "Tver",
+      "DE": "Oblast Twer",
+      "FR": "Oblast de Tver",
+      "IT": "Oblast’ di Tver’",
+      "ES": "Óblast de Tver",
+      "JA": "トヴェリ",
+      "KO": "트베리",
+      "TH": "จัมบี",
+      "VI": "Tver",
+      "RU": "Тверская",
+      "AR": "تفير أوبلاست"
+    },
+    "Tuva": {
+      "aliases": [
+        "TY",
+        "Tuwa"
+      ],
+      "ZH-CN": "图瓦",
+      "ZH-TW": "圖瓦",
+      "EN": "Tuva",
+      "DE": "Tuwa",
+      "FR": "Touva",
+      "IT": "Tuva",
+      "ES": "Tuvá",
+      "JA": "トゥヴァ",
+      "KO": "투바",
+      "TH": "ตูวา",
+      "VI": "Tuva",
+      "RU": "Тыва",
+      "AR": "توفا"
+    },
+    "Tyumen": {
+      "aliases": [
+        "TYU",
+        "Oblast Tjumen"
+      ],
+      "ZH-CN": "秋明",
+      "ZH-TW": "秋明",
+      "EN": "Tyumen",
+      "DE": "Oblast Tjumen",
+      "FR": "Oblast de Tioumen",
+      "IT": "Oblast’ di Tjumen’",
+      "ES": "Tiumén",
+      "JA": "チュメニ",
+      "KO": "튜멘",
+      "TH": "มณฑลตูย์เมน",
+      "VI": "Tyumen",
+      "RU": "Тюменская",
+      "AR": "تيومين أوبلاست"
+    },
+    "Udmurt": {
+      "aliases": [
+        "UD",
+        "Udmurtien"
+      ],
+      "ZH-CN": "乌德穆尔特",
+      "ZH-TW": "烏德穆爾特",
+      "EN": "Udmurt",
+      "DE": "Udmurtien",
+      "FR": "Oudmourtie",
+      "IT": "Udmurtia",
+      "ES": "Udmurtia",
+      "JA": "ウドムルト",
+      "KO": "우드무르트",
+      "TH": "อูมอร์ท",
+      "VI": "Udmurtia",
+      "RU": "Удмуртия",
+      "AR": "أودمورتيا"
+    },
+    "Ulyanovsk": {
+      "aliases": [
+        "ULY",
+        "Oblast Uljanowsk"
+      ],
+      "ZH-CN": "乌里扬诺夫斯克",
+      "ZH-TW": "烏裡揚諾夫斯克",
+      "EN": "Ulyanovsk",
+      "DE": "Oblast Uljanowsk",
+      "FR": "Oblast d’Oulianovsk",
+      "IT": "Oblast’ di Ul’janovsk",
+      "ES": "Uliánovsk",
+      "JA": "ウリヤノフスク",
+      "KO": "울리야놉스크",
+      "TH": "อุลยานอฟสค์ โอแบลส",
+      "VI": "Ulyanovsk",
+      "RU": "Ульяновская",
+      "AR": "أوليانوفسك أوبلاست"
+    },
+    "Volgograd": {
+      "aliases": [
+        "VGG",
+        "Oblast Wolgograd"
+      ],
+      "ZH-CN": "伏尔加格勒",
+      "ZH-TW": "伏爾加格勒",
+      "EN": "Volgograd",
+      "DE": "Oblast Wolgograd",
+      "FR": "oblast de Volgograd",
+      "IT": "Oblast’ di Volgograd",
+      "ES": "Volgogrado",
+      "JA": "ヴォルゴグラード",
+      "KO": "볼고그라드",
+      "TH": "วอลโกกราด",
+      "VI": "Volgograd",
+      "RU": "Волгоградская",
+      "AR": "فولغوغراد أوبلاست"
+    },
+    "Vladimir": {
+      "aliases": [
+        "VLA",
+        "Oblast Wladimir"
+      ],
+      "ZH-CN": "弗拉基米尔",
+      "ZH-TW": "弗拉基米爾",
+      "EN": "Vladimir",
+      "DE": "Oblast Wladimir",
+      "FR": "Oblast de Vladimir",
+      "IT": "Oblast’ di Vladimir",
+      "ES": "Óblast de Vladímir",
+      "JA": "ヴラジーミル",
+      "KO": "블라디미르",
+      "TH": "วลาดีมีร์ โอแบลส",
+      "VI": "Vladimir",
+      "RU": "Владимирская",
+      "AR": "فلاديمير أوبلاست"
+    },
+    "Vologda": {
+      "aliases": [
+        "VLG",
+        "Oblast Wologda"
+      ],
+      "ZH-CN": "沃洛格达",
+      "ZH-TW": "沃洛格達",
+      "EN": "Vologda",
+      "DE": "Oblast Wologda",
+      "FR": "Oblast de Vologda",
+      "IT": "Oblast’ di Vologda",
+      "ES": "Óblast de Vólogda",
+      "JA": "ヴォログダ",
+      "KO": "볼로그다",
+      "TH": "มณฑลโวลอคดา",
+      "VI": "Vologda",
+      "RU": "Вологодская",
+      "AR": "فولوغدا أوبلاست"
+    },
+    "Voronezh": {
+      "aliases": [
+        "VOR",
+        "Oblast Woronesch"
+      ],
+      "ZH-CN": "沃罗涅日",
+      "ZH-TW": "沃羅涅日",
+      "EN": "Voronezh",
+      "DE": "Oblast Woronesch",
+      "FR": "oblast de Voronej",
+      "IT": "Oblast’ di Voronež",
+      "ES": "Óblast de Vorónezh",
+      "JA": "ヴォロネジ",
+      "KO": "보로네시",
+      "TH": "มณฑลโวรอนเนซ",
+      "VI": "Voronezh",
+      "RU": "Воронежская",
+      "AR": "فورونيج أوبلاست"
+    },
+    "Yamalo-Nenets Okrug": {
+      "aliases": [
+        "YAN",
+        "Autonomer Kreis der Jamal-Nenzen"
+      ],
+      "ZH-CN": "亚马尔-涅涅茨",
+      "ZH-TW": "亞馬爾-涅涅茨",
+      "EN": "Yamalo-Nenets Okrug",
+      "DE": "Autonomer Kreis der Jamal-Nenzen",
+      "FR": "Iamalie",
+      "IT": "Circondario autonomo Jamalo-Nenec",
+      "ES": "Yamalia-Nenetsia",
+      "JA": "ヤマロ・ネネツ自治管区",
+      "KO": "야말로네네츠",
+      "TH": "ยามาโล เนเนท ออโตโนมัส โอเคริก",
+      "VI": "Yamalo-Nenets",
+      "RU": "Ямало-Ненецкий",
+      "AR": "أوكروغ يامالو-نينيتس الذاتية"
+    },
+    "Yaroslavl": {
+      "aliases": [
+        "YAR",
+        "Oblast Jaroslawl"
+      ],
+      "ZH-CN": "雅羅斯拉夫爾",
+      "ZH-TW": "雅羅斯拉夫爾",
+      "EN": "Yaroslavl",
+      "DE": "Oblast Jaroslawl",
+      "FR": "Oblast de Iaroslavl",
+      "IT": "Oblast’ di Jaroslavl’",
+      "ES": "Óblast de Yaroslavl",
+      "JA": "ヤロスラヴリ",
+      "KO": "야로슬라블",
+      "TH": "มณฑลยาดรสลาฟ",
+      "VI": "Yaroslavl",
+      "RU": "Ярославская",
+      "AR": "ياروسلافل أوبلاست"
+    },
+    "Jewish": {
+      "aliases": [
+        "YEV",
+        "Jüdische Autonome"
+      ],
+      "ZH-CN": "犹太自治",
+      "ZH-TW": "猶太自治",
+      "EN": "Jewish",
+      "DE": "Jüdische Autonome",
+      "FR": "Oblast autonome juif",
+      "IT": "Oblast’ autonoma ebraica",
+      "ES": "Óblast Autónomo Hebreo",
+      "JA": "ユダヤ",
+      "KO": "유대인 자치",
+      "TH": "จิววิช ออโตโนมัส โอแบลส",
+      "VI": "tự trị Do Thái",
+      "RU": "Еврейская автономная",
+      "AR": "الأوبلاست اليهودية الذاتية"
+    },
+    "Zabaykalsky Krai": {
+      "aliases": [
+        "ZAB",
+        "Zabaykalsky",
+        "Region Transbaikalien"
+      ],
+      "ZH-CN": "外貝加爾邊疆區",
+      "ZH-TW": "外貝加爾",
+      "EN": "Zabaykalsky",
+      "DE": "Region Transbaikalien",
+      "FR": "Kraï de Transbaïkalie",
+      "IT": "Transbajkalia",
+      "ES": "Zabaikalie",
+      "JA": "ザバイカリエ地方",
+      "KO": "자바이칼 지방",
+      "TH": "ซาเบคาลสกี ไกร",
+      "VI": "Zabaykalsky",
+      "RU": "Забайкальский",
+      "AR": "زابايكالسكي كراي"
+    }
+  }
+}
